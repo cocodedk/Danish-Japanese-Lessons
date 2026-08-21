@@ -18,12 +18,12 @@ describe('RuledSection', () => {
 
   it('carries the reading direction and language it is given', () => {
     const { container } = render(
-      <RuledSection dir="rtl" lang="ja">
-        روی خط بنویس.
+      <RuledSection dir="ltr" lang="ja">
+        せんの うえに かいてね。
       </RuledSection>,
     )
     const sheet = container.querySelector('.ruled-section')
-    expect(sheet).toHaveAttribute('dir', 'rtl')
+    expect(sheet).toHaveAttribute('dir', 'ltr')
     expect(sheet).toHaveAttribute('lang', 'ja')
   })
 
@@ -43,10 +43,11 @@ describe('RuledSection', () => {
     expect(offenders).toEqual([])
   })
 
-  it('places that margin line with a logical inset, so dir="rtl" mirrors it to the right', () => {
+  it('places that margin line with a logical inset, on the same side in every direction', () => {
     expect(css).toContain('inset-inline-start')
     // A physical left/right anywhere in this file would pin the margin line to
-    // one side and break the mirroring the whole concept rests on.
+    // one side on every sheet; a logical inset keeps it correct whichever way
+    // the sheet's direction runs (Japanese reads left to right).
     const physical = css.match(/^\s*(left|right)\s*:/gm) ?? []
     expect(physical).toEqual([])
     expect(css).not.toContain('padding-left')
@@ -71,8 +72,8 @@ describe('RuledSection', () => {
 
     try {
       const { container } = render(
-        <RuledSection dir="rtl" lang="ja">
-          روی خط بنویس.
+        <RuledSection dir="ltr" lang="ja">
+          せんの うえに かいてね。
         </RuledSection>,
       )
       const sheet = container.querySelector('.ruled-section')!

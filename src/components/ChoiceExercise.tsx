@@ -44,10 +44,11 @@ export function ChoiceExercise({
 
   const question = questions[index]
   const isLast = index === questions.length - 1
-  // Japanese choices read right to left; the Danish meanings of plan 004's
-  // vocabulary rounds read left to right. Nothing else about the round changes.
+  // Japanese choices read left to right, like the Danish meanings of plan
+  // 004's vocabulary rounds. Nothing else about the round changes.
   const choiceLang = question.choiceLang ?? 'ja'
-  const choiceDir = choiceLang === 'ja' ? 'rtl' : 'ltr'
+  // Japanese reads left to right, like Danish — every choice is LTR.
+  const choiceDir = 'ltr'
 
   function choose(choiceId: string) {
     if (attempted) return

@@ -3,7 +3,7 @@
    Light-blue rules repeat on the --rule-step rhythm, shifted by --rule-shift so
    the baseline of text set at that line-height lands on the rule instead of
    floating above it. Exactly ONE red margin line, drawn by ::before at
-   inset-inline-start — a logical inset, so dir="rtl" mirrors it to the right
+   inset-inline-start — a logical inset, so the line stays on the reading side
    with no RTL-specific rule anywhere. No physical left/right in this file. */
 
 .ruled-section {

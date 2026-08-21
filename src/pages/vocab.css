@@ -30,7 +30,7 @@
 
 /* A word needs more room than a letter: two lines, so the pair stays a pair. */
 .vocab__grid {
-  direction: rtl;
+  direction: ltr;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   gap: 0.4rem;

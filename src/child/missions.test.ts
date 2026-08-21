@@ -16,12 +16,29 @@ describe('child word missions', () => {
     expect(findChildMission('unknown')).toBeUndefined()
   })
 
-  it('gives every source letter a stable id and target position', () => {
-    const pan = findChildMission('pan')!
-    const tiles = tilesForMission(pan)
+  it('scrambles the letters of every mission exactly once — no placeholders', () => {
+    for (const mission of childMissions) {
+      const tiles = tilesForMission(mission)
+      const word = Array.from(mission.word.ja)
+      expect(tiles, mission.id).toHaveLength(word.length)
 
-    expect(tiles.map((tile) => tile.glyph)).not.toEqual(Array.from(pan.word.ja))
-    expect(tiles.map((tile) => tile.targetIndex).sort()).toEqual([0, 1, 2])
-    expect(new Set(tiles.map((tile) => tile.id)).size).toBe(3)
+      // Every tile is one real letter of the word, and every position is hit
+      // exactly once — a tray that reaches past the word (a leftover from the
+      // Persian-era orders) would put placeholder tiles with no letter on them.
+      for (const tile of tiles) {
+        expect(word.includes(tile.glyph), `${mission.id}/${tile.id}`).toBe(true)
+      }
+      expect(tiles.map((tile) => tile.targetIndex).sort(), mission.id).toEqual(
+        word.map((_, index) => index),
+      )
+      expect(new Set(tiles.map((tile) => tile.id)).size, mission.id).toBe(tiles.length)
+    }
+  })
+
+  it('hands the learner a genuinely moved tray where the word allows it', () => {
+    const uchi = findChildMission('uchi')!
+    const tiles = tilesForMission(uchi)
+    expect(tiles.map((tile) => tile.glyph)).not.toEqual(Array.from(uchi.word.ja))
+    expect(tiles.map((tile) => tile.glyph)).toEqual(Array.from(uchi.word.ja).reverse())
   })
 })

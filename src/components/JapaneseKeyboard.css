@@ -17,6 +17,15 @@
   padding: 0.25rem;
 }
 
+/* Seven 44px keys ask for 340px; on a phone narrower than a 360px viewport
+   the board drops to six columns so no key is ever smaller than the tap
+   floor — 6 × 44 + 5 × 4 gap + 8 padding ≈ 292px fits a 320px phone. */
+@media (max-width: 339px) {
+  .keyboard {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 .keyboard__key {
   display: flex;
   align-items: center;

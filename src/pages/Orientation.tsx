@@ -27,7 +27,8 @@ function Flip() {
         <path className="orient__sweep-head" d="M 176 5 L 191 12 L 176 19" />
       </svg>
       <p className="orient__body">
-        Du læste lige D-N-A-V, og det betyder ingenting. Start i højre side i stedet, så står der{' '}
+        Du læste lige D-N-A-V, og det betyder ingenting — bogstaverne står bagvendt.
+        Læs dem i rigtig rækkefølge fra venstre mod højre, så står der{' '}
         {MIRROR_DEMO.da}.
       </p>
     </section>
@@ -41,7 +42,7 @@ function Point({ point }: { point: OrientationPoint }) {
       {/* Each chip is a miniature of the specimen contract (ART-DIRECTION
           "Beginner teaching surfaces"): Japanese on top, then lydskrift + IPA,
           then the Danish name — stacked, never sharing a line. */}
-      <ul className="orient__row" dir="rtl">
+      <ul className="orient__row" dir="ltr">
         {point.ja.map((token, index) => (
           <li key={`${token.entry.id}-${index}`} className="orient__chip">
             <JapaneseText entry={token.entry} display={token.form} />

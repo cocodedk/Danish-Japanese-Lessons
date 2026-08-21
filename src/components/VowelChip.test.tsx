@@ -10,7 +10,7 @@ describe('VowelChip', () => {
     const { container } = render(<VowelChip entry={dakuten.entry} />)
     const glyph = container.querySelector('.vowel-chip__glyph')
     expect(glyph).toHaveAttribute('lang', 'ja')
-    expect(glyph).toHaveAttribute('dir', 'rtl')
+    expect(glyph).toHaveAttribute('dir', 'ltr')
     expect(glyph?.textContent).toBe('か゛')
   })
 

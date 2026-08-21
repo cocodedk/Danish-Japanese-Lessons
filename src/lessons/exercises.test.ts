@@ -57,7 +57,7 @@ describe('exercise questions', () => {
   it('shows real match glyphs in "Hiragana og katakana" — katakana for the hiragana asked', () => {
     for (const question of match) {
       const right = question.choices.find((c) => c.id === question.answerId)
-      expect(right?.glyph, question.id).toBe(specimens[question.answerId].kata)
+      expect(right?.glyph, question.id).toBe(specimens[question.answerId]!.kata)
       expect(question.showsFa, question.id).toBe(true)
       for (const choice of question.choices) {
         expect(choice.glyph, question.id).toBe(specimens[choice.id].kata)

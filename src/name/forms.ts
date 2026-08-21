@@ -119,7 +119,7 @@ const SHAPES = new Map<string, Shape>([
       nameEntry: letter.nameEntry,
     }
     const kata = KATAKANA[letter.glyph]
-    return [[letter.glyph, shape], ...(kata ? [[kata, shape]] : [])]
+    return [[letter.glyph, shape] as [string, Shape], ...(kata ? [[kata, shape] as [string, Shape]] : [])]
   }),
   // Supplements the 46 never teach: the sokuon mark, the chōonpu, and ヴ.
   ['ッ', derive('ッ', SOKUON_KANA_ENTRY.da, SOKUON_KANA_ENTRY)],

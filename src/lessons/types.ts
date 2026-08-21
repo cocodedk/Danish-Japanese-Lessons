@@ -37,6 +37,9 @@ export interface Specimen {
    * so a bare Specimen can carry one too; every Letter below makes it required.
    */
   latinHint?: string
+  /** The katakana that spells the same syllable. Optional on the base so a
+   * bare Specimen can skip it; every Letter carries it. */
+  kata?: string
 }
 
 /** One kana letter: a hiragana syllable and its katakana match. */

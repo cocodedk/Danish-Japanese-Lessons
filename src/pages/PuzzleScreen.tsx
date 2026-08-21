@@ -135,7 +135,7 @@ export default function PuzzleScreen() {
       )}
 
       {task.kind === 'missing' && (
-        <div className="puzzle__choices puzzle__choices--letters" dir="rtl">
+        <div className="puzzle__choices puzzle__choices--letters" dir="ltr">
           {task.choices.map((choice) => (
             <button
               key={choice.id}
@@ -157,7 +157,7 @@ export default function PuzzleScreen() {
       {task.kind === 'order' && (
         <>
           <LearnerJapaneseInput as="p" className="puzzle__assembled">{ordered}</LearnerJapaneseInput>
-          <div className="puzzle__tiles" dir="rtl">
+          <div className="puzzle__tiles" dir="ltr">
             {task.tiles.map((tile) => (
               <button
                 key={tile.id}

@@ -3,7 +3,7 @@ import './RuledSection.css'
 
 export interface RuledSectionProps {
   children: ReactNode
-  /** Set "rtl" for Japanese content — the red margin line mirrors to the right. */
+  /** Reading direction of the sheet. The app renders Japanese left to right. */
   dir?: 'ltr' | 'rtl'
   lang?: string
 }
@@ -11,7 +11,7 @@ export interface RuledSectionProps {
 /**
  * A sheet of ruled exercise paper: light-blue rules on the line rhythm and one
  * red margin line down the inline-start edge. Everything is a logical property,
- * so a Japanese (rtl) sheet mirrors the margin line to the right on its own —
+ * so a sheet in either direction keeps the margin line on its own reading side —
  * which is where real Japanese notebooks put it.
  * See docs/design/ART-DIRECTION.md "Concept" (the signature element).
  */

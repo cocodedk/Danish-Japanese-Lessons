@@ -75,7 +75,7 @@ describe('the two rounds', () => {
     expect(screen.getByRole('heading', { name: questions[0].promptDa })).toBeInTheDocument()
     const right = questions[0].choices.find((choice) => choice.id === questions[0].answerId)!
     const button = screen.getAllByRole('button').find((each) => each.textContent === right.glyph)!
-    expect(button.getAttribute('dir')).toBe('rtl')
+    expect(button.getAttribute('dir')).toBe('ltr')
   })
 
   it('keeps the gentle wrong-answer copy and takes nothing away', () => {

@@ -30,7 +30,7 @@
 
 /* The 33 specimens, five to a row. A Japanese sequence: it fills from the right. */
 .alphabet__grid {
-  direction: rtl;
+  direction: ltr;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(3.25rem, 1fr));
   gap: 0.4rem;

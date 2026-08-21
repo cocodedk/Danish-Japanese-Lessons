@@ -38,7 +38,7 @@ export default function LetterScreen() {
   // katakana (names), the lesson teaches hiragana (specimen.glyph).
   const spelling = getProfile().jaSpelling ?? ''
   const inMyName = spelling.includes(specimen.glyph)
-    || ('kata' in specimen && spelling.includes(specimen.kata))
+    || (specimen.kata !== undefined && spelling.includes(specimen.kata))
 
   return (
     <LessonSheet

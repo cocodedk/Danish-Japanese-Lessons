@@ -33,7 +33,7 @@ describe('JaSpecimen', () => {
     const { container } = render(<JaSpecimen entry={entry('みず')} />)
     const specimen = container.querySelector('.ja-specimen')
     expect(specimen).toHaveAttribute('lang', 'ja')
-    expect(specimen).toHaveAttribute('dir', 'rtl')
+    expect(specimen).toHaveAttribute('dir', 'ltr')
   })
 
   it('paints the dakuten in the teacher red, and nothing on an unmarked word', () => {

@@ -4,21 +4,22 @@ import './Kit.css'
 
 interface Frame {
   scheme: 'light' | 'dark'
-  dir: 'ltr' | 'rtl'
+  /** The sample page's language — Japanese is written left to right, like Danish. */
+  lang: 'ja' | 'da'
   title: string
 }
 
 const FRAMES: Frame[] = [
-  { scheme: 'light', dir: 'ltr', title: 'Papir · venstre mod højre' },
-  { scheme: 'light', dir: 'rtl', title: 'Papir · højre mod venstre' },
-  { scheme: 'dark', dir: 'ltr', title: 'Tavle · venstre mod højre' },
-  { scheme: 'dark', dir: 'rtl', title: 'Tavle · højre mod venstre' },
+  { scheme: 'light', lang: 'da', title: 'Papir · dansk' },
+  { scheme: 'light', lang: 'ja', title: 'Papir · japansk' },
+  { scheme: 'dark', lang: 'da', title: 'Tavle · dansk' },
+  { scheme: 'dark', lang: 'ja', title: 'Tavle · japansk' },
 ]
 
 /**
- * The kit gallery at #/kit: every component in both farveskemaer and both
- * reading directions, so the margin line can be seen mirroring. Reached by
- * direct URL only — nothing on the forside links here.
+ * The kit gallery at #/kit: every component in both farveskemaer, shown on a
+ * Danish sheet and a Japanese sheet — both left to right. Reached by direct
+ * URL only — nothing on the forside links here.
  */
 export default function Kit() {
   return (
@@ -26,8 +27,8 @@ export default function Kit() {
       <header>
         <h1 className="kit__title">Notesbogs-kittet</h1>
         <p className="kit__intro">
-          Hver del vist på lyst og mørkt papir, i begge læseretninger. Den røde margenstreg
-          skifter side af sig selv.
+          Hver del vist på lyst og mørkt papir, på en dansk og en japansk side.
+          Begge skrifter læses fra venstre mod højre.
         </p>
         <Link className="kit__back" to="/">
           Til forsiden
@@ -37,13 +38,13 @@ export default function Kit() {
       <div className="kit__grid">
         {FRAMES.map((frame) => (
           <section
-            key={`${frame.scheme}-${frame.dir}`}
+            key={`${frame.scheme}-${frame.lang}`}
             className={`kit__frame scheme-${frame.scheme}`}
-            data-testid={`kit-frame-${frame.scheme}-${frame.dir}`}
+            data-testid={`kit-frame-${frame.scheme}-${frame.lang}`}
           >
             <h2 className="kit__frame-title">{frame.title}</h2>
-            <div className="kit__frame-body" dir={frame.dir}>
-              <KitSamples dir={frame.dir} />
+            <div className="kit__frame-body" dir="ltr">
+              <KitSamples lang={frame.lang} />
             </div>
           </section>
         ))}

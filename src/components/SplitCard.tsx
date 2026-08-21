@@ -21,7 +21,7 @@ export interface SplitCardProps {
 }
 
 /**
- * The split-screen shell: Japanese pane on top (~55%, RTL, Naskh display),
+ * The split-screen shell: Japanese pane on top (~55%, LTR display),
  * a notebook-rule divider, Danish pane below. A thin composition of the
  * typography kit. See docs/design/ART-DIRECTION.md.
  *
@@ -37,10 +37,10 @@ export function SplitCard({
 }: SplitCardProps) {
   return (
     <section className="split-card">
-      {/* The pane keeps its RTL base direction so the greeting's pieces —
+      {/* The pane keeps its LTR base direction so the greeting's pieces —
           catalog phrase, learner name, «!» — lay out in reading order; the
           Japanese text nodes inside carry their own lang. */}
-      <div className="split-card__pane split-card__pane--ja" dir="rtl">
+      <div className="split-card__pane split-card__pane--ja" dir="ltr">
         {greetingEntry && (
           <div className="split-card__greeting">
             <JapaneseText entry={greetingEntry} />

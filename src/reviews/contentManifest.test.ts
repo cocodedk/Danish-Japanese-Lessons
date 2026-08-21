@@ -12,7 +12,7 @@ describe('content review export', () => {
     expect(new Set(ids).size).toBe(ids.length)
     expect(contentReviewManifest.rows.filter((row) => row.audioStatus === 'missing').length).toBeGreaterThan(0)
     const byId = new Map(contentReviewManifest.rows.map((row) => [row.id, row]))
-    expect(allVocabWords.every((word) => ['token', 'contextual'].includes(byId.get(word.entry.id)?.cueCoverage))).toBe(true)
+    expect(allVocabWords.every((word) => ['token', 'contextual'].includes(byId.get(word.entry.id)?.cueCoverage ?? 'none'))).toBe(true)
     expect(contentReviewManifest.rows.some((row) => row.stressReviewRequired && !row.stressMarked)).toBe(true)
   })
 

@@ -129,7 +129,7 @@ export function ReviewSession({ initialTasks }: { initialTasks: ReviewTask[] }) 
                 type="button"
                 className={`${selected ? 'review-session__choice--selected' : ''} ${right ? 'review-session__choice--right' : ''}`}
                 lang={choiceLang === 'da' ? 'da' : undefined}
-                dir={choiceLang === 'ja' ? 'rtl' : 'ltr'}
+                dir="ltr"
                 aria-pressed={selected}
                 onClick={() => choose(choice.id)}
               >

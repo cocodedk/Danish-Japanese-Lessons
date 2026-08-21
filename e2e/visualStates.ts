@@ -87,7 +87,7 @@ export async function prepareVisualState(page: Page, state: VisualState) {
   if (state === 'child-build') {
     await open(page, '#/opdag/ord/mizu')
     await page.getByRole('button', { name: 'Byg ordet' }).click()
-    return expect(page.getByText('1 af 2 · Følg markeringen fra højre.')).toBeVisible()
+    return expect(page.getByText('1 af 2 · Følg markeringen fra venstre.')).toBeVisible()
   }
   if (state === 'child-round-ready') {
     await open(page, '#/opdag/ord/mizu')

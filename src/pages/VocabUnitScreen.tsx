@@ -64,7 +64,7 @@ export default function VocabUnitScreen() {
           {groups.map((group) => (
             <section key={group.id} className="vocab__group">
               <h3>{group.title}</h3>
-              <ul className="vocab__grid" dir="rtl">
+              <ul className="vocab__grid" dir="ltr">
                 {group.itemIds.map((wordId) => {
                   const word = unit.words.find((item) => item.id === wordId)
                   if (!word) return null

@@ -6,10 +6,10 @@ import Home from './Home'
 import { setProfile } from '../progress/profile'
 
 const FRAMES = [
-  'kit-frame-light-ltr',
-  'kit-frame-light-rtl',
-  'kit-frame-dark-ltr',
-  'kit-frame-dark-rtl',
+  'kit-frame-light-da',
+  'kit-frame-light-ja',
+  'kit-frame-dark-da',
+  'kit-frame-dark-ja',
 ] as const
 
 function renderKit() {
@@ -21,13 +21,13 @@ function renderKit() {
 }
 
 describe('#/kit gallery', () => {
-  it('shows all four frames: both schemes, both reading directions', () => {
+  it('shows all four frames: both schemes, both languages', () => {
     renderKit()
     for (const id of FRAMES) {
       expect(screen.getByTestId(id)).toBeInTheDocument()
     }
-    expect(screen.getByTestId('kit-frame-dark-ltr').className).toContain('scheme-dark')
-    expect(screen.getByTestId('kit-frame-light-ltr').className).toContain('scheme-light')
+    expect(screen.getByTestId('kit-frame-dark-da').className).toContain('scheme-dark')
+    expect(screen.getByTestId('kit-frame-light-da').className).toContain('scheme-light')
   })
 
   it('renders every kit component inside every frame', () => {
@@ -45,22 +45,21 @@ describe('#/kit gallery', () => {
     }
   })
 
-  it('mirrors the sheet: the rtl samples read right to left, the ltr samples left to right', () => {
+  it('keeps every sheet left to right — Japanese reads like Danish', () => {
     renderKit()
     for (const id of FRAMES) {
-      const dir = id.endsWith('rtl') ? 'rtl' : 'ltr'
       const body = screen.getByTestId(id).querySelector('.kit__frame-body')
-      expect(body).toHaveAttribute('dir', dir)
-      expect(body?.querySelector('.ruled-section')).toHaveAttribute('dir', dir)
+      expect(body).toHaveAttribute('dir', 'ltr')
+      expect(body?.querySelector('.ruled-section')).toHaveAttribute('dir', 'ltr')
     }
   })
 
   it('writes the Japanese sheet in Japanese and the Danish one in Danish', () => {
     renderKit()
-    const rtlSheet = screen.getByTestId('kit-frame-light-rtl').querySelector('.ruled-section')
-    expect(rtlSheet).toHaveAttribute('lang', 'ja')
-    const ltrSheet = screen.getByTestId('kit-frame-light-ltr').querySelector('.ruled-section')
-    expect(ltrSheet).toHaveAttribute('lang', 'da')
+    const jaSheet = screen.getByTestId('kit-frame-light-ja').querySelector('.ruled-section')
+    expect(jaSheet).toHaveAttribute('lang', 'ja')
+    const daSheet = screen.getByTestId('kit-frame-light-da').querySelector('.ruled-section')
+    expect(daSheet).toHaveAttribute('lang', 'da')
   })
 
   it('is reachable by direct URL only — the forside never links to it', () => {

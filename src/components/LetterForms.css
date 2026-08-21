@@ -3,7 +3,7 @@
    it reads from the right — alene sits where the eye starts. */
 
 .letter-forms__row {
-  direction: rtl;
+  direction: ltr;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.35rem;

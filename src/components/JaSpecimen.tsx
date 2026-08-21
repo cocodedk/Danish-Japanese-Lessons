@@ -25,14 +25,14 @@ export function JaSpecimen({ entry }: JaSpecimenProps) {
   if (!stacked) {
     const rendered = jaMarked ?? ja
     return (
-      <p className={penMarkClass('ja-specimen', rendered)} lang="ja" dir="rtl">
+      <p className={penMarkClass('ja-specimen', rendered)} lang="ja" dir="ltr">
         {rendered}
       </p>
     )
   }
 
   return (
-    <p className="ja-specimen ja-specimen--vocalized" lang="ja" dir="rtl">
+    <p className="ja-specimen ja-specimen--vocalized" lang="ja" dir="ltr">
       {/* Read out as the word, once: the red layer is the same letters. */}
       <span className="ja-specimen__marks" aria-hidden="true">
         {jaMarked}

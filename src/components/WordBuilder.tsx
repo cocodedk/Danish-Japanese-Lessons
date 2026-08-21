@@ -18,7 +18,7 @@ export function WordBuilder({ mission, guided, onComplete, onContinue }: WordBui
   const tiles = useMemo(() => tilesForMission(mission), [mission])
   const [placed, setPlaced] = useState<number[]>([])
   const [wrong, setWrong] = useState<MissionTile | null>(null)
-  const [status, setStatus] = useState(guided ? 'Det næste tegn er markeret.' : 'Byg fra højre.')
+  const [status, setStatus] = useState(guided ? 'Det næste tegn er markeret.' : 'Byg fra venstre.')
   const groupRef = useRef<HTMLDivElement>(null)
   const nextIndex = placed.length
 
@@ -51,9 +51,9 @@ export function WordBuilder({ mission, guided, onComplete, onContinue }: WordBui
   return (
     <section className="word-builder" aria-label={`Byg ${mission.word.da}`}>
       <p className="word-builder__instruction">
-        {guided ? '1 af 2 · Følg markeringen fra højre.' : '2 af 2 · Byg ordet uden hjælp.'}
+        {guided ? '1 af 2 · Følg markeringen fra venstre.' : '2 af 2 · Byg ordet uden hjælp.'}
       </p>
-      <div className="word-builder__slots" dir="rtl" aria-label={`Bygget: ${built || 'tomt'}`}>
+      <div className="word-builder__slots" dir="ltr" aria-label={`Bygget: ${built || 'tomt'}`}>
         {letters.map((glyph, index) => (
           <span className="word-builder__slot" key={`${mission.id}-slot-${index}`}>
             {placed.includes(index) ? glyph : ''}

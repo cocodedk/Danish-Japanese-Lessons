@@ -14,7 +14,7 @@ export function LearnerJapaneseInput({
 }) {
   const Tag = as as ElementType
   return (
-    <Tag className={className} lang="ja" dir="rtl" aria-hidden={ariaHidden}>
+    <Tag className={className} lang="ja" dir="ltr" aria-hidden={ariaHidden}>
       {children}
     </Tag>
   )

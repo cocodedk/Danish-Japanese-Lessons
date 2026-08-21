@@ -91,7 +91,7 @@ export function JapaneseKeyboard({ onPress, label }: JapaneseKeyboardProps) {
         role="group"
         aria-label={label}
         aria-describedby="japanese-keyboard-physical"
-        dir="rtl"
+        dir="ltr"
         tabIndex={0}
         onKeyDown={(event) => {
           if ((event.key === ' ' || event.key === 'Enter') && event.target !== event.currentTarget) return

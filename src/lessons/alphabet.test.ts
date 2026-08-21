@@ -57,8 +57,8 @@ describe('the hiragana alphabet', () => {
 
   it('spells every consonant kana as a syllable in dansk lydskrift + IPA', () => {
     for (const letter of letters) {
-      expect(letter.sound.da.length).toBeGreaterThan(0, letter.id)
-      expect(letter.sound.ipa.length).toBeGreaterThan(0, letter.id)
+      expect(letter.sound.da.length, letter.id).toBeGreaterThan(0)
+      expect(letter.sound.ipa.length, letter.id).toBeGreaterThan(0)
       expect(letter.entry.pron).toEqual(letter.sound)
     }
   })
@@ -92,8 +92,8 @@ describe('the hiragana alphabet', () => {
   it('says every kana twice — dansk lydskrift and IPA — from the data', () => {
     for (const letter of letters) {
       expect(letter.name.ja).toBe(letter.glyph)
-      expect(letter.name.da.length).toBeGreaterThan(0, letter.id)
-      expect(letter.latinHint.length).toBeGreaterThan(0, letter.id)
+      expect(letter.name.da.length, letter.id).toBeGreaterThan(0)
+      expect(letter.latinHint.length, letter.id).toBeGreaterThan(0)
     }
   })
 

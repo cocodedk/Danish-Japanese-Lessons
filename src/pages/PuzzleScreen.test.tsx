@@ -55,7 +55,7 @@ describe('a simple puzzle route', () => {
     const { container } = open(puzzle.id)
 
     const tiles = container.querySelector('.puzzle__tiles')
-    expect(tiles).toHaveAttribute('dir', 'rtl')
+    expect(tiles).toHaveAttribute('dir', 'ltr')
     const duplicate = task.tiles.find((tile, at) =>
       task.tiles.some((other, otherAt) => otherAt !== at && other.glyph === tile.glyph),
     )!

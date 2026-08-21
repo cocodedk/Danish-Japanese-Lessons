@@ -21,10 +21,10 @@ export function ReadingCueList({ cues, label, headingLevel = 3 }: { cues: Readin
   return (
     <section className="reading-cues" aria-label={label}>
       <CueHeading level={headingLevel} />
-      <ol className="reading-cues__list" dir="rtl">
+      <ol className="reading-cues__list" dir="ltr">
         {cues.map((cue, index) => (
           <li className="reading-cues__cue" key={`${cue.start}-${cue.end}-${index}`}>
-            <span className="reading-cues__glyph" lang="ja" dir="rtl">{cue.display}</span>
+            <span className="reading-cues__glyph" lang="ja" dir="ltr">{cue.display}</span>
             {cue.pron && <PronLine {...cue.pron} />}
             <span className="reading-cues__help" lang="da" dir="ltr">{cue.helpDa}</span>
           </li>

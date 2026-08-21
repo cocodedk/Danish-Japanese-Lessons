@@ -57,7 +57,7 @@ function Steps({ strokes, name }: LetterDrawProps) {
   return (
     <ol
       className="letter-draw__steps"
-      dir="rtl"
+      dir="ltr"
       aria-label={`Stregrækkefølge for ${name}, trin for trin`}
     >
       {strokes.map((_, step) => (
@@ -93,7 +93,7 @@ export function LetterDraw({ strokes, name }: LetterDrawProps) {
     <figure className="letter-draw">
       {stillPlease ? <Steps strokes={strokes} name={name} /> : <Animated strokes={strokes} name={name} />}
       <figcaption className="letter-draw__caption" lang="da">
-        Sådan bevæger pennen sig: fra højre, kroppen først, prikkerne til sidst.
+        Sådan skrives tegnet: stregerne i rækkefølge, kroppen først.
       </figcaption>
     </figure>
   )

@@ -29,7 +29,7 @@ export function LetterBank({ tiles, onPick, label, usedKeys = [] }: LetterBankPr
         <CompactPhraseRow entry={LETTERS_ENTRY} />
         <span lang="da">{label}</span>
       </div>
-      <ul className="letter-bank__tray" dir="rtl">
+      <ul className="letter-bank__tray" dir="ltr">
         {tiles.map((tile) => {
           const used = usedKeys.includes(tile.key)
           return (

@@ -26,7 +26,7 @@ export function JapaneseText({
   const text = display ?? (marked ? entry.jaMarked ?? entry.ja : entry.ja)
   const classes = marked ? penMarkClass(className, text) : className
   return (
-    <Tag className={classes || undefined} lang="ja" dir="rtl" aria-hidden={ariaHidden}>
+    <Tag className={classes || undefined} lang="ja" dir="ltr" aria-hidden={ariaHidden}>
       {text}
     </Tag>
   )

@@ -87,7 +87,7 @@ describe('a word screen', () => {
     expect(screen.getAllByText(`${word.pron.da} · [${word.pron.ipa}]`).length).toBeGreaterThan(0)
     expect(screen.getByText(word.da)).toBeInTheDocument()
     // The approved specimen renderer owns Japanese language and direction.
-    expect(faPane?.querySelector('.ja-specimen')).toHaveAttribute('dir', 'rtl')
+    expect(faPane?.querySelector('.ja-specimen')).toHaveAttribute('dir', 'ltr')
     expect(faPane?.querySelector('.ja-specimen')).toHaveAttribute('lang', 'ja')
   })
 

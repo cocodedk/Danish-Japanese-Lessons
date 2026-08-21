@@ -22,18 +22,17 @@ function Sample({ label, children }: { label: string; children: ReactNode }) {
   )
 }
 
-/** Every kit component, once. Rendered four times by Kit: light/dark × ltr/rtl. */
-export function KitSamples({ dir }: { dir: 'ltr' | 'rtl' }) {
-  const rtl = dir === 'rtl'
+/** Every kit component, once. Rendered four times by Kit: light/dark × da/ja. */
+export function KitSamples({ lang }: { lang: 'ja' | 'da' }) {
+  const japanese = lang === 'ja'
 
   return (
     <>
       <Sample label="RuledSection — arket">
-        <RuledSection dir={dir} lang={rtl ? 'ja' : 'da'}>
-          {rtl ? <CompactPhraseRow entry={KIT_SHEET_ENTRY} /> : KIT_SHEET_DA}
+        <RuledSection dir="ltr" lang={lang}>
+          {japanese ? <CompactPhraseRow entry={KIT_SHEET_ENTRY} /> : KIT_SHEET_DA}
         </RuledSection>
       </Sample>
-
       <Sample label="JaSpecimen · PronLine · RuleDivider · DaWord">
         <JaSpecimen entry={DEMO_WORD.entry} />
         <PronLine {...DEMO_WORD.pron} />

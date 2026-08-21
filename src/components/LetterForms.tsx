@@ -25,7 +25,7 @@ export interface LetterFormsProps {
 export function LetterForms({ forms, joinsLeft, entry }: LetterFormsProps) {
   return (
     <div className="letter-forms">
-      <ul className="letter-forms__row" dir="rtl">
+      <ul className="letter-forms__row" dir="ltr">
         {CELLS.map(([key, label]) => (
           <li key={key} className="letter-forms__cell">
             {entry ? (
