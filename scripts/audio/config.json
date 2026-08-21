@@ -1,6 +1,6 @@
 {
   "voiceModel": "ja_JA-hi_fi_captain-medium",
-  "voiceModelSha256": "pending",
+  "voiceModelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
   "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
   "voiceSource": "https://huggingface.co/rhasspy/piper-voices/resolve/main/ja/ja_JA/hi_fi_captain/medium/ja_JA-hi_fi_captain-medium.onnx",
   "voiceCard": "https://ast-astrec.nict.go.jp/en/release/hi-fi-captain/",
