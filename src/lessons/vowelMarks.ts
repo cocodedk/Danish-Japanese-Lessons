@@ -3,7 +3,7 @@
 // Danish anchors per CLAUDE.md "Curriculum" — never improvised in JSX.
 import type { VowelMark } from './types'
 import { defineEntry, type JapaneseEntry } from '../catalog/types'
-import { NO_OWN_SOUND, withoutMarks } from './marks'
+import { withoutMarks } from './marks'
 
 type MarkRow = [string, string, string, string, string, string, string]
 
