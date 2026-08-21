@@ -83,8 +83,8 @@ test('a katakana name keeps the typing capstone dormant', async ({ page }) => {
 test('typing buffer and focus survive live resize and rotation', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await open(page, '#/lesson/ord/1/skriv')
-  await page.getByRole('button', { name: 'a' }).click()
-  const ka = page.getByRole('button', { name: 'ka' })
+  await page.getByRole('button', { name: 'a', exact: true }).click()
+  const ka = page.getByRole('button', { name: 'ka', exact: true })
   await ka.focus()
   await page.setViewportSize({ width: 1024, height: 768 })
   await expect(page.locator('.type__written')).toHaveText('あ')

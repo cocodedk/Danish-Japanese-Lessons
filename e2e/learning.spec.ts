@@ -168,7 +168,7 @@ test('a word shows Japanese, sound, Danish and its photo, and hides the photo un
 
   await open(page, '#/lesson/ord/1/ovelse/ord')
   await expect(page.getByRole('img', { name: 'Et glas vand' })).toHaveCount(0)
-  await page.getByRole('button', { name: 'far' }).click()
+  await page.getByRole('button', { name: 'far', exact: true }).click()
   await expect(page.getByRole('img', { name: 'Et glas vand' })).toBeVisible()
 })
 

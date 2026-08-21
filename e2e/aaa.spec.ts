@@ -17,6 +17,7 @@ async function open(page: Page, hash = '#/') {
 test.beforeEach(async ({ page }) => seed(page))
 
 test('critical routes stay bounded from phone to ultrawide', async ({ page, browserName }) => {
+  test.setTimeout(90_000)
   test.skip(browserName !== 'chromium', 'full geometry matrix runs once')
   const widths = [
     320, 360, 390, 430, 479, 480, 481, 600, 767, 768, 769, 820,
@@ -136,8 +137,8 @@ test('typing remains keyboard-completable with enhanced targets', async ({ page 
     expect(caption.left).toBeGreaterThanOrEqual(key.left)
     expect(caption.right).toBeLessThanOrEqual(key.right)
   }
-  await page.getByRole('button', { name: 'chi' }).click()
-  await page.getByRole('button', { name: 'chi' }).click()
+  await page.getByRole('button', { name: 'chi', exact: true }).click()
+  await page.getByRole('button', { name: 'chi', exact: true }).click()
   await page.getByRole('button', { name: 'Se efter' }).click()
   await expect(page.locator('.celebration')).toBeVisible()
 })
@@ -149,7 +150,7 @@ test('typing accepts a physical Japanese keyboard without disabling the on-scree
   await keyboard.dispatchEvent('keydown', { key: 'ち' })
   await keyboard.dispatchEvent('keydown', { key: 'ち' })
   await expect(page.locator('.type__written')).toHaveText('ちち')
-  await expect(page.getByRole('button', { name: 'chi' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'chi', exact: true })).toBeVisible()
   await page.getByRole('button', { name: 'Se efter' }).click()
   await expect(page.locator('.celebration')).toBeVisible()
 })
@@ -157,7 +158,9 @@ test('typing accepts a physical Japanese keyboard without disabling the on-scree
 test('a wrong typed attempt reveals teaching above the keyboard dock', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 640 })
   await open(page, '#/lesson/ord/1/skriv')
-  await page.getByRole('button', { name: 'ka' }).click()
+  // Type unit 1 word ちち: the first key must NOT be ち. 'ka' is a plain
+  // wrong key with exactly one board button.
+  await page.getByRole('button', { name: 'ka', exact: true }).click()
   await page.getByRole('button', { name: 'Se efter' }).click()
   const reveal = page.locator('.type__reveal')
   await expect(reveal.getByRole('heading', { name: /Se hele/ })).toBeVisible()

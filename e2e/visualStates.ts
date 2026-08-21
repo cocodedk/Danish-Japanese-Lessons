@@ -131,7 +131,7 @@ export async function prepareVisualState(page: Page, state: VisualState) {
   if (state === 'typing-active') return open(page, '#/lesson/ord/1/skriv')
   if (state === 'typing-feedback') {
     await open(page, '#/lesson/ord/1/skriv')
-    await page.getByRole('button', { name: 'ka' }).click()
+    await page.getByRole('button', { name: 'ka', exact: true }).click()
     await page.getByRole('button', { name: 'Se efter' }).click()
     return expect(page.getByRole('button', { name: 'Prøv én gang til' })).toBeVisible()
   }
