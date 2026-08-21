@@ -44,8 +44,8 @@ changes routing and emphasis only. It MUST NOT fork or erase learning data.
 
 ## Visual language
 
-The material metaphor is an Iranian exercise notebook, `دفتر مشق`, interpreted with restrained
-Danish functional design.
+The material metaphor is a ruled exercise notebook — matte paper, horizontal blue rules, black
+ink and one teacher-red margin line — interpreted with restrained Danish functional design.
 
 - Matte paper, horizontal blue rules, black ink, and one teacher-red margin line form the page.
 - The red margin line sits near the outer left edge on Danish/LTR pages. It MUST NOT make the content
@@ -69,11 +69,11 @@ from Settings.
 
 ## Typography and language
 
-- Japanese display words use Noto Naskh Arabic.
-- Japanese UI and body text use Vazirmatn.
+- Japanese display, UI and body text use Noto Sans JP.
 - Danish and other Latin text use Andika, a literacy-oriented typeface.
 - Fonts remain self-hosted in the app.
-- Japanese text MUST use correct `lang`, direction, code points, joining, ZWNJ, and diacritics.
+- Japanese text MUST use correct `lang` (ja), left-to-right direction, kana code points, and no ZWNJ or
+  Arabic/Persian code points.
 - Japanese script is never letter-spaced.
 - Type does not scale with viewport width. It reflows within stable responsive containers.
 - Danish copy uses short, warm, concrete verbs and the informal `du` form.
@@ -94,8 +94,9 @@ data comes from canonical lesson entries and MUST NOT be improvised inside compo
 
 The workshop opens with choice, not explanation. It contains:
 
-- thirteen simple, useful words: hello, I, you, friend, water, bread, father, mother, house/home,
-  this, that, we, and he/she;
+- thirteen simple, useful words: こんにちは (hello), わたし (I), あなた (you), ともだち (friend), みず (water),
+  パン (bread), ちち (father), はは (mother), うち (house/home), これ (this), あれ (that), みんな (we/all),
+  and かぜ (wind);
 - a separate section for hello, introduction, and goodbye;
 - a separate section for Japanese numbers 1 through 10;
 - a personal collection that acknowledges completed words without locking the others.

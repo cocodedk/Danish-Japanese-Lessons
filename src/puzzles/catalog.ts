@@ -1,6 +1,7 @@
 import { specimens, teachingOrder } from '../lessons/alphabet'
 import { arrange } from '../lessons/exercises'
 import { vocabUnits, type VocabWord } from '../lessons/vocab'
+import { kanaFacts } from '../lessons/vocabReadingCues'
 import type { JapaneseEntry } from '../catalog/types'
 import type { MissingTask, PuzzleDefinition, PuzzleGroup, PuzzleTask } from './types'
 
@@ -27,22 +28,52 @@ function matchTasks(entries: JapaneseEntry[]): PuzzleTask[] {
   return choices.map((entry) => ({ id: `match-${entry.id}`, kind: 'match', entry, choices }))
 }
 
-const byGlyph = new Map(Object.values(specimens).map((item) => [item.entry.ja, item.entry]))
+const byGlyph = new Map<string, JapaneseEntry>()
+for (const item of Object.values(specimens)) {
+  byGlyph.set(item.entry.ja, item.entry)
+  const kata = (item as { kata?: string }).kata
+  if (kata) byGlyph.set(kata, item.entry)
+}
+
+const HIRAGANA_START = '\u3041'
+const HIRAGANA_END = '\u3096'
+
+/**
+ * True when a glyph is one of the plain 46 hiragana — not a dakuten form,
+ * not a small kana, not a katakana. Only plain kana tiles get order/missing
+ * puzzles: a dakuten tile (が) or a sokuon tile (っ in がっこう) has no letter
+ * of its own to match, and a katakana word (ドア) is spelled in the script
+ * the alphabet puzzle has not taught yet.
+ */
+function plainMora(glyph: string): boolean {
+  if (glyph < HIRAGANA_START || glyph > HIRAGANA_END) return false
+  const fact = kanaFacts[glyph]
+  return Boolean(fact) && !fact.base && Boolean(fact.ipa)
+}
+
+function letterEntry(glyph: string): JapaneseEntry {
+  const existing = byGlyph.get(glyph)
+  if (existing) return existing
+  const fact = kanaFacts[glyph]
+  // The alphabet lesson may still be landing; the workbook kana facts are
+  // the agreement on glyphs, and the entry id mirrors the alphabet's shape
+  // (`alphabet-letter-<romaji>`).
+  if (!fact) throw new Error(`order puzzle: no alphabet entry for a letter of ${glyph}`)
+  return { id: `alphabet-letter-${fact.name}`, kind: 'letter', ja: glyph, da: fact.name, pron: { da: fact.anchor, ipa: fact.ipa } }
+}
 
 function wordTiles(word: VocabWord) {
   const tiles = [...word.ja].map((glyph, at) => {
-    const entry = byGlyph.get(glyph)
-    // Loud at module load — the test suite imports this catalog, so a word
-    // whose letter has no specimen fails the build instead of shipping a tile
-    // that announces the whole word's meaning as a letter's name.
-    if (!entry) throw new Error(`order puzzle: no alphabet entry for a letter of ${word.entry.id}`)
+    const entry = letterEntry(glyph)
     return { id: `${word.entry.id}-tile-${at}`, entry, glyph }
   })
   return tiles.slice(1).concat(tiles.slice(0, 1))
 }
 
 function shortWords(words: VocabWord[]): VocabWord[] {
-  return words.filter((word) => [...word.ja].length >= 2 && [...word.ja].length <= 4)
+  return words.filter(
+    (word) => [...word.ja].length >= 2 && [...word.ja].length <= 4 && [...word.ja].every(plainMora),
+  )
 }
 
 function orderTasks(introduced: VocabWord[]): PuzzleTask[] {
@@ -51,11 +82,11 @@ function orderTasks(introduced: VocabWord[]): PuzzleTask[] {
   const picked = [duplicate, ...eligible].filter(
     (word, at, all): word is VocabWord => word !== undefined && all.indexOf(word) === at,
   ).slice(0, 2)
-  return picked.map((entry) => ({
-    id: `order-${entry.entry.id}`,
+  return picked.map((word) => ({
+    id: `order-${word.entry.id}`,
     kind: 'order',
-    entry: entry.entry,
-    tiles: wordTiles(entry),
+    entry: word.entry,
+    tiles: wordTiles(word),
   }))
 }
 
@@ -75,8 +106,7 @@ function missingTasks(introduced: VocabWord[]): MissingTask[] {
   return shortWords(introduced).slice(-2).map((word, index) => {
     const chars = [...word.ja]
     const missingAt = index % chars.length
-    const answer = byGlyph.get(chars[missingAt])
-    if (!answer) throw new Error(`missing puzzle: no alphabet entry for ${chars[missingAt]}`)
+    const answer = letterEntry(chars[missingAt])
     return {
       id: `missing-${word.entry.id}`,
       kind: 'missing',

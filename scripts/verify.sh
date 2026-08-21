@@ -105,10 +105,10 @@ done
 # --- (c) per-language lang/dir attributes -------------------------------------
 
 if grep -q -F -- 'lang="ja"' website/ja/index.html 2>/dev/null \
-  && grep -q -F -- 'dir="rtl"' website/ja/index.html 2>/dev/null; then
-  report 'website/ja/index.html has lang="ja" and dir="rtl"' 0
+  && grep -q -F -- 'dir="ltr"' website/ja/index.html 2>/dev/null; then
+  report 'website/ja/index.html has lang="ja" and dir="ltr"' 0
 else
-  report 'website/ja/index.html has lang="ja" and dir="rtl"' 1
+  report 'website/ja/index.html has lang="ja" and dir="ltr"' 1
 fi
 
 check_contains website/da/index.html 'lang="da"'

@@ -1,9 +1,13 @@
 # CLAUDE.md — Danish-Japanese Lessons
 
+> Ported from **Danish-Persian-Lessons** (2026-08). The commit history preserves the original
+> project; the working tree and roadmap are the Japanese port. Keep the Japanese rules below
+> when you touch content.
+
 ## Project Overview
 
 A free, mobile-first, purely static web app that teaches Danish speakers to HEAR and SPEAK Japanese
-(Japanese) first, with reading and writing kept open as a separate path. It assumes no spoken, written,
+first, with reading and writing kept open as a separate path. It assumes no spoken, written,
 or reading knowledge of Japanese. Heritage speakers and hesitant readers remain welcome, but every
 Japanese item must also work for an absolute beginner.
 "Danish-Japanese-Lessons" is a working title —
@@ -16,16 +20,18 @@ never hardcode it outside `vite.config.ts` and the workflows.
 
 ## Product Contract (non-negotiable)
 
-- Split screen: **Japanese on top** (`lang="ja" dir="rtl"`, large type), **Danish below** (`lang="da"`).
+- Split screen: **Japanese on top** (`lang="ja"`, large type, kana read left to right), **Danish
+  below** (`lang="da"`).
 - Mobile-first: fully usable one-handed on a phone in portrait; nav in the bottom thumb zone.
 - 100% static: every lesson is data committed to the repo. No runtime fetches to external services.
 - Progress: browser `localStorage` only, keys namespaced `djl.v1.*`, must survive empty/cleared/denied storage.
 - Personalization: the learner may enter a name (optional, always skippable, editable, deletable);
   stored only in `djl.v1.profile` and used as a teaching instrument — greeting, name-letter badges,
-  write-your-name lesson (plan 006). The app is fully usable with no name given.
+  write-your-name lesson (plan 006, now katakana). The app is fully usable with no name given.
 - Teaching before testing (plan 010): orientation opens before optional name capture; every app-owned
-  Japanese letter, mark, word, sign, and phrase has Danish help, dansk lydskrift, and standard Tehrani
-  IPA from the typed catalog. Exercises may hide answer metadata only while an attempt is active.
+  Japanese letter, mark, word, sign, and phrase has Danish help, dansk lydskrift, and standard Tokyo
+  IPA (phonemic, no pitch marks) from the typed catalog. Exercises may hide answer metadata only while
+  an attempt is active.
 - Speaking first (plan 015): picture → reviewed sound → meaning → learner speech. Japanese text remains
   visible but is never required to start speaking. The talk path opens only when its complete first
   corpus has one named native Japanese approval per clip; local drafts are never public.
@@ -42,20 +48,23 @@ never hardcode it outside `vite.config.ts` and the workflows.
 0. **Hear and speak**: short picture-book pages model a word or sentence with reviewed Japanese audio,
    Danish meaning, Danish sound help, and IPA. The learner listens, says it, and may hear their own
    short recording. That recording stays in memory and disappears on leaving the page.
-1. **Useful words**: greetings, animals, daily words, colours, and numbers. Everyday Tehrani and
+1. **Useful words**: greetings (こんにちは), animals, daily words, colours, and numbers. Everyday and
    formal standard forms sit side by side when they truly differ.
-2. **Writing orientation**: Japanese runs right to left, letters join and change shape, there are no
-   capitals, and dots matter.
-3. **Alphabet and name**: the 32 letters, positional forms, and the learner's own name. It includes
-   a stroke-order drawing for every letter
-   (pen right-to-left, dots last), then the vowel marks — زبر (اَ), زیر (اِ), پیش (اُ) and long
-   آ او ای — with Danish sound anchors (a i "kat", e i "let", o i "foto", å i "år", u i "du", i i "vi").
-4. **Read and write**: grade-1 words, reading cues, matching, and the on-screen Japanese keyboard.
+2. **Writing orientation**: Japanese reads left to right, one kana is one syllable, there are no
+   capitals, and three scripts coexist — hiragana みず, katakana ミズ, kanji 水.
+3. **Alphabet and name**: the 46 hiragana in the classic order (あいうえお → かきくけこ → … → わをん),
+   each with its katakana twin and a stroke-order drawing (pen top-to-bottom, left-to-right, dots
+   last), then the six marks — ゛ だくてん (か→が), ゜ はんだくてん (は→ぱ), ー ちょうおんぷ (long vowel),
+   っ そくおん (doubled consonant), ゃ ・ ょ (きゃ, きょ) — with Danish sound anchors (a i "kat", e i
+   "let", o i "foto", å i "år", u i "du", i i "vi"). Then the learner's own name in katakana.
+4. **Read and write**: grade-1 words, reading cues, matching, the numbers 一–十, and the on-screen
+   Japanese keyboard.
 
 Every app-owned Japanese letter, word, sign, symbol, and phrase carries Danish help plus pronunciation
-**twice** — dansk lydskrift ("åb") and IPA ([ɒːb], standard Tehrani Japanese) — in the typed
-catalog, never improvised in the UI. A displayed Japanese letter name is its own catalog entry. Learner
-input is the only composition-time exception; names get letter-by-letter help, never fabricated IPA.
+**twice** — dansk lydskrift ("みず → 'mizu'") and IPA ([mid͡zɯ], standard Tokyo Japanese, phonemic,
+no pitch marks) — in the typed catalog, never improvised in the UI. A displayed Japanese letter name is
+its own catalog entry. Learner input is the only composition-time exception; names get letter-by-letter
+help, never fabricated IPA.
 
 Plan 010 supersedes the narrower pronunciation contracts in completed plans 001–009; those files stay
 unchanged as historical records.
@@ -64,10 +73,12 @@ Per-lesson specs live in `docs/plans/`. Sequence and status: `docs/plans/ROADMAP
 
 ## Japanese text rules (ALL Japanese content)
 
-- Japanese code points only: ک (U+06A9) never ك, ی (U+06CC) never ي; digits ۰–۹ (U+06F0–06F9).
-- ZWNJ (U+200C) for نیم‌فاصله: می‌روم، کتاب‌ها.
-- Full diacritics (اِعراب) on teaching specimens only — that's the pedagogy — never on UI chrome.
-- Vowel marks and newly-taught elements render in `--red` (teacher's pen), per the design system.
+- Japanese code points only. No Arabic or Persian code points — forbidden blocks are U+0600–06FF,
+  U+0750–077F, U+FB50–FDFF, U+FE70–FEFF. No ZWNJ/ZWJ (U+200C/U+200D).
+- Hiragana normally, katakana for loanwords and transcribed foreign names, kanji only from the
+  entries that teach it (numbers 一–十, 水 in orientation).
+- ASCII digits are allowed (Japanese uses them in ordinary text).
+- Marks (゛ ゜) and newly-taught elements render in `--red` (teacher's pen), per the design system.
 
 ## Danish text rules
 
@@ -89,7 +100,7 @@ Per-lesson specs live in `docs/plans/`. Sequence and status: `docs/plans/ROADMAP
 | Any new UI, screen, or visual element | `frontend-design:frontend-design` (then follow ART-DIRECTION.md) |
 | Before writing or editing code | `karpathy-guidelines` |
 | Learner-facing / public Danish copy | `humanizer-da` |
-| Learner-facing / public Japanese copy | `humanizer-pa` |
+| Learner-facing / public Japanese copy | `humanizer` (read the Japanese text rules first; there is no pa/ja-specific humanizer) |
 | Public English copy (README, site) | `humanizer` |
 | After implementing — quality pass | `simplify` |
 | Reviewing a PR | `pr-review-toolkit:review-pr` (or `/code-review` for the working diff) |
@@ -102,12 +113,12 @@ genuinely needs it, and flip it back.
 
 ```
 website/            trilingual landing (en root, da/, ja/) — plain HTML/CSS, deployed as site root
-docs/plans/         ROADMAP.md + numbered plans (001-scaffold-app.md is next)
+docs/plans/         ROADMAP.md + numbered plans (016-japanese-port.md is active)
 docs/design/        ART-DIRECTION.md — binding design system (palette, type, notebook signature)
 .github/workflows/  deploy-pages.yml (site → Pages; app joins at /app/)
 .githooks/          pre-commit (fast) · commit-msg (Conventional Commits) · pre-push (owner-lock + full gate)
 scripts/            verify.sh · install-hooks.sh · setup-repo.sh · subset-fonts.py (authoring-time)
-src/, public/       (arrive with plan 001: Vite React app, lessons data, progress storage)
+src/, public/       Vite React app, lessons data, progress storage; public/fonts/ = Andika + Noto Sans JP (OFL)
 ```
 
 ## Engineering Principles
@@ -116,8 +127,8 @@ src/, public/       (arrive with plan 001: Vite React app, lessons data, progres
 - DRY · SOLID · KISS · YAGNI: shared logic gets a name; one thing per function; don't build ahead of
   the roadmap; delete dead code on sight.
 - **TDD for logic** (lesson data integrity, storage, keyboard mapping): failing test first. UI is
-  verified visually (`run` skill + 360px viewport + RTL check) — screenshots beat assertions there.
-- Tests guard the text rules too: ja strings reject Arabic ك/ي and ASCII digits (see plan 001).
+  verified visually (`run` skill + 360px viewport) — screenshots beat assertions there.
+- Tests guard the text rules too: ja strings reject Arabic/Persian code points and ZWNJ (see plan 001).
 - Conventional Commits (`feat:` / `fix:` / `docs:` …) — the commit-msg hook enforces it.
 - No new dependencies unless the active plan names them.
 

@@ -7,7 +7,6 @@ import { getRewards } from '../rewards/engine'
 import { getTypeProgress } from '../progress/typing'
 import { findVocabUnit } from '../lessons/vocab'
 import { KEYBOARD_KEYS } from '../keyboard/layout'
-import { ZWNJ } from '../keyboard/buffer'
 import {
   freshTypingState,
   open,
@@ -18,7 +17,7 @@ import {
 } from './typingHarness'
 
 const unit = findVocabUnit('1')!
-const first = unit.words[0] // آب / vand
+const first = unit.words[0] // みず / vand
 
 freshTypingState()
 
@@ -49,37 +48,24 @@ describe('the keyboard', () => {
   it('writes what is tapped, in order, and takes it back one code point at a time', () => {
     const { container } = open('#/lesson/ord/1/skriv')
 
-    write('بابا')
-    expect(written(container)).toBe('بابا')
+    write('みず')
+    expect(written(container)).toBe('みず')
     tap('slet sidste tegn')
-    expect(written(container)).toBe('باب')
+    expect(written(container)).toBe('み')
   })
 
-  it('offers all 33 letters plus the three sign keys, each once, every one tappable', () => {
+  it('offers all 46 kana plus the three sign keys, each once, every one tappable', () => {
     open('#/lesson/ord/1/skriv')
+    expect(KEYBOARD_KEYS).toHaveLength(49)
     for (const key of KEYBOARD_KEYS) {
       expect(screen.getAllByRole('button', { name: key.label }), key.id).toHaveLength(1)
     }
   })
 
-  it('names both space keys visibly in Danish', () => {
+  it('writes the long-vowel bar from its own key', () => {
     const { container } = open('#/lesson/ord/1/skriv')
-    const captions = [...container.querySelectorAll('.keyboard__caption')]
-      .map((caption) => caption.children.length > 0
-        ? [...caption.children].map((line) => line.textContent).join(' ')
-        : caption.textContent)
-    expect(captions).toEqual(['mellemrum', 'halvt mellemrum'])
-  })
-
-  it('will not start a word with a نیم‌فاصله and will not double one', () => {
-    const { container } = open('#/lesson/ord/1/skriv')
-
-    tap('halvt mellemrum')
-    expect(written(container)).toBe('')
-    write('کتاب')
-    tap('halvt mellemrum')
-    tap('halvt mellemrum')
-    expect(written(container)).toBe(`کتاب${ZWNJ}`)
+    write('おー')
+    expect(written(container)).toBe('おー')
   })
 })
 
@@ -95,29 +81,11 @@ describe('a word written right', () => {
     expect(getTypeProgress('1').words).toContain(first.id)
     expect(getRewards().points).toBe(before + 2)
 
-    // Same word again, on a fresh mount: practice, at the flat answer rate.
     const paid = getRewards().points
     open('#/lesson/ord/1/skriv')
     write(first.ja)
     tap('Se efter')
     expect(getRewards().points).toBe(paid + 1)
-  })
-
-  it('does not ask for اِعراب — the plain spelling of a marked word is right', () => {
-    const madrese = findVocabUnit('2')!.words.find((word) => word.id === 'madrese')!
-    expect(madrese.jaMarked).not.toBe(madrese.ja)
-
-    open('#/lesson/ord/2/skriv')
-    // Walk to the word, leaving each one blank: skipping costs nothing.
-    const index = findVocabUnit('2')!.words.indexOf(madrese)
-    for (let step = 0; step < index; step += 1) {
-      write(findVocabUnit('2')!.words[step].ja)
-      tap('Se efter')
-      tap('Næste')
-    }
-    write(madrese.ja)
-    tap('Se efter')
-    expect(praiseOnScreen()).toBe(true)
   })
 })
 
@@ -126,24 +94,23 @@ describe('a word written wrong', () => {
     const { container } = open('#/lesson/ord/1/skriv')
     const points = getRewards().points
 
-    write('آد') // آب wanted: the second letter is where it goes wrong
+    write('みみ') // みず wanted: the second kana is where it goes wrong
     tap('Se efter')
 
-    expect(screen.getByText('اینجا یک حرف دیگر است.')).toBeInTheDocument()
+    expect(screen.getByText('ここに ちがう もじが あります。')).toBeInTheDocument()
     expect(screen.getByText(/Her står et andet bogstav/)).toBeInTheDocument()
 
     const marked = container.querySelectorAll('.type__cell--mark')
     expect(marked).toHaveLength(1)
-    expect(marked[0].textContent).toBe('د')
+    expect(marked[0].textContent).toBe('み')
 
-    // Nothing lost: the points stand and the writing is still on the line.
     expect(getRewards().points).toBe(points)
-    expect(written(container)).toBe('آد')
+    expect(written(container)).toBe('みみ')
   })
 
-  it('marks the empty slot where a letter is missing', () => {
+  it('marks the empty slot where a kana is missing', () => {
     const { container } = open('#/lesson/ord/1/skriv')
-    write('آ')
+    write('み')
     tap('Se efter')
 
     expect(screen.getByText(/Her mangler et bogstav/)).toBeInTheDocument()
@@ -152,24 +119,24 @@ describe('a word written wrong', () => {
     expect(marked[0].textContent).toBe('')
   })
 
-  it('marks the first letter too many', () => {
+  it('marks the first kana too many', () => {
     const { container } = open('#/lesson/ord/1/skriv')
-    write('آبی')
+    write('みずみ')
     tap('Se efter')
 
     expect(screen.getByText(/Her er et bogstav for meget/)).toBeInTheDocument()
-    expect(container.querySelectorAll('.type__cell--mark')[0].textContent).toBe('ی')
+    expect(container.querySelectorAll('.type__cell--mark')[0].textContent).toBe('み')
   })
 
   it('clears the marking on retry and leaves the writing editable', () => {
     const { container } = open('#/lesson/ord/1/skriv')
-    write('آد')
+    write('みみ')
     tap('Se efter')
     expect(container.querySelectorAll('.type__cell--mark')).toHaveLength(1)
 
     tap('Prøv én gang til')
     expect(container.querySelectorAll('.type__cell--mark')).toHaveLength(0)
     tap('slet sidste tegn')
-    expect(written(container)).toBe('آ')
+    expect(written(container)).toBe('み')
   })
 })

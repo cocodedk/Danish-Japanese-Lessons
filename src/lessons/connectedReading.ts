@@ -1,3 +1,8 @@
+// Connected reading: short phrases and one little text per unit build two or
+// three learned words into one spoken thought. The connector と (“og”), the
+// politeness copula です (“er”) and the particle の (“'s”) are taught as small
+// function entries before they are met inside a phrase, so a phrase never
+// asks a learner to read a word they have not seen.
 import { defineEntry, type JapaneseEntry, type ReadingCue } from '../catalog/types'
 import { allVocabWords } from './vocab'
 
@@ -18,70 +23,67 @@ export interface ConnectedReading {
   question: ReadingQuestion
 }
 
-export const CONNECTOR_O = defineEntry({
-  id: 'reading-function-o',
+function kanaCue(start: number, glyph: string, role: ReadingCue['role'], helpDa: string, da: string, ipa: string): ReadingCue {
+  return { start, end: start + 1, display: glyph, role, helpDa, pron: { da, ipa } }
+}
+
+/** と — the little word that joins two things, like “og”. */
+export const CONNECTOR_TO = defineEntry({
+  id: 'reading-function-to',
   kind: 'word',
-  ja: 'و',
+  ja: 'と',
   da: 'og',
-  pron: { da: 'o', ipa: 'o' },
-  readingCues: [{ start: 0, end: 1, display: 'و', role: 'written-vowel', helpDa: 'Som selvstændigt ord betyder vav “og” og læses o', pron: { da: 'o i “foto”', ipa: 'o' } }],
+  pron: { da: 'to', ipa: 'to' },
+  readingCues: [kanaCue(0, 'と', 'consonant', 'と siger to — binder to ord med “og”', 't + o i "foto"', 'to')],
 })
 
-export const COPULA_AST = defineEntry({
-  id: 'reading-function-ast',
+/** です — the polite way to say “er”: みずです. */
+export const COPULA_DESU = defineEntry({
+  id: 'reading-function-desu',
   kind: 'word',
-  ja: 'است',
-  jaMarked: 'اَست',
+  ja: 'です',
   da: 'er',
-  pron: { da: 'ast', ipa: 'æst' },
+  pron: { da: 'desu', ipa: 'desɯ' },
   readingCues: [
-    { start: 0, end: 1, display: 'ا', role: 'carrier', helpDa: 'Alef bærer den korte vokal først i ordet' },
-    { start: 1, end: 1, display: '◌َ', role: 'short-vowel', helpDa: 'Det korte a høres, men udelades normalt i almindelig skrift', pron: { da: 'a i “kat”', ipa: 'æ' } },
-    { start: 1, end: 2, display: 'س', role: 'consonant', helpDa: 'Sin siger s', pron: { da: 's i “sol”', ipa: 's' } },
-    { start: 2, end: 3, display: 'ت', role: 'consonant', helpDa: 'Te siger t', pron: { da: 't i “tak”', ipa: 't' } },
+    kanaCue(0, 'で', 'consonant', 'で = て med dakuten — d + e', 'd + e i "let"', 'de'),
+    kanaCue(1, 'す', 'consonant', 'す siger s + u', 's i "sol" + u', 'sɯ'),
   ],
 })
 
-export const EZAFE = defineEntry({
-  id: 'reading-function-ezafe',
-  kind: 'symbol',
-  ja: 'ـِ',
-  da: 'ezafe: binder to ord sammen',
-  pron: { da: 'e', ipa: 'e' },
-  readingCues: [{ start: 0, end: 2, display: 'ـِ', role: 'written-vowel', helpDa: 'Ezafe binder det første ord til det næste', pron: { da: 'e i “let”', ipa: 'e' } }],
+/** の — the particle of belonging: ともだちの て = vennens hånd. */
+export const NO_PARTICLE = defineEntry({
+  id: 'reading-function-no',
+  kind: 'word',
+  ja: 'の',
+  da: "'s (tilhørsforhold)",
+  pron: { da: 'no', ipa: 'no' },
+  readingCues: [kanaCue(0, 'の', 'whole', 'の binder det første ord til det næste: ven + の + hånd', 'n + o i "foto"', 'no')],
 })
 
 const entryById = new Map<string, JapaneseEntry>([
   ...allVocabWords.map((word): [string, JapaneseEntry] => [word.entry.id, word.entry]),
-  ...[CONNECTOR_O, COPULA_AST, EZAFE].map((entry): [string, JapaneseEntry] => [entry.id, entry]),
+  ...[CONNECTOR_TO, COPULA_DESU, NO_PARTICLE].map((entry): [string, JapaneseEntry] => [entry.id, entry]),
 ])
 
-function readingCuesFor(
-  ja: string,
-  sourceIds: string[],
-  ezafeAfter: string[] = [],
-): ReadingCue[] {
+/** Characters a connected text may separate words with (besides spaces). */
+const SEPARATOR = /[\s.。、！!？?]/u
+
+function readingCuesFor(ja: string, sourceIds: string[]): ReadingCue[] {
   const sources = sourceIds.map((id) => entryById.get(id)).filter((entry): entry is JapaneseEntry => Boolean(entry))
   const chars = [...ja]
   const cues: ReadingCue[] = []
   for (let start = 0; start < chars.length;) {
-    while (start < chars.length && /[\s.،؟!]/u.test(chars[start])) start += 1
+    while (start < chars.length && SEPARATOR.test(chars[start])) start += 1
     if (start >= chars.length) break
     let end = start + 1
-    while (end < chars.length && !/[\s.،؟!]/u.test(chars[end])) end += 1
+    while (end < chars.length && !SEPARATOR.test(chars[end])) end += 1
     const token = chars.slice(start, end).join('')
     const entry = sources.find((candidate) => candidate.ja === token)
     if (!entry) throw new Error(`Connected reading token is not taught: ${token}`)
     cues.push({ start, end, display: token, role: 'whole', helpDa: entry.da, pron: entry.pron })
     start = end
   }
-  for (const token of ezafeAfter) {
-    const offset = chars.join('').indexOf(token)
-    if (offset < 0) throw new Error(`Ezafe anchor is absent: ${token}`)
-    const start = [...ja.slice(0, offset)].length + [...token].length
-    cues.push({ start, end: start, display: '◌ِ', role: 'short-vowel', helpDa: EZAFE.da, pron: EZAFE.pron })
-  }
-  return cues.sort((a, b) => a.start - b.start || b.end - a.end)
+  return cues
 }
 
 const vocab = (unit: string, ...ids: string[]) => ids.map((id) => `vocabulary-${unit}-${id}`)
@@ -98,7 +100,6 @@ function phrase(
   introducedEntryIds: string[],
   taughtEntryIds: string[],
   distractors: string[],
-  ezafeAfter: string[] = [],
 ): ConnectedReading {
   return {
     id,
@@ -112,7 +113,7 @@ function phrase(
       ...(jaMarked !== ja ? { jaMarked } : {}),
       da,
       pron: { da: lyd, ipa },
-      readingCues: readingCuesFor(ja, [...introducedEntryIds, ...taughtEntryIds], ezafeAfter),
+      readingCues: readingCuesFor(ja, [...introducedEntryIds, ...taughtEntryIds]),
     }),
     introducedEntryIds,
     taughtEntryIds,
@@ -121,17 +122,17 @@ function phrase(
 }
 
 export const connectedPhrases: ConnectedReading[] = [
-  phrase('1-1', '1', 0, 'آب و باد', 'آب و باد', 'vand og vind', 'åb o båd', 'ɒːb o bɒːd', vocab('1', 'ab', 'bad'), [CONNECTOR_O.id], ['brød og vand', 'mor og jeg']),
-  phrase('1-2', '1', 1, 'مادر و من', 'مادَر و مَن', 'mor og jeg', 'mådar o man', 'mɒːdæɾ o mæn', vocab('1', 'madar', 'man'), [CONNECTOR_O.id], ['far og jeg', 'mor og du']),
-  phrase('1-3', '1', 2, 'این و آن', 'این و آن', 'denne og den der', 'in o ån', 'iːn o ɒːn', vocab('1', 'in', 'an'), [CONNECTOR_O.id], ['vi og de', 'her og nu']),
-  phrase('2-1', '2', 0, 'کتاب و مداد', 'کِتاب و مِداد', 'bog og blyant', 'ketåb o medåd', 'ketɒːb o medɒːd', vocab('2', 'ketab', 'medad'), [CONNECTOR_O.id], ['bord og dør', 'hånd og ven']),
-  phrase('2-2', '2', 1, 'دست دوست', 'دَستِ دوست', 'vennens hånd', 'daste dust', 'dæste duːst', vocab('2', 'dast', 'dust'), [EZAFE.id], ['vennens bog', 'skolens dør'], ['دست']),
-  phrase('3-1', '3', 0, 'ماه و آسمان', 'ماه و آسِمان', 'måne og himmel', 'måh o åsemån', 'mɒːh o ɒːsemɒːn', vocab('3', 'mah', 'aseman'), [CONNECTOR_O.id], ['hus og regn', 'nat og måne']),
-  phrase('3-2', '3', 1, 'شب و باران', 'شَب و باران', 'nat og regn', 'sjab o bårån', 'ʃæb o bɒːɾɒːn', vocab('3', 'shab', 'baran'), [CONNECTOR_O.id], ['hus og regn', 'måne og himmel']),
-  phrase('4-1', '4', 0, 'قرمز و آبی', 'قِرمِز و آبی', 'rød og blå', 'ghermez o åbi', 'ɢeɾmez o ɒːbiː', [...vocab('4', 'qermez'), ...vocab('1', 'abi')], [CONNECTOR_O.id], ['grøn og gul', 'sort og hvid']),
-  phrase('4-2', '4', 1, 'سیاه و سفید', 'سیاه و سِفید', 'sort og hvid', 'siyåh o sefid', 'sijɒːh o sefiːd', vocab('4', 'siyah', 'sefid'), [CONNECTOR_O.id], ['orange og lyserød', 'rød og blå']),
-  phrase('5-1', '5', 0, 'گربه و سگ', 'گُربه و سَگ', 'kat og hund', 'gorbe o sag', 'ɡoɾˈbe o sæɡ', vocab('5', 'gorbe', 'sag'), [CONNECTOR_O.id], ['fugl og fisk', 'hest og ko']),
-  phrase('5-2', '5', 1, 'اسب و گاو', 'اَسب و گاو', 'hest og ko', 'asb o gåv', 'æsb o ɡɒːv', vocab('5', 'asb', 'gav'), [CONNECTOR_O.id], ['kanin og mus', 'kat og hund']),
+  phrase('1-1', '1', 0, 'みず と かぜ', 'みず と かぜ', 'vand og vind', 'mizu to kaze', 'mizɯ to kaze', vocab('1', 'mizu', 'kaze'), [CONNECTOR_TO.id], ['brød og vand', 'mor og jeg']),
+  phrase('1-2', '1', 1, 'ちち と はは', 'ちち と はは', 'far og mor', 'chichi to haha', 'tɕitɕi to haha', vocab('1', 'chichi', 'haha'), [CONNECTOR_TO.id], ['far og jeg', 'mor og du']),
+  phrase('1-3', '1', 2, 'これ と あれ', 'これ と あれ', 'denne og den der', 'kore to are', 'koɾe to aɾe', vocab('1', 'kore', 'are'), [CONNECTOR_TO.id], ['vi og alle', 'vand og vind']),
+  phrase('2-1', '2', 0, 'ほん と えんぴつ', 'ほん と えんぴつ', 'bog og blyant', 'hon to enpitsu', 'hoɴ to eɴpitsɯ', vocab('2', 'hon', 'enpitsu'), [CONNECTOR_TO.id], ['bord og dør', 'hånd og ven']),
+  phrase('2-2', '2', 1, 'ともだち の て', 'ともだち の て', 'vennens hånd', 'tomodachi no te', 'tomodatɕi no te', vocab('2', 'tomodachi', 'te'), [NO_PARTICLE.id], ['vennens bog', 'skolens dør']),
+  phrase('3-1', '3', 0, 'つき と そら', 'つき と そら', 'måne og himmel', 'tsuki to sora', 'tsɯki to soɾa', vocab('3', 'tsuki', 'sora'), [CONNECTOR_TO.id], ['hus og regn', 'nat og måne']),
+  phrase('3-2', '3', 1, 'あめ と よる', 'あめ と よる', 'regn og nat', 'ame to yoru', 'ame to joɾɯ', vocab('3', 'ame', 'yoru'), [CONNECTOR_TO.id], ['hus og regn', 'måne og himmel']),
+  phrase('4-1', '4', 0, 'あか と あお', 'あか と あお', 'rød og blå', 'aka to ao', 'aka to ao', vocab('4', 'aka', 'ao'), [CONNECTOR_TO.id], ['grøn og gul', 'sort og hvid']),
+  phrase('4-2', '4', 1, 'くろ と しろ', 'くろ と しろ', 'sort og hvid', 'kuro to shiro', 'kɯɾo to ɕiɾo', vocab('4', 'kuro', 'shiro'), [CONNECTOR_TO.id], ['orange og lyserød', 'rød og blå']),
+  phrase('5-1', '5', 0, 'ねこ と いぬ', 'ねこ と いぬ', 'kat og hund', 'neko to inu', 'neko to inɯ', vocab('5', 'neko', 'inu'), [CONNECTOR_TO.id], ['fugl og fisk', 'hest og ko']),
+  phrase('5-2', '5', 1, 'うま と うし', 'うま と うし', 'hest og ko', 'uma to ushi', 'ɯma to ɯɕi', vocab('5', 'uma', 'ushi'), [CONNECTOR_TO.id], ['kanin og mus', 'kat og hund']),
 ]
 
 function microtext(
@@ -144,9 +145,8 @@ function microtext(
   introducedEntryIds: string[],
   choicesDa: string[],
   extraTaughtEntryIds: string[] = [],
-  ezafeAfter: string[] = [],
 ): ConnectedReading {
-  const taughtEntryIds = [COPULA_AST.id, ...extraTaughtEntryIds]
+  const taughtEntryIds = [COPULA_DESU.id, ...extraTaughtEntryIds]
   return {
     id: `${unitId}-text`,
     unitId,
@@ -158,7 +158,7 @@ function microtext(
       jaMarked,
       da,
       pron: { da: lyd, ipa },
-      readingCues: readingCuesFor(ja, [...introducedEntryIds, ...taughtEntryIds], ezafeAfter),
+      readingCues: readingCuesFor(ja, [...introducedEntryIds, ...taughtEntryIds]),
     }),
     introducedEntryIds,
     taughtEntryIds,
@@ -167,15 +167,15 @@ function microtext(
 }
 
 export const connectedTexts: ConnectedReading[] = [
-  microtext('1', 'این آب است. آن نان است. او بابا است.', 'این آب اَست. آن نان اَست. او بابا اَست.', 'Dette er vand. Det der er brød. Han eller hun er far.', 'in åb ast. ån nån ast. u båbå ast', 'iːn ɒːb æst. ɒːn nɒːn æst. uː bɒːbɒː æst', vocab('1', 'in', 'ab', 'an', 'nan', 'u', 'baba'), ['Dette er vand. Det der er brød. Han eller hun er far.', 'Det handler om skole.', 'Det handler om farver.']),
-  microtext('2', 'این مدرسه است. این میز است. این کتاب است. او دوست من است.', 'این مَدرِسه اَست. این میز اَست. این کِتاب اَست. او دوستِ مَن اَست.', 'Dette er en skole. Dette er et bord. Dette er en bog. Han eller hun er min ven.', 'in madrese ast. in miz ast. in ketåb ast. u duste man ast', 'iːn mædɾese æst. iːn miːz æst. iːn ketɒːb æst. uː duːste mæn æst', [...vocab('1', 'in', 'u', 'man'), ...vocab('2', 'madrese', 'miz', 'ketab', 'dust')], ['Dette er en skole. Dette er et bord. Dette er en bog. Han eller hun er min ven.', 'Det er et hus i regnen.', 'Det er brød og vand.'], [EZAFE.id], ['دوست']),
-  microtext('3', 'این خانه است. این آسمان است. این ماه است. شب است.', 'این خانه اَست. این آسِمان اَست. این ماه اَست. شَب اَست.', 'Dette er et hus. Dette er himlen. Dette er månen. Det er nat.', 'in khåne ast. in åsemån ast. in måh ast. sjab ast', 'iːn xɒːne æst. iːn ɒːsemɒːn æst. iːn mɒːh æst. ʃæb æst', [...vocab('1', 'in'), ...vocab('3', 'khane', 'aseman', 'mah', 'shab')], ['Dette er et hus. Dette er himlen. Dette er månen. Det er nat.', 'Det er en skole med en ven.', 'Det handler om mor og far.']),
-  microtext('4', 'این قرمز و آبی است. آن سبز و زرد است. این سیاه و سفید است. آن نارنجی و صورتی است.', 'این قِرمِز و آبی اَست. آن سَبز و زَرد اَست. این سیاه و سِفید اَست. آن نارَنجی و صورَتی اَست.', 'Denne er rød og blå. Den der er grøn og gul. Denne er sort og hvid. Den der er orange og lyserød.', 'in ghermez o åbi ast. ån sabz o zard ast. in siyåh o sefid ast. ån nårenji o surati ast', 'iːn ɢeɾmez o ɒːbiː æst. ɒːn sæbz o zæɾd æst. iːn sijɒːh o sefiːd æst. ɒːn nɒːɾændʒiː o suːɾætiː æst', [...vocab('1', 'in', 'an', 'abi'), ...vocab('3', 'sabz', 'zard'), ...vocab('4', 'qermez', 'siyah', 'sefid', 'narenji', 'surati')], ['Denne er rød og blå. Den der er grøn og gul. Denne er sort og hvid. Den der er orange og lyserød.', 'Det handler om hjem og himmel.', 'Det handler om skole.'], [CONNECTOR_O.id]),
-  microtext('5', 'این پرنده است. آن ماهی است. این خرگوش است. آن موش است.', 'این پَرَنده اَست. آن ماهی اَست. این خَرگوش اَست. آن موش اَست.', 'Dette er en fugl. Det der er en fisk. Dette er en kanin. Det der er en mus.', 'in parande ast. ån måhi ast. in khargusj ast. ån musj ast', 'iːn pæˈɾænde æst. ɒːn mɒːˈhiː æst. iːn xæɾˈɡuːʃ æst. ɒːn muːʃ æst', [...vocab('1', 'in', 'an'), ...vocab('5', 'parande', 'mahi', 'khargush', 'mush')], ['Dette er en fugl. Det der er en fisk. Dette er en kanin. Det der er en mus.', 'Det handler om farver.', 'Det handler om skole.']),
+  microtext('1', 'みず です。パン です。ちち です。はは です。', 'みず です。パン です。ちち です。はは です。', 'Dette er vand. Dette er brød. Dette er far. Dette er mor.', 'mizu desu. pan desu. chichi desu. haha desu', 'mizɯ desɯ. paɴ desɯ. tɕitɕi desɯ. haha desɯ', [...vocab('1', 'mizu', 'pan', 'chichi', 'haha')], ['Dette er vand. Dette er brød. Dette er far. Dette er mor.', 'Det handler om skole.', 'Det handler om farver.']),
+  microtext('2', 'がっこう です。つくえ です。ほん です。ともだち の て です。', 'がっこう です。つくえ です。ほん です。ともだち の て です。', 'Dette er en skole. Dette er et bord. Dette er en bog. Dette er vennens hånd.', 'gakkoo desu. tsukue desu. hon desu. tomodachi no te desu', 'ɡakkoː desɯ. tsɯkɯe desɯ. hoɴ desɯ. tomodatɕi no te desɯ', [...vocab('2', 'gakkou', 'tsukue', 'hon', 'tomodachi', 'te')], ['Dette er en skole. Dette er et bord. Dette er en bog. Dette er vennens hånd.', 'Det er et hus i regnen.', 'Det er brød og vand.'], [NO_PARTICLE.id]),
+  microtext('3', 'うち です。そら です。つき です。よる です。', 'うち です。そら です。つき です。よる です。', 'Det er et hus. Det er himlen. Det er månen. Det er nat.', 'uchi desu. sora desu. tsuki desu. yoru desu', 'ɯtɕi desɯ. soɾa desɯ. tsɯki desɯ. joɾɯ desɯ', [...vocab('3', 'uchi', 'sora', 'tsuki', 'yoru')], ['Det er et hus. Det er himlen. Det er månen. Det er nat.', 'Det er en skole med en ven.', 'Det handler om mor og far.']),
+  microtext('4', 'あか です。あお です。くろ と しろ です。', 'あか です。あお です。くろ と しろ です。', 'Det er rød. Det er blå. Det er sort og hvid.', 'aka desu. ao desu. kuro to shiro desu', 'aka desɯ. ao desɯ. kɯɾo to ɕiɾo desɯ', [...vocab('4', 'aka', 'ao', 'kuro', 'shiro')], ['Det er rød. Det er blå. Det er sort og hvid.', 'Det handler om hjem og himmel.', 'Det handler om skole.'], [CONNECTOR_TO.id]),
+  microtext('5', 'ねこ です。いぬ です。うさぎ です。', 'ねこ です。いぬ です。うさぎ です。', 'Det er en kat. Det er en hund. Det er en kanin.', 'neko desu. inu desu. usagi desu', 'neko desɯ. inɯ desɯ. ɯsaɡi desɯ', [...vocab('5', 'neko', 'inu', 'usagi')], ['Det er en kat. Det er en hund. Det er en kanin.', 'Det handler om farver.', 'Det handler om skole.']),
 ]
 
 export const connectedReadings = [...connectedPhrases, ...connectedTexts]
-export const readingFunctionEntries = [CONNECTOR_O, COPULA_AST, EZAFE]
+export const readingFunctionEntries = [CONNECTOR_TO, COPULA_DESU, NO_PARTICLE]
 
 export function findConnectedReading(unitId: string, id: string) {
   return connectedReadings.find((reading) => reading.unitId === unitId && reading.id === id)

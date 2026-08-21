@@ -1,83 +1,69 @@
 import { describe, it, expect } from 'vitest'
-import { nameLetters } from './forms'
+import { nameLetters, katakanaOf } from './forms'
+import { SOKUON_KANA_ENTRY, CHOONPU_KANA_ENTRY, VE_SIGN_ENTRY } from './forms'
 import { specimens } from '../lessons/alphabet'
 
-/** Shorthand: the four positions of the letters in a spelling, right to left. */
-function positions(spelling: string): string[] {
-  return nameLetters(spelling).map((letter) => letter.form)
-}
+describe('katakana of a taught kana', () => {
+  it('turns a hiragana letter into the katakana a name is written in', () => {
+    // The alphabet lesson teaches さ; a name is written サ.
+    expect(katakanaOf('さ')).toBe('サ')
+    expect(katakanaOf('は')).toBe('ハ')
+    expect(katakanaOf('ア')).toBe('ア')
+  })
+})
 
-describe('positional forms of a name', () => {
-  it('reads بابک as initial, final, initial, final — ا breaks the join', () => {
-    expect(positions('بابک')).toEqual(['initial', 'final', 'initial', 'final'])
-    expect(nameLetters('بابک').map((letter) => letter.formGlyph)).toEqual([
-      'بـ',
-      'ـا',
-      'بـ',
-      'ـک',
-    ])
+describe('the letters of a name', () => {
+  it('reads サラ as two standing kana, each named from the alphabet data', () => {
+    const [sa, ra] = nameLetters('サラ')
+    expect(sa.glyph).toBe('サ')
+    expect(sa.form).toBe('isolated')
+    expect(sa.formGlyph).toBe('サ')
+    expect(sa.nameDa).toBe('sa')
+    expect(sa.joinsLeft).toBe(false)
+    expect(ra.glyph).toBe('ラ')
+    expect(ra.nameDa).toBe('ra')
   })
 
-  it('reads مته as a word that joins all the way through', () => {
-    expect(positions('مته')).toEqual(['initial', 'medial', 'final'])
-    expect(nameLetters('مته').map((letter) => letter.formGlyph)).toEqual(['مـ', 'ـتـ', 'ـه'])
+  it('every kana is one form — it never joins or changes shape', () => {
+    for (const letter of nameLetters('セーレン')) {
+      expect(letter.form).toBe('isolated')
+      expect(letter.formGlyph).toBe(letter.glyph)
+    }
   })
 
-  it('leaves ر and ا standing alone in سارا, because neither joins to the left', () => {
-    expect(positions('سارا')).toEqual(['initial', 'final', 'isolated', 'isolated'])
+  it('knows the name signs the 46 never teach: ー, ッ and ヴ', () => {
+    const [se, choonpu] = nameLetters('セー')
+    expect(se.nameDa).toBe('se')
+    expect(choonpu.nameDa).toBe('langt vokaltegn')
+    expect(choonpu.entry).toBe(CHOONPU_KANA_ENTRY)
+
+    const mette = nameLetters('メッテ')
+    expect(mette[1].glyph).toBe('ッ')
+    expect(mette[1].nameDa).toBe(SOKUON_KANA_ENTRY.da)
+
+    const [ve] = nameLetters('ヴィアン')
+    expect(ve.glyph).toBe('ヴ')
+    expect(ve.nameDa).toBe('særligt tegn')
+    expect(ve.entry).toBe(VE_SIGN_ENTRY)
+    expect(ve.sound).toBeUndefined()
   })
 
-  it('names each letter from the alphabet lesson data', () => {
-    const [be, alef] = nameLetters('با')
-    expect(be.nameDa).toBe('be')
-    expect(be.glyph).toBe('ب')
-    expect(be.joinsLeft).toBe(true)
-    expect(alef.nameDa).toBe('alef')
-    expect(alef.joinsLeft).toBe(false)
+  it('carries the sound of each kana, straight from the alphabet lesson', () => {
+    const [sa] = nameLetters('サ')
+    const letterSa = specimens['sa'] as typeof specimens[string]
+    expect(sa.sound).toEqual(letterSa.sound)
   })
 
-  it('knows آ, which is a sign rather than one of the 32 letters', () => {
-    const [madde, nun] = nameLetters('آن')
-    expect(madde.glyph).toBe('آ')
-    expect(madde.form).toBe('isolated')
-    expect(madde.nameDa).toBe('alef med madde')
-    expect(nun.form).toBe('isolated')
-  })
-
-  it('breaks the join at a space, so a compound name is two words', () => {
-    const letters = nameLetters('آنه مته')
+  it('breaks a compound name at the space', () => {
+    const letters = nameLetters('アンネ メッテ')
     expect(letters).toHaveLength(6)
-    expect(letters.map((letter) => letter.glyph).join('')).toBe('آنهمته')
-    // The ه of آنه ends its word; the م of مته starts a new one.
-    expect(letters[2].form).toBe('final')
-    expect(letters[3].form).toBe('initial')
-  })
-
-  it('numbers the letters in reading order, ignoring the space', () => {
-    expect(nameLetters('آنه مته').map((letter) => letter.index)).toEqual([0, 1, 2, 3, 4, 5])
-  })
-
-  it('carries the sound of each letter, straight from the alphabet lesson', () => {
-    const [be, alef] = nameLetters('با')
-    expect(be.sound).toEqual(specimens.be.sound)
-    expect(alef.sound).toEqual(specimens.alef.sound)
-    expect(nameLetters('آ')[0].sound).toEqual(specimens['alef-madde'].sound)
-  })
-
-  it('handles a letter outside the 32 without losing it, and without naming it after itself', () => {
-    // لوئیزه (Louise) carries ئ, which is a form of ی rather than its own letter.
-    const letters = nameLetters('لوئیزه')
-    expect(letters).toHaveLength(6)
-    expect(letters[2].glyph).toBe('ئ')
-    expect(letters[2].form).toBe('initial')
-    // The lesson never taught it, so it is called what it is and claims no sound.
-    expect(letters[2].nameDa).toBe('hamze over ye')
-    expect(letters[2].entry?.da).toBe('hamze over ye; ingen egen lyd')
-    expect(letters[2].sound).toEqual({ da: 'ingen egen lyd', ipa: '∅' })
+    expect(letters.map((letter) => letter.glyph).join('')).toBe('アンネメッテ')
+    expect(letters.map((letter) => letter.index)).toEqual([0, 1, 2, 3, 4, 5])
   })
 
   it('returns nothing for an empty spelling', () => {
     expect(nameLetters('')).toEqual([])
     expect(nameLetters('   ')).toEqual([])
+    expect(nameLetters('123')).toEqual([])
   })
 })

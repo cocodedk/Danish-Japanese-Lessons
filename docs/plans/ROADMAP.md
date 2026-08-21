@@ -5,6 +5,9 @@ implement them exactly and check off acceptance items. Questions go under `## Qu
 of the plan file. A plan is done when its acceptance list is fully checked and `verify.sh` (plus, once
 the app exists, `npm run verify`) is green.
 
+**Active plan (2026-08-21): [016-japanese-port.md](016-japanese-port.md).** The Japanese port is
+under way; P1–P15 below stay as history of the Persian-era project.
+
 ## Phases
 
 - [x] **P0 — Infrastructure** (done 2026-08-03): repo, local gates, Pages deploy, trilingual landing site,
@@ -61,6 +64,12 @@ the app exists, `npm run verify`) is green.
       path only after 97 locally generated Japanese clips pass named native review. The scripts,
       provenance model, picture-book screens, private voice replay, separate progress, and complete
       launch gate are implemented; audio review and public activation remain open.
+
+- [ ] **P16 — [016-japanese-port.md](016-japanese-port.md)** — **active now (2026-08-21).** The
+      Japanese port of the Persian-era course: 46 hiragana with stroke order, the six marks
+      ゛ ゜ ー っ ゃ ょ, katakana for names and loanwords, first words, numbers 一–十, loanword
+      bridges, Danish names in katakana, and the trilingual landing site. It supersedes the
+      Persian-era content decisions of P1–P15 without rewriting those historical plans.
 
 ## Later (not planned yet — do not build ahead)
 

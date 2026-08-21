@@ -5,16 +5,16 @@ import { ProgressTick } from '../components/ProgressTick'
 import { Button } from '../components/Button'
 import { Celebration } from '../components/Celebration'
 import { RewardOverlays } from '../components/RewardOverlays'
-import { CompactPhraseRow, FullTeachingCard } from '../components/EntryRenderers'
-import { vowelMarks, laterMarks } from '../lessons/vowelMarks'
+import { CompactPhraseRow } from '../components/EntryRenderers'
+import { vowelMarks } from '../lessons/vowelMarks'
 import { getAlphabetProgress, markVowelDone } from '../progress/alphabet'
 import { useCelebration } from '../rewards/useCelebration'
 import './alphabet.css'
 import './vowelMarks.css'
 
 /**
- * The six vowel signs. Short vowels ride above or below their letter in the
- * teacher's red; long vowels are letters of their own.
+ * The six Japanese lydtegn: ゛ and ゜ sit above a kana, ー lengthens a vowel,
+ * っ doubles the next consonant, and ゃ/ょ write a y after a kana.
  */
 export default function VowelMarksScreen() {
   const [cleared, setCleared] = useState(() => getAlphabetProgress().marks)
@@ -22,11 +22,9 @@ export default function VowelMarksScreen() {
   const celebration = useCelebration()
 
   return (
-    <LessonSheet title="Vokaltegn" bar={<BarLink to="/lesson/alphabet">Til lektionen</BarLink>}>
+    <LessonSheet title="Lydtegn" bar={<BarLink to="/lesson/alphabet">Til lektionen</BarLink>}>
       <p className="alphabet__lead">
-        Vokalerne står ikke i linjen som på dansk. De tre korte skrives som små tegn over eller
-        under bogstavet — her på et alef, så du kan se hvor de sidder. De tre lange er bogstaver i
-        sig selv.
+        Seks lydtegn: to over kanaerne, en lang vokal, en dobbelt lyd, to små y'er.
       </p>
 
       {vowelMarks.map((mark) => {
@@ -34,8 +32,6 @@ export default function VowelMarksScreen() {
         return (
           <div key={mark.id} className="marks__row">
             <VowelChip entry={mark.entry} />
-            {/* Name over action: at 360px the chip takes half the line, so
-                these two stack instead of squeezing each other. */}
             <div className="marks__side">
               <CompactPhraseRow entry={mark.nameEntry} />
               {done ? (
@@ -58,18 +54,6 @@ export default function VowelMarksScreen() {
         )
       })}
       <RewardOverlays celebration={celebration} />
-
-      <h2 className="alphabet__section-title">Senere</h2>
-      <p className="alphabet__note">
-        To tegn mere. De giver ingen vokal, så dem tager vi i en senere lektion.
-      </p>
-      {laterMarks.map((mark) => (
-        <div key={mark.id} className="marks__later">
-          <FullTeachingCard entry={mark.entry} />
-          <CompactPhraseRow entry={mark.nameEntry} />
-          <span>{mark.hint}</span>
-        </div>
-      ))}
     </LessonSheet>
   )
 }

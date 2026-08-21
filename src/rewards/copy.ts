@@ -5,47 +5,52 @@ import type { Praise, StickerKind, StreakState } from './types'
 import { defineEntry } from '../catalog/types'
 
 /**
- * Iranian school praise, varied the way a teacher varies it. The engine walks
+ * Encouraging words, varied the way a teacher varies them. The engine walks
  * this list by progress count, so it never repeats itself twice in a row and
- * never needs a random number. Pron is dansk lydskrift + IPA, dictated verbatim
- * by docs/plans/009-praise-pronunciation.md — never improvised in the UI.
+ * never needs a random number. Pron is dansk lydskrift + IPA (standard Tokyo,
+ * phonemic, no pitch), dictated by the port spec — never improvised in the UI.
  */
 export const PRAISE: Praise[] = [
-  defineEntry({ id: 'rewards-praise-afarin', kind: 'word', ja: 'آفرین', da: 'Flot!', pron: { da: 'åfarin', ipa: 'ɒːfæɾin' } }),
-  defineEntry({ id: 'rewards-praise-ali', kind: 'word', ja: 'عالی', da: 'Super!', pron: { da: 'åli', ipa: 'ɒːli' } }),
-  defineEntry({ id: 'rewards-praise-che-khub', kind: 'phrase', ja: 'چه خوب', da: 'Hvor fint!', pron: { da: 'tje khub', ipa: 'tʃe xub' } }),
-  defineEntry({ id: 'rewards-praise-kheyli-khub', kind: 'phrase', ja: 'خیلی خوب', da: 'Rigtig godt!', pron: { da: 'khejli khub', ipa: 'xejli xub' } }),
-  defineEntry({ id: 'rewards-praise-khub-bud', kind: 'phrase', ja: 'خوب بود', da: 'Det var godt!', pron: { da: 'khub bud', ipa: 'xub buːd' } }),
-  defineEntry({ id: 'rewards-praise-dorost-bud', kind: 'phrase', ja: 'درست بود', da: 'Det var rigtigt!', pron: { da: 'dorost bud', ipa: 'doɾost buːd' } }),
+  defineEntry({ id: 'rewards-praise-sugoi', kind: 'word', ja: 'すごい！', da: 'Flot!', pron: { da: 'sugoi', ipa: 'sɯɡoi' } }),
+  defineEntry({ id: 'rewards-praise-iine', kind: 'word', ja: 'いいね！', da: 'Godt!', pron: { da: 'ii ne', ipa: 'iːne' } }),
+  defineEntry({ id: 'rewards-praise-sonotoori', kind: 'phrase', ja: 'そのとおり！', da: 'Lige præcis!', pron: { da: 'sono tori', ipa: 'sono toːɾi' } }),
+  defineEntry({ id: 'rewards-praise-subarashii', kind: 'word', ja: 'すばらしい！', da: 'Fantastisk!', pron: { da: 'subarashii', ipa: 'sɯbaɾaɕiː' } }),
+  defineEntry({ id: 'rewards-praise-yoku', kind: 'phrase', ja: 'よくできました！', da: 'Godt klaret!', pron: { da: 'yoku dekimashita', ipa: 'joku dekimaɕita' } }),
+  defineEntry({ id: 'rewards-praise-atari', kind: 'word', ja: 'あたり！', da: 'Rigtigt!', pron: { da: 'atari', ipa: 'ataɾi' } }),
 ]
 
 /** Static phrase segment used before a separately rendered learner name. */
-export const NAME_PRAISE_ENTRY = defineEntry({ id: 'rewards-name-praise', kind: 'word', ja: 'آفرین،', da: 'Flot', pron: { da: 'åfarin', ipa: 'ɒːfæɾin' } })
+export const NAME_PRAISE_ENTRY = defineEntry({ id: 'rewards-name-praise', kind: 'word', ja: 'すごい、', da: 'Flot', pron: { da: 'sugoi', ipa: 'sɯɡoi' } })
 
-/** The three stamps a teacher owns: the آفرین stamp, the ۲۰ mark, the gold star. */
+/**
+ * The three stamps a teacher owns. The kind keys ('afarin', 'bist', 'star')
+ * are the engine's stable storage names from plan 007; the stamps they now
+ * label are the すごい praise, the まる circle a teacher draws on a right
+ * answer, and the gold star.
+ */
 export const STICKER_LABELS: Record<StickerKind, Praise> = {
-  afarin: defineEntry({ id: 'rewards-sticker-afarin', kind: 'word', ja: 'آفرین', da: 'Flot!', pron: { da: 'åfarin', ipa: 'ɒːfæɾin' } }),
-  bist: defineEntry({ id: 'rewards-sticker-bist', kind: 'symbol', ja: '۲۰', da: 'Tyve', pron: { da: 'bist', ipa: 'biːst' } }),
-  star: defineEntry({ id: 'rewards-sticker-star', kind: 'phrase', ja: 'ستارهٔ طلایی', da: 'Guldstjerne', pron: { da: 'setåreje talåji', ipa: 'setɒːɾeje tælɒːjiː' } }),
+  afarin: defineEntry({ id: 'rewards-sticker-sugoi', kind: 'word', ja: 'すごい', da: 'Flot!', pron: { da: 'sugoi', ipa: 'sɯɡoi' } }),
+  bist: defineEntry({ id: 'rewards-sticker-maru', kind: 'symbol', ja: '○', da: 'Rigtigt!', pron: { da: 'maru', ipa: 'maɾɯ' } }),
+  star: defineEntry({ id: 'rewards-sticker-star', kind: 'phrase', ja: 'スター', da: 'Stjerne', pron: { da: 'suta', ipa: 'sɯtaː' } }),
 }
 
 /** A bonus exercise is a present, and says so. */
-export const GIFT_ENTRY = defineEntry({ id: 'rewards-gift', kind: 'phrase', ja: 'یک تمرین جایزه!', da: 'En bonusøvelse!', pron: { da: 'jek tamrine djåjeze', ipa: 'jek tæmɾiːne dʒɒːjeze' } })
+export const GIFT_ENTRY = defineEntry({ id: 'rewards-gift', kind: 'phrase', ja: 'ボーナス レッスン！', da: 'En bonusøvelse!', pron: { da: 'boonasu ressun', ipa: 'boːnasɯ ɾesːɯn' } })
 
 /** Shown when a resting streak wakes up — the welcome, never a scolding. */
 export const WELCOME_BACK: Praise = defineEntry({
   id: 'rewards-welcome-back',
   kind: 'phrase',
-  ja: 'دوباره سلام!',
+  ja: 'おかえり！',
   da: 'Hej igen!',
-  pron: { da: 'dobåre salåm', ipa: 'dobɒːɾe sælɒːm' },
+  pron: { da: 'okaeri', ipa: 'okaeri' },
 })
 
-const PAGE_FILLED = defineEntry({ id: 'rewards-page-filled', kind: 'phrase', ja: 'صفحه پر شد!', da: 'Siden er fuld!', pron: { da: 'safhe por sjod', ipa: 'sæfhe poɾ ʃod' } })
-const CURRENT_PAGE = defineEntry({ id: 'rewards-current-page', kind: 'phrase', ja: 'صفحهٔ تازه', da: 'En ny side', pron: { da: 'safheje tåze', ipa: 'sæfheje tɒːze' } })
-const STREAK_RESTING = defineEntry({ id: 'rewards-streak-resting', kind: 'phrase', ja: 'تمرین هنوز ادامه دارد', da: 'Træningen fortsætter stadig', pron: { da: 'tamrin hanuz edåme dårad', ipa: 'tæmɾiːn hænuːz ʔedɒːme dɒːɾæd' } })
-const STREAK_TODAY = defineEntry({ id: 'rewards-streak-today', kind: 'phrase', ja: 'امروز تمرین کردی', da: 'Du har øvet i dag', pron: { da: 'emruz tamrin kardi', ipa: 'ʔemɾuːz tæmɾiːn kæɾdiː' } })
-const STREAK_AWAKE = defineEntry({ id: 'rewards-streak-awake', kind: 'phrase', ja: 'تمرین ادامه دارد', da: 'Træningen fortsætter', pron: { da: 'tamrin edåme dårad', ipa: 'tæmɾiːn ʔedɒːme dɒːɾæd' } })
+const PAGE_FILLED = defineEntry({ id: 'rewards-page-filled', kind: 'phrase', ja: 'ページが いっぱい！', da: 'Siden er fuld!', pron: { da: 'peeji ga ippai', ipa: 'peːdʑi ɡa ipːai' } })
+const CURRENT_PAGE = defineEntry({ id: 'rewards-current-page', kind: 'phrase', ja: 'あたらしい ページ', da: 'En ny side', pron: { da: 'atarashii peeji', ipa: 'ataɾaɕiː peːdʑi' } })
+const STREAK_RESTING = defineEntry({ id: 'rewards-streak-resting', kind: 'phrase', ja: 'れんしゅうは まだ つづくよ', da: 'Træningen fortsætter stadig', pron: { da: 'renshu wa mada tsuzuku yo', ipa: 'ɾeɱɕɯː ɰa mada tsɯzɯkɯ jo' } })
+const STREAK_TODAY = defineEntry({ id: 'rewards-streak-today', kind: 'phrase', ja: 'きょうも れんしゅう したね', da: 'Du har øvet i dag', pron: { da: 'kyo mo renshu shita ne', ipa: 'kʲoː mo ɾeɱɕɯː ɕita ne' } })
+const STREAK_AWAKE = defineEntry({ id: 'rewards-streak-awake', kind: 'phrase', ja: 'れんしゅう つづけよう', da: 'Træningen fortsætter', pron: { da: 'renshu tsuzukeyo', ipa: 'ɾeɱɕɯː tsɯzɯkejoː' } })
 
 /** Words this app must never say about progress. Asserted in streak.test.ts. */
 export const GUILT_WORDS = [
@@ -56,9 +61,10 @@ export const GUILT_WORDS = [
   'desværre',
   'ærgerligt',
   'brudt',
-  'از دست',
-  'صفر',
-  'متأسفانه',
+  'リセット',
+  'ゼロ',
+  'ざんねん',
+  'あやまち',
 ]
 
 /** Both sides say only that the page is full; neither adds a hidden counter. */

@@ -3,7 +3,6 @@ import { buildVocabQuestions, distractors, isVocabExerciseKind } from './vocabEx
 import type { VocabExerciseKind } from './vocabExercises'
 import { vocabUnits, allVocabWords } from './vocab'
 import type { VocabWord } from './vocab'
-import { withoutMarks } from './marks'
 
 const KINDS: VocabExerciseKind[] = ['ord', 'par']
 const rounds = vocabUnits.flatMap((unit) =>
@@ -61,12 +60,14 @@ describe('vocabulary exercises', () => {
     }
   })
 
-  it('never offers a هم‌آوا word as a distractor — a same-sounding pair would be a second right answer', () => {
+  it('never offers a same-sounding word as a distractor — either half of the pronunciation would be a second right answer', () => {
     for (const question of everyQuestion) {
       const asked = wordOf(question.itemId)
       for (const choice of question.choices) {
         if (choice.id === question.answerId) continue
-        expect(wordOf(choice.id).pron.ipa, `${question.id} / ${choice.id}`).not.toBe(asked.pron.ipa)
+        const candidate = wordOf(choice.id)
+        expect(candidate.pron.ipa, `${question.id} / ${choice.id}`).not.toBe(asked.pron.ipa)
+        expect(candidate.pron.da, `${question.id} / ${choice.id}`).not.toBe(asked.pron.da)
       }
     }
   })
@@ -77,7 +78,7 @@ describe('vocabulary exercises', () => {
     }
   })
 
-  it('shows the vocalized specimen when it shows Japanese, and bare words in the choices', () => {
+  it('shows the Japanese specimen when it asks the meaning, and bare words in the choices', () => {
     for (const { kind, questions } of rounds) {
       for (const question of questions) {
         const word = wordOf(question.itemId)
@@ -89,10 +90,6 @@ describe('vocabulary exercises', () => {
           expect(question.showsFa, question.id).toBeUndefined()
           expect(question.promptDa, question.id).toContain(word.da)
           expect(question.choiceLang).toBe('ja')
-          // اِعراب belongs on specimens only — the choices are bare words.
-          for (const choice of question.choices) {
-            expect(withoutMarks(choice.glyph), choice.glyph).toBe(choice.glyph)
-          }
         }
       }
     }
@@ -112,11 +109,11 @@ describe('vocabulary exercises', () => {
   })
 
   it('throws rather than silently shipping a round short of distractors', () => {
-    // Three هم‌آوا clones of one real word leave the target zero non-alike
+    // Three clones of one real word leave the target zero non-alike
     // neighbours — one short of the three `CHOICE_COUNT - 1` needs.
-    const target = wordOf('ab')
+    const target = wordOf('mizu')
     const clone = (id: string): VocabWord => ({ ...target, id })
-    const tooFew = [target, clone('ab2'), clone('ab3'), clone('ab4')]
+    const tooFew = [target, clone('mizu2'), clone('mizu3'), clone('mizu4')]
     expect(() => distractors(tooFew, 0)).toThrow(/distractor/i)
   })
 

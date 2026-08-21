@@ -6,8 +6,8 @@ const find = buildQuestions('find')
 const match = buildQuestions('match')
 
 describe('exercise questions', () => {
-  it('asks about every stable-sound specimen once, in teaching order', () => {
-    expect(find.map((q) => q.itemId)).toEqual(teachingOrder.filter((id) => id !== 'alef'))
+  it('asks about every kana once, in teaching order, in both rounds', () => {
+    expect(find.map((q) => q.itemId)).toEqual(teachingOrder)
     expect(match.map((q) => q.itemId)).toEqual(letters.map((l) => l.id))
   })
 
@@ -23,8 +23,8 @@ describe('exercise questions', () => {
   it('says every prompt twice — dansk lydskrift and IPA — from the letter data', () => {
     for (const question of [...find, ...match]) {
       expect(question.entry.pron, question.id).toEqual(specimens[question.itemId].sound)
-      expect(question.entry.pron.da.length).toBeGreaterThan(0)
-      expect(question.entry.pron.ipa.length).toBeGreaterThan(0)
+      expect(question.entry.pron.da.length, question.id).toBeGreaterThan(0)
+      expect(question.entry.pron.ipa.length, question.id).toBeGreaterThan(0)
     }
   })
 
@@ -33,54 +33,44 @@ describe('exercise questions', () => {
     expect(new Set(slots).size).toBe(4)
   })
 
-  it('offers exactly one choice that matches the prompt sound — every question, both rounds', () => {
+  it('offers exactly one choice matching the prompt sound — both rounds', () => {
     for (const question of [...find, ...match]) {
-      const matches = question.choices.filter(
-        (choice) =>
-          specimens[choice.id].sound.ipa === question.entry.pron.ipa ||
-          specimens[choice.id].sound.da === question.entry.pron.da,
+      const matches = question.choices.filter((choice) =>
+        specimens[choice.id].sound.ipa === question.entry.pron.ipa ||
+        specimens[choice.id].sound.da === question.entry.pron.da,
       )
       expect(matches.map((choice) => choice.id), question.id).toEqual([question.answerId])
     }
   })
 
-  it('never offers a homophone as a distractor — ذ ز ض ظ · ث س ص · ت ط · ح ه · ق غ', () => {
-    const groups = [
-      ['zal', 'ze', 'zad', 'za'],
-      ['se', 'sin', 'sad'],
-      ['te', 'ta'],
-      ['he-jimi', 'he'],
-      ['ghaf', 'gheyn'],
-    ]
-    for (const group of groups) {
-      const sounds = new Set(group.map((id) => specimens[id].sound.ipa))
-      expect(sounds.size, group.join(' ')).toBe(1)
-    }
+  it('never offers the homophone as the answer to its pair', () => {
+    // を and お spell the same sound: the question for お must not offer を,
+    // and the question for を must not offer お. Other questions may offer
+    // either — a legitimately distinct syllable like あ vs お.
     for (const question of [...find, ...match]) {
-      const group = groups.find((ids) => ids.includes(question.answerId)) ?? []
-      const offered = question.choices.map((choice) => choice.id).filter((id) => group.includes(id))
-      expect(offered, question.id).toEqual(group.length ? [question.answerId] : [])
+      if (question.answerId !== 'o' && question.answerId !== 'wo') continue
+      const other = question.answerId === 'o' ? 'wo' : 'o'
+      expect(question.choices.some((c) => c.id === other), question.id).toBe(false)
     }
   })
 
-  it('picks distractors a learner could actually confuse — same body, other dots', () => {
-    const be = find.find((q) => q.itemId === 'be')
-    expect(be?.choices.map((c) => c.id).sort()).toEqual(['be', 'pe', 'se', 'te'])
-  })
-
-  it('asks non-joiners about their final form, since they have no medial one', () => {
-    const alef = match.find((q) => q.itemId === 'alef')
-    expect(alef?.promptDa).toContain('sidst i et ord')
-    expect(alef?.choices.find((c) => c.id === 'alef')?.glyph).toBe('ـا')
-  })
-
-  it('shows real positional forms, never a bare glyph, in "Match formerne"', () => {
+  it('shows real match glyphs in "Hiragana og katakana" — katakana for the hiragana asked', () => {
     for (const question of match) {
+      const right = question.choices.find((c) => c.id === question.answerId)
+      expect(right?.glyph, question.id).toBe(specimens[question.answerId].kata)
+      expect(question.showsFa, question.id).toBe(true)
       for (const choice of question.choices) {
-        const letter = letters.find((l) => l.id === choice.id)
-        expect(Object.values(letter!.forms), question.id).toContain(choice.glyph)
+        expect(choice.glyph, question.id).toBe(specimens[choice.id].kata)
       }
-      expect(question.showsFa).toBe(true)
+    }
+  })
+
+  it('keeps the find round in pure hiragana', () => {
+    for (const question of find) {
+      expect(question.showsFa, question.id).toBeUndefined()
+      for (const choice of question.choices) {
+        expect(choice.glyph, question.id).toBe(specimens[choice.id].glyph)
+      }
     }
   })
 

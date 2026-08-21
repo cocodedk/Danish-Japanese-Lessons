@@ -1,20 +1,19 @@
-// The dictated pronunciation table (docs/plans/009-praise-pronunciation.md),
-// transcribed once, verbatim — every praise word and the welcome-back line.
-// A new file rather than growing engine.test.ts (already at the 200-line cap,
-// CLAUDE.md) — the harness/split precedent for a file nearing the ceiling.
+// The dictated pronunciation table (port spec, rewards section), transcribed
+// once, verbatim — every praise word and the welcome-back line. A new file
+// rather than growing engine.test.ts (already at the 200-line cap, CLAUDE.md).
 import { describe, it, expect } from 'vitest'
 import { PRAISE, WELCOME_BACK } from './copy'
 
 describe('praise pronunciation', () => {
   // The dictated table, verbatim, row order = PRAISE order, welcome-back last.
   const TABLE: Array<{ ja: string; da: string; ipa: string }> = [
-    { ja: 'آفرین', da: 'åfarin', ipa: 'ɒːfæɾin' },
-    { ja: 'عالی', da: 'åli', ipa: 'ɒːli' },
-    { ja: 'چه خوب', da: 'tje khub', ipa: 'tʃe xub' },
-    { ja: 'خیلی خوب', da: 'khejli khub', ipa: 'xejli xub' },
-    { ja: 'خوب بود', da: 'khub bud', ipa: 'xub buːd' },
-    { ja: 'درست بود', da: 'dorost bud', ipa: 'doɾost buːd' },
-    { ja: 'دوباره سلام', da: 'dobåre salåm', ipa: 'dobɒːɾe sælɒːm' },
+    { ja: 'すごい！', da: 'sugoi', ipa: 'sɯɡoi' },
+    { ja: 'いいね！', da: 'ii ne', ipa: 'iːne' },
+    { ja: 'そのとおり！', da: 'sono tori', ipa: 'sono toːɾi' },
+    { ja: 'すばらしい！', da: 'subarashii', ipa: 'sɯbaɾaɕiː' },
+    { ja: 'よくできました！', da: 'yoku dekimashita', ipa: 'joku dekimaɕita' },
+    { ja: 'あたり！', da: 'atari', ipa: 'ataɾi' },
+    { ja: 'おかえり！', da: 'okaeri', ipa: 'okaeri' },
   ]
 
   it('has exactly seven rows — six praise pairs and the welcome-back line', () => {
@@ -31,8 +30,7 @@ describe('praise pronunciation', () => {
 
   it('the welcome-back line carries the table’s seventh row', () => {
     const row = TABLE[6]
-    // ja carries a trailing "!" the table itself does not — punctuation, not pronunciation.
-    expect(WELCOME_BACK.ja).toBe(`${row.ja}!`)
+    expect(WELCOME_BACK.ja).toBe(row.ja)
     expect(WELCOME_BACK.pron).toEqual({ da: row.da, ipa: row.ipa })
   })
 

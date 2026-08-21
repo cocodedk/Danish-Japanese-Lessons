@@ -1,15 +1,14 @@
-// The grade-1 vocabulary units, in the order the Iranian first-grade book
-// (فارسی اول دبستان) introduces its نشانه‌ها: درس ۱ آ ا / بـ ب، درس ۲ اَ / د،
-// درس ۳ مـ م / سـ س، درس ۴ او و / تـ ت، درس ۵ ر / نـ ن، درس ۶ ای / ز،
-// درس ۷ اِ / ـه ه / شـ ش. The sources, the three unit lists and every honest
-// exception are written up in docs/plans/004-grade1-vocab.md under
-// "Word list proposal" — argue with a word there; it lands here.
+// The five first Japanese vocabulary units, kana only — the reading path stays
+// open for kanji in a later lesson. Every word is chosen so a beginner can
+// point at it, say it, and use it the same day: water, bread, mother, father,
+// wind; school things and a greeting; home and the sky; colours; animals.
+// The word list is fixed in docs/plans/016-japanese-port.md ("Word lists") —
+// argue with a word there; it lands here.
 //
-// `jaMarked` is the fully vocalized specimen. Where it reads the same as `ja`
-// the word genuinely has no short vowel to write: آب، بابا، نان are long
-// vowels all the way through, which is exactly why the primer opens on them.
-// Marks are the short vowels only — مَدرِسه, never مَدْرِسه; the schoolbook
-// does not write ساکن.
+// `jaMarked` is the same word with something red-penned, the way the design
+// system teaches new elements. Japanese kana carry no visible vowel marks, so
+// no vocabulary card here has anything to red-pen: every `jaMarked` equals
+// `ja`. (The marks lesson red-pens dakuten and handakuten instead.)
 import type { WordCard } from './types'
 import { defineEntry } from '../catalog/types'
 import type { JapaneseEntry } from '../catalog/types'
@@ -20,7 +19,7 @@ export interface VocabWord extends WordCard {
   id: string
   /** Required here, unlike the optional field on WordCard: every card is vocalized. */
   jaMarked: string
-  /** Educational color field shown instead of a stock illustration. */
+  /** Educational colour field shown instead of a stock illustration. */
   swatch?: ColorSwatchId
 }
 
@@ -31,7 +30,7 @@ export interface VocabUnit {
   id: string
   /** Danish heading. */
   title: string
-  /** Japanese heading. UI chrome, so no اِعراب — CLAUDE.md's Japanese text rules. */
+  /** Japanese heading. UI chrome, so no red pen — CLAUDE.md's Japanese text rules. */
   titleEntry: JapaneseEntry
   /** One Danish line for the forside card. */
   summary: string
@@ -66,84 +65,84 @@ function words(unitId: string, rows: Row[]): VocabWord[] {
 
 export const vocabUnits: VocabUnit[] = [
   {
-    id: '1',
-    title: 'De første ord',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-1-title', kind: 'phrase', ja: 'آب و بابا', da: 'Vand og far', pron: { da: 'åb o båbå', ipa: 'ɒːb o bɒːbɒː' } }),
-    summary: 'De ord bogen åbner med — og de ord du peger med',
-    words: words('1', [
-      ['ab', 'آب', 'آب', 'vand', 'åb', 'ɒːb'],
-      ['baba', 'بابا', 'بابا', 'far', 'båbå', 'bɒːbɒː'],
-      ['bad', 'باد', 'باد', 'vind', 'båd', 'bɒːd'],
-      ['nan', 'نان', 'نان', 'brød', 'nån', 'nɒːn'],
-      ['madar', 'مادر', 'مادَر', 'mor', 'mådar', 'mɒːˈdæɾ'],
-      ['man', 'من', 'مَن', 'jeg', 'man', 'mæn'],
-      ['to', 'تو', 'تو', 'du', 'to', 'to'],
-      ['ma', 'ما', 'ما', 'vi', 'må', 'mɒː'],
-      ['u', 'او', 'او', 'han eller hun', 'u', 'uː'],
-      ['in', 'این', 'این', 'denne, dette', 'in', 'iːn'],
-      ['an', 'آن', 'آن', 'den, det (derovre)', 'ån', 'ɒːn'],
+    id: "1",
+    title: "De første ord",
+    titleEntry: defineEntry({ id: "vocabulary-unit-1-title", kind: 'phrase', ja: "みず と ちち", da: "Vand og far", pron: { da: "mizu to chichi", ipa: "midzɯ to tɕitɕi" } }),
+    summary: "De allerførste små ord — vand, brød, far og mor",
+    words: words("1", [
+      ["mizu", "みず", "みず", "vand", "mizu", "mizɯ"],
+      ["pan", "パン", "パン", "brød", "pan", "paɴ"],
+      ["chichi", "ちち", "ちち", "far", "chichi", "tɕitɕi"],
+      ["haha", "はは", "はは", "mor", "haha", "haha"],
+      ["kaze", "かぜ", "かぜ", "vind", "kaze", "kaze"],
+      ["watashi", "わたし", "わたし", "jeg", "watashi", "wataɕi"],
+      ["anata", "あなた", "あなた", "du", "anata", "anata"],
+      ["minna", "みんな", "みんな", "vi, alle", "minna", "miɴna"],
+      ["kore", "これ", "これ", "denne, dette", "kore", "koɾe"],
+      ["are", "あれ", "あれ", "den, det (derovre)", "are", "aɾe"],
     ]),
   },
   {
-    id: '2',
-    title: 'I skolen',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-2-title', kind: 'word', ja: 'مدرسه', jaMarked: 'مَدرِسه', da: 'Skole', pron: { da: 'madrese', ipa: 'mædɾese' } }),
-    summary: 'Blyant, bog, bord — og det du siger, når du kommer ind',
-    words: words('2', [
-      ['medad', 'مداد', 'مِداد', 'blyant', 'medåd', 'meˈdɒːd'],
-      ['ketab', 'کتاب', 'کِتاب', 'bog', 'ketåb', 'keˈtɒːb'],
-      ['miz', 'میز', 'میز', 'bord', 'miz', 'miːz'],
-      ['dar', 'در', 'دَر', 'dør', 'dar', 'dæɾ'],
-      ['dast', 'دست', 'دَست', 'hånd', 'dast', 'dæst'],
-      ['dust', 'دوست', 'دوست', 'ven', 'dust', 'duːst'],
-      ['madrese', 'مدرسه', 'مَدرِسه', 'skole', 'madrese', 'mædɾeˈse'],
-      ['salam', 'سلام', 'سَلام', 'hej', 'salåm', 'sæˈlɒːm'],
+    id: "2",
+    title: "I skolen",
+    titleEntry: defineEntry({ id: "vocabulary-unit-2-title", kind: 'word', ja: "がっこう", da: "Skole", pron: { da: "gakkoo", ipa: "ɡakkoː" } }),
+    summary: "Blyant, bog, bord, dør og hånd — og det du siger, når du kommer ind",
+    words: words("2", [
+      ["enpitsu", "えんぴつ", "えんぴつ", "blyant", "enpitsu", "eɴpitsɯ"],
+      ["hon", "ほん", "ほん", "bog", "hon", "hoɴ"],
+      ["tsukue", "つくえ", "つくえ", "bord", "tsukue", "tsɯkɯe"],
+      ["doa", "ドア", "ドア", "dør", "doa", "doa"],
+      ["te", "て", "て", "hånd", "te", "te"],
+      ["tomodachi", "ともだち", "ともだち", "ven", "tomodachi", "tomodatɕi"],
+      ["gakkou", "がっこう", "がっこう", "skole", "gakkoo", "ɡakkoː"],
+      ["konnichiwa", "こんにちは", "こんにちは", "hej", "konnichiwa", "koɴnitɕiɰa"],
     ]),
   },
   {
-    id: '3',
-    title: 'Hjem og himmel',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-3-title', kind: 'phrase', ja: 'خانه و آسمان', da: 'Hjem og himmel', pron: { da: 'khåne o åsemån', ipa: 'xɒːne o ɒːsemɒːn' } }),
-    summary: 'Hus, regn, himmel, måne, nat og blomst',
-    words: words('3', [
-      ['khane', 'خانه', 'خانه', 'hus, hjem', 'khåne', 'xɒːˈne'],
-      ['baran', 'باران', 'باران', 'regn', 'bårån', 'bɒːˈɾɒːn'],
-      ['aseman', 'آسمان', 'آسِمان', 'himmel', 'åsemån', 'ɒːseˈmɒːn'],
-      ['mah', 'ماه', 'ماه', 'måne', 'måh', 'mɒːh'],
-      ['shab', 'شب', 'شَب', 'nat', 'sjab', 'ʃæb'],
-      ['gol', 'گل', 'گُل', 'blomst', 'gol', 'ɡol'],
+    id: "3",
+    title: "Hjem og himmel",
+    titleEntry: defineEntry({ id: "vocabulary-unit-3-title", kind: 'phrase', ja: "うち と そら", da: "Hjem og himmel", pron: { da: "uchi to sora", ipa: "ɯtɕi to soɾa" } }),
+    summary: "Hus, regn, himmel, måne, stjerne, blomst og nat",
+    words: words("3", [
+      ["uchi", "うち", "うち", "hus, hjem", "uchi", "ɯtɕi"],
+      ["ame", "あめ", "あめ", "regn", "ame", "ame"],
+      ["sora", "そら", "そら", "himmel", "sora", "soɾa"],
+      ["tsuki", "つき", "つき", "måne", "tsuki", "tsɯki"],
+      ["hoshi", "ほし", "ほし", "stjerne", "hoshi", "hoɕi"],
+      ["hana", "はな", "はな", "blomst", "hana", "hana"],
+      ["yoru", "よる", "よる", "nat", "yoru", "joɾɯ"],
     ]),
   },
   {
-    id: '4',
-    title: 'Farver',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-4-title', kind: 'phrase', ja: 'رنگ‌ها', da: 'Farver', pron: { da: 'ranghå', ipa: 'ɾæŋˈhɒː' } }),
-    summary: 'Otte farver du kan pege på og bruge med det samme',
-    words: words('4', [
-      ['qermez', 'قرمز', 'قِرمِز', 'rød', 'ghermez', 'ɢ~ɣeɾˈmez', 'red'],
-      ['abi', 'آبی', 'آبی', 'blå', 'åbi', 'ɒːˈbiː', 'blue', 'vocabulary-1-abi'],
-      ['sabz', 'سبز', 'سَبز', 'grøn', 'sabz', 'sæbz', 'green', 'vocabulary-3-sabz'],
-      ['zard', 'زرد', 'زَرد', 'gul', 'zard', 'zæɾd', 'yellow', 'vocabulary-3-zard'],
-      ['siyah', 'سیاه', 'سیاه', 'sort', 'siyåh', 'siˈjɒːh', 'black'],
-      ['sefid', 'سفید', 'سِفید', 'hvid', 'sefid', 'seˈfiːd', 'white'],
-      ['narenji', 'نارنجی', 'نارَنجی', 'orange', 'nårenji', 'nɒːɾænˈdʒiː', 'orange'],
-      ['surati', 'صورتی', 'صورَتی', 'lyserød', 'surati', 'suːɾæˈtiː', 'pink'],
+    id: "4",
+    title: "Farver",
+    titleEntry: defineEntry({ id: "vocabulary-unit-4-title", kind: 'word', ja: "いろ", da: "Farver", pron: { da: "iro", ipa: "iɾo" } }),
+    summary: "Otte farver at pege på og bruge med det samme",
+    words: words("4", [
+      ["aka", "あか", "あか", "rød", "aka", "aka", "red"],
+      ["ao", "あお", "あお", "blå", "ao", "ao", "blue"],
+      ["midori", "みどり", "みどり", "grøn", "midori", "midoɾi", "green"],
+      ["kiiro", "きいろ", "きいろ", "gul", "kiiro", "kiiɾo", "yellow"],
+      ["shiro", "しろ", "しろ", "hvid", "shiro", "ɕiɾo", "white"],
+      ["kuro", "くろ", "くろ", "sort", "kuro", "kɯɾo", "black"],
+      ["orenji", "オレンジ", "オレンジ", "orange", "orenji", "oɾeɴdʑi", "orange"],
+      ["momoiro", "ももいろ", "ももいろ", "lyserød", "momoiro", "momoiɾo", "pink"],
     ]),
   },
   {
-    id: '5',
-    title: 'Dyr',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-5-title', kind: 'phrase', ja: 'حیوان‌ها', da: 'Dyr', pron: { da: 'heyvånhå', ipa: 'hejvɒːnˈhɒː' } }),
-    summary: 'Kat, hund, fugl, fisk og fire dyr mere',
-    words: words('5', [
-      ['gorbe', 'گربه', 'گُربه', 'kat', 'gorbe', 'ɡoɾˈbe'],
-      ['sag', 'سگ', 'سَگ', 'hund', 'sag', 'sæɡ'],
-      ['parande', 'پرنده', 'پَرَنده', 'fugl', 'parande', 'pæˈɾænde'],
-      ['mahi', 'ماهی', 'ماهی', 'fisk', 'måhi', 'mɒːˈhiː'],
-      ['asb', 'اسب', 'اَسب', 'hest', 'asb', 'æsb'],
-      ['gav', 'گاو', 'گاو', 'ko', 'gåv', 'ɡɒːv'],
-      ['khargush', 'خرگوش', 'خَرگوش', 'kanin', 'khargusj', 'xæɾˈɡuːʃ'],
-      ['mush', 'موش', 'موش', 'mus', 'musj', 'muːʃ'],
+    id: "5",
+    title: "Dyr",
+    titleEntry: defineEntry({ id: "vocabulary-unit-5-title", kind: 'word', ja: "どうぶつ", da: "Dyr", pron: { da: "doobutsu", ipa: "doːbɯtsɯ" } }),
+    summary: "Kat, hund, fugl, fisk og fire dyr mere",
+    words: words("5", [
+      ["neko", "ねこ", "ねこ", "kat", "neko", "neko"],
+      ["inu", "いぬ", "いぬ", "hund", "inu", "inɯ"],
+      ["tori", "とり", "とり", "fugl", "tori", "toɾi"],
+      ["sakana", "さかな", "さかな", "fisk", "sakana", "sakana"],
+      ["uma", "うま", "うま", "hest", "uma", "ɯma"],
+      ["ushi", "うし", "うし", "ko", "ushi", "ɯɕi"],
+      ["usagi", "うさぎ", "うさぎ", "kanin", "usagi", "ɯsaɡi"],
+      ["nezumi", "ねずみ", "ねずみ", "mus", "nezumi", "nezɯmi"],
     ]),
   },
 ]

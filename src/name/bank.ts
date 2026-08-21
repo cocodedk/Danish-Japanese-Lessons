@@ -1,32 +1,45 @@
-// The letters a learner taps: the whole alphabet when they spell their name by
-// hand, and the name's own letters (plus two strangers) when they put it back
-// together. Pure, and deliberately without Math.random — a bank opens the same
-// way every time, so the exercise a test plays is the exercise the learner
-// plays. See docs/plans/006-your-name.md steps 2 and 5.
+// The letters a learner taps: the whole kana set when they spell their name
+// by hand, and the name's own letters (plus two strangers) when they put it
+// back together. Pure, and deliberately without Math.random — a bank opens
+// the same way every time, so the exercise a test plays is the exercise the
+// learner plays. See docs/plans/006-your-name.md steps 2 and 5.
 import { teachingOrder, specimens } from '../lessons/alphabet'
-import { nameLetters } from './forms'
+import { nameLetters, katakanaOf } from './forms'
+import { SOKUON_KANA_ENTRY, CHOONPU_KANA_ENTRY, VE_SIGN_ENTRY } from './forms'
 import type { JapaneseEntry } from '../catalog/types'
 
 export interface Tile {
-  /** Unique per tile, so the two ا of سارا are two tiles and not one. */
+  /** Unique per tile, so the two ラ of サラ are two tiles and not one. */
   key: string
   glyph: string
   entry?: JapaneseEntry
-  /** The letter's Danish name — what the tap target says out loud. */
+  /** The kana's Danish name — what the tap target says out loud. */
   nameDa: string
 }
 
 /** Letters from outside the name, mixed into the assembly bank. */
 export const DISTRACTOR_COUNT = 2
 
-/** Every letter of the alphabet, in teaching order: the bank for spelling by hand. */
+/** The three signs the 46 kana never teach but names actually need. */
+const EXTRA_TILES: Tile[] = [
+  { key: 'choonpu', glyph: 'ー', entry: CHOONPU_KANA_ENTRY, nameDa: CHOONPU_KANA_ENTRY.da },
+  { key: 'sokuon', glyph: 'ッ', entry: SOKUON_KANA_ENTRY, nameDa: SOKUON_KANA_ENTRY.da },
+  { key: 've', glyph: 'ヴ', entry: VE_SIGN_ENTRY, nameDa: VE_SIGN_ENTRY.da },
+]
+
+/** Every kana of the alphabet in teaching order, katakana-side, plus the
+ *  extra signs names need — the bank for spelling by hand. */
 export function alphabetBank(): Tile[] {
-  return teachingOrder.map((id) => ({
-    key: id,
-    glyph: specimens[id].glyph,
-    entry: specimens[id].entry,
-    nameDa: specimens[id].name.da,
-  }))
+  const letters = teachingOrder.map((id) => {
+    const specimen = specimens[id]
+    return {
+      key: id,
+      glyph: katakanaOf(specimen.glyph),
+      entry: specimen.entry,
+      nameDa: specimen.name.da,
+    }
+  })
+  return [...letters, ...EXTRA_TILES]
 }
 
 /** The glyphs of `spelling`, in reading order — what the learner has to place. */
@@ -37,7 +50,7 @@ export function nameGlyphs(spelling: string): string[] {
 /**
  * The first `placed` letters of `spelling`, carrying the spaces that belong
  * between them. The browser shapes this exactly as it shapes the finished
- * name, so a half-built name already joins the way it will when it is done.
+ * name, so a half-built name already sits the way it will when it is done.
  */
 export function assembledPrefix(spelling: string, placed: number): string {
   const isLetter = new Set(nameGlyphs(spelling))
@@ -82,8 +95,8 @@ function distractors(spelling: string, used: Set<string>): Tile[] {
 }
 
 /**
- * The tray for the re-assembly exercise: every letter of the name, one tile per
- * occurrence, plus two letters from outside it — shuffled.
+ * The tray for the re-assembly exercise: every letter of the name, one tile
+ * per occurrence, plus two letters from outside it — shuffled.
  */
 export function assemblyBank(spelling: string): Tile[] {
   const own: Tile[] = nameLetters(spelling).map((letter) => ({

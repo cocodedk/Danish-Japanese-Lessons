@@ -2,20 +2,21 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<title>Open Graph-billede — 1200×630 — Lær japansk skrift</title>
+<title>OpenGraph-billede — 1200×630 — Lær japansk skrift</title>
 <!--
-  Source layout for og.png. Render at exactly 1200×630:
+  Kildefil til og.png. Render in exactly 1200×630:
 
     google-chrome-stable --headless --disable-gpu --no-sandbox \
       --window-size=1200,630 --default-background-color=00000000 \
       --screenshot=og.png "file:///abs/path/website/og-image.html"
 
   Light tokens are hardcoded on purpose — an OG card must not follow the
-  viewer's colour scheme.
+  viewer's colour scheme. The specimen is みず (vand) in hiragana, set in
+  Noto Sans JP; the notebook rule and the red margin line stay.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Noto+Naskh+Arabic:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Noto+Sans+JP:wght@700&display=swap">
 <style>
   :root {
     --paper: #F7F2E9;
@@ -74,20 +75,13 @@
 
   /* Japanese pane ~55% of the split, Danish ~45% */
   .ja {
-    font-family: "Noto Naskh Arabic", serif;
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
     font-weight: 700;
     font-size: 190px;
-    line-height: 2;                 /* --madde-cut below is tuned to this */
-    direction: rtl;
-    margin: 0 0 -76px;
+    line-height: 1.2;
+    margin: 0 0 8px;
     padding: 0;
-    /* real type; only the colour is split, so the madde reads as red pen */
-    background-image: linear-gradient(to bottom,
-      var(--red) 0 0.54em, var(--ink) 0.54em);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--ink);
   }
 
   .split {
@@ -134,7 +128,7 @@
 <body>
   <div class="card">
     <div class="stage">
-      <p class="ja" lang="ja" dir="rtl">آب</p>
+      <p class="ja" lang="ja">みず</p>
       <hr class="split">
       <p class="da" lang="da">vand</p>
       <p class="caption" lang="da">Lær japansk skrift på dansk</p>

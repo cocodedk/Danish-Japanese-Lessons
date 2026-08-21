@@ -1,3 +1,11 @@
+// The first ten numbers, both Japanese and everyday forms, in the order a
+// beginner meets them: いち に さん … The everyday forms (よん, なな) are the
+// ones a learner hears in daily speech; Japanese also has the schoolbook
+// readings し and しち, which come later. Plan 016 fixes the list.
+//
+// The digit entries are symbols — the kanji 一–十 — and carry no sound of
+// their own; the word entry on the same row says the number. That keeps the
+// kanji visible from day one without ever asking a learner to read it.
 import { defineEntry } from '../catalog/types'
 import type { JapaneseEntry } from '../catalog/types'
 
@@ -19,7 +27,7 @@ function number(value: number, row: NumberRow): BeginnerNumber {
       ja: digit,
       da: `Tallet ${da}`,
       pron: { da: '∅', ipa: '∅' },
-      audioNotApplicable: 'Talordet ved siden af bærer udtalen.',
+      audioNotApplicable: 'Kanji har ingen egen lyd; talordet ved siden af bærer udtalen.',
     }),
     word: defineEntry({
       id: `number-${value}-word`,
@@ -33,16 +41,16 @@ function number(value: number, row: NumberRow): BeginnerNumber {
 }
 
 export const beginnerNumbers: BeginnerNumber[] = [
-  number(1, ['۱', 'یک', 'یِک', 'en', 'jek', 'jek']),
-  number(2, ['۲', 'دو', 'دو', 'to', 'do', 'do']),
-  number(3, ['۳', 'سه', 'سِه', 'tre', 'se', 'se']),
-  number(4, ['۴', 'چهار', 'چَهار', 'fire', 'tjahår', 'tʃæˈhɒːɾ']),
-  number(5, ['۵', 'پنج', 'پَنج', 'fem', 'pandj', 'pændʒ']),
-  number(6, ['۶', 'شش', 'شِش', 'seks', 'sjesj', 'ʃeʃ']),
-  number(7, ['۷', 'هفت', 'هَفت', 'syv', 'haft', 'hæft']),
-  number(8, ['۸', 'هشت', 'هَشت', 'otte', 'hasjt', 'hæʃt']),
-  number(9, ['۹', 'نه', 'نُه', 'ni', 'noh', 'noh']),
-  number(10, ['۱۰', 'ده', 'دَه', 'ti', 'dah', 'dæh']),
+  number(1, ['一', 'いち', 'いち', 'en', 'ichi', 'itɕi']),
+  number(2, ['二', 'に', 'に', 'to', 'ni', 'ni']),
+  number(3, ['三', 'さん', 'さん', 'tre', 'san', 'san']),
+  number(4, ['四', 'よん', 'よん', 'fire', 'yon', 'joɴ']),
+  number(5, ['五', 'ご', 'ご', 'fem', 'go', 'go']),
+  number(6, ['六', 'ろく', 'ろく', 'seks', 'roku', 'ɾokɯ']),
+  number(7, ['七', 'なな', 'なな', 'syv', 'nana', 'nana']),
+  number(8, ['八', 'はち', 'はち', 'otte', 'hachi', 'hatɕi']),
+  number(9, ['九', 'きゅう', 'きゅう', 'ni', 'kyuu', 'kʲɯː']),
+  number(10, ['十', 'じゅう', 'じゅう', 'ti', 'juu', 'dʑɯː']),
 ]
 
 export const numberCatalog = beginnerNumbers.flatMap(({ digit, word }) => [digit, word])

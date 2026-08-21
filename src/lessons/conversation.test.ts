@@ -4,9 +4,9 @@ import { conversationBasics, conversationCatalog } from './conversation'
 describe('beginner conversation basics', () => {
   it('teaches a short greeting, introduction, and goodbye in order', () => {
     expect(conversationBasics.map(({ ja, da }) => ({ ja, da }))).toEqual([
-      { ja: 'سلام', da: 'hej' },
-      { ja: 'من … هستم.', da: 'Jeg hedder …' },
-      { ja: 'خداحافظ!', da: 'farvel' },
+      { ja: 'こんにちは', da: 'hej' },
+      { ja: 'わたしの なまえは … です。', da: 'Jeg hedder …' },
+      { ja: 'さようなら！', da: 'farvel' },
     ])
   })
 
@@ -15,5 +15,11 @@ describe('beginner conversation basics', () => {
       'conversation-introduction',
       'conversation-goodbye',
     ])
+  })
+
+  it('keeps the introduction to the everyday shape with the polite copula', () => {
+    const intro = conversationBasics[1]
+    expect(intro.ja).toContain('です')
+    expect(intro.pron.ipa).toContain('desɯ')
   })
 })

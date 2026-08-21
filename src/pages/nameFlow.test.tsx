@@ -6,6 +6,7 @@ import { teachingOrder, specimens } from '../lessons/alphabet'
 import { markOrientationSeen } from '../progress/alphabet'
 import { completeAlphabet } from './typingHarness'
 import { NAME_LETTER_ENTRY } from '../content/jaStrings'
+import { GREETING_ENTRY, GREETING_WITH_NAME_ENTRY } from '../content/greetings'
 
 let open: (hash: string) => void
 let unmountLast: (() => void) | null = null
@@ -28,20 +29,21 @@ afterEach(() => {
 
 /** The alphabet lesson's id for a letter, so a test can open its screen. */
 function letterId(glyph: string): string {
-  const id = teachingOrder.find((candidate) => specimens[candidate].glyph === glyph)
+  // A name is written in katakana; the alphabet data teaches the hiragana.
+  const id = teachingOrder.find((candidate) => specimens[candidate].kata === glyph)
   expect(id, `no letter screen for ${glyph}`).toBeTruthy()
   return id as string
 }
 
 function idOutside(spelling: string): string {
-  const id = teachingOrder.find((candidate) => !spelling.includes(specimens[candidate].glyph))
+  const id = teachingOrder.find((candidate) => !spelling.includes(specimens[candidate].kata))
   return id as string
 }
 
 const GOLDEN: Array<[string, string]> = [
-  ['Mette', 'مته'],
-  ['Søren', 'سورن'],
-  ['Babak', 'بابک'],
+  ['Mette', 'メッテ'],
+  ['Søren', 'セーレン'],
+  ['Babak', 'ババク'],
 ]
 
 describe('the learner’s name, capture to lesson', () => {
@@ -58,14 +60,12 @@ describe('the learner’s name, capture to lesson', () => {
 
     // The forside greets in Japanese by the Japanese spelling, in Danish by the
     // written name — and never the other way round.
-    expect(screen.getByText('سلام،')).toBeInTheDocument()
+    expect(screen.getByText(GREETING_WITH_NAME_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText(spelling)).toBeInTheDocument()
     expect(screen.getByText(`Hej ${name}!`)).toBeInTheDocument()
-    // (The pronunciation line is the one Latin the Japanese pane carries by
-    //  design; the greeting itself never does.)
     const greeting = document.querySelector('.split-card__pane--ja .split-card__greeting')
-    expect(greeting?.textContent).toContain(`سلام، ${spelling}!`)
-    expect(greeting?.textContent).toContain('salåm · [sælɒːm]')
+    expect(greeting?.textContent).toContain(`こんにちは、 ${spelling}!`)
+    expect(greeting?.textContent).toContain('kon-nichiwa · [koɰitɕiɰa]')
 
     // The lesson only a named learner has.
     const card = screen.getByRole('link', { name: /Dit navn/ })
@@ -88,15 +88,13 @@ describe('the learner’s name, capture to lesson', () => {
     open('#/')
     fireEvent.click(screen.getByText('Spring over'))
 
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Hej!')).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: /Dit navn/ })).not.toBeInTheDocument()
-    // The forside says nothing about a name it does not have.
     expect(screen.queryByText(/Dit navn/)).not.toBeInTheDocument()
-    // The alphabet lesson is there in full.
     expect(screen.getByRole('link', { name: /Alfabetet/ })).toBeInTheDocument()
 
-    open('#/lesson/alphabet/bogstav/be')
+    open('#/lesson/alphabet/bogstav/ka')
     expect(screen.queryByText(NAME_LETTER_ENTRY.ja)).not.toBeInTheDocument()
 
     open('#/lesson/navn')
@@ -118,10 +116,10 @@ describe('the learner’s name, capture to lesson', () => {
     fireEvent.click(screen.getByText('Slet'))
 
     expect(getProfile()).toEqual({})
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: /Dit navn/ })).not.toBeInTheDocument()
 
-    open('#/lesson/alphabet/bogstav/be')
+    open('#/lesson/alphabet/bogstav/ka')
     expect(screen.queryByText(NAME_LETTER_ENTRY.ja)).not.toBeInTheDocument()
 
     open('#/lesson/navn')
@@ -133,9 +131,8 @@ describe('the learner’s name, capture to lesson', () => {
     fireEvent.change(screen.getByLabelText('Hvad hedder du?'), { target: { value: 'Lærke' } })
     fireEvent.click(screen.getByText('Gem'))
 
-    // Walking away from the spelling screen is a way out, not a dead end.
     fireEvent.click(screen.getByRole('link', { name: 'Til forsiden' }))
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Hej Lærke!')).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: /Dit navn/ })).not.toBeInTheDocument()
     expect(getProfile()).toEqual({ name: 'Lærke' })

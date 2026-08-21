@@ -1,8 +1,8 @@
 # Danish-Japanese Lessons
 
-> A free, static, mobile-first web app that teaches Danish speakers to read Japanese from zero prior knowledge.
+> A free, static, mobile-first web app that teaches Danish speakers to read and write Japanese from zero prior knowledge.
 
-Danish-Japanese Lessons teaches reading Japanese (Japanese) with Danish as the language of instruction. It assumes no spoken, written, or reading knowledge, while also serving heritage speakers and hesitant readers. Orientation explains right-to-left reading and the two pronunciation guides before the recommended alphabet, personal-name, and first-reader vocabulary sequence. Every app-owned Japanese item has Danish help, Danish-friendly pronunciation, and standard Tehrani IPA. Lessons stay freely reachable; short deterministic puzzle breaks are optional and use only material already introduced.
+Danish-Japanese Lessons teaches Japanese (kana and the first kanji) with Danish as the language of instruction. It assumes no spoken, written, or reading knowledge, while also serving heritage speakers and hesitant readers. The course opens with orientation (kana read left to right) and the two pronunciation guides before the recommended sequence: the 46 hiragana with stroke order, the six marks ゛ ゜ ー っ ゃ ょ, katakana for names and loanwords, the numbers 一–十, and the first vocabulary. Every app-owned Japanese item has Danish help, Danish-friendly pronunciation, and standard Tokyo IPA (phonemic, without pitch marks). Lessons stay freely reachable; short deterministic puzzle breaks are optional and use only material already introduced. Loanword bridges (コーヒー/kaffe, ホテル/hotel, パン, …) connect the two languages with honest one-line histories.
 
 The project is purely static: no backend, no database, no accounts. Progress is stored in the browser's localStorage. The landing site is published in three languages on GitHub Pages, and the React app is live at /app/ on the same site.
 
@@ -10,7 +10,7 @@ The project is purely static: no backend, no database, no accounts. Progress is 
 
 - [English](https://cocodedk.github.io/Danish-Japanese-Lessons/): what the app teaches and who it is for
 - [Dansk](https://cocodedk.github.io/Danish-Japanese-Lessons/da/): the Danish page, written for the primary audience
-- [فارسی (Japanese)](https://cocodedk.github.io/Danish-Japanese-Lessons/ja/): the Japanese page, right-to-left
+- [日本語](https://cocodedk.github.io/Danish-Japanese-Lessons/ja/): the Japanese page
 
 ## Repository
 

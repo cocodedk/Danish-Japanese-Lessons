@@ -40,9 +40,7 @@ export default function AlphabetLesson() {
         </span>
       </p>
       <p className="alphabet__lead">
-        32 bogstaver, tegnet{' '}
-        <JapaneseText entry={specimens['alef-madde'].entry} className="alphabet__lead-ja" /> og seks
-        vokaltegn. Rækkefølgen er anbefalet, men alt er åbent fra start.
+        46 kana og seks lydtegn. Rækkefølgen er en anbefaling, og alt er åbent fra start.
       </p>
 
       <h2 className="alphabet__section-title">Tegn for tegn</h2>
@@ -57,7 +55,7 @@ export default function AlphabetLesson() {
           {alphabetGroups.map((group) => (
             <section key={group.id} className="alphabet__cluster">
               <h3>{group.title}</h3>
-              <ul className="alphabet__grid" dir="rtl">
+              <ul className="alphabet__grid" dir="ltr">
                 {group.itemIds.map((id) => {
                   const specimen = specimens[id]
                   const cleared = progress.letters.includes(id)
@@ -79,11 +77,11 @@ export default function AlphabetLesson() {
               <PuzzleBreakLink puzzleId={group.puzzle.id} done={puzzleDone.includes(group.puzzle.id)} />
             </section>
           ))}
-          <h2 className="alphabet__section-title">Vokaltegn</h2>
+          <h2 className="alphabet__section-title">Lydtegn</h2>
           <ul className="alphabet__links">
             <li>
               <Link className="alphabet__link" to="/lesson/alphabet/vokaltegn">
-                De seks vokaltegn — {marksDone} af {vowelMarks.length} set eller øvet
+                De seks lydtegn — {marksDone} af {vowelMarks.length} set eller øvet
               </Link>
             </li>
           </ul>
@@ -97,7 +95,7 @@ export default function AlphabetLesson() {
             </li>
             <li>
               <Link className="alphabet__link" to="/lesson/alphabet/ovelse/match">
-                Match formerne
+                Hiragana og katakana
               </Link>
             </li>
             <li>

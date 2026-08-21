@@ -1,38 +1,64 @@
-// Orientation — "lektion 0". Four surprises, after the one that matters most:
-// Japanese runs right to left. Shown, not told (docs/plans/003 step 6).
+// Orientation — "Lektion 0". De fire overraskelser, en ny lærer møder på
+// japansk: japansk læses fra venstre mod højre (som dansk — ingen vending),
+// ét tegn er én stavelse, der er ingen store og små bogstaver, og du kan
+// hør det samme ord skrevet på tre. Vist, ikke fortalt (docs/plans/003).
 import type { JapaneseEntry } from '../catalog/types'
 import { defineEntry } from '../catalog/types'
-import { letters, specimens } from '../lessons/alphabet'
+import { letters } from '../lessons/alphabet'
 import { allVocabWords } from '../lessons/vocab'
 
-// Loud at module load: the orientation is the first screen a new learner
-// sees, so a renamed vocab id must fail the build (the test suite imports
-// this module), never white-screen the entry point.
+// Højt on purpose: the orientation is the first screen a new learner sees,
+// so a renamed vocab id must fail the build (the test suite imports this
+// module), gem denud noget flimmer on the entry point.
 function word(id: string): JapaneseEntry {
   const found = allVocabWords.find((item) => item.id === id)?.entry
   if (!found) throw new Error(`orientation: vocab word '${id}' is missing`)
   return found
 }
-const letter = (id: string) => specimens[id].entry
-const be = letters.find((item) => item.id === 'be')!
 
-const TEHRAN_ENTRY = defineEntry({
-  id: 'interface-orientation-tehran',
+/** ず er ikke et af de 46 tegn (it is su + handakuten), so no letter lesson
+ * åbene det; the orientation shows it only inside the word みず. */
+const ZU_ENTRY = defineEntry({
+  id: 'interface-orientation-zu',
   kind: 'word',
-  ja: 'تهران',
-  da: 'Teheran',
-  pron: { da: 'tehrån', ipa: 'tehˈɾɒːn' },
+  ja: 'ず',
+  da: 'zu',
+  pron: { da: 'zu', ipa: 'zɯ' },
+})
+
+const OSAKA_ENTRY = defineEntry({
+  id: 'interface-orientation-osaka',
+  kind: 'word',
+  ja: 'おおさか',
+  da: 'Osaka',
+  pron: { da: 'osaka', ipa: 'oːsaka' },
+})
+
+const KATAKANA_MIZU_ENTRY = defineEntry({
+  id: 'interface-orientation-mizu-katakana',
+  kind: 'word',
+  ja: 'ミズ',
+  da: 'mizu med katakana',
+  pron: { da: 'mizu', ipa: 'mizɯ' },
+})
+
+const KANJI_MIZU_ENTRY = defineEntry({
+  id: 'interface-orientation-mizu-kanji',
+  kind: 'word',
+  ja: '水',
+  da: 'mizu med kanji',
+  pron: { da: 'mizu', ipa: 'mizɯ' },
 })
 
 /**
- * The flip, felt rather than explained: the learner reads a Danish word that
- * has been turned around, notices it is nonsense, and reads it again from the
- * right. Then the same move on the Japanese word the app opens with.
+ * The flip, felt rather than told: the learner reads a Danish word that has
+ * been turned around, sees it says nothing, and reads it again from the
+ * left. Then the same move on the first Japanese word.
  */
 export const MIRROR_DEMO = {
   da: 'VAND',
   turned: 'DNAV',
-  entry: word('ab'),
+  entry: word('mizu'),
 }
 
 export interface OrientationToken {
@@ -46,50 +72,55 @@ export interface OrientationToken {
 
 export interface OrientationPoint {
   id: string
-  /** Danish heading — short, du-form. */
+  /** Danish heading, short, du-form. */
   heading: string
   /** One or two Danish sentences. */
   body: string
-  /** The row of specimens, read right to left. */
+  /** The row of specimens, read left to right. */
   ja: OrientationToken[]
-  /** What the row adds up to, when it adds up to something. */
+  /** What the row adds up to, if it adds up to something. */
   result?: JapaneseEntry
 }
 
 export const ORIENTATION_POINTS: OrientationPoint[] = [
   {
-    id: 'join',
-    heading: 'Bogstaverne holder i hånd',
-    body: 'Fire bogstaver, ét ord. Japansk bindes sammen — næsten som når du selv skriver i hånden.',
-    ja: [
-      { entry: letter('be') },
-      { entry: letter('alef'), contextualPron: { da: 'å i “år”', ipa: 'ɒː' }, contextualHelpDa: 'lang vokal her' },
-      { entry: letter('be') },
-      { entry: letter('alef'), contextualPron: { da: 'å i “år”', ipa: 'ɒː' }, contextualHelpDa: 'lang vokal her' },
-    ],
-    result: word('baba'),
+    id: 'direction',
+    heading: 'Fra venstre mod højre',
+    body: 'Japansk læses fra venstre mod højre.',
+    ja: [{ entry: word('mizu') }],
+    result: word('mizu'),
   },
   {
-    id: 'shapes',
-    heading: 'Samme bogstav, ny form',
-    body: 'Be skifter udseende efter, hvor i ordet det står. Lyden er den samme hele vejen.',
-    ja: ['isolated', 'initial', 'medial', 'final'].map((key) => ({
-      entry: letter('be'),
-      form: be.forms[key as keyof typeof be.forms],
-    })),
+    id: 'syllables',
+    heading: 'Ét tegn, én stavelse',
+    body: 'み er mi og ず er zu.',
+    ja: [
+      { entry: letters.find((l) => l.id === 'mi')!.entry },
+      { entry: ZU_ENTRY, contextualPron: { da: 'zu', ipa: 'zɯ' }, contextualHelpDa: 'her beneath ordet' },
+    ],
+    result: word('mizu'),
   },
   {
     id: 'no-capitals',
     heading: 'Ingen store bogstaver',
-    body: 'Japansk har hverken store eller små bogstaver. Et bynavn ser ud som ethvert andet ord.',
-    ja: [{ entry: TEHRAN_ENTRY }],
+    body: 'Osaka skrives おおさか.',
+    ja: [{ entry: OSAKA_ENTRY }],
   },
   {
-    id: 'dots',
-    heading: 'Prikkerne er en del af bogstavet',
-    body: 'Samme krop, forskellige prikker — og så er det fire forskellige bogstaver. Tæl dem altid.',
-    ja: ['be', 'pe', 'te', 'se'].map((id) => ({ entry: letter(id) })),
+    id: 'scripts',
+    heading: 'Tre skrifter',
+    body: 'みず kan skrives med tre skrifter: hiragana, katakana, kanji.',
+    ja: [
+      { entry: word('mizu') },
+      { entry: KATAKANA_MIZU_ENTRY },
+      { entry: KANJI_MIZU_ENTRY },
+    ],
   },
 ]
 
-export const ORIENTATION_ENTRIES: JapaneseEntry[] = [TEHRAN_ENTRY]
+export const ORIENTATION_ENTRIES: JapaneseEntry[] = [
+  ZU_ENTRY,
+  OSAKA_ENTRY,
+  KATAKANA_MIZU_ENTRY,
+  KANJI_MIZU_ENTRY,
+]

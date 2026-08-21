@@ -41,7 +41,7 @@ function reducedMotionBlock(css: string): string {
 }
 
 describe('stickers are the marks a teacher actually owns', () => {
-  it('stamps آفرین, the ۲۰ mark and the gold star, each named in Danish for a screen reader', () => {
+  it('stamps the すごい praise, the まる circle and the star, each named in Danish for a screen reader', () => {
     for (const kind of ['afarin', 'bist', 'star'] as const) {
       const { unmount } = render(<StickerStamp kind={kind} />)
       expect(screen.getByRole('img', { name: STICKER_LABELS[kind].da })).toBeInTheDocument()
@@ -49,13 +49,13 @@ describe('stickers are the marks a teacher actually owns', () => {
     }
   })
 
-  it('writes the Japanese on the stamps from the single-sourced STICKER_LABELS, with Japanese digits', () => {
+  it('writes the Japanese on the stamps from the single-sourced STICKER_LABELS', () => {
     render(<StickerStamp kind="bist" />)
     expect(screen.getByText(STICKER_LABELS.bist.ja)).toBeInTheDocument()
-    expect(STICKER_LABELS.bist.ja).toBe('۲۰')
+    expect(STICKER_LABELS.bist.ja).toBe('○')
   })
 
-  it('stamps the آفرین mark from STICKER_LABELS too — no JSX literal of its own', () => {
+  it('stamps the praise mark from STICKER_LABELS too — no JSX literal of its own', () => {
     render(<StickerStamp kind="afarin" />)
     expect(screen.getByText(STICKER_LABELS.afarin.ja)).toBeInTheDocument()
   })
@@ -81,7 +81,7 @@ describe('the praise row carries its own pronunciation (plan 009)', () => {
       'celebration__da',
     ])
 
-    // The default praise (no reward yet) is PRAISE[0] — آفرین — from data, not improvised.
+    // The default praise (no reward yet) is PRAISE[0] — すごい！ — from data, not improvised.
     expect(screen.getByText(PRAISE[0].ja)).toBeInTheDocument()
     expect(screen.getByText(`${PRAISE[0].pron?.da} · [${PRAISE[0].pron?.ipa}]`)).toBeInTheDocument()
     expect(screen.getByText(PRAISE[0].da)).toBeInTheDocument()
@@ -139,8 +139,8 @@ describe('the sticker shelf keeps what was earned', () => {
 
     render(<RewardShelf level={3} stickers={[{ id: 's1', kind: 'afarin' }]} />)
     expect(screen.getByText('En ny side')).toBeInTheDocument()
-    expect(screen.getByText('صفحهٔ تازه')).toBeInTheDocument()
-    expect(screen.getByText('safheje tåze · [sæfheje tɒːze]')).toBeInTheDocument()
+    expect(screen.getByText('あたらしい ページ')).toBeInTheDocument()
+    expect(screen.getByText('atarashii peeji · [ataɾaɕiː peːdʑi]')).toBeInTheDocument()
   })
 })
 

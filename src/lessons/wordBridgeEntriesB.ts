@@ -1,53 +1,26 @@
-import { bridgeEntry, consonant, finalE, longAa, shortVowel, writtenVowel } from './wordBridgeEntry'
+// The back half of the loanword bridges (restaurant, salat, hotdog, pen,
+// piano) — see ./wordBridgeEntriesA for the shared helpers.
+import { bridgeEntry, bridgeMora, bridgeSokuon } from './wordBridgeEntriesA'
 
 export const bridgeEntriesB = {
-  shesh: bridgeEntry({
-    id: 'shesh', ja: 'شش', jaMarked: 'شِش', da: 'seks', pronDa: 'shesh', ipa: 'ʃeʃ',
-    readingCues: [consonant(0, 'ش'), shortVowel(1, '◌ِ', 'e i “let”', 'e'), consonant(1, 'ش')],
+  resutoran: bridgeEntry({
+    id: 'resutoran', ja: 'レストラン', da: 'restaurant', pronDa: 'resutoran', ipa: 'ɾesɯtoɾaɴ',
+    readingCues: [bridgeMora(0, 'レ'), bridgeMora(1, 'ス'), bridgeMora(2, 'ト'), bridgeMora(3, 'ラ'), bridgeMora(4, 'ン')],
   }),
-  noh: bridgeEntry({
-    id: 'noh', ja: 'نه', jaMarked: 'نُه', da: 'ni', pronDa: 'noh', ipa: 'noh',
-    readingCues: [consonant(0, 'ن'), shortVowel(1, '◌ُ', 'o i “ost”', 'o'), consonant(1, 'ه')],
+  sarada: bridgeEntry({
+    id: 'sarada', ja: 'サラダ', da: 'salat', pronDa: 'sarada', ipa: 'saɾada',
+    readingCues: [bridgeMora(0, 'サ'), bridgeMora(1, 'ラ'), bridgeMora(2, 'ダ')],
   }),
-  dandan: bridgeEntry({
-    id: 'dandan', ja: 'دندان', jaMarked: 'دَندان', da: 'tand', pronDa: 'dandån', ipa: 'dænˈdɒːn',
-    readingCues: [consonant(0, 'د'), shortVowel(1, '◌َ', 'a i “kat”', 'æ'), consonant(1, 'ن'),
-      consonant(2, 'د'), longAa(3), consonant(4, 'ن')],
+  hottodoggu: bridgeEntry({
+    id: 'hottodoggu', ja: 'ホットドッグ', da: 'hotdog', pronDa: 'hotto doggu', ipa: 'hotːodogːɯ',
+    readingCues: [bridgeMora(0, 'ホ'), bridgeSokuon(1), bridgeMora(2, 'ト'), bridgeMora(3, 'ド'), bridgeSokuon(4), bridgeMora(5, 'グ')],
   }),
-  naf: bridgeEntry({
-    id: 'naf', ja: 'ناف', da: 'navle', pronDa: 'nåf', ipa: 'nɒːf',
-    readingCues: [consonant(0, 'ن'), longAa(1), consonant(2, 'ف')],
+  pen: bridgeEntry({
+    id: 'pen', ja: 'ペン', da: 'pen', pronDa: 'pen', ipa: 'peɴ',
+    readingCues: [bridgeMora(0, 'ペ'), bridgeMora(1, 'ン')],
   }),
-  mah: bridgeEntry({
-    id: 'mah', ja: 'ماه', da: 'måne eller måned', pronDa: 'måh', ipa: 'mɒːh',
-    readingCues: [consonant(0, 'م'), longAa(1), consonant(2, 'ه')],
-  }),
-  setareh: bridgeEntry({
-    id: 'setareh', ja: 'ستاره', jaMarked: 'سِتاره', da: 'stjerne',
-    pronDa: 'setåre', ipa: 'seˈtɒːɾe',
-    readingCues: [consonant(0, 'س'), shortVowel(1, '◌ِ', 'e i “let”', 'e'),
-      consonant(1, 'ت'), longAa(2), consonant(3, 'ر'), finalE(4)],
-  }),
-  band: bridgeEntry({
-    id: 'band', ja: 'بند', jaMarked: 'بَند', da: 'bånd, binding eller led',
-    pronDa: 'band', ipa: 'bænd',
-    readingCues: [consonant(0, 'ب'), shortVowel(1, '◌َ', 'a i “kat”', 'æ'),
-      consonant(1, 'ن'), consonant(2, 'د')],
-  }),
-  setad: bridgeEntry({
-    id: 'setad', ja: 'ستاد', jaMarked: 'سِتاد', da: 'hovedkontor', pronDa: 'setåd', ipa: 'seˈtɒːd',
-    readingCues: [consonant(0, 'س'), shortVowel(1, '◌ِ', 'e i “let”', 'e'),
-      consonant(1, 'ت'), longAa(2), consonant(3, 'د')],
-  }),
-  seyl: bridgeEntry({
-    id: 'seyl', ja: 'سیل', jaMarked: 'سِیل', da: 'oversvømmelse', pronDa: 'seyl', ipa: 'sejl',
-    readingCues: [consonant(0, 'س'), shortVowel(1, '◌ِ', 'e i “let”', 'e'),
-      writtenVowel(1, 'ی', 'ej i “nej”', 'ej', 'Ye er med i lyden ey her'), consonant(2, 'ل')],
-  }),
-  dust: bridgeEntry({
-    id: 'dust', ja: 'دوست', da: 'ven', pronDa: 'dust', ipa: 'duːst',
-    readingCues: [consonant(0, 'د'),
-      writtenVowel(1, 'و', 'u i “hus”, men lang', 'uː', 'Våv skriver den lange u-lyd her'),
-      consonant(2, 'س'), consonant(3, 'ت')],
+  piano: bridgeEntry({
+    id: 'piano', ja: 'ピアノ', da: 'piano', pronDa: 'piano', ipa: 'piano',
+    readingCues: [bridgeMora(0, 'ピ'), bridgeMora(1, 'ア'), bridgeMora(2, 'ノ')],
   }),
 } as const

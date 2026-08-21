@@ -54,19 +54,19 @@ describe('a wrong attempt', () => {
 })
 
 describe('the key detail strip', () => {
-  it('offers the letter lesson after a letter key, quietly, and no link for نیم‌فاصله', () => {
+  it('offers the letter lesson after a letter key, quietly, and none for the space', () => {
     const { container } = open('#/lesson/ord/1/skriv')
 
-    tap(keyFor('ب'))
+    tap(keyFor('あ'))
     const strip = container.querySelector('.entry-detail')
     expect(strip).not.toBeNull()
     expect(strip?.getAttribute('aria-live')).toBeNull()
     expect(screen.getByRole('link', { name: 'Åbn hele lektionen' })).toHaveAttribute(
       'href',
-      '#/lesson/alphabet/bogstav/be',
+      '#/lesson/alphabet/bogstav/a',
     )
 
-    tap('halvt mellemrum')
+    tap('mellemrum')
     expect(screen.queryByRole('link', { name: 'Åbn hele lektionen' })).not.toBeInTheDocument()
   })
 })

@@ -4,6 +4,7 @@ import App from '../App'
 import { getProfile, setProfile } from '../progress/profile'
 import bankCss from '../components/LetterBank.css?raw'
 import nameCss from './name.css?raw'
+import { GREETING_ENTRY, GREETING_WITH_NAME_ENTRY } from '../content/greetings'
 
 let open: (hash: string) => void
 let unmountLast: (() => void) | null = null
@@ -41,42 +42,40 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     setProfile({ name: 'Babak' })
     open('#/dit-navn')
 
-    expect(screen.getByRole('button', { name: 'بابک' })).toHaveAttribute('aria-pressed', 'true')
-    expect(preview()).toBe('بابک')
+    expect(screen.getByRole('button', { name: 'ババク' })).toHaveAttribute('aria-pressed', 'true')
+    expect(preview()).toBe('ババク')
 
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile()).toEqual({ name: 'Babak', faSpelling: 'بابک' })
-    // Landed back on the forside, greeted in Japanese by the name just chosen.
-    expect(screen.getByText('سلام،')).toBeInTheDocument()
-    expect(screen.getByText('بابک')).toBeInTheDocument()
+    expect(getProfile()).toEqual({ name: 'Babak', faSpelling: 'ババク' })
+    expect(screen.getByText(GREETING_WITH_NAME_ENTRY.ja)).toBeInTheDocument()
+    expect(screen.getByText('ババク')).toBeInTheDocument()
     expect(screen.getByText('Hej Babak!')).toBeInTheDocument()
   })
 
   it('lets a learner take a second suggestion instead of the first', () => {
-    // Lærke, not Mette: a name the override list knows is offered the one way
-    // the list spells it, so there is no second line to take.
-    setProfile({ name: 'Lærke' })
+    // Søren: the rules write the long ø both with and without ー.
+    setProfile({ name: 'Søren' })
     open('#/dit-navn')
 
-    fireEvent.click(screen.getByRole('button', { name: 'لارکه' }))
-    expect(preview()).toBe('لارکه')
+    fireEvent.click(screen.getByRole('button', { name: 'セレン' }))
+    expect(preview()).toBe('セレン')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('لارکه')
+    expect(getProfile().faSpelling).toBe('セレン')
   })
 
   it('edits letter by letter from the bank — tap to place, and one step back', () => {
     setProfile({ name: 'Sara' })
     open('#/dit-navn')
-    expect(preview()).toBe('سارا')
+    expect(preview()).toBe('サラ')
 
     fireEvent.click(screen.getByText('Åbn bogstaverne'))
     fireEvent.click(screen.getByText('Slet sidste bogstav'))
-    expect(preview()).toBe('سار')
+    expect(preview()).toBe('サ')
 
-    tapLetter('ه')
-    expect(preview()).toBe('ساره')
+    tapLetter('ミ')
+    expect(preview()).toBe('サミ')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('ساره')
+    expect(getProfile().faSpelling).toBe('サミ')
   })
 
   it('writes a spelling by hand when the engine has nothing to suggest, and never crashes on it', () => {
@@ -87,30 +86,30 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     expect(preview()).toBe('')
 
     fireEvent.click(screen.getByText('Åbn bogstaverne'))
-    tapLetter('ب')
-    tapLetter('و')
+    tapLetter('バ')
+    tapLetter('ウ')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('بو')
+    expect(getProfile().faSpelling).toBe('バウ')
   })
 
   it('handles æ/ø/å names end to end', () => {
     setProfile({ name: 'Søren' })
     open('#/dit-navn')
-    expect(screen.getByRole('button', { name: 'سورن' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'セーレン' })).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('سورن')
-    expect(screen.getByText('سلام،')).toBeInTheDocument()
-    expect(screen.getByText('سورن')).toBeInTheDocument()
+    expect(getProfile().faSpelling).toBe('セーレン')
+    expect(screen.getByText(GREETING_WITH_NAME_ENTRY.ja)).toBeInTheDocument()
+    expect(screen.getByText('セーレン')).toBeInTheDocument()
   })
 
   it('deletes the spelling without touching the name', () => {
-    setProfile({ name: 'Babak', faSpelling: 'بابک' })
+    setProfile({ name: 'Babak', faSpelling: 'ババク' })
     open('#/dit-navn')
 
     fireEvent.click(screen.getByText('Slet stavemåden'))
     expect(getProfile()).toEqual({ name: 'Babak' })
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Hej Babak!')).toBeInTheDocument()
   })
 
@@ -127,7 +126,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
     expect(screen.getByRole('link', { name: 'Skriv navnet på japansk' })).toBeInTheDocument()
 
-    setProfile({ name: 'Sara', faSpelling: 'سارا' })
+    setProfile({ name: 'Sara', faSpelling: 'サラ' })
     open('#/')
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
     const link = screen.getByRole('link', { name: 'Ret navnet på japansk' })
@@ -135,12 +134,12 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
   })
 
   it('says in both languages that the name stays on this device', () => {
-    setProfile({ name: 'Sara', faSpelling: 'سارا' })
+    setProfile({ name: 'Sara', faSpelling: 'サラ' })
     open('#/')
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
 
     expect(screen.getByText('Navnet er kun på denne enhed.')).toBeInTheDocument()
-    expect(screen.getByText('نام فقط در این دستگاه است.')).toBeInTheDocument()
+    expect(screen.getByText('なまえは この きかいだけ。')).toBeInTheDocument()
   })
 
   it('spells a compound name with one space between the parts, however often it is tapped', () => {
@@ -151,10 +150,10 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     const space = screen.getByText('Mellemrum')
     fireEvent.click(space)
     fireEvent.click(space)
-    tapLetter('م')
+    tapLetter('メ')
     fireEvent.click(screen.getByText('Gem stavemåden'))
 
-    expect(getProfile().faSpelling).toBe('آنه مته م')
+    expect(getProfile().faSpelling).toBe('アンネ メッテ メ')
   })
 
   it('gives every letter and every choice a thumb-sized target', () => {
@@ -165,7 +164,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
   })
 
   it('drops a spelling that belongs to a name the learner has replaced', () => {
-    setProfile({ name: 'Sara', faSpelling: 'سارا' })
+    setProfile({ name: 'Sara', faSpelling: 'サラ' })
     open('#/')
 
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
@@ -173,7 +172,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     fireEvent.click(screen.getByText('Gem'))
 
     expect(getProfile()).toEqual({ name: 'Mette' })
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Hej Mette!')).toBeInTheDocument()
   })
 })

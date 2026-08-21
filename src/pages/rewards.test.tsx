@@ -5,7 +5,8 @@ import { setProfile } from '../progress/profile'
 import { markOrientationSeen } from '../progress/alphabet'
 import { getRewards } from '../rewards/engine'
 import { buildQuestions } from '../lessons/exercises'
-import { PRAISE } from '../rewards/copy'
+import { PRAISE, GIFT_ENTRY } from '../rewards/copy'
+import { TRY_AGAIN_ENTRY } from '../content/jaStrings'
 
 const questions = buildQuestions('find')
 
@@ -55,7 +56,7 @@ describe('every exercise answer flows through the reward engine', () => {
     const wrong = questions[0].choices.find((c) => c.id !== questions[0].answerId)!.glyph
     fireEvent.click(screen.getAllByRole('button').filter((b) => b.textContent === wrong)[0])
 
-    expect(screen.getByText('دوباره')).toBeInTheDocument()
+    expect(screen.getByText(TRY_AGAIN_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Prøv igen')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Prøv én gang til' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Næste' })).toBeInTheDocument()
@@ -72,7 +73,7 @@ describe('every exercise answer flows through the reward engine', () => {
       fireEvent.click(screen.getByText(i === questions.length - 1 ? 'Afslut runden' : 'Næste'))
     }
 
-    // The page-flip mirrors «صفحه پر شد!» and the round says nothing was lost.
+    // The page-flip mirrors the full ー page line and the round says nothing was lost.
     expect(screen.getByText('Siden er fuld!')).toBeInTheDocument()
     expect(screen.getByText(/Du kom hele runden igennem/)).toBeInTheDocument()
     const view = getRewards()
@@ -88,11 +89,11 @@ describe('every exercise answer flows through the reward engine', () => {
       fireEvent.click(screen.getByText(i === questions.length - 1 ? 'Afslut runden' : 'Næste'))
     }
 
-    expect(screen.getByText('یک تمرین جایزه!')).toBeInTheDocument()
+    expect(screen.getByText(GIFT_ENTRY.ja)).toBeInTheDocument()
     const before = getRewards()
     fireEvent.click(screen.getByText('Gem den til senere'))
 
-    expect(screen.queryByText('یک تمرین جایزه!')).not.toBeInTheDocument()
+    expect(screen.queryByText(GIFT_ENTRY.ja)).not.toBeInTheDocument()
     expect(getRewards().points).toBe(before.points)
     expect(getRewards().stickers.length).toBe(before.stickers.length)
     expect(getRewards().level).toBe(before.level)
@@ -102,7 +103,7 @@ describe('every exercise answer flows through the reward engine', () => {
     open('#/lesson/alphabet/gave/1')
     expect(screen.getByRole('heading', { name: 'Bonusøvelse' })).toBeInTheDocument()
     expect(screen.getByText('Spørgsmål 1 af 3')).toBeInTheDocument()
-    expect(screen.getByText('یک تمرین جایزه!')).toBeInTheDocument()
+    expect(screen.getByText(GIFT_ENTRY.ja)).toBeInTheDocument()
   })
 }, 20_000)
 

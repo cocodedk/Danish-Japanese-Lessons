@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { persianCatalog } from '../catalog/registry'
-import { connectedPhrases, connectedTexts, connectedReadings, EZAFE, readingFunctionEntries } from './connectedReading'
+import { japaneseCatalog } from '../catalog/registry'
+import { connectedPhrases, connectedTexts, connectedReadings, NO_PARTICLE, readingFunctionEntries } from './connectedReading'
 import { vocabularyGroups } from '../puzzles/catalog'
 
 describe('connected reading manifest', () => {
@@ -11,7 +11,7 @@ describe('connected reading manifest', () => {
   })
 
   it('keeps every tested source and taught function in the catalog', () => {
-    const ids = new Set(persianCatalog.map((entry) => entry.id))
+    const ids = new Set(japaneseCatalog.map((entry) => entry.id))
     for (const reading of connectedReadings) {
       for (const id of [...reading.introducedEntryIds, ...reading.taughtEntryIds]) {
         expect(ids.has(id), `${reading.id}: ${id}`).toBe(true)
@@ -22,18 +22,19 @@ describe('connected reading manifest', () => {
 
   it('keeps each unit text between three and five sentences', () => {
     for (const text of connectedTexts) {
-      const sentences = text.entry.ja.split('.').filter((part) => part.trim())
+      const sentences = text.entry.ja.split('。').filter((part) => part.trim())
       expect(sentences.length, text.id).toBeGreaterThanOrEqual(3)
       expect(sentences.length, text.id).toBeLessThanOrEqual(5)
     }
   })
 
   it('gives every connected text token an ordered reading cue', () => {
-    for (const reading of connectedReadings) {
+        for (const reading of connectedReadings) {
       const written = (reading.entry.readingCues ?? []).filter((cue) => cue.end > cue.start)
-      const expected = [...reading.entry.ja]
+      const chars = [...reading.entry.ja]
+      const expected = chars
         .map((glyph, index) => ({ glyph, index }))
-        .filter(({ glyph }) => !/[\s.،؟!]/u.test(glyph))
+        .filter(({ glyph }) => !/[\s.。、！!？?]/u.test(glyph))
         .map(({ index }) => index)
       expect(written.flatMap((cue) =>
         Array.from({ length: cue.end - cue.start }, (_, offset) => cue.start + offset),
@@ -46,9 +47,9 @@ describe('connected reading manifest', () => {
       expect(entry.readingCues?.length, entry.id).toBeGreaterThan(0)
     }
     const schoolText = connectedTexts.find((reading) => reading.unitId === '2')!
-    expect(schoolText.taughtEntryIds).toContain(EZAFE.id)
+    expect(schoolText.taughtEntryIds).toContain(NO_PARTICLE.id)
     expect(schoolText.entry.readingCues).toEqual(expect.arrayContaining([
-      expect.objectContaining({ display: '◌ِ', role: 'short-vowel' }),
+      expect.objectContaining({ display: 'の', role: 'whole' }),
     ]))
   })
 })

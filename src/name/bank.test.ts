@@ -7,13 +7,17 @@ import {
   DISTRACTOR_COUNT,
 } from './bank'
 import { findJapaneseTextViolations } from '../lessons/textRules'
+import { teachingOrder } from '../lessons/alphabet'
 
 describe('alphabetBank', () => {
-  it('holds the whole alphabet, each tile named in Danish', () => {
+  it('holds every kana in katakana, plus the three extra sign tiles', () => {
     const bank = alphabetBank()
-    expect(bank.length).toBe(33)
-    expect(bank.map((tile) => tile.glyph)).toContain('ب')
-    expect(bank.find((tile) => tile.glyph === 'ب')?.nameDa).toBe('be')
+    expect(bank.length).toBe(teachingOrder.length + 3)
+    expect(bank.map((tile) => tile.glyph)).toContain('サ')
+    expect(bank.map((tile) => tile.glyph)).toContain('ー')
+    expect(bank.map((tile) => tile.glyph)).toContain('ッ')
+    expect(bank.map((tile) => tile.glyph)).toContain('ヴ')
+    expect(bank.find((tile) => tile.glyph === 'ー')?.nameDa).toBe('langt vokaltegn')
     expect(new Set(bank.map((tile) => tile.key)).size).toBe(bank.length)
   })
 
@@ -26,56 +30,53 @@ describe('alphabetBank', () => {
 
 describe('nameGlyphs', () => {
   it('is the name letter by letter, in reading order', () => {
-    expect(nameGlyphs('بابک')).toEqual(['ب', 'ا', 'ب', 'ک'])
-    expect(nameGlyphs('سارا')).toEqual(['س', 'ا', 'ر', 'ا'])
+    expect(nameGlyphs('サラ')).toEqual(['サ', 'ラ'])
+    expect(nameGlyphs('セーレン')).toEqual(['セ', 'ー', 'レ', 'ン'])
   })
 
   it('counts the letters of a compound name, not its space', () => {
-    expect(nameGlyphs('آنه مته')).toEqual(['آ', 'ن', 'ه', 'م', 'ت', 'ه'])
+    expect(nameGlyphs('アンネ メッテ')).toEqual(['ア', 'ン', 'ネ', 'メ', 'ッ', 'テ'])
   })
 })
 
 describe('assembledPrefix', () => {
   it('grows one letter at a time', () => {
-    expect(assembledPrefix('بابک', 0)).toBe('')
-    expect(assembledPrefix('بابک', 1)).toBe('ب')
-    expect(assembledPrefix('بابک', 3)).toBe('باب')
-    expect(assembledPrefix('بابک', 4)).toBe('بابک')
+    expect(assembledPrefix('サラ', 0)).toBe('')
+    expect(assembledPrefix('サラ', 1)).toBe('サ')
+    expect(assembledPrefix('サラ', 2)).toBe('サラ')
   })
 
   it('puts the space of a compound name back, but never leaves it dangling', () => {
-    expect(assembledPrefix('آنه مته', 3)).toBe('آنه')
-    expect(assembledPrefix('آنه مته', 4)).toBe('آنه م')
-    expect(assembledPrefix('آنه مته', 6)).toBe('آنه مته')
+    expect(assembledPrefix('アンネ メッテ', 3)).toBe('アンネ')
+    expect(assembledPrefix('アンネ メッテ', 4)).toBe('アンネ メ')
+    expect(assembledPrefix('アンネ メッテ', 6)).toBe('アンネ メッテ')
   })
 })
 
 describe('assemblyBank', () => {
   it('holds every letter of the name plus two strangers', () => {
-    const bank = assemblyBank('سارا')
-    expect(bank).toHaveLength(4 + DISTRACTOR_COUNT)
+    const bank = assemblyBank('サラ')
+    expect(bank).toHaveLength(2 + DISTRACTOR_COUNT)
 
-    const own = [...'سارا']
-    for (const glyph of own) {
+    for (const glyph of ['サ', 'ラ']) {
       expect(bank.filter((tile) => tile.glyph === glyph).length).toBeGreaterThan(0)
     }
-    // Two ا in the name means two ا tiles: one per place it has to fill.
-    expect(bank.filter((tile) => tile.glyph === 'ا')).toHaveLength(2)
-    expect(bank.filter((tile) => !own.includes(tile.glyph))).toHaveLength(DISTRACTOR_COUNT)
+    expect(bank.filter((tile) => !['サ', 'ラ'].includes(tile.glyph))).toHaveLength(DISTRACTOR_COUNT)
   })
 
   it('gives every tile its own key, so a repeated letter is two tap targets', () => {
-    const bank = assemblyBank('بابک')
+    const bank = assemblyBank('ナナ')
     expect(new Set(bank.map((tile) => tile.key)).size).toBe(bank.length)
+    expect(bank.filter((tile) => tile.glyph === 'ナ')).toHaveLength(2)
   })
 
   it('is the same bank every time the same name opens it', () => {
-    expect(assemblyBank('مته')).toEqual(assemblyBank('مته'))
-    expect(assemblyBank('مته')).not.toEqual(assemblyBank('سورن'))
+    expect(assemblyBank('メッテ')).toEqual(assemblyBank('メッテ'))
+    expect(assemblyBank('メッテ')).not.toEqual(assemblyBank('アンナ'))
   })
 
   it('actually shuffles — the name does not simply lie there in order', () => {
-    const inOrder = ['فاطمه', 'سورن', 'بابک', 'سارا', 'لرکه'].filter((spelling) => {
+    const inOrder = ['サラ', 'アンナ', 'レルケ', 'セーレン'].filter((spelling) => {
       const bank = assemblyBank(spelling)
       return nameGlyphs(spelling).every((glyph, at) => bank[at]?.glyph === glyph)
     })
@@ -83,7 +84,7 @@ describe('assemblyBank', () => {
   })
 
   it('survives a name of one letter and a name with a space in it', () => {
-    expect(assemblyBank('و')).toHaveLength(1 + DISTRACTOR_COUNT)
-    expect(assemblyBank('آنه مته')).toHaveLength(6 + DISTRACTOR_COUNT)
+    expect(assemblyBank('ア')).toHaveLength(1 + DISTRACTOR_COUNT)
+    expect(assemblyBank('アンネ メッテ')).toHaveLength(6 + DISTRACTOR_COUNT)
   })
 })

@@ -1,23 +1,25 @@
-// Japanese text-rule guard (CLAUDE.md "Japanese text rules"): every ja string in
-// the app must use Japanese code points only, never the Arabic-form kaf/yeh,
-// and never ASCII digits.
+// Japanese text-rule guard (CLAUDE.md "Japanese text rules"): every ja string
+// in the app must use Japanese code points only — no Arabic or Persian
+// letters, no zero-width joins. ASCII digits stay allowed, because everyday
+// Japanese writing counts with Arabic numerals (fullwidth forms are not required
+// are not required).
 
-const ARABIC_KAF = 'ك' // ك — forbidden; use ک (U+06A9)
-const ARABIC_YEH = 'ي' // ي — forbidden; use ی (U+06cc)
-const ASCII_DIGIT = /[0-9]/
+const ARABIC_BLOCK = /[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/
+const ZWJ = '\u200D' // zero-width joiner — Japanese does not use it
+const ZWNJ = '\u200C' // the Persian half-space — never Japanese
 
 /** Returns a human-readable violation for every text-rule break found in `text`. */
 export function findJapaneseTextViolations(text: string): string[] {
   const violations: string[] = []
 
-  if (text.includes(ARABIC_KAF)) {
-    violations.push('contains Arabic ك (U+0643); use Japanese ک (U+06A9)')
+  if (ARABIC_BLOCK.test(text)) {
+    violations.push('contains an Arabic or Persian code point (U+0600–U+06FF etc.); Japanese text uses kana and kanji')
   }
-  if (text.includes(ARABIC_YEH)) {
-    violations.push('contains Arabic ي (U+064A); use Japanese ی (U+06CC)')
+  if (text.includes(ZWNJ)) {
+    violations.push('contains a zero-width non-joiner (U+200C); Japanese text never uses it')
   }
-  if (ASCII_DIGIT.test(text)) {
-    violations.push('contains an ASCII digit; use Japanese digits ۰–۹ (U+06F0–06F9)')
+  if (text.includes(ZWJ)) {
+    violations.push('contains a zero-width joiner (U+200D); Japanese text never uses it')
   }
 
   return violations

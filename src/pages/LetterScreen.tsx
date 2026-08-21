@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import { LessonSheet, BarLink } from '../components/LessonSheet'
 import { CompactPhraseRow, FullTeachingCard } from '../components/EntryRenderers'
-import { LetterForms } from '../components/LetterForms'
+import { JapaneseText } from '../components/JapaneseText'
 import { LetterDraw } from '../components/LetterDraw'
 import { ProgressTick } from '../components/ProgressTick'
 import { Button } from '../components/Button'
@@ -70,7 +70,17 @@ export default function LetterScreen() {
         <div className="letter__practice">
           {letter && (
             <div className="letter__block">
-              <LetterForms forms={letter.forms} joinsLeft={letter.joinsLeft} entry={letter.entry} />
+              <h3 className="letter__kana-title">Hiragana og katakana</h3>
+              <div className="letter-forms__pair">
+                <div className="letter-forms__cell">
+                  <JapaneseText entry={letter.entry} className="letter-forms__glyph" />
+                  <span className="letter-forms__label">hiragana</span>
+                </div>
+                <div className="letter-forms__cell">
+                  <JapaneseText entry={letter.entry} display={letter.kata} className="letter-forms__glyph" />
+                  <span className="letter-forms__label">katakana</span>
+                </div>
+              </div>
             </div>
           )}
 

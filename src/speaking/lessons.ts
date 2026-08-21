@@ -46,7 +46,7 @@ export const speakingLessons: SpeakingLesson[] = [
       id: entry.id,
       entry,
       imageEntryId: entry.id === 'conversation-introduction'
-        ? 'vocabulary-1-man' : 'vocabulary-2-salam',
+        ? 'vocabulary-1-watashi' : 'vocabulary-2-konnichiwa',
     })),
   },
   vocabLesson('5', 'Hør og sig otte dyr.'),

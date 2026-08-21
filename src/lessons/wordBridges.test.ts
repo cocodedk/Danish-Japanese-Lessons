@@ -3,28 +3,24 @@ import { wordBridges } from './wordBridges'
 import { wordBridgeSources } from './wordBridgeSources'
 
 const suppliedPairs = [
-  ['pedar-fader', 'پدر', 'peˈdæɾ', 'fader', 'ˈfæːðʌ'],
-  ['madar-moder', 'مادر', 'mɒːˈdæɾ', 'moder', 'ˈmoːðʌ'],
-  ['baradar-broder', 'برادر', 'bæɾɒːˈdæɾ', 'broder', 'ˈbʁoːðʌ'],
-  ['doxtar-datter', 'دختر', 'doxˈtæɾ', 'datter', 'ˈdadʌ'],
-  ['dar-doer', 'در', 'dæɾ', 'dør', 'ˈdɶˀɐ̯'],
-  ['nam-navn', 'نام', 'nɒːm', 'navn', 'ˈnɑwˀn'],
-  ['mush-mus', 'موش', 'muːʃ', 'mus', 'ˈmuˀs'],
-  ['garm-varm', 'گرم', 'ɡæɾm', 'varm', 'ˈvɑːm'],
-  ['now-ny', 'نو', 'nou̯', 'ny', 'ˈnyˀ'],
-  ['do-to', 'دو', 'do', 'to', 'ˈtoˀ'],
-  ['shesh-seks', 'شش', 'ʃeʃ', 'seks', 'ˈsɛgs'],
-  ['noh-ni', 'نه', 'noh', 'ni', 'ˈniˀ'],
-  ['dandan-tand', 'دندان', 'dænˈdɒːn', 'tand', 'ˈtanˀ'],
-  ['naf-navle', 'ناف', 'nɒːf', 'navle', 'ˈnɑwlə'],
-  ['mah-maane', 'ماه', 'mɒːh', 'måne', 'ˈmɔːnə'],
-  ['setareh-stjerne', 'ستاره', 'seˈtɒːɾe', 'stjerne', 'ˈsdjæɐ̯nə'],
-  ['band-baand', 'بند', 'bænd', 'bånd', 'ˈbɔnˀ'],
+  ['kohii-kaffe', 'コーヒー', 'koːhiː', 'kaffe', 'ˈkʰafə'],
+  ['hoteru-hotel', 'ホテル', 'hoteɾɯ', 'hotel', 'hoˈtelˀ'],
+  ['basu-bus', 'バス', 'basɯ', 'bus', 'ˈbus'],
+  ['takushii-taxi', 'タクシー', 'takɯɕiː', 'taxi', 'ˈtɑksi'],
+  ['menyuu-menu', 'メニュー', 'meɲɯː', 'menu', 'meˈnyˀ'],
+  ['terebi-tv', 'テレビ', 'teɾebi', 'tv', 'teˈveˀ'],
+  ['rajio-radio', 'ラジオ', 'ɾadʑio', 'radio', 'ʁɑˈdiːo'],
+  ['kamera-kamera', 'カメラ', 'kameɾa', 'kamera', 'ˈkʰɑːməʁa'],
+  ['resutoran-restaurant', 'レストラン', 'ɾesɯtoɾaɴ', 'restaurant', 'ʁɛsturmˈɑŋ'],
+  ['sarada-salat', 'サラダ', 'saɾada', 'salat', 'saˈlɑːd'],
+  ['hottodoggu-hotdog', 'ホットドッグ', 'hotːodogːɯ', 'hotdog', 'ˈhʌdɔɡ'],
+  ['pen-pen', 'ペン', 'peɴ', 'pen', 'ˈpʰɛn'],
+  ['piano-piano', 'ピアノ', 'piano', 'piano', 'piˈæːno'],
 ] as const
 
-describe('Japanese and Danish word bridges', () => {
+describe('Japanese and Danish loanword bridges', () => {
   it('keeps every pair unique, sourced, and ready for a full word reading', () => {
-    expect(wordBridges).toHaveLength(23)
+    expect(wordBridges).toHaveLength(13)
     expect(new Set(wordBridges.map((bridge) => bridge.id)).size).toBe(wordBridges.length)
     for (const bridge of wordBridges) {
       expect(wordBridgeSources[bridge.id]?.length).toBeGreaterThanOrEqual(2)
@@ -32,48 +28,28 @@ describe('Japanese and Danish word bridges', () => {
       expect(bridge.entry.pron.ipa).toBeTruthy()
       expect(bridge.clueDa.toLocaleLowerCase('da')).not.toContain('altid')
       expect(bridge.historyDa).toBeTruthy()
+      expect(bridge.danish).toBeTruthy()
     }
   })
 
-  it('keeps the seventeen supplied cognates and IPA transcriptions intact', () => {
+  it('keeps the thirteen supplied loanword pairs and IPA transcriptions intact', () => {
     const byId = Object.fromEntries(wordBridges.map((bridge) => [bridge.id, bridge]))
-    for (const [id, ja, persianIpa, danish, danishIpa] of suppliedPairs) {
-      expect(byId[id]).toMatchObject({ entry: { ja, pron: { ipa: persianIpa } }, danish, danishIpa })
+    for (const [id, ja, jpIpa, danish, danishIpa] of suppliedPairs) {
+      expect(byId[id], id).toMatchObject({ entry: { ja, pron: { ipa: jpIpa } }, danish, danishIpa })
     }
   })
 
-  it('labels the three extra teaching bridges without overstating them', () => {
-    const byId = Object.fromEntries(wordBridges.map((bridge) => [bridge.id, bridge]))
-    expect(byId['setad-sted']).toMatchObject({
-      category: 'everyday', entry: { ja: 'ستاد', da: 'hovedkontor' }, danish: 'sted',
-    })
-    expect(byId['setad-sted'].meaningDa).toContain('ikke det samme')
-    expect(byId['seyl-sejle']).toMatchObject({
-      category: 'memory', entry: { ja: 'سیل', da: 'oversvømmelse' }, danish: 'sejle',
-    })
-    expect(byId['seyl-sejle'].historyDa).toContain('ikke i samme gamle familie')
-    expect(byId['dust-dus']).toMatchObject({
-      category: 'memory', entry: { ja: 'دوست', da: 'ven', pron: { ipa: 'duːst' } },
-      danish: 'dus', danishIpa: 'ˈdus',
-    })
-    expect(byId['dust-dus'].historyDa).toContain('ikke et fælles ophav')
+  it('covers all four everyday categories with at least two words each', () => {
+    for (const category of ['mad', 'byen', 'hjem', 'skole'] as const) {
+      expect(wordBridges.filter((bridge) => bridge.category === category).length, category)
+        .toBeGreaterThanOrEqual(2)
+    }
   })
 
-  it('keeps the three requested bridges as qualified memory clues', () => {
-    const byId = Object.fromEntries(wordBridges.map((bridge) => [bridge.id, bridge]))
-    expect(byId['pas-pas-paa']).toMatchObject({
-      category: 'memory', entry: { ja: 'پاس', da: 'vagt, beskyttelse eller omsorg' },
-      danish: 'pas på',
-    })
-    expect(byId['pas-pas-paa'].meaningDa).toContain('movåzeb båsh')
-    expect(byId['mord-mord']).toMatchObject({
-      category: 'memory', entry: { ja: 'مرد', jaMarked: 'مُرد', da: 'døde' }, danish: 'mord',
-    })
-    expect(byId['mord-mord'].meaningDa).toContain('ikke det samme')
-    expect(byId['leng-lang']).toMatchObject({
-      category: 'memory', entry: { ja: 'لنگ', jaMarked: 'لِنگ', da: 'ben' },
-      danish: 'lang, længe, langt',
-    })
-    expect(byId['leng-lang'].historyDa).toContain('ikke dokumenteret som et historisk dansk længdemål')
+  it('writes every bridge word in katakana', () => {
+    const katakana = /^[\u30A1-\u30FA\u30FC]+$/u
+    for (const bridge of wordBridges) {
+      expect(katakana.test(bridge.entry.ja), bridge.id).toBe(true)
+    }
   })
 })

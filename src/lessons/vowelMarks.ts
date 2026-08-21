@@ -1,13 +1,13 @@
-// The six vowel signs, on alef so the learner always sees the mark on a seat.
-// Short vowels are written above or below the line; long vowels are whole
-// letters. Danish anchors per CLAUDE.md "Curriculum" — never improvised in JSX.
+// The six Japanese lydtegn, like the six vowel marks of the original lesson:
+// two voice marks, the long-vowel bar, the small tsu, and the two small y-rows.
+// Danish anchors per CLAUDE.md "Curriculum" — never improvised in JSX.
 import type { VowelMark } from './types'
 import { defineEntry, type JapaneseEntry } from '../catalog/types'
 import { NO_OWN_SOUND, withoutMarks } from './marks'
 
 type MarkRow = [string, string, string, string, string, string, string]
 
-function mark([id, glyph, nameFa, nameDa, soundDa, soundIpa, nameIpa]: MarkRow): VowelMark {
+function mark([id, glyph, nameJa, nameDa, soundDa, soundIpa, nameIpa]: MarkRow): VowelMark {
   const plain = withoutMarks(glyph)
   const entry = defineEntry({
     id: `alphabet-mark-${id}`,
@@ -20,7 +20,7 @@ function mark([id, glyph, nameFa, nameDa, soundDa, soundIpa, nameIpa]: MarkRow):
   const nameEntry = defineEntry({
     id: `alphabet-mark-name-${id}`,
     kind: 'word' as const,
-    ja: nameFa,
+    ja: nameJa,
     da: `tegnnavnet ${nameDa}`,
     pron: { da: nameDa, ipa: nameIpa },
   })
@@ -29,21 +29,24 @@ function mark([id, glyph, nameFa, nameDa, soundDa, soundIpa, nameIpa]: MarkRow):
     entry,
     nameEntry,
     glyph,
-    name: { ja: nameFa, da: nameDa },
+    name: { ja: nameJa, da: nameDa },
     sound: entry.pron,
   }
 }
 
+// id · glyph · japanese name · danish school name · how it sounds or works ·
+// ipa · how the danish school name is pronounced.
 export const vowelMarks: VowelMark[] = [
-  mark(['zebar', 'اَ', 'زبر', 'zebar', 'a i "kat"', 'æ', 'zæbæɾ']),
-  mark(['zir', 'اِ', 'زیر', 'zir', 'e i "let"', 'e', 'ziːɾ']),
-  mark(['pish', 'اُ', 'پیش', 'pish', 'o i "foto"', 'o', 'piːʃ']),
-  mark(['aa', 'آ', 'آ', 'alef med madde', 'å i "år"', 'ɒː', 'ɒː']),
-  mark(['u', 'او', 'او', 'alef og vav', 'u i "du"', 'uː', 'uː']),
-  mark(['i', 'ای', 'ای', 'alef og ye', 'i i "vi"', 'iː', 'iː']),
+  mark(['dakuten', 'か゛', 'だくてん', 'dakuten', 'k bliver g — が ga', 'ɡ', 'dakuten']),
+  mark(['handakuten', 'は゜', 'はんだくてん', 'handakuten', 'h bliver p — ぱ pa', 'p', 'handakuten']),
+  mark(['choon', 'カー', 'ちょうおんぷ', 'chōonpu', 'a i "far"', 'aː', 'chōonpu']),
+  mark(['sokuon', 'かっ', 'そくおん', 'sokuon', 'k dobbelt — kk', 'kː', 'sokuon']),
+  mark(['chiisai-ya', 'きゃ', 'ちいさい ゃ', 'chiisai ya', 'kya', 'kʲa', 'chiisai ya']),
+  mark(['chiisai-yo', 'きょ', 'ちいさい ょ', 'chiisai yo', 'kyo', 'kʲo', 'chiisai yo']),
 ]
 
-/** A mark that changes how a word is read but carries no vowel of its own. */
+/** Named now so they are not a surprise later; the marks lesson teaches all
+ *  six, so there is nothing left for a later row. */
 export interface LaterMark {
   id: string
   entry: JapaneseEntry
@@ -52,18 +55,4 @@ export interface LaterMark {
   hint: string
 }
 
-/** Named now so they are not a surprise later; taught in a later lesson. */
-export const laterMarks: LaterMark[] = [
-  {
-    id: 'tashdid',
-    entry: defineEntry({ id: 'alphabet-mark-tashdid', kind: 'mark', ja: 'ـّ', da: 'bogstavet siges dobbelt', pron: NO_OWN_SOUND, audioNotApplicable: 'Tegnet har ingen egen lyd; det fordobler bogstavet under sig.' }),
-    nameEntry: defineEntry({ id: 'alphabet-mark-name-tashdid', kind: 'word', ja: 'تشدید', da: 'tegnnavnet tashdid', pron: { da: 'tasjdid', ipa: 'tæʃdiːd' } }),
-    hint: 'Bogstavet under tegnet siges dobbelt.',
-  },
-  {
-    id: 'sokun',
-    entry: defineEntry({ id: 'alphabet-mark-sokun', kind: 'mark', ja: 'ـْ', da: 'bogstavet får ingen vokal', pron: NO_OWN_SOUND, audioNotApplicable: 'Tegnet har ingen egen lyd; det markerer fravær af en vokal.' }),
-    nameEntry: defineEntry({ id: 'alphabet-mark-name-sokun', kind: 'word', ja: 'سکون', da: 'tegnnavnet sokun', pron: { da: 'sokun', ipa: 'sokuːn' } }),
-    hint: 'Bogstavet får ingen vokal — det står tørt.',
-  },
-]
+export const laterMarks: LaterMark[] = []

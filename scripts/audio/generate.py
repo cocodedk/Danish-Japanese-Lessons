@@ -86,10 +86,16 @@ def synthesize_one(
     mp3_path = WORK / f"{stem}.mp3"
 
     with wave.open(str(wav_path), "wb") as wav_file:
+        kwargs = {}
+        speaker = cfg.get("speaker")
+        if speaker is not None and voice.config.speaker_id_map:
+            # The Japanese voice ships two speakers; the config picks one.
+            kwargs["speaker_id"] = speaker
         voice.synthesize_wav(
             job["synthesisText"],
             wav_file,
             syn_config=SynthesisConfig(length_scale=cfg["lengthScale"]),
+            **kwargs,
         )
 
     audio_filter = normalization_filter(ffmpeg, wav_path, cfg)

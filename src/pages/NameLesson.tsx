@@ -47,8 +47,8 @@ export default function NameLesson() {
     <LessonSheet className="lesson--name" title="Skriv dit navn" bar={<BarLink to="/">Til forsiden</BarLink>}>
       <CompactPhraseRow entry={WRITE_NAME_ENTRY} />
       <p className="alphabet__lead">
-        Dit navn, bogstav for bogstav. Se først hvordan hvert bogstav skifter form, når det binder
-        til naboen. Sæt det så sammen selv.
+        Dit navn, tegn for tegn. Hvert tegn er én stavelse og står altid ens. Lyt til det, og sæt
+        navnet så sammen selv.
       </p>
 
       <PersonalNameCompanion spelling={faSpelling} original={name} className="name__preview" />

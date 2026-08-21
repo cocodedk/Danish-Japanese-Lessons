@@ -1,30 +1,35 @@
 import { describe, it, expect } from 'vitest'
-import { markSide } from './marks'
+import { markSide, withoutMarks } from './marks'
 
 describe('markSide', () => {
-  it('reads زبر and پیش as marks written above the letter', () => {
-    expect(markSide('اَ')).toBe('above')
-    expect(markSide('اُ')).toBe('above')
+  it('reads ゛ and ゜ (dakuten, handakuten) as marks above the kana', () => {
+    expect(markSide('か゛')).toBe('above')
+    expect(markSide('は゜')).toBe('above')
   })
 
-  it('reads زیر as a mark written below the letter', () => {
-    expect(markSide('اِ')).toBe('below')
+  it('reads the long vowel bar, the small tsu and the y-rows as unsided', () => {
+    expect(markSide('カー')).toBe('none')
+    expect(markSide('かっ')).toBe('none')
+    expect(markSide('きゃ')).toBe('none')
+    expect(markSide('きょ')).toBe('none')
   })
 
-  it('treats the madde of آ as an above-the-line mark, precomposed or not', () => {
-    expect(markSide('آب')).toBe('above')
-    // Built from explicit escapes: alef + combining madde + be is the
-    // decomposed spelling of the same word and looks identical on screen.
-    expect(markSide('\u0627\u0653\u0628')).toBe('above')
+  it('reports no mark for plain kana text', () => {
+    expect(markSide('みず')).toBe('none')
+    expect(markSide('こんにちは')).toBe('none')
+  })
+})
+
+describe('withoutMarks', () => {
+  it('takes exactly the hand-marks off a marked specimen', () => {
+    expect(withoutMarks('か゛')).toBe('か')
+    expect(withoutMarks('は゜')).toBe('は')
   })
 
-  it('reports no mark for undiacriticized Japanese', () => {
-    expect(markSide('کتاب')).toBe('none')
-    expect(markSide('اب')).toBe('none')
-  })
-
-  it('reports the above side when a word is marked on both sides', () => {
-    // زیر under the kaf and زبر over the te: one gradient, one cut.
-    expect(markSide('کِتَاب')).toBe('above')
+  it('leaves the real kana and long marks alone', () => {
+    expect(withoutMarks('かっ')).toBe('かっ')
+    expect(withoutMarks('きゃ')).toBe('きゃ')
+    expect(withoutMarks('カー')).toBe('カー')
+    expect(withoutMarks('みず')).toBe('みず')
   })
 })

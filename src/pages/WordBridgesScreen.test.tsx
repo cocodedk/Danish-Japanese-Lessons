@@ -41,9 +41,9 @@ describe('the word-bridge lesson', () => {
       ['دوست', 'dust'], ['پاس', 'pås'], ['مرد', 'mord'], ['لنگ', 'leng'],
     ]
 
-    for (const [japanese, persianPron] of expected) {
+    for (const [japanese, japanesePron] of expected) {
       expect(screen.getByText(japanese)).toBeInTheDocument()
-      expect(screen.getAllByText(persianPron).length).toBeGreaterThan(0)
+      expect(screen.getAllByText(japanesePron).length).toBeGreaterThan(0)
     }
     expect(screen.getByText(/Japansk \[peˈdæɾ\].*dansk \[ˈfæːðʌ\]/)).toBeInTheDocument()
     expect(screen.getByText(/Japansk \[bænd\].*dansk \[ˈbɔnˀ\]/)).toBeInTheDocument()

@@ -21,8 +21,9 @@ export function isVocabExerciseKind(value: string): value is VocabExerciseKind {
 /**
  * Two words are too alike to share a question when they mean the same thing or
  * sound the same — either one would answer the other's prompt. Japanese has
- * plenty of هم‌آوا pairs waiting to be added (از/آز), so the rule lives here as
- * well as in the data test, and a future word cannot slip past it.
+ * near-homophone pairs (きろ vs いろ share a vowel and a rhyme), so the rule
+ * lives here as well as in the data test, and a future word cannot slip past
+ * it with only the whole-word sound to hide behind.
  */
 function alike(a: VocabWord, b: VocabWord): boolean {
   return a.da === b.da || a.pron.ipa === b.pron.ipa || a.pron.da === b.pron.da
@@ -32,7 +33,7 @@ function alike(a: VocabWord, b: VocabWord): boolean {
  * Three words to choose against: the unit's next neighbours, wrapping around.
  *
  * Throws rather than silently handing back a short round: a unit too small,
- * or too full of هم‌آوا pairs, to fill `CHOICE_COUNT - 1` sound-safe
+ * or too full of near-homophone pairs, to fill `CHOICE_COUNT - 1` sound-safe
  * distractors would otherwise ship a three-choice question with nothing
  * telling a reader it is one choice short (accepted as a fresh concern in
  * plan 004's critic round 1, built rather than deferred).
@@ -73,9 +74,9 @@ export function buildVocabQuestions(unitId: string, kind: VocabExerciseKind): Qu
     itemId: word.id,
     entry: word.entry,
     promptDa: kind === 'ord' ? 'Hvad betyder ordet?' : `Hvilket ord betyder »${word.da}«?`,
-    // The specimen carries its اِعراب (drawn by JaSpecimen from the entry); the
-    // choices in `par` do not — marks belong on teaching specimens only
-    // (docs/design/ART-DIRECTION.md).
+    // Japanese kana carry no vowel marks, so `jaMarked` equals `ja` here and
+    // JaSpecimen renders the plain word; nothing is red-penned on choices or
+    // on specimens (marks belong to the marks lesson, not to vocabulary).
     ...(kind === 'ord' ? { showsFa: true } : {}),
     choices: arrange(
       choiceOf(word, kind),

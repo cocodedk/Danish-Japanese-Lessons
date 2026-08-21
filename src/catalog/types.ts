@@ -1,14 +1,14 @@
 export interface Pronunciation {
   /** Approachable Danish-friendly spelling of the Japanese pronunciation. */
   da: string
-  /** Standard Tehrani Japanese IPA, stored without display brackets. */
+  /** Standard Tokyo Japanese IPA, stored without display brackets. */
   ipa: string
 }
 
 export type SpokenRegister = 'neutral' | 'everyday' | 'formal'
 
 /** One way an entry is actually said. Most words have one neutral form;
- * conversation may put everyday Tehrani beside formal standard Japanese. */
+ * conversation may put everyday Tokyo beside formal standard Japanese. */
 export interface SpokenForm {
   id: string
   register: SpokenRegister

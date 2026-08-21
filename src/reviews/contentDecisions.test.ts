@@ -18,7 +18,7 @@ describe('external content decisions', () => {
     const path = join(process.cwd(), 'docs/reviews/content-review-decisions.json')
     const data = JSON.parse(readFileSync(path, 'utf8')) as { decisions: Decision[] }
     const ids = new Set(contentReviewManifest.rows.map((row) => row.id))
-    const roles = new Set(['iranian-japanese-1', 'iranian-japanese-2', 'phonetics', 'danish'])
+    const roles = new Set(['native-japanese-1', 'native-japanese-2', 'phonetics', 'danish'])
     for (const row of data.decisions) {
       expect(ids.has(row.entryId), row.entryId).toBe(true)
       expect(roles.has(row.role), row.role).toBe(true)

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { existsSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { pronunciationAudio, pronunciationAudioUrl } from './manifest'
-import { persianCatalog } from '../catalog/registry'
+import { japaneseCatalog } from '../catalog/registry'
 import { spokenFormsFor } from '../catalog/types'
 
 describe('pronunciation audio manifest', () => {
@@ -10,7 +10,7 @@ describe('pronunciation audio manifest', () => {
     const ids = pronunciationAudio.map((row) => row.clipId)
     expect(new Set(ids).size).toBe(ids.length)
     for (const row of pronunciationAudio) {
-      expect(row.locale).toBe('ja-IR')
+      expect(row.locale).toBe('ja-JP')
       expect(row.file).toMatch(/^\/audio\/[a-z0-9-]+\.[a-f0-9]{12}\.(?:mp3|m4a|ogg)$/)
       expect(row.file).not.toMatch(/^https?:/)
       expect(new Set(row.reviewedBy).size).toBeGreaterThanOrEqual(1)
@@ -29,7 +29,7 @@ describe('pronunciation audio manifest', () => {
       if (existsSync(file) && statSync(file).size > 100_000) {
         expect(row.sizeException?.trim(), row.entryId).not.toBe('')
       }
-      const entry = persianCatalog.find((candidate) => candidate.id === row.entryId)
+      const entry = japaneseCatalog.find((candidate) => candidate.id === row.entryId)
       expect(entry, row.entryId).toBeDefined()
       const form = entry && spokenFormsFor(entry).find((candidate) => candidate.audioId === row.clipId)
       expect(form, row.clipId).toBeDefined()

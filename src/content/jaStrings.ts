@@ -3,52 +3,48 @@
 import { NAME_FA_STRINGS } from '../name/copy'
 import { defineEntry } from '../catalog/types'
 
-export const CAPTURE_PROMPT_ENTRY = defineEntry({ id: 'interface-capture-prompt', kind: 'phrase', ja: 'نام تو چیست؟', da: 'Hvad hedder du?', pron: { da: 'nåme to tjist?', ipa: 'nɒːme to tʃiːst' } })
-export const LESSON_PLACEHOLDER_ENTRY = defineEntry({ id: 'interface-lesson-placeholder', kind: 'phrase', ja: 'این درس هنوز آماده نیست.', da: 'Denne lektion er ikke klar endnu.', pron: { da: 'in dars hanuz åmåde nist', ipa: 'iːn dæɾs hænuːz ʔɒːmɒːde niːst' } })
+export const CAPTURE_PROMPT_ENTRY = defineEntry({ id: 'interface-capture-prompt', kind: 'phrase', ja: 'なまえは？', da: 'Hvad hedder du?', pron: { da: 'namae wa?', ipa: 'naɰa.e ɰa' } })
+export const LESSON_PLACEHOLDER_ENTRY = defineEntry({ id: 'interface-lesson-placeholder', kind: 'phrase', ja: 'この レッスンは まだ できていません。', da: 'Denne lektion er ikke klar endnu.', pron: { da: 'kono ressun wa mada dekite imasen', ipa: 'kono ɾesːɯn ɰa mada dekite imaseɴ' } })
 
 /** A wrong answer costs nothing and says so — ART-DIRECTION "Celebration". */
-export const TRY_AGAIN_ENTRY = defineEntry({ id: 'interface-try-again', kind: 'word', ja: 'دوباره', da: 'Prøv igen', pron: { da: 'dobåre', ipa: 'dobɒːɾe' } })
+export const TRY_AGAIN_ENTRY = defineEntry({ id: 'interface-try-again', kind: 'word', ja: 'もう いちど', da: 'Prøv igen', pron: { da: 'mo ichido', ipa: 'moː itɕido' } })
 
-/** The نیم‌فاصله's own name — on its key cap and in the marking, single-sourced
- * (plan 005, critic round 1). */
-export const ZWNJ_NAME_ENTRY = defineEntry({ id: 'interface-zwnj-name', kind: 'symbol', ja: 'نیم‌فاصله', da: 'halvt mellemrum', pron: { da: 'nim-fåsele', ipa: 'niːm fɒːsele' } })
+/** The chōonpu's own name — on its key cap and in the marking, single-sourced.
+ * — the long-vowel bar names itself on the keyboard (port spec 016). */
+export const CHŌON_NAME_ENTRY = defineEntry({ id: 'interface-choon-name', kind: 'symbol', ja: 'ちょうおん', da: 'langt vokaltegn', pron: { da: 'choon-ong', ipa: 'tɕoːoɴ' } })
 
 /**
  * The typing marking, said honestly when the divergent cell is a space or a
- * نیم‌فاصله rather than a letter — "et andet bogstav" is simply wrong for a
- * sign with no letterform (src/components/TypeMarks.tsx).
+ * long-vowel bar rather than a letter — "et andet bogstav" is simply wrong
+ * for a mark with no letterform (src/components/TypeMarks.tsx).
  */
-export const TYPE_MISSING_SPACE_ENTRY = defineEntry({ id: 'interface-missing-space', kind: 'phrase', ja: 'اینجا یک فاصله جا افتاده.', da: 'Her mangler et mellemrum.', pron: { da: 'indjå jek fåsele djå oftåde', ipa: 'iːndʒɒː jek fɒːsele dʒɒː ʔoftɒːde' } })
-export const TYPE_EXTRA_SPACE_ENTRY = defineEntry({ id: 'interface-extra-space', kind: 'phrase', ja: 'اینجا یک فاصله اضافه نوشته شده.', da: 'Her står et mellemrum for meget.', pron: { da: 'indjå jek fåsele ezåfe nevesjte sjode', ipa: 'iːndʒɒː jek fɒːsele ʔezɒːfe neveʃte ʃode' } })
-export const TYPE_MISSING_ZWNJ_ENTRY = defineEntry({ id: 'interface-missing-zwnj', kind: 'phrase', ja: 'اینجا یک نیم‌فاصله جا افتاده.', da: 'Her mangler et halvt mellemrum.', pron: { da: 'indjå jek nim-fåsele djå oftåde', ipa: 'iːndʒɒː jek niːm fɒːsele dʒɒː ʔoftɒːde' } })
-export const TYPE_EXTRA_ZWNJ_ENTRY = defineEntry({ id: 'interface-extra-zwnj', kind: 'phrase', ja: 'اینجا یک نیم‌فاصله اضافه نوشته شده.', da: 'Her står et halvt mellemrum for meget.', pron: { da: 'indjå jek nim-fåsele ezåfe nevesjte sjode', ipa: 'iːndʒɒː jek niːm fɒːsele ʔezɒːfe neveʃte ʃode' } })
+export const TYPE_MISSING_SPACE_ENTRY = defineEntry({ id: 'interface-missing-space', kind: 'phrase', ja: 'ここに スペースが ありません。', da: 'Her mangler et mellemrum.', pron: { da: 'koko ni supeesu ga arimasen', ipa: 'koko ɲi sɯpeːsɯ ɡa aɾimaseɴ' } })
+export const TYPE_EXTRA_SPACE_ENTRY = defineEntry({ id: 'interface-extra-space', kind: 'phrase', ja: 'スペースが おおいです。', da: 'Her står et mellemrum for meget.', pron: { da: 'supeesu ga oo-i desu', ipa: 'sɯpeːsɯ ɡa oːi desɯ' } })
 
 /** Ordinary-letter feedback uses only common Japanese words and says exactly
- * the same thing as the Danish line. Minimum surface-word Zipf: 5.27. */
-export const TYPE_MISSING_LETTER_ENTRY = defineEntry({ id: 'interface-missing-letter', kind: 'phrase', ja: 'اینجا یک حرف کم است.', da: 'Her mangler et bogstav.', pron: { da: 'indjå jek harf kam ast', ipa: 'iːndʒɒː jek hæɾf kæm æst' } })
-export const TYPE_WRONG_LETTER_ENTRY = defineEntry({ id: 'interface-wrong-letter', kind: 'phrase', ja: 'اینجا یک حرف دیگر است.', da: 'Her står et andet bogstav.', pron: { da: 'indjå jek harfe digar ast', ipa: 'iːndʒɒː jek hæɾfe diːɡæɾ æst' } })
-export const TYPE_EXTRA_LETTER_ENTRY = defineEntry({ id: 'interface-extra-letter', kind: 'phrase', ja: 'اینجا یک حرف اضافه است.', da: 'Her er et bogstav for meget.', pron: { da: 'indjå jek harfe ezåfe ast', ipa: 'iːndʒɒː jek hæɾfe ʔezɒːfe æst' } })
+ * the same thing as the Danish line. */
+export const TYPE_MISSING_LETTER_ENTRY = defineEntry({ id: 'interface-missing-letter', kind: 'phrase', ja: 'ここに もじが たりません。', da: 'Her mangler et bogstav.', pron: { da: 'koko ni moji ga tarimasen', ipa: 'koko ɲi modʑi ɡa taɾimaseɴ' } })
+export const TYPE_WRONG_LETTER_ENTRY = defineEntry({ id: 'interface-wrong-letter', kind: 'phrase', ja: 'ここに ちがう もじが あります。', da: 'Her står et andet bogstav.', pron: { da: 'koko ni chigau moji ga arimasu', ipa: 'koko ɲi tɕiɡaɯ modʑi ɡa aɾimasɯ' } })
+export const TYPE_EXTRA_LETTER_ENTRY = defineEntry({ id: 'interface-extra-letter', kind: 'phrase', ja: 'ここに もじが おおいです。', da: 'Her er et bogstav for meget.', pron: { da: 'koko ni moji ga oo-i desu', ipa: 'koko ɲi modʑi ɡa oːi desɯ' } })
 
 /** The two typing rounds (plan 005): the unit's words, and the capstone. */
-export const TYPE_WORDS_ENTRY = defineEntry({ id: 'interface-type-words', kind: 'phrase', ja: 'کلمه‌ها را بنویس', da: 'Skriv ordene', pron: { da: 'kalemehå rå benevis', ipa: 'kælemehɒː ɾɒː beneviːs' } })
-export const TYPE_NAME_ENTRY = defineEntry({ id: 'interface-type-name', kind: 'phrase', ja: 'نام خودت را بنویس', da: 'Skriv dit eget navn', pron: { da: 'nåme khodet rå benevis', ipa: 'nɒːme xodet ɾɒː beneviːs' } })
+export const TYPE_WORDS_ENTRY = defineEntry({ id: 'interface-type-words', kind: 'phrase', ja: 'ことばを かいてね。', da: 'Skriv ordene', pron: { da: 'kotoba o kaite ne', ipa: 'kotoba o kaite ne' } })
+export const TYPE_NAME_ENTRY = defineEntry({ id: 'interface-type-name', kind: 'phrase', ja: 'じぶんの なまえを かいてね。', da: 'Skriv dit eget navn', pron: { da: 'jibun no namae o kaite ne', ipa: 'dʑibɯɴ no naɰa.e o kaite ne' } })
 
 /** The margin badge on a letter the learner's own name is spelled with (plan 006). */
-export const NAME_LETTER_ENTRY = defineEntry({ id: 'interface-name-letter', kind: 'phrase', ja: 'این حرف در نام توست', da: 'Dette bogstav er i dit navn', pron: { da: 'in harf dar nåme tost', ipa: 'iːn hæɾf dæɾ nɒːme tost' } })
+export const NAME_LETTER_ENTRY = defineEntry({ id: 'interface-name-letter', kind: 'phrase', ja: 'この 文字は あなたの なまえに あります', da: 'Dette bogstav er i dit navn', pron: { da: 'kono moji wa anata no namae ni arimasu', ipa: 'kono modʑi ɰa anata no naɰa.e ni aɾimasɯ' } })
 
 /** The same warm note on a whole word (plan 004) — one shared letter, or several. */
-export const NAME_LETTER_IN_WORD_ENTRY = defineEntry({ id: 'interface-name-letter-in-word', kind: 'phrase', ja: 'حرفی از نام تو در این کلمه هست', da: 'Et bogstav fra dit navn er i dette ord', pron: { da: 'harfi az nåme to dar in kaleme hast', ipa: 'hæɾfiː ʔæz nɒːme to dæɾ iːn kæleme hæst' } })
-export const NAME_LETTERS_IN_WORD_ENTRY = defineEntry({ id: 'interface-name-letters-in-word', kind: 'phrase', ja: 'حرف‌هایی از نام تو در این کلمه هست', da: 'Bogstaver fra dit navn er i dette ord', pron: { da: 'harfhåji az nåme to dar in kaleme hast', ipa: 'hæɾfhɒːjiː ʔæz nɒːme to dæɾ iːn kæleme hæst' } })
+export const NAME_LETTER_IN_WORD_ENTRY = defineEntry({ id: 'interface-name-letter-in-word', kind: 'phrase', ja: 'この ことばに あなたの なまえの 文字が あります', da: 'Et bogstav fra dit navn er i dette ord', pron: { da: 'kono kotoba ni anata no namae no moji ga arimasu', ipa: 'kono kotoba ɲi anata no naɰa.e no modʑi ɡa aɾimasɯ' } })
+export const NAME_LETTERS_IN_WORD_ENTRY = defineEntry({ id: 'interface-name-letters-in-word', kind: 'phrase', ja: 'この ことばに あなたの なまえの 文字が あります', da: 'Bogstaver fra dit navn er i dette ord', pron: { da: 'kono kotoba ni anata no namae no moji ga aru', ipa: 'kono kotoba ɲi anata no naɰa.e no modʑi ɡa aɾɯ' } })
 
 export const INTERFACE_ENTRIES = [
   CAPTURE_PROMPT_ENTRY,
   LESSON_PLACEHOLDER_ENTRY,
   TRY_AGAIN_ENTRY,
-  ZWNJ_NAME_ENTRY,
+  CHŌON_NAME_ENTRY,
   TYPE_MISSING_SPACE_ENTRY,
   TYPE_EXTRA_SPACE_ENTRY,
-  TYPE_MISSING_ZWNJ_ENTRY,
-  TYPE_EXTRA_ZWNJ_ENTRY,
   TYPE_MISSING_LETTER_ENTRY,
   TYPE_WRONG_LETTER_ENTRY,
   TYPE_EXTRA_LETTER_ENTRY,

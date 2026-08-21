@@ -1,33 +1,45 @@
-// Which form every letter of a name takes, derived — never typed out. The
-// alphabet lesson already owns the letters and whether each joins to the left
-// (src/lessons/alphabet.ts); this reads that data one position at a time.
-import { letters, specimens } from '../lessons/alphabet'
+// The letters of a name, and the form each takes there. Kana never change
+// shape, so a Japanese name is the same glyphs in every position — this is
+// the whole lesson turned trivial, and the module keeps the same shape as
+// its Persian ancestor so the screens stay data-driven.
+import { letters } from '../lessons/alphabet'
 import { NO_OWN_SOUND } from '../lessons/marks'
 import type { Letter, Pron } from '../lessons/types'
 import { defineEntry, type JapaneseEntry } from '../catalog/types'
 
 export type FormKey = keyof Letter['forms']
 
-const TATWEEL = 'ـ'
-
+/** Katakana is how names are written; the alphabet data teaches hiragana. */
+const KATAKANA: Record<string, string> = {
+  'あ': 'ア', 'い': 'イ', 'う': 'ウ', 'え': 'エ', 'お': 'オ',
+  'か': 'カ', 'き': 'キ', 'く': 'ク', 'け': 'ケ', 'こ': 'コ',
+  'さ': 'サ', 'し': 'シ', 'す': 'ス', 'せ': 'セ', 'そ': 'ソ',
+  'た': 'タ', 'ち': 'チ', 'つ': 'ツ', 'て': 'テ', 'と': 'ト',
+  'な': 'ナ', 'に': 'ニ', 'ぬ': 'ヌ', 'ね': 'ネ', 'の': 'ノ',
+  'は': 'ハ', 'ひ': 'ヒ', 'ふ': 'フ', 'へ': 'ヘ', 'ほ': 'ホ',
+  'ま': 'マ', 'み': 'ミ', 'む': 'ム', 'め': 'メ', 'も': 'モ',
+  'や': 'ヤ', 'ゆ': 'ユ', 'よ': 'ヨ',
+  'ら': 'ラ', 'り': 'リ', 'る': 'ル', 'れ': 'レ', 'ろ': 'ロ',
+  'わ': 'ワ', 'を': 'ヲ', 'ん': 'ン',
+}
 export interface NameLetter {
-  /** Position among the letters of the name, counting from the right. */
+  /** Position among the letters of the name. */
   index: number
   glyph: string
   /** Catalog companion when the sign is known; personal output may be unknown. */
   entry?: JapaneseEntry
   /** The spoken letter name, kept separate from its contextual sound role. */
   nameEntry?: JapaneseEntry
+  /** Kana never change shape: every letter stands alone. */
   form: FormKey
-  /** The form as the pen writes it, joining strokes included: بـ ـتـ ـک ر */
   formGlyph: string
   /** All four, so a screen can show where this one sits among them. */
   forms: Letter['forms']
   nameDa: string
   /**
    * How the letter is said — dansk lydskrift and IPA, straight from the
-   * alphabet data. Absent for a sign outside the taught 33: this app teaches no
-   * sound for it, so it says none.
+   * alphabet data. Absent for a sign outside the taught set: this app has
+   * no taught sound for ヴ, so it says none.
    */
   sound?: Pron
   joinsLeft: boolean
@@ -43,115 +55,115 @@ interface Shape {
 }
 
 /**
- * What a sign outside the taught 33 is called. Never its own glyph: «Bogstav 3:
- * ئ står midt» tells a beginner nothing they can read or say, and printing an
- * unknown shape where a name belongs makes it look like a name they missed.
+ * What a sign outside the taught set is called. Never its own glyph:
+ * «Bogstav 4: ヴ» tells a beginner nothing they can read or say.
  */
 export const OTHER_SIGN_DA = 'særligt tegn'
 
-/** ئ in names such as Louise: a contextual carrier, not an extra vowel. */
-export const HAMZE_YE_ENTRY = defineEntry({
-  id: 'names-contextual-hamze-ye',
+/** The small tsu (ッ) that doubles the next consonant inside a name. */
+export const SOKUON_KANA_ENTRY = defineEntry({
+  id: 'names-sokuon-kana',
   kind: 'symbol',
-  ja: 'ئ',
-  da: 'hamze over ye; ingen egen lyd',
+  ja: 'ッ',
+  da: 'lille tsu – fordobler næste lyd',
   pron: NO_OWN_SOUND,
-  audioNotApplicable: 'Tegnet fungerer som bærer i et navn og har ingen egen lyd.',
+  audioNotApplicable: 'Sokuon er et lille skrifttegn, der fordobler næste lyd; det lyder ikke selv.',
 })
 
-function derive(
-  glyph: string,
-  joinsLeft: boolean,
-  nameDa: string,
-  entry?: JapaneseEntry,
-): Shape {
+/** The long-vowel mark inside a name: セーレン carries ー for the long ø. */
+export const CHOONPU_KANA_ENTRY = defineEntry({
+  id: 'names-choonpu-kana',
+  kind: 'symbol',
+  ja: 'ー',
+  da: 'langt vokaltegn',
+  pron: NO_OWN_SOUND,
+  audioNotApplicable: 'Choon-wo-tegn forlænger vokalen foran; det lyder ikke selv.',
+})
+
+/** ヴ — the v-syllable letters are outside the 46 hiragana. */
+export const VE_SIGN_ENTRY = defineEntry({
+  id: 'names-ve-sign',
+  kind: 'letter',
+  ja: 'ヴ',
+  da: 'særligt tegn',
+  pron: NO_OWN_SOUND,
+  audioNotApplicable: 'ヴ står uden for de 46 tegn, der undervises; appen lærer ikke lyden.',
+})
+
+function derive(glyph: string, nameDa: string, entry: JapaneseEntry): Shape {
+  const allEqual = { isolated: glyph, initial: glyph, medial: glyph, final: glyph }
   return {
-    forms: {
-      isolated: glyph,
-      initial: joinsLeft ? glyph + TATWEEL : glyph,
-      medial: joinsLeft ? TATWEEL + glyph + TATWEEL : TATWEEL + glyph,
-      final: TATWEEL + glyph,
-    },
-    joinsLeft,
+    forms: allEqual,
+    joinsLeft: false,
     nameDa,
     entry,
+    nameEntry: entry,
   }
 }
 
-const MADDE = specimens['alef-madde']
-
 const SHAPES = new Map<string, Shape>([
-  ...letters.map((letter): [string, Shape] => [
-    letter.glyph,
-    {
-      forms: letter.forms,
-      joinsLeft: letter.joinsLeft,
+  // The alphabet lessons teach hiragana; the same letter in katakana (the
+  // way a name is written) resolves to the same shape.
+  ...letters.flatMap((letter): Array<[string, Shape]> => {
+    const shape: Shape = {
+      forms: {
+        isolated: letter.glyph,
+        initial: letter.glyph,
+        medial: letter.glyph,
+        final: letter.glyph,
+      },
+      joinsLeft: false,
       nameDa: letter.name.da,
       sound: letter.sound,
       entry: letter.entry,
       nameEntry: letter.nameEntry,
-    },
-  ]),
-  // آ is a sign on an alef, not the 33rd letter, so it carries no forms of its
-  // own — and like alef it never joins to the left.
-  [
-    MADDE.glyph,
-    { ...derive(MADDE.glyph, false, MADDE.name.da, MADDE.entry), sound: MADDE.sound, nameEntry: MADDE.nameEntry },
-  ],
-  [HAMZE_YE_ENTRY.ja, { ...derive(HAMZE_YE_ENTRY.ja, true, 'hamze over ye', HAMZE_YE_ENTRY), sound: HAMZE_YE_ENTRY.pron }],
+    }
+    const kata = KATAKANA[letter.glyph]
+    return [[letter.glyph, shape], ...(kata ? [[kata, shape]] : [])]
+  }),
+  // Supplements the 46 never teach: the sokuon mark, the chōonpu, and ヴ.
+  ['ッ', derive('ッ', SOKUON_KANA_ENTRY.da, SOKUON_KANA_ENTRY)],
+  ['ー', derive('ー', CHOONPU_KANA_ENTRY.da, CHOONPU_KANA_ENTRY)],
+  ['ヴ', derive('ヴ', VE_SIGN_ENTRY.da, VE_SIGN_ENTRY)],
 ])
 
-/**
- * A Japanese letter that is not one of the 32 — ئ in لوئیزه, say. It joins on
- * both sides, which is true of every such form, and it is called what it is
- * rather than named after itself.
- */
-// Written as code-point escapes on purpose: the ranges cover the letters of the
-// Arabic block, and spelling them out would print the two forbidden glyphs
-// (U+0643, U+064A) in the source. U+0640, the tatweel, is left out: it is a
-// joining stroke, not a letter.
-const JAPANESE_LETTER = /[\u0620-\u063F\u0641-\u064A\u066E-\u06D3\u06D5\u06EE\u06EF\u06FA-\u06FF]/
+/** The katakana of any kana the name module can produce. */
+export function katakanaOf(glyph: string): string {
+  return KATAKANA[glyph] ?? glyph
+}
+
+/** A symbol at the edges of the kana blocks that names may carry. */
+const KANA_LIKE = /[\u3040-\u309F\u30A0-\u30FF]/
 
 function shapeOf(char: string | undefined): Shape | undefined {
   if (char === undefined) return undefined
   const known = SHAPES.get(char)
   if (known) return known
-  return JAPANESE_LETTER.test(char) ? derive(char, true, OTHER_SIGN_DA) : undefined
+  return KANA_LIKE.test(char) ? derive(char, OTHER_SIGN_DA, VE_SIGN_ENTRY) : undefined
 }
 
 /**
- * Every letter of `spelling`, in reading order, with the form it takes there.
- * A space breaks the join: a compound name is two words, not one.
+ * Every letter of `spelling`, in reading order. A space breaks the name into
+ * its parts; every kana stands alone.
  */
 export function nameLetters(spelling: string): NameLetter[] {
   const chars = [...spelling]
   const result: NameLetter[] = []
 
-  chars.forEach((char, at) => {
+  chars.forEach((char) => {
     const shape = shapeOf(char)
     if (!shape) return
-
-    const joinsBefore = shapeOf(chars[at - 1])?.joinsLeft ?? false
-    const joinsAfter = shape.joinsLeft && shapeOf(chars[at + 1]) !== undefined
-    const form: FormKey = joinsBefore
-      ? joinsAfter
-        ? 'medial'
-        : 'final'
-      : joinsAfter
-        ? 'initial'
-        : 'isolated'
-
     result.push({
       index: result.length,
       glyph: char,
       entry: shape.entry,
       nameEntry: shape.nameEntry,
-      form,
-      formGlyph: shape.forms[form],
+      form: 'isolated',
+      formGlyph: char,
       forms: shape.forms,
       nameDa: shape.nameDa,
       sound: shape.sound,
-      joinsLeft: shape.joinsLeft,
+      joinsLeft: false,
     })
   })
 

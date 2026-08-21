@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest'
-import { catalogDomains, persianCatalog } from './registry'
+import { catalogDomains, japaneseCatalog } from './registry'
 import { withoutMarks } from '../lessons/marks'
 import { findJapaneseTextViolations } from '../lessons/textRules'
 
 describe('the typed Japanese catalog', () => {
   it('has globally unique stable ids and complete companions', () => {
-    const ids = persianCatalog.map((entry) => entry.id)
+    const ids = japaneseCatalog.map((entry) => entry.id)
     expect(new Set(ids).size).toBe(ids.length)
-    for (const entry of persianCatalog) {
+    for (const entry of japaneseCatalog) {
       expect(entry.id).toMatch(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
       expect(entry.ja.trim(), entry.id).not.toBe('')
       expect(entry.da.trim(), entry.id).not.toBe('')
@@ -25,7 +25,7 @@ describe('the typed Japanese catalog', () => {
   })
 
   it('keeps contextual reading cue spans inside their written entry', () => {
-    for (const entry of persianCatalog) {
+    for (const entry of japaneseCatalog) {
       if (entry.kind === 'word' || entry.kind === 'phrase') {
         expect(entry.readingCues?.length, entry.id).toBeGreaterThan(0)
       }
@@ -42,7 +42,7 @@ describe('the typed Japanese catalog', () => {
   })
 
   it('keeps code points, Japanese numerals, ZWNJ, and jaMarked honest', () => {
-    for (const entry of persianCatalog) {
+    for (const entry of japaneseCatalog) {
       expect(findJapaneseTextViolations(entry.ja), entry.id).toEqual([])
       if (entry.jaMarked) {
         expect(findJapaneseTextViolations(entry.jaMarked), entry.id).toEqual([])

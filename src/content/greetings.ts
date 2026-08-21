@@ -8,19 +8,18 @@ import { defineEntry } from '../catalog/types'
 export const GREETING_ENTRY = defineEntry({
   id: 'interface-greeting',
   kind: 'word',
-  ja: 'سلام!',
+  ja: 'こんにちは！',
   da: 'Hej!',
-  pron: { da: 'salåm', ipa: 'sælɒːm' },
+  pron: { da: 'kon-nichiwa', ipa: 'koɰitɕiɰa' },
 })
 
 export const GREETING_WITH_NAME_ENTRY = defineEntry({
   id: 'interface-greeting-with-name',
   kind: 'word',
-  ja: 'سلام،',
+  ja: 'こんにちは、',
   da: 'Hej',
-  pron: { da: 'salåm', ipa: 'sælɒːm' },
+  pron: { da: 'kon-nichiwa', ipa: 'koɰitɕiɰa' },
 })
-
 
 export function daGreeting(name?: string): string {
   return name ? `Hej ${name}!` : 'Hej!'

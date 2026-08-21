@@ -15,11 +15,12 @@ import './type.css'
 export const NAME_TASK = 'name'
 
 /**
- * «نامِ خودت را بنویس» — the capstone. Everything the app has taught comes to
- * one screen: the letters, their joined shapes, and a keyboard to write them
- * on. It exists only for a learner who has a Japanese spelling that this
- * keyboard can actually write; without one there is no screen and nothing
- * anywhere that mentions it (gate 8 — dormant, never a nag).
+ * «じぶんの なまえを かいてね» — the capstone. Everything the app has taught
+ * comes to one screen: the kana, and a keyboard to write them on. It exists
+ * only for a learner who has a spelling this keyboard can actually write
+ * (the board writes hiragana plus ー, so katakana spellings stay dormant);
+ * without one there is no screen and nothing mentions it (gate 8 — dormant,
+ * never a nag).
  */
 export default function TypeNameScreen() {
   const [profile] = useState(getProfile)

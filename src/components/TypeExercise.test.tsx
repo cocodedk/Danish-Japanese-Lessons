@@ -15,7 +15,7 @@ import { TypeExercise, type TypeTask } from './TypeExercise'
 import { TYPE_WORDS_ENTRY } from '../content/jaStrings'
 import { DEMO_WORD } from '../content/demoWord'
 
-const task: TypeTask = { id: 'ab', entry: DEMO_WORD.entry, promptDa: 'Skriv ordet »vand«', answer: 'آب' }
+const task: TypeTask = { id: 'ab', entry: DEMO_WORD.entry, promptDa: `Skriv ordet »${DEMO_WORD.entry.da}«`, answer: DEMO_WORD.entry.ja }
 
 function renderExercise() {
   return render(

@@ -52,9 +52,9 @@ The first slice contains exactly:
 
 | Mission ID | Catalog entry | Image entry | Danish |
 |---|---|---|---|
-| `ab` | `vocabulary-1-ab` | `vocabulary-1-ab` | `vand` |
-| `nan` | `vocabulary-1-nan` | `vocabulary-1-nan` | `brød` |
-| `gol` | `vocabulary-3-gol` | `vocabulary-3-gol` | `blomst` |
+| `mizu` | `vocabulary-1-mizu` | `vocabulary-1-mizu` | `vand` |
+| `pan` | `vocabulary-1-pan` | `vocabulary-1-pan` | `brød` |
+| `hana` | `vocabulary-3-hana` | `vocabulary-3-hana` | `blomst` |
 
 Mission declarations MUST reference canonical vocabulary objects rather than repeat Japanese, IPA,
 Danish sound spelling, meaning, or image metadata.
@@ -136,7 +136,7 @@ model -> guide -> ready -> recall -> complete
 - Tile tray order MUST be deterministic per mission and different from the target order when possible.
 - Duplicate letters MUST have stable unique tile IDs.
 - Tests MUST assert logical placement order, not visual CSS coordinates alone.
-- RTL visual layout MUST put the first logical Japanese code point at the rightmost slot.
+- Visual layout MUST put the first logical code point at the leftmost slot (kana read left to right).
 
 ## Feedback and focus
 
@@ -159,7 +159,7 @@ model -> guide -> ready -> recall -> complete
 
 ## Browser acceptance journeys
 
-1. New storage → choose child → choose `آب` → model → guide → recall → collect → done.
+1. New storage → choose child → choose `みず` → model → guide → recall → collect → done.
 2. Return to `/` → saved child choice opens `/opdag` without flashing the front door.
 3. Switch to course → orientation/course behavior remains intact → switch back.
 4. Existing course storage without a journey record opens `/kursus` without disrupting prior work.

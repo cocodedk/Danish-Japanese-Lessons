@@ -5,15 +5,16 @@ import type { JapaneseEntry, Pronunciation } from '../catalog/types'
 
 /**
  * How a teaching item is said, always twice: dansk lydskrift first, then IPA
- * (standard Tehrani). Rendered by PronLine. For a word the Danish half is the
- * lydskrift ("åb"); for a letter or a mark it is the Danish sound anchor
- * (`a i "kat"`). One type for both — see docs/plans/003-alphabet-lesson.md step 2.
+ * (standard Tokyo Japanese, phonemic, no pitch). Rendered by PronLine. For a
+ * word the Danish half is the lydskrift ("mi-zu"); for a kana or a mark it is
+ * the Danish sound anchor (`a i "kat"`) or the syllable (`ka`, `sha`, `tsu`).
+ * One type for both — see docs/plans/003-alphabet-lesson.md step 2.
  */
 export type Pron = Pronunciation
 
-/** One pen path in a stroke-order drawing. Dots are strokes too — short ticks. */
+/** One pen path in a stroke-order drawing. */
 export interface Stroke {
-  /** SVG path data in the 0 0 100 100 viewBox; the pen moves right to left. */
+  /** SVG path data in the 0 0 100 100 viewBox (baseline y≈62); one kana stroke. */
   d: string
   kind: 'stroke' | 'dot'
 }
@@ -23,44 +24,42 @@ export interface Specimen {
   /** Stable ascii id — used in routes (#/lesson/alphabet/bogstav/:id) and progress. */
   id: string
   entry: JapaneseEntry
-  /** A displayed Japanese letter name is a word with its own pronunciation. */
+  /** A displayed Japanese kana name is a word with its own pronunciation. */
   nameEntry: JapaneseEntry
   glyph: string
   name: { ja: string; da: string }
   sound: Pron
-  /** Pen paths in drawing order: every 'stroke' before every 'dot'. */
+  /** Pen paths in drawing order. Kana have only `stroke` paths. */
   strokes: Stroke[]
   /**
-   * The Danish letter(s) this sounds like — shown small and orange under the
-   * glyph on the keyboard key (docs/plans/008-keyboard-danish-hints.md).
-   * Optional here so a bare Specimen (آ's madde) can carry one too; every
-   * Letter below makes it required.
+   * The romaji this kana spells — shown small and orange under the glyph on
+   * the keyboard key (docs/plans/008-keyboard-danish-hints.md). Optional here
+   * so a bare Specimen can carry one too; every Letter below makes it required.
    */
   latinHint?: string
 }
 
-/** A single Japanese letter and its four positional forms. */
+/** One kana letter: a hiragana syllable and its katakana match. */
 export interface Letter extends Specimen {
+  /** All four forms equal the glyph — kana never change shape, hiragana stays
+   *  the same character wherever it stands. */
   forms: {
     isolated: string
     initial: string
     medial: string
     final: string
   }
-  /** False for the seven letters that never join to the left: ا د ذ ر ز ژ و. */
+  /** Every kana stands alone; none joins to a neighbour. */
   joinsLeft: boolean
-  /** One Danish line for the letters that surprise a reader (ی, ه, ا). */
+  /** The katakana that spells the same syllable — shown beside the hiragana. */
+  kata: string
+  /** One Danish line for the kana that surprise a reader (を, つ, し, ん). */
   hint?: string
   /** Every letter has one — see Specimen. Required here, unlike the base type. */
   latinHint: string
-  /**
-   * آ — alef carrying the madde. The same letter body plus one stroke, its own
-   * sound, and the first thing taught (the primer opens on آب).
-   */
-  madde?: Specimen
 }
 
-/** A vowel mark (زبر/زیر/پیش) or a long vowel (آ او ای). */
+/** A Japanese lydtegn: dakuten, handakuten, chōonpu, sokuon, ゃ or ょ. */
 export interface VowelMark {
   id: string
   entry: JapaneseEntry
@@ -74,8 +73,8 @@ export interface VowelMark {
 export interface WordCard {
   entry: JapaneseEntry
   ja: string
-  /** The diacriticized variant to render instead of `ja`, if any. Whatever is
-   *  rendered gets its vowel marks in --red — see src/lessons/marks.ts. */
+  /** The marked variant to render instead of `ja`, if any. Whatever is
+   *  rendered gets its marks in --red — see src/lessons/marks.ts. */
   jaMarked?: string
   da: string
   pron: Pron

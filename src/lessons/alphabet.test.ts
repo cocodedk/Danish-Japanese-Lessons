@@ -1,148 +1,131 @@
 import { describe, it, expect } from 'vitest'
 import { letters, teachingOrder, specimens } from './alphabet'
 import { vowelMarks, laterMarks } from './vowelMarks'
+import { markSide } from './marks'
 
-/** The seven letters that never join to the left. */
-const NON_JOINERS = ['ا', 'د', 'ذ', 'ر', 'ز', 'ژ', 'و']
+const TARGET_GLYPHS = [
+  'あ', 'い', 'う', 'え', 'お',
+  'か', 'き', 'く', 'け', 'こ',
+  'さ', 'し', 'す', 'せ', 'そ',
+  'た', 'ち', 'つ', 'て', 'と',
+  'な', 'に', 'ぬ', 'ね', 'の',
+  'は', 'ひ', 'ふ', 'へ', 'ほ',
+  'ま', 'み', 'む', 'め', 'も',
+  'や', 'ゆ', 'よ',
+  'ら', 'り', 'る', 'れ', 'ろ',
+  'わ', 'を', 'ん',
+]
 
-describe('the Japanese alphabet', () => {
-  it('has exactly 32 letters, in standard order, alef first and ye last', () => {
-    expect(letters).toHaveLength(32)
-    expect(letters[0].glyph).toBe('ا')
-    expect(letters.at(-1)?.glyph).toBe('ی')
+describe('the hiragana alphabet', () => {
+  it('has exactly 46 letters, in classic gojūon order, あ first and ん last', () => {
+    expect(letters).toHaveLength(46)
+    expect(letters[0].glyph).toBe('あ')
+    expect(letters.at(-1)?.glyph).toBe('ん')
+    expect(letters.map((l) => l.glyph)).toEqual(TARGET_GLYPHS)
   })
 
-  it('gives every letter a unique id and a unique glyph', () => {
-    expect(new Set(letters.map((l) => l.id)).size).toBe(32)
-    expect(new Set(letters.map((l) => l.glyph)).size).toBe(32)
+  it('gives every letter a unique ascii id, and the id is its Danish name', () => {
+    expect(new Set(letters.map((l) => l.id)).size).toBe(46)
     for (const letter of letters) {
       expect(letter.id).toMatch(/^[a-z-]+$/)
+      expect(letter.id).toBe(letter.name.da)
+          }
+  })
+
+  it('gives every kana a unique glyph and a unique katakana match', () => {
+    expect(new Set(letters.map((l) => l.glyph)).size).toBe(46)
+    expect(new Set(letters.map((l) => l.kata)).size).toBe(46)
+    for (const letter of letters) {
+      expect(letter.kata.length).toBe(1)
+      expect(letter.kata).not.toBe(letter.glyph)
+    }
+    // The table is complete — every katakana spells another letter's match.
+    const allKata = new Set(letters.map((l) => l.kata))
+    for (const kataGlyph of ['ア','イ','ウ','エ','オ','カ','キ','ク','ケ','コ','サ','シ','ス','セ','ソ','タ','チ','ツ','テ','ト','ナ','ニ','ヌ','ネ','ノ','ハ','ヒ','フ','ヘ','ホ','マ','ミ','ム','メ','モ','ヤ','ユ','ヨ','ラ','リ','ル','レ','ロ','ワ','ヲ','ン']) {
+      expect(allKata.has(kataGlyph), kataGlyph).toBe(true)
     }
   })
 
-  it('marks exactly ا د ذ ر ز ژ و as non-joiners', () => {
-    const found = letters.filter((letter) => !letter.joinsLeft).map((letter) => letter.glyph)
-    expect(found).toEqual(NON_JOINERS)
+  it('anchors the five vowel letters to the Danish sounds the curriculum names', () => {
+    const anchors = Object.fromEntries(letters.map((l) => [l.id, l.sound]))
+    expect(anchors.a).toEqual({ da: 'a i "kat"', ipa: 'a' })
+    expect(anchors.i).toEqual({ da: 'i i "vi"', ipa: 'i' })
+    expect(anchors.u).toEqual({ da: 'u i "du"', ipa: 'ɯ' })
+    expect(anchors.e).toEqual({ da: 'e i "let"', ipa: 'e' })
+    expect(anchors.o).toEqual({ da: 'o i "foto"', ipa: 'o' })
   })
 
-  it('gives every letter four positional forms, none empty', () => {
+  it('spells every consonant kana as a syllable in dansk lydskrift + IPA', () => {
+    for (const letter of letters) {
+      expect(letter.sound.da.length).toBeGreaterThan(0, letter.id)
+      expect(letter.sound.ipa.length).toBeGreaterThan(0, letter.id)
+      expect(letter.entry.pron).toEqual(letter.sound)
+    }
+  })
+
+  it('teaches を and お with the same sound — a homophone by design', () => {
+    const anchors = Object.fromEntries(letters.map((l) => [l.id, l.sound]))
+    expect(anchors.wo).toEqual({ da: 'o i "foto"', ipa: 'o' })
+    expect(anchors.wo).toEqual(anchors.o)
+  })
+
+  it('gives every other kana a sound no sibling spells', () => {
+    const byIpa = new Map<string, string[]>()
+    for (const letter of letters) {
+      byIpa.set(letter.sound.ipa, [...(byIpa.get(letter.sound.ipa) ?? []), letter.id])
+    }
+    const homophones = [...byIpa.values()].filter((ids) => ids.length > 1)
+    expect(homophones).toEqual([['o', 'wo']])
+  })
+
+  it('puts all four positional forms equal to the glyph — kana never change shape', () => {
     for (const letter of letters) {
       const forms = Object.values(letter.forms)
       expect(forms).toHaveLength(4)
-      for (const form of forms) expect(form.length).toBeGreaterThan(0)
-      expect(letter.forms.isolated).toBe(letter.glyph)
+      for (const form of forms) {
+        expect(form).toBe(letter.glyph)
+      }
+      expect(letter.joinsLeft).toBe(false)
     }
   })
 
-  it('gives joiners four distinct shapes and non-joiners only two', () => {
+  it('says every kana twice — dansk lydskrift and IPA — from the data', () => {
     for (const letter of letters) {
-      const distinct = new Set(Object.values(letter.forms)).size
-      expect(distinct).toBe(letter.joinsLeft ? 4 : 2)
+      expect(letter.name.ja).toBe(letter.glyph)
+      expect(letter.name.da.length).toBeGreaterThan(0, letter.id)
+      expect(letter.latinHint.length).toBeGreaterThan(0, letter.id)
     }
   })
 
-  it('spells the forms the way a schoolbook prints them', () => {
-    const be = letters.find((l) => l.id === 'be')
-    expect(be?.forms).toEqual({
-      isolated: 'ب',
-      initial: 'بـ',
-      medial: 'ـبـ',
-      final: 'ـب',
-    })
-    const alef = letters.find((l) => l.id === 'alef')
-    expect(alef?.forms).toEqual({
-      isolated: 'ا',
-      initial: 'ا',
-      medial: 'ـا',
-      final: 'ـا',
-    })
-    const kaf = letters.find((l) => l.id === 'kaf')
-    expect(kaf?.forms.medial).toBe('ـکـ')
-    const he = letters.find((l) => l.id === 'he')
-    expect(he?.forms.medial).toBe('ـهـ')
+  it('gives the four surprise kana a Danish line each', () => {
+    expect(letters.filter((l) => l.hint).map((l) => l.id).sort()).toEqual(['n', 'shi', 'tsu', 'wo'])
+    const hint = Object.fromEntries(letters.filter((l) => l.hint).map((l) => [l.id, l.hint!]))
+    expect(hint.shi).toContain('sj')
+    expect(hint.tsu).toContain('ts')
+    expect(hint.wo).toContain('を')
+    expect(hint.n).toContain('stavelse')
   })
 
-  it('says every letter twice — dansk lydskrift and IPA — from the data', () => {
+  it('is reachable through specimens by id, both ways', () => {
     for (const letter of letters) {
-      expect(letter.sound.da.length).toBeGreaterThan(0)
-      expect(letter.sound.ipa.length).toBeGreaterThan(0)
-      expect(letter.name.ja.length).toBeGreaterThan(0)
-      expect(letter.name.da.length).toBeGreaterThan(0)
+      expect(specimens[letter.id].entry.id).toBe(letter.entry.id)
+      expect(specimens[letter.id].nameEntry.id).toBe(letter.nameEntry.id)
     }
-  })
-
-  it('anchors the letters the curriculum names to the right Danish sounds', () => {
-    const anchors = Object.fromEntries(letters.map((l) => [l.id, l.sound]))
-    expect(anchors.kaf).toEqual({ da: 'k i "kat"', ipa: 'k' })
-    expect(anchors.be).toEqual({ da: 'b i "bil"', ipa: 'b' })
-    expect(anchors.gaf.ipa).toBe('ɡ')
-  })
-
-  it('gives ق and غ one sound, because Tehrani Japanese says them the same', () => {
-    const anchors = Object.fromEntries(letters.map((l) => [l.id, l.sound]))
-    expect(anchors.ghaf).toEqual({
-      da: 'dyb lyd i halsen',
-      ipa: 'ɢ~ɣ',
-    })
-    expect(anchors.gheyn).toEqual(anchors.ghaf)
-  })
-
-  it('says the voicing out loud, since a Dane reading "zoo" says [s]', () => {
-    const anchors = Object.fromEntries(letters.map((l) => [l.id, l.sound]))
-    for (const id of ['zal', 'ze', 'zad', 'za']) {
-      expect(anchors[id], id).toEqual({ da: 'stemt s — som engelsk z i "zoo"', ipa: 'z' })
-    }
-    expect(anchors.zhe.da).toBe('som j i fransk "journal" — stemt sj')
-  })
-
-  it('gives the two h-letters the school names, so no two letters answer to one name', () => {
-    const names = Object.fromEntries(letters.map((l) => [l.id, l.name.da]))
-    expect(names['he-jimi']).toBe('he jimi')
-    expect(names.he).toBe('he do-tjeshm')
-    expect(new Set(letters.map((l) => l.name.da)).size).toBe(32)
-    const schoolNames = Object.fromEntries(letters.map((l) => [l.id, l.nameEntry]))
-    expect(schoolNames['he-jimi']).toMatchObject({
-      ja: 'ح جیمی',
-      pron: { da: 'he-ye djimi', ipa: 'heje dʒiːmiː' },
-    })
-    expect(schoolNames.he).toMatchObject({
-      ja: 'ه دو چشم',
-      pron: { da: 'he-ye do tjeshm', ipa: 'heje do tʃeʃm' },
-    })
-  })
-
-  it('does not present eyn as a Danish vowel or one fixed sound', () => {
-    const eyn = letters.find((letter) => letter.id === 'eyn')!
-    expect(eyn.sound).toEqual({
-      da: 'lille stop eller ingen lyd; se ordet',
-      ipa: 'ʔ~∅',
-    })
-    expect(eyn.latinHint).toBe('stop')
-    expect(eyn.hint).toContain('Dansk æ, ø, å og y kommer ikke fra eyn')
-  })
-
-  it('hangs آ on the alef entry, with its own sound and strokes', () => {
-    const alef = letters.find((l) => l.id === 'alef')
-    expect(alef?.madde?.glyph).toBe('آ')
-    expect(alef?.madde?.sound).toEqual({ da: 'å i "år"', ipa: 'ɒː' })
-    expect(alef?.madde?.strokes.length).toBeGreaterThan(alef!.strokes.length)
   })
 })
 
 describe('teaching order', () => {
-  it('opens on آ ا ب د — the letters that spell آب، بابا، باد', () => {
-    expect(teachingOrder.slice(0, 4)).toEqual(['alef-madde', 'alef', 'be', 'dal'])
-    expect(teachingOrder.slice(0, 4).map((id) => specimens[id].glyph)).toEqual([
-      'آ',
-      'ا',
-      'ب',
-      'د',
-    ])
+  it('is the classic gojūon sequence itself', () => {
+    expect(teachingOrder).toEqual(letters.map((l) => l.id))
   })
 
-  it('covers all 32 letters plus آ exactly once', () => {
-    expect(teachingOrder).toHaveLength(33)
-    expect(new Set(teachingOrder).size).toBe(33)
+  it('opens on あ、い、う — the first syllable row', () => {
+    expect(teachingOrder.slice(0, 3)).toEqual(['a', 'i', 'u'])
+  })
+
+  it('covers all 46 letters exactly once, each with its specimen', () => {
+    expect(teachingOrder).toHaveLength(46)
+    expect(new Set(teachingOrder).size).toBe(46)
     for (const id of teachingOrder) {
       expect(specimens[id]).toBeDefined()
     }
@@ -150,37 +133,40 @@ describe('teaching order', () => {
       expect(teachingOrder).toContain(letter.id)
     }
   })
-
-  it('keeps the standard order after the opening four', () => {
-    const tail = teachingOrder.slice(4)
-    const expected = letters.map((l) => l.id).filter((id) => !['alef', 'be', 'dal'].includes(id))
-    expect(tail).toEqual(expected)
-  })
 })
 
-describe('vowel marks', () => {
-  it('teaches the six marks with the Danish anchors the curriculum names', () => {
-    expect(vowelMarks.map((mark) => mark.sound)).toEqual([
-      { da: 'a i "kat"', ipa: 'æ' },
-      { da: 'e i "let"', ipa: 'e' },
-      { da: 'o i "foto"', ipa: 'o' },
-      { da: 'å i "år"', ipa: 'ɒː' },
-      { da: 'u i "du"', ipa: 'uː' },
-      { da: 'i i "vi"', ipa: 'iː' },
+describe('the marks lesson', () => {
+  it('teaches the six Japanese lydtegn in the arranged order ゛ ゜ ー っ ゃ ょ', () => {
+    expect(vowelMarks.map((mark) => mark.id)).toEqual([
+      'dakuten', 'handakuten', 'choon', 'sokuon', 'chiisai-ya', 'chiisai-yo',
+    ])
+    expect(vowelMarks.map((mark) => mark.glyph)).toEqual([
+      'か゛', 'は゜', 'カー', 'かっ', 'きゃ', 'きょ',
     ])
   })
 
-  it('writes the short marks on a seat, never loose', () => {
-    for (const mark of vowelMarks.slice(0, 3)) {
-      expect(mark.glyph.startsWith('ا')).toBe(true)
-      expect(mark.glyph.length).toBe(2)
-    }
+  it('names each mark in Japanese and in Danish', () => {
+    const names = Object.fromEntries(vowelMarks.map((m) => [m.id, m.name]))
+    expect(names.dakuten).toEqual({ ja: 'だくてん', da: 'dakuten' })
+    expect(names.handakuten).toEqual({ ja: 'はんだくてん', da: 'handakuten' })
+    expect(names.choon).toEqual({ ja: 'ちょうおんぷ', da: 'chōonpu' })
+    expect(names.sokuon).toEqual({ ja: 'そくおん', da: 'sokuon' })
+    expect(names['chiisai-ya']).toEqual({ ja: 'ちいさい ゃ', da: 'chiisai ya' })
+    expect(names['chiisai-yo']).toEqual({ ja: 'ちいさい ょ', da: 'chiisai yo' })
   })
 
-  it('names تشدید and سکون as coming later, with a Danish line each', () => {
-    expect(laterMarks.map((mark) => mark.nameEntry.ja)).toEqual(['تشدید', 'سکون'])
-    for (const mark of laterMarks) {
-      expect(mark.hint.length).toBeGreaterThan(0)
-    }
+  it('teaches ゛ and ゜ above the kana and the rest as plain signs', () => {
+    const sides = vowelMarks.map((mark) => markSide(mark.glyph))
+    expect(sides).toEqual(['above', 'above', 'none', 'none', 'none', 'none'])
+  })
+
+  it('keeps a whole-kana reading in the plain field when only the mark is added', () => {
+    const dakuten = vowelMarks.find((m) => m.id === 'dakuten')!
+    expect(dakuten.entry.ja).toBe('か')
+    expect(dakuten.entry.jaMarked).toBe('か゛')
+  })
+
+  it('leaves nothing for a later row', () => {
+    expect(laterMarks).toEqual([])
   })
 })

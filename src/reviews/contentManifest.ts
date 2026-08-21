@@ -1,5 +1,5 @@
 import { findPronunciationAudio } from '../audio/manifest'
-import { catalogDomains, persianCatalog } from '../catalog/registry'
+import { catalogDomains, japaneseCatalog } from '../catalog/registry'
 import type { JapaneseEntry } from '../catalog/types'
 
 export type CueCoverage = 'none' | 'whole-word' | 'token' | 'contextual'
@@ -33,7 +33,7 @@ const ROLE_SENSITIVE = new Set([...'اآویهعءئؤ'])
 export const contentReviewManifest = {
   schemaVersion: 1,
   source: 'src/catalog/registry.ts',
-  rows: persianCatalog.map((entry) => ({
+  rows: japaneseCatalog.map((entry) => ({
     id: entry.id,
     domain: domainFor(entry.id),
     kind: entry.kind,
@@ -50,6 +50,6 @@ export const contentReviewManifest = {
     audioId: entry.audioId ?? null,
     audioNotApplicable: entry.audioNotApplicable ?? null,
     audioStatus: audioStatus(entry),
-    requiredReviews: ['iranian-japanese-1', 'iranian-japanese-2', 'phonetics', 'danish'],
+    requiredReviews: ['native-japanese-1', 'native-japanese-2', 'phonetics', 'danish'],
   })),
 }

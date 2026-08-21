@@ -1,14 +1,14 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { persianCatalog } from '../catalog/registry'
+import { japaneseCatalog } from '../catalog/registry'
 import { allVocabWords } from '../lessons/vocab'
 import { contentReviewManifest } from './contentManifest'
 
 describe('content review export', () => {
   it('contains every catalog entry exactly once and exposes unresolved review work', () => {
     const ids = contentReviewManifest.rows.map((row) => row.id)
-    expect(ids).toHaveLength(persianCatalog.length)
+    expect(ids).toHaveLength(japaneseCatalog.length)
     expect(new Set(ids).size).toBe(ids.length)
     expect(contentReviewManifest.rows.filter((row) => row.audioStatus === 'missing').length).toBeGreaterThan(0)
     const byId = new Map(contentReviewManifest.rows.map((row) => [row.id, row]))

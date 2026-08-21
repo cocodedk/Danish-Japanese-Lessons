@@ -1,9 +1,9 @@
 // The two alphabet exercises, built from the letter data — no question is
 // written by hand, so a data fix reaches the exercises for free.
 //
-// Everything here is deterministic: the distractors, their order, and the slot
-// the right answer sits in. Nothing shuffles, so a test can name what it sees
-// and a learner who comes back tomorrow meets the same round.
+// Everything here is deterministic: the distractors, their order, and the
+// slot the right answer sits in. Nothing shuffles, so a test can name what it
+// sees and a learner who comes back tomorrow meets the same round.
 import { letters, specimens, teachingOrder } from './alphabet'
 import { sameBodyAs } from './strokes'
 import type { Pron } from './types'
@@ -15,19 +15,18 @@ export interface Choice {
   /** The letter this choice belongs to. */
   id: string
   entry: JapaneseEntry
-  /** What is printed on the choice: a glyph, or one positional form of it. */
+  /** What is printed on the choice: a kana glyph — hiragana or katakana. */
   glyph: string
 }
 
 export interface Question {
   id: string
-  /** The item a correct answer completes: a letter here, a word in plan 004. */
+  /** The item a correct answer completes: a kana id here. */
   itemId: string
   entry: JapaneseEntry
   /** Danish prompt, du-form. */
   promptDa: string
-  /** True when the question shows its Japanese specimen (rendered from `entry`);
-   *  absent when the Japanese IS the thing being asked for. */
+  /** True when the question shows its Japanese specimen (rendered from `entry`). */
   showsFa?: boolean
   /** False when the pronunciation itself would disclose a conceptual answer. */
   showsPron?: boolean
@@ -37,32 +36,21 @@ export interface Question {
   choiceLang?: 'ja' | 'da'
 }
 
-/** Four choices per question — shared with the vocabulary rounds (plan 004). */
+/** Four choices per question — shared with the vocabulary rounds. */
 export const CHOICE_COUNT = 4
 const LETTER_ORDER = letters.map((letter) => letter.id)
 
-type Position = 'initial' | 'medial' | 'final'
-
-const POSITION_DA: Record<Position, string> = {
-  initial: 'først i et ord',
-  medial: 'midt i et ord',
-  final: 'sidst i et ord',
-}
-
-/**
- * Two specimens sound alike when they share either half of the pronunciation —
- * the IPA or the Danish anchor. Japanese spells one sound several ways (ذ ز ض ظ,
- * ث س ص, ت ط, ح ه, ق غ), and a question may never offer two answers to itself.
- */
+/** Two kana spell the same syllable when they share either half of the
+ *  pronunciation — を and お, or any future digraph mark sharing its sound. */
 function soundsAlike(a: Pron, b: Pron): boolean {
   return a.ipa === b.ipa || a.da === b.da
 }
 
 /**
- * Three letters to choose against. Letters that share a body come first — the
- * useful confusion is ب against ت, never ب against ل — then the neighbours in
- * `order` fill up whatever is left. Homophones are skipped in both passes: ص
- * next to س would be a second right answer, not a distractor.
+ * Three letters to choose against. Letters that share a body come first —
+ * the useful confusion is き against く, never き against ん — then the
+ * neighbours in `order` fill up whatever is left. Same-sound kana are skipped
+ * in both passes: a question may never offer two right answers to itself.
  */
 function distractorIds(id: string, count: number, order: string[]): string[] {
   const sound = specimens[id].sound
@@ -83,12 +71,9 @@ export function arrange<T>(answer: T, distractors: T[], slot: number): T[] {
   return choices
 }
 
-/** "Find tegnet": a Danish sound anchor, four glyphs, one of them right. */
+/** "Find tegnet": a Danish sound, four hiragana, one of them right. */
 function findQuestions(): Question[] {
-  // Plain alef is a contextual vowel carrier, not one stable sound. Asking
-  // which sign “says” its placeholder role would teach the contradiction this
-  // round is meant to test, so it is learned through words instead.
-  return teachingOrder.filter((id) => id !== 'alef').map((id, index) => {
+  return teachingOrder.map((id, index) => {
     const specimen = specimens[id]
     const distractors = distractorIds(id, CHOICE_COUNT - 1, teachingOrder).map((other) => ({
       id: other,
@@ -106,25 +91,20 @@ function findQuestions(): Question[] {
   })
 }
 
-/** "Match formerne": one isolated letter, four positional forms, one of them its own. */
+/** "Hiragana og katakana": one hiragana, four katakana, one of them its match. */
 function matchQuestions(): Question[] {
   return letters.map((letter, index) => {
-    const position: Position = letter.joinsLeft
-      ? index % 2 === 0
-        ? 'medial'
-        : 'initial'
-      : 'final'
     const distractors = distractorIds(letter.id, CHOICE_COUNT - 1, LETTER_ORDER).map((other) => {
       const source = letters[LETTER_ORDER.indexOf(other)]
-      return { id: other, entry: source.entry, glyph: source.forms[position] }
+      return { id: other, entry: source.entry, glyph: source.kata }
     })
     return {
       id: `match-${letter.id}`,
       itemId: letter.id,
       entry: letter.entry,
-      promptDa: `Hvordan ser bogstavet ud ${POSITION_DA[position]}?`,
+      promptDa: 'Hvilket katakana er det samme tegn?',
       showsFa: true,
-      choices: arrange({ id: letter.id, entry: letter.entry, glyph: letter.forms[position] }, distractors, index),
+      choices: arrange({ id: letter.id, entry: letter.entry, glyph: letter.kata }, distractors, index),
       answerId: letter.id,
     }
   })
@@ -136,5 +116,5 @@ export function buildQuestions(kind: ExerciseKind): Question[] {
 
 export const EXERCISE_TITLES: Record<ExerciseKind, string> = {
   find: 'Find tegnet',
-  match: 'Match formerne',
+  match: 'Hiragana og katakana',
 }

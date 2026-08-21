@@ -1,19 +1,17 @@
-This directory bundles three type families, each released under the SIL Open
+This directory bundles two type families, each released under the SIL Open
 Font License, Version 1.1 ("OFL"):
 
   * Andika (Andika-Regular.woff2, Andika-Bold.woff2)
     Designed by SIL International. https://software.sil.org/andika/
 
-  * Noto Naskh Arabic (NotoNaskhArabic-Bold.woff2)
-    Designed by Google as part of the Noto Project.
-    https://fonts.google.com/noto/specimen/Noto+Naskh+Arabic
-
-  * Vazirmatn (Vazirmatn-Regular.woff2, Vazirmatn-Bold.woff2)
-    Designed by Saber Rastikerdar. https://github.com/rastikerdar/vazirmatn
+  * Noto Sans JP (NotoSansJP-Regular.woff2, NotoSansJP-Bold.woff2)
+    Designed by Google as part of the Noto Project; subset locally to the
+    characters the app renders.
+    https://fonts.google.com/noto/specimen/Noto+Sans+JP
 
 Each upstream project's own repository carries the authoritative copyright
 notice and reserved font name(s) for that family. The OFL license text below
-applies identically to all three and to this combined distribution.
+applies identically to both and to this combined distribution.
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007

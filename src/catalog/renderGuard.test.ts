@@ -21,7 +21,7 @@ function tsxFiles(directory: string, prefix = ''): string[] {
   })
 }
 
-function persianLiterals(source: string, file: string): string[] {
+function japaneseLiterals(source: string, file: string): string[] {
   const tree = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX)
   const found: string[] = []
   function visit(node: ts.Node) {
@@ -46,7 +46,7 @@ describe('Japanese production rendering guard', () => {
   it('rejects uncatalogued Japanese literals in production TSX', () => {
     for (const file of tsxFiles(SRC)) {
       const source = readFileSync(join(SRC, file), 'utf8')
-      expect(persianLiterals(source, file), file).toEqual([])
+      expect(japaneseLiterals(source, file), file).toEqual([])
     }
   })
 })

@@ -1,32 +1,38 @@
+// The pictures behind the vocabulary words: a meaning-model photo (or
+// project-generated illustration) for the words a photo explains better than
+// a swatch. Each image keeps its own stable file id ('ab' is still an actual
+// picture of a glass of water) but points at whatever vocabulary entry the
+// curriculum now names — so the water word みず reuses the water photo.
 import type { LessonImage } from './types'
 
+// [file id, unit, altDa] — the file id stays the photo's file name; the unit
+// and entry id move with the curriculum.
 const items = [
-  ['salam', 2, 'Et barn vinker'],
-  ['man', 1, 'Et barn peger på sig'],
-  ['to', 1, 'Et barn viser en anden'],
-  ['dust', 2, 'To venner sammen'],
-  ['ab', 1, 'Et glas vand'],
-  ['nan', 1, 'Et fladt brød'],
-  ['baba', 1, 'En far med sit barn'],
-  ['madar', 1, 'En mor med sit barn'],
-  ['khane', 3, 'Et lille hvidt hus'],
-  ['in', 1, 'Denne bold er tæt på'],
-  ['an', 1, 'Den bold er derovre'],
-  ['ma', 1, 'Tre børn sammen'],
-  ['u', 1, 'Et barn alene'],
-  ['medad', 2, 'En gul blyant'],
-  ['ketab', 2, 'En lukket bog'],
-  ['miz', 2, 'Et træbord'],
-  ['dar', 2, 'En gammel trædør'],
-  ['gol', 3, 'En lyserød blomst'],
-  ['gorbe', 5, 'En kat'],
-  ['sag', 5, 'En hund'],
-  ['parande', 5, 'En fugl'],
-  ['mahi', 5, 'En fisk i vand'],
-  ['asb', 5, 'En hest'],
-  ['gav', 5, 'En ko'],
-  ['khargush', 5, 'En kanin'],
-  ['mush', 5, 'En mus'],
+  ['salam', '2', 'konnichiwa', 'Et barn vinker'],
+  ['man', '1', 'watashi', 'Et barn peger på sig'],
+  ['to', '1', 'anata', 'Et barn viser en anden'],
+  ['dust', '2', 'tomodachi', 'To venner sammen'],
+  ['ab', '1', 'mizu', 'Et glas vand'],
+  ['nan', '1', 'pan', 'Et fladt brød'],
+  ['baba', '1', 'chichi', 'En far med sit barn'],
+  ['madar', '1', 'haha', 'En mor med sit barn'],
+  ['khane', '3', 'uchi', 'Et lille hvidt hus'],
+  ['in', '1', 'kore', 'Denne bold er tæt på'],
+  ['an', '1', 'are', 'Den bold er derovre'],
+  ['ma', '1', 'minna', 'Tre børn sammen'],
+  ['medad', '2', 'enpitsu', 'En gul blyant'],
+  ['ketab', '2', 'hon', 'En lukket bog'],
+  ['miz', '2', 'tsukue', 'Et træbord'],
+  ['dar', '2', 'doa', 'En gammel trædør'],
+  ['gol', '3', 'hana', 'En lyserød blomst'],
+  ['gorbe', '5', 'neko', 'En kat'],
+  ['sag', '5', 'inu', 'En hund'],
+  ['parande', '5', 'tori', 'En fugl'],
+  ['mahi', '5', 'sakana', 'En fisk i vand'],
+  ['asb', '5', 'uma', 'En hest'],
+  ['gav', '5', 'ushi', 'En ko'],
+  ['khargush', '5', 'usagi', 'En kanin'],
+  ['mush', '5', 'nezumi', 'En mus'],
 ] as const
 
 const focalPoints: Partial<Record<(typeof items)[number][0], `${number}% ${number}%`>> = {
@@ -34,9 +40,11 @@ const focalPoints: Partial<Record<(typeof items)[number][0], `${number}% ${numbe
   an: '84% 50%',
 }
 
-export const lessonImages: LessonImage[] = items.map(([id, unit, altDa]) => ({
+type Item = (typeof items)[number]
+
+export const lessonImages: LessonImage[] = items.map(([id, unit, word, altDa]: Item) => ({
   id,
-  entryIds: [`vocabulary-${unit}-${id}`],
+  entryIds: [`vocabulary-${unit}-${word}`],
   purpose: 'meaning-model',
   altDa,
   creditId: `image-${id}`,

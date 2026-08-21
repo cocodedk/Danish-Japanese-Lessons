@@ -19,4 +19,4 @@ export const catalogDomains = {
   rewards: rewardsCatalog,
 } satisfies Record<string, JapaneseEntry[]>
 
-export const persianCatalog: JapaneseEntry[] = Object.values(catalogDomains).flat()
+export const japaneseCatalog: JapaneseEntry[] = Object.values(catalogDomains).flat()

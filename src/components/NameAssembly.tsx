@@ -67,8 +67,8 @@ export function NameAssembly({ spelling, onDone }: NameAssemblyProps) {
       <h2 ref={promptRef} tabIndex={-1} className="alphabet__section-title">Sæt navnet sammen igen</h2>
       <CompactPhraseRow entry={ASSEMBLE_ENTRY} />
       <p className="alphabet__note">
-        Japansk skrives fra højre. Tryk derfor det første bogstav i navnet først. Det lander yderst
-        til højre, og de næste stiller sig til venstre for det.
+        Japansk læses fra venstre mod højre. Tryk derfor det første bogstav i navnet først. Det
+        lander yderst til venstre, og de næste stiller sig til højre for det.
       </p>
 
       <PersonalNameText

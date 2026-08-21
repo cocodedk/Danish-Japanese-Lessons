@@ -1,9 +1,10 @@
 @charset "utf-8";
 /* ==========================================================================
    Danish-Japanese Lessons — landing stylesheet
-   Implements docs/design/ART-DIRECTION.md: «دفتر مشق» / the exercise notebook.
+   Implements docs/design/ART-DIRECTION.md: the exercise-notebook design.
    Mobile-first (base ≈360px), enhanced at 640 / 768 / 1024px only.
    Shared by /index.html, /da/index.html and /ja/index.html.
+   Latin type is Andika; Japanese (kana) type is Noto Sans JP.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -18,13 +19,11 @@
   --card:  #EFE8DA;
 
   --font-latin: "Andika", "Segoe UI", system-ui, sans-serif;
-  --font-ja:    "Vazirmatn", "Noto Naskh Arabic", system-ui, sans-serif;
-  --font-naskh: "Noto Naskh Arabic", "Vazirmatn", serif;
+  --font-ja:    "Noto Sans JP", system-ui, sans-serif;
 
   /* the notebook grid */
   --sheet-max: 46rem;
   --gutter: 1.15rem;
-  --madde-cut: 0.54em; /* tuned against Noto Naskh Arabic at line-height 2 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,25 +59,21 @@
   font-display: swap;
 }
 
+/* Noto Sans JP for all kana. The subset files land with the Japanese port
+   (plan 016); until they exist the stack's system-ui fallback supplies the
+   platform's own kana font. Keep the paths in step with public/fonts/ when
+   the subset arrives. */
 @font-face {
-  font-family: "Vazirmatn";
-  src: url("fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-family: "Noto Sans JP";
+  src: url("fonts/NotoSansJP-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Vazirmatn";
-  src: url("fonts/Vazirmatn-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Naskh Arabic";
-  src: url("fonts/NotoNaskhArabic-Bold.woff2") format("woff2");
+  font-family: "Noto Sans JP";
+  src: url("fonts/NotoSansJP-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -105,8 +100,9 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-[dir="rtl"] body,
-body[dir="rtl"] {
+/* The Japanese page (lang="ja" on <html>) reads naturally left-to-right;
+   kana gets the Japanese stack and a taller line rhythm for the strokes. */
+body:lang(ja) {
   font-family: var(--font-ja);
   font-size: 1.125rem;     /* Japanese body floor */
   line-height: 1.9;
@@ -119,9 +115,9 @@ h1 { font-size: clamp(1.6rem, 6.5vw, 2.35rem); letter-spacing: -0.01em; }
 h2 { font-size: clamp(1.3rem, 5vw, 1.7rem); }
 h3 { font-size: 1.075rem; }
 
-[dir="rtl"] h1,
-[dir="rtl"] h2,
-[dir="rtl"] h3 { letter-spacing: normal; }
+body:lang(ja) h1,
+body:lang(ja) h2,
+body:lang(ja) h3 { letter-spacing: normal; }
 
 p { margin: 0 0 1rem; }
 p:last-child { margin-bottom: 0; }
@@ -149,7 +145,8 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* --------------------------------------------------------------------------
    3. The sheet — one red margin line, ruled sections
-   The margin line sits inline-start: LEFT on LTR, RIGHT on RTL, for free.
+   The margin line sits on the inline-start side of every (left-to-right)
+   page — the notebook signature stays.
    -------------------------------------------------------------------------- */
 .sheet {
   max-width: var(--sheet-max);
@@ -170,10 +167,10 @@ main > section:first-child { padding-block-start: 1.25rem; }
   font-size: 1.075rem;
   max-width: 34ch;
 }
-[dir="rtl"] .lede { font-size: 1.2rem; max-width: 36ch; }
+body:lang(ja) .lede { font-size: 1.2rem; max-width: 36ch; }
 
 .note { color: var(--ink); opacity: 0.78; font-size: 0.95rem; }
-[dir="rtl"] .note { font-size: 1rem; }
+body:lang(ja) .note { font-size: 1rem; }
 
 /* --------------------------------------------------------------------------
    4. Header + language switcher
@@ -190,7 +187,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
   color: var(--ink);
   opacity: 0.65;
 }
-[dir="rtl"] .wordmark { letter-spacing: normal; text-transform: none; font-size: 0.9rem; }
+body:lang(ja) .wordmark { letter-spacing: normal; text-transform: none; font-size: 0.9rem; }
 
 .langs {
   display: flex;
@@ -223,6 +220,10 @@ main > section:first-child { padding-block-start: 1.25rem; }
   font-weight: 700;
 }
 
+/* a Japanese label inside any language switcher keeps its own kana type */
+.langs a[lang="ja"],
+.langs span[lang="ja"] { font-family: var(--font-ja); }
+
 /* --------------------------------------------------------------------------
    5. Hero — the split-screen specimen
    -------------------------------------------------------------------------- */
@@ -232,33 +233,13 @@ main > section:first-child { padding-block-start: 1.25rem; }
   text-align: center;
 }
 
-.specimen__fa {
-  font-family: var(--font-naskh);
+.specimen__ja {
+  font-family: var(--font-ja);
   font-weight: 700;
   font-size: clamp(4.5rem, 20vw, 9rem);
-  line-height: 2;          /* diacritics need air — and --madde-cut depends on it */
-  direction: rtl;
+  line-height: 1.2;
   color: var(--ink);
-  /* line-height 2 leaves more descender air than the specimen needs; the
-     negative margin trims the gap without moving the gradient's origin */
-  margin: 0 0 -0.22em;
-}
-
-/* The madde stroke in the teacher's red pen. The glyph is real type — the
-   colour split is a clipped gradient, so no fake letterforms are introduced. */
-@supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .specimen__fa--madde {
-    background-image: linear-gradient(to bottom,
-      var(--red) 0 var(--madde-cut), var(--ink) var(--madde-cut));
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-}
-
-@media (forced-colors: active) {
-  .specimen__fa--madde { background-image: none; color: CanvasText; }
+  margin: 0 0 0.08em;
 }
 
 .specimen__rule {
@@ -283,10 +264,11 @@ main > section:first-child { padding-block-start: 1.25rem; }
   opacity: 0.6;
   margin: 0;
 }
-[dir="rtl"] .specimen__gloss { letter-spacing: normal; text-transform: none; font-size: 0.95rem; }
+body:lang(ja) .specimen__gloss { letter-spacing: normal; text-transform: none; font-size: 0.95rem; }
 
 /* --------------------------------------------------------------------------
-   6. Vowel-mark chips — the one orchestrated moment of motion
+   6. Mark chips — the one orchestrated moment of motion
+   The six kana marks the course teaches first, in the teacher's red pen.
    -------------------------------------------------------------------------- */
 .marks {
   display: flex;
@@ -310,12 +292,11 @@ main > section:first-child { padding-block-start: 1.25rem; }
 }
 
 .marks b {
-  font-family: var(--font-naskh);
+  font-family: var(--font-ja);
   font-weight: 700;
   font-size: clamp(1.6rem, 7vw, 2.1rem);
   line-height: 1.7;
   color: var(--red);
-  direction: rtl;
 }
 
 @keyframes ink-in {
@@ -356,7 +337,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
 
 .profiles h3 { margin-block-end: 0.35rem; }
 .profiles p { font-size: 1rem; }
-[dir="rtl"] .profiles p { font-size: 1.075rem; }
+body:lang(ja) .profiles p { font-size: 1.075rem; }
 
 /* --------------------------------------------------------------------------
    8. Steps — three ruled rows
@@ -385,14 +366,12 @@ main > section:first-child { padding-block-start: 1.25rem; }
 
 .steps h3 { margin: 0 0 0.25rem; align-self: center; }
 .steps p { grid-column: 2; font-size: 1rem; margin: 0; }
-[dir="rtl"] .steps p { font-size: 1.075rem; }
+body:lang(ja) .steps p { font-size: 1.075rem; }
 
 .shapes,
 .inline-ja {
-  font-family: var(--font-naskh);
+  font-family: var(--font-ja);
   font-weight: 700;
-  direction: rtl;
-  unicode-bidi: isolate;
   font-size: 1.25em;
   line-height: 1.3;        /* keeps the surrounding line boxes even */
 }
@@ -418,32 +397,12 @@ main > section:first-child { padding-block-start: 1.25rem; }
 
 .words .ja {
   display: block;
-  font-family: var(--font-naskh);
+  font-family: var(--font-ja);
   font-weight: 700;
   font-size: clamp(2.4rem, 12vw, 3.25rem);
-  line-height: 2;
-  direction: rtl;
+  line-height: 1.3;
   color: var(--ink);
-  margin: 0 0 -0.2em;
-}
-
-.words .ja--madde { /* same clipped-gradient trick, same tuned cut */
-  color: var(--ink);
-}
-
-@supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .words .ja--madde {
-    background-image: linear-gradient(to bottom,
-      var(--red) 0 var(--madde-cut), var(--ink) var(--madde-cut));
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-}
-
-@media (forced-colors: active) {
-  .words .ja--madde { background-image: none; color: CanvasText; }
+  margin: 0 0 0.1em;
 }
 
 .words hr {
@@ -472,7 +431,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
   position: relative;
   font-size: 1rem;
 }
-[dir="rtl"] .facts li { font-size: 1.075rem; }
+body:lang(ja) .facts li { font-size: 1.075rem; }
 
 .facts li::before {
   content: "✓";
@@ -542,28 +501,21 @@ footer {
   padding-block: 1.35rem 0;
   font-size: 0.95rem;
 }
-[dir="rtl"] footer { font-size: 1rem; }
+body:lang(ja) footer { font-size: 1rem; }
 
 footer p { margin: 0; }
 
 /* --------------------------------------------------------------------------
-   13. RTL specifics
-   Logical properties do the mirroring; these are the genuinely directional
-   or script-specific bits.
+   13. Japanese-page specifics (html lang="ja", left-to-right)
+   Kana type is the body default on that page; these are the few places the
+   Latin specimens and visible controls must keep their own typefaces.
    -------------------------------------------------------------------------- */
-[dir="rtl"] .specimen__da,
-[dir="rtl"] .words .da,
-[dir="rtl"] .lang-da {
+body:lang(ja) .cta { font-family: var(--font-ja); }
+
+body:lang(ja) .specimen__da,
+body:lang(ja) .words .da {
   font-family: var(--font-latin);
-  direction: ltr;
-  unicode-bidi: isolate;
 }
-
-[dir="rtl"] .cta,
-[dir="rtl"] .langs a,
-[dir="rtl"] .langs span { font-family: var(--font-ja); }
-
-[dir="rtl"] .steps .num { font-family: var(--font-ja); }
 
 /* --------------------------------------------------------------------------
    14. Enhancements — min-width only
@@ -586,7 +538,7 @@ footer p { margin: 0; }
 
 @media (min-width: 768px) {
   body { font-size: 1.0625rem; }
-  [dir="rtl"] body { font-size: 1.175rem; }
+  body:lang(ja) { font-size: 1.175rem; }
 
   /* keep the measure readable once the sheet gets wide */
   main > section > p,
@@ -608,7 +560,7 @@ footer p { margin: 0; }
   .wordmark { margin-block-end: 0; }
 
   .lede { font-size: 1.2rem; max-width: 44ch; }
-  [dir="rtl"] .lede { font-size: 1.3rem; max-width: 44ch; }
+  body:lang(ja) .lede { font-size: 1.3rem; max-width: 44ch; }
 
   .specimen { padding-block-start: 1rem; }
 }

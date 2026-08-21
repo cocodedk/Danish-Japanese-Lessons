@@ -4,12 +4,14 @@ import App from '../App'
 import { setProfile } from '../progress/profile'
 import { markOrientationSeen } from '../progress/alphabet'
 import { celebrate, getRewards } from '../rewards/engine'
-import { GUILT_WORDS } from '../rewards/copy'
+import { GUILT_WORDS, WELCOME_BACK, streakLine } from '../rewards/copy'
+import type { StreakState } from '../rewards/types'
 import { getSettings } from '../progress/settings'
 
 /** Five days of practice in March, then silence. */
 const PRACTISED = [1, 2, 3, 4, 5]
 const TEN_DAYS_LATER = new Date(2026, 2, 15, 19, 30)
+const RESTING: StreakState = { value: 5, resting: true, today: false }
 
 function open(hash: string) {
   window.location.hash = hash
@@ -22,13 +24,12 @@ function pageText(): string {
 }
 
 function expectNoGuilt() {
-  const text = pageText()
+  const text = pageText().toLowerCase()
   for (const word of GUILT_WORDS) {
-    expect(text.toLowerCase(), `the page says "${word}"`).not.toContain(word.toLowerCase())
+    expect(text, `the page says "${word}"`).not.toContain(word.toLowerCase())
   }
   // Never a zero where a count of days belongs.
   expect(text).not.toMatch(/\b0 dage?\b/)
-  expect(text).not.toContain('۰ روز')
 }
 
 beforeEach(() => {
@@ -48,27 +49,30 @@ afterEach(() => {
 describe('coming back after ten days away', () => {
   it('greets the learner on the forside with a resting streak, not a broken one', () => {
     open('#/')
+    const resting = streakLine(RESTING)
 
     expect(screen.getByText('Træningen fortsætter stadig')).toBeInTheDocument()
-    expect(screen.getByText('تمرین هنوز ادامه دارد')).toBeInTheDocument()
+    expect(screen.getByText(resting.ja)).toBeInTheDocument()
     expect(
-      screen.getByText('tamrin hanuz edåme dårad · [tæmɾiːn hænuːz ʔedɒːme dɒːɾæd]'),
+      screen.getByText(`${resting.pron.da} · [${resting.pron.ipa}]`),
     ).toBeInTheDocument()
     expect(screen.getByText('Hej Sara!')).toBeInTheDocument()
     expectNoGuilt()
   })
 
   it('wakes the streak on the first exercise and welcomes the learner back', () => {
-    open('#/lesson/alphabet/bogstav/be')
+    open('#/lesson/alphabet/bogstav/a')
     fireEvent.click(screen.getByText('Jeg har set tegnet'))
 
-    expect(screen.getByText('دوباره سلام!')).toBeInTheDocument()
-    expect(screen.getByText('dobåre salåm · [dobɒːɾe sælɒːm]')).toBeInTheDocument()
+    expect(screen.getByText(WELCOME_BACK.ja)).toBeInTheDocument()
+    expect(
+      screen.getByText(`${WELCOME_BACK.pron.da} · [${WELCOME_BACK.pron.ipa}]`),
+    ).toBeInTheDocument()
     expect(screen.getByText('Hej igen!')).toBeInTheDocument()
     expectNoGuilt()
 
     // Japanese, then the pron line, then Danish — the same order as the praise
-    // row above it, and every other specimen in the app (plan 009).
+    // row above it (plan 009).
     const row = [...(document.querySelector('.celebration__welcome')?.children ?? [])].map(
       (el) => el.className,
     )
@@ -79,7 +83,7 @@ describe('coming back after ten days away', () => {
     const before = getRewards()
     expect(before.streak).toEqual({ value: 5, resting: true, today: false })
 
-    const letter = open('#/lesson/alphabet/bogstav/be')
+    const letter = open('#/lesson/alphabet/bogstav/a')
     fireEvent.click(screen.getByText('Jeg har set tegnet'))
     letter.unmount()
 

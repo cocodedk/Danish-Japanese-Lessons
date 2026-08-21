@@ -1,24 +1,23 @@
 import { describe, it, expect } from 'vitest'
 import { vocabUnits, allVocabWords, findVocabUnit } from './vocab'
-import { withoutMarks } from './marks'
 import { lessons, vocabLessonId } from './registry'
 import { findJapaneseTextViolations } from './textRules'
 
-/** The pre-approved starter set — plan 004 step 2. All ten sit in unit ۱. */
+/** The pre-approved starter set — plan 016 step 2. All ten sit in unit 1. */
 const STARTER_SET: Array<[string, string]> = [
-  ['آب', 'vand'],
-  ['بابا', 'far'],
-  ['نان', 'brød'],
-  ['مادر', 'mor'],
-  ['من', 'jeg'],
-  ['تو', 'du'],
-  ['ما', 'vi'],
-  ['او', 'han eller hun'],
-  ['این', 'denne, dette'],
-  ['آن', 'den, det (derovre)'],
+  ['みず', 'vand'],
+  ['パン', 'brød'],
+  ['ちち', 'far'],
+  ['はは', 'mor'],
+  ['かぜ', 'vind'],
+  ['わたし', 'jeg'],
+  ['あなた', 'du'],
+  ['みんな', 'vi, alle'],
+  ['これ', 'denne, dette'],
+  ['あれ', 'den, det (derovre)'],
 ]
 
-describe('grade-1 vocabulary data', () => {
+describe('first Japanese vocabulary', () => {
   it('is five focused units of at least six words, all reachable by id', () => {
     expect(vocabUnits).toHaveLength(5)
     for (const unit of vocabUnits) {
@@ -28,11 +27,10 @@ describe('grade-1 vocabulary data', () => {
     expect(findVocabUnit('nope')).toBeUndefined()
   })
 
-  it('gives every card a Japanese word, a vocalized specimen, a Danish meaning and both pronunciations', () => {
+  it('gives every card kana, a Danish meaning, and both pronunciations', () => {
     for (const word of allVocabWords) {
       expect(word.id, word.ja).toMatch(/^[a-z]+$/)
       expect(word.ja.length, word.id).toBeGreaterThan(0)
-      expect(word.jaMarked.length, word.id).toBeGreaterThan(0)
       expect(word.da.length, word.id).toBeGreaterThan(0)
       expect(word.pron.da.length, word.id).toBeGreaterThan(0)
       expect(word.pron.ipa.length, word.id).toBeGreaterThan(0)
@@ -44,45 +42,13 @@ describe('grade-1 vocabulary data', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
-  it('spells jaMarked as ja plus اِعراب and nothing else — take the marks off and the word is back', () => {
+  it('writes jaMarked equal to ja — kana carry no vowel marks to red-pen', () => {
     for (const word of allVocabWords) {
-      expect(withoutMarks(word.jaMarked), word.id).toBe(word.ja)
+      expect(word.jaMarked, word.id).toBe(word.ja)
     }
   })
 
-  it('actually marks the words that carry a short vowel', () => {
-    const marked = allVocabWords.filter((word) => word.jaMarked !== word.ja)
-    expect(marked.map((word) => word.id)).toEqual([
-      'madar',
-      'man',
-      'medad',
-      'ketab',
-      'dar',
-      'dast',
-      'madrese',
-      'salam',
-      'aseman',
-      'shab',
-      'gol',
-      'qermez',
-      'sabz',
-      'zard',
-      'sefid',
-      'narenji',
-      'surati',
-      'gorbe',
-      'sag',
-      'parande',
-      'asb',
-      'khargush',
-    ])
-    // The others are long vowels all the way through — آب، بابا، نان have
-    // nothing to mark, which is exactly why the primer opens on them.
-    expect(withoutMarks('مَدرِسه')).toBe('مدرسه')
-    expect(withoutMarks('آب')).toBe('آب')
-  })
-
-  it('gives the separate color lesson eight distinct visual swatches', () => {
+  it('gives the separate colour lesson eight distinct visual swatches', () => {
     const colors = findVocabUnit('4')!
     expect(colors.title).toBe('Farver')
     expect(colors.words).toHaveLength(8)
@@ -105,12 +71,12 @@ describe('grade-1 vocabulary data', () => {
     ])
   })
 
-  it('preserves the stable entry ids of colors moved from earlier lessons', () => {
-    const colors = findVocabUnit('4')!
-    const entryId = (wordId: string) => colors.words.find((word) => word.id === wordId)!.entry.id
-    expect(entryId('abi')).toBe('vocabulary-1-abi')
-    expect(entryId('sabz')).toBe('vocabulary-3-sabz')
-    expect(entryId('zard')).toBe('vocabulary-3-zard')
+  it('builds every entry id from the route shape vocabulary-<unit>-<id>', () => {
+    for (const unit of vocabUnits) {
+      for (const word of unit.words) {
+        expect(word.entry.id, word.id).toBe(`vocabulary-${unit.id}-${word.id}`)
+      }
+    }
   })
 
   it('holds the unique-answer invariant: no two words in a unit share a meaning or a sound', () => {
@@ -126,14 +92,14 @@ describe('grade-1 vocabulary data', () => {
     }
   })
 
-  it('keeps این and آن apart — the demonstrative pair a homophone check exists for', () => {
+  it('keeps これ and あれ apart — the demonstrative pair a homophone check exists for', () => {
     const word = (id: string) => allVocabWords.find((candidate) => candidate.id === id)!
-    expect(word('in').pron.ipa).not.toBe(word('an').pron.ipa)
-    expect(word('in').pron.da).not.toBe(word('an').pron.da)
-    expect(word('in').da).not.toBe(word('an').da)
+    expect(word('kore').pron.ipa).not.toBe(word('are').pron.ipa)
+    expect(word('kore').pron.da).not.toBe(word('are').pron.da)
+    expect(word('kore').da).not.toBe(word('are').da)
   })
 
-  it('carries the whole pre-approved starter set in unit ۱', () => {
+  it('carries the whole pre-approved starter set in unit 1', () => {
     const unit = findVocabUnit('1')!
     for (const [ja, da] of STARTER_SET) {
       const word = unit.words.find((candidate) => candidate.ja === ja)
@@ -151,15 +117,15 @@ describe('grade-1 vocabulary data', () => {
     }
   })
 
-  it('writes Japanese code points only — in ja and in the vocalized specimen alike', () => {
+  it('writes Japanese code points only — in ja and in the specimen alike', () => {
     for (const word of allVocabWords) {
       expect(findJapaneseTextViolations(word.ja), word.id).toEqual([])
       expect(findJapaneseTextViolations(word.jaMarked), word.id).toEqual([])
     }
     for (const unit of vocabUnits) {
       expect(findJapaneseTextViolations(unit.titleEntry.ja), unit.id).toEqual([])
-      // Unit headings are UI chrome: no اِعراب there, only on specimens.
-      expect(withoutMarks(unit.titleEntry.ja), unit.id).toBe(unit.titleEntry.ja)
+      // Unit headings are UI chrome: no marks there, only on specimens.
+      expect(unit.titleEntry.jaMarked, unit.id).toBeUndefined()
     }
   })
 })

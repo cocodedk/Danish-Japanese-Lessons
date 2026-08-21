@@ -1,6 +1,7 @@
 // The override list: a name people already write a particular way beats
-// anything the rules could work out. See docs/plans/006-your-name.md step 1.
-import { IRANIAN_NAMES } from './namesJapanese'
+// anything the rules could work out. See worker notes (worker-name.md) for
+// the full sound-rule catalogue this table overrides.
+import { JAPANESE_NAMES } from './namesJapanese'
 import { DANISH_NAMES } from './namesDanish'
 
 // Null prototype: a learner may type any name, and on a plain object literal
@@ -8,7 +9,7 @@ import { DANISH_NAMES } from './namesDanish'
 // undefined — the same trap engine.ts documents on POINT_AWARD.
 const OVERRIDES: Record<string, string> = Object.assign(
   Object.create(null) as Record<string, string>,
-  IRANIAN_NAMES,
+  JAPANESE_NAMES,
   DANISH_NAMES,
 )
 
@@ -23,10 +24,14 @@ export function overrideFor(latin: string): string | undefined {
 }
 
 /**
- * Every Japanese spelling on the list, so the text-rule guard can walk the table
- * itself — an Arabic ك or ي typed into a name entry fails the test suite.
+ * Every Japanese spelling on the list, so the text-rule guard can walk the
+ * table itself — an Arabic ك or ي typed into a name entry fails the suite.
  */
-export const NAME_OVERRIDE_FA_STRINGS: string[] = Object.values(OVERRIDES)
+/** The Japanese spellings, under the renamed export too — the port spec
+ *  renames fa → ja, and the text-rule guard may import either name. */
+export const NAME_OVERRIDE_JA_STRINGS: string[] = Object.values(OVERRIDES)
+
+export const NAME_OVERRIDE_FA_STRINGS: string[] = NAME_OVERRIDE_JA_STRINGS
 
 /**
  * Every Latin name the list knows, so a test can run the whole table back

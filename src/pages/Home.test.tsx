@@ -7,6 +7,10 @@ import { AppChrome } from '../components/AppChrome'
 import { markOrientationSeen } from '../progress/alphabet'
 import { completeAlphabet } from './typingHarness'
 import { setProfile } from '../progress/profile'
+import { ALPHABET_TOTAL } from '../progress/alphabet'
+import { DEMO_WORD } from '../content/demoWord'
+import { GREETING_ENTRY } from '../content/greetings'
+import { CAPTURE_PROMPT_ENTRY } from '../content/jaStrings'
 
 /** The forside links into the lessons, so it needs a router around it. */
 function render(ui: React.ReactElement) {
@@ -37,7 +41,7 @@ describe('Home', () => {
 
   it('shows the skippable name capture after the alphabet in the recommended flow', () => {
     render(<Home />)
-    expect(screen.getByText('نام تو چیست؟')).toBeInTheDocument()
+    expect(screen.getByText(CAPTURE_PROMPT_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByLabelText('Hvad hedder du?')).toBeInTheDocument()
   })
 
@@ -45,12 +49,14 @@ describe('Home', () => {
     render(<Home />)
     fireEvent.click(screen.getByText('Spring over'))
 
-    expect(screen.queryByText('نام تو چیست؟')).not.toBeInTheDocument()
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
+    expect(screen.queryByText(CAPTURE_PROMPT_ENTRY.ja)).not.toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Hej!')).toBeInTheDocument()
     // The demo pair still renders with its pronunciation line.
-    expect(screen.getByText('آب')).toBeInTheDocument()
-    expect(screen.getByText('åb · [ɒːb]')).toBeInTheDocument()
+    expect(screen.getByText(DEMO_WORD.entry.ja)).toBeInTheDocument()
+    expect(
+      screen.getByText(`${DEMO_WORD.entry.pron.da} · [${DEMO_WORD.entry.pron.ipa}]`),
+    ).toBeInTheDocument()
   })
 
   it('skip path is permanent-quiet: a later mount never asks again', () => {
@@ -59,7 +65,7 @@ describe('Home', () => {
     unmount()
 
     render(<Home />)
-    expect(screen.queryByText('نام تو چیست؟')).not.toBeInTheDocument()
+    expect(screen.queryByText(CAPTURE_PROMPT_ENTRY.ja)).not.toBeInTheDocument()
     expect(screen.getByText('Hej!')).toBeInTheDocument()
   })
 
@@ -71,19 +77,19 @@ describe('Home', () => {
     fireEvent.click(screen.getByText('Gem'))
 
     expect(screen.getByText('Hej Sara!')).toBeInTheDocument()
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
-    expect(screen.queryByText('سارا')).not.toBeInTheDocument()
+    expect(screen.getByText(GREETING_ENTRY.ja)).toBeInTheDocument()
+    expect(screen.queryByText('サラ')).not.toBeInTheDocument()
   })
 
   it('never fabricates whole-name pronunciation in the Japanese greeting', () => {
-    setProfile({ name: 'Sara', faSpelling: 'سارا' })
+    setProfile({ name: 'Sara', faSpelling: 'サラ' })
     render(<Home />)
 
     const greeting = document.querySelector('.split-card__greeting')
     expect(greeting?.querySelectorAll('[lang="ja"]')).toHaveLength(2)
-    expect(greeting?.textContent).toContain('سلام، سارا!')
-    expect(greeting?.textContent).toContain('salåm · [sælɒːm]')
-    expect(greeting?.textContent).not.toContain('sårå')
+    expect(greeting?.textContent).toContain('こんにちは、 サラ!')
+    expect(greeting?.textContent).toContain('kon-nichiwa · [koɰitɕiɰa]')
+    expect(greeting?.textContent).not.toContain('sara')
   })
 
   it('names with æ/ø/å round-trip correctly through capture, greeting, and reload', () => {
@@ -127,7 +133,7 @@ describe('Home', () => {
     expect(container.querySelectorAll('.ruled-section')).toHaveLength(1)
     const lesson = screen.getByRole('link', { name: /Alfabetet/ })
     expect(lesson).toHaveAttribute('href', '/lesson/alphabet')
-    expect(screen.getByText('0 af 39 set eller øvet')).toBeInTheDocument()
+    expect(screen.getByText(`0 af ${ALPHABET_TOTAL} set eller øvet`)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Tal' })).toHaveAttribute('href', '/tal')
   })
 

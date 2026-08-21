@@ -1,47 +1,10 @@
-import { bridgeEntry, consonant, longAa, shortVowel } from './wordBridgeEntry'
 import type { WordBridge } from './wordBridgeTypes'
 
-const entries = {
-  pas: bridgeEntry({
-    id: 'pas', ja: 'پاس', da: 'vagt, beskyttelse eller omsorg',
-    pronDa: 'pås', ipa: 'pɒːs',
-    readingCues: [consonant(0, 'پ'), longAa(1), consonant(2, 'س')],
-  }),
-  mord: bridgeEntry({
-    id: 'mord', ja: 'مرد', jaMarked: 'مُرد', da: 'døde',
-    pronDa: 'mord', ipa: 'moɾd',
-    readingCues: [consonant(0, 'م'), shortVowel(1, '◌ُ', 'o i “ost”', 'o'),
-      consonant(1, 'ر'), consonant(2, 'د')],
-  }),
-  leng: bridgeEntry({
-    id: 'leng', ja: 'لنگ', jaMarked: 'لِنگ', da: 'ben',
-    pronDa: 'leng', ipa: 'leŋɡ',
-    readingCues: [consonant(0, 'ل'), shortVowel(1, '◌ِ', 'e i “let”', 'e'),
-      consonant(1, 'ن'), consonant(2, 'گ')],
-  }),
-} as const
-
-/** Requested sound and meaning bridges whose qualifications need room in the learner copy. */
-export const wordBridgeMemoryAdditions: readonly WordBridge[] = [
-  {
-    id: 'pas-pas-paa', titleDa: 'Pås og pas på', entry: entries.pas, category: 'memory',
-    danish: 'pas på', danishGlossDa: 'vær forsigtig eller tag vare på',
-    clueDa: 'Japansk pås og dansk pas på ligger tæt i både lyd og idé.',
-    meaningDa: 'Japansk pås betyder vagt, beskyttelse eller omsorg. I daglig Tehrani siger man ofte movåzeb båsh for “pas på”.',
-    historyDa: 'Pås og pas på er ikke dokumenteret som slægtninge. Tehrani movåzeb er et arabisk låneord.',
-  },
-  {
-    id: 'mord-mord', titleDa: 'Mord og mord', entry: entries.mord, category: 'memory',
-    danish: 'mord', danishIpa: 'ˈmoˀɐ̯', danishGlossDa: 'det at dræbe nogen med overlæg',
-    clueDa: 'Med dansk lydskrift bliver begge til mord.',
-    meaningDa: 'Japansk mord betyder “han, hun eller det døde”. Dansk mord er en navneform for et overlagt drab. De betyder ikke det samme i dag.',
-    historyDa: 'Begge går langt tilbage til den samme indoeuropæiske rod for at dø, men betydningerne har udviklet sig forskelligt.',
-  },
-  {
-    id: 'leng-lang', titleDa: 'Leng og lang', entry: entries.leng, category: 'memory',
-    danish: 'lang, længe, langt', danishGlossDa: 'ord for udstrækning eller varighed',
-    clueDa: 'Leng ligger tæt på lang, længe og langt.',
-    meaningDa: 'Japansk leng kan betyde et ben i ældre eller regionalt sprog. De danske ord beskriver udstrækning eller varighed.',
-    historyDa: 'Ligheden er en lydlig huskebro, ikke et dokumenteret fælles ophav. Leng er ikke dokumenteret som et historisk dansk længdemål; oversigten har blandt andet fod, håndsbred og alen.',
-  },
-]
+/**
+ * Honest memory bridges beyond the true loanwords. The port keeps the
+ * mechanism but starts empty: the thirteen katakana loanwords in ./wordBridges
+ * already give a learner of Japanese plenty of Danish anchors, and inventing
+ * near-sound pairs for their own sake would add noise. Add a real,
+ * well-sourced pair here if a reviewer asks for one.
+ */
+export const wordBridgeMemoryAdditions: readonly WordBridge[] = []

@@ -20,11 +20,11 @@ function Flip() {
         className="orient__sweep"
         viewBox="0 0 200 24"
         role="img"
-        aria-label="Læseretningen går fra højre mod venstre"
+        aria-label="Læseretningen går fra venstre mod højre"
       >
-        <circle className="orient__sweep-start" cx="193" cy="12" r="4" />
-        <path className="orient__sweep-line" d="M 189 12 L 16 12" pathLength={1} />
-        <path className="orient__sweep-head" d="M 24 5 L 9 12 L 24 19" />
+        <circle className="orient__sweep-start" cx="7" cy="12" r="4" />
+        <path className="orient__sweep-line" d="M 16 12 L 189 12" pathLength={1} />
+        <path className="orient__sweep-head" d="M 176 5 L 191 12 L 176 19" />
       </svg>
       <p className="orient__body">
         Du læste lige D-N-A-V, og det betyder ingenting. Start i højre side i stedet, så står der{' '}
@@ -72,10 +72,7 @@ export default function Orientation() {
 
   const nextLabels = [
     'Næste: læseretning',
-    'Næste: bogstaver der binder',
-    'Næste: bogstavformer',
-    'Næste: store og små bogstaver',
-    'Næste: prikker',
+    ...ORIENTATION_POINTS.map((point) => `Næste: ${point.heading}`),
   ]
 
   return (
@@ -122,15 +119,14 @@ export default function Orientation() {
 
           {(!firstVisit || step === 1) && (
             <section className="orient__point">
-              <h2 className="orient__heading">Japansk læses fra højre mod venstre</h2>
+              <h2 className="orient__heading">Japansk læses fra venstre mod højre</h2>
               <Flip />
               <RuleDivider />
               <div className="orient__specimen">
                 <FullTeachingCard entry={MIRROR_DEMO.entry} />
               </div>
               <p className="orient__body">
-                Japansk gør det hver eneste gang: første bogstav yderst til højre, sidste bogstav yderst
-                til venstre.
+                Japansk gør det hver eneste gang: første bogstav yderst til venstre, sidste bogstav yderst til højre.
               </p>
             </section>
           )}

@@ -1,14 +1,17 @@
-// The capstone «نامِ خودت را بنویس»: present and warm for a learner who has a
-// Japanese spelling, completely absent for one who has not.
+// The capstone «じぶんの なまえを かいてね»: present and warm for a learner
+// who has a spelling the board can write, completely absent for one who has
+// not. The board writes the 46 hiragana plus ー, so a katakana spelling stays
+// dormant (see worker-notes) — a hand-typed hiragana spelling still opens it.
 import { describe, it, expect } from 'vitest'
 import { screen } from '@testing-library/react'
 import { setProfile } from '../progress/profile'
 import { getRewards } from '../rewards/engine'
 import { getTypeProgress } from '../progress/typing'
-import { NAME_PRAISE_ENTRY } from '../rewards/copy'
 import { freshTypingState, open, tap, write } from './typingHarness'
+import { NAME_PRAISE_ENTRY } from '../rewards/copy'
 
-const SARA = { name: 'Sara', faSpelling: 'سارا' }
+const KATA = { name: 'Sara', faSpelling: 'サラ' }
+const HIRA = { name: 'Sara', faSpelling: 'さら' }
 
 freshTypingState()
 
@@ -32,9 +35,9 @@ describe('without a name', () => {
   })
 })
 
-describe('with a spelling the keyboard cannot write', () => {
-  it('stays dormant — لوئیزه needs ئ, which is not one of the 32 letters', () => {
-    setProfile({ name: 'Louise', faSpelling: 'لوئیزه' })
+describe('with a katakana spelling the board cannot write', () => {
+  it('stays dormant — サラ needs katakana, which the board does not teach', () => {
+    setProfile(KATA)
     const forside = open('#/')
     expect(capstoneLink()).toBeUndefined()
     forside.unmount()
@@ -44,16 +47,16 @@ describe('with a spelling the keyboard cannot write', () => {
   })
 })
 
-describe('with a name', () => {
+describe('with a hiragana spelling the board can write', () => {
   it('is on the forside, waiting, and never in the way', () => {
-    setProfile(SARA)
+    setProfile(HIRA)
     open('#/')
     expect(capstoneLink()).toHaveTextContent('Tast dit navn')
     expect(capstoneLink()).toHaveTextContent('Klar, når du er')
   })
 
   it('asks for the name without printing it — the spelling stays folded away', () => {
-    setProfile(SARA)
+    setProfile(HIRA)
     const { container } = open('#/lesson/navn/skriv')
 
     expect(
@@ -61,18 +64,17 @@ describe('with a name', () => {
     ).toBeInTheDocument()
     const help = container.querySelector('details')!
     expect(help.open).toBe(false)
-    // The one place the spelling appears is inside that closed disclosure.
-    expect(screen.getByText(SARA.faSpelling).closest('details')).toBe(help)
+    expect(screen.getByText(HIRA.faSpelling).closest('details')).toBe(help)
   })
 
   it('celebrates by name and fills a page — once, however often it is written again', () => {
-    setProfile(SARA)
+    setProfile(HIRA)
     open('#/lesson/navn/skriv')
 
-    write(SARA.faSpelling)
+    write(HIRA.faSpelling)
     tap('Se efter')
     expect(screen.getAllByText(NAME_PRAISE_ENTRY.ja).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(SARA.faSpelling).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(HIRA.faSpelling).length).toBeGreaterThan(0)
     expect(screen.getAllByText('Flot, Sara!').length).toBeGreaterThan(0)
 
     tap('Afslut runden')
@@ -80,48 +82,44 @@ describe('with a name', () => {
     const afterFirst = getRewards().points
     expect(getRewards().level).toBeGreaterThan(1)
 
-    // Written again after a reload: praised again, paid the flat answer rate,
-    // and the page is not sold twice.
     open('#/lesson/navn/skriv')
-    write(SARA.faSpelling)
+    write(HIRA.faSpelling)
     tap('Se efter')
     tap('Afslut runden')
     expect(getRewards().points).toBe(afterFirst + 1)
     expect(screen.getAllByText(NAME_PRAISE_ENTRY.ja).length).toBeGreaterThan(0)
   })
 
-  it('marks a wrong letter in the name as gently as it marks a word', () => {
-    setProfile(SARA)
+  it('marks a wrong kana in the name as gently as it marks a word', () => {
+    setProfile(HIRA)
     const { container } = open('#/lesson/navn/skriv')
 
-    write('سارد')
+    write('され')
     tap('Se efter')
-    expect(screen.getByText('اینجا یک حرف دیگر است.')).toBeInTheDocument()
+    expect(screen.getByText('ここに ちがう もじが あります。')).toBeInTheDocument()
     expect(container.querySelectorAll('.type__cell--mark')).toHaveLength(1)
     expect(getRewards().points).toBe(0)
   })
 
   it('writes a two-part name with the space key', () => {
-    setProfile({ name: 'Anne Mette', faSpelling: 'آنه مته' })
+    setProfile({ name: 'Anne Mette', faSpelling: 'あんね まり' })
     open('#/lesson/navn/skriv')
 
-    write('آنه')
+    write('あんね')
     tap('mellemrum')
-    write('مته')
+    write('まり')
     tap('Se efter')
     expect(screen.getByText('Flot, Anne Mette!')).toBeInTheDocument()
   })
 
-  // Critic round 1: a missing space used to be marked "et andet bogstav" —
-  // wrong, since a space has no letterform at all.
-  it('names a missing mellemrum honestly, stopping before the two-part name\'s space', () => {
-    setProfile({ name: 'Anne Mette', faSpelling: 'آنه مته' })
+  it("names a missing mellemrum honestly, stopping before the two-part name's space", () => {
+    setProfile({ name: 'Anne Mette', faSpelling: 'あんね まり' })
     open('#/lesson/navn/skriv')
 
-    write('آنه')
+    write('あんね')
     tap('Se efter')
 
     expect(screen.getByText(/Her mangler et mellemrum\./)).toBeInTheDocument()
-    expect(screen.getByText('اینجا یک فاصله جا افتاده.')).toBeInTheDocument()
+    expect(screen.getByText('ここに スペースが ありません。')).toBeInTheDocument()
   })
 })

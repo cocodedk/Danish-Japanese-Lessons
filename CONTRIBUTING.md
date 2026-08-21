@@ -55,8 +55,8 @@ Types: `feat` `fix` `chore` `docs` `style` `refactor` `test` `ci` `build` `perf`
 optional. Write the description in the imperative, lower case, no trailing period.
 
 ```
-feat(lessons): add the zir/zebar/pish vowel-mark lesson
-fix(ja): correct the ZWNJ in the نیم‌فاصله example
+feat(lessons): add the dakuten and handakuten kana-marks lesson
+fix(ja): correct the kana in the vocabulary example
 docs(readme): document the local static server command
 ```
 
@@ -96,12 +96,15 @@ an issue or send a one-line PR. That is not a small contribution here, it is the
 
 ### Japanese text
 
-- Japanese code points only: `ک` (U+06A9) and `ی` (U+06CC). Never the Arabic `ك` and `ي`. Japanese digits
-  ۰۱۲۳۴۵۶۷۸۹, never the Eastern Arabic set.
-- ZWNJ (نیم‌فاصله, U+200C) wherever the grammar wants it: می‌روم, کتاب‌ها, دانمارکی‌زبان. A plain space
-  there is a spelling mistake, not a style choice.
-- Diacritics (اِعراب) go on teaching specimens only. Body text, headings, buttons and labels stay
-  unvocalized, the way Japanese is written everywhere outside a primer.
+- Japanese code points only. No Arabic or Persian code points — the forbidden blocks are
+  U+0600–06FF, U+0750–077F, U+FB50–FDFF and U+FE70–FEFF; `ک` and `ی` are never Japanese.
+- No ZWNJ/ZWJ (U+200C/U+200D). Japanese has no hidden joining marks; a ZWNJ in a kana string is a
+  bug, not a style choice.
+- Hiragana normally, katakana for loanwords and transcribed foreign names, kanji only from the
+  entries that teach it (numbers 一–十, 水 in orientation).
+- The six marks ゛ ゜ ー っ ゃ ょ are ordinary writing in Japanese; use them where they belong, and
+  render newly-taught ones in teacher red.
+- ASCII digits are allowed (Japanese uses them in ordinary text).
 - Write modern, natural Japanese. Prose that reads like a translation from Danish is a bug. File it as one.
 
 ### Danish text
@@ -112,13 +115,14 @@ an issue or send a one-line PR. That is not a small contribution here, it is the
 
 ### Lesson order
 
-Lessons follow the Iranian grade-1 primer: the alphabet and the vowel marks first, then primer vocabulary in
-the primer's own sequence (آب، بابا، نان، من، تو …). If you want to add a word, put it where the primer puts
-it rather than where it feels handy. The ordering is the pedagogy, not an implementation detail.
+Lessons follow the Japanese course order: orientation (kana read left to right), the 46 hiragana
+with stroke order, then the six marks ゛ ゜ ー っ ゃ ょ, katakana for names and loanwords, and the first
+words in their intended order (みず、 パン、 わたし、 あなた …). If you want to add a word, put it where the
+course puts it rather than where it feels handy. The ordering is the pedagogy, not an implementation detail.
 
 ## PR checklist
 
 - [ ] `bash scripts/verify.sh` passes
 - [ ] Tested at 360px width
-- [ ] RTL checked, if you touched the site or any Japanese pane
+- [ ] kana/left-to-right checked, if you touched the site or any Japanese pane
 - [ ] Docs updated, if behavior changed
