@@ -85,9 +85,11 @@ Katakana words both languages took from the same European word, each with honest
 
 ## Acceptance
 
-- [ ] Everything on the port CLI branch is re-run: content data is Japanese, tests describe the
-      Japanese course.
-- [ ] The landing site (en/da/ja), favicon, and og-image show みず/vand with hreflang en/da/ja.
-- [ ] Font tokens use Noto Sans JP for kana and Andika for Latin.
-- [ ] The active roadmap plan is this one (016); historical Persian plans stay untouched.
-- [ ] `npm run verify` is green after the port (including corrected site RTL assertion).
+- [x] Everything on the port CLI branch is re-run: content data is Japanese, tests describe the
+      Japanese course (612 unit tests, 119 e2e, 2026-08-21).
+- [x] The landing site (en/da/ja), favicon, and og-image show みず/vand with hreflang en/da/ja.
+- [x] Font tokens use Noto Sans JP for kana and Andika for Latin (`--font-ja` in
+      `src/styles/tokens.css`, `fonts.css` @font-face).
+- [x] The active roadmap plan is this one (016); historical Persian plans stay untouched.
+- [x] `npm run verify` is green after the port (including corrected site RTL assertion), with the
+      LTR fix landed in e8b683a the same day.
