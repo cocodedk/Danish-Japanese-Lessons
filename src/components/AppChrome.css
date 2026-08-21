@@ -1,0 +1,3 @@
+.app-content {
+  padding-block-end: calc(3rem + env(safe-area-inset-bottom, 0px));
+}

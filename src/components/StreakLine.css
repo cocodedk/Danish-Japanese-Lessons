@@ -1,0 +1,22 @@
+/* One quiet line in the margin of the forside: Persian above, Danish below,
+   the way every pair in this app is set. */
+
+.streak-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+/* Spans the implicit rows the stack can fill: fa, pron, da. */
+.streak-line .progress-tick {
+  grid-row: 1 / span 3;
+}
+
+/* A resting streak is drawn a shade quieter — asleep, not gone. Nothing here
+   turns red: red is the teacher's correction pen, and there is no correction. */
+.streak-line--resting .streak-line__fa,
+.streak-line--resting .streak-line__da {
+  opacity: 0.82;
+}

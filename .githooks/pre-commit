@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+# Fast pre-commit gate: lint + typecheck only. The full gate (tests, build,
+# scripts/verify.sh) runs in the pre-push hook and CI — see .githooks/pre-push.
+
+npm run lint && npx tsc --noEmit

@@ -1,0 +1,95 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Deploy workflow: never cancel a run in flight — cancelling mid-deploy can leave
+# GitHub Pages half-published. Runs serialize instead of racing. See
+# ~/.claude-personal/skills/github-setup/references/ci-cd-git-gotchas.md
+# ("Use cancel-in-progress: true only on PR CI, never on deploy/publish").
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine release version
+        id: release
+        run: node scripts/release-version.mjs >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the app
+        run: npm run build
+        env:
+          DPL_APP_VERSION: ${{ github.event_name == 'push' && steps.release.outputs.version || '' }}
+
+      - name: Compose the published site
+        run: |
+          set -eu
+          mkdir -p _site
+          cp -r website/. _site/
+          # og-image.html is a build source for og.png (references Google
+          # Fonts to render); it is not a page and must not be published.
+          rm -f _site/og-image.html
+          cp llms.txt _site/llms.txt
+          mkdir -p _site/app
+          cp -r dist/. _site/app/
+          # Shared self-hosted fonts for the landing pages (the app has its own
+          # copy under _site/app/fonts/, produced by the Vite build above from
+          # the same public/fonts/ source — see docs/plans/001-scaffold-app.md).
+          mkdir -p _site/fonts
+          cp -r public/fonts/. _site/fonts/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+
+      - name: Publish GitHub release
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+          RELEASE_VERSION: ${{ steps.release.outputs.version }}
+        run: |
+          set -eu
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "Release $RELEASE_TAG already exists."
+            exit 0
+          fi
+          gh release create "$RELEASE_TAG" \
+            --target "$GITHUB_SHA" \
+            --title "Version $RELEASE_VERSION" \
+            --generate-notes

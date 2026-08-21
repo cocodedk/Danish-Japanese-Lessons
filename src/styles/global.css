@@ -1,0 +1,106 @@
+/* Minimal reset + base styling so the tokens actually apply to the page.
+   Mobile-first; no horizontal scroll down to 360px. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  padding-block-start: env(safe-area-inset-top, 0px);
+  padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-latin);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.persistence-notice {
+  margin: 0;
+  padding: 0.5rem var(--page-gutter);
+  border-block-end: 1px solid var(--rule);
+  background: var(--card);
+  color: var(--ink);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 48rem) {
+  body {
+    /* The paper sheet remains visually finite on a large desk. */
+    background: var(--card);
+  }
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+/* Browsers otherwise turn visited, unstyled links purple. App links keep one
+   clear pen-blue in every state; component rules may still style buttons. */
+:where(a:link, a:visited) {
+  color: var(--blue);
+}
+
+@media (hover: hover) {
+  :where(a:hover) {
+    color: var(--blue-hover);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* RouteEffects focuses the destination heading for screen-reader and keyboard
+   orientation. A -1 heading is not an interactive focus target, so the
+   programmatic focus should not look like a selected control. */
+main h1[tabindex='-1']:focus {
+  outline: none;
+  box-shadow: inset 0 -2px var(--blue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

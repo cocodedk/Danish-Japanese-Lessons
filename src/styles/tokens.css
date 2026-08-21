@@ -1,0 +1,124 @@
+/* Design tokens transcribed from docs/design/ART-DIRECTION.md — the notebook
+   ("دفتر مشق") palette, type, and app-specific spacing rules. Light + dark
+   paper both ship from day one via prefers-color-scheme.
+
+   The palette is declared once as raw -*-light / -*-dark values, then bound to
+   the semantic tokens the components use. `.scheme-light` / `.scheme-dark`
+   bind the same values on a subtree, which is how #/kit shows both schemes on
+   one page. This file is the only place a colour or font-family literal lives. */
+
+:root {
+  /* Palette — raw values */
+  --paper-light: #f7f2e9;
+  --ink-light: #26211b;
+  /* P12 deepens the original pen colours so normal-size text reaches the
+     selected WCAG AAA 7:1 contrast target on both paper and cards. */
+  --red-light: #941520;
+  --blue-light: #174488;
+  --rule-light: #c7d3e2;
+  --card-light: #efe8da;
+  /* The gold-star sticker, the one celebration colour ART-DIRECTION names
+     outside the palette table («ستارهٔ طلایی»). Used for that sticker only. */
+  --gold-light: #b8862b;
+  /* Latin sound hints on the keyboard keys — the pencil orange. */
+  --orange-light: #793500;
+
+  /* Deep berry paper with pink ink accents. Cyan remains the secondary pen
+     colour so links and focus are distinct from rewards and corrections. */
+  --paper-dark: #240b1a;
+  --ink-dark: #fff2f8;
+  --red-dark: #ff9dcc;
+  --blue-dark: #9be8e3;
+  --rule-dark: #75405e;
+  --card-dark: #351126;
+  --gold-dark: #ffd479;
+  --orange-dark: #ffc38f;
+
+  /* Literal colors used as lesson content, independent of the UI scheme. */
+  --swatch-red: #d32f2f;
+  --swatch-blue: #1976d2;
+  --swatch-green: #2e7d32;
+  --swatch-yellow: #f7c948;
+  --swatch-black: #171717;
+  --swatch-white: #fff;
+  --swatch-orange: #ef7d00;
+  --swatch-pink: #ec5f91;
+
+  /* Type — self-hosted, see src/styles/fonts.css */
+  --font-latin: 'Andika', 'Segoe UI', system-ui, sans-serif;
+  --font-fa: 'Vazirmatn', 'Noto Naskh Arabic', system-ui, sans-serif;
+  --font-naskh: 'Noto Naskh Arabic', 'Vazirmatn', serif;
+
+  /* App-specific spacing (docs/design/ART-DIRECTION.md "App-specific tokens") */
+  --pane-fa-height: 55dvh;
+  --tap-min: 44px;
+
+  /* Responsive content measures. Wide screens reveal relationships; they do
+     not stretch a phone composition until its controls drift apart. */
+  --shell-max: 80rem;
+  --reading-max: 42rem;
+  --task-max: 52rem;
+  --specimen-max: 34rem;
+  --keyboard-max: 34rem;
+  --rail-min: 18rem;
+  --rail-max: 24rem;
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+
+  /* Notebook ruling: one rule every --rule-step, shifted so the baseline of
+     text set at that line-height lands on the rule. */
+  --rule-step: 2.25rem;
+  --rule-shift: 1.625rem;
+
+  /* Where the teacher's red stops, measured down from the top of the line box
+     in em, tuned against Noto Naskh Arabic at line-height 2. --madde-cut is
+     the above-the-line cut (مد، زبر، پیش) and matches website/styles.css;
+     --zir-cut is the below-the-baseline one (زیر). */
+  --madde-cut: 0.54em;
+  --zir-cut: 1.3em;
+}
+
+/* Semantic tokens — light is the default binding. */
+:root,
+.scheme-light {
+  --paper: var(--paper-light);
+  --ink: var(--ink-light);
+  --red: var(--red-light);
+  --blue: var(--blue-light);
+  --rule: var(--rule-light);
+  --card: var(--card-light);
+  --gold: var(--gold-light);
+  --orange: var(--orange-light);
+  --blue-hover: color-mix(in srgb, var(--blue) 85%, var(--ink));
+  color-scheme: light;
+}
+
+/* :not(.scheme-light) so an explicit light scope on <html> still wins here —
+   the .scheme-* classes below only outrank this rule on descendants. */
+@media (prefers-color-scheme: dark) {
+  :root:not(.scheme-light) {
+    /* Deep berry paper, shared with the explicit dark control. */
+    --paper: var(--paper-dark);
+    --ink: var(--ink-dark);
+    --red: var(--red-dark);
+    --blue: var(--blue-dark);
+    --rule: var(--rule-dark);
+    --card: var(--card-dark);
+    --gold: var(--gold-dark);
+    --orange: var(--orange-dark);
+    --blue-hover: color-mix(in srgb, var(--blue) 85%, var(--ink));
+    color-scheme: dark;
+  }
+}
+
+.scheme-dark {
+  --paper: var(--paper-dark);
+  --ink: var(--ink-dark);
+  --red: var(--red-dark);
+  --blue: var(--blue-dark);
+  --rule: var(--rule-dark);
+  --card: var(--card-dark);
+  --gold: var(--gold-dark);
+  --orange: var(--orange-dark);
+  --blue-hover: color-mix(in srgb, var(--blue) 85%, var(--ink));
+  color-scheme: dark;
+}

@@ -1,0 +1,80 @@
+import { useState } from 'react'
+import { Navigate } from 'react-router-dom'
+import { LessonSheet, BarLink } from '../components/LessonSheet'
+import { NameWalkthrough } from '../components/NameWalkthrough'
+import { NameAssembly } from '../components/NameAssembly'
+import { Celebration } from '../components/Celebration'
+import { RewardOverlays } from '../components/RewardOverlays'
+import { ProgressTick } from '../components/ProgressTick'
+import { getProfile } from '../progress/profile'
+import { isNameLessonDone, markNameLessonDone } from '../progress/nameLesson'
+import { useCelebration } from '../rewards/useCelebration'
+import { WRITE_NAME_ENTRY } from '../name/copy'
+import { CompactPhraseRow } from '../components/EntryRenderers'
+import { PersonalNameCompanion } from '../components/PersonalName'
+import './name.css'
+
+/**
+ * «نامِ خود را بنویس» — the lesson the whole app has been building towards: the
+ * learner reads their own name, letter by letter, and then writes it. It exists
+ * only for a learner who has a spelling; without one there is nothing here to
+ * teach, and nothing anywhere that mentions it. Plan 006, step 5.
+ */
+export default function NameLesson() {
+  const [profile] = useState(getProfile)
+  const [cleared, setCleared] = useState(isNameLessonDone)
+  const celebration = useCelebration()
+
+  const { faSpelling, name } = profile
+  if (!faSpelling) {
+    return <Navigate to="/kursus" replace />
+  }
+
+  /**
+   * The name is finished. It is worth a full page the first time and nothing
+   * after that — the lesson is as playable as the learner likes, and playing it
+   * twice is practice, not a second wage. Read from storage rather than from
+   * `cleared`, so a reload cannot pay for it again either.
+   */
+  function finish() {
+    const paid = isNameLessonDone()
+    markNameLessonDone()
+    setCleared(true)
+    celebration.cheer(paid ? 'replay' : 'page')
+  }
+
+  return (
+    <LessonSheet className="lesson--name" title="Skriv dit navn" bar={<BarLink to="/">Til forsiden</BarLink>}>
+      <CompactPhraseRow entry={WRITE_NAME_ENTRY} />
+      <p className="alphabet__lead">
+        Dit navn, bogstav for bogstav. Se først hvordan hvert bogstav skifter form, når det binder
+        til naboen. Sæt det så sammen selv.
+      </p>
+
+      <PersonalNameCompanion spelling={faSpelling} original={name} className="name__preview" />
+
+      <div className="name__practice">
+        <section>
+          <h2 className="alphabet__section-title">Bogstav for bogstav</h2>
+          <NameWalkthrough spelling={faSpelling} />
+        </section>
+        <NameAssembly spelling={faSpelling} onDone={finish} />
+      </div>
+
+      {celebration.reward !== null && (
+        <Celebration
+          reward={celebration.reward}
+          tickLabel="Klaret"
+          personalName={name ? { spelling: faSpelling, original: name } : undefined}
+        />
+      )}
+      {cleared && celebration.reward === null && (
+        <p className="name__done">
+          <ProgressTick granted label="Klaret" />
+          <span>Klaret</span>
+        </p>
+      )}
+      <RewardOverlays celebration={celebration} />
+    </LessonSheet>
+  )
+}

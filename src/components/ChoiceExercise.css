@@ -1,0 +1,116 @@
+/* The exercise card. Two columns of big tap targets so the whole round works
+   with one thumb at 360px, and nothing about a wrong answer is loud:
+   no red cross, no shake, no score. */
+
+.choice-exercise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  font-family: var(--font-latin);
+  inline-size: 100%;
+  max-inline-size: var(--task-max);
+  margin-inline: auto;
+}
+
+.choice-exercise__count {
+  margin: 0;
+  font-size: 0.9375rem;
+  opacity: 0.8;
+}
+
+.choice-exercise__prompt {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.choice-exercise__choices {
+  display: grid;
+  /* minmax(0, 1fr): a grid track's automatic minimum is its content's, which
+     for an unbroken Danish phrase can be wider than the column — the track
+     would rather overflow than shrink. Flooring it at 0 lets the column take
+     over and the text wrap inside the button instead (plan 004 round 2). */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  inline-size: 100%;
+  max-inline-size: 22rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.choice-exercise__choice {
+  position: relative;
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+  min-block-size: 5rem;
+  padding: 0.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--card);
+  font-family: var(--font-naskh);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 12vw, 3.25rem);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.choice-exercise__choice--selected {
+  border-color: var(--blue);
+  border-width: 2px;
+}
+
+.choice-exercise__state {
+  font-family: var(--font-latin);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* A choice written in Danish (plan 004's vocabulary rounds): Latin type at a
+   body-text scale, wrapping normally over as many lines as a gloss needs —
+   never the huge single-glyph Naskh sizing above, which a whole phrase like
+   "den, det (derovre)" cannot fit on one line. min-block-size above still
+   applies, so the tap target never drops under --tap-min. */
+.choice-exercise__choice[lang='da'] {
+  font-family: var(--font-latin);
+  font-size: clamp(1.125rem, 4vw, 1.375rem);
+  line-height: 1.3;
+  white-space: normal;
+  word-break: normal;
+}
+
+/* The teacher's pen marking the right one. */
+.choice-exercise__choice--right {
+  border-color: var(--red);
+  border-width: 2px;
+}
+
+.choice-exercise__feedback {
+  min-block-size: 2.5rem;
+  inline-size: min(100%, 34rem);
+  scroll-margin-block-start: 0.5rem;
+}
+
+.choice-exercise__again {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.choice-exercise__done {
+  gap: 0.75rem;
+}
+
+@media (forced-colors: active) {
+  .choice-exercise__choice--right {
+    border-color: CanvasText;
+  }
+}

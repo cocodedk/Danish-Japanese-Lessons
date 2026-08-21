@@ -1,0 +1,152 @@
+.settings-corner {
+  position: fixed;
+  inset-block-start: max(0.75rem, env(safe-area-inset-top, 0px));
+  inset-inline-end: max(0.75rem, env(safe-area-inset-right, 0px));
+  z-index: 40;
+  font-family: var(--font-latin);
+}
+
+.settings-corner__toggle {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 1rem;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--ink) 16%, transparent);
+  cursor: pointer;
+}
+
+.settings-corner__gear {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.settings-corner__panel {
+  position: absolute;
+  inset-block-start: calc(100% + 0.5rem);
+  inset-inline-end: 0;
+  width: min(22rem, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
+  max-block-size: calc(100dvh - 5rem - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--card);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+.settings-corner__panel h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.settings-corner__panel label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.settings-corner__panel input {
+  min-height: var(--tap-min);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.settings-corner__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.settings-corner__actions button {
+  min-height: var(--tap-min);
+  min-width: var(--tap-min);
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--blue);
+  color: var(--paper);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.settings-corner__delete {
+  background: transparent;
+  color: var(--ink);
+}
+
+/* The whole row is the tap target, so the checkbox itself can stay checkbox-sized. */
+.settings-corner__sound {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: var(--tap-min);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.settings-corner__sound input {
+  min-height: 1.35rem;
+  inline-size: 1.35rem;
+  block-size: 1.35rem;
+  padding: 0;
+  accent-color: var(--blue);
+}
+
+.settings-corner__colors {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.settings-corner__colors select {
+  min-height: var(--tap-min);
+  inline-size: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.settings-corner__spelling {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.settings-corner__spelling-fa {
+  font-family: var(--font-naskh);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.settings-corner__link {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  color: var(--blue);
+  font-size: 1rem;
+}
+
+.settings-corner__privacy[lang='fa'] {
+  font-family: var(--font-fa);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
