@@ -139,7 +139,7 @@ test('typing remains keyboard-completable with enhanced targets', async ({ page 
   await page.getByRole('button', { name: 'chi' }).click()
   await page.getByRole('button', { name: 'chi' }).click()
   await page.getByRole('button', { name: 'Se efter' }).click()
-  await expect(page.getByText('Rigtigt')).toBeVisible()
+  await expect(page.locator('.celebration')).toBeVisible()
 })
 
 test('typing accepts a physical Japanese keyboard without disabling the on-screen board', async ({ page }) => {
@@ -151,7 +151,7 @@ test('typing accepts a physical Japanese keyboard without disabling the on-scree
   await expect(page.locator('.type__written')).toHaveText('ちち')
   await expect(page.getByRole('button', { name: 'chi' })).toBeVisible()
   await page.getByRole('button', { name: 'Se efter' }).click()
-  await expect(page.getByText('Rigtigt')).toBeVisible()
+  await expect(page.locator('.celebration')).toBeVisible()
 })
 
 test('a wrong typed attempt reveals teaching above the keyboard dock', async ({ page }) => {
