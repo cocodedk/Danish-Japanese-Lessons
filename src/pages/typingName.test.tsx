@@ -10,8 +10,8 @@ import { getTypeProgress } from '../progress/typing'
 import { freshTypingState, open, tap, write } from './typingHarness'
 import { NAME_PRAISE_ENTRY } from '../rewards/copy'
 
-const KATA = { name: 'Sara', faSpelling: 'サラ' }
-const HIRA = { name: 'Sara', faSpelling: 'さら' }
+const KATA = { name: 'Sara', jaSpelling: 'サラ' }
+const HIRA = { name: 'Sara', jaSpelling: 'さら' }
 
 freshTypingState()
 
@@ -64,17 +64,17 @@ describe('with a hiragana spelling the board can write', () => {
     ).toBeInTheDocument()
     const help = container.querySelector('details')!
     expect(help.open).toBe(false)
-    expect(screen.getByText(HIRA.faSpelling).closest('details')).toBe(help)
+    expect(screen.getByText(HIRA.jaSpelling).closest('details')).toBe(help)
   })
 
   it('celebrates by name and fills a page — once, however often it is written again', () => {
     setProfile(HIRA)
     open('#/lesson/navn/skriv')
 
-    write(HIRA.faSpelling)
+    write(HIRA.jaSpelling)
     tap('Se efter')
     expect(screen.getAllByText(NAME_PRAISE_ENTRY.ja).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(HIRA.faSpelling).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(HIRA.jaSpelling).length).toBeGreaterThan(0)
     expect(screen.getAllByText('Flot, Sara!').length).toBeGreaterThan(0)
 
     tap('Afslut runden')
@@ -83,7 +83,7 @@ describe('with a hiragana spelling the board can write', () => {
     expect(getRewards().level).toBeGreaterThan(1)
 
     open('#/lesson/navn/skriv')
-    write(HIRA.faSpelling)
+    write(HIRA.jaSpelling)
     tap('Se efter')
     tap('Afslut runden')
     expect(getRewards().points).toBe(afterFirst + 1)
@@ -102,7 +102,7 @@ describe('with a hiragana spelling the board can write', () => {
   })
 
   it('writes a two-part name with the space key', () => {
-    setProfile({ name: 'Anne Mette', faSpelling: 'あんね まり' })
+    setProfile({ name: 'Anne Mette', jaSpelling: 'あんね まり' })
     open('#/lesson/navn/skriv')
 
     write('あんね')
@@ -113,7 +113,7 @@ describe('with a hiragana spelling the board can write', () => {
   })
 
   it("names a missing mellemrum honestly, stopping before the two-part name's space", () => {
-    setProfile({ name: 'Anne Mette', faSpelling: 'あんね まり' })
+    setProfile({ name: 'Anne Mette', jaSpelling: 'あんね まり' })
     open('#/lesson/navn/skriv')
 
     write('あんね')

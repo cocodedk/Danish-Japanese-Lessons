@@ -23,19 +23,19 @@ function mission(id: string, unitId: string, wordId: string, trayOrder: number[]
 }
 
 export const childMissions: ChildMission[] = [
-  mission('salam', '2', 'salam', [2, 0, 3, 1]),
-  mission('man', '1', 'man', [1, 0]),
-  mission('to', '1', 'to', [1, 0]),
-  mission('dust', '2', 'dust', [2, 0, 3, 1]),
-  mission('ab', '1', 'ab', [1, 0]),
-  mission('nan', '1', 'nan', [1, 2, 0]),
-  mission('baba', '1', 'baba', [1, 2, 3, 0]),
-  mission('madar', '1', 'madar', [2, 0, 3, 1]),
-  mission('khane', '3', 'khane', [2, 0, 3, 1]),
-  mission('in', '1', 'in', [2, 0, 1]),
-  mission('an', '1', 'an', [1, 0]),
-  mission('ma', '1', 'ma', [1, 0]),
-  mission('u', '1', 'u', [1, 0]),
+  mission('konnichiwa', '2', 'konnichiwa', [2, 0, 3, 1]),
+  mission('watashi', '1', 'watashi', [1, 0]),
+  mission('anata', '1', 'anata', [1, 0]),
+  mission('tomodachi', '2', 'tomodachi', [2, 0, 3, 1]),
+  mission('mizu', '1', 'mizu', [1, 0]),
+  mission('pan', '1', 'pan', [1, 2, 0]),
+  mission('chichi', '1', 'chichi', [1, 2, 3, 0]),
+  mission('haha', '1', 'haha', [2, 0, 3, 1]),
+  mission('uchi', '3', 'uchi', [2, 0, 3, 1]),
+  mission('kore', '1', 'kore', [2, 0, 1]),
+  mission('are', '1', 'are', [1, 0]),
+  mission('minna', '1', 'minna', [1, 0]),
+  mission('neko', '5', 'neko', [1, 0]),
 ]
 
 export function findChildMission(id: string): ChildMission | undefined {

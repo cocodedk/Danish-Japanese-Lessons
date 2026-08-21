@@ -87,7 +87,7 @@ describe('reward engine — surprise gifts run on a schedule, never on chance', 
     let gift = null as ReturnType<typeof celebrate>['gift']
     for (let i = 0; i < 40 && !gift; i += 1) gift = celebrate('answer', DAY).gift
     expect(gift).not.toBeNull()
-    expect(gift?.entry.ja).toBe('یک تمرین جایزه!')
+    expect(gift?.entry.ja).toBe('ボーナス レッスン！')
     expect(gift?.entry.da).toBe('En bonusøvelse!')
   })
 

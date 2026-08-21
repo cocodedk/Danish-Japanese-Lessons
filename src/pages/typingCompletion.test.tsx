@@ -3,10 +3,10 @@ import { screen } from '@testing-library/react'
 import { getRewards } from '../rewards/engine'
 import { getTypeProgress } from '../progress/typing'
 import { findVocabUnit } from '../lessons/vocab'
-import { freshTypingState, finishTypeRound, keyFor, open, tap, write, written } from './typingHarness'
+import { freshTypingState, finishTypeRound, keyFor, open, tap, write, written, firstTypeableWord } from './typingHarness'
 
-const unit = findVocabUnit('1')!
-const first = unit.words[0]
+const unit = findVocabUnit('3')!
+const first = firstTypeableWord(unit)
 
 freshTypingState()
 
@@ -29,13 +29,14 @@ describe('finishing a typing round', () => {
 
 describe('the forside', () => {
   it('lists a writing round per unit, with how much of it is written', () => {
-    open('#/lesson/ord/1/skriv')
+    // Unit 3 is fully typeable — the count reflects words actually written.
+    open('#/lesson/ord/3/skriv')
     write(first.ja)
     tap('Se efter')
 
     open('#/')
     const round = screen.getAllByRole('link').find(
-      (link) => link.getAttribute('href') === '#/lesson/ord/1/skriv',
+      (link) => link.getAttribute('href') === '#/lesson/ord/3/skriv',
     )
     expect(round).toBeDefined()
     expect(round).toHaveTextContent(`1 af ${unit.words.length} skrevet`)

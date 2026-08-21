@@ -121,10 +121,10 @@ describe('the streak rests — it never resets', () => {
     const line = streakLine(getRewards(at(2026, 3, 15)).streak)
 
     expect(line.da).toBe('Træningen fortsætter stadig')
-    expect(line.ja).toBe('تمرین هنوز ادامه دارد')
+    expect(line.ja).toBe('れんしゅうは まだ つづくよ')
     expect(line.pron).toEqual({
-      da: 'tamrin hanuz edåme dårad',
-      ipa: 'tæmɾiːn hænuːz ʔedɒːme dɒːɾæd',
+      da: 'renshu wa mada tsuzuku yo',
+      ipa: 'ɾeɱɕɯː ɰa mada tsɯzɯkɯ jo',
     })
     for (const word of GUILT_WORDS) {
       expect(line.da.toLowerCase()).not.toContain(word)
@@ -140,7 +140,7 @@ describe('the streak rests — it never resets', () => {
     expect(streakLine(getRewards(at(2026, 3, 2, 12)).streak).da).toBe(
       'Træningen fortsætter',
     )
-    expect(streakLine(getRewards(at(2026, 3, 2, 12)).streak).ja).toBe('تمرین ادامه دارد')
+    expect(streakLine(getRewards(at(2026, 3, 2, 12)).streak).ja).toBe('れんしゅう つづけよう')
   })
 
 })

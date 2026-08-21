@@ -7,11 +7,12 @@ const SRC = join(process.cwd(), 'src')
 const APPROVED = new Set([
   'components/JaSpecimen.tsx',
   'components/JapaneseText.tsx',
+  'components/JapaneseKeyboard.tsx',
   'components/PersonalName.tsx',
   'components/ReadingCues.tsx',
   'components/LearnerJapaneseInput.tsx',
 ])
-const JAPANESE = /[\u0600-\u06FF]/u
+const JAPANESE = /[\u3040-\u30FF\u4E00-\u9FAF\u3000-\u303F\uFF66-\uFF9F]/u
 
 function tsxFiles(directory: string, prefix = ''): string[] {
   return readdirSync(directory, { withFileTypes: true }).flatMap((item) => {

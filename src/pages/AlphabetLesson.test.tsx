@@ -116,7 +116,7 @@ describe('a letter screen', () => {
   })
 
   it('marks the letters of a name once the profile spells one', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/alphabet/bogstav/sa')
     expect(screen.getByText('Dette bogstav er i dit navn')).toBeInTheDocument()
     expect(screen.getByText(NAME_LETTER_ENTRY.ja)).toBeInTheDocument()

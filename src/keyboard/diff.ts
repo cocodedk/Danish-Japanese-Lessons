@@ -8,7 +8,7 @@ import { ZWNJ, SPACE } from './buffer'
 
 export type DiffKind = 'match' | 'wrong' | 'missing' | 'extra'
 
-/** A space and a نیم‌فاصله have no letterform — calling either "a letter" is
+/** A space and a ZWNJ have no letterform — calling either "a letter" is
  *  simply wrong, not just unhelpful (critic round 1). */
 export type CellKind = 'letter' | 'space' | 'zwnj'
 
@@ -33,12 +33,12 @@ export interface Divergence {
 }
 
 /**
- * What both sides are compared as. اِعراب comes off first: the keyboard has no
+ * What both sides are compared as. Hand marks (゛ ゜) come off first: the keyboard has no
  * vowel-mark keys, so a word could never be typed with them, and requiring what
  * cannot be typed would fail every answer. Marks belong on teaching specimens,
  * not on the writing (CLAUDE.md, Japanese text rules).
  *
- * NFC first, so the precomposed آ and the ا + مد spelling of it compare as the
+ * NFC first, so a dakuten kana composed either way compares as the
  * one letter they are.
  */
 export function normalizeTyped(text: string): string {

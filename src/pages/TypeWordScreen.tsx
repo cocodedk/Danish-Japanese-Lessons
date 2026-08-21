@@ -3,6 +3,7 @@ import { BarLink } from '../components/LessonSheet'
 import { TypeExercise, type TypeTask } from '../components/TypeExercise'
 import { RewardOverlays } from '../components/RewardOverlays'
 import { findVocabUnit } from '../lessons/vocab'
+import { canType } from '../keyboard/layout'
 import { typeWordDone, payRound } from '../progress/typing'
 import { useCelebration } from '../rewards/useCelebration'
 import { TYPE_WORDS_ENTRY } from '../content/jaStrings'
@@ -22,13 +23,18 @@ export default function TypeWordScreen() {
     return <Navigate to="/kursus" replace />
   }
 
-  const tasks: TypeTask[] = unit.words.map((word) => ({
+  // The board teaches the 46 basic hiragana + ー. A word that needs a
+  // voiced kana (みず), a small kana (がっこう) or katakana (パン) cannot be
+  // written here, so the round only offers what the keyboard can produce.
+  const tasks: TypeTask[] = unit.words
+    .filter((word) => canType(word.ja))
+    .map((word) => ({
     id: word.id,
     entry: word.entry,
     promptDa: `Skriv ordet »${word.da}«`,
     pron: word.pron,
-    // The plain spelling, never the vocalized one: the keyboard has no
-    // اِعراب keys, so اِعراب can never be part of what is asked for.
+    // The plain spelling, never the vocalized one: the keyboard has no hand-mark keys, so a dakuten can never be
+    // part of what is asked for.
     answer: word.ja,
   }))
 

@@ -3,7 +3,7 @@ import { isValidJapaneseText, findJapaneseTextViolations } from './textRules'
 import { lessons } from './registry'
 import { JAPANESE_UI_STRINGS } from '../content/jaStrings'
 import { ORIENTATION_POINTS, ORIENTATION_ENTRIES } from '../content/orientation'
-import { NAME_OVERRIDE_FA_STRINGS } from '../name/overrides'
+import { NAME_OVERRIDE_JA_STRINGS } from '../name/overrides'
 import { GUARD_FIXTURE_NAMES } from '../name/guardFixtures'
 import { suggestSpellings } from '../name/transliterate'
 import type { Lesson, Letter, VowelMark, WordCard } from './types'
@@ -99,7 +99,7 @@ describe('Japanese text-rule guard', () => {
   })
 
   it('walks the name override table — a mistyped Arabic letter in a name fails here', () => {
-    expect(NAME_OVERRIDE_FA_STRINGS.length).toBeGreaterThan(40)
+    expect(NAME_OVERRIDE_JA_STRINGS.length).toBeGreaterThan(40)
     for (const spelling of NAME_OVERRIDE_JA_STRINGS) {
       expect(findJapaneseTextViolations(spelling), spelling).toEqual([])
     }
@@ -152,7 +152,12 @@ describe('Japanese text-rule guard', () => {
     const fixedLesson: Lesson = {
       ...badLesson,
       id: 'fixture-letter-fixed',
-      items: [{ ...bad, glyph: 'か', name: { ja: 'か', da: 'ka' } }],
+      items: [{
+        ...bad,
+        glyph: 'か',
+        name: { ja: 'か', da: 'ka' },
+        forms: { isolated: 'か', initial: 'か', medial: 'か', final: 'か' },
+      }],
     }
     const fixedViolations = collectJapaneseStrings(fixedLesson).flatMap(findJapaneseTextViolations)
     expect(fixedViolations).toEqual([])

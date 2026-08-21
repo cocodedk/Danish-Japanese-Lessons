@@ -18,10 +18,10 @@ describe('review session composition', () => {
     expect(tasks).toHaveLength(4)
     expect(tasks.map((task) => task.mode)).toEqual(['new', 'new', 'new', 'new'])
     expect(tasks.map((task) => task.question.entry.id)).toEqual([
-      'alphabet-alef-madde',
-      'alphabet-letter-alef',
-      'alphabet-letter-be',
-      'alphabet-letter-dal',
+      'alphabet-letter-a',
+      'alphabet-letter-i',
+      'alphabet-letter-u',
+      'alphabet-letter-e',
     ])
     expect(tasks.every((task) => task.question.itemId === task.question.entry.id)).toBe(true)
   })
@@ -41,16 +41,16 @@ describe('review session composition', () => {
   })
 
   it('offers a due-only session when the learner chooses only repetition', () => {
-    introduceForReview('alphabet-letter-be', at('2026-08-06'))
+    introduceForReview('alphabet-letter-a', at('2026-08-06'))
 
     const tasks = reviewSessionTasks(at('2026-08-06'), { includeNew: false })
     expect(tasks).toHaveLength(1)
     expect(tasks[0]).toMatchObject({ mode: 'due' })
-    expect(tasks[0].question.entry.id).toBe('alphabet-letter-be')
+    expect(tasks[0].question.entry.id).toBe('alphabet-letter-a')
   })
 
   it('uses an eligible connected reading as transfer instead of the final new item', () => {
-    for (const id of ['vocabulary-1-ab', 'vocabulary-1-bad']) {
+    for (const id of ['vocabulary-1-mizu', 'vocabulary-1-kaze']) {
       introduceForReview(id, at('2026-08-05'))
       recordReview(id, 'correct', at('2026-08-05'))
     }
@@ -64,25 +64,25 @@ describe('review session composition', () => {
   })
 
   it('does not transfer text whose source words were only exposed', () => {
-    introduceForReview('vocabulary-1-ab', at('2026-08-06'))
-    introduceForReview('vocabulary-1-bad', at('2026-08-06'))
+    introduceForReview('vocabulary-1-mizu', at('2026-08-06'))
+    introduceForReview('vocabulary-1-kaze', at('2026-08-06'))
 
     expect(reviewSessionTasks(at('2026-08-06')).some((task) => task.mode === 'transfer')).toBe(false)
   })
 
-  it('alternates letter-form and vocabulary-direction retrieval across stages', () => {
-    for (const id of ['alphabet-letter-be', 'vocabulary-1-ab']) {
+  it('alternates kana-match and vocabulary-direction retrieval across stages', () => {
+    for (const id of ['alphabet-letter-a', 'vocabulary-1-mizu']) {
       introduceForReview(id, at('2026-08-05'))
       recordReview(id, 'correct', at('2026-08-05'))
     }
 
     const ids = dueReviewQuestions(at('2026-08-06')).map((question) => question.id)
-    expect(ids).toContain('match-be')
-    expect(ids).toContain('par-1-ab')
+    expect(ids).toContain('match-a')
+    expect(ids).toContain('par-1-mizu')
   })
 
   it('interleaves due alphabet and vocabulary work when both are available', () => {
-    for (const id of ['alphabet-letter-be', 'alphabet-letter-dal', 'vocabulary-1-ab', 'vocabulary-1-bad']) {
+    for (const id of ['alphabet-letter-a', 'alphabet-letter-i', 'vocabulary-1-mizu', 'vocabulary-1-kaze']) {
       introduceForReview(id, at('2026-08-06'))
     }
 
@@ -93,7 +93,7 @@ describe('review session composition', () => {
   })
 
   it('varies choice position reproducibly by local day', () => {
-    introduceForReview('alphabet-letter-be', at('2026-08-06'))
+    introduceForReview('alphabet-letter-a', at('2026-08-06'))
     const slot = (day: string) => {
       const question = dueReviewQuestions(at(day))[0]
       return question.choices.findIndex((choice) => choice.id === question.answerId)

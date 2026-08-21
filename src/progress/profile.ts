@@ -1,10 +1,10 @@
-// The learner's profile: `djl.v1.profile`. `faSpelling` arrives with plan 006;
+// The learner's profile: `djl.v1.profile`. `jaSpelling` arrives with plan 006;
 // kept optional here so the field name is stable from day one.
 import { readJSON, writeJSON, keyExists } from './storage'
 
 export interface Profile {
   name?: string
-  faSpelling?: string
+  jaSpelling?: string
 }
 
 const KEY = 'profile'
@@ -37,13 +37,13 @@ export function hasProfileRecord(): boolean {
 
 /**
  * Removes the name and its Japanese spelling, keeping the rest of the profile
- * (and its "seen" record) intact. The two always go together: `faSpelling` is
+ * (and its "seen" record) intact. The two always go together: `jaSpelling` is
  * the spelling OF the name, so a name that is gone cannot still have one —
  * that is what keeps the greeting, the badges and the mini-lesson agreeing.
  */
 export function clearName(): void {
   const next: Profile = { ...getProfile() }
   delete next.name
-  delete next.faSpelling
+  delete next.jaSpelling
   setProfile(next)
 }

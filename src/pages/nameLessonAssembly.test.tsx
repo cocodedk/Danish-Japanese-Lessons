@@ -14,7 +14,7 @@ freshAppPerTest()
 
 describe('the name-assembly exercise', () => {
   it('rebuilds the name from a bank of its own letters plus two strangers', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     const tray = document.querySelectorAll('.name-assembly .letter-bank__tile')
@@ -29,7 +29,7 @@ describe('the name-assembly exercise', () => {
   })
 
   it('a kana tapped too early does not stick, and both languages say to use it later', async () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     tapTile('ラ') // the name starts with サ, so this one waits its turn
@@ -47,13 +47,12 @@ describe('the name-assembly exercise', () => {
   })
 
   it('does not complete or reward the lesson when a taught answer is skipped', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
-    tapTile('ラ')
+    tapTile('ラ') // the name starts with サ, so this one waits its turn
     fireEvent.click(screen.getByRole('button', { name: 'Næste' }))
-    tapTile('サ')
-    tapTile('ラ')
+    tapTile('ラ') // the skip placed サ; finishing with ラ is still a skip
 
     expect(isNameLessonDone()).toBe(false)
     expect(getRewards().points).toBe(0)
@@ -61,7 +60,7 @@ describe('the name-assembly exercise', () => {
   })
 
   it('says which kind of wrong tap it was — a kana waiting its turn, or a stranger', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     const stranger = assemblyBank('サラ').find((tile) => !nameGlyphs('サラ').includes(tile.glyph))
@@ -80,7 +79,7 @@ describe('the name-assembly exercise', () => {
   })
 
   it('celebrates with a static phrase plus a separate personal-name segment', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     assemble('サラ')
@@ -93,7 +92,7 @@ describe('the name-assembly exercise', () => {
   })
 
   it('remembers it was cleared, and can be played again', () => {
-    setProfile({ name: 'Babak', faSpelling: 'ババク' })
+    setProfile({ name: 'Babak', jaSpelling: 'ババク' })
     open('#/lesson/navn')
     assemble('ババク')
     expect(isNameLessonDone()).toBe(true)
@@ -106,7 +105,7 @@ describe('the name-assembly exercise', () => {
   })
 
   it('praises every finish but pays for the lesson once — the letter rule, for a lesson', () => {
-    setProfile({ name: 'Babak', faSpelling: 'ババク' })
+    setProfile({ name: 'Babak', jaSpelling: 'ババク' })
     open('#/lesson/navn')
     assemble('ババク')
 

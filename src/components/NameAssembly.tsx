@@ -25,7 +25,7 @@ export interface NameAssemblyProps {
  * Put the name back together from a tray of its own letters and two strangers.
  * The letters join as they land, so the learner watches the shapes change the
  * way the walkthrough just explained. A wrong letter costs nothing: it simply
- * does not stick, and the line underneath says «دوباره» — try again.
+ * does not stick, and the line underneath says «igen» — try again.
  */
 export function NameAssembly({ spelling, onDone }: NameAssemblyProps) {
   const target = useMemo(() => nameGlyphs(spelling), [spelling])

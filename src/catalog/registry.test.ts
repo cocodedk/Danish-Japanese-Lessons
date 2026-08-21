@@ -48,7 +48,7 @@ describe('the typed Japanese catalog', () => {
         expect(findJapaneseTextViolations(entry.jaMarked), entry.id).toEqual([])
         expect(withoutMarks(entry.jaMarked), entry.id).toBe(entry.ja)
       }
-      if (/[۰-۹]/u.test(entry.ja)) expect(entry.kind, entry.id).toBe('symbol')
+      if (/[一-十]/u.test(entry.ja)) expect(entry.kind, entry.id).toBe('symbol')
       expect(entry.ja, entry.id).not.toMatch(/\s\u200c|\u200c\s/u)
     }
   })

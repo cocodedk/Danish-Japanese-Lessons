@@ -46,7 +46,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     expect(preview()).toBe('ババク')
 
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile()).toEqual({ name: 'Babak', faSpelling: 'ババク' })
+    expect(getProfile()).toEqual({ name: 'Babak', jaSpelling: 'ババク' })
     expect(screen.getByText(GREETING_WITH_NAME_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('ババク')).toBeInTheDocument()
     expect(screen.getByText('Hej Babak!')).toBeInTheDocument()
@@ -60,7 +60,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     fireEvent.click(screen.getByRole('button', { name: 'セレン' }))
     expect(preview()).toBe('セレン')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('セレン')
+    expect(getProfile().jaSpelling).toBe('セレン')
   })
 
   it('edits letter by letter from the bank — tap to place, and one step back', () => {
@@ -75,7 +75,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     tapLetter('ミ')
     expect(preview()).toBe('サミ')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('サミ')
+    expect(getProfile().jaSpelling).toBe('サミ')
   })
 
   it('writes a spelling by hand when the engine has nothing to suggest, and never crashes on it', () => {
@@ -86,10 +86,10 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     expect(preview()).toBe('')
 
     fireEvent.click(screen.getByText('Åbn bogstaverne'))
-    tapLetter('バ')
-    tapLetter('ウ')
+    tapLetter('タ')
+    tapLetter('マ')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('バウ')
+    expect(getProfile().jaSpelling).toBe('タマ')
   })
 
   it('handles æ/ø/å names end to end', () => {
@@ -98,13 +98,13 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     expect(screen.getByRole('button', { name: 'セーレン' })).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile().faSpelling).toBe('セーレン')
+    expect(getProfile().jaSpelling).toBe('セーレン')
     expect(screen.getByText(GREETING_WITH_NAME_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('セーレン')).toBeInTheDocument()
   })
 
   it('deletes the spelling without touching the name', () => {
-    setProfile({ name: 'Babak', faSpelling: 'ババク' })
+    setProfile({ name: 'Babak', jaSpelling: 'ババク' })
     open('#/dit-navn')
 
     fireEvent.click(screen.getByText('Slet stavemåden'))
@@ -126,7 +126,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
     expect(screen.getByRole('link', { name: 'Skriv navnet på japansk' })).toBeInTheDocument()
 
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/')
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
     const link = screen.getByRole('link', { name: 'Ret navnet på japansk' })
@@ -134,7 +134,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
   })
 
   it('says in both languages that the name stays on this device', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/')
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
 
@@ -153,7 +153,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     tapLetter('メ')
     fireEvent.click(screen.getByText('Gem stavemåden'))
 
-    expect(getProfile().faSpelling).toBe('アンネ メッテ メ')
+    expect(getProfile().jaSpelling).toBe('アンネ メッテ メ')
   })
 
   it('gives every letter and every choice a thumb-sized target', () => {
@@ -164,7 +164,7 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
   })
 
   it('drops a spelling that belongs to a name the learner has replaced', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/')
 
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))

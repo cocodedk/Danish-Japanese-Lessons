@@ -1,0 +1,5288 @@
+{
+  "schemaVersion": 2,
+  "status": "draft-awaiting-native-review",
+  "source": "src/catalog/registry.ts",
+  "instructions": "Generate locally. Publish only after one named native Japanese reviewer approves the clip.",
+  "rows": [
+    {
+      "clipId": "alphabet-letter-a",
+      "entryId": "alphabet-letter-a",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "あ",
+      "synthesisText": "あ",
+      "plainJapanese": "あ",
+      "danishMeaning": "a",
+      "soundDa": "a i \"kat\"",
+      "ipa": "a",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-a.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-a",
+      "entryId": "alphabet-name-a",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "あ",
+      "synthesisText": "あ",
+      "plainJapanese": "あ",
+      "danishMeaning": "bogstavnavnet a",
+      "soundDa": "a",
+      "ipa": "a",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-a.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-i",
+      "entryId": "alphabet-letter-i",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "い",
+      "synthesisText": "い",
+      "plainJapanese": "い",
+      "danishMeaning": "i",
+      "soundDa": "i i \"vi\"",
+      "ipa": "i",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-i.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-i",
+      "entryId": "alphabet-name-i",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "い",
+      "synthesisText": "い",
+      "plainJapanese": "い",
+      "danishMeaning": "bogstavnavnet i",
+      "soundDa": "i",
+      "ipa": "i",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-i.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-u",
+      "entryId": "alphabet-letter-u",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "う",
+      "synthesisText": "う",
+      "plainJapanese": "う",
+      "danishMeaning": "u",
+      "soundDa": "u i \"du\"",
+      "ipa": "ɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-u.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-u",
+      "entryId": "alphabet-name-u",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "う",
+      "synthesisText": "う",
+      "plainJapanese": "う",
+      "danishMeaning": "bogstavnavnet u",
+      "soundDa": "u",
+      "ipa": "ɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-u.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-e",
+      "entryId": "alphabet-letter-e",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "え",
+      "synthesisText": "え",
+      "plainJapanese": "え",
+      "danishMeaning": "e",
+      "soundDa": "e i \"let\"",
+      "ipa": "e",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-e.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-e",
+      "entryId": "alphabet-name-e",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "え",
+      "synthesisText": "え",
+      "plainJapanese": "え",
+      "danishMeaning": "bogstavnavnet e",
+      "soundDa": "e",
+      "ipa": "e",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-e.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-o",
+      "entryId": "alphabet-letter-o",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "お",
+      "synthesisText": "お",
+      "plainJapanese": "お",
+      "danishMeaning": "o",
+      "soundDa": "o i \"foto\"",
+      "ipa": "o",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-o.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-o",
+      "entryId": "alphabet-name-o",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "お",
+      "synthesisText": "お",
+      "plainJapanese": "お",
+      "danishMeaning": "bogstavnavnet o",
+      "soundDa": "o",
+      "ipa": "o",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-o.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ka",
+      "entryId": "alphabet-letter-ka",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "か",
+      "synthesisText": "か",
+      "plainJapanese": "か",
+      "danishMeaning": "ka",
+      "soundDa": "ka",
+      "ipa": "ka",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ka.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ka",
+      "entryId": "alphabet-name-ka",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "か",
+      "synthesisText": "か",
+      "plainJapanese": "か",
+      "danishMeaning": "bogstavnavnet ka",
+      "soundDa": "ka",
+      "ipa": "ka",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ka.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ki",
+      "entryId": "alphabet-letter-ki",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "き",
+      "synthesisText": "き",
+      "plainJapanese": "き",
+      "danishMeaning": "ki",
+      "soundDa": "ki",
+      "ipa": "ki",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ki.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ki",
+      "entryId": "alphabet-name-ki",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "き",
+      "synthesisText": "き",
+      "plainJapanese": "き",
+      "danishMeaning": "bogstavnavnet ki",
+      "soundDa": "ki",
+      "ipa": "ki",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ki.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ku",
+      "entryId": "alphabet-letter-ku",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "く",
+      "synthesisText": "く",
+      "plainJapanese": "く",
+      "danishMeaning": "ku",
+      "soundDa": "ku",
+      "ipa": "kɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ku.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ku",
+      "entryId": "alphabet-name-ku",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "く",
+      "synthesisText": "く",
+      "plainJapanese": "く",
+      "danishMeaning": "bogstavnavnet ku",
+      "soundDa": "ku",
+      "ipa": "kɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ku.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ke",
+      "entryId": "alphabet-letter-ke",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "け",
+      "synthesisText": "け",
+      "plainJapanese": "け",
+      "danishMeaning": "ke",
+      "soundDa": "ke",
+      "ipa": "ke",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ke.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ke",
+      "entryId": "alphabet-name-ke",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "け",
+      "synthesisText": "け",
+      "plainJapanese": "け",
+      "danishMeaning": "bogstavnavnet ke",
+      "soundDa": "ke",
+      "ipa": "ke",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ke.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ko",
+      "entryId": "alphabet-letter-ko",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "こ",
+      "synthesisText": "こ",
+      "plainJapanese": "こ",
+      "danishMeaning": "ko",
+      "soundDa": "ko",
+      "ipa": "ko",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ko.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ko",
+      "entryId": "alphabet-name-ko",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "こ",
+      "synthesisText": "こ",
+      "plainJapanese": "こ",
+      "danishMeaning": "bogstavnavnet ko",
+      "soundDa": "ko",
+      "ipa": "ko",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ko.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-sa",
+      "entryId": "alphabet-letter-sa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "さ",
+      "synthesisText": "さ",
+      "plainJapanese": "さ",
+      "danishMeaning": "sa",
+      "soundDa": "sa",
+      "ipa": "sa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-sa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-sa",
+      "entryId": "alphabet-name-sa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "さ",
+      "synthesisText": "さ",
+      "plainJapanese": "さ",
+      "danishMeaning": "bogstavnavnet sa",
+      "soundDa": "sa",
+      "ipa": "sa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-sa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-shi",
+      "entryId": "alphabet-letter-shi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "し",
+      "synthesisText": "し",
+      "plainJapanese": "し",
+      "danishMeaning": "shi",
+      "soundDa": "sj i \"sjal\"",
+      "ipa": "ɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-shi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-shi",
+      "entryId": "alphabet-name-shi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "し",
+      "synthesisText": "し",
+      "plainJapanese": "し",
+      "danishMeaning": "bogstavnavnet shi",
+      "soundDa": "shi",
+      "ipa": "ɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-shi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-su",
+      "entryId": "alphabet-letter-su",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "す",
+      "synthesisText": "す",
+      "plainJapanese": "す",
+      "danishMeaning": "su",
+      "soundDa": "su",
+      "ipa": "sɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-su.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-su",
+      "entryId": "alphabet-name-su",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "す",
+      "synthesisText": "す",
+      "plainJapanese": "す",
+      "danishMeaning": "bogstavnavnet su",
+      "soundDa": "su",
+      "ipa": "sɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-su.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-se",
+      "entryId": "alphabet-letter-se",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "せ",
+      "synthesisText": "せ",
+      "plainJapanese": "せ",
+      "danishMeaning": "se",
+      "soundDa": "se",
+      "ipa": "se",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-se.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-se",
+      "entryId": "alphabet-name-se",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "せ",
+      "synthesisText": "せ",
+      "plainJapanese": "せ",
+      "danishMeaning": "bogstavnavnet se",
+      "soundDa": "se",
+      "ipa": "se",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-se.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-so",
+      "entryId": "alphabet-letter-so",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "そ",
+      "synthesisText": "そ",
+      "plainJapanese": "そ",
+      "danishMeaning": "so",
+      "soundDa": "so",
+      "ipa": "so",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-so.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-so",
+      "entryId": "alphabet-name-so",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "そ",
+      "synthesisText": "そ",
+      "plainJapanese": "そ",
+      "danishMeaning": "bogstavnavnet so",
+      "soundDa": "so",
+      "ipa": "so",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-so.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ta",
+      "entryId": "alphabet-letter-ta",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "た",
+      "synthesisText": "た",
+      "plainJapanese": "た",
+      "danishMeaning": "ta",
+      "soundDa": "ta",
+      "ipa": "ta",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ta.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ta",
+      "entryId": "alphabet-name-ta",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "た",
+      "synthesisText": "た",
+      "plainJapanese": "た",
+      "danishMeaning": "bogstavnavnet ta",
+      "soundDa": "ta",
+      "ipa": "ta",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ta.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-chi",
+      "entryId": "alphabet-letter-chi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ち",
+      "synthesisText": "ち",
+      "plainJapanese": "ち",
+      "danishMeaning": "chi",
+      "soundDa": "chi",
+      "ipa": "tɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-chi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-chi",
+      "entryId": "alphabet-name-chi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ち",
+      "synthesisText": "ち",
+      "plainJapanese": "ち",
+      "danishMeaning": "bogstavnavnet chi",
+      "soundDa": "chi",
+      "ipa": "tɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-chi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-tsu",
+      "entryId": "alphabet-letter-tsu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "つ",
+      "synthesisText": "つ",
+      "plainJapanese": "つ",
+      "danishMeaning": "tsu",
+      "soundDa": "tsu",
+      "ipa": "tsɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-tsu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-tsu",
+      "entryId": "alphabet-name-tsu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "つ",
+      "synthesisText": "つ",
+      "plainJapanese": "つ",
+      "danishMeaning": "bogstavnavnet tsu",
+      "soundDa": "tsu",
+      "ipa": "tsɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-tsu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-te",
+      "entryId": "alphabet-letter-te",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "て",
+      "synthesisText": "て",
+      "plainJapanese": "て",
+      "danishMeaning": "te",
+      "soundDa": "te",
+      "ipa": "te",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-te.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-te",
+      "entryId": "alphabet-name-te",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "て",
+      "synthesisText": "て",
+      "plainJapanese": "て",
+      "danishMeaning": "bogstavnavnet te",
+      "soundDa": "te",
+      "ipa": "te",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-te.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-to",
+      "entryId": "alphabet-letter-to",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "と",
+      "synthesisText": "と",
+      "plainJapanese": "と",
+      "danishMeaning": "to",
+      "soundDa": "to",
+      "ipa": "to",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-to.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-to",
+      "entryId": "alphabet-name-to",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "と",
+      "synthesisText": "と",
+      "plainJapanese": "と",
+      "danishMeaning": "bogstavnavnet to",
+      "soundDa": "to",
+      "ipa": "to",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-to.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-na",
+      "entryId": "alphabet-letter-na",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "な",
+      "synthesisText": "な",
+      "plainJapanese": "な",
+      "danishMeaning": "na",
+      "soundDa": "na",
+      "ipa": "na",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-na.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-na",
+      "entryId": "alphabet-name-na",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "な",
+      "synthesisText": "な",
+      "plainJapanese": "な",
+      "danishMeaning": "bogstavnavnet na",
+      "soundDa": "na",
+      "ipa": "na",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-na.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ni",
+      "entryId": "alphabet-letter-ni",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "に",
+      "synthesisText": "に",
+      "plainJapanese": "に",
+      "danishMeaning": "ni",
+      "soundDa": "ni",
+      "ipa": "ɲi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ni.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ni",
+      "entryId": "alphabet-name-ni",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "に",
+      "synthesisText": "に",
+      "plainJapanese": "に",
+      "danishMeaning": "bogstavnavnet ni",
+      "soundDa": "ni",
+      "ipa": "ɲi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ni.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-nu",
+      "entryId": "alphabet-letter-nu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ぬ",
+      "synthesisText": "ぬ",
+      "plainJapanese": "ぬ",
+      "danishMeaning": "nu",
+      "soundDa": "nu",
+      "ipa": "nɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-nu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-nu",
+      "entryId": "alphabet-name-nu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ぬ",
+      "synthesisText": "ぬ",
+      "plainJapanese": "ぬ",
+      "danishMeaning": "bogstavnavnet nu",
+      "soundDa": "nu",
+      "ipa": "nɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-nu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ne",
+      "entryId": "alphabet-letter-ne",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ね",
+      "synthesisText": "ね",
+      "plainJapanese": "ね",
+      "danishMeaning": "ne",
+      "soundDa": "ne",
+      "ipa": "ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ne.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ne",
+      "entryId": "alphabet-name-ne",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ね",
+      "synthesisText": "ね",
+      "plainJapanese": "ね",
+      "danishMeaning": "bogstavnavnet ne",
+      "soundDa": "ne",
+      "ipa": "ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ne.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-no",
+      "entryId": "alphabet-letter-no",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "の",
+      "synthesisText": "の",
+      "plainJapanese": "の",
+      "danishMeaning": "no",
+      "soundDa": "no",
+      "ipa": "no",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-no.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-no",
+      "entryId": "alphabet-name-no",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "の",
+      "synthesisText": "の",
+      "plainJapanese": "の",
+      "danishMeaning": "bogstavnavnet no",
+      "soundDa": "no",
+      "ipa": "no",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-no.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ha",
+      "entryId": "alphabet-letter-ha",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "は",
+      "synthesisText": "は",
+      "plainJapanese": "は",
+      "danishMeaning": "ha",
+      "soundDa": "ha",
+      "ipa": "ha",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ha.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ha",
+      "entryId": "alphabet-name-ha",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "は",
+      "synthesisText": "は",
+      "plainJapanese": "は",
+      "danishMeaning": "bogstavnavnet ha",
+      "soundDa": "ha",
+      "ipa": "ha",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ha.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-hi",
+      "entryId": "alphabet-letter-hi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ひ",
+      "synthesisText": "ひ",
+      "plainJapanese": "ひ",
+      "danishMeaning": "hi",
+      "soundDa": "hi",
+      "ipa": "çi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-hi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-hi",
+      "entryId": "alphabet-name-hi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ひ",
+      "synthesisText": "ひ",
+      "plainJapanese": "ひ",
+      "danishMeaning": "bogstavnavnet hi",
+      "soundDa": "hi",
+      "ipa": "çi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-hi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-fu",
+      "entryId": "alphabet-letter-fu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ふ",
+      "synthesisText": "ふ",
+      "plainJapanese": "ふ",
+      "danishMeaning": "fu",
+      "soundDa": "fu",
+      "ipa": "ɸɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-fu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-fu",
+      "entryId": "alphabet-name-fu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ふ",
+      "synthesisText": "ふ",
+      "plainJapanese": "ふ",
+      "danishMeaning": "bogstavnavnet fu",
+      "soundDa": "fu",
+      "ipa": "ɸɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-fu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-he",
+      "entryId": "alphabet-letter-he",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "へ",
+      "synthesisText": "へ",
+      "plainJapanese": "へ",
+      "danishMeaning": "he",
+      "soundDa": "he",
+      "ipa": "he",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-he.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-he",
+      "entryId": "alphabet-name-he",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "へ",
+      "synthesisText": "へ",
+      "plainJapanese": "へ",
+      "danishMeaning": "bogstavnavnet he",
+      "soundDa": "he",
+      "ipa": "he",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-he.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ho",
+      "entryId": "alphabet-letter-ho",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ほ",
+      "synthesisText": "ほ",
+      "plainJapanese": "ほ",
+      "danishMeaning": "ho",
+      "soundDa": "ho",
+      "ipa": "ho",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ho.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ho",
+      "entryId": "alphabet-name-ho",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ほ",
+      "synthesisText": "ほ",
+      "plainJapanese": "ほ",
+      "danishMeaning": "bogstavnavnet ho",
+      "soundDa": "ho",
+      "ipa": "ho",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ho.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ma",
+      "entryId": "alphabet-letter-ma",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ま",
+      "synthesisText": "ま",
+      "plainJapanese": "ま",
+      "danishMeaning": "ma",
+      "soundDa": "ma",
+      "ipa": "ma",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ma.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ma",
+      "entryId": "alphabet-name-ma",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ま",
+      "synthesisText": "ま",
+      "plainJapanese": "ま",
+      "danishMeaning": "bogstavnavnet ma",
+      "soundDa": "ma",
+      "ipa": "ma",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ma.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-mi",
+      "entryId": "alphabet-letter-mi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "み",
+      "synthesisText": "み",
+      "plainJapanese": "み",
+      "danishMeaning": "mi",
+      "soundDa": "mi",
+      "ipa": "mi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-mi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-mi",
+      "entryId": "alphabet-name-mi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "み",
+      "synthesisText": "み",
+      "plainJapanese": "み",
+      "danishMeaning": "bogstavnavnet mi",
+      "soundDa": "mi",
+      "ipa": "mi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-mi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-mu",
+      "entryId": "alphabet-letter-mu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "む",
+      "synthesisText": "む",
+      "plainJapanese": "む",
+      "danishMeaning": "mu",
+      "soundDa": "mu",
+      "ipa": "mɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-mu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-mu",
+      "entryId": "alphabet-name-mu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "む",
+      "synthesisText": "む",
+      "plainJapanese": "む",
+      "danishMeaning": "bogstavnavnet mu",
+      "soundDa": "mu",
+      "ipa": "mɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-mu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-me",
+      "entryId": "alphabet-letter-me",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "め",
+      "synthesisText": "め",
+      "plainJapanese": "め",
+      "danishMeaning": "me",
+      "soundDa": "me",
+      "ipa": "me",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-me.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-me",
+      "entryId": "alphabet-name-me",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "め",
+      "synthesisText": "め",
+      "plainJapanese": "め",
+      "danishMeaning": "bogstavnavnet me",
+      "soundDa": "me",
+      "ipa": "me",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-me.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-mo",
+      "entryId": "alphabet-letter-mo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "も",
+      "synthesisText": "も",
+      "plainJapanese": "も",
+      "danishMeaning": "mo",
+      "soundDa": "mo",
+      "ipa": "mo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-mo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-mo",
+      "entryId": "alphabet-name-mo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "も",
+      "synthesisText": "も",
+      "plainJapanese": "も",
+      "danishMeaning": "bogstavnavnet mo",
+      "soundDa": "mo",
+      "ipa": "mo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-mo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ya",
+      "entryId": "alphabet-letter-ya",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "や",
+      "synthesisText": "や",
+      "plainJapanese": "や",
+      "danishMeaning": "ya",
+      "soundDa": "ya",
+      "ipa": "ja",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ya.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ya",
+      "entryId": "alphabet-name-ya",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "や",
+      "synthesisText": "や",
+      "plainJapanese": "や",
+      "danishMeaning": "bogstavnavnet ya",
+      "soundDa": "ya",
+      "ipa": "ja",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ya.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-yu",
+      "entryId": "alphabet-letter-yu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ゆ",
+      "synthesisText": "ゆ",
+      "plainJapanese": "ゆ",
+      "danishMeaning": "yu",
+      "soundDa": "yu",
+      "ipa": "jɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-yu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-yu",
+      "entryId": "alphabet-name-yu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ゆ",
+      "synthesisText": "ゆ",
+      "plainJapanese": "ゆ",
+      "danishMeaning": "bogstavnavnet yu",
+      "soundDa": "yu",
+      "ipa": "jɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-yu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-yo",
+      "entryId": "alphabet-letter-yo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "よ",
+      "synthesisText": "よ",
+      "plainJapanese": "よ",
+      "danishMeaning": "yo",
+      "soundDa": "yo",
+      "ipa": "jo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-yo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-yo",
+      "entryId": "alphabet-name-yo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "よ",
+      "synthesisText": "よ",
+      "plainJapanese": "よ",
+      "danishMeaning": "bogstavnavnet yo",
+      "soundDa": "yo",
+      "ipa": "jo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-yo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ra",
+      "entryId": "alphabet-letter-ra",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ら",
+      "synthesisText": "ら",
+      "plainJapanese": "ら",
+      "danishMeaning": "ra",
+      "soundDa": "ra",
+      "ipa": "ɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ra.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ra",
+      "entryId": "alphabet-name-ra",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ら",
+      "synthesisText": "ら",
+      "plainJapanese": "ら",
+      "danishMeaning": "bogstavnavnet ra",
+      "soundDa": "ra",
+      "ipa": "ɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ra.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ri",
+      "entryId": "alphabet-letter-ri",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "り",
+      "synthesisText": "り",
+      "plainJapanese": "り",
+      "danishMeaning": "ri",
+      "soundDa": "ri",
+      "ipa": "ɾi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ri.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ri",
+      "entryId": "alphabet-name-ri",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "り",
+      "synthesisText": "り",
+      "plainJapanese": "り",
+      "danishMeaning": "bogstavnavnet ri",
+      "soundDa": "ri",
+      "ipa": "ɾi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ri.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ru",
+      "entryId": "alphabet-letter-ru",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "る",
+      "synthesisText": "る",
+      "plainJapanese": "る",
+      "danishMeaning": "ru",
+      "soundDa": "ru",
+      "ipa": "ɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ru.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ru",
+      "entryId": "alphabet-name-ru",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "る",
+      "synthesisText": "る",
+      "plainJapanese": "る",
+      "danishMeaning": "bogstavnavnet ru",
+      "soundDa": "ru",
+      "ipa": "ɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ru.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-re",
+      "entryId": "alphabet-letter-re",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "れ",
+      "synthesisText": "れ",
+      "plainJapanese": "れ",
+      "danishMeaning": "re",
+      "soundDa": "re",
+      "ipa": "ɾe",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-re.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-re",
+      "entryId": "alphabet-name-re",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "れ",
+      "synthesisText": "れ",
+      "plainJapanese": "れ",
+      "danishMeaning": "bogstavnavnet re",
+      "soundDa": "re",
+      "ipa": "ɾe",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-re.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-ro",
+      "entryId": "alphabet-letter-ro",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ろ",
+      "synthesisText": "ろ",
+      "plainJapanese": "ろ",
+      "danishMeaning": "ro",
+      "soundDa": "ro",
+      "ipa": "ɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-ro.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-ro",
+      "entryId": "alphabet-name-ro",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ろ",
+      "synthesisText": "ろ",
+      "plainJapanese": "ろ",
+      "danishMeaning": "bogstavnavnet ro",
+      "soundDa": "ro",
+      "ipa": "ɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-ro.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-wa",
+      "entryId": "alphabet-letter-wa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "わ",
+      "synthesisText": "わ",
+      "plainJapanese": "わ",
+      "danishMeaning": "wa",
+      "soundDa": "wa",
+      "ipa": "wa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-wa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-wa",
+      "entryId": "alphabet-name-wa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "わ",
+      "synthesisText": "わ",
+      "plainJapanese": "わ",
+      "danishMeaning": "bogstavnavnet wa",
+      "soundDa": "wa",
+      "ipa": "wa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-wa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-wo",
+      "entryId": "alphabet-letter-wo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "を",
+      "synthesisText": "を",
+      "plainJapanese": "を",
+      "danishMeaning": "wo",
+      "soundDa": "o i \"foto\"",
+      "ipa": "o",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-wo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-wo",
+      "entryId": "alphabet-name-wo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "を",
+      "synthesisText": "を",
+      "plainJapanese": "を",
+      "danishMeaning": "bogstavnavnet wo",
+      "soundDa": "wo",
+      "ipa": "o",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-wo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-letter-n",
+      "entryId": "alphabet-letter-n",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ん",
+      "synthesisText": "ん",
+      "plainJapanese": "ん",
+      "danishMeaning": "n",
+      "soundDa": "n",
+      "ipa": "n",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-letter-n.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-name-n",
+      "entryId": "alphabet-name-n",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ん",
+      "synthesisText": "ん",
+      "plainJapanese": "ん",
+      "danishMeaning": "bogstavnavnet n",
+      "soundDa": "n",
+      "ipa": "n",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-name-n.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-dakuten",
+      "entryId": "alphabet-mark-dakuten",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "か゛",
+      "synthesisText": "か゛",
+      "plainJapanese": "か",
+      "danishMeaning": "dakuten",
+      "soundDa": "k bliver g — が ga",
+      "ipa": "ɡ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-dakuten.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-name-dakuten",
+      "entryId": "alphabet-mark-name-dakuten",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "だくてん",
+      "synthesisText": "だくてん",
+      "plainJapanese": "だくてん",
+      "danishMeaning": "tegnnavnet dakuten",
+      "soundDa": "dakuten",
+      "ipa": "dakuten",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-name-dakuten.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-handakuten",
+      "entryId": "alphabet-mark-handakuten",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "は゜",
+      "synthesisText": "は゜",
+      "plainJapanese": "は",
+      "danishMeaning": "handakuten",
+      "soundDa": "h bliver p — ぱ pa",
+      "ipa": "p",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-handakuten.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-name-handakuten",
+      "entryId": "alphabet-mark-name-handakuten",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "はんだくてん",
+      "synthesisText": "はんだくてん",
+      "plainJapanese": "はんだくてん",
+      "danishMeaning": "tegnnavnet handakuten",
+      "soundDa": "handakuten",
+      "ipa": "handakuten",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-name-handakuten.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-choon",
+      "entryId": "alphabet-mark-choon",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "カー",
+      "synthesisText": "カー",
+      "plainJapanese": "カー",
+      "danishMeaning": "chōonpu",
+      "soundDa": "a i \"far\"",
+      "ipa": "aː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-choon.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-name-choon",
+      "entryId": "alphabet-mark-name-choon",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ちょうおんぷ",
+      "synthesisText": "ちょうおんぷ",
+      "plainJapanese": "ちょうおんぷ",
+      "danishMeaning": "tegnnavnet chōonpu",
+      "soundDa": "chōonpu",
+      "ipa": "chōonpu",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-name-choon.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-sokuon",
+      "entryId": "alphabet-mark-sokuon",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "かっ",
+      "synthesisText": "かっ",
+      "plainJapanese": "かっ",
+      "danishMeaning": "sokuon",
+      "soundDa": "k dobbelt — kk",
+      "ipa": "kː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-sokuon.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-name-sokuon",
+      "entryId": "alphabet-mark-name-sokuon",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "そくおん",
+      "synthesisText": "そくおん",
+      "plainJapanese": "そくおん",
+      "danishMeaning": "tegnnavnet sokuon",
+      "soundDa": "sokuon",
+      "ipa": "sokuon",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-name-sokuon.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-chiisai-ya",
+      "entryId": "alphabet-mark-chiisai-ya",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "きゃ",
+      "synthesisText": "きゃ",
+      "plainJapanese": "きゃ",
+      "danishMeaning": "chiisai ya",
+      "soundDa": "kya",
+      "ipa": "kʲa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-chiisai-ya.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-name-chiisai-ya",
+      "entryId": "alphabet-mark-name-chiisai-ya",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ちいさい ゃ",
+      "synthesisText": "ちいさい ゃ",
+      "plainJapanese": "ちいさい ゃ",
+      "danishMeaning": "tegnnavnet chiisai ya",
+      "soundDa": "chiisai ya",
+      "ipa": "chiisai ya",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-name-chiisai-ya.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-chiisai-yo",
+      "entryId": "alphabet-mark-chiisai-yo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "きょ",
+      "synthesisText": "きょ",
+      "plainJapanese": "きょ",
+      "danishMeaning": "chiisai yo",
+      "soundDa": "kyo",
+      "ipa": "kʲo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-chiisai-yo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "alphabet-mark-name-chiisai-yo",
+      "entryId": "alphabet-mark-name-chiisai-yo",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "alphabet",
+      "transcript": "ちいさい ょ",
+      "synthesisText": "ちいさい ょ",
+      "plainJapanese": "ちいさい ょ",
+      "danishMeaning": "tegnnavnet chiisai yo",
+      "soundDa": "chiisai yo",
+      "ipa": "chiisai yo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/alphabet-mark-name-chiisai-yo.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-kohii",
+      "entryId": "word-bridge-kohii",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "コーヒー",
+      "synthesisText": "コーヒー",
+      "plainJapanese": "コーヒー",
+      "danishMeaning": "kaffe",
+      "soundDa": "koohii",
+      "ipa": "koːhiː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-kohii.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-hoteru",
+      "entryId": "word-bridge-hoteru",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "ホテル",
+      "synthesisText": "ホテル",
+      "plainJapanese": "ホテル",
+      "danishMeaning": "hotel",
+      "soundDa": "hoteru",
+      "ipa": "hoteɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-hoteru.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-basu",
+      "entryId": "word-bridge-basu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "バス",
+      "synthesisText": "バス",
+      "plainJapanese": "バス",
+      "danishMeaning": "bus",
+      "soundDa": "basu",
+      "ipa": "basɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-basu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-takushii",
+      "entryId": "word-bridge-takushii",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "タクシー",
+      "synthesisText": "タクシー",
+      "plainJapanese": "タクシー",
+      "danishMeaning": "taxi",
+      "soundDa": "takushi",
+      "ipa": "takɯɕiː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-takushii.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-menyuu",
+      "entryId": "word-bridge-menyuu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "メニュー",
+      "synthesisText": "メニュー",
+      "plainJapanese": "メニュー",
+      "danishMeaning": "menu",
+      "soundDa": "menyu",
+      "ipa": "meɲɯː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-menyuu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-terebi",
+      "entryId": "word-bridge-terebi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "テレビ",
+      "synthesisText": "テレビ",
+      "plainJapanese": "テレビ",
+      "danishMeaning": "tv",
+      "soundDa": "terebi",
+      "ipa": "teɾebi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-terebi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-rajio",
+      "entryId": "word-bridge-rajio",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "ラジオ",
+      "synthesisText": "ラジオ",
+      "plainJapanese": "ラジオ",
+      "danishMeaning": "radio",
+      "soundDa": "rajio",
+      "ipa": "ɾadʑio",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-rajio.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-kamera",
+      "entryId": "word-bridge-kamera",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "カメラ",
+      "synthesisText": "カメラ",
+      "plainJapanese": "カメラ",
+      "danishMeaning": "kamera",
+      "soundDa": "kamera",
+      "ipa": "kameɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-kamera.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-resutoran",
+      "entryId": "word-bridge-resutoran",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "レストラン",
+      "synthesisText": "レストラン",
+      "plainJapanese": "レストラン",
+      "danishMeaning": "restaurant",
+      "soundDa": "resutoran",
+      "ipa": "ɾesɯtoɾaɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-resutoran.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-sarada",
+      "entryId": "word-bridge-sarada",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "サラダ",
+      "synthesisText": "サラダ",
+      "plainJapanese": "サラダ",
+      "danishMeaning": "salat",
+      "soundDa": "sarada",
+      "ipa": "saɾada",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-sarada.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-hottodoggu",
+      "entryId": "word-bridge-hottodoggu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "ホットドッグ",
+      "synthesisText": "ホットドッグ",
+      "plainJapanese": "ホットドッグ",
+      "danishMeaning": "hotdog",
+      "soundDa": "hotto doggu",
+      "ipa": "hotːodogːɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-hottodoggu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-pen",
+      "entryId": "word-bridge-pen",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "ペン",
+      "synthesisText": "ペン",
+      "plainJapanese": "ペン",
+      "danishMeaning": "pen",
+      "soundDa": "pen",
+      "ipa": "peɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-pen.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "word-bridge-piano",
+      "entryId": "word-bridge-piano",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "bridges",
+      "transcript": "ピアノ",
+      "synthesisText": "ピアノ",
+      "plainJapanese": "ピアノ",
+      "danishMeaning": "piano",
+      "soundDa": "piano",
+      "ipa": "piano",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/word-bridge-piano.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-unit-1-title",
+      "entryId": "vocabulary-unit-1-title",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "みず と ちち",
+      "synthesisText": "みず と ちち",
+      "plainJapanese": "みず と ちち",
+      "danishMeaning": "Vand og far",
+      "soundDa": "mizu to chichi",
+      "ipa": "midzɯ to tɕitɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-unit-1-title.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-mizu",
+      "entryId": "vocabulary-1-mizu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "みず",
+      "synthesisText": "みず",
+      "plainJapanese": "みず",
+      "danishMeaning": "vand",
+      "soundDa": "mizu",
+      "ipa": "mizɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-mizu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-pan",
+      "entryId": "vocabulary-1-pan",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "パン",
+      "synthesisText": "パン",
+      "plainJapanese": "パン",
+      "danishMeaning": "brød",
+      "soundDa": "pan",
+      "ipa": "paɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-pan.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-chichi",
+      "entryId": "vocabulary-1-chichi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ちち",
+      "synthesisText": "ちち",
+      "plainJapanese": "ちち",
+      "danishMeaning": "far",
+      "soundDa": "chichi",
+      "ipa": "tɕitɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-chichi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-haha",
+      "entryId": "vocabulary-1-haha",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "はは",
+      "synthesisText": "はは",
+      "plainJapanese": "はは",
+      "danishMeaning": "mor",
+      "soundDa": "haha",
+      "ipa": "haha",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-haha.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-kaze",
+      "entryId": "vocabulary-1-kaze",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "かぜ",
+      "synthesisText": "かぜ",
+      "plainJapanese": "かぜ",
+      "danishMeaning": "vind",
+      "soundDa": "kaze",
+      "ipa": "kaze",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-kaze.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-watashi",
+      "entryId": "vocabulary-1-watashi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "わたし",
+      "synthesisText": "わたし",
+      "plainJapanese": "わたし",
+      "danishMeaning": "jeg",
+      "soundDa": "watashi",
+      "ipa": "wataɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-watashi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-anata",
+      "entryId": "vocabulary-1-anata",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あなた",
+      "synthesisText": "あなた",
+      "plainJapanese": "あなた",
+      "danishMeaning": "du",
+      "soundDa": "anata",
+      "ipa": "anata",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-anata.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-minna",
+      "entryId": "vocabulary-1-minna",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "みんな",
+      "synthesisText": "みんな",
+      "plainJapanese": "みんな",
+      "danishMeaning": "vi, alle",
+      "soundDa": "minna",
+      "ipa": "miɴna",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-minna.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-kore",
+      "entryId": "vocabulary-1-kore",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "これ",
+      "synthesisText": "これ",
+      "plainJapanese": "これ",
+      "danishMeaning": "denne, dette",
+      "soundDa": "kore",
+      "ipa": "koɾe",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-kore.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-1-are",
+      "entryId": "vocabulary-1-are",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あれ",
+      "synthesisText": "あれ",
+      "plainJapanese": "あれ",
+      "danishMeaning": "den, det (derovre)",
+      "soundDa": "are",
+      "ipa": "aɾe",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-1-are.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-unit-2-title",
+      "entryId": "vocabulary-unit-2-title",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "がっこう",
+      "synthesisText": "がっこう",
+      "plainJapanese": "がっこう",
+      "danishMeaning": "Skole",
+      "soundDa": "gakkoo",
+      "ipa": "ɡakkoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-unit-2-title.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-enpitsu",
+      "entryId": "vocabulary-2-enpitsu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "えんぴつ",
+      "synthesisText": "えんぴつ",
+      "plainJapanese": "えんぴつ",
+      "danishMeaning": "blyant",
+      "soundDa": "enpitsu",
+      "ipa": "eɴpitsɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-enpitsu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-hon",
+      "entryId": "vocabulary-2-hon",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ほん",
+      "synthesisText": "ほん",
+      "plainJapanese": "ほん",
+      "danishMeaning": "bog",
+      "soundDa": "hon",
+      "ipa": "hoɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-hon.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-tsukue",
+      "entryId": "vocabulary-2-tsukue",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "つくえ",
+      "synthesisText": "つくえ",
+      "plainJapanese": "つくえ",
+      "danishMeaning": "bord",
+      "soundDa": "tsukue",
+      "ipa": "tsɯkɯe",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-tsukue.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-doa",
+      "entryId": "vocabulary-2-doa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ドア",
+      "synthesisText": "ドア",
+      "plainJapanese": "ドア",
+      "danishMeaning": "dør",
+      "soundDa": "doa",
+      "ipa": "doa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-doa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-te",
+      "entryId": "vocabulary-2-te",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "て",
+      "synthesisText": "て",
+      "plainJapanese": "て",
+      "danishMeaning": "hånd",
+      "soundDa": "te",
+      "ipa": "te",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-te.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-tomodachi",
+      "entryId": "vocabulary-2-tomodachi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ともだち",
+      "synthesisText": "ともだち",
+      "plainJapanese": "ともだち",
+      "danishMeaning": "ven",
+      "soundDa": "tomodachi",
+      "ipa": "tomodatɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-tomodachi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-gakkou",
+      "entryId": "vocabulary-2-gakkou",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "がっこう",
+      "synthesisText": "がっこう",
+      "plainJapanese": "がっこう",
+      "danishMeaning": "skole",
+      "soundDa": "gakkoo",
+      "ipa": "ɡakkoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-gakkou.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-2-konnichiwa",
+      "entryId": "vocabulary-2-konnichiwa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "こんにちは",
+      "synthesisText": "こんにちは",
+      "plainJapanese": "こんにちは",
+      "danishMeaning": "hej",
+      "soundDa": "konnichiwa",
+      "ipa": "koɴnitɕiɰa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-2-konnichiwa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-unit-3-title",
+      "entryId": "vocabulary-unit-3-title",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うち と そら",
+      "synthesisText": "うち と そら",
+      "plainJapanese": "うち と そら",
+      "danishMeaning": "Hjem og himmel",
+      "soundDa": "uchi to sora",
+      "ipa": "ɯtɕi to soɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-unit-3-title.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-uchi",
+      "entryId": "vocabulary-3-uchi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うち",
+      "synthesisText": "うち",
+      "plainJapanese": "うち",
+      "danishMeaning": "hus, hjem",
+      "soundDa": "uchi",
+      "ipa": "ɯtɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-uchi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-ame",
+      "entryId": "vocabulary-3-ame",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あめ",
+      "synthesisText": "あめ",
+      "plainJapanese": "あめ",
+      "danishMeaning": "regn",
+      "soundDa": "ame",
+      "ipa": "ame",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-ame.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-sora",
+      "entryId": "vocabulary-3-sora",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "そら",
+      "synthesisText": "そら",
+      "plainJapanese": "そら",
+      "danishMeaning": "himmel",
+      "soundDa": "sora",
+      "ipa": "soɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-sora.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-tsuki",
+      "entryId": "vocabulary-3-tsuki",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "つき",
+      "synthesisText": "つき",
+      "plainJapanese": "つき",
+      "danishMeaning": "måne",
+      "soundDa": "tsuki",
+      "ipa": "tsɯki",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-tsuki.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-hoshi",
+      "entryId": "vocabulary-3-hoshi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ほし",
+      "synthesisText": "ほし",
+      "plainJapanese": "ほし",
+      "danishMeaning": "stjerne",
+      "soundDa": "hoshi",
+      "ipa": "hoɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-hoshi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-hana",
+      "entryId": "vocabulary-3-hana",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "はな",
+      "synthesisText": "はな",
+      "plainJapanese": "はな",
+      "danishMeaning": "blomst",
+      "soundDa": "hana",
+      "ipa": "hana",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-hana.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-3-yoru",
+      "entryId": "vocabulary-3-yoru",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "よる",
+      "synthesisText": "よる",
+      "plainJapanese": "よる",
+      "danishMeaning": "nat",
+      "soundDa": "yoru",
+      "ipa": "joɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-3-yoru.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-unit-4-title",
+      "entryId": "vocabulary-unit-4-title",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "いろ",
+      "synthesisText": "いろ",
+      "plainJapanese": "いろ",
+      "danishMeaning": "Farver",
+      "soundDa": "iro",
+      "ipa": "iɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-unit-4-title.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-aka",
+      "entryId": "vocabulary-4-aka",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あか",
+      "synthesisText": "あか",
+      "plainJapanese": "あか",
+      "danishMeaning": "rød",
+      "soundDa": "aka",
+      "ipa": "aka",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-aka.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-ao",
+      "entryId": "vocabulary-4-ao",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あお",
+      "synthesisText": "あお",
+      "plainJapanese": "あお",
+      "danishMeaning": "blå",
+      "soundDa": "ao",
+      "ipa": "ao",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-ao.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-midori",
+      "entryId": "vocabulary-4-midori",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "みどり",
+      "synthesisText": "みどり",
+      "plainJapanese": "みどり",
+      "danishMeaning": "grøn",
+      "soundDa": "midori",
+      "ipa": "midoɾi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-midori.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-kiiro",
+      "entryId": "vocabulary-4-kiiro",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "きいろ",
+      "synthesisText": "きいろ",
+      "plainJapanese": "きいろ",
+      "danishMeaning": "gul",
+      "soundDa": "kiiro",
+      "ipa": "kiiɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-kiiro.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-shiro",
+      "entryId": "vocabulary-4-shiro",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "しろ",
+      "synthesisText": "しろ",
+      "plainJapanese": "しろ",
+      "danishMeaning": "hvid",
+      "soundDa": "shiro",
+      "ipa": "ɕiɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-shiro.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-kuro",
+      "entryId": "vocabulary-4-kuro",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "くろ",
+      "synthesisText": "くろ",
+      "plainJapanese": "くろ",
+      "danishMeaning": "sort",
+      "soundDa": "kuro",
+      "ipa": "kɯɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-kuro.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-orenji",
+      "entryId": "vocabulary-4-orenji",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "オレンジ",
+      "synthesisText": "オレンジ",
+      "plainJapanese": "オレンジ",
+      "danishMeaning": "orange",
+      "soundDa": "orenji",
+      "ipa": "oɾeɴdʑi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-orenji.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-4-momoiro",
+      "entryId": "vocabulary-4-momoiro",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ももいろ",
+      "synthesisText": "ももいろ",
+      "plainJapanese": "ももいろ",
+      "danishMeaning": "lyserød",
+      "soundDa": "momoiro",
+      "ipa": "momoiɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-4-momoiro.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-unit-5-title",
+      "entryId": "vocabulary-unit-5-title",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "どうぶつ",
+      "synthesisText": "どうぶつ",
+      "plainJapanese": "どうぶつ",
+      "danishMeaning": "Dyr",
+      "soundDa": "doobutsu",
+      "ipa": "doːbɯtsɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-unit-5-title.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-neko",
+      "entryId": "vocabulary-5-neko",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ねこ",
+      "synthesisText": "ねこ",
+      "plainJapanese": "ねこ",
+      "danishMeaning": "kat",
+      "soundDa": "neko",
+      "ipa": "neko",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-neko.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-inu",
+      "entryId": "vocabulary-5-inu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "いぬ",
+      "synthesisText": "いぬ",
+      "plainJapanese": "いぬ",
+      "danishMeaning": "hund",
+      "soundDa": "inu",
+      "ipa": "inɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-inu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-tori",
+      "entryId": "vocabulary-5-tori",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "とり",
+      "synthesisText": "とり",
+      "plainJapanese": "とり",
+      "danishMeaning": "fugl",
+      "soundDa": "tori",
+      "ipa": "toɾi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-tori.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-sakana",
+      "entryId": "vocabulary-5-sakana",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "さかな",
+      "synthesisText": "さかな",
+      "plainJapanese": "さかな",
+      "danishMeaning": "fisk",
+      "soundDa": "sakana",
+      "ipa": "sakana",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-sakana.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-uma",
+      "entryId": "vocabulary-5-uma",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うま",
+      "synthesisText": "うま",
+      "plainJapanese": "うま",
+      "danishMeaning": "hest",
+      "soundDa": "uma",
+      "ipa": "ɯma",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-uma.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-ushi",
+      "entryId": "vocabulary-5-ushi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うし",
+      "synthesisText": "うし",
+      "plainJapanese": "うし",
+      "danishMeaning": "ko",
+      "soundDa": "ushi",
+      "ipa": "ɯɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-ushi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-usagi",
+      "entryId": "vocabulary-5-usagi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うさぎ",
+      "synthesisText": "うさぎ",
+      "plainJapanese": "うさぎ",
+      "danishMeaning": "kanin",
+      "soundDa": "usagi",
+      "ipa": "ɯsaɡi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-usagi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "vocabulary-5-nezumi",
+      "entryId": "vocabulary-5-nezumi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ねずみ",
+      "synthesisText": "ねずみ",
+      "plainJapanese": "ねずみ",
+      "danishMeaning": "mus",
+      "soundDa": "nezumi",
+      "ipa": "nezɯmi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/vocabulary-5-nezumi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-function-to",
+      "entryId": "reading-function-to",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "と",
+      "synthesisText": "と",
+      "plainJapanese": "と",
+      "danishMeaning": "og",
+      "soundDa": "to",
+      "ipa": "to",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-function-to.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-function-desu",
+      "entryId": "reading-function-desu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "です",
+      "synthesisText": "です",
+      "plainJapanese": "です",
+      "danishMeaning": "er",
+      "soundDa": "desu",
+      "ipa": "desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-function-desu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-function-no",
+      "entryId": "reading-function-no",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "の",
+      "synthesisText": "の",
+      "plainJapanese": "の",
+      "danishMeaning": "'s (tilhørsforhold)",
+      "soundDa": "no",
+      "ipa": "no",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-function-no.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-1-1",
+      "entryId": "reading-1-1",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "みず と かぜ",
+      "synthesisText": "みず と かぜ",
+      "plainJapanese": "みず と かぜ",
+      "danishMeaning": "vand og vind",
+      "soundDa": "mizu to kaze",
+      "ipa": "mizɯ to kaze",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-1-1.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-1-2",
+      "entryId": "reading-1-2",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ちち と はは",
+      "synthesisText": "ちち と はは",
+      "plainJapanese": "ちち と はは",
+      "danishMeaning": "far og mor",
+      "soundDa": "chichi to haha",
+      "ipa": "tɕitɕi to haha",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-1-2.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-1-3",
+      "entryId": "reading-1-3",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "これ と あれ",
+      "synthesisText": "これ と あれ",
+      "plainJapanese": "これ と あれ",
+      "danishMeaning": "denne og den der",
+      "soundDa": "kore to are",
+      "ipa": "koɾe to aɾe",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-1-3.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-2-1",
+      "entryId": "reading-2-1",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ほん と えんぴつ",
+      "synthesisText": "ほん と えんぴつ",
+      "plainJapanese": "ほん と えんぴつ",
+      "danishMeaning": "bog og blyant",
+      "soundDa": "hon to enpitsu",
+      "ipa": "hoɴ to eɴpitsɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-2-1.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-2-2",
+      "entryId": "reading-2-2",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ともだち の て",
+      "synthesisText": "ともだち の て",
+      "plainJapanese": "ともだち の て",
+      "danishMeaning": "vennens hånd",
+      "soundDa": "tomodachi no te",
+      "ipa": "tomodatɕi no te",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-2-2.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-3-1",
+      "entryId": "reading-3-1",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "つき と そら",
+      "synthesisText": "つき と そら",
+      "plainJapanese": "つき と そら",
+      "danishMeaning": "måne og himmel",
+      "soundDa": "tsuki to sora",
+      "ipa": "tsɯki to soɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-3-1.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-3-2",
+      "entryId": "reading-3-2",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あめ と よる",
+      "synthesisText": "あめ と よる",
+      "plainJapanese": "あめ と よる",
+      "danishMeaning": "regn og nat",
+      "soundDa": "ame to yoru",
+      "ipa": "ame to joɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-3-2.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-4-1",
+      "entryId": "reading-4-1",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あか と あお",
+      "synthesisText": "あか と あお",
+      "plainJapanese": "あか と あお",
+      "danishMeaning": "rød og blå",
+      "soundDa": "aka to ao",
+      "ipa": "aka to ao",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-4-1.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-4-2",
+      "entryId": "reading-4-2",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "くろ と しろ",
+      "synthesisText": "くろ と しろ",
+      "plainJapanese": "くろ と しろ",
+      "danishMeaning": "sort og hvid",
+      "soundDa": "kuro to shiro",
+      "ipa": "kɯɾo to ɕiɾo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-4-2.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-5-1",
+      "entryId": "reading-5-1",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ねこ と いぬ",
+      "synthesisText": "ねこ と いぬ",
+      "plainJapanese": "ねこ と いぬ",
+      "danishMeaning": "kat og hund",
+      "soundDa": "neko to inu",
+      "ipa": "neko to inɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-5-1.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-5-2",
+      "entryId": "reading-5-2",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うま と うし",
+      "synthesisText": "うま と うし",
+      "plainJapanese": "うま と うし",
+      "danishMeaning": "hest og ko",
+      "soundDa": "uma to ushi",
+      "ipa": "ɯma to ɯɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-5-2.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-1-text",
+      "entryId": "reading-1-text",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "みず です。パン です。ちち です。はは です。",
+      "synthesisText": "みず です。パン です。ちち です。はは です。",
+      "plainJapanese": "みず です。パン です。ちち です。はは です。",
+      "danishMeaning": "Dette er vand. Dette er brød. Dette er far. Dette er mor.",
+      "soundDa": "mizu desu. pan desu. chichi desu. haha desu",
+      "ipa": "mizɯ desɯ. paɴ desɯ. tɕitɕi desɯ. haha desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-1-text.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-2-text",
+      "entryId": "reading-2-text",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "がっこう です。つくえ です。ほん です。ともだち の て です。",
+      "synthesisText": "がっこう です。つくえ です。ほん です。ともだち の て です。",
+      "plainJapanese": "がっこう です。つくえ です。ほん です。ともだち の て です。",
+      "danishMeaning": "Dette er en skole. Dette er et bord. Dette er en bog. Dette er vennens hånd.",
+      "soundDa": "gakkoo desu. tsukue desu. hon desu. tomodachi no te desu",
+      "ipa": "ɡakkoː desɯ. tsɯkɯe desɯ. hoɴ desɯ. tomodatɕi no te desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-2-text.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-3-text",
+      "entryId": "reading-3-text",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "うち です。そら です。つき です。よる です。",
+      "synthesisText": "うち です。そら です。つき です。よる です。",
+      "plainJapanese": "うち です。そら です。つき です。よる です。",
+      "danishMeaning": "Det er et hus. Det er himlen. Det er månen. Det er nat.",
+      "soundDa": "uchi desu. sora desu. tsuki desu. yoru desu",
+      "ipa": "ɯtɕi desɯ. soɾa desɯ. tsɯki desɯ. joɾɯ desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-3-text.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-4-text",
+      "entryId": "reading-4-text",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "あか です。あお です。くろ と しろ です。",
+      "synthesisText": "あか です。あお です。くろ と しろ です。",
+      "plainJapanese": "あか です。あお です。くろ と しろ です。",
+      "danishMeaning": "Det er rød. Det er blå. Det er sort og hvid.",
+      "soundDa": "aka desu. ao desu. kuro to shiro desu",
+      "ipa": "aka desɯ. ao desɯ. kɯɾo to ɕiɾo desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-4-text.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "reading-5-text",
+      "entryId": "reading-5-text",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "vocabulary",
+      "transcript": "ねこ です。いぬ です。うさぎ です。",
+      "synthesisText": "ねこ です。いぬ です。うさぎ です。",
+      "plainJapanese": "ねこ です。いぬ です。うさぎ です。",
+      "danishMeaning": "Det er en kat. Det er en hund. Det er en kanin.",
+      "soundDa": "neko desu. inu desu. usagi desu",
+      "ipa": "neko desɯ. inɯ desɯ. ɯsaɡi desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/reading-5-text.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "conversation-introduction",
+      "entryId": "conversation-introduction",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "conversation",
+      "transcript": "わたしの なまえは … です。",
+      "synthesisText": "わたしの なまえは … です。",
+      "plainJapanese": "わたしの なまえは … です。",
+      "danishMeaning": "Jeg hedder …",
+      "soundDa": "watashi no namae wa … desu",
+      "ipa": "wataɕi no namae ɰa … desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/conversation-introduction.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "conversation-goodbye",
+      "entryId": "conversation-goodbye",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "conversation",
+      "transcript": "さようなら！",
+      "synthesisText": "さようなら！",
+      "plainJapanese": "さようなら！",
+      "danishMeaning": "farvel",
+      "soundDa": "sayoonara",
+      "ipa": "sajoːnaɾa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/conversation-goodbye.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-1-word",
+      "entryId": "number-1-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "いち",
+      "synthesisText": "いち",
+      "plainJapanese": "いち",
+      "danishMeaning": "en",
+      "soundDa": "ichi",
+      "ipa": "itɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-1-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-2-word",
+      "entryId": "number-2-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "に",
+      "synthesisText": "に",
+      "plainJapanese": "に",
+      "danishMeaning": "to",
+      "soundDa": "ni",
+      "ipa": "ni",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-2-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-3-word",
+      "entryId": "number-3-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "さん",
+      "synthesisText": "さん",
+      "plainJapanese": "さん",
+      "danishMeaning": "tre",
+      "soundDa": "san",
+      "ipa": "san",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-3-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-4-word",
+      "entryId": "number-4-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "よん",
+      "synthesisText": "よん",
+      "plainJapanese": "よん",
+      "danishMeaning": "fire",
+      "soundDa": "yon",
+      "ipa": "joɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-4-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-5-word",
+      "entryId": "number-5-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "ご",
+      "synthesisText": "ご",
+      "plainJapanese": "ご",
+      "danishMeaning": "fem",
+      "soundDa": "go",
+      "ipa": "go",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-5-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-6-word",
+      "entryId": "number-6-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "ろく",
+      "synthesisText": "ろく",
+      "plainJapanese": "ろく",
+      "danishMeaning": "seks",
+      "soundDa": "roku",
+      "ipa": "ɾokɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-6-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-7-word",
+      "entryId": "number-7-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "なな",
+      "synthesisText": "なな",
+      "plainJapanese": "なな",
+      "danishMeaning": "syv",
+      "soundDa": "nana",
+      "ipa": "nana",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-7-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-8-word",
+      "entryId": "number-8-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "はち",
+      "synthesisText": "はち",
+      "plainJapanese": "はち",
+      "danishMeaning": "otte",
+      "soundDa": "hachi",
+      "ipa": "hatɕi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-8-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-9-word",
+      "entryId": "number-9-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "きゅう",
+      "synthesisText": "きゅう",
+      "plainJapanese": "きゅう",
+      "danishMeaning": "ni",
+      "soundDa": "kyuu",
+      "ipa": "kʲɯː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-9-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "number-10-word",
+      "entryId": "number-10-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "numbers",
+      "transcript": "じゅう",
+      "synthesisText": "じゅう",
+      "plainJapanese": "じゅう",
+      "danishMeaning": "ti",
+      "soundDa": "juu",
+      "ipa": "dʑɯː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/number-10-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-greeting",
+      "entryId": "interface-greeting",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "こんにちは！",
+      "synthesisText": "こんにちは！",
+      "plainJapanese": "こんにちは！",
+      "danishMeaning": "Hej!",
+      "soundDa": "kon-nichiwa",
+      "ipa": "koɰitɕiɰa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-greeting.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-greeting-with-name",
+      "entryId": "interface-greeting-with-name",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "こんにちは、",
+      "synthesisText": "こんにちは、",
+      "plainJapanese": "こんにちは、",
+      "danishMeaning": "Hej",
+      "soundDa": "kon-nichiwa",
+      "ipa": "koɰitɕiɰa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-greeting-with-name.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-kit-write-line",
+      "entryId": "interface-kit-write-line",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "せんの うえに かいてね。",
+      "synthesisText": "せんの うえに かいてね。",
+      "plainJapanese": "せんの うえに かいてね。",
+      "danishMeaning": "Skriv på linjen.",
+      "soundDa": "sen-no ue-ni kaite-ne",
+      "ipa": "seɴ no ɯe ɲi kaite ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-kit-write-line.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-capture-prompt",
+      "entryId": "interface-capture-prompt",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "なまえは？",
+      "synthesisText": "なまえは？",
+      "plainJapanese": "なまえは？",
+      "danishMeaning": "Hvad hedder du?",
+      "soundDa": "namae wa?",
+      "ipa": "naɰa.e ɰa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-capture-prompt.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-lesson-placeholder",
+      "entryId": "interface-lesson-placeholder",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "この レッスンは まだ できていません。",
+      "synthesisText": "この レッスンは まだ できていません。",
+      "plainJapanese": "この レッスンは まだ できていません。",
+      "danishMeaning": "Denne lektion er ikke klar endnu.",
+      "soundDa": "kono ressun wa mada dekite imasen",
+      "ipa": "kono ɾesːɯn ɰa mada dekite imaseɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-lesson-placeholder.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-try-again",
+      "entryId": "interface-try-again",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "もう いちど",
+      "synthesisText": "もう いちど",
+      "plainJapanese": "もう いちど",
+      "danishMeaning": "Prøv igen",
+      "soundDa": "mo ichido",
+      "ipa": "moː itɕido",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-try-again.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-choon-name",
+      "entryId": "interface-choon-name",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ちょうおん",
+      "synthesisText": "ちょうおん",
+      "plainJapanese": "ちょうおん",
+      "danishMeaning": "langt vokaltegn",
+      "soundDa": "choon-ong",
+      "ipa": "tɕoːoɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-choon-name.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-missing-space",
+      "entryId": "interface-missing-space",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ここに スペースが ありません。",
+      "synthesisText": "ここに スペースが ありません。",
+      "plainJapanese": "ここに スペースが ありません。",
+      "danishMeaning": "Her mangler et mellemrum.",
+      "soundDa": "koko ni supeesu ga arimasen",
+      "ipa": "koko ɲi sɯpeːsɯ ɡa aɾimaseɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-missing-space.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-extra-space",
+      "entryId": "interface-extra-space",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "スペースが おおいです。",
+      "synthesisText": "スペースが おおいです。",
+      "plainJapanese": "スペースが おおいです。",
+      "danishMeaning": "Her står et mellemrum for meget.",
+      "soundDa": "supeesu ga oo-i desu",
+      "ipa": "sɯpeːsɯ ɡa oːi desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-extra-space.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-missing-letter",
+      "entryId": "interface-missing-letter",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ここに もじが たりません。",
+      "synthesisText": "ここに もじが たりません。",
+      "plainJapanese": "ここに もじが たりません。",
+      "danishMeaning": "Her mangler et bogstav.",
+      "soundDa": "koko ni moji ga tarimasen",
+      "ipa": "koko ɲi modʑi ɡa taɾimaseɴ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-missing-letter.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-wrong-letter",
+      "entryId": "interface-wrong-letter",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ここに ちがう もじが あります。",
+      "synthesisText": "ここに ちがう もじが あります。",
+      "plainJapanese": "ここに ちがう もじが あります。",
+      "danishMeaning": "Her står et andet bogstav.",
+      "soundDa": "koko ni chigau moji ga arimasu",
+      "ipa": "koko ɲi tɕiɡaɯ modʑi ɡa aɾimasɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-wrong-letter.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-extra-letter",
+      "entryId": "interface-extra-letter",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ここに もじが おおいです。",
+      "synthesisText": "ここに もじが おおいです。",
+      "plainJapanese": "ここに もじが おおいです。",
+      "danishMeaning": "Her er et bogstav for meget.",
+      "soundDa": "koko ni moji ga oo-i desu",
+      "ipa": "koko ɲi modʑi ɡa oːi desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-extra-letter.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-type-words",
+      "entryId": "interface-type-words",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ことばを かいてね。",
+      "synthesisText": "ことばを かいてね。",
+      "plainJapanese": "ことばを かいてね。",
+      "danishMeaning": "Skriv ordene",
+      "soundDa": "kotoba o kaite ne",
+      "ipa": "kotoba o kaite ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-type-words.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-type-name",
+      "entryId": "interface-type-name",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "じぶんの なまえを かいてね。",
+      "synthesisText": "じぶんの なまえを かいてね。",
+      "plainJapanese": "じぶんの なまえを かいてね。",
+      "danishMeaning": "Skriv dit eget navn",
+      "soundDa": "jibun no namae o kaite ne",
+      "ipa": "dʑibɯɴ no naɰa.e o kaite ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-type-name.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-name-letter",
+      "entryId": "interface-name-letter",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "この 文字は あなたの なまえに あります",
+      "synthesisText": "この 文字は あなたの なまえに あります",
+      "plainJapanese": "この 文字は あなたの なまえに あります",
+      "danishMeaning": "Dette bogstav er i dit navn",
+      "soundDa": "kono moji wa anata no namae ni arimasu",
+      "ipa": "kono modʑi ɰa anata no naɰa.e ni aɾimasɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-name-letter.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-name-letter-in-word",
+      "entryId": "interface-name-letter-in-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "この ことばに あなたの なまえの 文字が あります",
+      "synthesisText": "この ことばに あなたの なまえの 文字が あります",
+      "plainJapanese": "この ことばに あなたの なまえの 文字が あります",
+      "danishMeaning": "Et bogstav fra dit navn er i dette ord",
+      "soundDa": "kono kotoba ni anata no namae no moji ga arimasu",
+      "ipa": "kono kotoba ɲi anata no naɰa.e no modʑi ɡa aɾimasɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-name-letter-in-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-name-letters-in-word",
+      "entryId": "interface-name-letters-in-word",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "この ことばに あなたの なまえの 文字が あります",
+      "synthesisText": "この ことばに あなたの なまえの 文字が あります",
+      "plainJapanese": "この ことばに あなたの なまえの 文字が あります",
+      "danishMeaning": "Bogstaver fra dit navn er i dette ord",
+      "soundDa": "kono kotoba ni anata no namae no moji ga aru",
+      "ipa": "kono kotoba ɲi anata no naɰa.e no modʑi ɡa aɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-name-letters-in-word.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-orientation-zu",
+      "entryId": "interface-orientation-zu",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ず",
+      "synthesisText": "ず",
+      "plainJapanese": "ず",
+      "danishMeaning": "zu",
+      "soundDa": "zu",
+      "ipa": "zɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-orientation-zu.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-orientation-osaka",
+      "entryId": "interface-orientation-osaka",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "おおさか",
+      "synthesisText": "おおさか",
+      "plainJapanese": "おおさか",
+      "danishMeaning": "Osaka",
+      "soundDa": "osaka",
+      "ipa": "oːsaka",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-orientation-osaka.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-orientation-mizu-katakana",
+      "entryId": "interface-orientation-mizu-katakana",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "ミズ",
+      "synthesisText": "ミズ",
+      "plainJapanese": "ミズ",
+      "danishMeaning": "mizu med katakana",
+      "soundDa": "mizu",
+      "ipa": "mizɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-orientation-mizu-katakana.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "interface-orientation-mizu-kanji",
+      "entryId": "interface-orientation-mizu-kanji",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "interface",
+      "transcript": "水",
+      "synthesisText": "水",
+      "plainJapanese": "水",
+      "danishMeaning": "mizu med kanji",
+      "soundDa": "mizu",
+      "ipa": "mizɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/interface-orientation-mizu-kanji.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-spelling-title",
+      "entryId": "names-spelling-title",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "なまえを にほんごで かこう",
+      "synthesisText": "なまえを にほんごで かこう",
+      "plainJapanese": "なまえを にほんごで かこう",
+      "danishMeaning": "Navn på japansk",
+      "soundDa": "namae-o nihongo-de kako",
+      "ipa": "naɰa.e o nihoɴɡo de kakoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-spelling-title.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-spelling-pick",
+      "entryId": "names-spelling-pick",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "どの かきかたが いい？",
+      "synthesisText": "どの かきかたが いい？",
+      "plainJapanese": "どの かきかたが いい？",
+      "danishMeaning": "Hvilken kan du lide?",
+      "soundDa": "dono kakikata ga ii?",
+      "ipa": "dono kakikata ɡa iː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-spelling-pick.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-write-name",
+      "entryId": "names-write-name",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "じぶんで なまえを かこう",
+      "synthesisText": "じぶんで なまえを かこう",
+      "plainJapanese": "じぶんで なまえを かこう",
+      "danishMeaning": "Skriv dit eget navn",
+      "soundDa": "jibun-de namae-o kako",
+      "ipa": "dʑibɯn de naɰa.e o kakoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-write-name.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-assemble",
+      "entryId": "names-assemble",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "なまえを もう いちど つくろう",
+      "synthesisText": "なまえを もう いちど つくろう",
+      "plainJapanese": "なまえを もう いちど つくろう",
+      "danishMeaning": "Lav navnet igen",
+      "soundDa": "namae-o mo-ichido tsukuro",
+      "ipa": "naɰa.e o moː itɕido tsɯkɯɾoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-assemble.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-letters-label",
+      "entryId": "names-letters-label",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "もじ",
+      "synthesisText": "もじ",
+      "plainJapanese": "もじ",
+      "danishMeaning": "Bogstaverne",
+      "soundDa": "moji",
+      "ipa": "modʑi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-letters-label.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-not-in-name",
+      "entryId": "names-not-in-name",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "この 文字は あなたの なまえに ないよ。もう いちど みてね。",
+      "synthesisText": "この 文字は あなたの なまえに ないよ。もう いちど みてね。",
+      "plainJapanese": "この 文字は あなたの なまえに ないよ。もう いちど みてね。",
+      "danishMeaning": "Det bogstav er ikke i dit navn. Kig igen.",
+      "soundDa": "kono moji-wa anata-no namae-ni nai-yo. mo-ichido mite-ne.",
+      "ipa": "kono modʑi ɰa anata no naɰa.e ni nai jo moː itɕido mite ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-not-in-name.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-letter-later",
+      "entryId": "names-letter-later",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "この 文字は あとで つかうよ。",
+      "synthesisText": "この 文字は あとで つかうよ。",
+      "plainJapanese": "この 文字は あとで つかうよ。",
+      "danishMeaning": "Tryk på dette bogstav senere.",
+      "soundDa": "kono moji-wa ato-de tsukau-yo.",
+      "ipa": "kono modʑi ɰa ato de tsɯkaɯ jo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-letter-later.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "names-privacy",
+      "entryId": "names-privacy",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "names",
+      "transcript": "なまえは この きかいだけ。",
+      "synthesisText": "なまえは この きかいだけ。",
+      "plainJapanese": "なまえは この きかいだけ。",
+      "danishMeaning": "Navnet er kun på denne enhed.",
+      "soundDa": "namae-wa kono kikai-dake.",
+      "ipa": "naɰa.e ɰa kono kikai dake",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/names-privacy.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-praise-sugoi",
+      "entryId": "rewards-praise-sugoi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "すごい！",
+      "synthesisText": "すごい！",
+      "plainJapanese": "すごい！",
+      "danishMeaning": "Flot!",
+      "soundDa": "sugoi",
+      "ipa": "sɯɡoi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-praise-sugoi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-praise-iine",
+      "entryId": "rewards-praise-iine",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "いいね！",
+      "synthesisText": "いいね！",
+      "plainJapanese": "いいね！",
+      "danishMeaning": "Godt!",
+      "soundDa": "ii ne",
+      "ipa": "iːne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-praise-iine.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-praise-sonotoori",
+      "entryId": "rewards-praise-sonotoori",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "そのとおり！",
+      "synthesisText": "そのとおり！",
+      "plainJapanese": "そのとおり！",
+      "danishMeaning": "Lige præcis!",
+      "soundDa": "sono tori",
+      "ipa": "sono toːɾi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-praise-sonotoori.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-praise-subarashii",
+      "entryId": "rewards-praise-subarashii",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "すばらしい！",
+      "synthesisText": "すばらしい！",
+      "plainJapanese": "すばらしい！",
+      "danishMeaning": "Fantastisk!",
+      "soundDa": "subarashii",
+      "ipa": "sɯbaɾaɕiː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-praise-subarashii.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-praise-yoku",
+      "entryId": "rewards-praise-yoku",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "よくできました！",
+      "synthesisText": "よくできました！",
+      "plainJapanese": "よくできました！",
+      "danishMeaning": "Godt klaret!",
+      "soundDa": "yoku dekimashita",
+      "ipa": "joku dekimaɕita",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-praise-yoku.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-praise-atari",
+      "entryId": "rewards-praise-atari",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "あたり！",
+      "synthesisText": "あたり！",
+      "plainJapanese": "あたり！",
+      "danishMeaning": "Rigtigt!",
+      "soundDa": "atari",
+      "ipa": "ataɾi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-praise-atari.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-name-praise",
+      "entryId": "rewards-name-praise",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "すごい、",
+      "synthesisText": "すごい、",
+      "plainJapanese": "すごい、",
+      "danishMeaning": "Flot",
+      "soundDa": "sugoi",
+      "ipa": "sɯɡoi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-name-praise.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-sticker-sugoi",
+      "entryId": "rewards-sticker-sugoi",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "すごい",
+      "synthesisText": "すごい",
+      "plainJapanese": "すごい",
+      "danishMeaning": "Flot!",
+      "soundDa": "sugoi",
+      "ipa": "sɯɡoi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-sticker-sugoi.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-sticker-maru",
+      "entryId": "rewards-sticker-maru",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "○",
+      "synthesisText": "○",
+      "plainJapanese": "○",
+      "danishMeaning": "Rigtigt!",
+      "soundDa": "maru",
+      "ipa": "maɾɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-sticker-maru.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-sticker-star",
+      "entryId": "rewards-sticker-star",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "スター",
+      "synthesisText": "スター",
+      "plainJapanese": "スター",
+      "danishMeaning": "Stjerne",
+      "soundDa": "suta",
+      "ipa": "sɯtaː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-sticker-star.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-gift",
+      "entryId": "rewards-gift",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "ボーナス レッスン！",
+      "synthesisText": "ボーナス レッスン！",
+      "plainJapanese": "ボーナス レッスン！",
+      "danishMeaning": "En bonusøvelse!",
+      "soundDa": "boonasu ressun",
+      "ipa": "boːnasɯ ɾesːɯn",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-gift.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-welcome-back",
+      "entryId": "rewards-welcome-back",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "おかえり！",
+      "synthesisText": "おかえり！",
+      "plainJapanese": "おかえり！",
+      "danishMeaning": "Hej igen!",
+      "soundDa": "okaeri",
+      "ipa": "okaeri",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-welcome-back.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-page-filled",
+      "entryId": "rewards-page-filled",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "ページが いっぱい！",
+      "synthesisText": "ページが いっぱい！",
+      "plainJapanese": "ページが いっぱい！",
+      "danishMeaning": "Siden er fuld!",
+      "soundDa": "peeji ga ippai",
+      "ipa": "peːdʑi ɡa ipːai",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-page-filled.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-current-page",
+      "entryId": "rewards-current-page",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "あたらしい ページ",
+      "synthesisText": "あたらしい ページ",
+      "plainJapanese": "あたらしい ページ",
+      "danishMeaning": "En ny side",
+      "soundDa": "atarashii peeji",
+      "ipa": "ataɾaɕiː peːdʑi",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-current-page.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-streak-resting",
+      "entryId": "rewards-streak-resting",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "れんしゅうは まだ つづくよ",
+      "synthesisText": "れんしゅうは まだ つづくよ",
+      "plainJapanese": "れんしゅうは まだ つづくよ",
+      "danishMeaning": "Træningen fortsætter stadig",
+      "soundDa": "renshu wa mada tsuzuku yo",
+      "ipa": "ɾeɱɕɯː ɰa mada tsɯzɯkɯ jo",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-streak-resting.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-streak-today",
+      "entryId": "rewards-streak-today",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "きょうも れんしゅう したね",
+      "synthesisText": "きょうも れんしゅう したね",
+      "plainJapanese": "きょうも れんしゅう したね",
+      "danishMeaning": "Du har øvet i dag",
+      "soundDa": "kyo mo renshu shita ne",
+      "ipa": "kʲoː mo ɾeɱɕɯː ɕita ne",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-streak-today.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "rewards-streak-awake",
+      "entryId": "rewards-streak-awake",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "writing",
+      "domain": "rewards",
+      "transcript": "れんしゅう つづけよう",
+      "synthesisText": "れんしゅう つづけよう",
+      "plainJapanese": "れんしゅう つづけよう",
+      "danishMeaning": "Træningen fortsætter",
+      "soundDa": "renshu tsuzukeyo",
+      "ipa": "ɾeɱɕɯː tsɯzɯkejoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/rewards-streak-awake.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    }
+  ]
+}

@@ -27,26 +27,26 @@ describe('vocabulary progress', () => {
   it('starts empty and reads back what was cleared, per unit', () => {
     expect(getVocabProgress(unit.id)).toEqual({ words: [], paid: false })
 
-    markWordDone('1', 'ab')
-    expect(getVocabProgress('1').words).toEqual(['ab'])
+    markWordDone('1', 'mizu')
+    expect(getVocabProgress('1').words).toEqual(['mizu'])
     // Units keep their own key — `djl.v1.vocab.<unit>`.
     expect(getVocabProgress('2').words).toEqual([])
   })
 
   it('is add-only: clearing the same word twice changes nothing', () => {
-    markWordDone(unit.id, 'ab')
-    markWordDone(unit.id, 'ab')
-    expect(getVocabProgress(unit.id).words).toEqual(['ab'])
+    markWordDone(unit.id, 'mizu')
+    markWordDone(unit.id, 'mizu')
+    expect(getVocabProgress(unit.id).words).toEqual(['mizu'])
   })
 
-  it('keeps completed color words when they move into the color lesson', () => {
-    markWordDone('1', 'abi')
-    markWordDone('3', 'zard')
-    expect(getVocabProgress('4').words).toEqual(['abi', 'zard'])
+  it('keeps completed colour words in their own colour lesson', () => {
+    markWordDone('4', 'aka')
+    markWordDone('4', 'ao')
+    expect(getVocabProgress('4').words).toEqual(['aka', 'ao'])
   })
 
   it('counts only the words that belong to the unit', () => {
-    markWordDone(unit.id, 'ab')
+    markWordDone(unit.id, 'mizu')
     markWordDone(unit.id, 'not-a-word')
     expect(unitDoneCount(unit)).toBe(1)
     expect(isUnitDone(unit)).toBe(false)

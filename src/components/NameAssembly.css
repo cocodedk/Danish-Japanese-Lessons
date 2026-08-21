@@ -11,7 +11,7 @@
 }
 
 /* The two languages stack; they never share a line. Side by side they fitted on
-   a laptop and fell apart on a phone: «این حرف در نامِ تو نیست. دوباره نگاه کن.»
+   a laptop and fell apart on a phone: 「この 文字は あなたの なまえに ありません」
    is a sentence, not a word, and at 360 px it wrapped INTO the Danish sentence
    beside it — right-to-left and left-to-right shuffled together, with no way to
    tell where one language stopped. In a column each sentence wraps inside its

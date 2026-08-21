@@ -19,9 +19,9 @@ describe('spaced review scheduler', () => {
   })
 
   it('migrates exposure as due, never as retained learning', () => {
-    markLetterDone('be')
+    markLetterDone('a')
     const store = syncLegacyReview(at('2026-08-06'))
-    expect(store.items['alphabet-letter-be']).toMatchObject({
+    expect(store.items['alphabet-letter-a']).toMatchObject({
       stage: 0,
       successfulRetrievals: 0,
       dueDay: '2026-08-06',

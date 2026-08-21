@@ -7,7 +7,7 @@ import { teachingOrder } from '../lessons/alphabet'
 import { vowelMarks } from '../lessons/vowelMarks'
 
 export interface AlphabetProgress {
-  /** Ids of letters (and آ) the learner has cleared. */
+  /** Ids of letters (and the marks) the learner has cleared. */
   letters: string[]
   /** Ids of vowel marks the learner has cleared. */
   marks: string[]
@@ -53,7 +53,7 @@ export function markOrientationSeen(): AlphabetProgress {
   return save({ ...getAlphabetProgress(), orientationSeen: true })
 }
 
-/** Everything there is to clear: the 32 letters plus آ, plus the six vowel marks. */
+/** Everything there is to clear: the 46 hiragana plus the six lydtegn. */
 export const ALPHABET_TOTAL = teachingOrder.length + vowelMarks.length
 
 export function doneCount(progress: AlphabetProgress): number {

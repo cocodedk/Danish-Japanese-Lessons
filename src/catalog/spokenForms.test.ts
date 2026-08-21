@@ -4,11 +4,11 @@ import { defineEntry, spokenFormsFor } from './types'
 describe('spoken forms', () => {
   it('derives one neutral form without losing precise pronunciation', () => {
     const entry = defineEntry({
-      id: 'test-water', kind: 'word', ja: 'آب', da: 'vand',
+      id: 'test-water', kind: 'word', ja: 'みず', da: 'vand',
       pron: { da: 'åb', ipa: 'ɒːb' },
     })
     expect(spokenFormsFor(entry)).toEqual([{
-      id: 'neutral', register: 'neutral', ja: 'آب', da: 'vand',
+      id: 'neutral', register: 'neutral', ja: 'みず', da: 'vand',
       pron: { da: 'åb', ipa: 'ɒːb' }, audioId: 'test-water',
     }])
   })

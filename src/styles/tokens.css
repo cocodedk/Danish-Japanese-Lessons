@@ -1,5 +1,5 @@
 /* Design tokens transcribed from docs/design/ART-DIRECTION.md — the notebook
-   ("دفتر مشق") palette, type, and app-specific spacing rules. Light + dark
+   ("skrivehæfte notesbog") palette, type, and app-specific spacing rules. Light + dark
    paper both ship from day one via prefers-color-scheme.
 
    The palette is declared once as raw -*-light / -*-dark values, then bound to
@@ -18,7 +18,7 @@
   --rule-light: #c7d3e2;
   --card-light: #efe8da;
   /* The gold-star sticker, the one celebration colour ART-DIRECTION names
-     outside the palette table («ستارهٔ طلایی»). Used for that sticker only. */
+     outside the palette table (gold star). Used for that sticker only. */
   --gold-light: #b8862b;
   /* Latin sound hints on the keyboard keys — the pencil orange. */
   --orange-light: #793500;
@@ -71,9 +71,9 @@
   --rule-shift: 1.625rem;
 
   /* Where the teacher's red stops, measured down from the top of the line box
-     in em, tuned against Noto Naskh Arabic at line-height 2. --madde-cut is
-     the above-the-line cut (مد، زبر، پیش) and matches website/styles.css;
-     --zir-cut is the below-the-baseline one (زیر). */
+     in em, tuned against Noto Sans JP at line-height 2. --madde-cut is the
+     above-the-line cut for the hand marks ゛ ゜; --zir-cut is kept for
+     compatibility, but Japanese marks never sit below the line. */
   --madde-cut: 0.54em;
   --zir-cut: 1.3em;
 }

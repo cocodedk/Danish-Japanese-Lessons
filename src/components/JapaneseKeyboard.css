@@ -3,12 +3,12 @@
    what the learner writes. No shadow, no gradient, no lift on press: the only
    thing that changes when a key goes down is its colour.
 
-   Six columns is the widest grid that keeps every key at or above 44×44px on a
-   360px screen: (360 - 8 padding - 5 × 4 gap) ÷ 6 ≈ 55px. */
+   Seven columns keeps every key at or above 44×44px on a 360px screen:
+   (360 - 8 padding - 6 × 4 gap) ÷ 7 ≈ 47px. */
 
 .keyboard {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 0.25rem;
   /* Hand-sized wherever it is shown: a keyboard stretched across a laptop is
      no easier to reach, only stranger to look at. */
@@ -76,7 +76,7 @@
   color: var(--orange);
 }
 
-/* A space is one pen stroke; the نیم‌فاصله is that stroke cut in half. */
+/* A space is one pen stroke; the halvt mellemrum is that stroke cut in half. */
 .keyboard__stroke {
   inline-size: 1.5rem;
   block-size: 0.75rem;

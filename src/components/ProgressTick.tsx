@@ -8,7 +8,7 @@ export interface ProgressTickProps {
 }
 
 /**
- * The red margin tick a teacher puts beside finished مشق. Granted ticks stamp
+ * The red margin tick a teacher puts beside finished skrivehæfte. Granted ticks stamp
  * in briefly; under prefers-reduced-motion they simply appear — a reward is
  * never skipped, only ever un-animated. See docs/design/ART-DIRECTION.md "Motion".
  */

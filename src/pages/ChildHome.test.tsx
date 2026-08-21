@@ -64,7 +64,7 @@ describe('ChildHome', () => {
     const section = screen.getByRole('heading', { name: 'Tal fra 1 til 10' }).closest('section')!
     expect(within(section).getAllByRole('listitem')).toHaveLength(beginnerNumbers.length)
     for (const row of beginnerNumbers) {
-      expect(within(section).getByText(row.word.entry.ja)).toBeVisible()
+      expect(within(section).getByText(row.word.ja)).toBeVisible()
     }
   })
 
@@ -95,7 +95,13 @@ describe('ChildHome', () => {
 
   it('switches deliberately to the grown-up course', () => {
     renderHome()
-    fireEvent.click(screen.getByRole('link', { name: 'Skrift' }))
+    // The nav labels the course link 'Skrift' once speaking is ready; while
+    // the audio corpus is still closed it says 'Lektioner'. The href is the
+    // stable thing to click.
+    const course = screen
+      .getAllByRole('link')
+      .find((link) => link.getAttribute('href') === '/kursus')!
+    fireEvent.click(course)
     expect(screen.getByRole('heading', { name: 'Hele kurset' })).toBeInTheDocument()
     expect(getJourneyChoice()).toBe('script')
   })

@@ -8,17 +8,17 @@ describe('child collection', () => {
   it('starts empty and appends a mission once', () => {
     expect(getChildCollection()).toEqual([])
 
-    expect(addCollectedMission('nan')).toBe(true)
-    expect(addCollectedMission('nan')).toBe(false)
-    expect(getChildCollection()).toEqual(['nan'])
+    expect(addCollectedMission('pan')).toBe(true)
+    expect(addCollectedMission('pan')).toBe(false)
+    expect(getChildCollection()).toEqual(['pan'])
   })
 
   it('keeps canonical order and ignores unknown or duplicate stored ids', () => {
     writeJSON('child-collection', {
-      completedMissionIds: ['ab', 'unknown', 'salam', 'ab'],
+      completedMissionIds: ['mizu', 'unknown', 'konnichiwa', 'mizu'],
     })
 
-    expect(getChildCollection()).toEqual(['salam', 'ab'])
+    expect(getChildCollection()).toEqual(['konnichiwa', 'mizu'])
   })
 
   it('does not add an unknown mission', () => {

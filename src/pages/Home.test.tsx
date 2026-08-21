@@ -82,7 +82,7 @@ describe('Home', () => {
   })
 
   it('never fabricates whole-name pronunciation in the Japanese greeting', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     render(<Home />)
 
     const greeting = document.querySelector('.split-card__greeting')
@@ -134,7 +134,9 @@ describe('Home', () => {
     const lesson = screen.getByRole('link', { name: /Alfabetet/ })
     expect(lesson).toHaveAttribute('href', '/lesson/alphabet')
     expect(screen.getByText(`0 af ${ALPHABET_TOTAL} set eller øvet`)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Tal' })).toHaveAttribute('href', '/tal')
+    // The first word unit card — the 'Tal' card lives on the speaking hub now.
+    const firstUnit = screen.getByRole('link', { name: /^De første ord$/ })
+    expect(firstUnit).toHaveAttribute('href', '/lesson/ord/1')
   })
 
   it('deleting the name from the settings corner reverts the greeting to plain Hej!', () => {

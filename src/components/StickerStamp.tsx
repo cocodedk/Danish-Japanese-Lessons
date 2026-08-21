@@ -3,19 +3,19 @@ import type { StickerKind } from '../rewards/types'
 import './StickerStamp.css'
 import { PronLine } from './PronLine'
 
-/** The آفرین rubber stamp: a red frame, struck slightly off-square. */
+/** The すごい rubber stamp: a red frame, struck slightly off-square. */
 function Afarin() {
   return (
     <svg viewBox="0 0 120 76" aria-hidden="true" focusable="false">
       <rect className="sticker-stamp__frame" x="4" y="4" width="112" height="68" rx="7" />
-      <text className="sticker-stamp__fa" x="60" y="50" xmlLang="ja" direction="rtl">
+      <text className="sticker-stamp__fa" x="60" y="50" xmlLang="ja" direction="ltr">
         {STICKER_LABELS.afarin.ja}
       </text>
     </svg>
   )
 }
 
-/** ۲۰ out of ۲۰ — the mark, ringed the way a teacher rings it. */
+/** The ○ mark, ringed the way a teacher rings it. */
 function Bist() {
   return (
     <svg viewBox="0 0 120 76" aria-hidden="true" focusable="false">
@@ -27,7 +27,7 @@ function Bist() {
   )
 }
 
-/** ستارهٔ طلایی — the gold star, outlined in ink so it reads on both papers. */
+/** The gold star, outlined in ink so it reads on both papers. */
 function Star() {
   return (
     <svg viewBox="0 0 120 76" aria-hidden="true" focusable="false">

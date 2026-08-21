@@ -24,7 +24,7 @@ import type {
   StreakState,
 } from './types'
 
-/** A notebook page holds twenty points — the ۲۰/۲۰ a teacher writes at the top. */
+/** A notebook page holds twenty points — the ○ a teacher rings at the top. */
 export const POINTS_PER_PAGE = 20
 /** A sticker every ten points. */
 export const STICKER_STEP = 10

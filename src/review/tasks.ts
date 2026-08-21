@@ -21,29 +21,15 @@ export interface ReviewTask {
   supportEntries?: JapaneseEntry[]
 }
 
-const alefRoleQuestion: Question = {
-  id: 'review-role-alef',
-  itemId: specimens.alef.entry.id,
-  entry: specimens.alef.entry,
-  promptDa: 'Hvad gør alef i et ord?',
-  showsFa: true,
-  showsPron: false,
-  choices: [
-    { id: 'alef-role-carrier', entry: specimens.alef.entry, glyph: 'Det bærer eller skriver en vokal' },
-    { id: 'alef-role-b', entry: specimens.be.entry, glyph: 'Det siger altid b' },
-    { id: 'alef-role-d', entry: specimens.dal.entry, glyph: 'Det siger altid d' },
-    { id: 'alef-role-madde', entry: specimens['alef-madde'].entry, glyph: 'Det har altid madde over sig' },
-  ],
-  answerId: 'alef-role-carrier',
-  choiceLang: 'da',
-}
-
 const findQuestions = buildQuestions('find')
 const matchQuestions = buildQuestions('match')
+// Every hiragana has one stable sound, so every letter is a find question —
+// there is no carrier letter to teach around (the Persian alef role is gone).
 const alphabetQuestions = teachingOrder.map((id) => {
-  if (id === 'alef') return alefRoleQuestion
   const entryId = specimens[id].entry.id
-  return findQuestions.find((question) => question.entry.id === entryId)!
+  const found = findQuestions.find((question) => question.entry.id === entryId)
+  if (!found) throw new Error(`Review: no find question for ${id}`)
+  return found
 })
 
 const vowelQuestions: Question[] = vowelMarks.map((mark, index) => {
@@ -52,7 +38,7 @@ const vowelQuestions: Question[] = vowelMarks.map((mark, index) => {
     id: `review-vowel-${mark.id}`,
     itemId: mark.entry.id,
     entry: mark.entry,
-    promptDa: 'Hvilket vokaltegn har denne lyd?',
+    promptDa: 'Hvilket lydtegn er dette?',
     choices: arrange(
       { id: mark.entry.id, entry: mark.entry, glyph: mark.entry.ja },
       others.map((other) => ({ id: other.entry.id, entry: other.entry, glyph: other.entry.ja })),

@@ -96,7 +96,7 @@
   background: var(--blue);
 }
 
-/* The marking's own row of rows: the cells, then the «دوباره» line, inset and
+/* The marking's own row of rows: the cells, then the «igen» line, inset and
    centered the same way the line and the keyboard above it are. */
 .type__feedback {
   max-inline-size: 26rem;
@@ -141,7 +141,7 @@
   border-radius: 3px;
 }
 
-/* A space and a نیم‌فاصله have no letterform — same two pen strokes the
+/* A space and a halvt‌mellemrum have no letterform — same two pen strokes the
    keyboard draws them with, so the marking row can point at them too. */
 .type__stroke {
   inline-size: 1.25rem;
@@ -173,7 +173,7 @@
   line-height: var(--rule-step);
 }
 
-/* «دوباره» is said in ink, the way the choice rounds say it. The one red thing
+/* «igen» is said in ink, the way the choice rounds say it. The one red thing
    on this screen is the mark itself — that is what makes it read as a mark. */
 .type__again [lang='ja'] {
   font-family: var(--font-ja);

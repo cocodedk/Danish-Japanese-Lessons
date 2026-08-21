@@ -14,13 +14,13 @@ const ColorModeControl = lazy(() => import('./ColorModeControl'))
 export interface SettingsCornerProps {
   name?: string
   /** The Japanese spelling, when the learner has chosen one. */
-  faSpelling?: string
+  jaSpelling?: string
   onSave: (name: string) => void
   onDelete: () => void
 }
 
 /** The persistent app settings disclosure. */
-export function SettingsCorner({ name, faSpelling, onSave, onDelete }: SettingsCornerProps) {
+export function SettingsCorner({ name, jaSpelling, onSave, onDelete }: SettingsCornerProps) {
   const [open, setOpen] = useState(false)
   const [draft, setDraft] = useState(name ?? '')
   const [activeTab, setActiveTab] = useState<SettingsTab>('settings')
@@ -146,14 +146,14 @@ export function SettingsCorner({ name, faSpelling, onSave, onDelete }: SettingsC
               {/* The spelling lives on its own screen, where the letters are. */}
               {name && (
                 <p className="settings-corner__spelling">
-                  {faSpelling && (
+                  {jaSpelling && (
                     <PersonalNameText
-                      spelling={faSpelling}
+                      spelling={jaSpelling}
                       className="settings-corner__spelling-ja"
                     />
                   )}
                   <Link className="settings-corner__link" to="/dit-navn">
-                    {faSpelling ? 'Ret navnet på japansk' : 'Skriv navnet på japansk'}
+                    {jaSpelling ? 'Ret navnet på japansk' : 'Skriv navnet på japansk'}
                   </Link>
                 </p>
               )}

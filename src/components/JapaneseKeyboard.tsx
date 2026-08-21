@@ -74,7 +74,11 @@ export function JapaneseKeyboard({ onPress, label }: JapaneseKeyboardProps) {
 
   function choose(shape: KeyDef) {
     onPress(shape)
-    if (shape.entry) setSelected(shape)
+    // A letter (or the ー bar) opens its lesson strip; a sign key with no
+    // entry (space, backspace) clears the strip instead of leaving the last
+    // letter's help up. `selected` stays the whole key, so the strip can
+    // read shape.entry below.
+    setSelected(shape.entry ? shape : null)
   }
 
   return (

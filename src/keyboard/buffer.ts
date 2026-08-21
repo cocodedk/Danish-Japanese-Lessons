@@ -2,12 +2,12 @@
 //
 // The one idea worth knowing: **the string IS the buffer**. Japanese letters
 // change shape according to their neighbours, and the browser's own text
-// shaping already does that — بابا typed as four separate letters renders
+// shaping already does that — みず typed as two separate letters renders
 // joined without a line of help from here. Any joining logic in this file
 // would be a second, worse implementation of something the platform does
 // correctly. So there is none. See docs/plans/005-japanese-keyboard.md step 2.
 
-/** نیم‌فاصله (U+200C): the half-space that separates without breaking the word. */
+/** ZWNJ (U+200C): the half-space that separates without breaking the word. */
 export const ZWNJ = '‌'
 
 export const SPACE = ' '
@@ -16,7 +16,7 @@ export const SPACE = ' '
 export type KeyKind = 'letter' | 'separator' | 'backspace'
 
 /**
- * The two signs that only mean something between two letters: the نیم‌فاصله and
+ * The two signs that only mean something between two letters: the ZWNJ and
  * the plain space of a compound name. Neither can open a buffer and neither can
  * follow the other — a leading or doubled separator is invisible on screen and
  * would fail a comparison the learner has no way to see.

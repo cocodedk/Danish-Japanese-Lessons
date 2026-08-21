@@ -59,6 +59,16 @@ export function praiseOnScreen(): boolean {
   return PRAISE.some((line) => screen.queryAllByText(line.ja).length > 0)
 }
 
+/** The unit's first word the board can actually write (the 46 kana + ー).
+ *  Katakana loanwords (パン) and dakuten kana (みず) are not on the board, so
+ *  the harness never asks the keyboard for a letter it cannot produce. */
+export function firstTypeableWord(unit: ReturnType<typeof findVocabUnit> & {}): typeof unit.words[number] {
+  const typeable = new Set(KEYBOARD_KEYS.filter((key) => key.glyph).map((key) => key.glyph))
+  const word = unit.words.find((w) => [...w.ja].every((char) => typeable.has(char)))
+  if (!word) throw new Error(`unit ${unit.id} has no typeable word`)
+  return word
+}
+
 /** Writes every word of a unit's round correctly, and closes the round. */
 export function finishTypeRound(unitId: string): void {
   const unit = findVocabUnit(unitId)!

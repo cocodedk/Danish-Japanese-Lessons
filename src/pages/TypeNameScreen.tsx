@@ -26,8 +26,8 @@ export default function TypeNameScreen() {
   const [profile] = useState(getProfile)
   const celebration = useCelebration()
 
-  const { faSpelling, name } = profile
-  if (!faSpelling || !canType(faSpelling)) {
+  const { jaSpelling, name } = profile
+  if (!jaSpelling || !canType(jaSpelling)) {
     return <Navigate to="/kursus" replace />
   }
 
@@ -40,8 +40,8 @@ export default function TypeNameScreen() {
         {
           id: NAME_TASK,
           promptDa: 'Skriv dit navn med japanske bogstaver',
-          answer: faSpelling,
-          personalName: { spelling: faSpelling, original: name },
+          answer: jaSpelling,
+          personalName: { spelling: jaSpelling, original: name },
         },
       ]}
       onCorrect={() => celebration.cheer(typeWordDone(NAME_TASK, NAME_TASK))}
@@ -51,7 +51,7 @@ export default function TypeNameScreen() {
         // costs nothing — the exercise is the writing, not the remembering.
         <details className="type__help">
           <summary>Se, hvordan dit navn staves</summary>
-          <PersonalNameText spelling={faSpelling} as="p" className="type__help-ja" />
+          <PersonalNameText spelling={jaSpelling} as="p" className="type__help-ja" />
         </details>
       }
       doneLine="Du skrev dit eget navn med japanske bogstaver."

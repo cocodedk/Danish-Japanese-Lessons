@@ -10,7 +10,7 @@ import { ReviewSession } from './ReviewSession'
 const entry = defineEntry({
   id: 'fixture-review-entry',
   kind: 'word',
-  ja: 'آب',
+  ja: 'みず',
   da: 'vand',
   pron: { da: 'åb', ipa: 'ɒːb' },
 })

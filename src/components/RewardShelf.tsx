@@ -14,7 +14,7 @@ export interface RewardShelfProps {
 const SHOWN = 6
 
 /**
- * «آفرین‌نامه» — the stickers the learner has collected and the notebook page
+ * «klistermærkerne» — the stickers the learner has collected and the notebook page
  * they are on. Nothing here can ever go down, so the shelf only ever fills up.
  * Before the first sticker there is nothing to show and nothing is shown.
  */

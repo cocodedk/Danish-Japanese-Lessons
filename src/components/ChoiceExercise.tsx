@@ -23,7 +23,7 @@ export interface ChoiceExerciseProps {
 }
 
 /**
- * Tap the right letter. A wrong tap costs nothing: it says «دوباره», leaves
+ * Tap the right letter. A wrong tap costs nothing: it says «igen», leaves
  * every choice open and keeps the ticks already earned — CLAUDE.md's
  * generosity rule. There is no score and no timer, by design.
  */

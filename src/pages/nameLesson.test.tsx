@@ -22,7 +22,7 @@ describe('#/lesson/navn — write your name', () => {
   })
 
   it('walks the name kana by kana, each letter in the form it takes there', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     expect(screen.getByRole('heading', { name: 'Skriv dit navn' })).toBeInTheDocument()
@@ -40,7 +40,7 @@ describe('#/lesson/navn — write your name', () => {
   })
 
   it('says how every kana of the name sounds, in the alphabet lesson’s own words', () => {
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     const said = (letter: { sound?: { da: string; ipa: string } }) =>
@@ -58,7 +58,7 @@ describe('#/lesson/navn — write your name', () => {
   it('names a sign outside the alphabet in Danish, never by printing the sign', () => {
     // Vivian — the v-syllables ヴ・ィ are outside the 46 kana. «Bogstav 1:
     // ヴ» would ask a beginner to read the very thing they cannot read yet.
-    setProfile({ name: 'Vivian', faSpelling: 'ヴィヴィアン' })
+    setProfile({ name: 'Vivian', jaSpelling: 'ヴィヴィアン' })
     open('#/lesson/navn')
 
     expect(screen.getByText('Bogstav 1: særligt tegn står alene')).toBeInTheDocument()
@@ -72,7 +72,7 @@ describe('#/lesson/navn — write your name', () => {
 
   it('under prefers-reduced-motion the lesson is whole and the reward still lands', () => {
     wantsLessMotion()
-    setProfile({ name: 'Sara', faSpelling: 'サラ' })
+    setProfile({ name: 'Sara', jaSpelling: 'サラ' })
     open('#/lesson/navn')
 
     expect(document.querySelectorAll('.name-walk__step')).toHaveLength(2)

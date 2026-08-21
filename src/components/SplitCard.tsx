@@ -12,7 +12,7 @@ import { LessonImage } from './LessonImage'
 
 export interface SplitCardProps {
   word: WordCard
-  /** Always «سلام!» in plan 001 — the Japanese pane never renders Latin text. */
+  /** Always «konnichiwa!» in plan 001 — the Japanese pane never renders Latin text. */
   greetingEntry?: JapaneseEntry
   personalSpelling?: string
   /** "Hej {name}!" once a name exists, else "Hej!". */

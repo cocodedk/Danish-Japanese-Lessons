@@ -16,13 +16,13 @@ import './name.css'
  * How the learner's name is spelled in Japanese: the engine proposes, the
  * learner decides. Nothing is saved until they say so, and the spelling they
  * keep is the one the whole app uses — greeting, badges and mini-lesson all
- * read `profile.faSpelling`. See docs/plans/006-your-name.md step 2.
+ * read `profile.jaSpelling`. See docs/plans/006-your-name.md step 2.
  */
 export default function NameSpelling() {
   const navigate = useNavigate()
   const [profile] = useState(getProfile)
   const [draft, setDraft] = useState(
-    () => profile.faSpelling ?? suggestSpellings(profile.name ?? '')[0] ?? '',
+    () => profile.jaSpelling ?? suggestSpellings(profile.name ?? '')[0] ?? '',
   )
   const [editing, setEditing] = useState(false)
 
@@ -48,12 +48,12 @@ export default function NameSpelling() {
 
   function save() {
     const spelling = draft.trim()
-    setProfile({ ...profile, faSpelling: spelling || undefined })
+    setProfile({ ...profile, jaSpelling: spelling || undefined })
     navigate('/')
   }
 
   function remove() {
-    setProfile({ ...profile, faSpelling: undefined })
+    setProfile({ ...profile, jaSpelling: undefined })
     navigate('/')
   }
 
@@ -119,7 +119,7 @@ export default function NameSpelling() {
 
       <div className="name__actions name__actions--save">
         <Button onClick={save}>Gem stavemåden</Button>
-        {profile.faSpelling && (
+        {profile.jaSpelling && (
           <Button variant="quiet" onClick={remove}>
             Slet stavemåden
           </Button>

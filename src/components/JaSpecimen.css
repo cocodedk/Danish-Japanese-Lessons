@@ -20,7 +20,7 @@
   grid-area: 1 / 1;
 }
 
-/* The teacher's pen. Only the اِعراب are ever left uncovered by the ink layer. */
+/* The teacher's pen. Only the handmærker are ever left uncovered by the ink layer. */
 .ja-specimen__marks {
   color: var(--red);
 }

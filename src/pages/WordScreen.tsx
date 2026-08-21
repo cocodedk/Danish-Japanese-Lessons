@@ -24,7 +24,7 @@ function sharedWithName(ja: string, spelling: string | undefined): string[] {
   return [...new Set(ja)].filter((letter) => spelling.includes(letter))
 }
 
-/** One word: the specimen with its اِعراب, said twice, and its Danish meaning. */
+/** One word: the specimen, said twice, and its Danish meaning. */
 export default function WordScreen() {
   const { unit: unitId = '', word: wordId = '' } = useParams()
   const [cleared, setCleared] = useState(() => getVocabProgress(unitId).words.includes(wordId))
@@ -39,7 +39,7 @@ export default function WordScreen() {
   const word = unit.words[index]
   const previous = unit.words[index - 1]
   const next = unit.words[index + 1]
-  const shared = sharedWithName(word.ja, getProfile().faSpelling)
+  const shared = sharedWithName(word.ja, getProfile().jaSpelling)
   const only = shared.length === 1
   const unitPath = `/lesson/ord/${unit.id}`
 

@@ -29,12 +29,16 @@ export default function LetterScreen() {
     return <Navigate to="/lesson/alphabet" replace />
   }
 
-  // آ is a taught sign, not the 33rd letter — the heading says which it is.
+  // ー is a taught sign, not a kana — the heading says which it is.
   const letter = isLetter(specimen) ? specimen : undefined
   const index = teachingOrder.indexOf(id)
   const previous = teachingOrder[index - 1]
   const next = teachingOrder[index + 1]
-  const inMyName = getProfile().faSpelling?.includes(specimen.glyph) ?? false
+  // The badge looks for the learner's kana in either script: the spelling is
+  // katakana (names), the lesson teaches hiragana (specimen.glyph).
+  const spelling = getProfile().jaSpelling ?? ''
+  const inMyName = spelling.includes(specimen.glyph)
+    || ('kata' in specimen && spelling.includes(specimen.kata))
 
   return (
     <LessonSheet
@@ -49,7 +53,7 @@ export default function LetterScreen() {
     >
       <div className="letter__workspace">
         <div className="letter__identity">
-          {/* "Tegn", not "bogstav": the 33 are the 32 letters plus the sign آ. */}
+          {/* "Tegn", not "bogstav": the board also carries the ー sign. */}
           <p className="letter__eyebrow">
             Tegn {index + 1} af {teachingOrder.length}
           </p>

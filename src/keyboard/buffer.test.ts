@@ -3,25 +3,25 @@ import { ZWNJ, appendLetter, appendSeparator, backspace, press } from './buffer'
 
 describe('the typing buffer', () => {
   it('appends a letter to an empty buffer', () => {
-    expect(appendLetter('', 'ب')).toBe('ب')
+    expect(appendLetter('', 'み')).toBe('み')
   })
 
   it('is the string itself — letters land in typing order and nothing joins them', () => {
-    // بابا typed left to right in code-point order: ب ا ب ا. The browser does
+    // みず typed left to right in code-point order: み ず. The browser does
     // the shaping; there is no joining logic here to get wrong.
-    const typed = ['ب', 'ا', 'ب', 'ا'].reduce(appendLetter, '')
-    expect(typed).toBe('بابا')
-    expect([...typed]).toHaveLength(4)
+    const typed = ['み', 'ず'].reduce(appendLetter, '')
+    expect(typed).toBe('みず')
+    expect([...typed]).toHaveLength(2)
   })
 
-  it('takes آ as the single code point it is', () => {
-    expect([...appendLetter('', 'آ')]).toHaveLength(1)
+  it('takes a single kana as the one code point it is', () => {
+    expect([...appendLetter('', 'み')]).toHaveLength(1)
   })
 })
 
 describe('backspace', () => {
   it('removes the last code point', () => {
-    expect(backspace('بابا')).toBe('باب')
+    expect(backspace('みず')).toBe('み')
   })
 
   it('on an empty buffer leaves it empty', () => {
@@ -29,57 +29,57 @@ describe('backspace', () => {
   })
 
   it('removes a lone ZWNJ — one press, one code point', () => {
-    expect(backspace(`می${ZWNJ}`)).toBe('می')
-    expect(backspace(`می${ZWNJ}ر`)).toBe(`می${ZWNJ}`)
+    expect(backspace(`これ${ZWNJ}`)).toBe('これ')
+    expect(backspace(`これ${ZWNJ}れ`)).toBe(`これ${ZWNJ}`)
   })
 
   it('never splits a code point into halves', () => {
     // Nothing in Japanese sits outside the BMP, but the rule is code points, and
     // a `slice(0, -1)` would hand back half a surrogate pair.
-    expect(backspace('ب😀')).toBe('ب')
+    expect(backspace('み😀')).toBe('み')
   })
 })
 
 describe('ZWNJ', () => {
-  it('never starts the buffer — a نیم‌فاصله needs a letter to its right', () => {
+  it('never starts the buffer — a half-space needs a letter to its right', () => {
     expect(appendSeparator('', ZWNJ)).toBe('')
   })
 
   it('appends after a letter', () => {
-    expect(appendSeparator('می', ZWNJ)).toBe(`می${ZWNJ}`)
+    expect(appendSeparator('これ', ZWNJ)).toBe(`これ${ZWNJ}`)
   })
 
   it('never doubles — a second press collapses into the first', () => {
-    const once = appendSeparator('می', ZWNJ)
+    const once = appendSeparator('これ', ZWNJ)
     expect(appendSeparator(once, ZWNJ)).toBe(once)
   })
 
-  it('writes a joined word the way Japanese spells it', () => {
-    expect(appendLetter(appendSeparator('کتاب', ZWNJ), 'ه')).toBe(`کتاب${ZWNJ}ه`)
+  it('writes a joined word the way a half-space spells it', () => {
+    expect(appendLetter(appendSeparator('ほん', ZWNJ), 'だ')).toBe(`ほん${ZWNJ}だ`)
   })
 })
 
 describe('space', () => {
   it('never starts the buffer and never doubles', () => {
     expect(appendSeparator('', ' ')).toBe('')
-    expect(appendSeparator('آنه ', ' ')).toBe('آنه ')
+    expect(appendSeparator('アンネ ', ' ')).toBe('アンネ ')
   })
 
   it('separates the two parts of a compound name', () => {
-    expect(appendSeparator('آنه', ' ')).toBe('آنه ')
+    expect(appendSeparator('アンネ', ' ')).toBe('アンネ ')
   })
 
   it('cannot follow a ZWNJ, and a ZWNJ cannot follow it — one separator at a time', () => {
-    expect(appendSeparator(`می${ZWNJ}`, ' ')).toBe(`می${ZWNJ}`)
-    expect(appendSeparator('آنه ', ZWNJ)).toBe('آنه ')
+    expect(appendSeparator(`これ${ZWNJ}`, ' ')).toBe(`これ${ZWNJ}`)
+    expect(appendSeparator('アンネ ', ZWNJ)).toBe('アンネ ')
   })
 })
 
 describe('press', () => {
   it('routes every key kind to its rule', () => {
-    expect(press('با', 'letter', 'ب')).toBe('باب')
-    expect(press('با', 'separator', ZWNJ)).toBe(`با${ZWNJ}`)
+    expect(press('み', 'letter', 'ず')).toBe('みず')
+    expect(press('み', 'separator', ZWNJ)).toBe(`み${ZWNJ}`)
     expect(press('', 'separator', ZWNJ)).toBe('')
-    expect(press('باب', 'backspace', '')).toBe('با')
+    expect(press('みず', 'backspace', '')).toBe('み')
   })
 })

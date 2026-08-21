@@ -5,99 +5,79 @@ import { vocabUnits } from '../lessons/vocab'
 
 describe('comparing what was typed with the word', () => {
   it('matches an exact word', () => {
-    expect(compare('بابا', 'بابا')).toEqual({ kind: 'match', index: -1, cellKind: 'letter' })
+    expect(compare('みず', 'みず')).toEqual({ kind: 'match', index: -1, cellKind: 'letter' })
   })
 
   it('finds the first wrong letter, and only the first', () => {
-    // بابد for بابا: the first three letters are right, the fourth is not.
-    expect(compare('بابد', 'بابا')).toEqual({ kind: 'wrong', index: 3, cellKind: 'letter' })
-    // نان for بابا: wrong from the very first letter, and that is the only mark.
-    expect(compare('نان', 'بابا')).toEqual({ kind: 'wrong', index: 0, cellKind: 'letter' })
+    // みす for みず: the first two letters are right, the third is not.
+    expect(compare('みす', 'みず')).toEqual({ kind: 'wrong', index: 1, cellKind: 'letter' })
+    // かぜ for みず: wrong from the very first letter, and that is the only mark.
+    expect(compare('かぜ', 'みず')).toEqual({ kind: 'wrong', index: 0, cellKind: 'letter' })
   })
 
   it('finds a missing letter as the slot after what was written', () => {
-    expect(compare('باب', 'بابا')).toEqual({ kind: 'missing', index: 3, cellKind: 'letter' })
-    expect(compare('', 'بابا')).toEqual({ kind: 'missing', index: 0, cellKind: 'letter' })
+    expect(compare('み', 'みず')).toEqual({ kind: 'missing', index: 1, cellKind: 'letter' })
+    expect(compare('', 'みず')).toEqual({ kind: 'missing', index: 0, cellKind: 'letter' })
   })
 
   it('finds an extra letter at the first position past the word', () => {
-    expect(compare('بابای', 'بابا')).toEqual({ kind: 'extra', index: 4, cellKind: 'letter' })
-  })
-
-  it('counts a ZWNJ as a position of its own', () => {
-    // The typed side at the divergence ('ه') is a letter, even though the
-    // answer wanted a ZWNJ there — see the cellKind tests below for cells
-    // that are themselves a space or a ZWNJ.
-    expect(compare('کتابها', `کتاب${ZWNJ}ها`)).toEqual({ kind: 'wrong', index: 4, cellKind: 'letter' })
-    expect(compare(`کتاب${ZWNJ}ها`, `کتاب${ZWNJ}ها`).kind).toBe('match')
+    expect(compare('みずか', 'みず')).toEqual({ kind: 'extra', index: 2, cellKind: 'letter' })
   })
 })
 
 describe('naming the kind of cell a divergence points at', () => {
-  it('reads the answer\'s side for a missing space or ZWNJ — nothing typed to read yet', () => {
-    // «آنه مته» (Anne Mette) joins its two halves with a plain space.
-    expect(compare('آنه', 'آنه مته')).toEqual({ kind: 'missing', index: 3, cellKind: 'space' })
-    expect(compare('کتاب', `کتاب${ZWNJ}ها`)).toEqual({
-      kind: 'missing',
-      index: 4,
-      cellKind: 'zwnj',
-    })
+  it('reads the answer\'s side for a missing space — nothing typed to read yet', () => {
+    // «みず と かぜ» joins its words with a plain space.
+    expect(compare('みず', 'みず と かぜ')).toEqual({ kind: 'missing', index: 2, cellKind: 'space' })
   })
 
-  it('reads the typed side for a stray space or ZWNJ — that is what the red mark shows', () => {
-    expect(compare('آنه ', 'آنه')).toEqual({ kind: 'extra', index: 3, cellKind: 'space' })
-    expect(compare(`کتاب${ZWNJ}`, 'کتاب')).toEqual({ kind: 'extra', index: 4, cellKind: 'zwnj' })
-    expect(compare(SPACE, 'م')).toEqual({ kind: 'wrong', index: 0, cellKind: 'space' })
-    expect(compare(ZWNJ, 'م')).toEqual({ kind: 'wrong', index: 0, cellKind: 'zwnj' })
+  it('reads the typed side for a stray space — that is what the red mark shows', () => {
+    expect(compare('みず ', 'みず')).toEqual({ kind: 'extra', index: 2, cellKind: 'space' })
+    expect(compare(SPACE, 'み')).toEqual({ kind: 'wrong', index: 0, cellKind: 'space' })
   })
 })
 
 describe('normalizing before the comparison', () => {
-  it('never asks for اِعراب — the keyboard cannot type it, so it cannot be required', () => {
-    // The specimen مَدرِسه wears its vowel marks; the word is مدرسه.
-    const { jaMarked, ja } = vocabUnits[1].words.find((word) => word.id === 'madrese')!
-    expect(jaMarked).not.toBe(ja)
+  it('never asks for marks the keyboard cannot type', () => {
+    // Japanese kana carry no vowel marks: the word and the specimen are one.
+    const { jaMarked, ja } = vocabUnits[1].words.find((word) => word.id === 'enpitsu')!
+    expect(jaMarked).toBe(ja)
     expect(compare(ja, jaMarked)).toEqual({ kind: 'match', index: -1, cellKind: 'letter' })
     expect(normalizeTyped(jaMarked)).toBe(ja)
   })
 
-  it('strips marks from both sides, so a marked answer in the data cannot fail a right word', () => {
-    expect(compare('گل', 'گُل').kind).toBe('match')
-    expect(compare('گُل', 'گل').kind).toBe('match')
-  })
-
-  it('reads the two spellings of آ as one letter', () => {
-    // ا + the combining madde (U+0653) is the same letter as the precomposed آ.
-    expect(compare('آب', 'آب').kind).toBe('match')
+  it('normalizes a NFD-dakuten spelling to the composed kana', () => {
+    // か + U+3099 composes to が the same way a learner\'s IME may send it.
+    expect(compare('か\u3099', 'が').kind).toBe('match')
   })
 })
 
 describe('the teacher marks', () => {
   it('marks exactly the first divergence and leaves the rest ink', () => {
-    const cells = markUp('بابد', compare('بابد', 'بابا'))
-    expect(cells.map((cell) => cell.char)).toEqual(['ب', 'ا', 'ب', 'د'])
-    expect(cells.map((cell) => cell.marked)).toEqual([false, false, false, true])
+    const cells = markUp('みす', compare('みす', 'みず'))
+    expect(cells.map((cell) => cell.char)).toEqual(['み', 'す'])
+    expect(cells.map((cell) => cell.marked)).toEqual([false, true])
   })
 
   it('marks an empty slot where a letter is missing', () => {
-    const cells = markUp('باب', compare('باب', 'بابا'))
-    expect(cells).toHaveLength(4)
-    expect(cells[3]).toEqual({ char: '', marked: true })
+    const cells = markUp('み', compare('み', 'みず'))
+    expect(cells).toHaveLength(2)
+    expect(cells[1]).toEqual({ char: '', marked: true })
   })
 
   it('marks the first letter too many', () => {
-    const cells = markUp('بابای', compare('بابای', 'بابا'))
-    expect(cells.map((cell) => cell.marked)).toEqual([false, false, false, false, true])
+    const cells = markUp('みずか', compare('みずか', 'みず'))
+    expect(cells.map((cell) => cell.marked)).toEqual([false, false, true])
   })
 
   it('marks nothing when the word is right', () => {
-    const cells = markUp('بابا', compare('بابا', 'بابا'))
+    const cells = markUp('みず', compare('みず', 'みず'))
     expect(cells.every((cell) => !cell.marked)).toBe(true)
   })
 
   it('keeps a ZWNJ visible as its own cell — an invisible mistake would be unfair', () => {
-    const cells = markUp(`کتاب${ZWNJ}`, compare(`کتاب${ZWNJ}`, 'کتاب'))
-    expect(cells).toHaveLength(5)
-    expect(cells[4]).toEqual({ char: ZWNJ, marked: true })
+    const cells = markUp(`か${ZWNJ}`, compare(`か${ZWNJ}`, 'か'))
+    expect(cells).toHaveLength(2)
+    expect(cells[1]).toEqual({ char: ZWNJ, marked: true })
   })
 })

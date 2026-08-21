@@ -24,7 +24,7 @@ describe('profile', () => {
   })
 
   it('clearName removes the name and its spelling, keeping the record intact', () => {
-    setProfile({ name: 'Babak', faSpelling: 'بابک' })
+    setProfile({ name: 'Babak', jaSpelling: 'ババク' })
     clearName()
     expect(getProfile()).toEqual({})
     expect(hasProfileRecord()).toBe(true)

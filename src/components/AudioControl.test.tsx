@@ -7,7 +7,7 @@ vi.mock('../audio/manifest', () => ({
     entryId: id,
     file: `/audio/${id}.mp3`,
     locale: 'ja-IR',
-    transcript: 'آب',
+    transcript: 'みず',
   } : undefined,
   pronunciationAudioUrl: (file: string) => `/Danish-Japanese-Lessons/app/${file.replace(/^\//, '')}`,
 }))
@@ -29,14 +29,14 @@ describe('pronunciation audio controls', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Langsom 0,8×' }))
     expect(audio).toHaveAttribute('src', '/Danish-Japanese-Lessons/app/audio/word-ab.mp3')
-    fireEvent.click(screen.getByRole('button', { name: 'Hør آب' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Hør みず' }))
     expect(screen.getByRole('button', { name: 'Meget langsom 0,5×' })).toBeVisible()
-    expect(await screen.findByRole('button', { name: 'Stop lyden for آب' })).toBeEnabled()
+    expect(await screen.findByRole('button', { name: 'Stop lyden for みず' })).toBeEnabled()
     expect(audio.playbackRate).toBe(0.8)
 
     fireEvent.click(screen.getByRole('button', { name: 'Slå udtalelyd fra' }))
     expect(audio.muted).toBe(true)
-    fireEvent.click(screen.getByRole('button', { name: 'Stop lyden for آب' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Stop lyden for みず' }))
     expect(HTMLMediaElement.prototype.pause).toHaveBeenCalled()
   })
 
@@ -46,7 +46,7 @@ describe('pronunciation audio controls', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Langsom 0,8×' }))
 
-    expect(await screen.findByRole('button', { name: 'Stop lyden for آب' })).toBeEnabled()
+    expect(await screen.findByRole('button', { name: 'Stop lyden for みず' })).toBeEnabled()
     expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(1)
     expect(audio.playbackRate).toBe(0.8)
     expect(audio.defaultPlaybackRate).toBe(0.8)
@@ -62,7 +62,7 @@ describe('pronunciation audio controls', () => {
     expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(3)
     expect(audio.playbackRate).toBe(1)
     expect(audio.defaultPlaybackRate).toBe(1)
-    fireEvent.click(screen.getByRole('button', { name: 'Stop lyden for آب' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Stop lyden for みず' }))
   })
 
   it('reapplies the chosen rate if playback startup resets it', async () => {
@@ -76,15 +76,15 @@ describe('pronunciation audio controls', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Langsom 0,8×' }))
 
-    expect(await screen.findByRole('button', { name: 'Stop lyden for آب' })).toBeEnabled()
+    expect(await screen.findByRole('button', { name: 'Stop lyden for みず' })).toBeEnabled()
     expect(audio.playbackRate).toBe(0.8)
     expect(audio.defaultPlaybackRate).toBe(0.8)
-    fireEvent.click(screen.getByRole('button', { name: 'Stop lyden for آب' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Stop lyden for みず' }))
   })
 
   it('stops the previous clip before another starts', async () => {
     render(<><AudioControl audioId="one" /><AudioControl audioId="two" /></>)
-    const play = screen.getAllByRole('button', { name: 'Hør آب' })
+    const play = screen.getAllByRole('button', { name: 'Hør みず' })
     fireEvent.click(play[0])
     await screen.findAllByText('Afspiller')
     fireEvent.click(play[1])
@@ -94,7 +94,7 @@ describe('pronunciation audio controls', () => {
   it('stays usable when playback fails', async () => {
     vi.mocked(HTMLMediaElement.prototype.play).mockRejectedValueOnce(new Error('missing'))
     render(<AudioControl audioId="word-ab" />)
-    fireEvent.click(screen.getByRole('button', { name: 'Hør آب' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Hør みず' }))
     expect(await screen.findByRole('status')).toHaveTextContent('Du kan stadig se hjælpen')
   })
 })

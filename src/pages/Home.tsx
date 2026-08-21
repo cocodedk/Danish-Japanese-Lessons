@@ -58,7 +58,7 @@ export default function Home() {
   const rewards = getRewards()
   // The name lesson only exists for a learner who has a spelling, so the word
   // units number themselves after whatever is actually on the page.
-  const firstWordNumber = profile.faSpelling ? 3 : 2
+  const firstWordNumber = profile.jaSpelling ? 3 : 2
   const reviewDue = dueReviewQuestions().length
   const reviewHistory = reviewStates()
   const retrieved = reviewHistory.filter((state) => state.successfulRetrievals > 0).length
@@ -77,7 +77,7 @@ export default function Home() {
           title: cleared === 0 ? 'Start med alfabetet' : 'Fortsæt med alfabetet',
           meta: `${ALPHABET_TOTAL - cleared} tegn tilbage`,
         }
-      : profile.faSpelling && !isNameLessonDone()
+      : profile.jaSpelling && !isNameLessonDone()
         ? { to: '/lesson/navn', title: 'Fortsæt med dit navn', meta: 'Læs og skriv dit eget navn' }
         : nextUnit
           ? {
@@ -104,8 +104,8 @@ export default function Home() {
           <section className="home__hero" aria-label="Dagens japanske eksempel">
             <SplitCard
               word={DEMO_WORD}
-              greetingEntry={profile.faSpelling ? GREETING_WITH_NAME_ENTRY : GREETING_ENTRY}
-              personalSpelling={profile.faSpelling}
+              greetingEntry={profile.jaSpelling ? GREETING_WITH_NAME_ENTRY : GREETING_ENTRY}
+              personalSpelling={profile.jaSpelling}
               daGreeting={daGreeting(profile.name)}
             />
             <StreakLine streak={rewards.streak} />
@@ -139,7 +139,7 @@ export default function Home() {
                 to="/lesson/alphabet"
               />
               {/* Only a learner who has a Japanese spelling has this lesson at all. */}
-              {profile.faSpelling && (
+              {profile.jaSpelling && (
                 <LessonCard
                   number={2}
                   title="Dit navn"
@@ -159,7 +159,7 @@ export default function Home() {
                 />
               ))}
             </div>
-            <TypingRounds faSpelling={profile.faSpelling} />
+            <TypingRounds jaSpelling={profile.jaSpelling} />
           </section>
         </div>
       </RuledSection>

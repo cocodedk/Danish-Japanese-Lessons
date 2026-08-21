@@ -16,11 +16,11 @@ export function AppChrome() {
 
   function saveName(name: string) {
     const trimmed = name.trim()
-    const kept = trimmed && trimmed !== profile.name ? undefined : profile.faSpelling
+    const kept = trimmed && trimmed !== profile.name ? undefined : profile.jaSpelling
     setProfile({
       ...profile,
       name: trimmed || undefined,
-      faSpelling: trimmed ? kept : undefined,
+      jaSpelling: trimmed ? kept : undefined,
     })
   }
 
@@ -28,7 +28,7 @@ export function AppChrome() {
     <>
       <SettingsCorner
         name={profile.name}
-        faSpelling={profile.faSpelling}
+        jaSpelling={profile.jaSpelling}
         onSave={saveName}
         onDelete={clearName}
       />

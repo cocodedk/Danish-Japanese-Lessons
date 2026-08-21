@@ -46,9 +46,11 @@ const HIRAGANA_END = '\u3096'
  * the alphabet puzzle has not taught yet.
  */
 function plainMora(glyph: string): boolean {
+  // Only kana the alphabet lesson actually teaches can be a puzzle tile: a
+  // dakuten form (ぴ) and a small kana (っ) have no letter of their own to
+  // match, and katakana belongs to a later lesson.
   if (glyph < HIRAGANA_START || glyph > HIRAGANA_END) return false
-  const fact = kanaFacts[glyph]
-  return Boolean(fact) && !fact.base && Boolean(fact.ipa)
+  return byGlyph.has(glyph)
 }
 
 function letterEntry(glyph: string): JapaneseEntry {

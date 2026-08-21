@@ -1,6 +1,6 @@
 /* The teacher's red pen, applied to real type.
 
-   A vowel mark (madde, زبر, زیر, پیش) is part of its letter's glyph — it cannot
+   A hand mark (゛ ゜) is part of its letter's glyph — it cannot
    be wrapped in its own element without breaking Arabic shaping. So the red is
    painted as a hard-edged gradient clipped to the text: everything above (or
    below) the cut is red, the letterform itself stays ink.

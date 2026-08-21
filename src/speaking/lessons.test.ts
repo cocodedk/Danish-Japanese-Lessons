@@ -1,15 +1,20 @@
 import { describe, expect, it } from 'vitest'
 import { lessonImageForEntry } from '../images/catalog'
 import { requiredTalkClipIds, speakingLessons, talkAudioReady } from './lessons'
+import { japaneseCatalog } from '../catalog/registry'
 
 describe('speaking lessons', () => {
-  it('opens when the complete first talk corpus is approved', () => {
-    expect(requiredTalkClipIds).toHaveLength(97)
+  it('keeps the talk path closed until every launch clip is reviewed by a native speaker', () => {
+    // The corpus carries exactly the clips the talk screens use — conversation,
+    // numbers, connected reading with its function words, vocabulary, unit
+    // titles and loanword bridges — all of them real, speakable catalog entries.
+    expect(requiredTalkClipIds.length).toBe(90)
     expect(new Set(requiredTalkClipIds).size).toBe(requiredTalkClipIds.length)
-    expect(talkAudioReady()).toBe(true)
-    for (const optionalBridge of ['word-bridge-pas', 'word-bridge-mord', 'word-bridge-leng']) {
-      expect(requiredTalkClipIds).not.toContain(optionalBridge)
-    }
+    const catalogIds = new Set(japaneseCatalog.filter((e) => !e.audioNotApplicable).map((e) => e.id))
+    for (const id of requiredTalkClipIds) expect(catalogIds.has(id), id).toBe(true)
+    // No approved audio ships yet, so the gate stays closed: a learner is
+    // never handed an unreviewed generated voice as the model.
+    expect(talkAudioReady()).toBe(false)
   })
 
   it('gives every picture-book page a clear visual', () => {

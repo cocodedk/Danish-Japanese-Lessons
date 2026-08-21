@@ -116,7 +116,7 @@ describe('a word screen', () => {
   })
 
   it('notes the letters a word shares with the learner\'s own name, warmly', () => {
-    setProfile({ name: 'Sara', faSpelling: 'سارا' })
+    setProfile({ name: 'Sara', jaSpelling: 'سارا' })
     open('#/lesson/ord/1/baba')
     expect(screen.getByText('حرفی از نام تو در این کلمه هست')).toBeInTheDocument()
     expect(screen.getByText(/Ét af bogstaverne her/)).toBeInTheDocument()

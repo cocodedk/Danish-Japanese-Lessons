@@ -8,7 +8,7 @@ import { vocabUnits } from './vocab'
 
 export const ALPHABET_LESSON_ID = 'alphabet'
 
-/** The registry id of a vocabulary unit — `vocab-1` for unit «۱». */
+/** The registry id of a vocabulary unit — `vocab-1` for unit «1». */
 export function vocabLessonId(unitId: string): string {
   return `vocab-${unitId}`
 }

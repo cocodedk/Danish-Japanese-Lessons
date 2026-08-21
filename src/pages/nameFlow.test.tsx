@@ -27,16 +27,23 @@ afterEach(() => {
   unmountLast = null
 })
 
-/** The alphabet lesson's id for a letter, so a test can open its screen. */
-function letterId(glyph: string): string {
-  // A name is written in katakana; the alphabet data teaches the hiragana.
-  const id = teachingOrder.find((candidate) => specimens[candidate].kata === glyph)
-  expect(id, `no letter screen for ${glyph}`).toBeTruthy()
+/** The first taught kana the name shares — the badge opens its screen. Names
+ *  are katakana, and some katakana (バ, ー) are outside the 46 taught kana,
+ *  so we open the first letter the name DOES share with the lesson. */
+function letterId(spelling: string): string {
+  const chars = [...spelling]
+  const id = teachingOrder.find((candidate) =>
+    chars.includes(specimens[candidate].kata ?? specimens[candidate].glyph),
+  )
+  expect(id, `spelling ${spelling} shares no taught kana`).toBeTruthy()
   return id as string
 }
 
+/** A taught kana that is not anywhere in the spelling. */
 function idOutside(spelling: string): string {
-  const id = teachingOrder.find((candidate) => !spelling.includes(specimens[candidate].kata))
+  const id = teachingOrder.find((candidate) =>
+    !spelling.includes(specimens[candidate].kata ?? specimens[candidate].glyph),
+  )
   return id as string
 }
 
@@ -56,7 +63,7 @@ describe('the learner’s name, capture to lesson', () => {
     expect(screen.getByRole('heading', { name: 'Dit navn på japansk' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: spelling })).toHaveAttribute('aria-pressed', 'true')
     fireEvent.click(screen.getByText('Gem stavemåden'))
-    expect(getProfile()).toEqual({ name, faSpelling: spelling })
+    expect(getProfile()).toEqual({ name, jaSpelling: spelling })
 
     // The forside greets in Japanese by the Japanese spelling, in Danish by the
     // written name — and never the other way round.
@@ -72,7 +79,7 @@ describe('the learner’s name, capture to lesson', () => {
     expect(card).toHaveAttribute('href', '#/lesson/navn')
 
     // A letter of the name carries the badge; a letter outside it does not.
-    open(`#/lesson/alphabet/bogstav/${letterId([...spelling][0])}`)
+    open(`#/lesson/alphabet/bogstav/${letterId(spelling)}`)
     expect(screen.getByText(NAME_LETTER_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Dette bogstav er i dit navn')).toBeInTheDocument()
 

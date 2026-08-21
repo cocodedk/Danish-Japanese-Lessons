@@ -15,7 +15,7 @@ import { PersonalNameCompanion } from '../components/PersonalName'
 import './name.css'
 
 /**
- * «نامِ خود را بنویس» — the lesson the whole app has been building towards: the
+ * 「じぶんの なまえを かいてね」 — the lesson the whole app has been building towards: the
  * learner reads their own name, letter by letter, and then writes it. It exists
  * only for a learner who has a spelling; without one there is nothing here to
  * teach, and nothing anywhere that mentions it. Plan 006, step 5.
@@ -25,8 +25,8 @@ export default function NameLesson() {
   const [cleared, setCleared] = useState(isNameLessonDone)
   const celebration = useCelebration()
 
-  const { faSpelling, name } = profile
-  if (!faSpelling) {
+  const { jaSpelling, name } = profile
+  if (!jaSpelling) {
     return <Navigate to="/kursus" replace />
   }
 
@@ -51,21 +51,21 @@ export default function NameLesson() {
         navnet så sammen selv.
       </p>
 
-      <PersonalNameCompanion spelling={faSpelling} original={name} className="name__preview" />
+      <PersonalNameCompanion spelling={jaSpelling} original={name} className="name__preview" />
 
       <div className="name__practice">
         <section>
           <h2 className="alphabet__section-title">Bogstav for bogstav</h2>
-          <NameWalkthrough spelling={faSpelling} />
+          <NameWalkthrough spelling={jaSpelling} />
         </section>
-        <NameAssembly spelling={faSpelling} onDone={finish} />
+        <NameAssembly spelling={jaSpelling} onDone={finish} />
       </div>
 
       {celebration.reward !== null && (
         <Celebration
           reward={celebration.reward}
           tickLabel="Klaret"
-          personalName={name ? { spelling: faSpelling, original: name } : undefined}
+          personalName={name ? { spelling: jaSpelling, original: name } : undefined}
         />
       )}
       {cleared && celebration.reward === null && (

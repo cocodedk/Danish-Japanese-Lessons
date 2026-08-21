@@ -28,7 +28,10 @@ function syllableNuclei(ipa: string): number {
   return ipa.match(/[aeiouæɒ]+(?::)?/g)?.length ?? 0
 }
 
-const ROLE_SENSITIVE = new Set([...'اآویهعءئؤ'])
+// Kana whose reading changes with context or pointing: the sokuon っ
+// (silent, doubles the next kana), the long-vowel bar ー, は (wa/ha),
+// を/お (homophone), and the hand marks ゛ ゜.
+const ROLE_SENSITIVE = new Set([...'っーはをお゛゜'])
 
 export const contentReviewManifest = {
   schemaVersion: 1,

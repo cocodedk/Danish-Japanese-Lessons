@@ -15,7 +15,7 @@
   max-inline-size: 34rem;
 }
 
-/* آ is a thin stroke and a wave: in the Danish lead it needs the Japanese face. */
+/* ー is a thin stroke and a wave: in the Danish lead it needs the Japanese face. */
 .alphabet__lead-ja {
   font-family: var(--font-ja);
   font-size: 1.125rem;

@@ -25,7 +25,7 @@ export function overrideFor(latin: string): string | undefined {
 
 /**
  * Every Japanese spelling on the list, so the text-rule guard can walk the
- * table itself — an Arabic ك or ي typed into a name entry fails the suite.
+ * table itself — an Arabic letter typed into a name entry fails the suite.
  */
 /** The Japanese spellings, under the renamed export too — the port spec
  *  renames fa → ja, and the text-rule guard may import either name. */

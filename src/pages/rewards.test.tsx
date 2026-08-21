@@ -109,7 +109,7 @@ describe('every exercise answer flows through the reward engine', () => {
 
 describe('a letter cleared from its own screen celebrates too', () => {
   it('praises an encountered sign instead of only ticking it off', () => {
-    open('#/lesson/alphabet/bogstav/be')
+    open('#/lesson/alphabet/bogstav/a')
     fireEvent.click(screen.getByText('Jeg har set tegnet'))
 
     expect(praiseOnScreen()).toBe(true)
@@ -124,7 +124,7 @@ describe('the forside carries the streak', () => {
     expect(screen.queryByText(/dag ·/)).not.toBeInTheDocument()
     first.unmount()
 
-    const letter = open('#/lesson/alphabet/bogstav/be')
+    const letter = open('#/lesson/alphabet/bogstav/a')
     fireEvent.click(screen.getByText('Jeg har set tegnet'))
     letter.unmount()
 
@@ -149,7 +149,7 @@ describe('a null envelope value never crashes the app', () => {
     expect(getRewards().points).toBe(0)
     home.unmount()
 
-    const letter = open('#/lesson/alphabet/bogstav/be')
+    const letter = open('#/lesson/alphabet/bogstav/a')
     expect(screen.getByRole('button', { name: 'Jeg har set tegnet' })).toBeInTheDocument()
     letter.unmount()
 
