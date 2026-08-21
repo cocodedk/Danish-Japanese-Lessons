@@ -55,7 +55,7 @@ describe('ChildHome', () => {
     expect(within(section).getByText('Jeg hedder …')).toBeVisible()
   })
 
-  it('keeps Persian numbers in their own beginner section', () => {
+  it('keeps Japanese numbers in their own beginner section', () => {
     renderHome()
     const section = screen.getByRole('heading', { name: 'Tal fra 1 til 10' }).closest('section')!
     expect(within(section).getAllByRole('listitem')).toHaveLength(10)

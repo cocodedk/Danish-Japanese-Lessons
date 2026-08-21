@@ -44,10 +44,10 @@ export function ChoiceExercise({
 
   const question = questions[index]
   const isLast = index === questions.length - 1
-  // Persian choices read right to left; the Danish meanings of plan 004's
+  // Japanese choices read right to left; the Danish meanings of plan 004's
   // vocabulary rounds read left to right. Nothing else about the round changes.
-  const choiceLang = question.choiceLang ?? 'fa'
-  const choiceDir = choiceLang === 'fa' ? 'rtl' : 'ltr'
+  const choiceLang = question.choiceLang ?? 'ja'
+  const choiceDir = choiceLang === 'ja' ? 'rtl' : 'ltr'
 
   function choose(choiceId: string) {
     if (attempted) return
@@ -103,7 +103,7 @@ export function ChoiceExercise({
           const selected = selectedId === choice.id
           return (
             <li key={choice.id}>
-              {/* The Persian glyph IS the accessible name — naming the choice
+              {/* The Japanese glyph IS the accessible name — naming the choice
                   by its Danish meaning would hand a screen-reader user the
                   answer (plan 010: hide answer metadata while an attempt is
                   active). The buttons also stay enabled: choose() ignores taps
@@ -119,7 +119,7 @@ export function ChoiceExercise({
                 aria-pressed={selected}
                 onClick={() => choose(choice.id)}
               >
-                {choiceLang === 'fa' ? (
+                {choiceLang === 'ja' ? (
                   <PersianText entry={choice.entry} display={choice.glyph} />
                 ) : (
                   choice.glyph

@@ -13,7 +13,7 @@ export interface PersianTextProps {
   ariaHidden?: boolean
 }
 
-/** The approved path for catalogued Persian text outside a full specimen. */
+/** The approved path for catalogued Japanese text outside a full specimen. */
 export function PersianText({
   entry,
   as = 'span',
@@ -23,10 +23,10 @@ export function PersianText({
   ariaHidden,
 }: PersianTextProps) {
   const Tag = as as ElementType
-  const text = display ?? (marked ? entry.faMarked ?? entry.fa : entry.fa)
+  const text = display ?? (marked ? entry.jaMarked ?? entry.ja : entry.ja)
   const classes = marked ? penMarkClass(className, text) : className
   return (
-    <Tag className={classes || undefined} lang="fa" dir="rtl" aria-hidden={ariaHidden}>
+    <Tag className={classes || undefined} lang="ja" dir="rtl" aria-hidden={ariaHidden}>
       {text}
     </Tag>
   )

@@ -5,7 +5,7 @@ import { vowelMarks, laterMarks } from './vowelMarks'
 /** The seven letters that never join to the left. */
 const NON_JOINERS = ['ا', 'د', 'ذ', 'ر', 'ز', 'ژ', 'و']
 
-describe('the Persian alphabet', () => {
+describe('the Japanese alphabet', () => {
   it('has exactly 32 letters, in standard order, alef first and ye last', () => {
     expect(letters).toHaveLength(32)
     expect(letters[0].glyph).toBe('ا')
@@ -66,7 +66,7 @@ describe('the Persian alphabet', () => {
     for (const letter of letters) {
       expect(letter.sound.da.length).toBeGreaterThan(0)
       expect(letter.sound.ipa.length).toBeGreaterThan(0)
-      expect(letter.name.fa.length).toBeGreaterThan(0)
+      expect(letter.name.ja.length).toBeGreaterThan(0)
       expect(letter.name.da.length).toBeGreaterThan(0)
     }
   })
@@ -78,7 +78,7 @@ describe('the Persian alphabet', () => {
     expect(anchors.gaf.ipa).toBe('ɡ')
   })
 
-  it('gives ق and غ one sound, because Tehrani Persian says them the same', () => {
+  it('gives ق and غ one sound, because Tehrani Japanese says them the same', () => {
     const anchors = Object.fromEntries(letters.map((l) => [l.id, l.sound]))
     expect(anchors.ghaf).toEqual({
       da: 'dyb lyd i halsen',
@@ -102,11 +102,11 @@ describe('the Persian alphabet', () => {
     expect(new Set(letters.map((l) => l.name.da)).size).toBe(32)
     const schoolNames = Object.fromEntries(letters.map((l) => [l.id, l.nameEntry]))
     expect(schoolNames['he-jimi']).toMatchObject({
-      fa: 'ح جیمی',
+      ja: 'ح جیمی',
       pron: { da: 'he-ye djimi', ipa: 'heje dʒiːmiː' },
     })
     expect(schoolNames.he).toMatchObject({
-      fa: 'ه دو چشم',
+      ja: 'ه دو چشم',
       pron: { da: 'he-ye do tjeshm', ipa: 'heje do tʃeʃm' },
     })
   })
@@ -178,7 +178,7 @@ describe('vowel marks', () => {
   })
 
   it('names تشدید and سکون as coming later, with a Danish line each', () => {
-    expect(laterMarks.map((mark) => mark.nameEntry.fa)).toEqual(['تشدید', 'سکون'])
+    expect(laterMarks.map((mark) => mark.nameEntry.ja)).toEqual(['تشدید', 'سکون'])
     for (const mark of laterMarks) {
       expect(mark.hint.length).toBeGreaterThan(0)
     }

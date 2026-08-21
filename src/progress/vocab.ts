@@ -1,4 +1,4 @@
-// Progress through one vocabulary unit: `dpl.v1.vocab.<unit>`.
+// Progress through one vocabulary unit: `djl.v1.vocab.<unit>`.
 //
 // Add-only, like every other store here — a word once cleared stays cleared.
 // `paid` is the one flag that is not about progress but about payment: the

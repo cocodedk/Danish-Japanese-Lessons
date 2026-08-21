@@ -1,7 +1,7 @@
 # Plan 009 — Pronunciation on the Praise Words
 
 Executor: Sonnet (mechanical — the pronunciation table is dictated below). Depends on: 007 merged.
-Requested by Babak 2026-08-04: the Persian praise a learner receives after completing a task must
+Requested by Babak 2026-08-04: the Japanese praise a learner receives after completing a task must
 carry its phonetic pronunciation beside it, to make it memorable. Rewards may BE content — this is
 that doctrine applied to the praise itself.
 
@@ -24,11 +24,11 @@ match the plan-008 key hints: kh = خ, sj = ش, tj = چ, å = آ)
 ## Steps
 
 1. **Data**: the praise pairs in `src/rewards/copy.ts` (and the welcome-back line) gain
-   `pron: { da: string, ipa: string }` per the table. Guard continues to walk the fa strings;
+   `pron: { da: string, ipa: string }` per the table. Guard continues to walk the ja strings;
    a test asserts every praise entry carries a non-empty pron.
-2. **UI**: the celebration praise row renders the pron line directly under the Persian praise,
+2. **UI**: the celebration praise row renders the pron line directly under the Japanese praise,
    reusing the existing `PronLine` component (`lang="da" dir="ltr"`, small, `--ink` ~75% — the
-   established pronunciation style, NOT orange; orange is a keyboard affordance). Order: Persian
+   established pronunciation style, NOT orange; orange is a keyboard affordance). Order: Japanese
    praise → pron line → Danish praise. Same treatment on the welcome-back banner.
 3. **Fit**: 360px both schemes — celebration overlays and the dock-adjacent feedback must not
    overflow or cover anything (re-check the plan-005 visibility probes on one exercise submit);
@@ -39,7 +39,7 @@ match the plan-008 key hints: kh = خ, sj = ش, tj = چ, å = آ)
 
 ## Acceptance
 
-- [x] All seven table rows shipped verbatim in data; every praise render shows fa + pron + da
+- [x] All seven table rows shipped verbatim in data; every praise render shows ja + pron + da
 - [x] Pron from data everywhere — no improvised strings; guard/tests green
 - [x] 360×640 both schemes: celebration + feedback fully visible with the extra line; probes hold
 - [x] `npm run verify` + CI green; zero new deps; 200-line cap
@@ -68,12 +68,12 @@ Where the build does not do what this plan wrote, and why.
 3. **The welcome-back banner's layout changed from a wrapping row to a column stack**
    (`Celebration.css`, `.celebration__welcome`). A `<p>` cannot legally contain `PronLine`'s own
    `<p>`, so the wrapper became a `<div>` (same for `.celebration__praise`); once restructuring was
-   needed anyway, stacking fa/pron/da vertically — the same shape as the praise row above it, and
+   needed anyway, stacking ja/pron/da vertically — the same shape as the praise row above it, and
    every specimen elsewhere in the app — read better than wrapping a third inline item into the old
    flex row.
 4. **The 2026-08-07 whole-app parity review superseded three low-frequency rows.** «ایول» and
    «باریکلا» became «خوب بود» and «درست بود»; «خوش برگشتی» became «دوباره سلام». The replacement
-   words are simpler, each Danish line now mirrors the Persian, and all non-cultural-exception
+   words are simpler, each Danish line now mirrors the Japanese, and all non-cultural-exception
    praise tokens score Zipf 5.37 or higher. «آفرین» remains as the familiar school praise.
 
 ## Critic round 1 (2026-08-04) — FAIL, adjudicated by Fable

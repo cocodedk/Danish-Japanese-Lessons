@@ -36,7 +36,7 @@ export interface Divergence {
  * What both sides are compared as. اِعراب comes off first: the keyboard has no
  * vowel-mark keys, so a word could never be typed with them, and requiring what
  * cannot be typed would fail every answer. Marks belong on teaching specimens,
- * not on the writing (CLAUDE.md, Persian text rules).
+ * not on the writing (CLAUDE.md, Japanese text rules).
  *
  * NFC first, so the precomposed آ and the ا + مد spelling of it compare as the
  * one letter they are.

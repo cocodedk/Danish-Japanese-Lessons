@@ -1,4 +1,4 @@
-# Danish-Persian Lessons Design Baseline
+# Danish-Japanese Lessons Design Baseline
 
 Status: **frozen at release v0.3.0** (2026-08-09).
 
@@ -8,13 +8,13 @@ this file or the released v0.3.0 interface, this baseline takes precedence.
 
 ## Product promise
 
-The app helps a curious beginner make sense of Persian writing without making practice feel like an
-obligation. It also keeps the complete Danish-Persian course available for a learner who wants more
+The app helps a curious beginner make sense of Japanese writing without making practice feel like an
+obligation. It also keeps the complete Danish-Japanese course available for a learner who wants more
 structure and detail.
 
-- The child path MUST create a recognizable Persian result quickly.
+- The child path MUST create a recognizable Japanese result quickly.
 - The learner MUST be free to choose, retry, reveal, switch paths, or stop without penalty.
-- Persian accuracy, Danish clarity, accessibility, privacy, and respectful tone MUST not be weakened
+- Japanese accuracy, Danish clarity, accessibility, privacy, and respectful tone MUST not be weakened
   to make the experience more playful.
 - The interface MUST remain useful for a child and credible for an adult.
 
@@ -23,7 +23,7 @@ structure and detail.
 The app has three persistent learner-facing hubs:
 
 1. **Ord** (`/opdag`) - choose simple words, build them, and keep completed words.
-2. **Ordbroer** (`/ord-der-ligner`) - connect Persian and Danish through secure cognates or clearly
+2. **Ordbroer** (`/ord-der-ligner`) - connect Japanese and Danish through secure cognates or clearly
    labelled sound mnemonics.
 3. **Lektioner** (`/kursus`) - enter the complete, structured course.
 
@@ -50,7 +50,7 @@ Danish functional design.
 - Matte paper, horizontal blue rules, black ink, and one teacher-red margin line form the page.
 - The red margin line sits near the outer left edge on Danish/LTR pages. It MUST NOT make the content
   appear pushed to the right.
-- Persian teaching marks and corrections use teacher red. Red is not general decoration.
+- Japanese teaching marks and corrections use teacher red. Red is not general decoration.
 - Controls use pen blue. Pronunciation hints may use pencil orange.
 - Cards are individual learning objects, not decorative containers for whole sections.
 - Card corners stay restrained at 6px or less. No nested cards, gradient backgrounds, decorative
@@ -69,12 +69,12 @@ from Settings.
 
 ## Typography and language
 
-- Persian display words use Noto Naskh Arabic.
-- Persian UI and body text use Vazirmatn.
+- Japanese display words use Noto Naskh Arabic.
+- Japanese UI and body text use Vazirmatn.
 - Danish and other Latin text use Andika, a literacy-oriented typeface.
 - Fonts remain self-hosted in the app.
-- Persian text MUST use correct `lang`, direction, code points, joining, ZWNJ, and diacritics.
-- Persian script is never letter-spaced.
+- Japanese text MUST use correct `lang`, direction, code points, joining, ZWNJ, and diacritics.
+- Japanese script is never letter-spaced.
 - Type does not scale with viewport width. It reflows within stable responsive containers.
 - Danish copy uses short, warm, concrete verbs and the informal `du` form.
 
@@ -82,7 +82,7 @@ from Settings.
 
 Complete teaching surfaces follow this hierarchy:
 
-1. Persian word or phrase.
+1. Japanese word or phrase.
 2. Danish-friendly sound spelling and IPA.
 3. Danish meaning or explanation.
 4. A concrete action.
@@ -97,10 +97,10 @@ The workshop opens with choice, not explanation. It contains:
 - thirteen simple, useful words: hello, I, you, friend, water, bread, father, mother, house/home,
   this, that, we, and he/she;
 - a separate section for hello, introduction, and goodbye;
-- a separate section for Persian numbers 1 through 10;
+- a separate section for Japanese numbers 1 through 10;
 - a personal collection that acknowledges completed words without locking the others.
 
-Every word card MUST show Persian, Danish meaning, Danish-friendly pronunciation, IPA, and a clear
+Every word card MUST show Japanese, Danish meaning, Danish-friendly pronunciation, IPA, and a clear
 action. Chromium and Firefox cards also show a meaning illustration. WebKit cards intentionally use
 the complete text-only layout because its image renderer is unstable in this view.
 
@@ -123,7 +123,7 @@ A mission uses an explicit model -> guide -> independent recall -> completion se
 
 - Secure historical cognates and sound-only memory bridges MUST remain visibly distinct.
 - A memory bridge MUST state that similar sound does not prove shared origin.
-- Each bridge keeps Persian, Persian IPA, meaning, Danish, Danish IPA, meaning, and source links.
+- Each bridge keeps Japanese, Japanese IPA, meaning, Danish, Danish IPA, meaning, and source links.
 - New bridges require language review; recognizability alone is not enough for an etymology claim.
 
 ## Feedback, rewards, sound, and motion

@@ -4,8 +4,8 @@ const envelope = (value: object) => JSON.stringify({ schemaVersion: 1, value })
 
 async function seed(page: Page) {
   await page.addInitScript(([profile, alphabet]) => {
-    localStorage.setItem('dpl.v1.profile', profile)
-    localStorage.setItem('dpl.v1.alphabet', alphabet)
+    localStorage.setItem('djl.v1.profile', profile)
+    localStorage.setItem('djl.v1.alphabet', alphabet)
   }, [envelope({}), envelope({ letters: [], marks: [], orientationSeen: true })])
 }
 
@@ -92,7 +92,7 @@ test('first-run orientation records six viewed steps or an explicit skip, never 
   const page = await context.newPage()
   await open(page, '#/lesson/alphabet')
   await expect(page.getByText(/trin 1 af 6/)).toBeVisible()
-  expect(await page.evaluate(() => localStorage.getItem('dpl.v1.alphabet'))).toBeNull()
+  expect(await page.evaluate(() => localStorage.getItem('djl.v1.alphabet'))).toBeNull()
   for (const name of [
     'Næste: læseretning',
     'Næste: bogstaver der binder',
@@ -101,7 +101,7 @@ test('first-run orientation records six viewed steps or an explicit skip, never 
     'Næste: prikker',
   ]) await page.getByRole('button', { name }).click()
   await expect(page.getByText(/trin 6 af 6/)).toBeVisible()
-  expect(await page.evaluate(() => localStorage.getItem('dpl.v1.alphabet'))).not.toBeNull()
+  expect(await page.evaluate(() => localStorage.getItem('djl.v1.alphabet'))).not.toBeNull()
   await context.close()
 })
 
@@ -142,7 +142,7 @@ test('typing remains keyboard-completable with enhanced targets', async ({ page 
   await expect(page.getByText('Rigtigt')).toBeVisible()
 })
 
-test('typing accepts a physical Persian keyboard without disabling the on-screen board', async ({ page }) => {
+test('typing accepts a physical Japanese keyboard without disabling the on-screen board', async ({ page }) => {
   await open(page, '#/lesson/ord/1/skriv')
   const keyboard = page.locator('.keyboard')
   await keyboard.focus()

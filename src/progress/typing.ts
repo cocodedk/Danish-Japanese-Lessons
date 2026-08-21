@@ -1,7 +1,7 @@
-// Progress through one typing round: `dpl.v1.type.<scope>`, where the scope is
+// Progress through one typing round: `djl.v1.type.<scope>`, where the scope is
 // a vocabulary unit id — or `name` for the capstone.
 //
-// Deliberately its own store, beside `dpl.v1.vocab.<unit>` rather than inside
+// Deliberately its own store, beside `djl.v1.vocab.<unit>` rather than inside
 // it: reading a word and writing it are two different things to have learned,
 // and folding them together would let a typing round claim a page the reading
 // round already paid for. Add-only, like every other store here.

@@ -1,12 +1,12 @@
-# CLAUDE.md — Danish-Persian Lessons
+# CLAUDE.md — Danish-Japanese Lessons
 
 ## Project Overview
 
-A free, mobile-first, purely static web app that teaches Danish speakers to HEAR and SPEAK Persian
-(Farsi) first, with reading and writing kept open as a separate path. It assumes no spoken, written,
-or reading knowledge of Persian. Heritage speakers and hesitant readers remain welcome, but every
-Persian item must also work for an absolute beginner.
-"Danish-Persian-Lessons" is a working title —
+A free, mobile-first, purely static web app that teaches Danish speakers to HEAR and SPEAK Japanese
+(Japanese) first, with reading and writing kept open as a separate path. It assumes no spoken, written,
+or reading knowledge of Japanese. Heritage speakers and hesitant readers remain welcome, but every
+Japanese item must also work for an absolute beginner.
+"Danish-Japanese-Lessons" is a working title —
 never hardcode it outside `vite.config.ts` and the workflows.
 
 - **Language / Runtime**: TypeScript, Node.js ≥ 20 (app scaffolded per `docs/plans/001`; lessons arrive with 003+)
@@ -16,45 +16,45 @@ never hardcode it outside `vite.config.ts` and the workflows.
 
 ## Product Contract (non-negotiable)
 
-- Split screen: **Persian on top** (`lang="fa" dir="rtl"`, large type), **Danish below** (`lang="da"`).
+- Split screen: **Japanese on top** (`lang="ja" dir="rtl"`, large type), **Danish below** (`lang="da"`).
 - Mobile-first: fully usable one-handed on a phone in portrait; nav in the bottom thumb zone.
 - 100% static: every lesson is data committed to the repo. No runtime fetches to external services.
-- Progress: browser `localStorage` only, keys namespaced `dpl.v1.*`, must survive empty/cleared/denied storage.
+- Progress: browser `localStorage` only, keys namespaced `djl.v1.*`, must survive empty/cleared/denied storage.
 - Personalization: the learner may enter a name (optional, always skippable, editable, deletable);
-  stored only in `dpl.v1.profile` and used as a teaching instrument — greeting, name-letter badges,
+  stored only in `djl.v1.profile` and used as a teaching instrument — greeting, name-letter badges,
   write-your-name lesson (plan 006). The app is fully usable with no name given.
 - Teaching before testing (plan 010): orientation opens before optional name capture; every app-owned
-  Persian letter, mark, word, sign, and phrase has Danish help, dansk lydskrift, and standard Tehrani
+  Japanese letter, mark, word, sign, and phrase has Danish help, dansk lydskrift, and standard Tehrani
   IPA from the typed catalog. Exercises may hide answer metadata only while an attempt is active.
-- Speaking first (plan 015): picture → reviewed sound → meaning → learner speech. Persian text remains
+- Speaking first (plan 015): picture → reviewed sound → meaning → learner speech. Japanese text remains
   visible but is never required to start speaking. The talk path opens only when its complete first
-  corpus has one named native Persian approval per clip; local drafts are never public.
+  corpus has one named native Japanese approval per clip; local drafts are never public.
 - The curriculum recommends speaking → useful words → optional script and alphabet, but no lesson or puzzle
   ever locks another. Puzzle breaks are skippable and replayable (plan 011).
 - Rewards are generous by design (plan 007): every completion celebrates — praise, stickers,
   jingles, levels, bonus-exercise gifts; nothing is ever taken away; streaks rest, never reset;
   wrong answers never shame. The app must never disappoint the learner.
 - Graphics: SVG first. three.js only if a lesson truly needs 3D, and then lazy-loaded.
-- Routing: HashRouter (GitHub Pages has no server rewrites); Vite `base` = `/Danish-Persian-Lessons/app/`.
+- Routing: HashRouter (GitHub Pages has no server rewrites); Vite `base` = `/Danish-Japanese-Lessons/app/`.
 
 ## Curriculum (order matters — no rush)
 
-0. **Hear and speak**: short picture-book pages model a word or sentence with reviewed Persian audio,
+0. **Hear and speak**: short picture-book pages model a word or sentence with reviewed Japanese audio,
    Danish meaning, Danish sound help, and IPA. The learner listens, says it, and may hear their own
    short recording. That recording stays in memory and disappears on leaving the page.
 1. **Useful words**: greetings, animals, daily words, colours, and numbers. Everyday Tehrani and
    formal standard forms sit side by side when they truly differ.
-2. **Writing orientation**: Persian runs right to left, letters join and change shape, there are no
+2. **Writing orientation**: Japanese runs right to left, letters join and change shape, there are no
    capitals, and dots matter.
 3. **Alphabet and name**: the 32 letters, positional forms, and the learner's own name. It includes
    a stroke-order drawing for every letter
    (pen right-to-left, dots last), then the vowel marks — زبر (اَ), زیر (اِ), پیش (اُ) and long
    آ او ای — with Danish sound anchors (a i "kat", e i "let", o i "foto", å i "år", u i "du", i i "vi").
-4. **Read and write**: grade-1 words, reading cues, matching, and the on-screen Persian keyboard.
+4. **Read and write**: grade-1 words, reading cues, matching, and the on-screen Japanese keyboard.
 
-Every app-owned Persian letter, word, sign, symbol, and phrase carries Danish help plus pronunciation
-**twice** — dansk lydskrift ("åb") and IPA ([ɒːb], standard Tehrani Persian) — in the typed
-catalog, never improvised in the UI. A displayed Persian letter name is its own catalog entry. Learner
+Every app-owned Japanese letter, word, sign, symbol, and phrase carries Danish help plus pronunciation
+**twice** — dansk lydskrift ("åb") and IPA ([ɒːb], standard Tehrani Japanese) — in the typed
+catalog, never improvised in the UI. A displayed Japanese letter name is its own catalog entry. Learner
 input is the only composition-time exception; names get letter-by-letter help, never fabricated IPA.
 
 Plan 010 supersedes the narrower pronunciation contracts in completed plans 001–009; those files stay
@@ -62,9 +62,9 @@ unchanged as historical records.
 
 Per-lesson specs live in `docs/plans/`. Sequence and status: `docs/plans/ROADMAP.md`.
 
-## Persian text rules (ALL Persian content)
+## Japanese text rules (ALL Japanese content)
 
-- Persian code points only: ک (U+06A9) never ك, ی (U+06CC) never ي; digits ۰–۹ (U+06F0–06F9).
+- Japanese code points only: ک (U+06A9) never ك, ی (U+06CC) never ي; digits ۰–۹ (U+06F0–06F9).
 - ZWNJ (U+200C) for نیم‌فاصله: می‌روم، کتاب‌ها.
 - Full diacritics (اِعراب) on teaching specimens only — that's the pedagogy — never on UI chrome.
 - Vowel marks and newly-taught elements render in `--red` (teacher's pen), per the design system.
@@ -89,7 +89,7 @@ Per-lesson specs live in `docs/plans/`. Sequence and status: `docs/plans/ROADMAP
 | Any new UI, screen, or visual element | `frontend-design:frontend-design` (then follow ART-DIRECTION.md) |
 | Before writing or editing code | `karpathy-guidelines` |
 | Learner-facing / public Danish copy | `humanizer-da` |
-| Learner-facing / public Persian copy | `humanizer-pa` |
+| Learner-facing / public Japanese copy | `humanizer-pa` |
 | Public English copy (README, site) | `humanizer` |
 | After implementing — quality pass | `simplify` |
 | Reviewing a PR | `pr-review-toolkit:review-pr` (or `/code-review` for the working diff) |
@@ -101,7 +101,7 @@ genuinely needs it, and flip it back.
 ## Architecture
 
 ```
-website/            trilingual landing (en root, da/, fa/) — plain HTML/CSS, deployed as site root
+website/            trilingual landing (en root, da/, ja/) — plain HTML/CSS, deployed as site root
 docs/plans/         ROADMAP.md + numbered plans (001-scaffold-app.md is next)
 docs/design/        ART-DIRECTION.md — binding design system (palette, type, notebook signature)
 .github/workflows/  deploy-pages.yml (site → Pages; app joins at /app/)
@@ -117,7 +117,7 @@ src/, public/       (arrive with plan 001: Vite React app, lessons data, progres
   the roadmap; delete dead code on sight.
 - **TDD for logic** (lesson data integrity, storage, keyboard mapping): failing test first. UI is
   verified visually (`run` skill + 360px viewport + RTL check) — screenshots beat assertions there.
-- Tests guard the text rules too: fa strings reject Arabic ك/ي and ASCII digits (see plan 001).
+- Tests guard the text rules too: ja strings reject Arabic ك/ي and ASCII digits (see plan 001).
 - Conventional Commits (`feat:` / `fix:` / `docs:` …) — the commit-msg hook enforces it.
 - No new dependencies unless the active plan names them.
 

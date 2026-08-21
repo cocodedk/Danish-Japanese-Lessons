@@ -20,7 +20,7 @@ answer wrong/correct, retry/next, complete a puzzle, type a word, edit/delete/sk
   lesson browsing. The specimen remains the brand hero but MUST not bury the next task.
 - Counters MUST use honest labels: `set`, `øvet`, `husket`, and `klar til repetition`. “Klaret” is for
   a completed activity or earned milestone, not passive exposure or permanent mastery.
-- IPA and Danish sound spelling remain adjacent to their Persian item. Danish sound spelling has
+- IPA and Danish sound spelling remain adjacent to their Japanese item. Danish sound spelling has
   stronger immediate hierarchy; IPA remains readable reference, not decorative gray noise.
 - Long indexes keep the sticky master-detail strip, but it MUST use no more than 25% of a 360×640
   viewport and MUST leave the selected grid row and its next action visible.
@@ -64,7 +64,7 @@ Wrong answers use no red X, shake, buzzer, loss, or disappearing reward. The sel
 blue emphasis and a textual “Se forklaringen”; the teacher's red is reserved for the correct cue and
 teaching marks. Correct answers use a tick/text in addition to color.
 
-- At least the reveal heading, Persian form, pronunciation, Danish meaning, Retry, and Next MUST be
+- At least the reveal heading, Japanese form, pronunciation, Danish meaning, Retry, and Next MUST be
   reachable without scrolling back through the question. On 360×640, the first three MUST be visible
   together after the automatic nearest scroll.
 - Pointer activation MUST not unexpectedly move keyboard focus. Keyboard activation MAY move focus to
@@ -88,7 +88,7 @@ while also serving sighted learners whose point of regard must see the update.
   deterministically enough that position is not the learned cue.
 - Typing keeps prompt, pronunciation, writing line, Check/Reveal, keyboard, and navigation operable in
   the 360×640 viewport. The dock MUST not cover the prompt, caret, feedback, or focused key.
-- The Persian keyboard preserves 44×44 targets. Danish hints may shrink typographically but remain at
+- The Japanese keyboard preserves 44×44 targets. Danish hints may shrink typographically but remain at
   least 14 CSS pixels at default zoom and meet enhanced contrast.
 - Puzzle tasks remain tap-based; ordering offers tap-to-place and tap-to-remove. Dragging is never the
   only operation.
@@ -126,7 +126,7 @@ plus this named set—not an imprecise “WCAG AAA” badge. Normative source:
 
 ## Semantics and language
 
-- Persian text uses `lang="fa" dir="rtl"`; Danish uses `lang="da"`. Mixed pronunciation and IPA use
+- Japanese text uses `lang="ja" dir="rtl"`; Danish uses `lang="da"`. Mixed pronunciation and IPA use
   LTR isolation so screen readers and bidi layout do not reorder them.
 - Visual order, DOM order, reading order, and keyboard order MUST preserve meaning. RTL grids MAY lay
   out right-to-left while global navigation remains predictable.
@@ -142,7 +142,7 @@ plus this named set—not an imprecise “WCAG AAA” badge. Normative source:
 - Notebook rules stay structural and MUST not reduce small-text legibility. Body/instructional text
   targets enhanced 7:1 contrast; large text targets 4.5:1. Controls and focus indicators meet at least
   3:1 against adjacent colors in both schemes.
-- Body text is at least 16 CSS pixels; Persian teaching text is sized for marks; line length is 35–70
+- Body text is at least 16 CSS pixels; Japanese teaching text is sized for marks; line length is 35–70
   Latin characters where practical. Text spacing overrides MUST not clip or overlap.
 - Motion is limited to instruction and celebration, under 1.5 seconds, interruptible where repeated,
   and static under reduced motion. No essential state waits for animation.

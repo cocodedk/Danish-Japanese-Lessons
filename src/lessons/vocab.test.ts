@@ -28,11 +28,11 @@ describe('grade-1 vocabulary data', () => {
     expect(findVocabUnit('nope')).toBeUndefined()
   })
 
-  it('gives every card a Persian word, a vocalized specimen, a Danish meaning and both pronunciations', () => {
+  it('gives every card a Japanese word, a vocalized specimen, a Danish meaning and both pronunciations', () => {
     for (const word of allVocabWords) {
-      expect(word.id, word.fa).toMatch(/^[a-z]+$/)
-      expect(word.fa.length, word.id).toBeGreaterThan(0)
-      expect(word.faMarked.length, word.id).toBeGreaterThan(0)
+      expect(word.id, word.ja).toMatch(/^[a-z]+$/)
+      expect(word.ja.length, word.id).toBeGreaterThan(0)
+      expect(word.jaMarked.length, word.id).toBeGreaterThan(0)
       expect(word.da.length, word.id).toBeGreaterThan(0)
       expect(word.pron.da.length, word.id).toBeGreaterThan(0)
       expect(word.pron.ipa.length, word.id).toBeGreaterThan(0)
@@ -44,14 +44,14 @@ describe('grade-1 vocabulary data', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
-  it('spells faMarked as fa plus اِعراب and nothing else — take the marks off and the word is back', () => {
+  it('spells jaMarked as ja plus اِعراب and nothing else — take the marks off and the word is back', () => {
     for (const word of allVocabWords) {
-      expect(withoutMarks(word.faMarked), word.id).toBe(word.fa)
+      expect(withoutMarks(word.jaMarked), word.id).toBe(word.ja)
     }
   })
 
   it('actually marks the words that carry a short vowel', () => {
-    const marked = allVocabWords.filter((word) => word.faMarked !== word.fa)
+    const marked = allVocabWords.filter((word) => word.jaMarked !== word.ja)
     expect(marked.map((word) => word.id)).toEqual([
       'madar',
       'man',
@@ -135,10 +135,10 @@ describe('grade-1 vocabulary data', () => {
 
   it('carries the whole pre-approved starter set in unit ۱', () => {
     const unit = findVocabUnit('1')!
-    for (const [fa, da] of STARTER_SET) {
-      const word = unit.words.find((candidate) => candidate.fa === fa)
-      expect(word, fa).toBeDefined()
-      expect(word!.da, fa).toBe(da)
+    for (const [ja, da] of STARTER_SET) {
+      const word = unit.words.find((candidate) => candidate.ja === ja)
+      expect(word, ja).toBeDefined()
+      expect(word!.da, ja).toBe(da)
     }
   })
 
@@ -151,15 +151,15 @@ describe('grade-1 vocabulary data', () => {
     }
   })
 
-  it('writes Persian code points only — in fa and in the vocalized specimen alike', () => {
+  it('writes Japanese code points only — in ja and in the vocalized specimen alike', () => {
     for (const word of allVocabWords) {
-      expect(findPersianTextViolations(word.fa), word.id).toEqual([])
-      expect(findPersianTextViolations(word.faMarked), word.id).toEqual([])
+      expect(findPersianTextViolations(word.ja), word.id).toEqual([])
+      expect(findPersianTextViolations(word.jaMarked), word.id).toEqual([])
     }
     for (const unit of vocabUnits) {
-      expect(findPersianTextViolations(unit.titleEntry.fa), unit.id).toEqual([])
+      expect(findPersianTextViolations(unit.titleEntry.ja), unit.id).toEqual([])
       // Unit headings are UI chrome: no اِعراب there, only on specimens.
-      expect(withoutMarks(unit.titleEntry.fa), unit.id).toBe(unit.titleEntry.fa)
+      expect(withoutMarks(unit.titleEntry.ja), unit.id).toBe(unit.titleEntry.ja)
     }
   })
 })

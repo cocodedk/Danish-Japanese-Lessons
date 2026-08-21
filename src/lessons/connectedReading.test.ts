@@ -22,7 +22,7 @@ describe('connected reading manifest', () => {
 
   it('keeps each unit text between three and five sentences', () => {
     for (const text of connectedTexts) {
-      const sentences = text.entry.fa.split('.').filter((part) => part.trim())
+      const sentences = text.entry.ja.split('.').filter((part) => part.trim())
       expect(sentences.length, text.id).toBeGreaterThanOrEqual(3)
       expect(sentences.length, text.id).toBeLessThanOrEqual(5)
     }
@@ -31,7 +31,7 @@ describe('connected reading manifest', () => {
   it('gives every connected text token an ordered reading cue', () => {
     for (const reading of connectedReadings) {
       const written = (reading.entry.readingCues ?? []).filter((cue) => cue.end > cue.start)
-      const expected = [...reading.entry.fa]
+      const expected = [...reading.entry.ja]
         .map((glyph, index) => ({ glyph, index }))
         .filter(({ glyph }) => !/[\s.،؟!]/u.test(glyph))
         .map(({ index }) => index)

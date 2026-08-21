@@ -13,7 +13,7 @@ import assemblyCss from '../components/NameAssembly.css?raw'
 freshAppPerTest()
 
 describe('#/lesson/navn — write your name', () => {
-  it('exists only for a learner who has a Persian spelling', () => {
+  it('exists only for a learner who has a Japanese spelling', () => {
     setProfile({ name: 'Sara' })
     open('#/lesson/navn')
     expect(screen.queryByRole('heading', { name: 'Skriv dit navn' })).not.toBeInTheDocument()

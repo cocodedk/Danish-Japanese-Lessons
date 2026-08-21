@@ -17,13 +17,13 @@ function key(latin: string): string {
   return latin.toLowerCase().replace(/[^a-zæøå]/g, '')
 }
 
-/** The agreed Persian spelling of `latin`, if the list knows the name. */
+/** The agreed Japanese spelling of `latin`, if the list knows the name. */
 export function overrideFor(latin: string): string | undefined {
   return OVERRIDES[key(latin)]
 }
 
 /**
- * Every Persian spelling on the list, so the text-rule guard can walk the table
+ * Every Japanese spelling on the list, so the text-rule guard can walk the table
  * itself — an Arabic ك or ي typed into a name entry fails the test suite.
  */
 export const NAME_OVERRIDE_FA_STRINGS: string[] = Object.values(OVERRIDES)

@@ -18,13 +18,13 @@ describe('RuledSection', () => {
 
   it('carries the reading direction and language it is given', () => {
     const { container } = render(
-      <RuledSection dir="rtl" lang="fa">
+      <RuledSection dir="rtl" lang="ja">
         روی خط بنویس.
       </RuledSection>,
     )
     const sheet = container.querySelector('.ruled-section')
     expect(sheet).toHaveAttribute('dir', 'rtl')
-    expect(sheet).toHaveAttribute('lang', 'fa')
+    expect(sheet).toHaveAttribute('lang', 'ja')
   })
 
   it('draws exactly one red margin line', () => {
@@ -58,12 +58,12 @@ describe('RuledSection', () => {
     expect(css).toContain('var(--rule)')
   })
 
-  it('gives a lang="fa" sheet the Persian UI face at the body-text floor, cascade-resolved', () => {
+  it('gives a lang="ja" sheet the Japanese UI face at the body-text floor, cascade-resolved', () => {
     // Load the component's own stylesheet for real, so this checks what the
-    // cascade actually does for a lang="fa" element — not just that the right
+    // cascade actually does for a lang="ja" element — not just that the right
     // text appears somewhere in the file. (jsdom resolves selector cascade and
     // specificity for computed style; it does not substitute custom properties,
-    // so the Persian token surfaces as the literal `var(--font-fa)` reference
+    // so the Japanese token surfaces as the literal `var(--font-ja)` reference
     // rather than the resolved 'Vazirmatn, ...' stack.)
     const style = document.createElement('style')
     style.textContent = css
@@ -71,14 +71,14 @@ describe('RuledSection', () => {
 
     try {
       const { container } = render(
-        <RuledSection dir="rtl" lang="fa">
+        <RuledSection dir="rtl" lang="ja">
           روی خط بنویس.
         </RuledSection>,
       )
       const sheet = container.querySelector('.ruled-section')!
       const computed = getComputedStyle(sheet)
 
-      expect(computed.fontFamily).toContain('var(--font-fa)')
+      expect(computed.fontFamily).toContain('var(--font-ja)')
       expect(parseFloat(computed.fontSize)).toBeGreaterThanOrEqual(18)
     } finally {
       style.remove()

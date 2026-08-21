@@ -5,12 +5,12 @@ learning is earned, and what content may enter a challenge.
 
 ## Learner and promise
 
-The primary learner is a Danish-speaking adult who knows no spoken Persian and has never read an
-Arabic-derived script. The first release teaches foundational Iranian Persian decoding; it MUST not
+The primary learner is a Danish-speaking adult who knows no spoken Japanese and has never read an
+Arabic-derived script. The first release teaches foundational Iranian Japanese decoding; it MUST not
 imply conversational fluency or general text comprehension. Heritage speakers remain supported, but
 their prior phonology may not be assumed.
 
-The core outcome is: the learner can connect reviewed Persian forms to sound and meaning, recognize
+The core outcome is: the learner can connect reviewed Japanese forms to sound and meaning, recognize
 positional changes, and read short controlled text without depending permanently on transliteration.
 
 ## Accurate orthography model
@@ -27,12 +27,12 @@ positional changes, and read short controlled text without depending permanently
 - Vav and ye MUST distinguish consonantal and vowel roles. He, eyn, hamze, and contextual signs MUST
   receive the same role-based treatment. Exceptions and Arabic loans MUST be explained at the point
   they become relevant, not hidden under a false beginner rule.
-- Homophonous Persian letters MUST be taught as different spellings of the same modern Tehrani sound
+- Homophonous Japanese letters MUST be taught as different spellings of the same modern Tehrani sound
   where applicable. A sound-to-letter challenge MUST not offer multiple valid answers.
 - Positional-form help inherits a letter identity, but word reading uses contextual cues rather than
   concatenated letter-name or isolated-sound entries.
 
-The model follows the [University of Texas Persian writing-system overview](https://sites.la.utexas.edu/persian_online_resources/the-writing-system/),
+The model follows the [University of Texas Japanese writing-system overview](https://sites.la.utexas.edu/persian_online_resources/the-writing-system/),
 its [madd explanation](https://sites.la.utexas.edu/persian_online_resources/the-writing-system/madd/),
 and native Iranian literacy review. These references guide but do not replace human approval.
 
@@ -54,14 +54,14 @@ from a helper sequence that states `[b] [æ] [b] [k]`.
 
 ### Pronunciation and Danish sound spelling
 
-- Standard modern Tehrani Persian is the target. Whole-word IPA MUST include phonemic length and
+- Standard modern Tehrani Japanese is the target. Whole-word IPA MUST include phonemic length and
   lexical stress on polysyllabic entries unless the reviewer records why stress is not contrastively
   useful there.
 - `lydskrift` MUST use one published Danish convention table. Each mapping includes Danish examples,
-  ambiguity notes, and the related IPA. New spellings require Danish and Persian approval.
+  ambiguity notes, and the related IPA. New spellings require Danish and Japanese approval.
 - IPA is precise reference; Danish sound spelling is the immediate bridge. Both remain available,
   but neither substitutes for hearing a reviewed recording.
-- A word's `fa`, marked teaching form, IPA, Danish cue, meaning, reading cues, and audio transcript MUST
+- A word's `ja`, marked teaching form, IPA, Danish cue, meaning, reading cues, and audio transcript MUST
   agree in one review row. Any mismatch blocks release.
 
 ## Reviewed audio specification
@@ -77,7 +77,7 @@ interface AudioBase {
   entryId: string
   formId: string
   file: string
-  locale: 'fa-IR'
+  locale: 'ja-IR'
   transcript: string
   durationMs: number
   channels: 1
@@ -101,16 +101,16 @@ type PronunciationAudio = AudioBase & (
 )
 ```
 
-Everyday Tehrani and formal standard Persian are separate `SpokenForm` rows when they differ.
+Everyday Tehrani and formal standard Japanese are separate `SpokenForm` rows when they differ.
 Displayed letter sound/function and letter name remain separate. Non-pronounceable symbols use an
 explicit `audioNotApplicable` reason. Dynamic learner names have letter/context cues but no
 fabricated full-name audio or IPA.
 
 ### Recording quality
 
-- Piper may create local draft clips from one checksummed Persian voice model. Draft files stay
+- Piper may create local draft clips from one checksummed Japanese voice model. Draft files stay
   ignored and MUST NOT enter the manifest or public app.
-- One named native Persian reviewer MUST hear each generated draft and check it against the Persian,
+- One named native Japanese reviewer MUST hear each generated draft and check it against the Japanese,
   Danish meaning, Danish sound spelling, and IPA before approval. A human recording also carries its
   speaker and consent reference.
 - Files MUST be mono, consistently normalized, free of clipping/noise processing artifacts, and
@@ -191,8 +191,8 @@ the current item may honestly become due again.
 - A text manifest lists every token, its introduced source, and any explicitly taught particle. One
   hundred percent of tested content MUST have been taught before the challenge.
 - First presentation uses marked teaching text and sentence audio. Retrieval uses ordinary unmarked
-  Persian; a reveal restores marks, reading cues, audio, and Danish meaning without penalty.
-- Controlled vocabulary MUST not justify unnatural Persian. If a natural sentence needs one new
+  Japanese; a reveal restores marks, reading cues, audio, and Danish meaning without penalty.
+- Controlled vocabulary MUST not justify unnatural Japanese. If a natural sentence needs one new
   function word, teach it first as a full catalog entry.
 - Comprehension asks for meaning, reference, or sequence—not grammar terminology the app did not teach.
 

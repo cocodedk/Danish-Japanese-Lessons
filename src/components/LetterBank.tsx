@@ -17,7 +17,7 @@ export interface LetterBankProps {
 }
 
 /**
- * A tray of letters to tap. It is a Persian sequence, so it fills from the
+ * A tray of letters to tap. It is a Japanese sequence, so it fills from the
  * right, and every tile is a 44px target labelled with the letter's Danish
  * name — the same name the alphabet lesson taught it under.
  */

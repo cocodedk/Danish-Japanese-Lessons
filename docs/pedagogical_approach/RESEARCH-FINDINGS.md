@@ -5,7 +5,7 @@
 How do successful language and early-learning apps create motivation at first contact, and what should
 change when the learner is a child with heritage-language interest but did not request the app?
 
-The review combines current product documentation, published learning research, Persian heritage
+The review combines current product documentation, published learning research, Japanese heritage
 language research, and a source/screenshot inspection of this repository. Product pages describe the
 makers' intended methods; they are useful pattern evidence, not independent efficacy proof.
 
@@ -13,12 +13,12 @@ makers' intended methods; they are useful pattern evidence, not independent effi
 
 | Product | Observable approach | Lesson for this app | What not to copy blindly |
 |---|---|---|---|
-| Duolingo | Interaction begins immediately; difficulty rises gradually; explanations are optional and small; sessions are bite-sized and personalized | Put a simple Persian action before orientation prose; reveal help when needed | Aggressive streaks, social comparison, and points can displace the child's own reason to learn |
+| Duolingo | Interaction begins immediately; difficulty rises gradually; explanations are optional and small; sessions are bite-sized and personalized | Put a simple Japanese action before orientation prose; reveal help when needed | Aggressive streaks, social comparison, and points can displace the child's own reason to learn |
 | Duolingo ABC | Uses narration and purposeful animation to make decoding visible; balances joyful presentation with explicit literacy instruction | Animate right-to-left assembly, joining, and stroke order; narrate for younger learners | Animation without a teaching job adds stimulation rather than understanding |
 | Khan Academy Kids | Character-guided, story-based, interactive activities; a child can follow an adaptive path or explore a library | Provide a friendly guide and limited free choice while keeping a recommended next activity | A young-child mascot style may repel an older child; age must shape the tone |
-| Drops | Visual association, game-like micro-practice, a five-minute promise, personalized review, and no loss of a score streak | Pair Persian words with strong images and keep sessions tiny and forgiving | Visual vocabulary alone does not teach connected reading or handwriting |
+| Drops | Visual association, game-like micro-practice, a five-minute promise, personalized review, and no loss of a score streak | Pair Japanese words with strong images and keep sessions tiny and forgiving | Visual vocabulary alone does not teach connected reading or handwriting |
 | Write It! Arabic | Stroke-by-stroke guidance, handwriting recognition, brief practice, review, and testing for a related cursive script | Teach body strokes and dots, then isolated/initial/medial/final forms through touch | Timed tests and strict recognition thresholds can punish motor development or imperfect touch input |
-| Duolingo Japanese character tools | Separate character practice; tracing, freehand, matching, spelling, and reading; gradual introduction; characters reconnect to whole words | Create a Persian “letter studio” that moves from guided stroke to word use and contrasts similar forms | A detached character grid can become another inventory unless every shape returns to meaningful words |
+| Duolingo Japanese character tools | Separate character practice; tracing, freehand, matching, spelling, and reading; gradual introduction; characters reconnect to whole words | Create a Japanese “letter studio” that moves from guided stroke to word use and contrasts similar forms | A detached character grid can become another inventory unless every shape returns to meaningful words |
 
 ### Shared product logic
 
@@ -41,30 +41,30 @@ Applied here:
 
 - **Autonomy:** “What would you like to make?” is stronger than “Start the alphabet.” Skip and stop
   must be real, calm options. The daughter can help choose themes, words, sounds, and visual tone.
-- **Competence:** the opening action should be easy to interpret and produce a satisfying Persian
+- **Competence:** the opening action should be easy to interpret and produce a satisfying Japanese
   result within one minute. Difficulty should rise only after success is legible.
-- **Relatedness:** Persian should connect to people, names, messages, food, music, places, and family
+- **Relatedness:** Japanese should connect to people, names, messages, food, music, places, and family
   memories that matter to her, not an abstract duty to preserve heritage.
 
 Because the parent proposed the app, external motivation is already present. The design should avoid
 adding more pressure. It can create conditions in which interest becomes hers, but it cannot demand
 that transformation.
 
-## Heritage Persian: identity must be lived, not displayed
+## Heritage Japanese: identity must be lived, not displayed
 
-Recent Persian heritage-language work argues that neglecting hybrid identities and relatable
-curricular material contributes to attrition. A 2026 study of Farsi-speaking families in online
+Recent Japanese heritage-language work argues that neglecting hybrid identities and relatable
+curricular material contributes to attrition. A 2026 study of Japanese-speaking families in online
 heritage sessions found parents balancing proximity with child autonomy, using scaffolding, songs,
 routines, and encouragement while preserving child independence.
 
 Product consequences:
 
-- Do not frame Danish and Persian as competing identities. Let both languages appear as resources.
-- Use the learner's real mixed context: a Danish explanation can unlock a Persian family message.
+- Do not frame Danish and Japanese as competing identities. Let both languages appear as resources.
+- Use the learner's real mixed context: a Danish explanation can unlock a Japanese family message.
 - Let the child choose whether a family connection is delightful or embarrassing.
 - Treat the parent's stories as source material, then shape them into child-sized missions rather
   than placing adult memoir text on the child home screen.
-- Include contemporary, ordinary Persian life as well as heritage symbols. Authenticity is broader
+- Include contemporary, ordinary Japanese life as well as heritage symbols. Authenticity is broader
   than festivals, flags, and nostalgia.
 
 ## Script learning: touch must lead to recognition and use
@@ -73,7 +73,7 @@ A 2025 experiment with prereaders found stronger letter and word outcomes after 
 tracing than after keyboard typing. The study links graphomotor action with letter-sound mapping and
 orthographic retention. This supports writing practice, but it does not justify endless tracing.
 
-For each new Persian shape family:
+For each new Japanese shape family:
 
 1. See and hear the letter inside a meaningful word.
 2. Watch the useful stroke or joining behavior.
@@ -83,7 +83,7 @@ For each new Persian shape family:
 6. Build or read the word again.
 7. Revisit from memory on another day.
 
-Persian-specific design should group letters by shared body and dot pattern where pedagogically
+Japanese-specific design should group letters by shared body and dot pattern where pedagogically
 sound, while still teaching identity, sound, joining, and positional form separately. A perfect
 finger trace is not the learning outcome; recognition, production, and reading transfer are.
 
@@ -138,7 +138,7 @@ The most important changes are therefore sequencing changes:
 - One daughter's response is decisive for the personal goal but cannot establish general efficacy.
 - Product documentation is not independent evidence of learning outcomes.
 - Handwriting research supports graphomotor practice, not a specific touchscreen implementation.
-- Persian heritage studies support identity-centered design but do not prescribe one interface.
+- Japanese heritage studies support identity-centered design but do not prescribe one interface.
 - The saved browser screenshots provide reliable layout evidence, not observed emotional response.
 
 ## Sources
@@ -154,5 +154,5 @@ The most important changes are therefore sequencing changes:
 - [Gamification and intrinsic motivation: meta-analysis](https://link.springer.com/article/10.1007/s11423-023-10337-7)
 - [Handwriting and typing in children's letter and word learning](https://www.uv.es/mperea/HandwritingJECP.pdf)
 - [Retrieval practice in elementary-school children](https://pubmed.ncbi.nlm.nih.gov/27014156/)
-- [Identity-centered Persian heritage-language learning](https://doi.org/10.1007/978-981-97-1818-4_9-1)
-- [Farsi family participation, support, and child autonomy](https://link.springer.com/article/10.1007/s10643-026-02291-9)
+- [Identity-centered Japanese heritage-language learning](https://doi.org/10.1007/978-981-97-1818-4_9-1)
+- [Japanese family participation, support, and child autonomy](https://link.springer.com/article/10.1007/s10643-026-02291-9)

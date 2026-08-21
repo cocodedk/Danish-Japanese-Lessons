@@ -23,7 +23,7 @@ accessibility, progress, routes, rewards, and the grown-up course.
 
 ## Outcome
 
-A new learner reaches a meaningful Persian action before curriculum explanation. The learner chooses
+A new learner reaches a meaningful Japanese action before curriculum explanation. The learner chooses
 between a child word workshop and the full course. The child workshop offers reviewed, image-backed
 word missions for `آب`, `نان`, and `گل`; each mission models the word, guides a right-to-left build,
 asks for one memory build, reveals complete teaching help, saves a permanent collection item, and
@@ -37,7 +37,7 @@ privacy-preserving storage foundation.
 | Route | One job | Primary action |
 |---|---|---|
 | `/` | Choose the preferred front door once | Start the child word workshop |
-| `/opdag` | Choose one visual Persian word mission | Open a selected mission |
+| `/opdag` | Choose one visual Japanese word mission | Open a selected mission |
 | `/opdag/ord/:id` | Complete one model → guide → recall → reveal loop | Perform the current build action |
 | `/kursus` | Use the existing complete beginner course | Existing adaptive Continue action |
 
@@ -45,8 +45,8 @@ Unknown child mission IDs return to `/opdag`. Existing lesson routes remain open
 
 ## Milestone 1 — Persistence and front door
 
-1. Add a normalized `dpl.v1.journey` record with `child` and `course` choices.
-2. Add an add-only `dpl.v1.child-collection` record for completed mission IDs.
+1. Add a normalized `djl.v1.journey` record with `child` and `course` choices.
+2. Add an add-only `djl.v1.child-collection` record for completed mission IDs.
 3. Make `/` route by a saved choice and otherwise show the first-use front door.
 4. Give the child action primary hierarchy and the full course a calm secondary action.
 5. Let each journey deliberately switch to the other without clearing progress.
@@ -62,8 +62,8 @@ Unknown child mission IDs return to `/opdag`. Existing lesson routes remain open
 
 ## Milestone 3 — Word mission
 
-1. Model the complete word with image, Persian, Danish sound spelling, IPA, and optional reviewed audio.
-2. Guide a tap-to-place build in logical Persian order; the first target is visually indicated.
+1. Model the complete word with image, Japanese, Danish sound spelling, IPA, and optional reviewed audio.
+2. Guide a tap-to-place build in logical Japanese order; the first target is visually indicated.
 3. Repeat the build from memory with the same letters and no answer-defining ghost word.
 4. Treat a wrong tap as information: selected state, short status, full reveal, Retry, and Continue.
 5. On first completion, append the mission to the collection and celebrate once; replay praises

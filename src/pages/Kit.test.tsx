@@ -35,7 +35,7 @@ describe('#/kit gallery', () => {
     for (const id of FRAMES) {
       const frame = screen.getByTestId(id)
       expect(frame.querySelector('.ruled-section')).not.toBeNull()
-      expect(frame.querySelector('.fa-specimen')).not.toBeNull()
+      expect(frame.querySelector('.ja-specimen')).not.toBeNull()
       expect(frame.querySelector('.pron-line')).not.toBeNull()
       expect(frame.querySelector('hr.rule-divider')).not.toBeNull()
       expect(frame.querySelector('.da-word')).not.toBeNull()
@@ -55,10 +55,10 @@ describe('#/kit gallery', () => {
     }
   })
 
-  it('writes the Persian sheet in Persian and the Danish one in Danish', () => {
+  it('writes the Japanese sheet in Japanese and the Danish one in Danish', () => {
     renderKit()
     const rtlSheet = screen.getByTestId('kit-frame-light-rtl').querySelector('.ruled-section')
-    expect(rtlSheet).toHaveAttribute('lang', 'fa')
+    expect(rtlSheet).toHaveAttribute('lang', 'ja')
     const ltrSheet = screen.getByTestId('kit-frame-light-ltr').querySelector('.ruled-section')
     expect(ltrSheet).toHaveAttribute('lang', 'da')
   })

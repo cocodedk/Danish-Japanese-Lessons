@@ -69,8 +69,8 @@
   padding: 0.45rem 0.6rem;
 }
 
-.child-mission-card__label [lang='fa'] {
-  font-family: var(--font-fa-display);
+.child-mission-card__label [lang='ja'] {
+  font-family: var(--font-ja-display);
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;

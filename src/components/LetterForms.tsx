@@ -19,7 +19,7 @@ export interface LetterFormsProps {
 
 /**
  * The same letter in the four places it can stand. The row is sequenced in
- * Persian, so it runs right to left — alene, først, midt, sidst, starting at
+ * Japanese, so it runs right to left — alene, først, midt, sidst, starting at
  * the right, exactly like the specimen row in orientation.
  */
 export function LetterForms({ forms, joinsLeft, entry }: LetterFormsProps) {

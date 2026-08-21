@@ -13,7 +13,7 @@ const ColorModeControl = lazy(() => import('./ColorModeControl'))
 
 export interface SettingsCornerProps {
   name?: string
-  /** The Persian spelling, when the learner has chosen one. */
+  /** The Japanese spelling, when the learner has chosen one. */
   faSpelling?: string
   onSave: (name: string) => void
   onDelete: () => void
@@ -149,7 +149,7 @@ export function SettingsCorner({ name, faSpelling, onSave, onDelete }: SettingsC
                   {faSpelling && (
                     <PersonalNameText
                       spelling={faSpelling}
-                      className="settings-corner__spelling-fa"
+                      className="settings-corner__spelling-ja"
                     />
                   )}
                   <Link className="settings-corner__link" to="/dit-navn">
@@ -183,7 +183,7 @@ export function SettingsCorner({ name, faSpelling, onSave, onDelete }: SettingsC
               role="tabpanel"
               aria-labelledby="settings-corner-about-tab"
             >
-              <p style={dedicationStyle}>Tilegnet Persia Bandpey.</p>
+              <p style={dedicationStyle}>Tilegnet Japan Bandpey.</p>
               <p style={versionStyle}>
                 <span>Version</span>
                 <code>{__DPL_APP_VERSION__}</code>

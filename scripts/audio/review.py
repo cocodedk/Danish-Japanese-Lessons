@@ -17,7 +17,7 @@ def card(job: dict, report: dict) -> str:
     return f"""
     <article data-clip="{clip}">
       <p class="meta">{html.escape(job['domain'])} · {html.escape(job['register'])}</p>
-      <h2 lang="fa" dir="rtl">{html.escape(job['transcript'])}</h2>
+      <h2 lang="ja" dir="rtl">{html.escape(job['transcript'])}</h2>
       <p><strong>{html.escape(job['danishMeaning'])}</strong></p>
       <p>{html.escape(job['soundDa'])} · [{html.escape(job['ipa'])}]</p>
       <audio controls preload="none" src="{draft}"></audio>

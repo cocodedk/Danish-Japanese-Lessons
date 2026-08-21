@@ -17,7 +17,7 @@ interface ExerciseState {
   done: string[]
 }
 
-const STORAGE_KEY = 'dpl.audio-exercise.v1'
+const STORAGE_KEY = 'djl.audio-exercise.v1'
 
 const domainNames: Record<string, string> = {
   bridges: 'Ordbroer',
@@ -141,7 +141,7 @@ export default function AudioExercisePage() {
                   entry={{
                     id: row.entryId,
                     kind: 'phrase',
-                    fa: row.transcript,
+                    ja: row.transcript,
                     da: row.danishMeaning,
                     pron: { da: row.soundDa, ipa: row.ipa },
                   }}

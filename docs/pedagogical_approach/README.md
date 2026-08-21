@@ -5,9 +5,9 @@ Research date: 2026-08-08
 
 ## Decision in one sentence
 
-Build one accurate Danish-Persian learning engine with two front doors: a child journey that begins
+Build one accurate Danish-Japanese learning engine with two front doors: a child journey that begins
 with play, choice, sound, and creation, and a grown-up notebook that holds the curriculum, IPA,
-progress detail, and Babak's Danish-Persian experience.
+progress detail, and Babak's Danish-Japanese experience.
 
 The same content can live under one roof without asking one homepage to serve two incompatible jobs.
 
@@ -18,7 +18,7 @@ experience still introduces the *system* before it gives the learner something s
 
 | Finding | Severity | Evidence | Simplest repair |
 |---|---:|---|---|
-| The first meaningful action arrives after explanation | P1 | First run opens a six-step orientation; step 1 is mostly Danish prose and phonetic notation | Start with a guided Persian action; explain only what that action needs |
+| The first meaningful action arrives after explanation | P1 | First run opens a six-step orientation; step 1 is mostly Danish prose and phonetic notation | Start with a guided Japanese action; explain only what that action needs |
 | The defined primary learner is an adult | P1 | `AAA-LEARNING-SPEC.md` explicitly targets a Danish-speaking adult | Define a child age band and a separate child journey before redesigning visuals |
 | The opening promise is a 39-item course | P1 | Home says “Start med alfabetet” and “39 tegn tilbage” | Promise a meaningful result in one minute, not completion of an inventory |
 | Identity arrives too late | P2 | The recommended flow places the learner's name after the full alphabet | Show the completed name early as an invitation; teach its pieces gradually |
@@ -29,7 +29,7 @@ This is an information-architecture and motivation problem before it is a color 
 
 ## North star
 
-Within 30 seconds of opening the child journey, the learner voluntarily performs a real Persian
+Within 30 seconds of opening the child journey, the learner voluntarily performs a real Japanese
 reading or writing action and understands the result. Within 90 seconds, she has made something she
 recognizes as hers: a name card, a word, or a tiny message.
 
@@ -40,7 +40,7 @@ without a parent prompt.
 
 ### Child journey
 
-Primary job: “Let me discover, make, and read something in Persian.”
+Primary job: “Let me discover, make, and read something in Japanese.”
 
 - One visible mission at a time.
 - Choice before instruction: name, mystery word, or short story.
@@ -51,7 +51,7 @@ Primary job: “Let me discover, make, and read something in Persian.”
 ### Grown-up notebook
 
 Primary job: “Let me understand the method, inspect progress, browse the course, and preserve useful
-Danish-Persian knowledge.”
+Danish-Japanese knowledge.”
 
 - Curriculum map, lesson library, IPA, Danish sound guidance, review state, and content notes.
 - Parent-facing context for what was practiced and one optional offline follow-up.
@@ -60,7 +60,7 @@ Danish-Persian knowledge.”
 
 ### Shared foundation
 
-Both journeys use the existing typed Persian catalog, native-review process, local storage, adaptive
+Both journeys use the existing typed Japanese catalog, native-review process, local storage, adaptive
 review scheduler, rewards permanence, route accessibility, and offline-first architecture. This is a
 presentation and journey split, not two independent products.
 
@@ -68,7 +68,7 @@ presentation and journey split, not two independent products.
 
 The existing release definition remains valuable:
 
-- **Accurate:** Persian form, contextual sound, Danish help, IPA, and reviewed audio agree.
+- **Accurate:** Japanese form, contextual sound, Danish help, IPA, and reviewed audio agree.
 - **Adaptive:** practice stays short and revisits what the learner is ready to retrieve.
 - **Accessible:** every action works across touch, keyboard, assistive technology, sound-off, and
   reduced-motion use.
@@ -97,10 +97,10 @@ AAA criteria.
 
 - No account, advertising, analytics, or runtime AI.
 - No locked lessons, shame, lives, leaderboards, or streak loss.
-- The Persian exercise-notebook identity and teacher's red pen.
+- The Japanese exercise-notebook identity and teacher's red pen.
 - The learner's name as a teaching instrument.
 - Honest distinctions between seen, practiced, remembered, and due.
-- Correct Persian text rules, contextual pronunciation work, and native review requirements.
+- Correct Japanese text rules, contextual pronunciation work, and native review requirements.
 - Local, deterministic, forgiving progress and review.
 - Existing mobile, accessibility, visual, and storage test coverage.
 
@@ -110,7 +110,7 @@ Do not redesign the complete home screen first. Build one isolated, child-first 
 slice behind a direct route or local feature flag:
 
 1. Choose “my name” or “a mystery word.”
-2. Hear and see one complete Persian item.
+2. Hear and see one complete Japanese item.
 3. Complete one supported trace or tap-to-build action.
 4. Recognize the item once without answer-defining help.
 5. Receive a personal artifact and choose “one more” or “done for now.”

@@ -22,20 +22,20 @@ describe('storage', () => {
   })
 
   it('recovers from corrupt JSON instead of throwing', () => {
-    window.localStorage.setItem('dpl.v1.broken', '{not valid json')
+    window.localStorage.setItem('djl.v1.broken', '{not valid json')
     expect(() => readJSON('broken', 'fallback')).not.toThrow()
     expect(readJSON('broken', 'fallback')).toBe('fallback')
     expect(getStorageWarning()).toBe('corrupt')
   })
 
   it('treats a mismatched schema version as absent', () => {
-    window.localStorage.setItem('dpl.v1.old', JSON.stringify({ schemaVersion: 999, value: 'x' }))
+    window.localStorage.setItem('djl.v1.old', JSON.stringify({ schemaVersion: 999, value: 'x' }))
     expect(readJSON('old', 'fallback')).toBe('fallback')
   })
 
   it('treats a null envelope value as absent rather than handing null to the caller', () => {
     window.localStorage.setItem(
-      'dpl.v1.nullish',
+      'djl.v1.nullish',
       JSON.stringify({ schemaVersion: 1, value: null }),
     )
     expect(readJSON('nullish', 'fallback')).toBe('fallback')

@@ -5,7 +5,7 @@ the baseline, not proof that this plan is complete.
 
 Depends on: [Plan 010](010-beginner-content-contract.md) and
 [Plan 011](011-simple-puzzles.md). Supersedes their audio, adaptive-review, and connected-reading
-exclusions. Owner: Fable for pedagogy and art direction; implementation requires native Persian,
+exclusions. Owner: Fable for pedagogy and art direction; implementation requires native Japanese,
 native Danish, accessibility, and novice-learner reviewers.
 
 ## Questions
@@ -28,7 +28,7 @@ Where an older plan conflicts, this plan and its specs win. `CLAUDE.md` and
 
 Ship a trustworthy beginner course, not merely a polished script gallery. “AAA” means:
 
-- **Accurate:** contextual Persian orthography, sound, IPA, Danish help, and reviewed audio agree.
+- **Accurate:** contextual Japanese orthography, sound, IPA, Danish help, and reviewed audio agree.
 - **Adaptive:** short retrieval sessions revisit material over time and distinguish exposure from
   retained learning.
 - **Accessible:** every action responds visibly, every route starts predictably, and the complete app
@@ -51,7 +51,7 @@ These are reproducible baseline failures, not optional polish:
    “klaret”; no delayed review tests retention.
 5. A text label and IPA stand in for sound in prompts that ask which sign “siger denne lyd”. No native
    pronunciation recording exists.
-6. The course ends at isolated words. It does not yet prove transfer to connected Persian reading.
+6. The course ends at isolated words. It does not yet prove transfer to connected Japanese reading.
 7. Desktop is the phone sheet stretched across the window: lesson cards exceed 1,800px, related
    controls sit a monitor apart, and typing leaves a phone-sized keyboard isolated in empty space.
 
@@ -74,9 +74,9 @@ These are reproducible baseline failures, not optional polish:
 2. Save the complete mobile, landscape, tablet, desktop, ultrawide, and zoom baseline matrix from the
    responsive spec for critical routes, including measured content and component widths.
 3. Export a review manifest of every `PersianEntry`, contextual reading cue, Danish sound cue, IPA,
-   and future audio ID. Freeze new learner-facing Persian until Milestone 1 is approved.
+   and future audio ID. Freeze new learner-facing Japanese until Milestone 1 is approved.
 
-## Milestone 1 — Accurate Persian and pronunciation model
+## Milestone 1 — Accurate Japanese and pronunciation model
 
 1. Replace universal letter “sound” assumptions with contextual roles. Alef, vav, ye, he, eyn,
    hamze, and all homophonous letter groups receive explicit audit coverage.
@@ -85,7 +85,7 @@ These are reproducible baseline failures, not optional polish:
 3. Correct the orientation, alphabet challenges, `بابا`, `باد`, `بابک`, and every affected name or
    vocabulary companion as one consistent teaching model.
 4. Add stress and syllable review to polysyllabic IPA. Publish the Danish sound-spelling convention.
-5. Require signed review from two native Iranian Persian reviewers, including one literacy educator,
+5. Require signed review from two native Iranian Japanese reviewers, including one literacy educator,
    plus one phonetics reviewer. One person may fill two roles; two independent people are minimum.
 
 ## Milestone 2 — Interaction and journey repair
@@ -115,7 +115,7 @@ These are reproducible baseline failures, not optional polish:
 
 1. Generate local drafts or record a native standard-Tehrani speaker for every static spoken form.
    Letter sound/function and letter name remain separate. Dynamic learner names never invent audio.
-2. Require a named native Persian review for generated clips. Human recordings also keep speaker
+2. Require a named native Japanese review for generated clips. Human recordings also keep speaker
    consent. Validate files, IDs, transcripts, provenance, licence, loudness, duration, and asset
    budgets through one checked manifest.
 3. Add an explicit replay control beside pronunciation help. Never autoplay. Mute and playback speed
@@ -140,14 +140,14 @@ These are reproducible baseline failures, not optional polish:
    use and recorded in the text manifest.
 3. Teach with marked text and native audio, then offer unmarked reading and a meaning question. The
    learner can always reveal the marked text and Danish help without penalty.
-4. A native Persian literacy reviewer approves naturalness; controlled vocabulary must not produce
-   unnatural Persian merely to satisfy a letter inventory.
+4. A native Japanese literacy reviewer approves naturalness; controlled vocabulary must not produce
+   unnatural Japanese merely to satisfy a letter inventory.
 
 ## Milestone 7 — AAA release audit
 
 1. Run the complete automated, visual, accessibility, performance, storage, and content gates from
    the quality specification.
-2. Run moderated first-use tests with at least five Danish-speaking adults who know no Persian. Fix all
+2. Run moderated first-use tests with at least five Danish-speaking adults who know no Japanese. Fix all
    critical/high findings and repeat affected tasks until the success thresholds pass.
 3. Run keyboard-only, VoiceOver/Safari, TalkBack/Chrome, and NVDA/Firefox journeys. An accessibility
    specialist signs the WCAG 2.2 AA audit and selected-AAA checklist.

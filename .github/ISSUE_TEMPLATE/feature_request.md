@@ -16,4 +16,4 @@ labels: enhancement
 
 <!-- Any alternative solutions or features you've considered. -->
 
-<!-- Tip: lesson/curriculum suggestions (new words, corrections to Persian or Danish) are welcome as feature requests too. -->
+<!-- Tip: lesson/curriculum suggestions (new words, corrections to Japanese or Danish) are welcome as feature requests too. -->

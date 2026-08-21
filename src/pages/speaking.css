@@ -117,8 +117,8 @@
   margin: 0;
 }
 
-.speaking-lesson-card [lang='fa'] {
-  font-family: var(--font-fa-display);
+.speaking-lesson-card [lang='ja'] {
+  font-family: var(--font-ja-display);
   font-size: 2rem;
   font-weight: 700;
 }

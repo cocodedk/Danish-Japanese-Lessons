@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "status": "draft-awaiting-native-review",
   "source": "src/catalog/registry.ts",
-  "instructions": "Generate locally. Publish only after one named native Persian reviewer approves the clip.",
+  "instructions": "Generate locally. Publish only after one named native Japanese reviewer approves the clip.",
   "rows": [
     {
       "clipId": "alphabet-letter-alef",
@@ -23,7 +23,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -45,7 +45,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -67,7 +67,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -89,7 +89,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -111,7 +111,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -133,7 +133,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -155,7 +155,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -177,7 +177,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -199,7 +199,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -221,7 +221,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -243,7 +243,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -265,7 +265,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -287,7 +287,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -309,7 +309,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -331,7 +331,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -353,7 +353,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -375,7 +375,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -397,7 +397,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -419,7 +419,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -441,7 +441,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -463,7 +463,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -485,7 +485,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -507,7 +507,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -529,7 +529,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -551,7 +551,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -573,7 +573,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -595,7 +595,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -617,7 +617,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -639,7 +639,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -661,7 +661,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -683,7 +683,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -705,7 +705,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -727,7 +727,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -749,7 +749,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -771,7 +771,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -793,7 +793,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -815,7 +815,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -837,7 +837,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -859,7 +859,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -881,7 +881,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -903,7 +903,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -925,7 +925,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -947,7 +947,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -969,7 +969,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -991,7 +991,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1013,7 +1013,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1035,7 +1035,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1057,7 +1057,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1079,7 +1079,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1101,7 +1101,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1123,7 +1123,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1145,7 +1145,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1167,7 +1167,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1189,7 +1189,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1211,7 +1211,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1233,7 +1233,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1255,7 +1255,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1277,7 +1277,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1299,7 +1299,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1321,7 +1321,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1343,7 +1343,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1365,7 +1365,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1387,7 +1387,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1409,7 +1409,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1431,7 +1431,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1453,7 +1453,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1475,7 +1475,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1497,7 +1497,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1519,7 +1519,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1541,7 +1541,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1563,7 +1563,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1585,7 +1585,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1607,7 +1607,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1629,7 +1629,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1651,7 +1651,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1673,7 +1673,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1695,7 +1695,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1717,7 +1717,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1739,7 +1739,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1761,7 +1761,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1783,7 +1783,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1805,7 +1805,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1827,7 +1827,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1849,7 +1849,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1871,7 +1871,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1893,7 +1893,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1915,7 +1915,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1937,7 +1937,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1959,7 +1959,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -1981,7 +1981,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2003,7 +2003,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2025,7 +2025,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2047,7 +2047,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2069,7 +2069,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2091,7 +2091,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2113,7 +2113,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2135,7 +2135,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2157,7 +2157,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2179,7 +2179,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2201,7 +2201,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2223,7 +2223,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2245,7 +2245,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2267,7 +2267,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2289,7 +2289,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2311,7 +2311,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2333,7 +2333,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2355,7 +2355,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2377,7 +2377,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2399,7 +2399,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2421,7 +2421,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2443,7 +2443,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2465,7 +2465,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2487,7 +2487,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2509,7 +2509,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2531,7 +2531,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2553,7 +2553,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2575,7 +2575,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2597,7 +2597,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2619,7 +2619,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2641,7 +2641,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2663,7 +2663,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2685,7 +2685,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2707,7 +2707,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2729,7 +2729,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2751,7 +2751,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2773,7 +2773,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2795,7 +2795,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     },
     {
@@ -2817,7 +2817,7 @@
         "native-content"
       ],
       "requiredTakeReview": [
-        "native-persian"
+        "native-japanese"
       ]
     }
   ]

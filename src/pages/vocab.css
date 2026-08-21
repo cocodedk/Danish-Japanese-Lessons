@@ -2,7 +2,7 @@
    RuledSection sheet as the alphabet screens and reuse that stylesheet's
    summary, lead, section title, links, note, eyebrow and badge — every screen
    here imports alphabet.css beside this file. Only the word list and the
-   Persian unit heading are new. */
+   Japanese unit heading are new. */
 
 /* The name badge on a word carries a whole sentence in each language. At 360px
    they stack instead of squeezing into two thin columns. */
@@ -62,7 +62,7 @@
   border-block-end: 3px solid var(--red);
 }
 
-.vocab__cell-fa {
+.vocab__cell-ja {
   font-family: var(--font-naskh);
   font-weight: 700;
   font-size: 1.5rem;
@@ -78,7 +78,7 @@
 /* Keep the first photo whole above the thumb bar on a common phone. The text
    can still grow beyond this minimum at large text sizes. */
 .lesson--word .split-card {
-  --pane-fa-height: clamp(18rem, 40dvh, 22rem);
+  --pane-ja-height: clamp(18rem, 40dvh, 22rem);
 }
 
 @media (min-width: 64rem) {
@@ -94,7 +94,7 @@
     max-inline-size: var(--task-max);
   }
 
-  .lesson--word .split-card__pane--fa {
+  .lesson--word .split-card__pane--ja {
     min-block-size: 24rem;
   }
 

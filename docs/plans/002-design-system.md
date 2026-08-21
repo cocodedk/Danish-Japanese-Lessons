@@ -26,7 +26,7 @@ critic confirmed is still missing: the ruled notebook sheet. Reviewable at a `#/
 5. **`RuleDivider`** — extract the specimen divider from SplitCard; SplitCard refactors to consume
    it with ZERO visual change.
 6. **Typography components** — `FaSpecimen` (Naskh, clamp scale, line-height ≥2, renders
-   `faMarked ?? fa`, madde/mark accents in `--red`), `PronLine` (`lang="da" dir="ltr"`,
+   `jaMarked ?? ja`, madde/mark accents in `--red`), `PronLine` (`lang="da" dir="ltr"`,
    `{da} · [{ipa}]`), `DaWord` (Andika). SplitCard becomes a thin composition of these.
 7. **Kit gallery** at `#/kit`: every component in light + dark, LTR + RTL samples side by side —
    the visual review surface for critics and for Babak. Not linked from home; direct URL only.
@@ -94,10 +94,10 @@ Durable decisions worth keeping:
    border and a quiet underlined text button. That is a visible change to a screen plan 001
    shipped, so it needs its own plan and its own visual review. Same for `.name-capture__rule`,
    which is byte-identical to `RuleDivider`.
-2. **The Persian faces are not subsetted.** Measured with the same pipeline and a Persian range:
+2. **The Japanese faces are not subsetted.** Measured with the same pipeline and a Japanese range:
    Vazirmatn-Regular 50.7 → 24.2 KB, Vazirmatn-Bold 51.0 → 24.7 KB, NotoNaskhArabic-Bold
    53.0 → 24.6 KB. On top of that, `Vazirmatn-Bold` is never actually requested — no rule pairs
-   `--font-fa` with weight 700 (bold Persian always switches to `--font-naskh`) — so ~51 KB is
+   `--font-ja` with weight 700 (bold Japanese always switches to `--font-naskh`) — so ~51 KB is
    deployed dead weight today. Step 8 says "both Andika woff2", and Arabic-script subsetting
    needs its own shaping/ZWNJ verification, so it is left for a follow-up.
 3. **`#/kit` is statically imported**: +6.1 KB raw / +1.6 KB gzip in every learner's bundle,
@@ -112,10 +112,10 @@ Durable decisions worth keeping:
 
 ## Critic round 1 (2026-08-03) — FAIL, adjudicated
 
-1. **Defect — RuledSection Persian typography.** `RuledSection.css` declared no font-family/size,
-   so `lang="fa"` sheets rendered Persian in the inherited Latin stack (Andika), an OS fallback
-   face at 16px — critic-verified. Fixed this round: a `:lang(fa)` rule gives the sheet the
-   Persian UI face (`var(--font-fa)`) at 1.125rem, per ART-DIRECTION.md's Persian-body floor.
+1. **Defect — RuledSection Japanese typography.** `RuledSection.css` declared no font-family/size,
+   so `lang="ja"` sheets rendered Japanese in the inherited Latin stack (Andika), an OS fallback
+   face at 16px — critic-verified. Fixed this round: a `:lang(ja)` rule gives the sheet the
+   Japanese UI face (`var(--font-ja)`) at 1.125rem, per ART-DIRECTION.md's Japanese-body floor.
 2. **Dark ruling contrast.** Dark-scheme `--rule` measured 1.44:1 against `--paper-dark`, nearly
    invisible. Token adjudicated by the art director to `#3E5248` this round (now 2.05:1); applied
    in `tokens.css` and `website/styles.css`, light `--rule` unchanged.

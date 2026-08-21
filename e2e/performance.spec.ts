@@ -9,8 +9,8 @@ test('three-run mobile lab medians meet the production performance targets', asy
   for (let index = 0; index < 3; index += 1) {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } })
     await page.addInitScript(([profile, alphabet]) => {
-      localStorage.setItem('dpl.v1.profile', profile)
-      localStorage.setItem('dpl.v1.alphabet', alphabet)
+      localStorage.setItem('djl.v1.profile', profile)
+      localStorage.setItem('djl.v1.alphabet', alphabet)
       const values = { cls: 0 }
       Object.assign(window, { __dplVitals: values })
       new PerformanceObserver((list) => {
@@ -69,8 +69,8 @@ test('production journeys make no external, fetch, or XHR request', async ({ pag
 test('the course home route loads no lesson photo bytes', async ({ page }) => {
   const lessonImages: string[] = []
   await page.addInitScript(([profile, alphabet]) => {
-    localStorage.setItem('dpl.v1.profile', profile)
-    localStorage.setItem('dpl.v1.alphabet', alphabet)
+    localStorage.setItem('djl.v1.profile', profile)
+    localStorage.setItem('djl.v1.alphabet', alphabet)
   }, [envelope({}), envelope({ letters: [], marks: [], orientationSeen: true })])
   page.on('request', (request) => {
     if (request.resourceType() === 'image' && request.url().includes('/lesson-images/')) {

@@ -26,8 +26,8 @@ export function SpokenForms({
           <h2 id={`${entry.id}-${form.id}-label`}>{labels[form.register]}</h2>
           <PersianText
             entry={entry}
-            display={form.faMarked ?? form.fa}
-            marked={Boolean(form.faMarked)}
+            display={form.jaMarked ?? form.ja}
+            marked={Boolean(form.jaMarked)}
             as="p"
             className="spoken-form__fa"
           />

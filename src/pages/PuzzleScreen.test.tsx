@@ -45,11 +45,11 @@ describe('a simple puzzle route', () => {
   it('renders ordering tiles RTL and keeps repeated glyph tiles independently tappable', () => {
     const puzzle = puzzles.find((item) =>
       item.tasks.some(
-        (task) => task.kind === 'order' && new Set(task.entry.fa).size < [...task.entry.fa].length,
+        (task) => task.kind === 'order' && new Set(task.entry.ja).size < [...task.entry.ja].length,
       ),
     )!
     const task = puzzle.tasks.find(
-      (item) => item.kind === 'order' && new Set(item.entry.fa).size < [...item.entry.fa].length,
+      (item) => item.kind === 'order' && new Set(item.entry.ja).size < [...item.entry.ja].length,
     )!
     if (task.kind !== 'order') throw new Error('duplicate order task required')
     const { container } = open(puzzle.id)
@@ -141,12 +141,12 @@ describe('a missing-letter puzzle', () => {
 
     puzzle.tasks.forEach((task, index) => {
       if (task.kind !== 'missing') throw new Error('missing puzzle only')
-      const shown = [...task.entry.fa]
+      const shown = [...task.entry.ja]
       shown[task.missingAt] = '□'
       expect(screen.getByText(shown.join(''))).toBeInTheDocument()
 
-      const answer = [...task.entry.fa][task.missingAt]
-      const right = task.choices.find((choice) => choice.fa === answer)!
+      const answer = [...task.entry.ja][task.missingAt]
+      const right = task.choices.find((choice) => choice.ja === answer)!
       fireEvent.click(screen.getByRole('button', { name: right.da }))
       expect(screen.queryByRole('button', { name: 'Prøv én gang til' })).not.toBeInTheDocument()
       fireEvent.click(

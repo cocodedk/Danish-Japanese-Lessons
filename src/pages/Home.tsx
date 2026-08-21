@@ -34,8 +34,8 @@ export default function Home() {
     setProfile(next)
     setProfileState(next)
     setNeedsCapture(false)
-    // A name that was just given goes straight on to its Persian spelling —
-    // the one screen where the learner meets themselves in Persian letters.
+    // A name that was just given goes straight on to its Japanese spelling —
+    // the one screen where the learner meets themselves in Japanese letters.
     if (trimmed) navigate('/dit-navn')
   }
 
@@ -138,7 +138,7 @@ export default function Home() {
                 progress={`${cleared} af ${ALPHABET_TOTAL} set eller øvet`}
                 to="/lesson/alphabet"
               />
-              {/* Only a learner who has a Persian spelling has this lesson at all. */}
+              {/* Only a learner who has a Japanese spelling has this lesson at all. */}
               {profile.faSpelling && (
                 <LessonCard
                   number={2}

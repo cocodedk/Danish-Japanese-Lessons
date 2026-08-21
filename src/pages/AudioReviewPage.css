@@ -94,7 +94,7 @@
 
 .audio-review__card h2 {
   margin: 0;
-  font-family: var(--font-fa);
+  font-family: var(--font-ja);
   font-size: clamp(2.5rem, 12vw, 4rem);
   line-height: 1.4;
   text-align: center;

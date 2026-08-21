@@ -3,7 +3,7 @@ interface AudioBase {
   entryId: string
   formId: string
   file: string
-  locale: 'fa-IR'
+  locale: 'ja-IR'
   transcript: string
   durationMs: number
   channels: 1

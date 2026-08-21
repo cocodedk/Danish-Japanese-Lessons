@@ -6,10 +6,10 @@ vi.mock('../audio/manifest', () => ({
   findPronunciationAudio: (id?: string) => id ? {
     entryId: id,
     file: `/audio/${id}.mp3`,
-    locale: 'fa-IR',
+    locale: 'ja-IR',
     transcript: 'آب',
   } : undefined,
-  pronunciationAudioUrl: (file: string) => `/Danish-Persian-Lessons/app/${file.replace(/^\//, '')}`,
+  pronunciationAudioUrl: (file: string) => `/Danish-Japanese-Lessons/app/${file.replace(/^\//, '')}`,
 }))
 
 describe('pronunciation audio controls', () => {
@@ -28,7 +28,7 @@ describe('pronunciation audio controls', () => {
     expect(audio).not.toHaveAttribute('autoplay')
 
     fireEvent.click(screen.getByRole('button', { name: 'Langsom 0,8×' }))
-    expect(audio).toHaveAttribute('src', '/Danish-Persian-Lessons/app/audio/word-ab.mp3')
+    expect(audio).toHaveAttribute('src', '/Danish-Japanese-Lessons/app/audio/word-ab.mp3')
     fireEvent.click(screen.getByRole('button', { name: 'Hør آب' }))
     expect(screen.getByRole('button', { name: 'Meget langsom 0,5×' })).toBeVisible()
     expect(await screen.findByRole('button', { name: 'Stop lyden for آب' })).toBeEnabled()

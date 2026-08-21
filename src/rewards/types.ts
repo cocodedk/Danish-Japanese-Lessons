@@ -25,7 +25,7 @@ export interface Sticker {
   kind: StickerKind
 }
 
-/** One matched praise pair. Persian first, the way the app reads. */
+/** One matched praise pair. Japanese first, the way the app reads. */
 export type Praise = PersianEntry
 
 export interface StreakState {
@@ -73,7 +73,7 @@ export interface RewardsView {
   streak: StreakState
 }
 
-/** `dpl.v1.rewards` on disk — plan 007's shape, plus `giftsOpened` (critic round 2)
+/** `djl.v1.rewards` on disk — plan 007's shape, plus `giftsOpened` (critic round 2)
  *  and `cheers` (round 4, fixing a critic round 3 finding): which gift ids have
  *  already paid out, so a replayed bonus round pays once, and how many times
  *  `celebrate` has ever praised, so a praise-only replay (points unmoved) still

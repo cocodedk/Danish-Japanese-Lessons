@@ -7,8 +7,8 @@ if (!greetingWord) throw new Error('Missing conversation greeting: vocabulary-2-
 export const INTRODUCTION_ENTRY = defineEntry({
   id: 'conversation-introduction',
   kind: 'phrase',
-  fa: 'من … هستم.',
-  faMarked: 'مَن … هَستَم.',
+  ja: 'من … هستم.',
+  jaMarked: 'مَن … هَستَم.',
   da: 'Jeg hedder …',
   pron: { da: 'man … hastam', ipa: 'mæn … ˈhæstæm' },
 })
@@ -16,8 +16,8 @@ export const INTRODUCTION_ENTRY = defineEntry({
 export const GOODBYE_ENTRY = defineEntry({
   id: 'conversation-goodbye',
   kind: 'word',
-  fa: 'خداحافظ!',
-  faMarked: 'خُداحافِظ!',
+  ja: 'خداحافظ!',
+  jaMarked: 'خُداحافِظ!',
   da: 'farvel',
   pron: { da: 'khodåfez', ipa: 'xodɒːˈfez' },
 })

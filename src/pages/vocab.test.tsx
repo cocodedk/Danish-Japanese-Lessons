@@ -53,9 +53,9 @@ describe('any unit, any word, any time', () => {
     open('#/lesson/ord/3')
     const third = findVocabUnit('3')!
     expect(screen.getByRole('heading', { name: third.title })).toBeInTheDocument()
-    expect(screen.getByText(third.titleEntry.fa)).toBeInTheDocument()
+    expect(screen.getByText(third.titleEntry.ja)).toBeInTheDocument()
     for (const word of third.words) {
-      expect(screen.getAllByText(word.fa).length).toBeGreaterThan(0)
+      expect(screen.getAllByText(word.ja).length).toBeGreaterThan(0)
     }
   })
 
@@ -80,21 +80,21 @@ describe('a word screen', () => {
     const { container } = open('#/lesson/ord/2/madrese')
     const word = findVocabUnit('2')!.words.find((candidate) => candidate.id === 'madrese')!
 
-    const faPane = container.querySelector('.split-card__pane--fa')
-    expect(faPane?.textContent).toContain(word.faMarked)
+    const faPane = container.querySelector('.split-card__pane--ja')
+    expect(faPane?.textContent).toContain(word.jaMarked)
     expect(screen.getAllByText(`${word.pron.da} · [${word.pron.ipa}]`).length).toBeGreaterThan(0)
     expect(screen.getByText(word.da)).toBeInTheDocument()
-    // The approved specimen renderer owns Persian language and direction.
-    expect(faPane?.querySelector('.fa-specimen')).toHaveAttribute('dir', 'rtl')
-    expect(faPane?.querySelector('.fa-specimen')).toHaveAttribute('lang', 'fa')
+    // The approved specimen renderer owns Japanese language and direction.
+    expect(faPane?.querySelector('.ja-specimen')).toHaveAttribute('dir', 'rtl')
+    expect(faPane?.querySelector('.ja-specimen')).toHaveAttribute('lang', 'ja')
   })
 
   it('marks the vowel signs with the teacher\'s red pen, on the specimen only', () => {
     const { container } = open('#/lesson/ord/2/madrese')
     // مَدرِسه is marked above AND below: the red layer carries both.
-    expect(container.querySelector('.fa-specimen__marks')?.textContent).toBe('مَدرِسه')
-    expect(container.querySelector('.fa-specimen__ink')?.textContent).toBe('مدرسه')
-    expect(container.querySelectorAll('.pron-line .fa-specimen__marks')).toHaveLength(0)
+    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('مَدرِسه')
+    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('مدرسه')
+    expect(container.querySelectorAll('.pron-line .ja-specimen__marks')).toHaveLength(0)
     expect(container.querySelector('.da-word')?.className).not.toContain('pen-mark')
   })
 

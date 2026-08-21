@@ -33,7 +33,7 @@
   border-block-end: 1px solid var(--rule);
 }
 
-.personal-name__letters li > [lang='fa'] {
+.personal-name__letters li > [lang='ja'] {
   grid-row: 1 / 3;
   font-family: var(--font-naskh);
   font-size: 2rem;

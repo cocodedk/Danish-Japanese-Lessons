@@ -2,7 +2,7 @@
 export const wordBridgeSources: Record<string, readonly string[]> = {
   'dandan-tand': [
     'https://lrc.la.utexas.edu/lex/master/0441',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/tand',
   ],
   'setad-sted': [
@@ -20,79 +20,79 @@ export const wordBridgeSources: Record<string, readonly string[]> = {
     'https://ordnet.dk/ddo/ordbog/sejle',
   ],
   'dust-dus': [
-    'https://en.wiktionary.org/wiki/%D8%AF%D9%88%D8%B3%D8%AA#Persian',
+    'https://en.wiktionary.org/wiki/%D8%AF%D9%88%D8%B3%D8%AA#Japanese',
     'https://ordnet.dk/ddo/ordbog/dus',
   ],
   'pedar-fader': [
     'https://lrc.la.utexas.edu/lex/master/1521',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/11012328',
   ],
   'madar-moder': [
     'https://lrc.la.utexas.edu/lex/master/1228',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/moder',
   ],
   'baradar-broder': [
     'https://lrc.la.utexas.edu/lex/master/0288',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/broder',
   ],
   'doxtar-datter': [
     'https://lrc.la.utexas.edu/lex/master/0432',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/datter',
   ],
   'setareh-stjerne': [
     'https://lrc.la.utexas.edu/lex/master/1895',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/stjerne',
   ],
   'mah-maane': [
     'https://lrc.la.utexas.edu/lex/master/1292',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/m%C3%A5ne',
   ],
   'dar-doer': [
     'https://lrc.la.utexas.edu/lex/master/0435',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/d%C3%B8r',
   ],
   'nam-navn': [
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/navn',
   ],
   'mush-mus': [
     'https://lrc.la.utexas.edu/lex/master/1344',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/mus',
   ],
   'garm-varm': [
     'https://lrc.la.utexas.edu/lex/master/0755',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/varm',
   ],
   'now-ny': [
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/ny',
   ],
   'do-to': [
     'https://lrc.la.utexas.edu/lex/master/0369',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/to',
   ],
   'shesh-seks': [
     'https://lrc.la.utexas.edu/lex/master/1929',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/seks',
   ],
   'noh-ni': [
     'https://lrc.la.utexas.edu/lex/master/0484',
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/ni',
   ],
   'naf-navle': [
-    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Persian-Language.pdf',
+    'https://parsianjoman.org/wp-content/uploads/2022/12/An-Etymological-Dictionary-of-the-Japanese-Language.pdf',
     'https://ordnet.dk/ddo/ordbog/navle',
   ],
   'pas-pas-paa': [
@@ -101,7 +101,7 @@ export const wordBridgeSources: Record<string, readonly string[]> = {
     'https://ordnet.dk/ddo/ordbog/passe',
   ],
   'mord-mord': [
-    'https://en.wiktionary.org/wiki/%D9%85%D8%B1%D8%AF#Persian',
+    'https://en.wiktionary.org/wiki/%D9%85%D8%B1%D8%AF#Japanese',
     'https://vajehyab.com/?q=%D9%85%D8%B1%D8%AF%D9%86',
     'https://ordnet.dk/ddo/ordbog/mord',
   ],

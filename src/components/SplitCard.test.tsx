@@ -11,16 +11,16 @@ function renderCard() {
 describe('SplitCard after the kit refactor', () => {
   it('is a composition of the kit: specimen, pronunciation, one rule, Danish word', () => {
     const { container } = renderCard()
-    expect(container.querySelectorAll('.fa-specimen')).toHaveLength(1)
+    expect(container.querySelectorAll('.ja-specimen')).toHaveLength(1)
     expect(container.querySelectorAll('.pron-line')).toHaveLength(2)
     expect(container.querySelectorAll('hr.rule-divider')).toHaveLength(1)
     expect(container.querySelectorAll('.da-word')).toHaveLength(1)
   })
 
-  it('keeps the specimen and its pronunciation inside the Persian pane', () => {
+  it('keeps the specimen and its pronunciation inside the Japanese pane', () => {
     const { container } = renderCard()
-    const faPane = container.querySelector('.split-card__pane--fa')
-    expect(faPane?.querySelector('.fa-specimen')).not.toBeNull()
+    const faPane = container.querySelector('.split-card__pane--ja')
+    expect(faPane?.querySelector('.ja-specimen')).not.toBeNull()
     expect(faPane?.querySelector('.pron-line')).not.toBeNull()
     expect(faPane?.querySelector('.da-word')).toBeNull()
   })

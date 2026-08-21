@@ -89,7 +89,7 @@ export function GuidedReviewModel({
               {phase === 'guide' ? (
                 <Button onClick={() => setPhase('guided')}>
                   Peg på svaret med hjælp:{' '}
-                  <span lang={task.question.choiceLang === 'da' ? 'da' : 'fa'} dir="auto">{answer.glyph}</span>
+                  <span lang={task.question.choiceLang === 'da' ? 'da' : 'ja'} dir="auto">{answer.glyph}</span>
                 </Button>
               ) : (
                 <>

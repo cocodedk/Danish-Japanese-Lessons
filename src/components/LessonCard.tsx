@@ -13,7 +13,7 @@ export interface LessonCardProps {
 }
 
 /**
- * One lesson on the forside. Counters stay Latin until Persian numerals are
+ * One lesson on the forside. Counters stay Latin until Japanese numerals are
  * deliberately taught with their own catalog companions.
  */
 export function LessonCard({ number, title, summary, progress, to }: LessonCardProps) {

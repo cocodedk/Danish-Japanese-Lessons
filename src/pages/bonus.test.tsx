@@ -14,7 +14,7 @@ import { PRAISE } from '../rewards/copy'
 const questions = bonusQuestions(1)
 
 function praiseOnScreen(): boolean {
-  return PRAISE.some((line) => screen.queryAllByText(line.fa).length > 0)
+  return PRAISE.some((line) => screen.queryAllByText(line.ja).length > 0)
 }
 
 /** Taps the right glyph for bonus question `index`. */

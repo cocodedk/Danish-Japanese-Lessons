@@ -23,7 +23,7 @@
 }
 
 .spoken-form__fa {
-  font-family: var(--font-fa-display);
+  font-family: var(--font-ja-display);
   font-size: clamp(3rem, 15vw, 5.5rem);
   font-weight: 700;
   line-height: 1.35;

@@ -64,10 +64,10 @@ describe('how many things announce themselves', () => {
 describe('beginner reveal', () => {
   it('hides the answer until checking, then teaches it with optional retry and next', async () => {
     renderExercise()
-    expect(screen.queryByText(DEMO_WORD.fa)).not.toBeInTheDocument()
+    expect(screen.queryByText(DEMO_WORD.ja)).not.toBeInTheDocument()
 
     markWrong()
-    expect(screen.getAllByText(DEMO_WORD.fa).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(DEMO_WORD.ja).length).toBeGreaterThan(0)
     expect(screen.getByText(DEMO_WORD.da)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Prøv én gang til' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Afslut runden' })).toBeInTheDocument()

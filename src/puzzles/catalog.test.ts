@@ -31,8 +31,8 @@ describe('deterministic simple puzzle breaks', () => {
       for (const task of puzzle.tasks) {
         expect(introduced.has(task.entry.id), `${puzzle.id}: ${task.entry.id}`).toBe(true)
         if (task.kind === 'missing') {
-          const answer = [...task.entry.fa][task.missingAt]
-          expect(task.choices.filter((choice) => choice.fa === answer)).toHaveLength(1)
+          const answer = [...task.entry.ja][task.missingAt]
+          expect(task.choices.filter((choice) => choice.ja === answer)).toHaveLength(1)
           for (const choice of task.choices) expect(introduced.has(choice.id)).toBe(true)
         }
         if (task.kind === 'order') {
@@ -44,12 +44,12 @@ describe('deterministic simple puzzle breaks', () => {
 
   it('keeps duplicate letters as unique tiles and regenerates identically', () => {
     const order = puzzles.flatMap((puzzle) => puzzle.tasks).find(
-      (task) => task.kind === 'order' && new Set(task.entry.fa).size < [...task.entry.fa].length,
+      (task) => task.kind === 'order' && new Set(task.entry.ja).size < [...task.entry.ja].length,
     )
     expect(order?.kind).toBe('order')
     if (order?.kind !== 'order') return
     expect(new Set(order.tiles.map((tile) => tile.id)).size).toBe(order.tiles.length)
-    expect(order.tiles.map((tile) => tile.glyph).join('')).not.toBe(order.entry.fa)
+    expect(order.tiles.map((tile) => tile.glyph).join('')).not.toBe(order.entry.ja)
   })
 })
 

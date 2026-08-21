@@ -1,18 +1,18 @@
-# Plan 015 — Speaking first with reviewed Persian audio
+# Plan 015 — Speaking first with reviewed Japanese audio
 
 Status: implementation ready; public activation waits for native review of all 97 launch clips.
 This plan supersedes the human-only audio clauses in Plan 012. It does not weaken the need for
-accurate Persian or human approval.
+accurate Japanese or human approval.
 
 ## Goal
 
-A new learner should be able to begin by listening and speaking. Persian writing remains visible,
+A new learner should be able to begin by listening and speaking. Japanese writing remains visible,
 and the full reading and writing course remains open, but script knowledge is not a first-step test.
 
 The first loop is:
 
 1. See one clear picture, colour, or number.
-2. Hear one reviewed Persian word or sentence.
+2. Hear one reviewed Japanese word or sentence.
 3. See the exact Danish meaning, Danish sound help, and IPA.
 4. Say it aloud.
 5. Optionally record and hear the learner's own voice.
@@ -21,9 +21,9 @@ The first loop is:
 ## Fixed decisions
 
 - The primary first path is speaking. Words and script are separate open paths.
-- Everyday Tehrani and formal standard Persian appear side by side only when they differ.
+- Everyday Tehrani and formal standard Japanese appear side by side only when they differ.
 - Generated Piper sound is an authoring draft, never a runtime service.
-- One named native Persian reviewer must approve every generated clip before publication.
+- One named native Japanese reviewer must approve every generated clip before publication.
 - The first corpus is the 97 spoken forms in bridges, conversation, numbers, and vocabulary.
 - Learner recordings stay in memory. They are not uploaded, saved in local storage, or retained
   after the page is left.
@@ -32,7 +32,7 @@ The first loop is:
 
 ## Content model
 
-`PersianEntry` may carry explicit `spokenForms`. Each form has its own register, Persian text,
+`PersianEntry` may carry explicit `spokenForms`. Each form has its own register, Japanese text,
 Danish meaning, Danish sound spelling, IPA, and stable audio ID. Entries with no explicit forms
 derive one neutral spoken form.
 
@@ -42,14 +42,14 @@ The approved audio manifest is a source union:
 - `human`: speaker ID and consent reference.
 
 Both sources carry the exact transcript, audio measurements, licence, release report, and at least
-one named native Persian reviewer.
+one named native Japanese reviewer.
 
 ## Authoring pipeline
 
 1. `audio:setup` creates the ignored environment and downloads the checksummed voice.
 2. `audio:queue` exports all missing spoken forms from the typed catalog.
 3. `audio:generate` makes local WAV/MP3 drafts and measures their actual loudness and true peak.
-4. `audio:review` opens a local review board with Persian, Danish, sound help, IPA, audio, and
+4. `audio:review` opens a local review board with Japanese, Danish, sound help, IPA, audio, and
    measurements together.
 5. `audio:approve` promotes only checked rows to content-hashed public files and provenance rows.
 6. `audio:verify` rejects broken references, bad measurements, unnamed approvals, wrong hashes,
@@ -86,6 +86,6 @@ is a release gate, not a loading state.
 - [x] Speaking progress and journey choice migrate without faking past speaking work.
 - [x] GitHub Pages audio URLs respect the Vite base path.
 - [x] The first-path change is dormant behind the complete-corpus gate.
-- [ ] A named native Persian reviewer approves all 97 talk clips.
+- [ ] A named native Japanese reviewer approves all 97 talk clips.
 - [ ] The approved files, reports, and generated manifest are checked in.
-- [ ] A native Persian reviewer and beginner Danish users check the live talk path.
+- [ ] A native Japanese reviewer and beginner Danish users check the live talk path.

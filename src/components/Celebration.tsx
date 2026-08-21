@@ -36,7 +36,7 @@ export function Celebration({ reward, tickLabel = 'Rigtigt', personalName }: Cel
         <ProgressTick granted label={tickLabel} />
         <PersianText entry={shownPraise} className="celebration__fa" />
         {personalName && (
-          // RTL base so the «!» closes the name on its left, where a Persian
+          // RTL base so the «!» closes the name on its left, where a Japanese
           // sentence ends — same rule as SplitCard's greeting pane.
           <span dir="rtl">
             <PersonalNameText spelling={personalName.spelling} />!

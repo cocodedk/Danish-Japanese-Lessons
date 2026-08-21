@@ -2,9 +2,9 @@
 
 ## Experience promise
 
-“I can make, hear, and recognize something Persian that matters to me.”
+“I can make, hear, and recognize something Japanese that matters to me.”
 
-The first release should optimize for voluntary engagement and foundational Persian literacy, not
+The first release should optimize for voluntary engagement and foundational Japanese literacy, not
 for covering all 32 letters quickly. The experience can become broad later; the opening must be small.
 
 ## Age is a design input, not profile decoration
@@ -17,7 +17,7 @@ The child journey cannot be truly AAA until it selects a primary developmental b
 | 9–12 | Puzzle, making, mystery, personal mission | Short, optional detail | Clever peer-like guide, never babyish |
 | 13+ | Identity, creativity, real messages and media | Concise but richer | Respectful coach, minimal mascot behavior |
 
-Until the age is known, prototype the interaction in an age-neutral way: one beautiful Persian item,
+Until the age is known, prototype the interaction in an age-neutral way: one beautiful Japanese item,
 one clear action, strong sound, restrained praise, and no childish copy.
 
 ## Current and proposed routes
@@ -33,7 +33,7 @@ Recommended child first run:
 ```text
 Open child journey
   -> choose: my name / mystery word / tiny story
-  -> watch and hear one Persian item
+  -> watch and hear one Japanese item
   -> trace or build one meaningful part
   -> retrieve once with gentle reveal
   -> keep a personal artifact
@@ -55,7 +55,7 @@ hit accidentally.
 
 ### 0–10 seconds: invitation
 
-- Show one vivid, inspectable Persian object: the learner's name, `آب`, or another chosen family word.
+- Show one vivid, inspectable Japanese object: the learner's name, `آب`, or another chosen family word.
 - Pair it with a real image or personal artifact, not a generic course dashboard.
 - Give one large action such as “Make the word,” “Hear it,” or “Find the first shape.”
 - Keep settings, IPA, counts, and the course map outside the primary visual hierarchy.
@@ -70,7 +70,7 @@ hit accidentally.
 ### 35–60 seconds: meaningful reveal
 
 - Complete the whole item and read it aloud.
-- Connect the Persian form to the image, Danish meaning, or learner's own name.
+- Connect the Japanese form to the image, Danish meaning, or learner's own name.
 - Use teaching motion to show joining or a stroke, then stop.
 - Let the learner replay sound without navigating away.
 
@@ -86,7 +86,7 @@ hit accidentally.
 Test three independent openings. Do not ask the daughter to evaluate a menu of concepts in prose.
 Let her use each one.
 
-### A. My Persian name
+### A. My Japanese name
 
 Show the completed spelling early, then teach one recognizable body or dot pattern from it. The whole
 name is a promise and artifact, not a test of letters that have not been taught.
@@ -96,7 +96,7 @@ Risk: transliteration review, privacy feelings, and possible school-assignment t
 
 ### B. Mystery word
 
-Start with a strong real image such as water, flower, book, or bread. Build and hear the short Persian
+Start with a strong real image such as water, flower, book, or bread. Build and hear the short Japanese
 word, then reveal its Danish meaning.
 
 Strength: immediate visual comprehension and existing lesson images.  
@@ -139,7 +139,7 @@ The first phone viewport should answer, in order:
 
 Below that viewport:
 
-- My Persian things: names, words, messages, stickers, and writing samples.
+- My Japanese things: names, words, messages, stickers, and writing samples.
 - Explore: a small set of unlocked or open activities grouped by interest.
 - Practice: due items expressed as a short mission, not debt.
 - Grown-up notebook entry, visually quiet and protected from accidental activation.
@@ -149,7 +149,7 @@ supporting systems, not the child's reason to begin.
 
 ## Interaction and audiovisual craft
 
-- Use native human Persian audio for modeled items; never autoplay on page load.
+- Use native human Japanese audio for modeled items; never autoplay on page load.
 - Motion must explain direction, joining, stroke order, or result. Respect reduced motion.
 - Provide trace, copy, and freehand stages, with a non-drawing alternative for motor accessibility.
 - Avoid harsh handwriting rejection. Give useful shape feedback and allow “show me” without penalty.
@@ -177,7 +177,7 @@ grown-up journey. The child owns the play session and can decline the follow-up.
 
 Use a three-minute, no-explanation test for each candidate hook.
 
-1. Say: “I made a small Persian thing for you. You can try it or stop whenever you want.”
+1. Say: “I made a small Japanese thing for you. You can try it or stop whenever you want.”
 2. Put the device down and do not point at the first control.
 3. Observe the first ten seconds, first tap, hesitations, requests for help, and whether she continues.
 4. Do not rescue a confusing screen; confusion is the result.
@@ -193,7 +193,7 @@ Avoid “Did you like it?” and avoid defending the design. Her first glance is
 |---|---:|
 | Understands the first action without adult explanation | Yes |
 | Time to first voluntary action | 10 seconds or less |
-| Time to first meaningful Persian result | 60 seconds or less |
+| Time to first meaningful Japanese result | 60 seconds or less |
 | Requests help before first result | No more than once |
 | Completes or consciously exits the session | 100% |
 | Chooses “one more” | Useful signal, not a quota |
@@ -215,7 +215,7 @@ Do not add analytics to collect these. Record a tiny moderated observation note 
 
 ## Acceptance for the first vertical slice
 
-- The initial viewport contains one obvious, playable Persian action.
+- The initial viewport contains one obvious, playable Japanese action.
 - No methodology, IPA, progress debt, or settings compete with that action.
 - The learner can hear, see, and manipulate the same reviewed item.
 - The first action teaches before it tests.

@@ -5,8 +5,8 @@ Normative requirements: [AAA lesson image specification](../specs/AAA-LESSON-IMA
 
 ## Outcome
 
-Use a small set of clear, real photographs to help a Danish beginner connect concrete Persian words
-to their meanings. Images support the lesson; they never replace Persian text, sound, or retrieval.
+Use a small set of clear, real photographs to help a Danish beginner connect concrete Japanese words
+to their meanings. Images support the lesson; they never replace Japanese text, sound, or retrieval.
 Every image is downloaded and served by the app so the learner makes no request to its source.
 
 ## Fixed decisions
@@ -19,9 +19,9 @@ Every image is downloaded and served by the app so the learner makes no request 
 3. Use a photo only when one image can show one clear concrete meaning. Keep letters, pronouns,
    grammar, and abstract ideas text-led.
 4. Show the photo while first teaching the word and after a learner answers. Hide any photo that
-   would reveal the answer during a true Persian reading or meaning check. Image-supported work does
+   would reveal the answer during a true Japanese reading or meaning check. Image-supported work does
    not count as retained reading.
-5. Keep the teaching order Persian, pronunciation, image, then simple Danish. Do not place Persian
+5. Keep the teaching order Japanese, pronunciation, image, then simple Danish. Do not place Japanese
    text over a photo or use a photo as a page background.
 6. GitHub Actions and other CI checks are not release gates for this plan. The owner records local
    checks and named human reviews.
@@ -30,7 +30,7 @@ Every image is downloaded and served by the app so the learner makes no request 
 
 Start with these eight low-risk, concrete items. Add no other image until the pilot is reviewed.
 
-| Persian | Danish | Photo brief |
+| Japanese | Danish | Photo brief |
 |---|---|---|
 | آب | vand | Plain water in a clear glass; no brand or writing |
 | نان | brød | Iranian flatbread; native cultural review required |
@@ -50,7 +50,7 @@ Good later candidates are `باران`, `آسمان`, `ماه`, `شب`, and `د�
 
 - List every lesson state where an image could appear and whether it teaches, tests, or reveals.
 - Record the current route sizes and network requests on a small phone and a desktop.
-- Confirm that the eight catalog entries have stable IDs and approved Persian, sound, and Danish.
+- Confirm that the eight catalog entries have stable IDs and approved Japanese, sound, and Danish.
 
 ### Milestone 1 — Rights and source record
 
@@ -77,14 +77,14 @@ Good later candidates are `باران`, `آسمان`, `ماه`, `شب`, and `د�
 ### Milestone 4 — Learning use
 
 - Add each pilot photo to the first teaching view and the post-answer explanation.
-- Hide answer-revealing photos during Persian-to-meaning and Persian-reading retrieval.
+- Hide answer-revealing photos during Japanese-to-meaning and Japanese-reading retrieval.
 - If a task starts from a picture, label its result as guided practice, not successful retrieval or
   retained learning.
 - Check that the text and photo always teach the same narrow meaning.
 
 ### Milestone 5 — Human review and release
 
-- An Iranian Persian literacy reviewer checks meaning, culture, and the exact word-to-photo match.
+- An Iranian Japanese literacy reviewer checks meaning, culture, and the exact word-to-photo match.
 - A Danish plain-language reviewer checks every label, alternative text, and credit.
 - An accessibility reviewer checks keyboard, screen reader, zoom, contrast, reflow, and image-off use.
 - At least five Danish-speaking beginners use the pilot; record confusion, guesses, and delayed recall.
@@ -100,11 +100,11 @@ Good later candidates are `باران`, `آسمان`, `ماه`, `شب`, and `د�
       background is used as lesson art.
 - [ ] The photo is absent whenever it would give away a retrieval answer.
 - [ ] Image-supported tasks cannot raise successful-retrieval or retained-learning state.
-- [ ] Every pilot photo has approved Danish alternative text and a matching Persian meaning.
+- [ ] Every pilot photo has approved Danish alternative text and a matching Japanese meaning.
 - [ ] The app remains complete with images blocked and at 320 CSS px and 400% zoom.
 - [ ] Owner-run `npm run verify`, asset checks, metadata checks, and production network checks pass
       locally and their results are recorded; CI is not required.
-- [ ] Persian, Danish, accessibility, and five-beginner review records have no open critical/high issue.
+- [ ] Japanese, Danish, accessibility, and five-beginner review records have no open critical/high issue.
 
 ## Out of scope
 

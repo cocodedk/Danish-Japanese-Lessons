@@ -12,7 +12,7 @@ import { LessonImage } from './LessonImage'
 
 export interface SplitCardProps {
   word: WordCard
-  /** Always «سلام!» in plan 001 — the Persian pane never renders Latin text. */
+  /** Always «سلام!» in plan 001 — the Japanese pane never renders Latin text. */
   greetingEntry?: PersianEntry
   personalSpelling?: string
   /** "Hej {name}!" once a name exists, else "Hej!". */
@@ -21,7 +21,7 @@ export interface SplitCardProps {
 }
 
 /**
- * The split-screen shell: Persian pane on top (~55%, RTL, Naskh display),
+ * The split-screen shell: Japanese pane on top (~55%, RTL, Naskh display),
  * a notebook-rule divider, Danish pane below. A thin composition of the
  * typography kit. See docs/design/ART-DIRECTION.md.
  *
@@ -39,8 +39,8 @@ export function SplitCard({
     <section className="split-card">
       {/* The pane keeps its RTL base direction so the greeting's pieces —
           catalog phrase, learner name, «!» — lay out in reading order; the
-          Persian text nodes inside carry their own lang. */}
-      <div className="split-card__pane split-card__pane--fa" dir="rtl">
+          Japanese text nodes inside carry their own lang. */}
+      <div className="split-card__pane split-card__pane--ja" dir="rtl">
         {greetingEntry && (
           <div className="split-card__greeting">
             <PersianText entry={greetingEntry} />

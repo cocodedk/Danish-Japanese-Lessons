@@ -27,7 +27,7 @@ describe('sound exercise', () => {
 
     fireEvent.click(screen.getAllByRole('button', { name: /^Hør / })[0])
     fireEvent.click(screen.getAllByRole('button', { name: 'Jeg har sagt det' })[0])
-    expect(localStorage.getItem('dpl.audio-exercise.v1')).toContain('"done"')
+    expect(localStorage.getItem('djl.audio-exercise.v1')).toContain('"done"')
 
     fireEvent.change(screen.getByLabelText('Vis'), { target: { value: 'done' } })
     expect(screen.getAllByRole('article')).toHaveLength(1)

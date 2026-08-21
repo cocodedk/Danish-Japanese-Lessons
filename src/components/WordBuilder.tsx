@@ -14,7 +14,7 @@ interface WordBuilderProps {
 }
 
 export function WordBuilder({ mission, guided, onComplete, onContinue }: WordBuilderProps) {
-  const letters = useMemo(() => Array.from(mission.word.fa), [mission])
+  const letters = useMemo(() => Array.from(mission.word.ja), [mission])
   const tiles = useMemo(() => tilesForMission(mission), [mission])
   const [placed, setPlaced] = useState<number[]>([])
   const [wrong, setWrong] = useState<MissionTile | null>(null)

@@ -19,9 +19,9 @@ import './alphabet.css'
 import './vocab.css'
 
 /** The letters this word and the learner's own name have in common. */
-function sharedWithName(fa: string, spelling: string | undefined): string[] {
+function sharedWithName(ja: string, spelling: string | undefined): string[] {
   if (!spelling) return []
-  return [...new Set(fa)].filter((letter) => spelling.includes(letter))
+  return [...new Set(ja)].filter((letter) => spelling.includes(letter))
 }
 
 /** One word: the specimen with its اِعراب, said twice, and its Danish meaning. */
@@ -39,7 +39,7 @@ export default function WordScreen() {
   const word = unit.words[index]
   const previous = unit.words[index - 1]
   const next = unit.words[index + 1]
-  const shared = sharedWithName(word.fa, getProfile().faSpelling)
+  const shared = sharedWithName(word.ja, getProfile().faSpelling)
   const only = shared.length === 1
   const unitPath = `/lesson/ord/${unit.id}`
 

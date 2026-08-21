@@ -12,9 +12,9 @@ reviewed. Failure in any one area blocks that photo, not the text lesson around 
 
 ## Accurate
 
-- The photo MUST show the exact meaning taught by the linked Persian entry. Persian, pronunciation,
+- The photo MUST show the exact meaning taught by the linked Japanese entry. Japanese, pronunciation,
   Danish, alternative text, caption, and photo MUST agree.
-- An Iranian Persian literacy reviewer MUST approve culturally specific objects and uses. A Danish
+- An Iranian Japanese literacy reviewer MUST approve culturally specific objects and uses. A Danish
   reviewer MUST approve the learner-facing Danish.
 - Cropping, filters, staging, and captions MUST NOT suggest a meaning the source does not show.
 - An image with two plausible target meanings MUST be rejected or restaged.
@@ -26,9 +26,9 @@ reviewed. Failure in any one area blocks that photo, not the text lesson around 
 ## Adaptive
 
 - A meaning photo MAY appear in the model step and post-answer explanation.
-- A photo that reveals an answer MUST NOT appear before or during Persian-to-meaning or Persian-
+- A photo that reveals an answer MUST NOT appear before or during Japanese-to-meaning or Japanese-
   reading retrieval. It MAY appear after an answer as feedback.
-- A picture-to-Persian task MUST be stored as guided practice. It MUST NOT set `successfulRetrieval`,
+- A picture-to-Japanese task MUST be stored as guided practice. It MUST NOT set `successfulRetrieval`,
   `retained`, or an equivalent mastery field.
 - A connected text MAY show a context photo only after the learner has attempted to read it.
 - The lesson MUST remain understandable and usable when every photo is disabled or fails to load.
@@ -41,10 +41,10 @@ photos for clear teaching and feedback, not as a hidden answer key.
 
 - Every lesson photo MUST be an informative `<img>` with short, simple Danish `alt` text that gives
   the relevant meaning. Decorative lesson photos are not allowed.
-- Meaning, Persian writing, pronunciation, and instructions MUST exist as real text outside the image.
+- Meaning, Japanese writing, pronunciation, and instructions MUST exist as real text outside the image.
 - The image MUST NOT be the only way to find an action, state, answer, or error. Meaning MUST remain
   available when the image is unseen, broken, or shown without color.
-- DOM and reading order MUST be Persian, pronunciation, image, then Danish help. Visual rearrangement
+- DOM and reading order MUST be Japanese, pronunciation, image, then Danish help. Visual rearrangement
   MUST NOT change that order.
 - Images MUST reflow without overlap, clipping, horizontal page scroll, or blocked controls from
   320 CSS px through 2560 CSS px and at 200% browser zoom and 400% text zoom.
@@ -154,7 +154,7 @@ of 28rem. Do not make a photo a full-width hero or background.
 - production route trace showing only same-origin image requests;
 - image-on, image-off, broken-image, keyboard, and screen-reader checks;
 - 320, 390, 768, 1280, and 2560 CSS px checks plus 200% zoom and 400% text zoom;
-- named Persian, Danish, accessibility, and five-beginner reviews with date, device, commit, findings,
+- named Japanese, Danish, accessibility, and five-beginner reviews with date, device, commit, findings,
   fixes, and reruns; and
 - owner-run local commands and results. CI status is not part of the release decision.
 

@@ -75,10 +75,10 @@ function KeyCap({ shape }: { shape: KeyDef }) {
 }
 
 /**
- * The Persian keyboard: 33 letters, a space, a نیم‌فاصله and a backspace, laid
+ * The Japanese keyboard: 33 letters, a space, a نیم‌فاصله and a backspace, laid
  * out right to left in the bottom thumb zone. There is no text input anywhere
  * near it — the buffer is a string in React state — so the phone's own keyboard
- * never opens over the lesson (docs/plans/005-persian-keyboard.md, box 1).
+ * never opens over the lesson (docs/plans/005-japanese-keyboard.md, box 1).
  */
 export function PersianKeyboard({ onPress, label }: PersianKeyboardProps) {
   const [selected, setSelected] = useState<KeyDef | null>(null)
@@ -90,14 +90,14 @@ export function PersianKeyboard({ onPress, label }: PersianKeyboardProps) {
 
   return (
     <div className="keyboard-wrap">
-      <p className="visually-hidden" id="persian-keyboard-physical">
+      <p className="visually-hidden" id="japanese-keyboard-physical">
         Du kan også skrive med et fysisk persisk tastatur. Skift + mellemrum skriver et halvt mellemrum.
       </p>
       <div
         className="keyboard"
         role="group"
         aria-label={label}
-        aria-describedby="persian-keyboard-physical"
+        aria-describedby="japanese-keyboard-physical"
         dir="rtl"
         tabIndex={0}
         onKeyDown={(event) => {

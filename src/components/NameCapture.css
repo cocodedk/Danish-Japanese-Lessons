@@ -15,11 +15,11 @@
   padding-block: 1.5rem;
 }
 
-.name-capture__pane--fa {
+.name-capture__pane--ja {
   flex: 0 0 40dvh;
   align-items: center;
   text-align: center;
-  font-family: var(--font-fa);
+  font-family: var(--font-ja);
 }
 
 .name-capture__pane--da {

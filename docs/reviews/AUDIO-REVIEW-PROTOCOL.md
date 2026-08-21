@@ -1,9 +1,9 @@
-# Reviewed Persian audio protocol
+# Reviewed Japanese audio protocol
 
 Status: 97 drafts are online for direct review; zero clips are approved. The learner talk path stays closed.
 
 `npm run audio:queue` writes the checked-in review queue. It currently has 222 missing spoken
-forms: 97 for the first talk corpus and 125 for the writing path. Each row fixes the Persian text,
+forms: 97 for the first talk corpus and 125 for the writing path. Each row fixes the Japanese text,
 Danish meaning, Danish sound spelling, IPA, register, source hash input, and draft path.
 
 ## 1. Make local drafts
@@ -14,7 +14,7 @@ npm run audio:queue
 npm run audio:generate -- --scope talk
 ```
 
-`audio:setup` creates an ignored Python environment and downloads the checksummed Persian Ganji
+`audio:setup` creates an ignored Python environment and downloads the checksummed Japanese Ganji
 voice. `audio:generate` runs Piper locally, makes mono MP3 drafts, normalizes them, and writes actual
 loudness and true-peak measurements. All output stays under ignored `.audio/`; this step cannot
 write the public manifest.
@@ -36,20 +36,20 @@ download an `audio-decisions.json` file.
 The review URL is public. It is left out of learner navigation, and the page says that the machine
 voice is not ready for learners.
 
-## 3. Native Persian review
+## 3. Native Japanese review
 
 ```bash
 npm run audio:review
 ```
 
 Open the local page printed by the command. Enter a stable reviewer ID. For every clip, read the
-Persian and Danish meaning, check the Danish sound help and IPA, then listen at normal speed. Approve
+Japanese and Danish meaning, check the Danish sound help and IPA, then listen at normal speed. Approve
 only when the clip is clear, natural, and matches all four. Leave the box empty when a word, sound,
 stress, pace, or meaning is wrong. Add a short note when useful. Download the decision file.
 
 The phone page makes a decision file in the same form as the local page.
 
-One named native Persian reviewer is required for every generated clip. The tool does not infer or
+One named native Japanese reviewer is required for every generated clip. The tool does not infer or
 invent approval. A human recording may replace a generated clip later; it must also carry speaker,
 consent, licence, and review data.
 

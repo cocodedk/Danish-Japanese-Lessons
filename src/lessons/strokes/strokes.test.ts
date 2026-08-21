@@ -79,7 +79,7 @@ describe('stroke-order data', () => {
     }
   })
 
-  it('enters every stroke on the right half — where Persian starts', () => {
+  it('enters every stroke on the right half — where Japanese starts', () => {
     // ط ظ are the one real exception: the upright genuinely sits left of
     // centre in the isolated glyph (verified against the font's own outline
     // — its ink never crosses x≈40), so TA_BAR, the second stroke of both,

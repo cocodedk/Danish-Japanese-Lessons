@@ -6,7 +6,7 @@
       "id": "alphabet-letter-alef",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ا",
+      "ja": "ا",
       "da": "alef",
       "soundDa": "bærer en vokal; se hele ordet",
       "ipa": "◌",
@@ -19,8 +19,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -29,7 +29,7 @@
       "id": "alphabet-name-alef",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "الف",
+      "ja": "الف",
       "da": "bogstavnavnet alef",
       "soundDa": "alef",
       "ipa": "ʔælef",
@@ -54,8 +54,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -64,7 +64,7 @@
       "id": "alphabet-letter-be",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ب",
+      "ja": "ب",
       "da": "be",
       "soundDa": "b i \"bil\"",
       "ipa": "b",
@@ -77,8 +77,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -87,8 +87,8 @@
       "id": "alphabet-name-be",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ب",
-      "faMarked": "بِ",
+      "ja": "ب",
+      "jaMarked": "بِ",
       "da": "bogstavnavnet be",
       "soundDa": "be",
       "ipa": "be",
@@ -113,8 +113,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -123,7 +123,7 @@
       "id": "alphabet-letter-pe",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "پ",
+      "ja": "پ",
       "da": "pe",
       "soundDa": "p i \"pose\"",
       "ipa": "p",
@@ -136,8 +136,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -146,8 +146,8 @@
       "id": "alphabet-name-pe",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "پ",
-      "faMarked": "پِ",
+      "ja": "پ",
+      "jaMarked": "پِ",
       "da": "bogstavnavnet pe",
       "soundDa": "pe",
       "ipa": "pe",
@@ -172,8 +172,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -182,7 +182,7 @@
       "id": "alphabet-letter-te",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ت",
+      "ja": "ت",
       "da": "te",
       "soundDa": "t i \"tak\"",
       "ipa": "t",
@@ -195,8 +195,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -205,8 +205,8 @@
       "id": "alphabet-name-te",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ت",
-      "faMarked": "تِ",
+      "ja": "ت",
+      "jaMarked": "تِ",
       "da": "bogstavnavnet te",
       "soundDa": "te",
       "ipa": "te",
@@ -231,8 +231,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -241,7 +241,7 @@
       "id": "alphabet-letter-se",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ث",
+      "ja": "ث",
       "da": "se",
       "soundDa": "s i \"sol\"",
       "ipa": "s",
@@ -254,8 +254,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -264,8 +264,8 @@
       "id": "alphabet-name-se",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ث",
-      "faMarked": "ثِ",
+      "ja": "ث",
+      "jaMarked": "ثِ",
       "da": "bogstavnavnet se",
       "soundDa": "se",
       "ipa": "se",
@@ -290,8 +290,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -300,7 +300,7 @@
       "id": "alphabet-letter-jim",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ج",
+      "ja": "ج",
       "da": "jim",
       "soundDa": "dj i \"jazz\"",
       "ipa": "dʒ",
@@ -313,8 +313,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -323,7 +323,7 @@
       "id": "alphabet-name-jim",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "جیم",
+      "ja": "جیم",
       "da": "bogstavnavnet jim",
       "soundDa": "jim",
       "ipa": "dʒiːm",
@@ -348,8 +348,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -358,7 +358,7 @@
       "id": "alphabet-letter-che",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "چ",
+      "ja": "چ",
       "da": "che",
       "soundDa": "tj i \"chips\"",
       "ipa": "tʃ",
@@ -371,8 +371,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -381,8 +381,8 @@
       "id": "alphabet-name-che",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "چ",
-      "faMarked": "چِ",
+      "ja": "چ",
+      "jaMarked": "چِ",
       "da": "bogstavnavnet che",
       "soundDa": "che",
       "ipa": "tʃe",
@@ -407,8 +407,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -417,7 +417,7 @@
       "id": "alphabet-letter-he-jimi",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ح",
+      "ja": "ح",
       "da": "he jimi",
       "soundDa": "h i \"hus\"",
       "ipa": "h",
@@ -430,8 +430,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -440,7 +440,7 @@
       "id": "alphabet-name-he-jimi",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ح جیمی",
+      "ja": "ح جیمی",
       "da": "bogstavnavnet he jimi",
       "soundDa": "he-ye djimi",
       "ipa": "heje dʒiːmiː",
@@ -465,8 +465,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -475,7 +475,7 @@
       "id": "alphabet-letter-khe",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "خ",
+      "ja": "خ",
       "da": "khe",
       "soundDa": "ch i tysk \"Bach\"",
       "ipa": "x",
@@ -488,8 +488,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -498,8 +498,8 @@
       "id": "alphabet-name-khe",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "خ",
-      "faMarked": "خِ",
+      "ja": "خ",
+      "jaMarked": "خِ",
       "da": "bogstavnavnet khe",
       "soundDa": "khe",
       "ipa": "xe",
@@ -524,8 +524,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -534,7 +534,7 @@
       "id": "alphabet-letter-dal",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "د",
+      "ja": "د",
       "da": "dal",
       "soundDa": "d i \"dag\"",
       "ipa": "d",
@@ -547,8 +547,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -557,7 +557,7 @@
       "id": "alphabet-name-dal",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "دال",
+      "ja": "دال",
       "da": "bogstavnavnet dal",
       "soundDa": "dal",
       "ipa": "dɒːl",
@@ -582,8 +582,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -592,7 +592,7 @@
       "id": "alphabet-letter-zal",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ذ",
+      "ja": "ذ",
       "da": "zal",
       "soundDa": "stemt s — som engelsk z i \"zoo\"",
       "ipa": "z",
@@ -605,8 +605,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -615,7 +615,7 @@
       "id": "alphabet-name-zal",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ذال",
+      "ja": "ذال",
       "da": "bogstavnavnet zal",
       "soundDa": "zal",
       "ipa": "zɒːl",
@@ -640,8 +640,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -650,7 +650,7 @@
       "id": "alphabet-letter-re",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ر",
+      "ja": "ر",
       "da": "re",
       "soundDa": "rullet r, som spansk \"pero\"",
       "ipa": "ɾ",
@@ -663,8 +663,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -673,8 +673,8 @@
       "id": "alphabet-name-re",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ر",
-      "faMarked": "رِ",
+      "ja": "ر",
+      "jaMarked": "رِ",
       "da": "bogstavnavnet re",
       "soundDa": "re",
       "ipa": "ɾe",
@@ -699,8 +699,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -709,7 +709,7 @@
       "id": "alphabet-letter-ze",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ز",
+      "ja": "ز",
       "da": "ze",
       "soundDa": "stemt s — som engelsk z i \"zoo\"",
       "ipa": "z",
@@ -722,8 +722,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -732,8 +732,8 @@
       "id": "alphabet-name-ze",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ز",
-      "faMarked": "زِ",
+      "ja": "ز",
+      "jaMarked": "زِ",
       "da": "bogstavnavnet ze",
       "soundDa": "ze",
       "ipa": "ze",
@@ -758,8 +758,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -768,7 +768,7 @@
       "id": "alphabet-letter-zhe",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ژ",
+      "ja": "ژ",
       "da": "zhe",
       "soundDa": "som j i fransk \"journal\" — stemt sj",
       "ipa": "ʒ",
@@ -781,8 +781,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -791,8 +791,8 @@
       "id": "alphabet-name-zhe",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ژ",
-      "faMarked": "ژِ",
+      "ja": "ژ",
+      "jaMarked": "ژِ",
       "da": "bogstavnavnet zhe",
       "soundDa": "zhe",
       "ipa": "ʒe",
@@ -817,8 +817,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -827,7 +827,7 @@
       "id": "alphabet-letter-sin",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "س",
+      "ja": "س",
       "da": "sin",
       "soundDa": "s i \"sol\"",
       "ipa": "s",
@@ -840,8 +840,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -850,7 +850,7 @@
       "id": "alphabet-name-sin",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "سین",
+      "ja": "سین",
       "da": "bogstavnavnet sin",
       "soundDa": "sin",
       "ipa": "siːn",
@@ -875,8 +875,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -885,7 +885,7 @@
       "id": "alphabet-letter-shin",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ش",
+      "ja": "ش",
       "da": "shin",
       "soundDa": "sj i \"sjal\"",
       "ipa": "ʃ",
@@ -898,8 +898,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -908,7 +908,7 @@
       "id": "alphabet-name-shin",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "شین",
+      "ja": "شین",
       "da": "bogstavnavnet shin",
       "soundDa": "shin",
       "ipa": "ʃiːn",
@@ -933,8 +933,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -943,7 +943,7 @@
       "id": "alphabet-letter-sad",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ص",
+      "ja": "ص",
       "da": "sad",
       "soundDa": "s i \"sol\"",
       "ipa": "s",
@@ -956,8 +956,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -966,7 +966,7 @@
       "id": "alphabet-name-sad",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "صاد",
+      "ja": "صاد",
       "da": "bogstavnavnet sad",
       "soundDa": "sad",
       "ipa": "sɒːd",
@@ -991,8 +991,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1001,7 +1001,7 @@
       "id": "alphabet-letter-zad",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ض",
+      "ja": "ض",
       "da": "zad",
       "soundDa": "stemt s — som engelsk z i \"zoo\"",
       "ipa": "z",
@@ -1014,8 +1014,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1024,7 +1024,7 @@
       "id": "alphabet-name-zad",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ضاد",
+      "ja": "ضاد",
       "da": "bogstavnavnet zad",
       "soundDa": "zad",
       "ipa": "zɒːd",
@@ -1049,8 +1049,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1059,7 +1059,7 @@
       "id": "alphabet-letter-ta",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ط",
+      "ja": "ط",
       "da": "ta",
       "soundDa": "t i \"tak\"",
       "ipa": "t",
@@ -1072,8 +1072,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1082,7 +1082,7 @@
       "id": "alphabet-name-ta",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "طا",
+      "ja": "طا",
       "da": "bogstavnavnet ta",
       "soundDa": "ta",
       "ipa": "tɒː",
@@ -1107,8 +1107,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1117,7 +1117,7 @@
       "id": "alphabet-letter-za",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ظ",
+      "ja": "ظ",
       "da": "za",
       "soundDa": "stemt s — som engelsk z i \"zoo\"",
       "ipa": "z",
@@ -1130,8 +1130,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1140,7 +1140,7 @@
       "id": "alphabet-name-za",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ظا",
+      "ja": "ظا",
       "da": "bogstavnavnet za",
       "soundDa": "za",
       "ipa": "zɒː",
@@ -1165,8 +1165,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1175,7 +1175,7 @@
       "id": "alphabet-letter-eyn",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ع",
+      "ja": "ع",
       "da": "eyn",
       "soundDa": "lille stop eller ingen lyd; se ordet",
       "ipa": "ʔ~∅",
@@ -1188,8 +1188,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1198,7 +1198,7 @@
       "id": "alphabet-name-eyn",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "عین",
+      "ja": "عین",
       "da": "bogstavnavnet eyn",
       "soundDa": "eyn",
       "ipa": "ʔejn",
@@ -1223,8 +1223,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1233,7 +1233,7 @@
       "id": "alphabet-letter-gheyn",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "غ",
+      "ja": "غ",
       "da": "gheyn",
       "soundDa": "dyb lyd i halsen",
       "ipa": "ɢ~ɣ",
@@ -1246,8 +1246,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1256,7 +1256,7 @@
       "id": "alphabet-name-gheyn",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "غین",
+      "ja": "غین",
       "da": "bogstavnavnet gheyn",
       "soundDa": "gheyn",
       "ipa": "ɢejn",
@@ -1281,8 +1281,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1291,7 +1291,7 @@
       "id": "alphabet-letter-fe",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ف",
+      "ja": "ف",
       "da": "fe",
       "soundDa": "f i \"fisk\"",
       "ipa": "f",
@@ -1304,8 +1304,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1314,8 +1314,8 @@
       "id": "alphabet-name-fe",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ف",
-      "faMarked": "فِ",
+      "ja": "ف",
+      "jaMarked": "فِ",
       "da": "bogstavnavnet fe",
       "soundDa": "fe",
       "ipa": "fe",
@@ -1340,8 +1340,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1350,7 +1350,7 @@
       "id": "alphabet-letter-ghaf",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ق",
+      "ja": "ق",
       "da": "ghaf",
       "soundDa": "dyb lyd i halsen",
       "ipa": "ɢ~ɣ",
@@ -1363,8 +1363,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1373,7 +1373,7 @@
       "id": "alphabet-name-ghaf",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "قاف",
+      "ja": "قاف",
       "da": "bogstavnavnet ghaf",
       "soundDa": "ghaf",
       "ipa": "ɢɒːf",
@@ -1398,8 +1398,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1408,7 +1408,7 @@
       "id": "alphabet-letter-kaf",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ک",
+      "ja": "ک",
       "da": "kaf",
       "soundDa": "k i \"kat\"",
       "ipa": "k",
@@ -1421,8 +1421,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1431,7 +1431,7 @@
       "id": "alphabet-name-kaf",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "کاف",
+      "ja": "کاف",
       "da": "bogstavnavnet kaf",
       "soundDa": "kaf",
       "ipa": "kɒːf",
@@ -1456,8 +1456,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1466,7 +1466,7 @@
       "id": "alphabet-letter-gaf",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "گ",
+      "ja": "گ",
       "da": "gaf",
       "soundDa": "g i \"gul\"",
       "ipa": "ɡ",
@@ -1479,8 +1479,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1489,7 +1489,7 @@
       "id": "alphabet-name-gaf",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "گاف",
+      "ja": "گاف",
       "da": "bogstavnavnet gaf",
       "soundDa": "gaf",
       "ipa": "ɡɒːf",
@@ -1514,8 +1514,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1524,7 +1524,7 @@
       "id": "alphabet-letter-lam",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ل",
+      "ja": "ل",
       "da": "lam",
       "soundDa": "l i \"lys\"",
       "ipa": "l",
@@ -1537,8 +1537,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1547,7 +1547,7 @@
       "id": "alphabet-name-lam",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "لام",
+      "ja": "لام",
       "da": "bogstavnavnet lam",
       "soundDa": "lam",
       "ipa": "lɒːm",
@@ -1572,8 +1572,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1582,7 +1582,7 @@
       "id": "alphabet-letter-mim",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "م",
+      "ja": "م",
       "da": "mim",
       "soundDa": "m i \"mor\"",
       "ipa": "m",
@@ -1595,8 +1595,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1605,7 +1605,7 @@
       "id": "alphabet-name-mim",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "میم",
+      "ja": "میم",
       "da": "bogstavnavnet mim",
       "soundDa": "mim",
       "ipa": "miːm",
@@ -1630,8 +1630,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1640,7 +1640,7 @@
       "id": "alphabet-letter-nun",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ن",
+      "ja": "ن",
       "da": "nun",
       "soundDa": "n i \"nat\"",
       "ipa": "n",
@@ -1653,8 +1653,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1663,7 +1663,7 @@
       "id": "alphabet-name-nun",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "نون",
+      "ja": "نون",
       "da": "bogstavnavnet nun",
       "soundDa": "nun",
       "ipa": "nuːn",
@@ -1688,8 +1688,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1698,7 +1698,7 @@
       "id": "alphabet-letter-vav",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "و",
+      "ja": "و",
       "da": "vav",
       "soundDa": "v i \"vand\"",
       "ipa": "v",
@@ -1711,8 +1711,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1721,7 +1721,7 @@
       "id": "alphabet-name-vav",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "واو",
+      "ja": "واو",
       "da": "bogstavnavnet vav",
       "soundDa": "vav",
       "ipa": "vɒːv",
@@ -1746,8 +1746,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1756,7 +1756,7 @@
       "id": "alphabet-letter-he",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ه",
+      "ja": "ه",
       "da": "he do-tjeshm",
       "soundDa": "h i \"hus\"",
       "ipa": "h",
@@ -1769,8 +1769,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1779,7 +1779,7 @@
       "id": "alphabet-name-he",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ه دو چشم",
+      "ja": "ه دو چشم",
       "da": "bogstavnavnet he do-tjeshm",
       "soundDa": "he-ye do tjeshm",
       "ipa": "heje do tʃeʃm",
@@ -1804,8 +1804,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1814,7 +1814,7 @@
       "id": "alphabet-letter-ye",
       "domain": "alphabet",
       "kind": "letter",
-      "fa": "ی",
+      "ja": "ی",
       "da": "ye",
       "soundDa": "j i \"ja\"",
       "ipa": "j",
@@ -1827,8 +1827,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1837,8 +1837,8 @@
       "id": "alphabet-name-ye",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ی",
-      "faMarked": "یِ",
+      "ja": "ی",
+      "jaMarked": "یِ",
       "da": "bogstavnavnet ye",
       "soundDa": "ye",
       "ipa": "je",
@@ -1863,8 +1863,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1873,7 +1873,7 @@
       "id": "alphabet-alef-madde",
       "domain": "alphabet",
       "kind": "symbol",
-      "fa": "آ",
+      "ja": "آ",
       "da": "alef med madde",
       "soundDa": "å i \"år\"",
       "ipa": "ɒː",
@@ -1886,8 +1886,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1896,7 +1896,7 @@
       "id": "alphabet-name-alef-madde",
       "domain": "alphabet",
       "kind": "symbol",
-      "fa": "آ",
+      "ja": "آ",
       "da": "navnet alef med madde",
       "soundDa": "å",
       "ipa": "ɒː",
@@ -1909,8 +1909,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1919,8 +1919,8 @@
       "id": "alphabet-mark-zebar",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "ا",
-      "faMarked": "اَ",
+      "ja": "ا",
+      "jaMarked": "اَ",
       "da": "zebar",
       "soundDa": "a i \"kat\"",
       "ipa": "æ",
@@ -1933,8 +1933,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1943,7 +1943,7 @@
       "id": "alphabet-mark-name-zebar",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "زبر",
+      "ja": "زبر",
       "da": "tegnnavnet zebar",
       "soundDa": "zebar",
       "ipa": "zæbæɾ",
@@ -1968,8 +1968,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -1978,8 +1978,8 @@
       "id": "alphabet-mark-zir",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "ا",
-      "faMarked": "اِ",
+      "ja": "ا",
+      "jaMarked": "اِ",
       "da": "zir",
       "soundDa": "e i \"let\"",
       "ipa": "e",
@@ -1992,8 +1992,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2002,7 +2002,7 @@
       "id": "alphabet-mark-name-zir",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "زیر",
+      "ja": "زیر",
       "da": "tegnnavnet zir",
       "soundDa": "zir",
       "ipa": "ziːɾ",
@@ -2027,8 +2027,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2037,8 +2037,8 @@
       "id": "alphabet-mark-pish",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "ا",
-      "faMarked": "اُ",
+      "ja": "ا",
+      "jaMarked": "اُ",
       "da": "pish",
       "soundDa": "o i \"foto\"",
       "ipa": "o",
@@ -2051,8 +2051,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2061,7 +2061,7 @@
       "id": "alphabet-mark-name-pish",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "پیش",
+      "ja": "پیش",
       "da": "tegnnavnet pish",
       "soundDa": "pish",
       "ipa": "piːʃ",
@@ -2086,8 +2086,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2096,7 +2096,7 @@
       "id": "alphabet-mark-aa",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "آ",
+      "ja": "آ",
       "da": "alef med madde",
       "soundDa": "å i \"år\"",
       "ipa": "ɒː",
@@ -2109,8 +2109,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2119,7 +2119,7 @@
       "id": "alphabet-mark-name-aa",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "آ",
+      "ja": "آ",
       "da": "tegnnavnet alef med madde",
       "soundDa": "alef med madde",
       "ipa": "ɒː",
@@ -2144,8 +2144,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2154,7 +2154,7 @@
       "id": "alphabet-mark-u",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "او",
+      "ja": "او",
       "da": "alef og vav",
       "soundDa": "u i \"du\"",
       "ipa": "uː",
@@ -2167,8 +2167,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2177,7 +2177,7 @@
       "id": "alphabet-mark-name-u",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "او",
+      "ja": "او",
       "da": "tegnnavnet alef og vav",
       "soundDa": "alef og vav",
       "ipa": "uː",
@@ -2202,8 +2202,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2212,7 +2212,7 @@
       "id": "alphabet-mark-i",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "ای",
+      "ja": "ای",
       "da": "alef og ye",
       "soundDa": "i i \"vi\"",
       "ipa": "iː",
@@ -2225,8 +2225,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2235,7 +2235,7 @@
       "id": "alphabet-mark-name-i",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "ای",
+      "ja": "ای",
       "da": "tegnnavnet alef og ye",
       "soundDa": "alef og ye",
       "ipa": "iː",
@@ -2260,8 +2260,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2270,7 +2270,7 @@
       "id": "alphabet-mark-tashdid",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "ـّ",
+      "ja": "ـّ",
       "da": "bogstavet siges dobbelt",
       "soundDa": "ingen egen lyd",
       "ipa": "∅",
@@ -2283,8 +2283,8 @@
       "audioNotApplicable": "Tegnet har ingen egen lyd; det fordobler bogstavet under sig.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2293,7 +2293,7 @@
       "id": "alphabet-mark-name-tashdid",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "تشدید",
+      "ja": "تشدید",
       "da": "tegnnavnet tashdid",
       "soundDa": "tasjdid",
       "ipa": "tæʃdiːd",
@@ -2318,8 +2318,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2328,7 +2328,7 @@
       "id": "alphabet-mark-sokun",
       "domain": "alphabet",
       "kind": "mark",
-      "fa": "ـْ",
+      "ja": "ـْ",
       "da": "bogstavet får ingen vokal",
       "soundDa": "ingen egen lyd",
       "ipa": "∅",
@@ -2341,8 +2341,8 @@
       "audioNotApplicable": "Tegnet har ingen egen lyd; det markerer fravær af en vokal.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2351,7 +2351,7 @@
       "id": "alphabet-mark-name-sokun",
       "domain": "alphabet",
       "kind": "word",
-      "fa": "سکون",
+      "ja": "سکون",
       "da": "tegnnavnet sokun",
       "soundDa": "sokun",
       "ipa": "sokuːn",
@@ -2376,8 +2376,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2386,8 +2386,8 @@
       "id": "word-bridge-pedar",
       "domain": "bridges",
       "kind": "word",
-      "fa": "پدر",
-      "faMarked": "پِدَر",
+      "ja": "پدر",
+      "jaMarked": "پِدَر",
       "da": "far",
       "soundDa": "pedar",
       "ipa": "peˈdæɾ",
@@ -2456,8 +2456,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2466,8 +2466,8 @@
       "id": "word-bridge-madar",
       "domain": "bridges",
       "kind": "word",
-      "fa": "مادر",
-      "faMarked": "مادَر",
+      "ja": "مادر",
+      "jaMarked": "مادَر",
       "da": "mor",
       "soundDa": "mådar",
       "ipa": "mɒːˈdæɾ",
@@ -2536,8 +2536,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2546,8 +2546,8 @@
       "id": "word-bridge-baradar",
       "domain": "bridges",
       "kind": "word",
-      "fa": "برادر",
-      "faMarked": "بَرادَر",
+      "ja": "برادر",
+      "jaMarked": "بَرادَر",
       "da": "bror",
       "soundDa": "barådar",
       "ipa": "bæɾɒːˈdæɾ",
@@ -2638,8 +2638,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2648,8 +2648,8 @@
       "id": "word-bridge-doxtar",
       "domain": "bridges",
       "kind": "word",
-      "fa": "دختر",
-      "faMarked": "دُختَر",
+      "ja": "دختر",
+      "jaMarked": "دُختَر",
       "da": "datter",
       "soundDa": "dokhtar",
       "ipa": "doxˈtæɾ",
@@ -2729,8 +2729,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2739,8 +2739,8 @@
       "id": "word-bridge-dar",
       "domain": "bridges",
       "kind": "word",
-      "fa": "در",
-      "faMarked": "دَر",
+      "ja": "در",
+      "jaMarked": "دَر",
       "da": "dør",
       "soundDa": "dar",
       "ipa": "dæɾ",
@@ -2787,8 +2787,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2797,7 +2797,7 @@
       "id": "word-bridge-nam",
       "domain": "bridges",
       "kind": "word",
-      "fa": "نام",
+      "ja": "نام",
       "da": "navn",
       "soundDa": "nåm",
       "ipa": "nɒːm",
@@ -2844,8 +2844,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2854,7 +2854,7 @@
       "id": "word-bridge-mush",
       "domain": "bridges",
       "kind": "word",
-      "fa": "موش",
+      "ja": "موش",
       "da": "mus",
       "soundDa": "mush",
       "ipa": "muːʃ",
@@ -2901,8 +2901,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2911,8 +2911,8 @@
       "id": "word-bridge-garm",
       "domain": "bridges",
       "kind": "word",
-      "fa": "گرم",
-      "faMarked": "گَرم",
+      "ja": "گرم",
+      "jaMarked": "گَرم",
       "da": "varm eller hed",
       "soundDa": "garm",
       "ipa": "ɡæɾm",
@@ -2970,8 +2970,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -2980,7 +2980,7 @@
       "id": "word-bridge-now",
       "domain": "bridges",
       "kind": "word",
-      "fa": "نو",
+      "ja": "نو",
       "da": "ny",
       "soundDa": "now",
       "ipa": "nou̯",
@@ -3016,8 +3016,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3026,8 +3026,8 @@
       "id": "word-bridge-band",
       "domain": "bridges",
       "kind": "word",
-      "fa": "بند",
-      "faMarked": "بَند",
+      "ja": "بند",
+      "jaMarked": "بَند",
       "da": "bånd, binding eller led",
       "soundDa": "band",
       "ipa": "bænd",
@@ -3085,8 +3085,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3095,8 +3095,8 @@
       "id": "word-bridge-setad",
       "domain": "bridges",
       "kind": "word",
-      "fa": "ستاد",
-      "faMarked": "سِتاد",
+      "ja": "ستاد",
+      "jaMarked": "سِتاد",
       "da": "hovedkontor",
       "soundDa": "setåd",
       "ipa": "seˈtɒːd",
@@ -3165,8 +3165,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3175,7 +3175,7 @@
       "id": "word-bridge-do",
       "domain": "bridges",
       "kind": "word",
-      "fa": "دو",
+      "ja": "دو",
       "da": "to",
       "soundDa": "do",
       "ipa": "do",
@@ -3211,8 +3211,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3221,8 +3221,8 @@
       "id": "word-bridge-shesh",
       "domain": "bridges",
       "kind": "word",
-      "fa": "شش",
-      "faMarked": "شِش",
+      "ja": "شش",
+      "jaMarked": "شِش",
       "da": "seks",
       "soundDa": "shesh",
       "ipa": "ʃeʃ",
@@ -3269,8 +3269,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3279,8 +3279,8 @@
       "id": "word-bridge-noh",
       "domain": "bridges",
       "kind": "word",
-      "fa": "نه",
-      "faMarked": "نُه",
+      "ja": "نه",
+      "jaMarked": "نُه",
       "da": "ni",
       "soundDa": "noh",
       "ipa": "noh",
@@ -3327,8 +3327,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3337,8 +3337,8 @@
       "id": "word-bridge-dandan",
       "domain": "bridges",
       "kind": "word",
-      "fa": "دندان",
-      "faMarked": "دَندان",
+      "ja": "دندان",
+      "jaMarked": "دَندان",
       "da": "tand",
       "soundDa": "dandån",
       "ipa": "dænˈdɒːn",
@@ -3418,8 +3418,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3428,7 +3428,7 @@
       "id": "word-bridge-naf",
       "domain": "bridges",
       "kind": "word",
-      "fa": "ناف",
+      "ja": "ناف",
       "da": "navle",
       "soundDa": "nåf",
       "ipa": "nɒːf",
@@ -3475,8 +3475,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3485,7 +3485,7 @@
       "id": "word-bridge-mah",
       "domain": "bridges",
       "kind": "word",
-      "fa": "ماه",
+      "ja": "ماه",
       "da": "måne eller måned",
       "soundDa": "måh",
       "ipa": "mɒːh",
@@ -3532,8 +3532,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3542,8 +3542,8 @@
       "id": "word-bridge-setareh",
       "domain": "bridges",
       "kind": "word",
-      "fa": "ستاره",
-      "faMarked": "سِتاره",
+      "ja": "ستاره",
+      "jaMarked": "سِتاره",
       "da": "stjerne",
       "soundDa": "setåre",
       "ipa": "seˈtɒːɾe",
@@ -3623,8 +3623,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3633,8 +3633,8 @@
       "id": "word-bridge-seyl",
       "domain": "bridges",
       "kind": "word",
-      "fa": "سیل",
-      "faMarked": "سِیل",
+      "ja": "سیل",
+      "jaMarked": "سِیل",
       "da": "oversvømmelse",
       "soundDa": "seyl",
       "ipa": "sejl",
@@ -3692,8 +3692,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3702,7 +3702,7 @@
       "id": "word-bridge-dust",
       "domain": "bridges",
       "kind": "word",
-      "fa": "دوست",
+      "ja": "دوست",
       "da": "ven",
       "soundDa": "dust",
       "ipa": "duːst",
@@ -3760,8 +3760,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3770,7 +3770,7 @@
       "id": "word-bridge-pas",
       "domain": "bridges",
       "kind": "word",
-      "fa": "پاس",
+      "ja": "پاس",
       "da": "vagt, beskyttelse eller omsorg",
       "soundDa": "pås",
       "ipa": "pɒːs",
@@ -3817,8 +3817,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3827,8 +3827,8 @@
       "id": "word-bridge-mord",
       "domain": "bridges",
       "kind": "word",
-      "fa": "مرد",
-      "faMarked": "مُرد",
+      "ja": "مرد",
+      "jaMarked": "مُرد",
       "da": "døde",
       "soundDa": "mord",
       "ipa": "moɾd",
@@ -3886,8 +3886,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3896,8 +3896,8 @@
       "id": "word-bridge-leng",
       "domain": "bridges",
       "kind": "word",
-      "fa": "لنگ",
-      "faMarked": "لِنگ",
+      "ja": "لنگ",
+      "jaMarked": "لِنگ",
       "da": "ben",
       "soundDa": "leng",
       "ipa": "leŋɡ",
@@ -3955,8 +3955,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -3965,7 +3965,7 @@
       "id": "vocabulary-unit-1-title",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "آب و بابا",
+      "ja": "آب و بابا",
       "da": "Vand og far",
       "soundDa": "åb o båbå",
       "ipa": "ɒːb o bɒːbɒː",
@@ -3990,8 +3990,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4000,8 +4000,8 @@
       "id": "vocabulary-1-ab",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "آب",
-      "faMarked": "آب",
+      "ja": "آب",
+      "jaMarked": "آب",
       "da": "vand",
       "soundDa": "åb",
       "ipa": "ɒːb",
@@ -4037,8 +4037,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4047,8 +4047,8 @@
       "id": "vocabulary-1-baba",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "بابا",
-      "faMarked": "بابا",
+      "ja": "بابا",
+      "jaMarked": "بابا",
       "da": "far",
       "soundDa": "båbå",
       "ipa": "bɒːbɒː",
@@ -4106,8 +4106,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4116,8 +4116,8 @@
       "id": "vocabulary-1-bad",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "باد",
-      "faMarked": "باد",
+      "ja": "باد",
+      "jaMarked": "باد",
       "da": "vind",
       "soundDa": "båd",
       "ipa": "bɒːd",
@@ -4164,8 +4164,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4174,8 +4174,8 @@
       "id": "vocabulary-1-nan",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "نان",
-      "faMarked": "نان",
+      "ja": "نان",
+      "jaMarked": "نان",
       "da": "brød",
       "soundDa": "nån",
       "ipa": "nɒːn",
@@ -4222,8 +4222,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4232,8 +4232,8 @@
       "id": "vocabulary-1-madar",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "مادر",
-      "faMarked": "مادَر",
+      "ja": "مادر",
+      "jaMarked": "مادَر",
       "da": "mor",
       "soundDa": "mådar",
       "ipa": "mɒːˈdæɾ",
@@ -4302,8 +4302,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4312,8 +4312,8 @@
       "id": "vocabulary-1-man",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "من",
-      "faMarked": "مَن",
+      "ja": "من",
+      "jaMarked": "مَن",
       "da": "jeg",
       "soundDa": "man",
       "ipa": "mæn",
@@ -4360,8 +4360,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4370,8 +4370,8 @@
       "id": "vocabulary-1-to",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "تو",
-      "faMarked": "تو",
+      "ja": "تو",
+      "jaMarked": "تو",
       "da": "du",
       "soundDa": "to",
       "ipa": "to",
@@ -4407,8 +4407,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4417,8 +4417,8 @@
       "id": "vocabulary-1-ma",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "ما",
-      "faMarked": "ما",
+      "ja": "ما",
+      "jaMarked": "ما",
       "da": "vi",
       "soundDa": "må",
       "ipa": "mɒː",
@@ -4454,8 +4454,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4464,8 +4464,8 @@
       "id": "vocabulary-1-u",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "او",
-      "faMarked": "او",
+      "ja": "او",
+      "jaMarked": "او",
       "da": "han eller hun",
       "soundDa": "u",
       "ipa": "uː",
@@ -4497,8 +4497,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4507,8 +4507,8 @@
       "id": "vocabulary-1-in",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "این",
-      "faMarked": "این",
+      "ja": "این",
+      "jaMarked": "این",
       "da": "denne, dette",
       "soundDa": "in",
       "ipa": "iːn",
@@ -4551,8 +4551,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4561,8 +4561,8 @@
       "id": "vocabulary-1-an",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "آن",
-      "faMarked": "آن",
+      "ja": "آن",
+      "jaMarked": "آن",
       "da": "den, det (derovre)",
       "soundDa": "ån",
       "ipa": "ɒːn",
@@ -4598,8 +4598,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4608,8 +4608,8 @@
       "id": "vocabulary-unit-2-title",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "مدرسه",
-      "faMarked": "مَدرِسه",
+      "ja": "مدرسه",
+      "jaMarked": "مَدرِسه",
       "da": "Skole",
       "soundDa": "madrese",
       "ipa": "mædɾese",
@@ -4634,8 +4634,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4644,8 +4644,8 @@
       "id": "vocabulary-2-medad",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "مداد",
-      "faMarked": "مِداد",
+      "ja": "مداد",
+      "jaMarked": "مِداد",
       "da": "blyant",
       "soundDa": "medåd",
       "ipa": "meˈdɒːd",
@@ -4714,8 +4714,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4724,8 +4724,8 @@
       "id": "vocabulary-2-ketab",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "کتاب",
-      "faMarked": "کِتاب",
+      "ja": "کتاب",
+      "jaMarked": "کِتاب",
       "da": "bog",
       "soundDa": "ketåb",
       "ipa": "keˈtɒːb",
@@ -4794,8 +4794,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4804,8 +4804,8 @@
       "id": "vocabulary-2-miz",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "میز",
-      "faMarked": "میز",
+      "ja": "میز",
+      "jaMarked": "میز",
       "da": "bord",
       "soundDa": "miz",
       "ipa": "miːz",
@@ -4852,8 +4852,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4862,8 +4862,8 @@
       "id": "vocabulary-2-dar",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "در",
-      "faMarked": "دَر",
+      "ja": "در",
+      "jaMarked": "دَر",
       "da": "dør",
       "soundDa": "dar",
       "ipa": "dæɾ",
@@ -4910,8 +4910,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4920,8 +4920,8 @@
       "id": "vocabulary-2-dast",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "دست",
-      "faMarked": "دَست",
+      "ja": "دست",
+      "jaMarked": "دَست",
       "da": "hånd",
       "soundDa": "dast",
       "ipa": "dæst",
@@ -4979,8 +4979,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -4989,8 +4989,8 @@
       "id": "vocabulary-2-dust",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "دوست",
-      "faMarked": "دوست",
+      "ja": "دوست",
+      "jaMarked": "دوست",
       "da": "ven",
       "soundDa": "dust",
       "ipa": "duːst",
@@ -5048,8 +5048,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5058,8 +5058,8 @@
       "id": "vocabulary-2-madrese",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "مدرسه",
-      "faMarked": "مَدرِسه",
+      "ja": "مدرسه",
+      "jaMarked": "مَدرِسه",
       "da": "skole",
       "soundDa": "madrese",
       "ipa": "mædɾeˈse",
@@ -5150,8 +5150,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5160,8 +5160,8 @@
       "id": "vocabulary-2-salam",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "سلام",
-      "faMarked": "سَلام",
+      "ja": "سلام",
+      "jaMarked": "سَلام",
       "da": "hej",
       "soundDa": "salåm",
       "ipa": "sæˈlɒːm",
@@ -5230,8 +5230,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5240,7 +5240,7 @@
       "id": "vocabulary-unit-3-title",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "خانه و آسمان",
+      "ja": "خانه و آسمان",
       "da": "Hjem og himmel",
       "soundDa": "khåne o åsemån",
       "ipa": "xɒːne o ɒːsemɒːn",
@@ -5265,8 +5265,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5275,8 +5275,8 @@
       "id": "vocabulary-3-khane",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "خانه",
-      "faMarked": "خانه",
+      "ja": "خانه",
+      "jaMarked": "خانه",
       "da": "hus, hjem",
       "soundDa": "khåne",
       "ipa": "xɒːˈne",
@@ -5334,8 +5334,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5344,8 +5344,8 @@
       "id": "vocabulary-3-baran",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "باران",
-      "faMarked": "باران",
+      "ja": "باران",
+      "jaMarked": "باران",
       "da": "regn",
       "soundDa": "bårån",
       "ipa": "bɒːˈɾɒːn",
@@ -5414,8 +5414,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5424,8 +5424,8 @@
       "id": "vocabulary-3-aseman",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "آسمان",
-      "faMarked": "آسِمان",
+      "ja": "آسمان",
+      "jaMarked": "آسِمان",
       "da": "himmel",
       "soundDa": "åsemån",
       "ipa": "ɒːseˈmɒːn",
@@ -5505,8 +5505,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5515,8 +5515,8 @@
       "id": "vocabulary-3-mah",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "ماه",
-      "faMarked": "ماه",
+      "ja": "ماه",
+      "jaMarked": "ماه",
       "da": "måne",
       "soundDa": "måh",
       "ipa": "mɒːh",
@@ -5563,8 +5563,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5573,8 +5573,8 @@
       "id": "vocabulary-3-shab",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "شب",
-      "faMarked": "شَب",
+      "ja": "شب",
+      "jaMarked": "شَب",
       "da": "nat",
       "soundDa": "sjab",
       "ipa": "ʃæb",
@@ -5621,8 +5621,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5631,8 +5631,8 @@
       "id": "vocabulary-3-gol",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "گل",
-      "faMarked": "گُل",
+      "ja": "گل",
+      "jaMarked": "گُل",
       "da": "blomst",
       "soundDa": "gol",
       "ipa": "ɡol",
@@ -5679,8 +5679,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5689,7 +5689,7 @@
       "id": "vocabulary-unit-4-title",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "رنگ‌ها",
+      "ja": "رنگ‌ها",
       "da": "Farver",
       "soundDa": "ranghå",
       "ipa": "ɾæŋˈhɒː",
@@ -5714,8 +5714,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5724,8 +5724,8 @@
       "id": "vocabulary-4-qermez",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "قرمز",
-      "faMarked": "قِرمِز",
+      "ja": "قرمز",
+      "jaMarked": "قِرمِز",
       "da": "rød",
       "soundDa": "ghermez",
       "ipa": "ɢ~ɣeɾˈmez",
@@ -5805,8 +5805,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5815,8 +5815,8 @@
       "id": "vocabulary-1-abi",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "آبی",
-      "faMarked": "آبی",
+      "ja": "آبی",
+      "jaMarked": "آبی",
       "da": "blå",
       "soundDa": "åbi",
       "ipa": "ɒːˈbiː",
@@ -5863,8 +5863,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5873,8 +5873,8 @@
       "id": "vocabulary-3-sabz",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "سبز",
-      "faMarked": "سَبز",
+      "ja": "سبز",
+      "jaMarked": "سَبز",
       "da": "grøn",
       "soundDa": "sabz",
       "ipa": "sæbz",
@@ -5932,8 +5932,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -5942,8 +5942,8 @@
       "id": "vocabulary-3-zard",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "زرد",
-      "faMarked": "زَرد",
+      "ja": "زرد",
+      "jaMarked": "زَرد",
       "da": "gul",
       "soundDa": "zard",
       "ipa": "zæɾd",
@@ -6001,8 +6001,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6011,8 +6011,8 @@
       "id": "vocabulary-4-siyah",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "سیاه",
-      "faMarked": "سیاه",
+      "ja": "سیاه",
+      "jaMarked": "سیاه",
       "da": "sort",
       "soundDa": "siyåh",
       "ipa": "siˈjɒːh",
@@ -6070,8 +6070,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6080,8 +6080,8 @@
       "id": "vocabulary-4-sefid",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "سفید",
-      "faMarked": "سِفید",
+      "ja": "سفید",
+      "jaMarked": "سِفید",
       "da": "hvid",
       "soundDa": "sefid",
       "ipa": "seˈfiːd",
@@ -6150,8 +6150,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6160,8 +6160,8 @@
       "id": "vocabulary-4-narenji",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "نارنجی",
-      "faMarked": "نارَنجی",
+      "ja": "نارنجی",
+      "jaMarked": "نارَنجی",
       "da": "orange",
       "soundDa": "nårenji",
       "ipa": "nɒːɾænˈdʒiː",
@@ -6252,8 +6252,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6262,8 +6262,8 @@
       "id": "vocabulary-4-surati",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "صورتی",
-      "faMarked": "صورَتی",
+      "ja": "صورتی",
+      "jaMarked": "صورَتی",
       "da": "lyserød",
       "soundDa": "surati",
       "ipa": "suːɾæˈtiː",
@@ -6343,8 +6343,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6353,7 +6353,7 @@
       "id": "vocabulary-unit-5-title",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "حیوان‌ها",
+      "ja": "حیوان‌ها",
       "da": "Dyr",
       "soundDa": "heyvånhå",
       "ipa": "hejvɒːnˈhɒː",
@@ -6378,8 +6378,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6388,8 +6388,8 @@
       "id": "vocabulary-5-gorbe",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "گربه",
-      "faMarked": "گُربه",
+      "ja": "گربه",
+      "jaMarked": "گُربه",
       "da": "kat",
       "soundDa": "gorbe",
       "ipa": "ɡoɾˈbe",
@@ -6458,8 +6458,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6468,8 +6468,8 @@
       "id": "vocabulary-5-sag",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "سگ",
-      "faMarked": "سَگ",
+      "ja": "سگ",
+      "jaMarked": "سَگ",
       "da": "hund",
       "soundDa": "sag",
       "ipa": "sæɡ",
@@ -6516,8 +6516,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6526,8 +6526,8 @@
       "id": "vocabulary-5-parande",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "پرنده",
-      "faMarked": "پَرَنده",
+      "ja": "پرنده",
+      "jaMarked": "پَرَنده",
       "da": "fugl",
       "soundDa": "parande",
       "ipa": "pæˈɾænde",
@@ -6618,8 +6618,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6628,8 +6628,8 @@
       "id": "vocabulary-5-mahi",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "ماهی",
-      "faMarked": "ماهی",
+      "ja": "ماهی",
+      "jaMarked": "ماهی",
       "da": "fisk",
       "soundDa": "måhi",
       "ipa": "mɒːˈhiː",
@@ -6687,8 +6687,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6697,8 +6697,8 @@
       "id": "vocabulary-5-asb",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "اسب",
-      "faMarked": "اَسب",
+      "ja": "اسب",
+      "jaMarked": "اَسب",
       "da": "hest",
       "soundDa": "asb",
       "ipa": "æsb",
@@ -6752,8 +6752,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6762,8 +6762,8 @@
       "id": "vocabulary-5-gav",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "گاو",
-      "faMarked": "گاو",
+      "ja": "گاو",
+      "jaMarked": "گاو",
       "da": "ko",
       "soundDa": "gåv",
       "ipa": "ɡɒːv",
@@ -6810,8 +6810,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6820,8 +6820,8 @@
       "id": "vocabulary-5-khargush",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "خرگوش",
-      "faMarked": "خَرگوش",
+      "ja": "خرگوش",
+      "jaMarked": "خَرگوش",
       "da": "kanin",
       "soundDa": "khargusj",
       "ipa": "xæɾˈɡuːʃ",
@@ -6901,8 +6901,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6911,8 +6911,8 @@
       "id": "vocabulary-5-mush",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "موش",
-      "faMarked": "موش",
+      "ja": "موش",
+      "jaMarked": "موش",
       "da": "mus",
       "soundDa": "musj",
       "ipa": "muːʃ",
@@ -6959,8 +6959,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -6969,7 +6969,7 @@
       "id": "reading-function-o",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "و",
+      "ja": "و",
       "da": "og",
       "soundDa": "o",
       "ipa": "o",
@@ -6994,8 +6994,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7004,8 +7004,8 @@
       "id": "reading-function-ast",
       "domain": "vocabulary",
       "kind": "word",
-      "fa": "است",
-      "faMarked": "اَست",
+      "ja": "است",
+      "jaMarked": "اَست",
       "da": "er",
       "soundDa": "ast",
       "ipa": "æst",
@@ -7059,8 +7059,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7069,7 +7069,7 @@
       "id": "reading-function-ezafe",
       "domain": "vocabulary",
       "kind": "symbol",
-      "fa": "ـِ",
+      "ja": "ـِ",
       "da": "ezafe: binder to ord sammen",
       "soundDa": "e",
       "ipa": "e",
@@ -7094,8 +7094,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7104,7 +7104,7 @@
       "id": "reading-1-1",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "آب و باد",
+      "ja": "آب و باد",
       "da": "vand og vind",
       "soundDa": "åb o båd",
       "ipa": "ɒːb o bɒːd",
@@ -7151,8 +7151,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7161,8 +7161,8 @@
       "id": "reading-1-2",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "مادر و من",
-      "faMarked": "مادَر و مَن",
+      "ja": "مادر و من",
+      "jaMarked": "مادَر و مَن",
       "da": "mor og jeg",
       "soundDa": "mådar o man",
       "ipa": "mɒːdæɾ o mæn",
@@ -7209,8 +7209,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7219,7 +7219,7 @@
       "id": "reading-1-3",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "این و آن",
+      "ja": "این و آن",
       "da": "denne og den der",
       "soundDa": "in o ån",
       "ipa": "iːn o ɒːn",
@@ -7266,8 +7266,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7276,8 +7276,8 @@
       "id": "reading-2-1",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "کتاب و مداد",
-      "faMarked": "کِتاب و مِداد",
+      "ja": "کتاب و مداد",
+      "jaMarked": "کِتاب و مِداد",
       "da": "bog og blyant",
       "soundDa": "ketåb o medåd",
       "ipa": "ketɒːb o medɒːd",
@@ -7324,8 +7324,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7334,8 +7334,8 @@
       "id": "reading-2-2",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "دست دوست",
-      "faMarked": "دَستِ دوست",
+      "ja": "دست دوست",
+      "jaMarked": "دَستِ دوست",
       "da": "vennens hånd",
       "soundDa": "daste dust",
       "ipa": "dæste duːst",
@@ -7382,8 +7382,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7392,8 +7392,8 @@
       "id": "reading-3-1",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "ماه و آسمان",
-      "faMarked": "ماه و آسِمان",
+      "ja": "ماه و آسمان",
+      "jaMarked": "ماه و آسِمان",
       "da": "måne og himmel",
       "soundDa": "måh o åsemån",
       "ipa": "mɒːh o ɒːsemɒːn",
@@ -7440,8 +7440,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7450,8 +7450,8 @@
       "id": "reading-3-2",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "شب و باران",
-      "faMarked": "شَب و باران",
+      "ja": "شب و باران",
+      "jaMarked": "شَب و باران",
       "da": "nat og regn",
       "soundDa": "sjab o bårån",
       "ipa": "ʃæb o bɒːɾɒːn",
@@ -7498,8 +7498,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7508,8 +7508,8 @@
       "id": "reading-4-1",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "قرمز و آبی",
-      "faMarked": "قِرمِز و آبی",
+      "ja": "قرمز و آبی",
+      "jaMarked": "قِرمِز و آبی",
       "da": "rød og blå",
       "soundDa": "ghermez o åbi",
       "ipa": "ɢeɾmez o ɒːbiː",
@@ -7556,8 +7556,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7566,8 +7566,8 @@
       "id": "reading-4-2",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "سیاه و سفید",
-      "faMarked": "سیاه و سِفید",
+      "ja": "سیاه و سفید",
+      "jaMarked": "سیاه و سِفید",
       "da": "sort og hvid",
       "soundDa": "siyåh o sefid",
       "ipa": "sijɒːh o sefiːd",
@@ -7614,8 +7614,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7624,8 +7624,8 @@
       "id": "reading-5-1",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "گربه و سگ",
-      "faMarked": "گُربه و سَگ",
+      "ja": "گربه و سگ",
+      "jaMarked": "گُربه و سَگ",
       "da": "kat og hund",
       "soundDa": "gorbe o sag",
       "ipa": "ɡoɾˈbe o sæɡ",
@@ -7672,8 +7672,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7682,8 +7682,8 @@
       "id": "reading-5-2",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "اسب و گاو",
-      "faMarked": "اَسب و گاو",
+      "ja": "اسب و گاو",
+      "jaMarked": "اَسب و گاو",
       "da": "hest og ko",
       "soundDa": "asb o gåv",
       "ipa": "æsb o ɡɒːv",
@@ -7730,8 +7730,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7740,8 +7740,8 @@
       "id": "reading-1-text",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "این آب است. آن نان است. او بابا است.",
-      "faMarked": "این آب اَست. آن نان اَست. او بابا اَست.",
+      "ja": "این آب است. آن نان است. او بابا است.",
+      "jaMarked": "این آب اَست. آن نان اَست. او بابا اَست.",
       "da": "Dette er vand. Det der er brød. Han eller hun er far.",
       "soundDa": "in åb ast. ån nån ast. u båbå ast",
       "ipa": "iːn ɒːb æst. ɒːn nɒːn æst. uː bɒːbɒː æst",
@@ -7854,8 +7854,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -7864,8 +7864,8 @@
       "id": "reading-2-text",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "این مدرسه است. این میز است. این کتاب است. او دوست من است.",
-      "faMarked": "این مَدرِسه اَست. این میز اَست. این کِتاب اَست. او دوستِ مَن اَست.",
+      "ja": "این مدرسه است. این میز است. این کتاب است. او دوست من است.",
+      "jaMarked": "این مَدرِسه اَست. این میز اَست. این کِتاب اَست. او دوستِ مَن اَست.",
       "da": "Dette er en skole. Dette er et bord. Dette er en bog. Han eller hun er min ven.",
       "soundDa": "in madrese ast. in miz ast. in ketåb ast. u duste man ast",
       "ipa": "iːn mædɾese æst. iːn miːz æst. iːn ketɒːb æst. uː duːste mæn æst",
@@ -8033,8 +8033,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8043,8 +8043,8 @@
       "id": "reading-3-text",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "این خانه است. این آسمان است. این ماه است. شب است.",
-      "faMarked": "این خانه اَست. این آسِمان اَست. این ماه اَست. شَب اَست.",
+      "ja": "این خانه است. این آسمان است. این ماه است. شب است.",
+      "jaMarked": "این خانه اَست. این آسِمان اَست. این ماه اَست. شَب اَست.",
       "da": "Dette er et hus. Dette er himlen. Dette er månen. Det er nat.",
       "soundDa": "in khåne ast. in åsemån ast. in måh ast. sjab ast",
       "ipa": "iːn xɒːne æst. iːn ɒːsemɒːn æst. iːn mɒːh æst. ʃæb æst",
@@ -8179,8 +8179,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8189,8 +8189,8 @@
       "id": "reading-4-text",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "این قرمز و آبی است. آن سبز و زرد است. این سیاه و سفید است. آن نارنجی و صورتی است.",
-      "faMarked": "این قِرمِز و آبی اَست. آن سَبز و زَرد اَست. این سیاه و سِفید اَست. آن نارَنجی و صورَتی اَست.",
+      "ja": "این قرمز و آبی است. آن سبز و زرد است. این سیاه و سفید است. آن نارنجی و صورتی است.",
+      "jaMarked": "این قِرمِز و آبی اَست. آن سَبز و زَرد اَست. این سیاه و سِفید اَست. آن نارَنجی و صورَتی اَست.",
       "da": "Denne er rød og blå. Den der er grøn og gul. Denne er sort og hvid. Den der er orange og lyserød.",
       "soundDa": "in ghermez o åbi ast. ån sabz o zard ast. in siyåh o sefid ast. ån nårenji o surati ast",
       "ipa": "iːn ɢeɾmez o ɒːbiː æst. ɒːn sæbz o zæɾd æst. iːn sijɒːh o sefiːd æst. ɒːn nɒːɾændʒiː o suːɾætiː æst",
@@ -8424,8 +8424,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8434,8 +8434,8 @@
       "id": "reading-5-text",
       "domain": "vocabulary",
       "kind": "phrase",
-      "fa": "این پرنده است. آن ماهی است. این خرگوش است. آن موش است.",
-      "faMarked": "این پَرَنده اَست. آن ماهی اَست. این خَرگوش اَست. آن موش اَست.",
+      "ja": "این پرنده است. آن ماهی است. این خرگوش است. آن موش است.",
+      "jaMarked": "این پَرَنده اَست. آن ماهی اَست. این خَرگوش اَست. آن موش اَست.",
       "da": "Dette er en fugl. Det der er en fisk. Dette er en kanin. Det der er en mus.",
       "soundDa": "in parande ast. ån måhi ast. in khargusj ast. ån musj ast",
       "ipa": "iːn pæˈɾænde æst. ɒːn mɒːˈhiː æst. iːn xæɾˈɡuːʃ æst. ɒːn muːʃ æst",
@@ -8581,8 +8581,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8591,8 +8591,8 @@
       "id": "conversation-introduction",
       "domain": "conversation",
       "kind": "phrase",
-      "fa": "من … هستم.",
-      "faMarked": "مَن … هَستَم.",
+      "ja": "من … هستم.",
+      "jaMarked": "مَن … هَستَم.",
       "da": "Jeg hedder …",
       "soundDa": "man … hastam",
       "ipa": "mæn … ˈhæstæm",
@@ -8617,8 +8617,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8627,8 +8627,8 @@
       "id": "conversation-goodbye",
       "domain": "conversation",
       "kind": "word",
-      "fa": "خداحافظ!",
-      "faMarked": "خُداحافِظ!",
+      "ja": "خداحافظ!",
+      "jaMarked": "خُداحافِظ!",
       "da": "farvel",
       "soundDa": "khodåfez",
       "ipa": "xodɒːˈfez",
@@ -8653,8 +8653,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8663,7 +8663,7 @@
       "id": "number-1-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۱",
+      "ja": "۱",
       "da": "Tallet en",
       "soundDa": "∅",
       "ipa": "∅",
@@ -8676,8 +8676,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8686,8 +8686,8 @@
       "id": "number-1-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "یک",
-      "faMarked": "یِک",
+      "ja": "یک",
+      "jaMarked": "یِک",
       "da": "en",
       "soundDa": "jek",
       "ipa": "jek",
@@ -8712,8 +8712,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8722,7 +8722,7 @@
       "id": "number-2-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۲",
+      "ja": "۲",
       "da": "Tallet to",
       "soundDa": "∅",
       "ipa": "∅",
@@ -8735,8 +8735,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8745,8 +8745,8 @@
       "id": "number-2-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "دو",
-      "faMarked": "دو",
+      "ja": "دو",
+      "jaMarked": "دو",
       "da": "to",
       "soundDa": "do",
       "ipa": "do",
@@ -8771,8 +8771,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8781,7 +8781,7 @@
       "id": "number-3-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۳",
+      "ja": "۳",
       "da": "Tallet tre",
       "soundDa": "∅",
       "ipa": "∅",
@@ -8794,8 +8794,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8804,8 +8804,8 @@
       "id": "number-3-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "سه",
-      "faMarked": "سِه",
+      "ja": "سه",
+      "jaMarked": "سِه",
       "da": "tre",
       "soundDa": "se",
       "ipa": "se",
@@ -8830,8 +8830,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8840,7 +8840,7 @@
       "id": "number-4-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۴",
+      "ja": "۴",
       "da": "Tallet fire",
       "soundDa": "∅",
       "ipa": "∅",
@@ -8853,8 +8853,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8863,8 +8863,8 @@
       "id": "number-4-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "چهار",
-      "faMarked": "چَهار",
+      "ja": "چهار",
+      "jaMarked": "چَهار",
       "da": "fire",
       "soundDa": "tjahår",
       "ipa": "tʃæˈhɒːɾ",
@@ -8889,8 +8889,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8899,7 +8899,7 @@
       "id": "number-5-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۵",
+      "ja": "۵",
       "da": "Tallet fem",
       "soundDa": "∅",
       "ipa": "∅",
@@ -8912,8 +8912,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8922,8 +8922,8 @@
       "id": "number-5-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "پنج",
-      "faMarked": "پَنج",
+      "ja": "پنج",
+      "jaMarked": "پَنج",
       "da": "fem",
       "soundDa": "pandj",
       "ipa": "pændʒ",
@@ -8948,8 +8948,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8958,7 +8958,7 @@
       "id": "number-6-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۶",
+      "ja": "۶",
       "da": "Tallet seks",
       "soundDa": "∅",
       "ipa": "∅",
@@ -8971,8 +8971,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -8981,8 +8981,8 @@
       "id": "number-6-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "شش",
-      "faMarked": "شِش",
+      "ja": "شش",
+      "jaMarked": "شِش",
       "da": "seks",
       "soundDa": "sjesj",
       "ipa": "ʃeʃ",
@@ -9007,8 +9007,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9017,7 +9017,7 @@
       "id": "number-7-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۷",
+      "ja": "۷",
       "da": "Tallet syv",
       "soundDa": "∅",
       "ipa": "∅",
@@ -9030,8 +9030,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9040,8 +9040,8 @@
       "id": "number-7-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "هفت",
-      "faMarked": "هَفت",
+      "ja": "هفت",
+      "jaMarked": "هَفت",
       "da": "syv",
       "soundDa": "haft",
       "ipa": "hæft",
@@ -9066,8 +9066,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9076,7 +9076,7 @@
       "id": "number-8-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۸",
+      "ja": "۸",
       "da": "Tallet otte",
       "soundDa": "∅",
       "ipa": "∅",
@@ -9089,8 +9089,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9099,8 +9099,8 @@
       "id": "number-8-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "هشت",
-      "faMarked": "هَشت",
+      "ja": "هشت",
+      "jaMarked": "هَشت",
       "da": "otte",
       "soundDa": "hasjt",
       "ipa": "hæʃt",
@@ -9125,8 +9125,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9135,7 +9135,7 @@
       "id": "number-9-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۹",
+      "ja": "۹",
       "da": "Tallet ni",
       "soundDa": "∅",
       "ipa": "∅",
@@ -9148,8 +9148,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9158,8 +9158,8 @@
       "id": "number-9-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "نه",
-      "faMarked": "نُه",
+      "ja": "نه",
+      "jaMarked": "نُه",
       "da": "ni",
       "soundDa": "noh",
       "ipa": "noh",
@@ -9184,8 +9184,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9194,7 +9194,7 @@
       "id": "number-10-digit",
       "domain": "numbers",
       "kind": "symbol",
-      "fa": "۱۰",
+      "ja": "۱۰",
       "da": "Tallet ti",
       "soundDa": "∅",
       "ipa": "∅",
@@ -9207,8 +9207,8 @@
       "audioNotApplicable": "Talordet ved siden af bærer udtalen.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9217,8 +9217,8 @@
       "id": "number-10-word",
       "domain": "numbers",
       "kind": "word",
-      "fa": "ده",
-      "faMarked": "دَه",
+      "ja": "ده",
+      "jaMarked": "دَه",
       "da": "ti",
       "soundDa": "dah",
       "ipa": "dæh",
@@ -9243,8 +9243,8 @@
       "audioNotApplicable": null,
       "audioStatus": "reviewed",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9253,7 +9253,7 @@
       "id": "interface-greeting",
       "domain": "interface",
       "kind": "word",
-      "fa": "سلام!",
+      "ja": "سلام!",
       "da": "Hej!",
       "soundDa": "salåm",
       "ipa": "sælɒːm",
@@ -9278,8 +9278,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9288,7 +9288,7 @@
       "id": "interface-greeting-with-name",
       "domain": "interface",
       "kind": "word",
-      "fa": "سلام،",
+      "ja": "سلام،",
       "da": "Hej",
       "soundDa": "salåm",
       "ipa": "sælɒːm",
@@ -9313,8 +9313,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9323,7 +9323,7 @@
       "id": "interface-kit-write-line",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "روی خط بنویس.",
+      "ja": "روی خط بنویس.",
       "da": "Skriv på linjen.",
       "soundDa": "ruje khat benevis",
       "ipa": "ɾuːje xæt beneviːs",
@@ -9348,8 +9348,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9358,7 +9358,7 @@
       "id": "interface-capture-prompt",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "نام تو چیست؟",
+      "ja": "نام تو چیست؟",
       "da": "Hvad hedder du?",
       "soundDa": "nåme to tjist?",
       "ipa": "nɒːme to tʃiːst",
@@ -9383,8 +9383,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9393,7 +9393,7 @@
       "id": "interface-lesson-placeholder",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "این درس هنوز آماده نیست.",
+      "ja": "این درس هنوز آماده نیست.",
       "da": "Denne lektion er ikke klar endnu.",
       "soundDa": "in dars hanuz åmåde nist",
       "ipa": "iːn dæɾs hænuːz ʔɒːmɒːde niːst",
@@ -9418,8 +9418,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9428,7 +9428,7 @@
       "id": "interface-try-again",
       "domain": "interface",
       "kind": "word",
-      "fa": "دوباره",
+      "ja": "دوباره",
       "da": "Prøv igen",
       "soundDa": "dobåre",
       "ipa": "dobɒːɾe",
@@ -9453,8 +9453,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9463,7 +9463,7 @@
       "id": "interface-zwnj-name",
       "domain": "interface",
       "kind": "symbol",
-      "fa": "نیم‌فاصله",
+      "ja": "نیم‌فاصله",
       "da": "halvt mellemrum",
       "soundDa": "nim-fåsele",
       "ipa": "niːm fɒːsele",
@@ -9476,8 +9476,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9486,7 +9486,7 @@
       "id": "interface-missing-space",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک فاصله جا افتاده.",
+      "ja": "اینجا یک فاصله جا افتاده.",
       "da": "Her mangler et mellemrum.",
       "soundDa": "indjå jek fåsele djå oftåde",
       "ipa": "iːndʒɒː jek fɒːsele dʒɒː ʔoftɒːde",
@@ -9511,8 +9511,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9521,7 +9521,7 @@
       "id": "interface-extra-space",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک فاصله اضافه نوشته شده.",
+      "ja": "اینجا یک فاصله اضافه نوشته شده.",
       "da": "Her står et mellemrum for meget.",
       "soundDa": "indjå jek fåsele ezåfe nevesjte sjode",
       "ipa": "iːndʒɒː jek fɒːsele ʔezɒːfe neveʃte ʃode",
@@ -9546,8 +9546,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9556,7 +9556,7 @@
       "id": "interface-missing-zwnj",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک نیم‌فاصله جا افتاده.",
+      "ja": "اینجا یک نیم‌فاصله جا افتاده.",
       "da": "Her mangler et halvt mellemrum.",
       "soundDa": "indjå jek nim-fåsele djå oftåde",
       "ipa": "iːndʒɒː jek niːm fɒːsele dʒɒː ʔoftɒːde",
@@ -9581,8 +9581,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9591,7 +9591,7 @@
       "id": "interface-extra-zwnj",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک نیم‌فاصله اضافه نوشته شده.",
+      "ja": "اینجا یک نیم‌فاصله اضافه نوشته شده.",
       "da": "Her står et halvt mellemrum for meget.",
       "soundDa": "indjå jek nim-fåsele ezåfe nevesjte sjode",
       "ipa": "iːndʒɒː jek niːm fɒːsele ʔezɒːfe neveʃte ʃode",
@@ -9616,8 +9616,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9626,7 +9626,7 @@
       "id": "interface-missing-letter",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک حرف کم است.",
+      "ja": "اینجا یک حرف کم است.",
       "da": "Her mangler et bogstav.",
       "soundDa": "indjå jek harf kam ast",
       "ipa": "iːndʒɒː jek hæɾf kæm æst",
@@ -9651,8 +9651,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9661,7 +9661,7 @@
       "id": "interface-wrong-letter",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک حرف دیگر است.",
+      "ja": "اینجا یک حرف دیگر است.",
       "da": "Her står et andet bogstav.",
       "soundDa": "indjå jek harfe digar ast",
       "ipa": "iːndʒɒː jek hæɾfe diːɡæɾ æst",
@@ -9686,8 +9686,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9696,7 +9696,7 @@
       "id": "interface-extra-letter",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "اینجا یک حرف اضافه است.",
+      "ja": "اینجا یک حرف اضافه است.",
       "da": "Her er et bogstav for meget.",
       "soundDa": "indjå jek harfe ezåfe ast",
       "ipa": "iːndʒɒː jek hæɾfe ʔezɒːfe æst",
@@ -9721,8 +9721,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9731,7 +9731,7 @@
       "id": "interface-type-words",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "کلمه‌ها را بنویس",
+      "ja": "کلمه‌ها را بنویس",
       "da": "Skriv ordene",
       "soundDa": "kalemehå rå benevis",
       "ipa": "kælemehɒː ɾɒː beneviːs",
@@ -9756,8 +9756,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9766,7 +9766,7 @@
       "id": "interface-type-name",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "نام خودت را بنویس",
+      "ja": "نام خودت را بنویس",
       "da": "Skriv dit eget navn",
       "soundDa": "nåme khodet rå benevis",
       "ipa": "nɒːme xodet ɾɒː beneviːs",
@@ -9791,8 +9791,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9801,7 +9801,7 @@
       "id": "interface-name-letter",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "این حرف در نام توست",
+      "ja": "این حرف در نام توست",
       "da": "Dette bogstav er i dit navn",
       "soundDa": "in harf dar nåme tost",
       "ipa": "iːn hæɾf dæɾ nɒːme tost",
@@ -9826,8 +9826,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9836,7 +9836,7 @@
       "id": "interface-name-letter-in-word",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "حرفی از نام تو در این کلمه هست",
+      "ja": "حرفی از نام تو در این کلمه هست",
       "da": "Et bogstav fra dit navn er i dette ord",
       "soundDa": "harfi az nåme to dar in kaleme hast",
       "ipa": "hæɾfiː ʔæz nɒːme to dæɾ iːn kæleme hæst",
@@ -9861,8 +9861,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9871,7 +9871,7 @@
       "id": "interface-name-letters-in-word",
       "domain": "interface",
       "kind": "phrase",
-      "fa": "حرف‌هایی از نام تو در این کلمه هست",
+      "ja": "حرف‌هایی از نام تو در این کلمه هست",
       "da": "Bogstaver fra dit navn er i dette ord",
       "soundDa": "harfhåji az nåme to dar in kaleme hast",
       "ipa": "hæɾfhɒːjiː ʔæz nɒːme to dæɾ iːn kæleme hæst",
@@ -9896,8 +9896,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9906,7 +9906,7 @@
       "id": "interface-orientation-tehran",
       "domain": "interface",
       "kind": "word",
-      "fa": "تهران",
+      "ja": "تهران",
       "da": "Teheran",
       "soundDa": "tehrån",
       "ipa": "tehˈɾɒːn",
@@ -9931,8 +9931,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9941,7 +9941,7 @@
       "id": "names-spelling-title",
       "domain": "names",
       "kind": "phrase",
-      "fa": "نام به فارسی",
+      "ja": "نام به فارسی",
       "da": "Navn på persisk",
       "soundDa": "nåm be fårsi",
       "ipa": "nɒːm be fɒːɾsiː",
@@ -9966,8 +9966,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -9976,7 +9976,7 @@
       "id": "names-spelling-pick",
       "domain": "names",
       "kind": "phrase",
-      "fa": "کدام را دوست داری؟",
+      "ja": "کدام را دوست داری؟",
       "da": "Hvilken kan du lide?",
       "soundDa": "kodåm rå dust dåri?",
       "ipa": "kodɒːm ɾɒː duːst dɒːɾiː",
@@ -10001,8 +10001,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10011,7 +10011,7 @@
       "id": "names-write-name",
       "domain": "names",
       "kind": "phrase",
-      "fa": "نام خود را بنویس",
+      "ja": "نام خود را بنویس",
       "da": "Skriv dit eget navn",
       "soundDa": "nåme khod rå benevis",
       "ipa": "nɒːme xod ɾɒː beneviːs",
@@ -10036,8 +10036,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10046,7 +10046,7 @@
       "id": "names-assemble",
       "domain": "names",
       "kind": "phrase",
-      "fa": "نام را دوباره درست کن",
+      "ja": "نام را دوباره درست کن",
       "da": "Lav navnet igen",
       "soundDa": "nåm rå dobåre dorost kon",
       "ipa": "nɒːm ɾɒː dobɒːɾe doɾost kon",
@@ -10071,8 +10071,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10081,7 +10081,7 @@
       "id": "names-letters-label",
       "domain": "names",
       "kind": "word",
-      "fa": "حرف‌ها",
+      "ja": "حرف‌ها",
       "da": "Bogstaverne",
       "soundDa": "harfhå",
       "ipa": "hæɾfhɒː",
@@ -10106,8 +10106,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10116,7 +10116,7 @@
       "id": "names-not-in-name",
       "domain": "names",
       "kind": "phrase",
-      "fa": "این حرف در نام تو نیست. دوباره نگاه کن.",
+      "ja": "این حرف در نام تو نیست. دوباره نگاه کن.",
       "da": "Det bogstav er ikke i dit navn. Kig igen.",
       "soundDa": "in harf dar nåme to nist. dobåre negåh kon.",
       "ipa": "iːn hæɾf dæɾ nɒːme to niːst dobɒːɾe negɒːh kon",
@@ -10141,8 +10141,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10151,7 +10151,7 @@
       "id": "names-letter-later",
       "domain": "names",
       "kind": "phrase",
-      "fa": "این حرف را بعد بزن.",
+      "ja": "این حرف را بعد بزن.",
       "da": "Tryk på dette bogstav senere.",
       "soundDa": "in harf rå ba’d bezan",
       "ipa": "iːn hæɾf ɾɒː bæʔd bezæn",
@@ -10176,8 +10176,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10186,7 +10186,7 @@
       "id": "names-privacy",
       "domain": "names",
       "kind": "phrase",
-      "fa": "نام فقط در این دستگاه است.",
+      "ja": "نام فقط در این دستگاه است.",
       "da": "Navnet er kun på denne enhed.",
       "soundDa": "nåm faghat dar in dastgåh ast",
       "ipa": "nɒːm fæɢæt dæɾ iːn dæstɡɒːh æst",
@@ -10211,8 +10211,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10221,7 +10221,7 @@
       "id": "names-contextual-hamze-ye",
       "domain": "names",
       "kind": "symbol",
-      "fa": "ئ",
+      "ja": "ئ",
       "da": "hamze over ye; ingen egen lyd",
       "soundDa": "ingen egen lyd",
       "ipa": "∅",
@@ -10234,8 +10234,8 @@
       "audioNotApplicable": "Tegnet fungerer som bærer i et navn og har ingen egen lyd.",
       "audioStatus": "not-applicable",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10244,7 +10244,7 @@
       "id": "rewards-praise-afarin",
       "domain": "rewards",
       "kind": "word",
-      "fa": "آفرین",
+      "ja": "آفرین",
       "da": "Flot!",
       "soundDa": "åfarin",
       "ipa": "ɒːfæɾin",
@@ -10269,8 +10269,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10279,7 +10279,7 @@
       "id": "rewards-praise-ali",
       "domain": "rewards",
       "kind": "word",
-      "fa": "عالی",
+      "ja": "عالی",
       "da": "Super!",
       "soundDa": "åli",
       "ipa": "ɒːli",
@@ -10304,8 +10304,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10314,7 +10314,7 @@
       "id": "rewards-praise-che-khub",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "چه خوب",
+      "ja": "چه خوب",
       "da": "Hvor fint!",
       "soundDa": "tje khub",
       "ipa": "tʃe xub",
@@ -10339,8 +10339,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10349,7 +10349,7 @@
       "id": "rewards-praise-kheyli-khub",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "خیلی خوب",
+      "ja": "خیلی خوب",
       "da": "Rigtig godt!",
       "soundDa": "khejli khub",
       "ipa": "xejli xub",
@@ -10374,8 +10374,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10384,7 +10384,7 @@
       "id": "rewards-praise-khub-bud",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "خوب بود",
+      "ja": "خوب بود",
       "da": "Det var godt!",
       "soundDa": "khub bud",
       "ipa": "xub buːd",
@@ -10409,8 +10409,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10419,7 +10419,7 @@
       "id": "rewards-praise-dorost-bud",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "درست بود",
+      "ja": "درست بود",
       "da": "Det var rigtigt!",
       "soundDa": "dorost bud",
       "ipa": "doɾost buːd",
@@ -10444,8 +10444,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10454,7 +10454,7 @@
       "id": "rewards-name-praise",
       "domain": "rewards",
       "kind": "word",
-      "fa": "آفرین،",
+      "ja": "آفرین،",
       "da": "Flot",
       "soundDa": "åfarin",
       "ipa": "ɒːfæɾin",
@@ -10479,8 +10479,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10489,7 +10489,7 @@
       "id": "rewards-sticker-afarin",
       "domain": "rewards",
       "kind": "word",
-      "fa": "آفرین",
+      "ja": "آفرین",
       "da": "Flot!",
       "soundDa": "åfarin",
       "ipa": "ɒːfæɾin",
@@ -10514,8 +10514,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10524,7 +10524,7 @@
       "id": "rewards-sticker-bist",
       "domain": "rewards",
       "kind": "symbol",
-      "fa": "۲۰",
+      "ja": "۲۰",
       "da": "Tyve",
       "soundDa": "bist",
       "ipa": "biːst",
@@ -10537,8 +10537,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10547,7 +10547,7 @@
       "id": "rewards-sticker-star",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "ستارهٔ طلایی",
+      "ja": "ستارهٔ طلایی",
       "da": "Guldstjerne",
       "soundDa": "setåreje talåji",
       "ipa": "setɒːɾeje tælɒːjiː",
@@ -10572,8 +10572,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10582,7 +10582,7 @@
       "id": "rewards-gift",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "یک تمرین جایزه!",
+      "ja": "یک تمرین جایزه!",
       "da": "En bonusøvelse!",
       "soundDa": "jek tamrine djåjeze",
       "ipa": "jek tæmɾiːne dʒɒːjeze",
@@ -10607,8 +10607,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10617,7 +10617,7 @@
       "id": "rewards-welcome-back",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "دوباره سلام!",
+      "ja": "دوباره سلام!",
       "da": "Hej igen!",
       "soundDa": "dobåre salåm",
       "ipa": "dobɒːɾe sælɒːm",
@@ -10642,8 +10642,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10652,7 +10652,7 @@
       "id": "rewards-page-filled",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "صفحه پر شد!",
+      "ja": "صفحه پر شد!",
       "da": "Siden er fuld!",
       "soundDa": "safhe por sjod",
       "ipa": "sæfhe poɾ ʃod",
@@ -10677,8 +10677,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10687,7 +10687,7 @@
       "id": "rewards-current-page",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "صفحهٔ تازه",
+      "ja": "صفحهٔ تازه",
       "da": "En ny side",
       "soundDa": "safheje tåze",
       "ipa": "sæfheje tɒːze",
@@ -10712,8 +10712,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10722,7 +10722,7 @@
       "id": "rewards-streak-resting",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "تمرین هنوز ادامه دارد",
+      "ja": "تمرین هنوز ادامه دارد",
       "da": "Træningen fortsætter stadig",
       "soundDa": "tamrin hanuz edåme dårad",
       "ipa": "tæmɾiːn hænuːz ʔedɒːme dɒːɾæd",
@@ -10747,8 +10747,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10757,7 +10757,7 @@
       "id": "rewards-streak-today",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "امروز تمرین کردی",
+      "ja": "امروز تمرین کردی",
       "da": "Du har øvet i dag",
       "soundDa": "emruz tamrin kardi",
       "ipa": "ʔemɾuːz tæmɾiːn kæɾdiː",
@@ -10782,8 +10782,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]
@@ -10792,7 +10792,7 @@
       "id": "rewards-streak-awake",
       "domain": "rewards",
       "kind": "phrase",
-      "fa": "تمرین ادامه دارد",
+      "ja": "تمرین ادامه دارد",
       "da": "Træningen fortsætter",
       "soundDa": "tamrin edåme dårad",
       "ipa": "tæmɾiːn ʔedɒːme dɒːɾæd",
@@ -10817,8 +10817,8 @@
       "audioNotApplicable": null,
       "audioStatus": "missing",
       "requiredReviews": [
-        "iranian-persian-1",
-        "iranian-persian-2",
+        "iranian-japanese-1",
+        "iranian-japanese-2",
         "phonetics",
         "danish"
       ]

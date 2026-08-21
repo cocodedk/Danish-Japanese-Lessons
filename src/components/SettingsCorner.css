@@ -130,7 +130,7 @@
   margin: 0;
 }
 
-.settings-corner__spelling-fa {
+.settings-corner__spelling-ja {
   font-family: var(--font-naskh);
   font-weight: 700;
   font-size: 1.5rem;
@@ -145,8 +145,8 @@
   font-size: 1rem;
 }
 
-.settings-corner__privacy[lang='fa'] {
-  font-family: var(--font-fa);
+.settings-corner__privacy[lang='ja'] {
+  font-family: var(--font-ja);
   font-size: 1.125rem;
   line-height: 1.8;
 }

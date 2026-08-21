@@ -28,23 +28,23 @@ describe('reward engine — every completion celebrates', () => {
       window.localStorage.clear()
       const reward = celebrate(kind, DAY)
       expect(reward.ticks).toBeGreaterThanOrEqual(1)
-      expect(reward.praise.fa.length).toBeGreaterThan(0)
+      expect(reward.praise.ja.length).toBeGreaterThan(0)
       expect(reward.praise.da.length).toBeGreaterThan(0)
       expect(reward.sounds.length).toBeGreaterThan(0)
     }
   })
 
   it('varies the praise instead of repeating one line, in both languages', () => {
-    const fa = new Set<string>()
+    const ja = new Set<string>()
     const da = new Set<string>()
     for (let i = 0; i < 6; i += 1) {
       const reward = celebrate('answer', DAY)
-      fa.add(reward.praise.fa)
+      ja.add(reward.praise.ja)
       da.add(reward.praise.da)
     }
-    expect(fa.size).toBeGreaterThanOrEqual(4)
+    expect(ja.size).toBeGreaterThanOrEqual(4)
     expect(da.size).toBeGreaterThanOrEqual(4)
-    for (const line of fa) expect(findPersianTextViolations(line)).toEqual([])
+    for (const line of ja) expect(findPersianTextViolations(line)).toEqual([])
   })
 
   it('fills the notebook page on a page event: exactly one level up, with a fanfare', () => {
@@ -87,7 +87,7 @@ describe('reward engine — surprise gifts run on a schedule, never on chance', 
     let gift = null as ReturnType<typeof celebrate>['gift']
     for (let i = 0; i < 40 && !gift; i += 1) gift = celebrate('answer', DAY).gift
     expect(gift).not.toBeNull()
-    expect(gift?.entry.fa).toBe('یک تمرین جایزه!')
+    expect(gift?.entry.ja).toBe('یک تمرین جایزه!')
     expect(gift?.entry.da).toBe('En bonusøvelse!')
   })
 
@@ -114,7 +114,7 @@ describe('reward engine — a lesson replayed pays exactly once', () => {
     const replay = celebrate('replay', DAY)
 
     expect(replay.ticks).toBeGreaterThanOrEqual(1)
-    expect(replay.praise.fa.length).toBeGreaterThan(0)
+    expect(replay.praise.ja.length).toBeGreaterThan(0)
     expect(replay.stickers).toEqual([])
     expect(replay.streak.value).toBeGreaterThan(0)
     for (let i = 0; i < 30; i += 1) celebrate('replay', DAY)
@@ -145,7 +145,7 @@ describe('reward engine — a gift pays exactly once', () => {
     const replay = celebrate('answer', DAY, 'g1')
 
     expect(replay.ticks).toBeGreaterThanOrEqual(1)
-    expect(replay.praise.fa.length).toBeGreaterThan(0)
+    expect(replay.praise.ja.length).toBeGreaterThan(0)
     expect(replay.stickers).toEqual([])
     expect(replay.points).toBe(getRewards(DAY).points)
   })
@@ -154,14 +154,14 @@ describe('reward engine — a gift pays exactly once', () => {
     playGift('g1')
     const pointsBefore = getRewards(DAY).points
 
-    const fa = new Set<string>()
+    const ja = new Set<string>()
     for (let i = 0; i < 6; i += 1) {
       // Every one of these is claimed already: praise-only, points untouched.
-      fa.add(celebrate('answer', DAY, 'g1').praise.fa)
+      ja.add(celebrate('answer', DAY, 'g1').praise.ja)
     }
 
     expect(getRewards(DAY).points).toBe(pointsBefore)
-    expect(fa.size).toBeGreaterThanOrEqual(4)
+    expect(ja.size).toBeGreaterThanOrEqual(4)
   })
 
   it('does not cross-contaminate: a different gift id still pays its own way', () => {
@@ -181,7 +181,7 @@ describe('reward engine — a gift pays exactly once', () => {
       const partial = celebrate('answer', DAY, 'g1')
       // Praise-only: a full tick and a warm line, no points.
       expect(partial.ticks).toBeGreaterThanOrEqual(1)
-      expect(partial.praise.fa.length).toBeGreaterThan(0)
+      expect(partial.praise.ja.length).toBeGreaterThan(0)
       expect(partial.stickers).toEqual([])
     }
     expect(snapshot()).toEqual(before)

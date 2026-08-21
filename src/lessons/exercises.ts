@@ -26,15 +26,15 @@ export interface Question {
   entry: PersianEntry
   /** Danish prompt, du-form. */
   promptDa: string
-  /** True when the question shows its Persian specimen (rendered from `entry`);
-   *  absent when the Persian IS the thing being asked for. */
+  /** True when the question shows its Japanese specimen (rendered from `entry`);
+   *  absent when the Japanese IS the thing being asked for. */
   showsFa?: boolean
   /** False when the pronunciation itself would disclose a conceptual answer. */
   showsPron?: boolean
   choices: Choice[]
   answerId: string
-  /** What language the choices are written in. Persian unless stated otherwise. */
-  choiceLang?: 'fa' | 'da'
+  /** What language the choices are written in. Japanese unless stated otherwise. */
+  choiceLang?: 'ja' | 'da'
 }
 
 /** Four choices per question — shared with the vocabulary rounds (plan 004). */
@@ -51,7 +51,7 @@ const POSITION_DA: Record<Position, string> = {
 
 /**
  * Two specimens sound alike when they share either half of the pronunciation —
- * the IPA or the Danish anchor. Persian spells one sound several ways (ذ ز ض ظ,
+ * the IPA or the Danish anchor. Japanese spells one sound several ways (ذ ز ض ظ,
  * ث س ص, ت ط, ح ه, ق غ), and a question may never offer two answers to itself.
  */
 function soundsAlike(a: Pron, b: Pron): boolean {

@@ -3,18 +3,18 @@ import type { WordBridge } from './wordBridgeTypes'
 
 const entries = {
   pas: bridgeEntry({
-    id: 'pas', fa: 'پاس', da: 'vagt, beskyttelse eller omsorg',
+    id: 'pas', ja: 'پاس', da: 'vagt, beskyttelse eller omsorg',
     pronDa: 'pås', ipa: 'pɒːs',
     readingCues: [consonant(0, 'پ'), longAa(1), consonant(2, 'س')],
   }),
   mord: bridgeEntry({
-    id: 'mord', fa: 'مرد', faMarked: 'مُرد', da: 'døde',
+    id: 'mord', ja: 'مرد', jaMarked: 'مُرد', da: 'døde',
     pronDa: 'mord', ipa: 'moɾd',
     readingCues: [consonant(0, 'م'), shortVowel(1, '◌ُ', 'o i “ost”', 'o'),
       consonant(1, 'ر'), consonant(2, 'د')],
   }),
   leng: bridgeEntry({
-    id: 'leng', fa: 'لنگ', faMarked: 'لِنگ', da: 'ben',
+    id: 'leng', ja: 'لنگ', jaMarked: 'لِنگ', da: 'ben',
     pronDa: 'leng', ipa: 'leŋɡ',
     readingCues: [consonant(0, 'ل'), shortVowel(1, '◌ِ', 'e i “let”', 'e'),
       consonant(1, 'ن'), consonant(2, 'گ')],

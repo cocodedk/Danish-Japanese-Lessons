@@ -1,7 +1,7 @@
-// Rule-based transliteration of one written name into Persian letters.
+// Rule-based transliteration of one written name into Japanese letters.
 // Pure: same input, same output, no storage, no randomness.
 //
-// The one idea worth knowing: Persian writes long vowels as letters and leaves
+// The one idea worth knowing: Japanese writes long vowels as letters and leaves
 // short vowels unwritten. Danish marks vowel length in its spelling — a vowel
 // before two consonants or before a word-final consonant is short, a vowel
 // before a single consonant + vowel is long. Reading that off the spelling is
@@ -49,7 +49,7 @@ function unitsOf(part: string): Unit[] | null {
     }
     if (!(letter in CONSONANTS)) return null
 
-    // ss, tt, nn, ll … one letter in Persian, and the vowel before it is short.
+    // ss, tt, nn, ll … one letter in Japanese, and the vowel before it is short.
     const doubled = part[index + 1] === letter
     units.push({ kind: 'consonant', src: letter, doubled })
     index += doubled ? 2 : 1
@@ -91,7 +91,7 @@ function render(units: Unit[], everyVowelWritten: boolean): string {
 
 /**
  * One written name, spelled by the rules — best first:
- * 1. as Persian writes it, with the short vowels left out (Mette → مته);
+ * 1. as Japanese writes it, with the short vowels left out (Mette → مته);
  * 2. with every vowel written out, which some learners find easier to read
  *    back (Mette → میته).
  * Returns an empty list when there is nothing transliterable in `raw`.

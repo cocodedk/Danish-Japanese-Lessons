@@ -6,10 +6,10 @@ import { vowelMarks } from '../lessons/vowelMarks'
 const [zebar, zir] = vowelMarks
 
 describe('VowelChip', () => {
-  it('renders the letter as Persian, right to left', () => {
+  it('renders the letter as Japanese, right to left', () => {
     const { container } = render(<VowelChip entry={zebar.entry} />)
     const glyph = container.querySelector('.vowel-chip__glyph')
-    expect(glyph).toHaveAttribute('lang', 'fa')
+    expect(glyph).toHaveAttribute('lang', 'ja')
     expect(glyph).toHaveAttribute('dir', 'rtl')
     expect(glyph?.textContent).toBe('اَ')
   })

@@ -19,7 +19,7 @@ import { useChallengeFocus } from '../components/useChallengeFocus'
 import './puzzle.css'
 
 function MissingPrompt({ task }: { task: MissingTask }) {
-  const shown = [...task.entry.fa]
+  const shown = [...task.entry.ja]
   shown[task.missingAt] = '□'
   return <PersianText entry={task.entry} display={shown.join('')} className="puzzle__word" />
 }
@@ -143,7 +143,7 @@ export default function PuzzleScreen() {
               className={selectedChoice === choice.id ? 'puzzle__choice--selected' : undefined}
               aria-label={choice.da}
               aria-pressed={selectedChoice === choice.id}
-              onClick={() => answer(choice.fa === [...task.entry.fa][task.missingAt], choice.id)}
+              onClick={() => answer(choice.ja === [...task.entry.ja][task.missingAt], choice.id)}
             >
               <PersianText entry={choice} ariaHidden />
               {selectedChoice === choice.id && (
@@ -173,7 +173,7 @@ export default function PuzzleScreen() {
             ))}
           </div>
           {!attempted && selected.length === task.tiles.length && (
-            <Button onClick={() => answer(ordered === task.entry.fa)}>Se efter</Button>
+            <Button onClick={() => answer(ordered === task.entry.ja)}>Se efter</Button>
           )}
         </>
       )}

@@ -17,7 +17,7 @@ export const NAME_TASK = 'name'
 /**
  * «نامِ خودت را بنویس» — the capstone. Everything the app has taught comes to
  * one screen: the letters, their joined shapes, and a keyboard to write them
- * on. It exists only for a learner who has a Persian spelling that this
+ * on. It exists only for a learner who has a Japanese spelling that this
  * keyboard can actually write; without one there is no screen and nothing
  * anywhere that mentions it (gate 8 — dormant, never a nag).
  */
@@ -50,7 +50,7 @@ export default function TypeNameScreen() {
         // costs nothing — the exercise is the writing, not the remembering.
         <details className="type__help">
           <summary>Se, hvordan dit navn staves</summary>
-          <PersonalNameText spelling={faSpelling} as="p" className="type__help-fa" />
+          <PersonalNameText spelling={faSpelling} as="p" className="type__help-ja" />
         </details>
       }
       doneLine="Du skrev dit eget navn med persiske bogstaver."

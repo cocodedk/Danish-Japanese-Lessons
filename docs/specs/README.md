@@ -12,7 +12,7 @@ directly improve this learning experience.
 ## Documents
 
 1. [AAA quality bar](AAA-QUALITY-BAR.md) — release governance, evidence, performance, and sign-off.
-2. [AAA learning specification](AAA-LEARNING-SPEC.md) — Persian accuracy, audio, teaching cycle,
+2. [AAA learning specification](AAA-LEARNING-SPEC.md) — Japanese accuracy, audio, teaching cycle,
    review scheduling, mastery, and connected reading.
 3. [AAA UX and accessibility specification](AAA-UX-ACCESSIBILITY-SPEC.md) — journeys, navigation,
    feedback, responsive behavior, accessibility, and manual/browser QA.

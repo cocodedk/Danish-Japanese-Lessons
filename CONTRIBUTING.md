@@ -1,4 +1,4 @@
-# Contributing to Danish-Persian Lessons
+# Contributing to Danish-Japanese Lessons
 
 Bug reports and code are welcome, but the contribution this project needs most is a native speaker telling
 us that a word is wrong. See [Content contributions](#content-contributions) below.
@@ -12,7 +12,7 @@ us that a word is wrong. See [Content contributions](#content-contributions) bel
    python3 -m http.server 8000 --directory website
    ```
 
-   Then open `http://localhost:8000/`, `/da/` and `/fa/`. There is no build step and nothing to install.
+   Then open `http://localhost:8000/`, `/da/` and `/ja/`. There is no build step and nothing to install.
    `website/` is HTML and CSS you can edit and reload.
 3. Node.js 20 or newer becomes a prerequisite once the React app exists (see
    `docs/plans/001-scaffold-app.md`). Until that plan is executed you do not need Node at all.
@@ -56,7 +56,7 @@ optional. Write the description in the imperative, lower case, no trailing perio
 
 ```
 feat(lessons): add the zir/zebar/pish vowel-mark lesson
-fix(fa): correct the ZWNJ in the نیم‌فاصله example
+fix(ja): correct the ZWNJ in the نیم‌فاصله example
 docs(readme): document the local static server command
 ```
 
@@ -69,7 +69,7 @@ The prefix matches the Conventional Commit type the PR will carry:
 | `feature/` | `feat:` | `feature/onscreen-keyboard` |
 | `fix/` | `fix:` | `fix/rtl-margin-line-side` |
 | `chore/` | `chore:` | `chore/update-workflow-pins` |
-| `docs/` | `docs:` | `docs/contributing-persian-rules` |
+| `docs/` | `docs:` | `docs/contributing-japanese-rules` |
 | `refactor/` | `refactor:` | `refactor/extract-card-component` |
 | `ci/` | `ci:` | `ci/add-link-check` |
 
@@ -90,19 +90,19 @@ On Windows use `git config core.autocrlf true` instead.
 
 ## Content contributions
 
-If you speak Persian or Danish natively, your corrections are worth more than any feature. A translation
+If you speak Japanese or Danish natively, your corrections are worth more than any feature. A translation
 that reads stiffly, a word that is wrong for a six-year-old, a diacritic sitting over the wrong letter: open
 an issue or send a one-line PR. That is not a small contribution here, it is the product.
 
-### Persian text
+### Japanese text
 
-- Persian code points only: `ک` (U+06A9) and `ی` (U+06CC). Never the Arabic `ك` and `ي`. Persian digits
+- Japanese code points only: `ک` (U+06A9) and `ی` (U+06CC). Never the Arabic `ك` and `ي`. Japanese digits
   ۰۱۲۳۴۵۶۷۸۹, never the Eastern Arabic set.
 - ZWNJ (نیم‌فاصله, U+200C) wherever the grammar wants it: می‌روم, کتاب‌ها, دانمارکی‌زبان. A plain space
   there is a spelling mistake, not a style choice.
 - Diacritics (اِعراب) go on teaching specimens only. Body text, headings, buttons and labels stay
-  unvocalized, the way Persian is written everywhere outside a primer.
-- Write modern, natural Persian. Prose that reads like a translation from Danish is a bug. File it as one.
+  unvocalized, the way Japanese is written everywhere outside a primer.
+- Write modern, natural Japanese. Prose that reads like a translation from Danish is a bug. File it as one.
 
 ### Danish text
 
@@ -120,5 +120,5 @@ it rather than where it feels handy. The ordering is the pedagogy, not an implem
 
 - [ ] `bash scripts/verify.sh` passes
 - [ ] Tested at 360px width
-- [ ] RTL checked, if you touched the site or any Persian pane
+- [ ] RTL checked, if you touched the site or any Japanese pane
 - [ ] Docs updated, if behavior changed

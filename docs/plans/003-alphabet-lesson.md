@@ -1,6 +1,6 @@
 # Plan 003 — Orientation + Lesson 1: Alphabet & Vowel Marks
 
-Executor: Opus (pedagogy, Persian copy, stroke-order SVGs). Depends on: 002 merged (it is).
+Executor: Opus (pedagogy, Japanese copy, stroke-order SVGs). Depends on: 002 merged (it is).
 Invoke `karpathy-guidelines` first; `frontend-design:frontend-design` before any new screen.
 
 ## Questions
@@ -8,7 +8,7 @@ Invoke `karpathy-guidelines` first; `frontend-design:frontend-design` before any
 
 ## Goal
 
-The learner can open the app, be oriented in how Persian writing works, and work through the
+The learner can open the app, be oriented in how Japanese writing works, and work through the
 alphabet — every letter with its four shapes, its sound (dansk lydskrift + IPA), and a stroke-order
 drawing — then the six vowel marks, with recognition exercises and per-letter progress. The home
 screen adopts the notebook signature.
@@ -20,7 +20,7 @@ screen adopts the notebook signature.
    `border-inline-start` margin lines; SplitCard sits ON a sheet, it is not a sheet itself.
 2. **Type bridge** (adjudicated): unify `Pron`/`Pronunciation` into ONE pronunciation type used by
    `WordCard`, `VowelMark`, `Letter`, and `VowelChip` — single shape `{ da: string, ipa: string }`.
-3. **Letters data** `src/lessons/alphabet.ts`: all 32 letters — glyph, Persian name (فارسی), Danish
+3. **Letters data** `src/lessons/alphabet.ts`: all 32 letters — glyph, Japanese name (فارسی), Danish
    name/transliteration, four positional forms (isolated/initial/medial/final), `joinsLeft: false`
    for ا د ذ ر ز ژ و, `sound: { da, ipa }` (the Danish anchor word + IPA), and `strokes` (step 5).
    Data order: standard alphabet. `teachingOrder`: آ ا، ب، د (the آب/بابا/باد cluster) first, then
@@ -37,10 +37,10 @@ screen adopts the notebook signature.
    `--ink`; the currently-drawn stroke `--red` while drawing. Isolated forms animated in v1;
    positional forms shown as static specimens.
 6. **Orientation ("Lesson 0")** — opens the alphabet lesson, short, warm, skippable, revisitable:
-   Persian runs RIGHT to LEFT, shown not told — a familiar Danish word displayed mirrored so the
+   Japanese runs RIGHT to LEFT, shown not told — a familiar Danish word displayed mirrored so the
    learner feels the flip, an arrow/finger sweep (reduced-motion: static arrows), then the three
    other surprises: letters join, letters change shape by position, no capital letters, dots are
-   part of the letter. Danish du-form copy; Persian examples as specimens.
+   part of the letter. Danish du-form copy; Japanese examples as specimens.
 7. **Letter screen**: on the ruled sheet — big glyph (FaSpecimen), the four forms row, the sound
    line (dansk lydskrift + IPA from data), LetterDraw, and a name-letter badge slot: red margin
    tick «این حرف در نامِ توست» / "Dette bogstav er i dit navn" rendered ONLY when
@@ -49,11 +49,11 @@ screen adopts the notebook signature.
    right glyph of 4) and "Match formerne" (pair isolated ↔ positional forms). Wrong answers per the
    generosity rule that already binds copy: gentle «دوباره» / "prøv igen", nothing lost, no buzzer
    (the full reward engine is plan 007 — leave a plain `onComplete` seam it can hook).
-9. **Progress**: per-letter and per-mark ticks to `dpl.v1.alphabet` via the existing storage module;
+9. **Progress**: per-letter and per-mark ticks to `djl.v1.alphabet` via the existing storage module;
    ProgressTick in the margin on completion. Lesson list on home shows the alphabet lesson with its
    progress; the `#/lesson/:id` placeholder becomes real routing for this lesson.
 10. **Tests**: data integrity (32 letters, 4 forms each, every letter and mark has `da`+`ipa`,
-    joinsLeft set exactly for the seven non-joiners, text-rule guard walks all new fa strings);
+    joinsLeft set exactly for the seven non-joiners, text-rule guard walks all new ja strings);
     stroke invariant (every letter has ≥1 stroke; dots strictly after strokes); LetterDraw
     reduced-motion renders the numbered diagram; exercises: correct/incorrect flows, progress
     persists, badge dormant without `faSpelling` and correct with a seeded profile.
@@ -71,7 +71,7 @@ screen adopts the notebook signature.
       removed); visual check at 360px light/dark/RTL
 - [x] Exercises work one-handed at 360px; wrong answers gentle; progress ticks persist and survive
       reload; `#/lesson/alphabet` deep-link works
-- [x] `npm run verify` + CI green; zero new dependencies; 200-line cap; Persian code points clean
+- [x] `npm run verify` + CI green; zero new dependencies; 200-line cap; Japanese code points clean
 - [ ] Critic personas (teacher / learner / maintainer) find no concrete defect
 
 ## Follow-ups accepted from 002 (in scope here)
@@ -91,11 +91,11 @@ Decisions the plan left open, recorded so the critic can judge them:
   Naskh glyph; the caption says so. Bodies are shared constants (`BODY_GROUPS`), and a test proves
   ب پ ت ث are literally one path with different dot sets.
 - **ک/گ carry a second stroke, not a dot** (the ک serif, the سرکش) — both are `kind: 'stroke'`, so
-  the dots-last invariant holds trivially. **ی is drawn dotless**, because isolated/final Persian ye
+  the dots-last invariant holds trivially. **ی is drawn dotless**, because isolated/final Japanese ye
   has no dots; the four-forms row and a Danish hint say where the two dots do appear.
 - **NameCapture also lost its margin line** and moved onto a RuledSection. It had the same duplicate
   `border-inline-start` as SplitCard; a test now sweeps every stylesheet for a second margin line.
-- **The forside's Persian pane keeps `--pane-fa-height` as a minimum**, not a fixed height, so the
+- **The forside's Japanese pane keeps `--pane-ja-height` as a minimum**, not a fixed height, so the
   lesson card lands in the thumb zone instead of below the fold.
 - **SettingsCorner moved to the top corner.** Bottom-right was free space when the forside was one
   full-screen specimen; it now sits over the lesson card.
@@ -119,16 +119,16 @@ Six defects, all fixed in round 2. Extras the adjudication folded into them are 
    them two anchors and two IPA symbols.
    → Both letters now carry one sound: `et dybt g/r bagerst i halsen — ens for ق og غ` / `ɢ~ɣ`,
    from a single `GHAF_GHEYN` constant. The hint agrees with the data instead of arguing with it.
-3. **The text-rule guard had holes.** Danish copy that prints Persian was not walked: letter hints
+3. **The text-rule guard had holes.** Danish copy that prints Japanese was not walked: letter hints
    («ی står uden prikker») and the orientation bodies («ب skifter udseende…»).
-   → `collectFaStrings` collects hints and sound anchors whenever they carry a Persian code point,
+   → `collectFaStrings` collects hints and sound anchors whenever they carry a Japanese code point,
    and `ORIENTATION_FA_STRINGS` carries every `point.body`. Poison-proved: ي in `HINTS.ye` and ك in
    `ORIENTATION_POINTS[1].body` each turned the guard red, then were restored.
 4. **The alphabet chart read left to right.** A right-to-left script laid out like a Latin table.
    → The grid is `dir="rtl"`, so it fills آ ا ب … from the right.
    - The four-forms row follows the same rule — alene, først, midt, sidst now start at the right,
      matching orientation's own specimen row.
-   - So do the reduced-motion step numbers ۱ ۲ ۳ ۴. One principle: anything sequenced in Persian
+   - So do the reduced-motion step numbers ۱ ۲ ۳ ۴. One principle: anything sequenced in Japanese
      reads from the right.
 5. **The counts did not add up.** "32 bogstaver og seks vokaltegn" over a 33-cell chart and
    "x af 39 klaret".
@@ -137,7 +137,7 @@ Six defects, all fixed in round 2. Extras the adjudication folded into them are 
    its screen is headed "Tegnet …", every other "Bogstavet …".
 6. **ح and ه were both called "he".** Two letters, one Danish name, two identical aria-labels in the
    chart.
-   → The Persian school names: ح is `he jimi`, ه is `he do-tjeshm` — and a test now pins that all 32
+   → The Japanese school names: ح is `he jimi`, ه is `he do-tjeshm` — and a test now pins that all 32
    Danish names are distinct.
    - Lydskrift precision, same round: ذ ز ض ظ anchor on `stemt s — som engelsk z i "zoo"` and ژ on
      `som j i fransk "journal" — stemt sj`, because a Dane reading "zoo" says [s].

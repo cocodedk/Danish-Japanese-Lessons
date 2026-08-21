@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* ==========================================================================
-   Danish-Persian Lessons — landing stylesheet
+   Danish-Japanese Lessons — landing stylesheet
    Implements docs/design/ART-DIRECTION.md: «دفتر مشق» / the exercise notebook.
    Mobile-first (base ≈360px), enhanced at 640 / 768 / 1024px only.
-   Shared by /index.html, /da/index.html and /fa/index.html.
+   Shared by /index.html, /da/index.html and /ja/index.html.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -18,7 +18,7 @@
   --card:  #EFE8DA;
 
   --font-latin: "Andika", "Segoe UI", system-ui, sans-serif;
-  --font-fa:    "Vazirmatn", "Noto Naskh Arabic", system-ui, sans-serif;
+  --font-ja:    "Vazirmatn", "Noto Naskh Arabic", system-ui, sans-serif;
   --font-naskh: "Noto Naskh Arabic", "Vazirmatn", serif;
 
   /* the notebook grid */
@@ -42,7 +42,7 @@
    1a. Self-hosted fonts — same files the app uses (see public/fonts/OFL.txt).
    No runtime Google Fonts requests. Paths are relative to this stylesheet's
    own location (the site root), so they resolve the same from /, /da/ and
-   /fa/ alike.
+   /ja/ alike.
    -------------------------------------------------------------------------- */
 @font-face {
   font-family: "Andika";
@@ -107,8 +107,8 @@ body {
 
 [dir="rtl"] body,
 body[dir="rtl"] {
-  font-family: var(--font-fa);
-  font-size: 1.125rem;     /* Persian body floor */
+  font-family: var(--font-ja);
+  font-size: 1.125rem;     /* Japanese body floor */
   line-height: 1.9;
 }
 
@@ -388,7 +388,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
 [dir="rtl"] .steps p { font-size: 1.075rem; }
 
 .shapes,
-.inline-fa {
+.inline-ja {
   font-family: var(--font-naskh);
   font-weight: 700;
   direction: rtl;
@@ -397,7 +397,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
   line-height: 1.3;        /* keeps the surrounding line boxes even */
 }
 
-.inline-fa--red { color: var(--red); }
+.inline-ja--red { color: var(--red); }
 
 /* --------------------------------------------------------------------------
    9. Curriculum preview — four specimen mini-cards
@@ -416,7 +416,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
   text-align: center;
 }
 
-.words .fa {
+.words .ja {
   display: block;
   font-family: var(--font-naskh);
   font-weight: 700;
@@ -427,12 +427,12 @@ main > section:first-child { padding-block-start: 1.25rem; }
   margin: 0 0 -0.2em;
 }
 
-.words .fa--madde { /* same clipped-gradient trick, same tuned cut */
+.words .ja--madde { /* same clipped-gradient trick, same tuned cut */
   color: var(--ink);
 }
 
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .words .fa--madde {
+  .words .ja--madde {
     background-image: linear-gradient(to bottom,
       var(--red) 0 var(--madde-cut), var(--ink) var(--madde-cut));
     background-repeat: no-repeat;
@@ -443,7 +443,7 @@ main > section:first-child { padding-block-start: 1.25rem; }
 }
 
 @media (forced-colors: active) {
-  .words .fa--madde { background-image: none; color: CanvasText; }
+  .words .ja--madde { background-image: none; color: CanvasText; }
 }
 
 .words hr {
@@ -561,9 +561,9 @@ footer p { margin: 0; }
 
 [dir="rtl"] .cta,
 [dir="rtl"] .langs a,
-[dir="rtl"] .langs span { font-family: var(--font-fa); }
+[dir="rtl"] .langs span { font-family: var(--font-ja); }
 
-[dir="rtl"] .steps .num { font-family: var(--font-fa); }
+[dir="rtl"] .steps .num { font-family: var(--font-ja); }
 
 /* --------------------------------------------------------------------------
    14. Enhancements — min-width only

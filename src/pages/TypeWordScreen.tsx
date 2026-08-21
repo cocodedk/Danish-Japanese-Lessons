@@ -9,9 +9,9 @@ import { TYPE_WORDS_ENTRY } from '../content/faStrings'
 
 /**
  * «کلمه‌ها را بنویس» — one unit's words, written rather than recognized. The
- * prompt is the Danish word and how it sounds; the Persian is what the learner
+ * prompt is the Danish word and how it sounds; the Japanese is what the learner
  * has to produce, so it never appears until they have written it themselves.
- * Leaving early costs nothing (docs/plans/005-persian-keyboard.md step 4).
+ * Leaving early costs nothing (docs/plans/005-japanese-keyboard.md step 4).
  */
 export default function TypeWordScreen() {
   const { unit: unitId = '' } = useParams()
@@ -29,7 +29,7 @@ export default function TypeWordScreen() {
     pron: word.pron,
     // The plain spelling, never the vocalized one: the keyboard has no
     // اِعراب keys, so اِعراب can never be part of what is asked for.
-    answer: word.fa,
+    answer: word.ja,
   }))
 
   return (

@@ -1,4 +1,4 @@
-// A written name in, ranked Persian spellings out. Pure — this module is the
+// A written name in, ranked Japanese spellings out. Pure — this module is the
 // one place that decides how a name is spelled, and it decides the same way
 // every time. See docs/plans/006-your-name.md step 1.
 import { overrideFor } from './overrides'
@@ -32,7 +32,7 @@ function partSpellings(part: string): string[] {
 }
 
 /**
- * Ranked Persian spellings of `raw`, best first, at most three. Empty when
+ * Ranked Japanese spellings of `raw`, best first, at most three. Empty when
  * there is no letter to work with, when a part is an initial rather than a
  * name, or when a part has nothing decent left to offer — a name field the
  * engine cannot answer honestly gets no suggestion rather than a bad one, and

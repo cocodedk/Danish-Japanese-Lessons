@@ -25,7 +25,7 @@ export function NameCapture({ onSubmit, onSkip }: NameCaptureProps) {
   return (
     <main className="name-capture">
       <RuledSection>
-        <div className="name-capture__pane name-capture__pane--fa">
+        <div className="name-capture__pane name-capture__pane--ja">
           <CompactPhraseRow entry={CAPTURE_PROMPT_ENTRY} />
         </div>
 

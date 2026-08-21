@@ -56,14 +56,14 @@ describe('the learner’s name, capture to lesson', () => {
     fireEvent.click(screen.getByText('Gem stavemåden'))
     expect(getProfile()).toEqual({ name, faSpelling: spelling })
 
-    // The forside greets in Persian by the Persian spelling, in Danish by the
+    // The forside greets in Japanese by the Japanese spelling, in Danish by the
     // written name — and never the other way round.
     expect(screen.getByText('سلام،')).toBeInTheDocument()
     expect(screen.getByText(spelling)).toBeInTheDocument()
     expect(screen.getByText(`Hej ${name}!`)).toBeInTheDocument()
-    // (The pronunciation line is the one Latin the Persian pane carries by
+    // (The pronunciation line is the one Latin the Japanese pane carries by
     //  design; the greeting itself never does.)
-    const greeting = document.querySelector('.split-card__pane--fa .split-card__greeting')
+    const greeting = document.querySelector('.split-card__pane--ja .split-card__greeting')
     expect(greeting?.textContent).toContain(`سلام، ${spelling}!`)
     expect(greeting?.textContent).toContain('salåm · [sælɒːm]')
 
@@ -73,11 +73,11 @@ describe('the learner’s name, capture to lesson', () => {
 
     // A letter of the name carries the badge; a letter outside it does not.
     open(`#/lesson/alphabet/bogstav/${letterId([...spelling][0])}`)
-    expect(screen.getByText(NAME_LETTER_ENTRY.fa)).toBeInTheDocument()
+    expect(screen.getByText(NAME_LETTER_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Dette bogstav er i dit navn')).toBeInTheDocument()
 
     open(`#/lesson/alphabet/bogstav/${idOutside(spelling)}`)
-    expect(screen.queryByText(NAME_LETTER_ENTRY.fa)).not.toBeInTheDocument()
+    expect(screen.queryByText(NAME_LETTER_ENTRY.ja)).not.toBeInTheDocument()
 
     // And the mini-lesson opens on the same spelling — one source of truth.
     open('#/lesson/navn')
@@ -97,7 +97,7 @@ describe('the learner’s name, capture to lesson', () => {
     expect(screen.getByRole('link', { name: /Alfabetet/ })).toBeInTheDocument()
 
     open('#/lesson/alphabet/bogstav/be')
-    expect(screen.queryByText(NAME_LETTER_ENTRY.fa)).not.toBeInTheDocument()
+    expect(screen.queryByText(NAME_LETTER_ENTRY.ja)).not.toBeInTheDocument()
 
     open('#/lesson/navn')
     expect(screen.getByText('Hej!')).toBeInTheDocument()
@@ -122,13 +122,13 @@ describe('the learner’s name, capture to lesson', () => {
     expect(screen.queryByRole('link', { name: /Dit navn/ })).not.toBeInTheDocument()
 
     open('#/lesson/alphabet/bogstav/be')
-    expect(screen.queryByText(NAME_LETTER_ENTRY.fa)).not.toBeInTheDocument()
+    expect(screen.queryByText(NAME_LETTER_ENTRY.ja)).not.toBeInTheDocument()
 
     open('#/lesson/navn')
     expect(screen.getByText('Hej!')).toBeInTheDocument()
   })
 
-  it('a name the learner skips the spelling for leaves the Persian pane plain', () => {
+  it('a name the learner skips the spelling for leaves the Japanese pane plain', () => {
     open('#/')
     fireEvent.change(screen.getByLabelText('Hvad hedder du?'), { target: { value: 'Lærke' } })
     fireEvent.click(screen.getByText('Gem'))

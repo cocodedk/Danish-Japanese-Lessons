@@ -22,14 +22,14 @@
   background-repeat: repeat;
 }
 
-/* Persian content needs the Persian UI/body face — Andika (the inherited
+/* Japanese content needs the Japanese UI/body face — Andika (the inherited
    Latin stack) is Latin-subset and cannot shape Arabic script at all.
-   ART-DIRECTION.md "Typography": Persian UI/body = Vazirmatn, minimum
+   ART-DIRECTION.md "Typography": Japanese UI/body = Vazirmatn, minimum
    1.125rem. Font-size only, never line-height: the rule pitch stays fixed
-   at --rule-step regardless of font, so Persian ink still lands on the
+   at --rule-step regardless of font, so Japanese ink still lands on the
    same rule lines it was tuned against. */
-.ruled-section:lang(fa) {
-  font-family: var(--font-fa);
+.ruled-section:lang(ja) {
+  font-family: var(--font-ja);
   font-size: 1.125rem;
 }
 

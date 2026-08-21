@@ -26,7 +26,7 @@ describe('online audio review', () => {
     const goodButtons = screen.getAllByRole('button', { name: 'God' })
     fireEvent.click(goodButtons[0])
     expect(goodButtons[0]).toHaveAttribute('aria-pressed', 'true')
-    expect(localStorage.getItem('dpl.audio-review.v1')).toContain('"mark":"good"')
+    expect(localStorage.getItem('djl.audio-review.v1')).toContain('"mark":"good"')
 
     fireEvent.change(screen.getByLabelText('Vis'), { target: { value: 'good' } })
     expect(screen.getAllByRole('article')).toHaveLength(1)

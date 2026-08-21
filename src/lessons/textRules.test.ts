@@ -9,28 +9,28 @@ import { suggestSpellings } from '../name/transliterate'
 import type { Lesson, Letter, VowelMark, WordCard } from './types'
 
 function isWordCard(item: Letter | VowelMark | WordCard): item is WordCard {
-  return 'fa' in item
+  return 'ja' in item
 }
 
 function isLetter(item: Letter | VowelMark | WordCard): item is Letter {
   return 'forms' in item
 }
 
-/** The Arabic block (U+0600–U+06FF): a Danish line that prints one is fa too. */
-const PERSIAN = /[\u0600-\u06FF]/
+/** The Arabic block (U+0600–U+06FF): a Danish line that prints one is ja too. */
+const JAPANESE = /[\u0600-\u06FF]/
 
 /**
- * The Danish lines that print Persian inline: a letter's or mark's hint («ی
+ * The Danish lines that print Japanese inline: a letter's or mark's hint («ی
  * står uden prikker»), a sound anchor («ens for ق og غ»). They are Danish copy,
- * so they are walked only when they actually carry a Persian glyph.
+ * so they are walked only when they actually carry a Japanese glyph.
  */
 function daLinesWithPersian(item: Letter | VowelMark | WordCard): string[] {
   const lines: Array<string | undefined> = 'hint' in item ? [item.hint] : []
   if ('sound' in item) lines.push(item.sound.da)
-  return lines.filter((line): line is string => !!line && PERSIAN.test(line))
+  return lines.filter((line): line is string => !!line && JAPANESE.test(line))
 }
 
-/** Every fa-bearing string a Lesson carries, regardless of item kind. */
+/** Every ja-bearing string a Lesson carries, regardless of item kind. */
 function collectFaStrings(lesson: Lesson): string[] {
   const strings: string[] = []
   for (const item of lesson.items) {
@@ -38,20 +38,20 @@ function collectFaStrings(lesson: Lesson): string[] {
     if (isWordCard(item)) {
       // Both spellings: the plain word AND the vocalized specimen. A ك or a ي
       // is just as wrong under an اِعراب as it is bare (plan 004, step 6).
-      strings.push(item.fa)
-      if (item.faMarked) strings.push(item.faMarked)
+      strings.push(item.ja)
+      if (item.jaMarked) strings.push(item.jaMarked)
     } else if (isLetter(item)) {
-      strings.push(item.glyph, item.name.fa, ...Object.values(item.forms))
-      if (item.madde) strings.push(item.madde.glyph, item.madde.name.fa)
+      strings.push(item.glyph, item.name.ja, ...Object.values(item.forms))
+      if (item.madde) strings.push(item.madde.glyph, item.madde.name.ja)
     } else {
-      strings.push(item.glyph, item.name.fa)
+      strings.push(item.glyph, item.name.ja)
     }
   }
   return strings
 }
 
-describe('Persian text-rule guard', () => {
-  it('accepts correct Persian code points, ZWNJ, and Persian digits', () => {
+describe('Japanese text-rule guard', () => {
+  it('accepts correct Japanese code points, ZWNJ, and Japanese digits', () => {
     expect(isValidPersianText('کتاب')).toBe(true)
     expect(isValidPersianText('می‌روم')).toBe(true)
     expect(isValidPersianText('۱۲۳')).toBe(true)
@@ -64,7 +64,7 @@ describe('Persian text-rule guard', () => {
   it('rejects the Arabic yeh ي (U+064A)', () => {
     // Built from explicit escapes, not pasted glyphs: U+064A (Arabic yeh) is
     // easy to mistake for the visually similar U+0649 (alef maksura) or
-    // U+06CC (Persian yeh) when typed by hand.
+    // U+06CC (Japanese yeh) when typed by hand.
     const arabicFormAli = 'علي' // ع ل ي (ي = U+064A)
     expect(isValidPersianText(arabicFormAli)).toBe(false)
   })
@@ -73,7 +73,7 @@ describe('Persian text-rule guard', () => {
     expect(isValidPersianText('سال 2026')).toBe(false)
   })
 
-  it('tolerates اِعراب — a vocalized specimen is correct Persian, not a violation', () => {
+  it('tolerates اِعراب — a vocalized specimen is correct Japanese, not a violation', () => {
     // Combining marks U+064B–U+0652 must not be confused with Arabic yeh.
     for (const marked of ['مَدرِسه', 'مِداد', 'گُل', 'آسِمان', 'مادَر', 'بَچّه', 'دَسْت']) {
       expect(findPersianTextViolations(marked), marked).toEqual([])
@@ -81,10 +81,10 @@ describe('Persian text-rule guard', () => {
   })
 
   it('still catches a ك or a ي hiding under the vowel marks of a specimen', () => {
-    const card = (faMarked: string): Lesson => ({
+    const card = (jaMarked: string): Lesson => ({
       id: 'fixture-marked',
       kind: 'vocab',
-      items: [{ fa: 'کتاب', faMarked, da: 'bog', pron: { da: 'ketåb', ipa: 'ketɒːb' } } as WordCard],
+      items: [{ ja: 'کتاب', jaMarked, da: 'bog', pron: { da: 'ketåb', ipa: 'ketɒːb' } } as WordCard],
     })
     expect(collectFaStrings(card('كِتاب')).flatMap(findPersianTextViolations)).not.toEqual([])
     expect(collectFaStrings(card('کِتاب')).flatMap(findPersianTextViolations)).toEqual([])
@@ -94,7 +94,7 @@ describe('Persian text-rule guard', () => {
     const badFixture: Lesson = {
       id: 'fixture-bad',
       kind: 'vocab',
-      items: [{ fa: 'كتاب', da: 'bog', pron: { da: 'ketab', ipa: 'ketæːb' } } as WordCard],
+      items: [{ ja: 'كتاب', da: 'bog', pron: { da: 'ketab', ipa: 'ketæːb' } } as WordCard],
     }
     const badViolations = collectFaStrings(badFixture).flatMap(findPersianTextViolations)
     expect(badViolations.length).toBeGreaterThan(0)
@@ -102,17 +102,17 @@ describe('Persian text-rule guard', () => {
     const fixedFixture: Lesson = {
       ...badFixture,
       id: 'fixture-fixed',
-      items: [{ fa: 'کتاب', da: 'bog', pron: { da: 'ketab', ipa: 'ketæːb' } } as WordCard],
+      items: [{ ja: 'کتاب', da: 'bog', pron: { da: 'ketab', ipa: 'ketæːb' } } as WordCard],
     }
     const fixedViolations = collectFaStrings(fixedFixture).flatMap(findPersianTextViolations)
     expect(fixedViolations).toEqual([])
   })
 
-  it('also walks the Letter item shape correctly (glyph, name.fa, and all four forms) — proven now, ahead of plan 003', () => {
+  it('also walks the Letter item shape correctly (glyph, name.ja, and all four forms) — proven now, ahead of plan 003', () => {
     const badLetter = {
       id: 'kaf-fixture',
       glyph: 'ك', // deliberately bad: Arabic kaf, should be ک
-      name: { fa: 'کاف', da: 'kaf' },
+      name: { ja: 'کاف', da: 'kaf' },
       forms: { isolated: 'ک', initial: 'کـ', medial: 'ـکـ', final: 'ـک' },
       joinsLeft: true,
       sound: { da: 'k i "kat"', ipa: 'k' },
@@ -136,7 +136,7 @@ describe('Persian text-rule guard', () => {
     const withHint = {
       id: 'ye-fixture',
       glyph: 'ی',
-      name: { fa: 'یِ', da: 'ye' },
+      name: { ja: 'یِ', da: 'ye' },
       forms: { isolated: 'ی', initial: 'یـ', medial: 'ـیـ', final: 'ـی' },
       joinsLeft: true,
       sound: { da: 'j i "ja"', ipa: 'j' },
@@ -162,16 +162,16 @@ describe('Persian text-rule guard', () => {
     expect(allViolations).toEqual([])
   })
 
-  it('walks every exported Persian UI string (capture prompt, lesson placeholder, greeting) with zero violations — a future ك/ي edit to src/content/faStrings.ts fails this test', () => {
+  it('walks every exported Japanese UI string (capture prompt, lesson placeholder, greeting) with zero violations — a future ك/ي edit to src/content/faStrings.ts fails this test', () => {
     const allViolations = PERSIAN_UI_STRINGS.flatMap(findPersianTextViolations)
     expect(allViolations).toEqual([])
   })
 
-  it('keeps orientation Persian in catalog entries instead of inline Danish bodies', () => {
+  it('keeps orientation Japanese in catalog entries instead of inline Danish bodies', () => {
     for (const point of ORIENTATION_POINTS) {
-      expect(PERSIAN.test(point.body), point.id).toBe(false)
-      for (const token of point.fa) {
-        expect(findPersianTextViolations(token.entry.fa), point.id).toEqual([])
+      expect(JAPANESE.test(point.body), point.id).toBe(false)
+      for (const token of point.ja) {
+        expect(findPersianTextViolations(token.entry.ja), point.id).toEqual([])
       }
     }
   })

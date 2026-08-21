@@ -34,7 +34,7 @@ describe('backspace', () => {
   })
 
   it('never splits a code point into halves', () => {
-    // Nothing in Persian sits outside the BMP, but the rule is code points, and
+    // Nothing in Japanese sits outside the BMP, but the rule is code points, and
     // a `slice(0, -1)` would hand back half a surrogate pair.
     expect(backspace('ب😀')).toBe('ب')
   })
@@ -54,7 +54,7 @@ describe('ZWNJ', () => {
     expect(appendSeparator(once, ZWNJ)).toBe(once)
   })
 
-  it('writes a joined word the way Persian spells it', () => {
+  it('writes a joined word the way Japanese spells it', () => {
     expect(appendLetter(appendSeparator('کتاب', ZWNJ), 'ه')).toBe(`کتاب${ZWNJ}ه`)
   })
 })

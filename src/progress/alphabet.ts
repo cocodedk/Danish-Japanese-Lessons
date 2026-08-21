@@ -1,4 +1,4 @@
-// Progress through the alphabet lesson: `dpl.v1.alphabet`.
+// Progress through the alphabet lesson: `djl.v1.alphabet`.
 //
 // Add-only, on purpose. A tick is never removed, a count never drops — the
 // generosity rule in CLAUDE.md is enforced here rather than trusted to callers.

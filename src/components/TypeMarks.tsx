@@ -21,7 +21,7 @@ import './TypeExercise.css'
  * either — and they say it honestly: a space and a نیم‌فاصله have no
  * letterform, so neither is ever called "et andet bogstav" (critic round 1).
  * Ordinary-letter notes also use a complete bilingual entry, so the Danish
- * line never explains more than the Persian line says.
+ * line never explains more than the Japanese line says.
  */
 export function noteFor({ kind, cellKind }: Divergence): { entry?: PersianEntry } {
   if (kind === 'match') return {}

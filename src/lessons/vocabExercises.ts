@@ -20,7 +20,7 @@ export function isVocabExerciseKind(value: string): value is VocabExerciseKind {
 
 /**
  * Two words are too alike to share a question when they mean the same thing or
- * sound the same — either one would answer the other's prompt. Persian has
+ * sound the same — either one would answer the other's prompt. Japanese has
  * plenty of هم‌آوا pairs waiting to be added (از/آز), so the rule lives here as
  * well as in the data test, and a future word cannot slip past it.
  */
@@ -54,9 +54,9 @@ export function distractors(words: VocabWord[], index: number): VocabWord[] {
   return pool
 }
 
-/** What a choice is printed with: the Danish meaning, or the bare Persian word. */
+/** What a choice is printed with: the Danish meaning, or the bare Japanese word. */
 function choiceOf(word: VocabWord, kind: VocabExerciseKind): Choice {
-  return { id: word.id, entry: word.entry, glyph: kind === 'ord' ? word.da : word.fa }
+  return { id: word.id, entry: word.entry, glyph: kind === 'ord' ? word.da : word.ja }
 }
 
 /**
@@ -83,6 +83,6 @@ export function buildVocabQuestions(unitId: string, kind: VocabExerciseKind): Qu
       index,
     ),
     answerId: word.id,
-    choiceLang: kind === 'ord' ? ('da' as const) : ('fa' as const),
+    choiceLang: kind === 'ord' ? ('da' as const) : ('ja' as const),
   }))
 }

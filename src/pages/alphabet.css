@@ -15,9 +15,9 @@
   max-inline-size: 34rem;
 }
 
-/* آ is a thin stroke and a wave: in the Danish lead it needs the Persian face. */
-.alphabet__lead-fa {
-  font-family: var(--font-fa);
+/* آ is a thin stroke and a wave: in the Danish lead it needs the Japanese face. */
+.alphabet__lead-ja {
+  font-family: var(--font-ja);
   font-size: 1.125rem;
 }
 
@@ -28,7 +28,7 @@
   line-height: var(--rule-step);
 }
 
-/* The 33 specimens, five to a row. A Persian sequence: it fills from the right. */
+/* The 33 specimens, five to a row. A Japanese sequence: it fills from the right. */
 .alphabet__grid {
   direction: rtl;
   display: grid;

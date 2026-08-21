@@ -20,10 +20,10 @@
   padding-block: 1.25rem;
 }
 
-.split-card__pane--fa {
+.split-card__pane--ja {
   flex: 0 0 auto;
-  min-block-size: var(--pane-fa-height);
-  font-family: var(--font-fa);
+  min-block-size: var(--pane-ja-height);
+  font-family: var(--font-ja);
 }
 
 .split-card__pane--da {
@@ -37,6 +37,6 @@
   opacity: 0.85;
 }
 
-.split-card__pane--fa .split-card__greeting {
+.split-card__pane--ja .split-card__greeting {
   font-size: 1.35rem;
 }

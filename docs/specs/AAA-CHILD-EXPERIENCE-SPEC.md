@@ -3,15 +3,15 @@
 Status: normative for [Plan 014](../plans/014-child-first-aaa-experience.md).
 
 This specification adds a child-facing journey to the same accurate, adaptive, accessible course. It
-does not weaken Persian accuracy, privacy, accessibility, or the grown-up learner contract.
+does not weaken Japanese accuracy, privacy, accessibility, or the grown-up learner contract.
 
 ## Learner and promise
 
 The provisional primary learner is an 8–12-year-old who can read short Danish commands, is curious
-about Persian, and did not necessarily request a course. The experience MUST remain respectful for an
+about Japanese, and did not necessarily request a course. The experience MUST remain respectful for an
 older learner and usable beside a parent for a younger learner.
 
-The promise is: “I can make, recognize, and keep something Persian that matters now.” The interface
+The promise is: “I can make, recognize, and keep something Japanese that matters now.” The interface
 MUST NOT imply that the learner owes daily practice, must finish the alphabet, or is responsible for
 preserving a family language.
 
@@ -36,15 +36,15 @@ preserving a family language.
 ### Competence
 
 - The first task MUST be guided and understandable without adult explanation.
-- One complete Persian result MUST appear within one short mission, not after an alphabet inventory.
+- One complete Japanese result MUST appear within one short mission, not after an alphabet inventory.
 - The current action and its result MUST remain in the same interaction region.
 - Difficulty MUST progress model → guide → retrieve, never test → unexplained correction.
 
 ### Relatedness
 
-- Initial content MUST use ordinary, imageable Persian words from the existing reviewed curriculum.
+- Initial content MUST use ordinary, imageable Japanese words from the existing reviewed curriculum.
 - Future personal names or family messages MAY extend the journey only after content review.
-- Danish and Persian MUST appear as cooperating resources, not competing identities.
+- Danish and Japanese MUST appear as cooperating resources, not competing identities.
 - The child MUST control whether personal or family content appears in her journey.
 
 ## Information hierarchy
@@ -96,7 +96,7 @@ sound spelling.
 - Native controls, semantic headings, route titles, route focus, and polite status MUST be used.
 - Every author-controlled target MUST be at least 44×44 CSS pixels.
 - Tile placement MUST work with touch, pointer, Enter, Space, and screen-reader control activation.
-- Visual order, DOM order, accessible names, and Persian logical order MUST agree.
+- Visual order, DOM order, accessible names, and Japanese logical order MUST agree.
 - Selection, correctness, completion, and collected state MUST never rely on color alone.
 - Sound and motion MUST be optional; no instruction or result may exist only in either.
 - The complete child journey MUST reflow without horizontal page scrolling from 320 CSS pixels.

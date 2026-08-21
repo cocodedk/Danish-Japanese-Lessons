@@ -2,7 +2,7 @@
 // side of each row: آ ا ب پ ت ث · ج چ ح خ د ذ · ر ز ژ س ش ص ·
 // ض ط ظ ع غ ف · ق ک گ ل م ن · و ه ی. It is split into six rows of six so
 // every key can be at least 44×44px on a 360px screen
-// (docs/plans/005-persian-keyboard.md, Acceptance box 1).
+// (docs/plans/005-japanese-keyboard.md, Acceptance box 1).
 //
 // Nothing here spells a letter's name or draws its glyph a second time: both
 // come from the alphabet data, which is the single source (CLAUDE.md).
@@ -75,7 +75,7 @@ export const KEYBOARD_ROWS: KeyDef[][] = ROW_IDS.map((row) => row.map(keyFor))
 
 export const KEYBOARD_KEYS: KeyDef[] = KEYBOARD_ROWS.flat()
 
-/** Maps a hardware Persian-layout key without guessing from Latin QWERTY.
+/** Maps a hardware Japanese-layout key without guessing from Latin QWERTY.
  * Shift+Space is the conventional physical shortcut for a ZWNJ. */
 export function keyForPhysicalInput(key: string, shiftKey = false): KeyDef | undefined {
   if (key === 'Backspace') return SIGN_KEYS.backspace
@@ -92,7 +92,7 @@ const TYPEABLE = new Set(KEYBOARD_KEYS.filter((key) => key.glyph).map((key) => k
  * own list cannot be — لوئیزه spells Louise with ئ, a sign outside the 32 that
  * no lesson here teaches — and an exercise that asks for a letter the board does
  * not have is a dead end. The capstone stays dormant for such a name instead
- * (docs/plans/005-persian-keyboard.md, deviation 3).
+ * (docs/plans/005-japanese-keyboard.md, deviation 3).
  */
 export function canType(text: string): boolean {
   return [...text].every((char) => TYPEABLE.has(char))

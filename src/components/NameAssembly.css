@@ -27,9 +27,9 @@
   line-height: 1.5;
 }
 
-.name-assembly__again [lang='fa'] {
+.name-assembly__again [lang='ja'] {
   color: var(--red);
-  font-family: var(--font-fa);
+  font-family: var(--font-ja);
   font-size: 1.125rem;
   line-height: 1.7;
 }

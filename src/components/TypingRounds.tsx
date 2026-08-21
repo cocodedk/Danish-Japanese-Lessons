@@ -5,13 +5,13 @@ import { canType } from '../keyboard/layout'
 import './TypingRounds.css'
 
 export interface TypingRoundsProps {
-  /** The learner's Persian spelling, when there is one. */
+  /** The learner's Japanese spelling, when there is one. */
   faSpelling?: string
 }
 
 /**
  * The writing rounds on the forside: one per word unit, and — for a learner
- * who has a Persian spelling the keyboard can write — the capstone last.
+ * who has a Japanese spelling the keyboard can write — the capstone last.
  * Nothing here is locked and nothing has to come first; the rounds are an
  * offer, like every other list in this app.
  */

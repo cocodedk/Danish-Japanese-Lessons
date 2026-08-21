@@ -1,4 +1,4 @@
-// Persian script knowledge: which side of the line a vowel mark is written on.
+// Japanese script knowledge: which side of the line a vowel mark is written on.
 // It lives here beside the text rules, not in a component, because plans
 // 003/005/006 need the same table for lessons, the keyboard and the name
 // spelling — the red-pen rendering (src/components/penMark.ts) is only one

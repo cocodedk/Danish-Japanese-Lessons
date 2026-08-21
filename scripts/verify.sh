@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # scripts/verify.sh
 #
-# Fast, offline sanity checks for the Danish-Persian-Lessons static site.
+# Fast, offline sanity checks for the Danish-Japanese-Lessons static site.
 # Used by: .githooks/pre-commit and .githooks/pre-push.
 #
 # No network access. Expected to complete in ~2 seconds.
@@ -53,7 +53,7 @@ for f in \
   dist/version.js \
   website/index.html \
   website/da/index.html \
-  website/fa/index.html \
+  website/ja/index.html \
   website/styles.css \
   website/favicon.svg \
   website/robots.txt \
@@ -89,7 +89,7 @@ done
 
 # --- (b) shared SEO/meta substrings on each of the 3 HTML pages ---------------
 
-for page in website/index.html website/da/index.html website/fa/index.html; do
+for page in website/index.html website/da/index.html website/ja/index.html; do
   for needle in \
     'viewport' \
     'rel="canonical"' \
@@ -104,11 +104,11 @@ done
 
 # --- (c) per-language lang/dir attributes -------------------------------------
 
-if grep -q -F -- 'lang="fa"' website/fa/index.html 2>/dev/null \
-  && grep -q -F -- 'dir="rtl"' website/fa/index.html 2>/dev/null; then
-  report 'website/fa/index.html has lang="fa" and dir="rtl"' 0
+if grep -q -F -- 'lang="ja"' website/ja/index.html 2>/dev/null \
+  && grep -q -F -- 'dir="rtl"' website/ja/index.html 2>/dev/null; then
+  report 'website/ja/index.html has lang="ja" and dir="rtl"' 0
 else
-  report 'website/fa/index.html has lang="fa" and dir="rtl"' 1
+  report 'website/ja/index.html has lang="ja" and dir="rtl"' 1
 fi
 
 check_contains website/da/index.html 'lang="da"'
@@ -131,7 +131,7 @@ check_contains website/robots.txt 'Sitemap:'
 # --- (e) README.md attribution/links ------------------------------------------
 
 check_contains README.md 'cocode.dk'
-check_contains README.md 'cocodedk.github.io/Danish-Persian-Lessons'
+check_contains README.md 'cocodedk.github.io/Danish-Japanese-Lessons'
 
 # --- (f) every shipped webfont stays inside the 60 KB budget (plan 002) -------
 # Andika is subsetted to fit; regenerate with: python3 scripts/subset-fonts.py

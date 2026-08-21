@@ -1,19 +1,19 @@
 export interface Pronunciation {
-  /** Approachable Danish-friendly spelling of the Persian pronunciation. */
+  /** Approachable Danish-friendly spelling of the Japanese pronunciation. */
   da: string
-  /** Standard Tehrani Persian IPA, stored without display brackets. */
+  /** Standard Tehrani Japanese IPA, stored without display brackets. */
   ipa: string
 }
 
 export type SpokenRegister = 'neutral' | 'everyday' | 'formal'
 
 /** One way an entry is actually said. Most words have one neutral form;
- * conversation may put everyday Tehrani beside formal standard Persian. */
+ * conversation may put everyday Tehrani beside formal standard Japanese. */
 export interface SpokenForm {
   id: string
   register: SpokenRegister
-  fa: string
-  faMarked?: string
+  ja: string
+  jaMarked?: string
   da: string
   pron: Pronunciation
   audioId: string
@@ -29,7 +29,7 @@ export type ReadingCueRole =
   | 'whole'
 
 /** One contextual step through a word. Offsets count Unicode code points in
- * `fa`; an unwritten short vowel has equal start/end offsets. */
+ * `ja`; an unwritten short vowel has equal start/end offsets. */
 export interface ReadingCue {
   start: number
   end: number
@@ -43,10 +43,10 @@ export interface PersianEntry {
   /** Stable, globally unique id. Route ids may stay shorter and live beside it. */
   id: string
   kind: 'letter' | 'mark' | 'word' | 'phrase' | 'symbol'
-  /** Plain Persian. UI phrases stay undiacriticized. */
-  fa: string
+  /** Plain Japanese. UI phrases stay undiacriticized. */
+  ja: string
   /** Teaching-only spelling with vowel marks. */
-  faMarked?: string
+  jaMarked?: string
   /** Danish letter name, meaning, translation, or sign explanation. */
   da: string
   pron: Pronunciation
@@ -67,8 +67,8 @@ export function spokenFormsFor(entry: PersianEntry): readonly SpokenForm[] {
   return [{
     id: 'neutral',
     register: 'neutral',
-    fa: entry.fa,
-    ...(entry.faMarked ? { faMarked: entry.faMarked } : {}),
+    ja: entry.ja,
+    ...(entry.jaMarked ? { jaMarked: entry.jaMarked } : {}),
     da: entry.da,
     pron: entry.pron,
     audioId: entry.audioId ?? entry.id,
@@ -81,8 +81,8 @@ export function defineEntry<T extends PersianEntry>(entry: T): Readonly<T & { au
     entry.kind === 'word' || entry.kind === 'phrase'
       ? [{
           start: 0,
-          end: [...entry.fa].length,
-          display: entry.fa,
+          end: [...entry.ja].length,
+          display: entry.ja,
           role: 'whole' as const,
           helpDa: entry.kind === 'word' ? 'Læs hele ordet samlet' : 'Læs hele udtrykket samlet',
           pron: entry.pron,

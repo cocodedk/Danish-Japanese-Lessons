@@ -34,7 +34,7 @@ describe('an ordinary letter', () => {
       divergence: { kind: 'wrong', index: 0, cellKind: 'letter' },
     }))
 
-    expect(screen.getByText(TYPE_WRONG_LETTER_ENTRY.fa)).toBeInTheDocument()
+    expect(screen.getByText(TYPE_WRONG_LETTER_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText(TYPE_WRONG_LETTER_ENTRY.da)).toBeInTheDocument()
     expect(screen.queryByText(/mister ingenting/i)).not.toBeInTheDocument()
   })

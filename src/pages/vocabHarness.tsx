@@ -30,7 +30,7 @@ export function open(hash: string) {
 }
 
 export function praiseOnScreen(): boolean {
-  return PRAISE.some((line) => screen.queryAllByText(line.fa).length > 0)
+  return PRAISE.some((line) => screen.queryAllByText(line.ja).length > 0)
 }
 
 /** Walks a unit's word screens and records every one as reviewed. */

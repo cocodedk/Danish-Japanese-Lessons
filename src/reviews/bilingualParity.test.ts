@@ -41,24 +41,24 @@ function words(text: string): string[] {
 
 describe('bilingual parity', () => {
   it('keeps dynamic reward lines to one shared proposition', () => {
-    expect(filledPageLine()).toMatchObject({ fa: 'صفحه پر شد!', da: 'Siden er fuld!' })
-    expect(currentPageLine()).toMatchObject({ fa: 'صفحهٔ تازه', da: 'En ny side' })
+    expect(filledPageLine()).toMatchObject({ ja: 'صفحه پر شد!', da: 'Siden er fuld!' })
+    expect(currentPageLine()).toMatchObject({ ja: 'صفحهٔ تازه', da: 'En ny side' })
     expect(streakLine({ value: 3, resting: true, today: false })).toMatchObject({
-      fa: 'تمرین هنوز ادامه دارد',
+      ja: 'تمرین هنوز ادامه دارد',
       da: 'Træningen fortsætter stadig',
     })
     expect(streakLine({ value: 3, resting: false, today: false })).toMatchObject({
-      fa: 'تمرین ادامه دارد',
+      ja: 'تمرین ادامه دارد',
       da: 'Træningen fortsætter',
     })
     expect(streakLine({ value: 3, resting: false, today: true })).toMatchObject({
-      fa: 'امروز تمرین کردی',
+      ja: 'امروز تمرین کردی',
       da: 'Du har øvet i dag',
     })
   })
 
   it('keeps each connected-reading sentence visible in Danish', () => {
-    expect(connectedTexts.map(({ entry }) => [entry.fa, entry.da])).toEqual([
+    expect(connectedTexts.map(({ entry }) => [entry.ja, entry.da])).toEqual([
       [
         'این آب است. آن نان است. او بابا است.',
         'Dette er vand. Det der er brød. Han eller hun er far.',
@@ -103,7 +103,7 @@ describe('bilingual parity', () => {
     ]
 
     for (const entry of entries) {
-      for (const word of words(entry.fa)) {
+      for (const word of words(entry.ja)) {
         expect(ZIPF.get(word) ?? 0, `${entry.id}: ${word}`).toBeGreaterThanOrEqual(4.8)
       }
     }

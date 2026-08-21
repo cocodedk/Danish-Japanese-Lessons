@@ -23,10 +23,10 @@ export interface Specimen {
   /** Stable ascii id — used in routes (#/lesson/alphabet/bogstav/:id) and progress. */
   id: string
   entry: PersianEntry
-  /** A displayed Persian letter name is a word with its own pronunciation. */
+  /** A displayed Japanese letter name is a word with its own pronunciation. */
   nameEntry: PersianEntry
   glyph: string
-  name: { fa: string; da: string }
+  name: { ja: string; da: string }
   sound: Pron
   /** Pen paths in drawing order: every 'stroke' before every 'dot'. */
   strokes: Stroke[]
@@ -39,7 +39,7 @@ export interface Specimen {
   latinHint?: string
 }
 
-/** A single Persian letter and its four positional forms. */
+/** A single Japanese letter and its four positional forms. */
 export interface Letter extends Specimen {
   forms: {
     isolated: string
@@ -66,17 +66,17 @@ export interface VowelMark {
   entry: PersianEntry
   nameEntry: PersianEntry
   glyph: string
-  name: { fa: string; da: string }
+  name: { ja: string; da: string }
   sound: Pron
 }
 
-/** A Persian/Danish word pair, as shown in the split-screen specimen. */
+/** A Japanese/Danish word pair, as shown in the split-screen specimen. */
 export interface WordCard {
   entry: PersianEntry
-  fa: string
-  /** The diacriticized variant to render instead of `fa`, if any. Whatever is
+  ja: string
+  /** The diacriticized variant to render instead of `ja`, if any. Whatever is
    *  rendered gets its vowel marks in --red — see src/lessons/marks.ts. */
-  faMarked?: string
+  jaMarked?: string
   da: string
   pron: Pron
 }

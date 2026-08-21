@@ -1,8 +1,8 @@
-// The most common Danish first names, spelled the way they SOUND in Persian
+// The most common Danish first names, spelled the way they SOUND in Japanese
 // letters — not letter by letter. That is why Mads is ماس (the d is not spoken).
 //
 // Sound is the rule, but it is not the last word: a spelling that reads as a
-// crude Persian word is wrong however right its phonetics are. Signe is سیگنه
+// crude Japanese word is wrong however right its phonetics are. Signe is سیگنه
 // with the silent g written, because سینه is a body part; Kirsten is کرستن,
 // because the faithful کیرستن opens on an obscenity; Margrethe is مارگرته, so
 // that no reader starts on مرگ. See blocklist.ts.

@@ -77,7 +77,7 @@ describe('vocabulary exercises', () => {
     }
   })
 
-  it('shows the vocalized specimen when it shows Persian, and bare words in the choices', () => {
+  it('shows the vocalized specimen when it shows Japanese, and bare words in the choices', () => {
     for (const { kind, questions } of rounds) {
       for (const question of questions) {
         const word = wordOf(question.itemId)
@@ -88,7 +88,7 @@ describe('vocabulary exercises', () => {
         } else {
           expect(question.showsFa, question.id).toBeUndefined()
           expect(question.promptDa, question.id).toContain(word.da)
-          expect(question.choiceLang).toBe('fa')
+          expect(question.choiceLang).toBe('ja')
           // اِعراب belongs on specimens only — the choices are bare words.
           for (const choice of question.choices) {
             expect(withoutMarks(choice.glyph), choice.glyph).toBe(choice.glyph)

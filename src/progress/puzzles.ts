@@ -7,7 +7,7 @@ function normalize(value: unknown): string[] {
   return value.filter((id): id is string => typeof id === 'string')
 }
 
-/** `dpl.v1.puzzles`: append-only ids, safe under denied or corrupt storage. */
+/** `djl.v1.puzzles`: append-only ids, safe under denied or corrupt storage. */
 export function completedPuzzles(): string[] {
   return normalize(readJSON<unknown>(KEY, []))
 }

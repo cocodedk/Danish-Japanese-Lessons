@@ -54,7 +54,7 @@ describe('day boundaries are local midnight', () => {
 
     expect(reward.points).toBe(before.points + 1)
     expect(getRewards(at(2026, 3, 1)).streak.value).toBe(before.streak.value)
-    expect(window.localStorage.getItem('dpl.v1.rewards')).not.toContain('NaN')
+    expect(window.localStorage.getItem('djl.v1.rewards')).not.toContain('NaN')
   })
 
   it('treats a Date subclass that lies about just one getter the same way (round 4)', () => {
@@ -76,7 +76,7 @@ describe('day boundaries are local midnight', () => {
 
     expect(reward.points).toBe(before.points + 1)
     expect(getRewards(at(2026, 3, 1)).streak.value).toBe(before.streak.value)
-    expect(window.localStorage.getItem('dpl.v1.rewards')).not.toContain('NaN')
+    expect(window.localStorage.getItem('djl.v1.rewards')).not.toContain('NaN')
   })
 })
 
@@ -121,14 +121,14 @@ describe('the streak rests — it never resets', () => {
     const line = streakLine(getRewards(at(2026, 3, 15)).streak)
 
     expect(line.da).toBe('Træningen fortsætter stadig')
-    expect(line.fa).toBe('تمرین هنوز ادامه دارد')
+    expect(line.ja).toBe('تمرین هنوز ادامه دارد')
     expect(line.pron).toEqual({
       da: 'tamrin hanuz edåme dårad',
       ipa: 'tæmɾiːn hænuːz ʔedɒːme dɒːɾæd',
     })
     for (const word of GUILT_WORDS) {
       expect(line.da.toLowerCase()).not.toContain(word)
-      expect(line.fa).not.toContain(word)
+      expect(line.ja).not.toContain(word)
     }
   })
 
@@ -140,7 +140,7 @@ describe('the streak rests — it never resets', () => {
     expect(streakLine(getRewards(at(2026, 3, 2, 12)).streak).da).toBe(
       'Træningen fortsætter',
     )
-    expect(streakLine(getRewards(at(2026, 3, 2, 12)).streak).fa).toBe('تمرین ادامه دارد')
+    expect(streakLine(getRewards(at(2026, 3, 2, 12)).streak).ja).toBe('تمرین ادامه دارد')
   })
 
 })

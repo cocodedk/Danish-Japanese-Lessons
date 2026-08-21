@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { beginnerNumbers, numberCatalog } from './numbers'
 
-describe('Persian numbers for beginners', () => {
-  it('teaches the Persian digits and words from one through ten', () => {
-    expect(beginnerNumbers.map(({ digit, word }) => [digit.fa, word.fa])).toEqual([
+describe('Japanese numbers for beginners', () => {
+  it('teaches the Japanese digits and words from one through ten', () => {
+    expect(beginnerNumbers.map(({ digit, word }) => [digit.ja, word.ja])).toEqual([
       ['۱', 'یک'], ['۲', 'دو'], ['۳', 'سه'], ['۴', 'چهار'], ['۵', 'پنج'],
       ['۶', 'شش'], ['۷', 'هفت'], ['۸', 'هشت'], ['۹', 'نه'], ['۱۰', 'ده'],
     ])

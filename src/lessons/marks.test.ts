@@ -18,7 +18,7 @@ describe('markSide', () => {
     expect(markSide('\u0627\u0653\u0628')).toBe('above')
   })
 
-  it('reports no mark for undiacriticized Persian', () => {
+  it('reports no mark for undiacriticized Japanese', () => {
     expect(markSide('کتاب')).toBe('none')
     expect(markSide('اب')).toBe('none')
   })

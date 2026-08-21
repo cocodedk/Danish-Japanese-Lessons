@@ -29,8 +29,8 @@ describe('the prompt', () => {
     expect(screen.getByRole('heading', { name: `Skriv ordet »${first.da}«` })).toBeInTheDocument()
     expect(screen.getByText(`${first.pron.da} · [${first.pron.ipa}]`)).toBeInTheDocument()
     for (const word of unit.words) {
-      expect(screen.queryByText(word.fa), word.fa).not.toBeInTheDocument()
-      expect(screen.queryByText(word.faMarked), word.faMarked).not.toBeInTheDocument()
+      expect(screen.queryByText(word.ja), word.ja).not.toBeInTheDocument()
+      expect(screen.queryByText(word.jaMarked), word.jaMarked).not.toBeInTheDocument()
     }
   })
 
@@ -88,7 +88,7 @@ describe('a word written right', () => {
     open('#/lesson/ord/1/skriv')
 
     const before = getRewards().points
-    write(first.fa)
+    write(first.ja)
     tap('Se efter')
 
     expect(praiseOnScreen()).toBe(true)
@@ -98,24 +98,24 @@ describe('a word written right', () => {
     // Same word again, on a fresh mount: practice, at the flat answer rate.
     const paid = getRewards().points
     open('#/lesson/ord/1/skriv')
-    write(first.fa)
+    write(first.ja)
     tap('Se efter')
     expect(getRewards().points).toBe(paid + 1)
   })
 
   it('does not ask for اِعراب — the plain spelling of a marked word is right', () => {
     const madrese = findVocabUnit('2')!.words.find((word) => word.id === 'madrese')!
-    expect(madrese.faMarked).not.toBe(madrese.fa)
+    expect(madrese.jaMarked).not.toBe(madrese.ja)
 
     open('#/lesson/ord/2/skriv')
     // Walk to the word, leaving each one blank: skipping costs nothing.
     const index = findVocabUnit('2')!.words.indexOf(madrese)
     for (let step = 0; step < index; step += 1) {
-      write(findVocabUnit('2')!.words[step].fa)
+      write(findVocabUnit('2')!.words[step].ja)
       tap('Se efter')
       tap('Næste')
     }
-    write(madrese.fa)
+    write(madrese.ja)
     tap('Se efter')
     expect(praiseOnScreen()).toBe(true)
   })

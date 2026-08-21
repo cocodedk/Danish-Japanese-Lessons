@@ -11,7 +11,7 @@ export interface LessonSheetProps {
   bar: ReactNode
   /**
    * Pinned above the bar, in the same thumb zone: what the learner works with
-   * rather than navigates by — the Persian keyboard, on the screens that type.
+   * rather than navigates by — the Japanese keyboard, on the screens that type.
    * It sits outside the `<nav>` on purpose; a keyboard is not navigation.
    */
   dock?: ReactNode

@@ -45,7 +45,7 @@ describe('LetterDraw', () => {
 
     const steps = screen.getByRole('list', { name: 'Stregrækkefølge for pe, trin for trin' })
     expect(steps.children).toHaveLength(pe.strokes.length)
-    // Dynamic counters stay Latin until Persian numerals are deliberately taught.
+    // Dynamic counters stay Latin until Japanese numerals are deliberately taught.
     expect(screen.getByText('1')).toBeInTheDocument()
     expect(screen.getByText('4')).toBeInTheDocument()
     const counts = [...steps.children].map((step) => step.querySelectorAll('path').length)

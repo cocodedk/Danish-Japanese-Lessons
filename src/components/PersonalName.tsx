@@ -6,7 +6,7 @@ import { ReadingCueList } from './ReadingCues'
 import { personalReadingCues } from '../name/readingCues'
 import './PersonalName.css'
 
-/** The learner's name as the app carries it: the Persian spelling they chose,
+/** The learner's name as the app carries it: the Japanese spelling they chose,
  * and the name as they wrote it — absent when only a spelling is stored. */
 export interface PersonalName {
   spelling: string

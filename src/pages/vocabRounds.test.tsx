@@ -1,5 +1,5 @@
 // What finishing a unit pays, and how the two exercise rounds play: Danish
-// meanings for "Find betydningen", Persian words for "Find ordet", and the
+// meanings for "Find betydningen", Japanese words for "Find ordet", and the
 // same flat per-answer rate a letter's exercise pays on a replay. The
 // forside, routing and the word screen itself are vocab.test.tsx.
 import { describe, it, expect } from 'vitest'
@@ -68,7 +68,7 @@ describe('the two rounds', () => {
     expect(getVocabProgress('1').words).toContain(questions[0].answerId)
   })
 
-  it('asks for the Persian word, right to left, with the meaning in the prompt', () => {
+  it('asks for the Japanese word, right to left, with the meaning in the prompt', () => {
     const questions = buildVocabQuestions('2', 'par')
     open('#/lesson/ord/2/ovelse/par')
 

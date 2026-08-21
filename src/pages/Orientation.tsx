@@ -39,10 +39,10 @@ function Point({ point }: { point: OrientationPoint }) {
     <section className="orient__point">
       <h2 className="orient__heading">{point.heading}</h2>
       {/* Each chip is a miniature of the specimen contract (ART-DIRECTION
-          "Beginner teaching surfaces"): Persian on top, then lydskrift + IPA,
+          "Beginner teaching surfaces"): Japanese on top, then lydskrift + IPA,
           then the Danish name — stacked, never sharing a line. */}
       <ul className="orient__row" dir="rtl">
-        {point.fa.map((token, index) => (
+        {point.ja.map((token, index) => (
           <li key={`${token.entry.id}-${index}`} className="orient__chip">
             <PersianText entry={token.entry} display={token.form} />
             <PronLine {...(token.contextualPron ?? token.entry.pron)} />
@@ -59,7 +59,7 @@ function Point({ point }: { point: OrientationPoint }) {
 }
 
 /**
- * Lektion 0 — how Persian writing works, shown before it is told. Opens the
+ * Lektion 0 — how Japanese writing works, shown before it is told. Opens the
  * alphabet lesson once; after that it lives at #/lesson/alphabet/intro and can
  * be read again whenever. See docs/plans/003-alphabet-lesson.md step 6.
  */

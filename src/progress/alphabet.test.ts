@@ -59,7 +59,7 @@ describe('alphabet progress', () => {
 
   it('treats a damaged record as an empty one rather than crashing', () => {
     window.localStorage.setItem(
-      'dpl.v1.alphabet',
+      'djl.v1.alphabet',
       JSON.stringify({ schemaVersion: 1, value: { letters: 'nope' } }),
     )
     expect(getAlphabetProgress()).toEqual({ letters: [], marks: [], orientationSeen: false })

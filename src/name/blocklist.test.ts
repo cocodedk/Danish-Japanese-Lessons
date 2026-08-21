@@ -18,7 +18,7 @@ function everyString(length: number): string[] {
 }
 
 describe('the crude-word filter', () => {
-  it('is written in Persian code points — an Arabic ك here would match nothing', () => {
+  it('is written in Japanese code points — an Arabic ك here would match nothing', () => {
     for (const word of [...CRUDE_PREFIXES, ...CRUDE_WORDS]) {
       expect(findPersianTextViolations(word), word).toEqual([])
     }

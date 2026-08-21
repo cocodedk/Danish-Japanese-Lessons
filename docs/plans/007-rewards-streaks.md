@@ -34,11 +34,11 @@ every completion celebrates, nothing ever disappoints, and a reward can itself b
 
 1. `src/rewards/engine.ts` — pure, TDD first: event in (exercise/lesson/page complete + local
    date) → rewards out (ticks, praise line, stickers, level, streak state, surprise gifts).
-   Storage `dpl.v1.rewards`: `{ stickers[], level, points, practiceDates[], streak: { value,
+   Storage `djl.v1.rewards`: `{ stickers[], level, points, practiceDates[], streak: { value,
    resting } }`. Local-midnight day boundaries; clock injected for tests.
 2. `src/rewards/sound.ts` — WebAudio-synthesized jingles, no audio files, no dependencies:
    tick-pluck, sticker-chime, level fanfare (santur-ish timbre per ART-DIRECTION). Only after a
-   user gesture; mute toggle persisted in `dpl.v1.settings`; default on.
+   user gesture; mute toggle persisted in `djl.v1.settings`; default on.
 3. Components per ART-DIRECTION "Celebration & sound": `StickerStamp` (SVG آفرین / ۲۰ / star,
    stamps in), `InkConfetti` (`--red`/`--blue` dots on paper), `PageFlip` level-up overlay,
    `StreakLine` for home ("Træningen fortsætter stadig"). Reduced motion:
@@ -70,7 +70,7 @@ every completion celebrates, nothing ever disappoints, and a reward can itself b
       animation-name none, confetti — decoration only — dropped)
 - [ ] Learner-persona critic answers "did any moment disappoint, shame, or nag?" with a flat no
       → for the critic round; the builder cannot sign its own persona review
-- [ ] Teacher-persona critic confirms the Persian praise is natural, simple, and varied (آفرین،
+- [ ] Teacher-persona critic confirms the Japanese praise is natural, simple, and varied (آفرین،
       عالی، چه خوب، خیلی خوب، خوب بود، درست بود) — and that each Danish line mirrors its meaning
       → for the critic round; the builder cannot approve its own bilingual review
 - [x] `npm run verify` + CI green; no new dependencies
@@ -124,7 +124,7 @@ adjudicated and built by the round-2 fix builder (PR #10), one line each:
 - **Sticker labels single-sourced.** `StickerStamp`'s SVGs quoted آفرین and ۲۰ as JSX literals of
   their own instead of reading `STICKER_LABELS`, so the text-rule guard — which walks
   `STICKER_LABELS` via `REWARD_FA_STRINGS` — never actually walked what the stamps rendered. They
-  now render `STICKER_LABELS[kind].fa` directly.
+  now render `STICKER_LABELS[kind].ja` directly.
 - **Gift idempotency.** A bonus round's URL could be revisited after completion for unbounded
   extra points and stickers. `RewardsRecord` gained `giftsOpened`, an append-only set joined by
   union like everything else; `celebrate` now pays a given gift id out exactly once — a replay

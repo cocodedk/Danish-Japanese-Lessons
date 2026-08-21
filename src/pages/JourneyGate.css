@@ -55,8 +55,8 @@
   border-block-end: 2px solid var(--blue);
 }
 
-.journey-gate__word [lang='fa'] {
-  font-family: var(--font-fa-display);
+.journey-gate__word [lang='ja'] {
+  font-family: var(--font-ja-display);
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.1;

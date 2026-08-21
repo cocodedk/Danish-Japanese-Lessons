@@ -31,7 +31,7 @@ describe('profile', () => {
   })
 
   it('corrupt storage recovers to an empty profile instead of crashing', () => {
-    window.localStorage.setItem('dpl.v1.profile', 'not json at all')
+    window.localStorage.setItem('djl.v1.profile', 'not json at all')
     expect(() => getProfile()).not.toThrow()
     expect(getProfile()).toEqual({})
   })

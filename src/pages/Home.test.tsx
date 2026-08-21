@@ -63,7 +63,7 @@ describe('Home', () => {
     expect(screen.getByText('Hej!')).toBeInTheDocument()
   })
 
-  it('once a Latin name is given, Danish uses it while Persian stays plain until spelling', () => {
+  it('once a Latin name is given, Danish uses it while Japanese stays plain until spelling', () => {
     render(<Home />)
     fireEvent.change(screen.getByLabelText('Hvad hedder du?'), {
       target: { value: 'Sara' },
@@ -75,12 +75,12 @@ describe('Home', () => {
     expect(screen.queryByText('سارا')).not.toBeInTheDocument()
   })
 
-  it('never fabricates whole-name pronunciation in the Persian greeting', () => {
+  it('never fabricates whole-name pronunciation in the Japanese greeting', () => {
     setProfile({ name: 'Sara', faSpelling: 'سارا' })
     render(<Home />)
 
     const greeting = document.querySelector('.split-card__greeting')
-    expect(greeting?.querySelectorAll('[lang="fa"]')).toHaveLength(2)
+    expect(greeting?.querySelectorAll('[lang="ja"]')).toHaveLength(2)
     expect(greeting?.textContent).toContain('سلام، سارا!')
     expect(greeting?.textContent).toContain('salåm · [sælɒːm]')
     expect(greeting?.textContent).not.toContain('sårå')

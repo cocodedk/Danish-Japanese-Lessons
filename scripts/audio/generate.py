@@ -134,7 +134,7 @@ def synthesize_one(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate local Persian audio drafts")
+    parser = argparse.ArgumentParser(description="Generate local Japanese audio drafts")
     parser.add_argument("--scope", choices=("talk", "writing"))
     parser.add_argument("--clip")
     args = parser.parse_args()

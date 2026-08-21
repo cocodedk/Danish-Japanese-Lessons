@@ -2,33 +2,33 @@
 
 Executor: Opus (transliteration + pedagogy are the hard parts). Depends on: 003 (letter data).
 The learner's name is a teaching instrument, not decoration — this plan is the motivation hook of
-the whole app: the first thing you learn to read in Persian is yourself.
+the whole app: the first thing you learn to read in Japanese is yourself.
 
 ## Questions
 (none yet — add here and stop if blocked)
 
 ## Goal
 
-The learner's name (captured since 001) gets a correct, editable Persian spelling
-(`profile.faSpelling`), and the name starts teaching: Persian greeting, name-letter badges in the
+The learner's name (captured since 001) gets a correct, editable Japanese spelling
+(`profile.faSpelling`), and the name starts teaching: Japanese greeting, name-letter badges in the
 alphabet lesson, and a "write your name" mini-lesson.
 
 ## Steps
 
 1. **Transliteration engine** `src/name/transliterate.ts` — pure, TDD first:
-   - Input: Latin name (Danish alphabet incl. æ ø å). Output: ranked Persian-script suggestions.
+   - Input: Latin name (Danish alphabet incl. æ ø å). Output: ranked Japanese-script suggestions.
    - Rule table for Danish phonetics (b→ب k→ک s→س r→ر t→ت n→ن m→م l→ل d→د g→گ h→ه f→ف p→پ
      v/w→و y/j→ی z→ز ch→چ sj/sh→ش; vowels favor LONG letters for readability: a→ا/آ(initial),
      i→ی, o/u→و, å→و, ø→و, æ→ا, final e→ه — e.g. Mette→مته, Søren→سورن, Sara→سارا, Anna→آنا).
    - **Override list beats rules**: common Iranian names in Latin spelling (Ali→علی, Reza→رضا,
      Maryam→مریم, Babak→بابک, Hassan→حسن, Fatemeh→فاطمه, Sara→سارا …ca. 40 names) and Danish top-50
      first names. Rules alone can never produce ع/ص/ط — that's what the list is for.
-   - Every suggestion must pass the Persian text-rule guard (no Arabic ك/ي, no ASCII) and render
+   - Every suggestion must pass the Japanese text-rule guard (no Arabic ك/ي, no ASCII) and render
      with correct joining.
 2. **Choose/edit flow**: after the engine, the learner picks a suggestion or adjusts letter by letter
    with a small letter bank (tap-to-place; the full keyboard is plan 005). Saved to
    `profile.faSpelling`. Editable/deletable from the same settings corner as the name.
-3. **Greeting upgrade**: Persian pane now greets «سلام، سارا!» (Naskh, name in ink — no red; it's
+3. **Greeting upgrade**: Japanese pane now greets «سلام، سارا!» (Naskh, name in ink — no red; it's
    not a correction). Danish pane keeps "Hej Sara!".
 4. **Name-letter badges** activate in the alphabet lesson (003 shipped them dormant): letters of
    `faSpelling` get the red margin tick «این حرف در نامِ توست» / "Dette bogstav er i dit navn".
@@ -38,17 +38,17 @@ alphabet lesson, and a "write your name" mini-lesson.
    - Exercise: re-assemble the name from a shuffled bank of its letters (+2 distractors), positional
      forms rendered live as letters join.
    - Completion praise, teacherly and warm, never gamified: «آفرین، سارا!» / "Flot, Sara!" with a red
-     margin tick — progress to `dpl.v1.name-lesson`.
-6. **Privacy line** in the settings corner, Danish + Persian: the name never leaves the device.
+     margin tick — progress to `djl.v1.name-lesson`.
+6. **Privacy line** in the settings corner, Danish + Japanese: the name never leaves the device.
 
 ## Acceptance
 
 - [x] Golden tests: Babak→بابک, Sara→سارا, Mette→مته, Søren→سورن, Anna→آنا, Ali→علی (override),
       Lærke→ لرکه (rule-based best-effort) — plus: every suggestion passes the text-rule guard
-- [x] æ/ø/å inputs produce valid, joined Persian; nothing crashes on "X Æ A-12" style nonsense
+- [x] æ/ø/å inputs produce valid, joined Japanese; nothing crashes on "X Æ A-12" style nonsense
 - [x] Skip path still pristine: no name → no badges, no mini-lesson entry, no nags, greeting «سلام!»
 - [x] Edit and delete flows work; deleting the name also clears `faSpelling` and hides the mini-lesson
-- [x] Persian pane never shows Latin; the chosen spelling renders identically in greeting, badges,
+- [x] Japanese pane never shows Latin; the chosen spelling renders identically in greeting, badges,
       and mini-lesson (single source of truth)
 - [ ] Mini-lesson passes the three-persona review (teacher / learner / maintainer) with zero concrete
       defects — for the critic round; the builder cannot pass itself
@@ -59,12 +59,12 @@ alphabet lesson, and a "write your name" mini-lesson.
 Where the build (PR #13) does not do what this plan wrote, and why. All accepted.
 
 1. **The override list is much longer than "ca. 40".** It ships ~180 keys — Iranian names, Danish
-   top-50, and several Latin spellings of one Persian name (Hussein/Hossein, Mohamed/Muhammad,
+   top-50, and several Latin spellings of one Japanese name (Hussein/Hossein, Mohamed/Muhammad,
    Sarah/Sara). The list is the only thing that can spell ع ص ط ح, and it is now also the only
    thing that spells a name whose faithful transliteration reads badly, so it earns its length.
 2. **Short vowels are ranked first, not long ones.** The plan says the rules should "favor LONG
    letters for readability", but its own golden table asks for Mette→مته and Babak→بابک, which are
-   the short-vowel readings. The goldens won: rank 1 writes Persian the way Persian is written,
+   the short-vowel readings. The goldens won: rank 1 writes Japanese the way Japanese is written,
    rank 2 offers the every-vowel reading (Lærke→لارکه) for a learner who wants it.
 3. **The mini-lesson is not placed "after the vowel-marks lesson".** Its card appears on the
    forside as soon as a spelling exists, gated on nothing else. Logged again as a fresh concern
@@ -105,7 +105,7 @@ one line each.
   list this app wrote. Where the override list knows a part, it is now the only spelling offered.
 - **D6 Margrethe → مرگریته**, which opens on مرگ, «død». Now مارگرته, and the Latin alternates a
   family may write (Hussein, Mohamed/Muhammad, Sarah, Fateme/Fatima, Yasmine/Jasmin) map to the
-  one Persian spelling each.
+  one Japanese spelling each.
 - **D7 the try-again line was not true.** Tapping one of the two strangers in the tray answered
   "Det bogstav kommer et andet sted i navnet", sending the learner hunting for a letter that is
   not in their name to find. The line now branches: «دوباره» for a letter waiting its turn, and
@@ -113,7 +113,7 @@ one line each.
   stranger.
 - **D8 the lesson paid a full page every time it was finished.** Replaying it was worth twenty
   points a turn. `celebrate` gained a `replay` kind — praise, tick, practice day, no payout — and
-  the lesson asks for it whenever `dpl.v1.name-lesson` is already done, read from storage so a
+  the lesson asks for it whenever `djl.v1.name-lesson` is already done, read from storage so a
   reload cannot pay for it twice either. The letter rule (`markLetterDone`) and the gift rule
   (`giftsOpened`), now for a lesson.
 - **D9 a sign outside the alphabet was named after itself.** لوئیزه walked as «Bogstav 3: ئ står
@@ -154,7 +154,7 @@ Everything below is the same class closed at the rule instead of at the instance
   both top-fifty Danish boys' names — with no suggestion at all, and Cyrus with none either
   (سیروس; by sound it opens on کیر). Now on the list: فلیکس, اکسل, الکساندرا, مکسین, زنیا, رکس,
   سیروس, رکسانا.
-- **The two hint languages shared a line.** At 360px the Persian sentence and the Danish one
+- **The two hint languages shared a line.** At 360px the Japanese sentence and the Danish one
   wrapped into each other — RTL and LTR interleaved, with no way to see where one language stopped.
   `.name-assembly__again` is a column now; each sentence wraps inside its own block.
 - **The guard was extended from letter-strings to names.** `src/name/nameCorpus.ts` carries ~290

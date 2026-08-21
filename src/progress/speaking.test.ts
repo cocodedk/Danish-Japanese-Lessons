@@ -21,7 +21,7 @@ describe('speaking practice', () => {
   })
 
   it('does not infer speaking work from any existing reading progress', () => {
-    window.localStorage.setItem('dpl.v1.vocab.1', JSON.stringify({ words: ['ab'] }))
+    window.localStorage.setItem('djl.v1.vocab.1', JSON.stringify({ words: ['ab'] }))
     expect(allSpeakingPractice()).toEqual([])
   })
 })

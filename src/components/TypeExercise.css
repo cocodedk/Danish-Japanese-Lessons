@@ -175,7 +175,7 @@
 
 /* «دوباره» is said in ink, the way the choice rounds say it. The one red thing
    on this screen is the mark itself — that is what makes it read as a mark. */
-.type__again [lang='fa'] {
-  font-family: var(--font-fa);
+.type__again [lang='ja'] {
+  font-family: var(--font-ja);
   font-size: 1.25rem;
 }

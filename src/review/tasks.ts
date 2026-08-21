@@ -54,8 +54,8 @@ const vowelQuestions: Question[] = vowelMarks.map((mark, index) => {
     entry: mark.entry,
     promptDa: 'Hvilket vokaltegn har denne lyd?',
     choices: arrange(
-      { id: mark.entry.id, entry: mark.entry, glyph: mark.entry.fa },
-      others.map((other) => ({ id: other.entry.id, entry: other.entry, glyph: other.entry.fa })),
+      { id: mark.entry.id, entry: mark.entry, glyph: mark.entry.ja },
+      others.map((other) => ({ id: other.entry.id, entry: other.entry, glyph: other.entry.ja })),
       index,
     ),
     answerId: mark.entry.id,

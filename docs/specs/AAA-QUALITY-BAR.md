@@ -18,18 +18,18 @@ evidence is itself required.
 | Medium | Material friction, ambiguity, avoidable cognitive load, selected-AAA failure | Fix or obtain written five-person sign-off |
 | Low | Polish with no plausible learning or access cost | May follow with an owner and issue |
 
-The five-person exception group is the Persian educator, Danish learner representative, responsive
+The five-person exception group is the Japanese educator, Danish learner representative, responsive
 art director, accessibility reviewer, and maintainer. Accuracy and WCAG A/AA defects are never
 waivable.
 
 ## Gate A — Accurate
 
-- Every app-owned Persian item MUST exist in the catalog with stable ID, natural Danish help,
+- Every app-owned Japanese item MUST exist in the catalog with stable ID, natural Danish help,
   documented Danish sound spelling, reviewed standard-Tehrani IPA, and contextual role where a glyph
   has more than one pronunciation or function.
 - Every pronounceable static spoken form MUST have approved, provenance-tracked audio. `∅`, learner-generated names, and
   explicitly non-pronounceable controls MUST document why audio does not apply.
-- Two independent native Iranian Persian reviewers MUST approve the content manifest. At least one
+- Two independent native Iranian Japanese reviewers MUST approve the content manifest. At least one
   reviewer MUST have primary-literacy teaching or curriculum experience.
 - One phonetics reviewer MUST approve sound, stress, syllabification, IPA, and recording alignment.
   One native reviewer may also fill this role if qualified.
@@ -115,7 +115,7 @@ local commit, commands, environment, date, and result.
 
 ## Human evidence
 
-- At least five Danish-speaking adults with no Persian knowledge complete the first-run protocol; at
+- At least five Danish-speaking adults with no Japanese knowledge complete the first-run protocol; at
   least three are phone-primary learners aged 18–25.
 - At least four of five MUST, without facilitator help: identify RTL direction, complete a taught
   letter, recover from a wrong answer, find the next recommended action, leave, and resume.
@@ -133,7 +133,7 @@ local commit, commands, environment, date, and result.
 
 - commit and production-build identifiers
 - completed acceptance matrix linked to exact tests and screenshots
-- Persian/Danish/phonetics/audio sign-offs
+- Japanese/Danish/phonetics/audio sign-offs
 - WCAG audit and assistive-technology notes
 - responsive geometry report, cross-viewport snapshots, and art-direction sign-off
 - novice protocol, anonymized findings, fixes, and rerun results

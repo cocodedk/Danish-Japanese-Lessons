@@ -1,5 +1,5 @@
 // The capstone «نامِ خودت را بنویس»: present and warm for a learner who has a
-// Persian spelling, completely absent for one who has not.
+// Japanese spelling, completely absent for one who has not.
 import { describe, it, expect } from 'vitest'
 import { screen } from '@testing-library/react'
 import { setProfile } from '../progress/profile'
@@ -71,7 +71,7 @@ describe('with a name', () => {
 
     write(SARA.faSpelling)
     tap('Se efter')
-    expect(screen.getAllByText(NAME_PRAISE_ENTRY.fa).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(NAME_PRAISE_ENTRY.ja).length).toBeGreaterThan(0)
     expect(screen.getAllByText(SARA.faSpelling).length).toBeGreaterThan(0)
     expect(screen.getAllByText('Flot, Sara!').length).toBeGreaterThan(0)
 
@@ -87,7 +87,7 @@ describe('with a name', () => {
     tap('Se efter')
     tap('Afslut runden')
     expect(getRewards().points).toBe(afterFirst + 1)
-    expect(screen.getAllByText(NAME_PRAISE_ENTRY.fa).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(NAME_PRAISE_ENTRY.ja).length).toBeGreaterThan(0)
   })
 
   it('marks a wrong letter in the name as gently as it marks a word', () => {

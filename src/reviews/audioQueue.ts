@@ -20,7 +20,7 @@ export const audioRecordingQueue = {
   schemaVersion: 2,
   status: 'draft-awaiting-native-review',
   source: 'src/catalog/registry.ts',
-  instructions: 'Generate locally. Publish only after one named native Persian reviewer approves the clip.',
+  instructions: 'Generate locally. Publish only after one named native Japanese reviewer approves the clip.',
   rows: persianCatalog.flatMap((entry: PersianEntry) => {
     const domain = domainFor(entry.id)
     return spokenFormsFor(entry)
@@ -32,16 +32,16 @@ export const audioRecordingQueue = {
         register: form.register,
         scope: LAUNCH_TALK_CLIPS.has(form.audioId) ? 'talk' : 'writing',
         domain,
-        transcript: form.faMarked ?? form.fa,
-        synthesisText: form.faMarked ?? form.fa,
-        plainPersian: form.fa,
+        transcript: form.jaMarked ?? form.ja,
+        synthesisText: form.jaMarked ?? form.ja,
+        plainPersian: form.ja,
         danishMeaning: form.da,
         soundDa: form.pron.da,
         ipa: form.pron.ipa,
         stressMarked: form.pron.ipa.includes('ˈ'),
         expectedDraft: `.audio/work/${form.audioId}.mp3`,
         requiredBeforeGeneration: ['native-content'],
-        requiredTakeReview: ['native-persian'],
+        requiredTakeReview: ['native-japanese'],
       }))
   }),
 }

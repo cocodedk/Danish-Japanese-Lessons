@@ -1,9 +1,9 @@
-# Danish-Persian Lessons
+# Danish-Japanese Lessons
 
-This free web app is moving to a speaking-first way of learning Persian, with Danish as the language
+This free web app is moving to a speaking-first way of learning Japanese, with Danish as the language
 of instruction. The existing reading and writing course stays open. The new talk path uses pictures,
-reviewed Persian sound, an approachable Danish pronunciation, and precise IPA. It will become the
-first path only after all 97 launch clips have been checked by a named native Persian speaker. The
+reviewed Japanese sound, an approachable Danish pronunciation, and precise IPA. It will become the
+first path only after all 97 launch clips have been checked by a named native Japanese speaker. The
 app runs in the browser, with nothing to install and no account to create.
 
 «آموزش گفتاری و نوشتاری فارسی برای دانمارکی‌زبان‌ها»
@@ -12,9 +12,9 @@ Lær at tale persisk. Læs og skriv, når du vil.
 
 ## Website
 
-- [English](https://cocodedk.github.io/Danish-Persian-Lessons/)
-- [Dansk](https://cocodedk.github.io/Danish-Persian-Lessons/da/)
-- [فارسی (Persian)](https://cocodedk.github.io/Danish-Persian-Lessons/fa/)
+- [English](https://cocodedk.github.io/Danish-Japanese-Lessons/)
+- [Dansk](https://cocodedk.github.io/Danish-Japanese-Lessons/da/)
+- [فارسی (Japanese)](https://cocodedk.github.io/Danish-Japanese-Lessons/ja/)
 
 ## Features
 
@@ -22,7 +22,7 @@ Lær at tale persisk. Læs og skriv, når du vil.
   model, say it, and can record and replay their own voice without saving or sending it.
 - Reading and writing remain available, starting with the alphabet and the vowel marks زیر، زبر، پیش
   and the long vowels آ او ای.
-- Word cards are split down the middle. Persian on top, set right-to-left and large enough for the
+- Word cards are split down the middle. Japanese on top, set right-to-left and large enough for the
   diacritics to breathe, with the Danish word below it, quieter.
 - Vocabulary follows the Iranian first-grade reader (آب/vand, نان/brød, من/jeg, تو/du), so words arrive in
   the order a child in Iran meets them rather than the order that happens to suit an app.
@@ -34,15 +34,15 @@ Lær at tale persisk. Læs og skriv, når du vil.
 - The app will recommend speaking first when its reviewed launch audio is complete. Every path stays open.
 - Short tap-only puzzle breaks use material already taught. They are skippable, replayable, and never unlock
   required content.
-- An on-screen Persian keyboard supports typing without a Persian keyboard layout installed.
+- An on-screen Japanese keyboard supports typing without a Japanese keyboard layout installed.
 - Free and open source, Apache-2.0.
 
 ## Try it
 
 The landing site is live in all three languages, and so is the app.
 
-What ships at [`/app/`](https://cocodedk.github.io/Danish-Persian-Lessons/app/) includes orientation,
-the alphabet and vowel marks, personal-name spelling, first-reader vocabulary, a Persian keyboard,
+What ships at [`/app/`](https://cocodedk.github.io/Danish-Japanese-Lessons/app/) includes orientation,
+the alphabet and vowel marks, personal-name spelling, first-reader vocabulary, a Japanese keyboard,
 generous feedback, and short puzzle breaks. There is no signup and no waiting list.
 The speaking screens and audio pipeline are present but stay closed while the checked-in audio
 manifest is incomplete, so an unreviewed generated voice can never become the learner's model.
@@ -53,8 +53,8 @@ You need `git` and Node.js 20 or newer for the React app. The landing site in `w
 plain HTML with no build step; any static file server shows it — Python's built-in one is enough.
 
 ```bash
-git clone https://github.com/cocodedk/Danish-Persian-Lessons.git
-cd Danish-Persian-Lessons
+git clone https://github.com/cocodedk/Danish-Japanese-Lessons.git
+cd Danish-Japanese-Lessons
 ./scripts/install-hooks.sh
 bash scripts/verify.sh
 ```
@@ -66,7 +66,7 @@ To read the site the way a visitor does:
 
 ```bash
 python3 -m http.server 8000 --directory website
-# http://localhost:8000/  ·  /da/  ·  /fa/
+# http://localhost:8000/  ·  /da/  ·  /ja/
 ```
 
 The React app lives at the repo root (scaffolded per
@@ -79,9 +79,9 @@ npm run verify     # lint + tests + build + verify.sh — the local release gate
 ```
 
 
-## Make and review Persian audio
+## Make and review Japanese audio
 
-Audio is made locally. Piper creates drafts; it does not make them approved. A named native Persian
+Audio is made locally. Piper creates drafts; it does not make them approved. A named native Japanese
 speaker must check each clip before it can become lesson audio.
 
 ```bash
@@ -106,11 +106,11 @@ details checked into the repository.
 ## Architecture
 
 ```
-Danish-Persian-Lessons/
+Danish-Japanese-Lessons/
 ├── website/                    # the static landing site, deployed to GitHub Pages
 │   ├── index.html              # English
 │   ├── da/index.html           # Dansk
-│   └── fa/index.html           # فارسی, right-to-left
+│   └── ja/index.html           # فارسی, right-to-left
 ├── src/                        # the React app, served at /app/
 ├── public/fonts/               # self-hosted Vazirmatn, Noto Naskh Arabic, Andika (OFL)
 ├── index.html · vite.config.ts · package.json
@@ -130,10 +130,10 @@ Danish-Persian-Lessons/
 | Site | Hand-written HTML and CSS, no build step |
 | App | React + Vite with `HashRouter` (GitHub Pages cannot rewrite paths for a client-side router) |
 | Graphics | SVG for letterforms and stroke order; three.js only if a lesson genuinely needs 3D |
-| Storage | `localStorage`, keys namespaced `dpl.v1.*` |
+| Storage | `localStorage`, keys namespaced `djl.v1.*` |
 | Hosting | GitHub Pages, deployed by GitHub Actions |
 
-Corrections from native Persian and Danish speakers are the most useful thing this project can receive.
+Corrections from native Japanese and Danish speakers are the most useful thing this project can receive.
 [CONTRIBUTING.md](CONTRIBUTING.md) explains how to send one.
 
 ## Author

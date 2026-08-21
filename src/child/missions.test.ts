@@ -20,7 +20,7 @@ describe('child word missions', () => {
     const nan = findChildMission('nan')!
     const tiles = tilesForMission(nan)
 
-    expect(tiles.map((tile) => tile.glyph)).not.toEqual(Array.from(nan.word.fa))
+    expect(tiles.map((tile) => tile.glyph)).not.toEqual(Array.from(nan.word.ja))
     expect(tiles.map((tile) => tile.targetIndex).sort()).toEqual([0, 1, 2])
     expect(new Set(tiles.map((tile) => tile.id)).size).toBe(3)
   })

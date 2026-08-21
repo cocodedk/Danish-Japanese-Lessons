@@ -29,7 +29,7 @@ export function KitSamples({ dir }: { dir: 'ltr' | 'rtl' }) {
   return (
     <>
       <Sample label="RuledSection — arket">
-        <RuledSection dir={dir} lang={rtl ? 'fa' : 'da'}>
+        <RuledSection dir={dir} lang={rtl ? 'ja' : 'da'}>
           {rtl ? <CompactPhraseRow entry={KIT_SHEET_ENTRY} /> : KIT_SHEET_DA}
         </RuledSection>
       </Sample>

@@ -21,7 +21,7 @@ export interface ConnectedReading {
 export const CONNECTOR_O = defineEntry({
   id: 'reading-function-o',
   kind: 'word',
-  fa: 'و',
+  ja: 'و',
   da: 'og',
   pron: { da: 'o', ipa: 'o' },
   readingCues: [{ start: 0, end: 1, display: 'و', role: 'written-vowel', helpDa: 'Som selvstændigt ord betyder vav “og” og læses o', pron: { da: 'o i “foto”', ipa: 'o' } }],
@@ -30,8 +30,8 @@ export const CONNECTOR_O = defineEntry({
 export const COPULA_AST = defineEntry({
   id: 'reading-function-ast',
   kind: 'word',
-  fa: 'است',
-  faMarked: 'اَست',
+  ja: 'است',
+  jaMarked: 'اَست',
   da: 'er',
   pron: { da: 'ast', ipa: 'æst' },
   readingCues: [
@@ -45,7 +45,7 @@ export const COPULA_AST = defineEntry({
 export const EZAFE = defineEntry({
   id: 'reading-function-ezafe',
   kind: 'symbol',
-  fa: 'ـِ',
+  ja: 'ـِ',
   da: 'ezafe: binder to ord sammen',
   pron: { da: 'e', ipa: 'e' },
   readingCues: [{ start: 0, end: 2, display: 'ـِ', role: 'written-vowel', helpDa: 'Ezafe binder det første ord til det næste', pron: { da: 'e i “let”', ipa: 'e' } }],
@@ -57,12 +57,12 @@ const entryById = new Map<string, PersianEntry>([
 ])
 
 function readingCuesFor(
-  fa: string,
+  ja: string,
   sourceIds: string[],
   ezafeAfter: string[] = [],
 ): ReadingCue[] {
   const sources = sourceIds.map((id) => entryById.get(id)).filter((entry): entry is PersianEntry => Boolean(entry))
-  const chars = [...fa]
+  const chars = [...ja]
   const cues: ReadingCue[] = []
   for (let start = 0; start < chars.length;) {
     while (start < chars.length && /[\s.،؟!]/u.test(chars[start])) start += 1
@@ -70,7 +70,7 @@ function readingCuesFor(
     let end = start + 1
     while (end < chars.length && !/[\s.،؟!]/u.test(chars[end])) end += 1
     const token = chars.slice(start, end).join('')
-    const entry = sources.find((candidate) => candidate.fa === token)
+    const entry = sources.find((candidate) => candidate.ja === token)
     if (!entry) throw new Error(`Connected reading token is not taught: ${token}`)
     cues.push({ start, end, display: token, role: 'whole', helpDa: entry.da, pron: entry.pron })
     start = end
@@ -78,7 +78,7 @@ function readingCuesFor(
   for (const token of ezafeAfter) {
     const offset = chars.join('').indexOf(token)
     if (offset < 0) throw new Error(`Ezafe anchor is absent: ${token}`)
-    const start = [...fa.slice(0, offset)].length + [...token].length
+    const start = [...ja.slice(0, offset)].length + [...token].length
     cues.push({ start, end: start, display: '◌ِ', role: 'short-vowel', helpDa: EZAFE.da, pron: EZAFE.pron })
   }
   return cues.sort((a, b) => a.start - b.start || b.end - a.end)
@@ -90,8 +90,8 @@ function phrase(
   id: string,
   unitId: string,
   groupIndex: number,
-  fa: string,
-  faMarked: string,
+  ja: string,
+  jaMarked: string,
   da: string,
   lyd: string,
   ipa: string,
@@ -108,11 +108,11 @@ function phrase(
     entry: defineEntry({
       id: `reading-${id}`,
       kind: 'phrase',
-      fa,
-      ...(faMarked !== fa ? { faMarked } : {}),
+      ja,
+      ...(jaMarked !== ja ? { jaMarked } : {}),
       da,
       pron: { da: lyd, ipa },
-      readingCues: readingCuesFor(fa, [...introducedEntryIds, ...taughtEntryIds], ezafeAfter),
+      readingCues: readingCuesFor(ja, [...introducedEntryIds, ...taughtEntryIds], ezafeAfter),
     }),
     introducedEntryIds,
     taughtEntryIds,
@@ -136,8 +136,8 @@ export const connectedPhrases: ConnectedReading[] = [
 
 function microtext(
   unitId: string,
-  fa: string,
-  faMarked: string,
+  ja: string,
+  jaMarked: string,
   da: string,
   lyd: string,
   ipa: string,
@@ -154,11 +154,11 @@ function microtext(
     entry: defineEntry({
       id: `reading-${unitId}-text`,
       kind: 'phrase',
-      fa,
-      faMarked,
+      ja,
+      jaMarked,
       da,
       pron: { da: lyd, ipa },
-      readingCues: readingCuesFor(fa, [...introducedEntryIds, ...taughtEntryIds], ezafeAfter),
+      readingCues: readingCuesFor(ja, [...introducedEntryIds, ...taughtEntryIds], ezafeAfter),
     }),
     introducedEntryIds,
     taughtEntryIds,

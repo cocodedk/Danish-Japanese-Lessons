@@ -22,8 +22,8 @@
   gap: 0.1rem;
 }
 
-.child-animals__title [lang='fa'] {
-  font-family: var(--font-fa-display);
+.child-animals__title [lang='ja'] {
+  font-family: var(--font-ja-display);
   font-size: 1.5rem;
   font-weight: 700;
 }

@@ -3,7 +3,7 @@ import approvedRows from './approved.generated.json'
 
 /** Only the approval script writes this release corpus. Generated clips carry
  * their model provenance; human clips carry speaker consent. Both require a
- * named native Persian reviewer. */
+ * named native Japanese reviewer. */
 export const pronunciationAudio = approvedRows as PronunciationAudio[]
 
 const byClip = new Map(pronunciationAudio.map((row) => [row.clipId, row]))

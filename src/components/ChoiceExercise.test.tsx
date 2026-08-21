@@ -111,14 +111,14 @@ describe('ChoiceExercise', () => {
         onComplete={vi.fn()}
       />,
     )
-    expect(container.querySelector('.fa-specimen--vocalized')).not.toBeNull()
-    expect(container.querySelector('.fa-specimen__marks')?.textContent).toBe('مَدرِسه')
-    expect(container.querySelector('.fa-specimen__ink')?.textContent).toBe('مدرسه')
+    expect(container.querySelector('.ja-specimen--vocalized')).not.toBeNull()
+    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('مَدرِسه')
+    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('مدرسه')
   })
 
   it('stacks a below-only mark too, never falling back to the single-layer pen class', () => {
     // کِتاب carries only a زیر under the ک. FaSpecimen stacks any word whose
-    // faMarked is fa plus اِعراب, regardless of which side the marks sit on —
+    // jaMarked is ja plus اِعراب, regardless of which side the marks sit on —
     // so this specimen must never carry a `pen-mark--*` class anywhere.
     const { container } = render(
       <ChoiceExercise
@@ -127,9 +127,9 @@ describe('ChoiceExercise', () => {
         onComplete={vi.fn()}
       />,
     )
-    expect(container.querySelector('.fa-specimen--vocalized')).not.toBeNull()
-    expect(container.querySelector('.fa-specimen__marks')?.textContent).toBe('کِتاب')
-    expect(container.querySelector('.fa-specimen__ink')?.textContent).toBe('کتاب')
+    expect(container.querySelector('.ja-specimen--vocalized')).not.toBeNull()
+    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('کِتاب')
+    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('کتاب')
     expect(container.querySelector('[class*="pen-mark--"]')).toBeNull()
   })
 })

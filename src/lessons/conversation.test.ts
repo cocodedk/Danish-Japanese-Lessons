@@ -3,10 +3,10 @@ import { conversationBasics, conversationCatalog } from './conversation'
 
 describe('beginner conversation basics', () => {
   it('teaches a short greeting, introduction, and goodbye in order', () => {
-    expect(conversationBasics.map(({ fa, da }) => ({ fa, da }))).toEqual([
-      { fa: 'سلام', da: 'hej' },
-      { fa: 'من … هستم.', da: 'Jeg hedder …' },
-      { fa: 'خداحافظ!', da: 'farvel' },
+    expect(conversationBasics.map(({ ja, da }) => ({ ja, da }))).toEqual([
+      { ja: 'سلام', da: 'hej' },
+      { ja: 'من … هستم.', da: 'Jeg hedder …' },
+      { ja: 'خداحافظ!', da: 'farvel' },
     ])
   })
 

@@ -1,4 +1,4 @@
-/* One quiet line in the margin of the forside: Persian above, Danish below,
+/* One quiet line in the margin of the forside: Japanese above, Danish below,
    the way every pair in this app is set. */
 
 .streak-line {
@@ -9,7 +9,7 @@
   margin: 0 0 1rem;
 }
 
-/* Spans the implicit rows the stack can fill: fa, pron, da. */
+/* Spans the implicit rows the stack can fill: ja, pron, da. */
 .streak-line .progress-tick {
   grid-row: 1 / span 3;
 }

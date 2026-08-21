@@ -30,7 +30,7 @@ describe('the word-bridge lesson', () => {
     expect(container.querySelector('.entry-card')).not.toBeInTheDocument()
   })
 
-  it('shows every supplied Persian word and keeps both IPA columns available', () => {
+  it('shows every supplied Japanese word and keeps both IPA columns available', () => {
     renderScreen()
 
     const expected = [
@@ -41,8 +41,8 @@ describe('the word-bridge lesson', () => {
       ['دوست', 'dust'], ['پاس', 'pås'], ['مرد', 'mord'], ['لنگ', 'leng'],
     ]
 
-    for (const [persian, persianPron] of expected) {
-      expect(screen.getByText(persian)).toBeInTheDocument()
+    for (const [japanese, persianPron] of expected) {
+      expect(screen.getByText(japanese)).toBeInTheDocument()
       expect(screen.getAllByText(persianPron).length).toBeGreaterThan(0)
     }
     expect(screen.getByText(/Persisk \[peˈdæɾ\].*dansk \[ˈfæːðʌ\]/)).toBeInTheDocument()

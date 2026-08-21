@@ -1,4 +1,4 @@
-// Progress through the write-your-name mini-lesson: `dpl.v1.name-lesson`.
+// Progress through the write-your-name mini-lesson: `djl.v1.name-lesson`.
 // Add-only, like every other store here: once the name has been written, that
 // stays true — even if the learner later changes the spelling.
 import { readJSON, writeJSON } from './storage'

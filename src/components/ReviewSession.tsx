@@ -112,7 +112,7 @@ export function ReviewSession({ initialTasks }: { initialTasks: ReviewTask[] }) 
     return <GuidedReviewModel task={task} onReady={completeModel} onStop={() => setFinished(true)} />
   }
 
-  const choiceLang = question.choiceLang ?? 'fa'
+  const choiceLang = question.choiceLang ?? 'ja'
   return (
     <section className="review-session">
       <p className="review-session__count">Opgave {index + 1} af {queue.length}</p>
@@ -129,11 +129,11 @@ export function ReviewSession({ initialTasks }: { initialTasks: ReviewTask[] }) 
                 type="button"
                 className={`${selected ? 'review-session__choice--selected' : ''} ${right ? 'review-session__choice--right' : ''}`}
                 lang={choiceLang === 'da' ? 'da' : undefined}
-                dir={choiceLang === 'fa' ? 'rtl' : 'ltr'}
+                dir={choiceLang === 'ja' ? 'rtl' : 'ltr'}
                 aria-pressed={selected}
                 onClick={() => choose(choice.id)}
               >
-                {choiceLang === 'fa' ? <PersianText entry={choice.entry} display={choice.glyph} /> : choice.glyph}
+                {choiceLang === 'ja' ? <PersianText entry={choice.entry} display={choice.glyph} /> : choice.glyph}
                 {selected && <strong>{right ? '✓ Husket' : 'Valgt'}</strong>}
               </button>
             </li>

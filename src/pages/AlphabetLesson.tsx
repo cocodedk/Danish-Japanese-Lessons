@@ -41,7 +41,7 @@ export default function AlphabetLesson() {
       </p>
       <p className="alphabet__lead">
         32 bogstaver, tegnet{' '}
-        <PersianText entry={specimens['alef-madde'].entry} className="alphabet__lead-fa" /> og seks
+        <PersianText entry={specimens['alef-madde'].entry} className="alphabet__lead-ja" /> og seks
         vokaltegn. Rækkefølgen er anbefalet, men alt er åbent fra start.
       </p>
 

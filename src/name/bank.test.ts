@@ -17,7 +17,7 @@ describe('alphabetBank', () => {
     expect(new Set(bank.map((tile) => tile.key)).size).toBe(bank.length)
   })
 
-  it('offers only Persian code points to tap', () => {
+  it('offers only Japanese code points to tap', () => {
     for (const tile of alphabetBank()) {
       expect(findPersianTextViolations(tile.glyph), tile.nameDa).toEqual([])
     }

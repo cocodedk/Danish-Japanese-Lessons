@@ -1,4 +1,4 @@
-// Generic, JSON-safe localStorage wrapper. Keys are namespaced `dpl.v1.<key>`.
+// Generic, JSON-safe localStorage wrapper. Keys are namespaced `djl.v1.<key>`.
 // Every stored value is wrapped with a schema version for future migrations;
 // an unreadable or version-mismatched envelope is treated as absent.
 //
@@ -11,7 +11,7 @@
 // that may be silently behind. A write that succeeds keeps both copies equal,
 // so which one answers a read is invisible the rest of the time.
 
-const PREFIX = 'dpl.v1.'
+const PREFIX = 'djl.v1.'
 const SCHEMA_VERSION = 1
 
 interface Envelope<T> {

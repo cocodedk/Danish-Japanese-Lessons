@@ -14,7 +14,7 @@ export function formatPron({ da, ipa }: Pron): string {
 
 /**
  * Pronunciation, twice: dansk lydskrift first, IPA in brackets. Lives inside
- * the Persian pane but is Danish text, so it carries its own lang and dir.
+ * the Japanese pane but is Danish text, so it carries its own lang and dir.
  * See docs/design/ART-DIRECTION.md "Pronunciation line".
  */
 export function PronLine({ id, ...pron }: PronLineProps) {

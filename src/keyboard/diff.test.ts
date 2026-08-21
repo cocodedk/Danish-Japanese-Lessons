@@ -55,10 +55,10 @@ describe('naming the kind of cell a divergence points at', () => {
 describe('normalizing before the comparison', () => {
   it('never asks for اِعراب — the keyboard cannot type it, so it cannot be required', () => {
     // The specimen مَدرِسه wears its vowel marks; the word is مدرسه.
-    const { faMarked, fa } = vocabUnits[1].words.find((word) => word.id === 'madrese')!
-    expect(faMarked).not.toBe(fa)
-    expect(compare(fa, faMarked)).toEqual({ kind: 'match', index: -1, cellKind: 'letter' })
-    expect(normalizeTyped(faMarked)).toBe(fa)
+    const { jaMarked, ja } = vocabUnits[1].words.find((word) => word.id === 'madrese')!
+    expect(jaMarked).not.toBe(ja)
+    expect(compare(ja, jaMarked)).toEqual({ kind: 'match', index: -1, cellKind: 'letter' })
+    expect(normalizeTyped(jaMarked)).toBe(ja)
   })
 
   it('strips marks from both sides, so a marked answer in the data cannot fail a right word', () => {

@@ -26,9 +26,9 @@ export interface TypeTask {
   /** Catalog answer, except a learner's dynamic personal spelling. */
   entry?: PersianEntry
   personalName?: PersonalName
-  /** What to write, asked in Danish. Never the Persian answer — that is the exercise. */
+  /** What to write, asked in Danish. Never the Japanese answer — that is the exercise. */
   promptDa: string
-  /** How it sounds, twice: the bridge from the Danish word to the Persian one. */
+  /** How it sounds, twice: the bridge from the Danish word to the Japanese one. */
   pron?: Pron
   /** What the learner has to write. */
   answer: string
@@ -36,7 +36,7 @@ export interface TypeTask {
 
 export interface TypeExerciseProps {
   title: string
-  /** The round's Persian name, under the title. */
+  /** The round's Japanese name, under the title. */
   eyebrowEntry: PersianEntry
   bar: ReactNode
   tasks: TypeTask[]
@@ -58,12 +58,12 @@ export interface TypeExerciseProps {
 
 /**
  * Writing, not choosing: the learner reads a Danish word, hears it in the
- * pronunciation line, and writes the Persian on the keyboard docked in the
+ * pronunciation line, and writes the Japanese on the keyboard docked in the
  * thumb zone. Nothing on this screen ever prints the answer.
  *
  * A wrong word costs nothing at all — the writing stays on the line, the marks
  * point at the first place it goes wrong, and the learner fixes that one letter
- * instead of starting over (docs/plans/005-persian-keyboard.md step 3).
+ * instead of starting over (docs/plans/005-japanese-keyboard.md step 3).
  */
 export function TypeExercise(props: TypeExerciseProps) {
   const { title, eyebrowEntry, bar, tasks, onCorrect, onComplete, help, doneLine, overlays } = props

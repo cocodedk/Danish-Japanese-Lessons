@@ -43,7 +43,7 @@ export function findChildMission(id: string): ChildMission | undefined {
 }
 
 export function tilesForMission(entry: ChildMission): MissionTile[] {
-  const letters = Array.from(entry.word.fa)
+  const letters = Array.from(entry.word.ja)
   return entry.trayOrder.map((targetIndex) => ({
     id: `${entry.id}-${targetIndex}`,
     glyph: letters[targetIndex],

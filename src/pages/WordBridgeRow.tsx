@@ -6,7 +6,7 @@ export function WordBridgeRow({ bridge, featured = false }: { bridge: WordBridge
   return (
     <details className="word-bridge" data-entry-id={bridge.entry.id} open={featured}>
       <summary className="word-bridge__summary">
-        <span className="word-bridge__word word-bridge__word--fa">
+        <span className="word-bridge__word word-bridge__word--ja">
           <span className="word-bridge__language">Persisk</span>
           <PersianText entry={bridge.entry} className="word-bridge__fa" />
           <span className="word-bridge__pron">{bridge.entry.pron.da}</span>

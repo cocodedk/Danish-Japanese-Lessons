@@ -5,8 +5,8 @@ const envelope = (value: object) => JSON.stringify({ schemaVersion: 1, value })
 
 async function seed(page: Page) {
   await page.addInitScript(([profile, alphabet]) => {
-    localStorage.setItem('dpl.v1.profile', profile)
-    localStorage.setItem('dpl.v1.alphabet', alphabet)
+    localStorage.setItem('djl.v1.profile', profile)
+    localStorage.setItem('djl.v1.alphabet', alphabet)
   }, [envelope({}), envelope({ letters: [], marks: [], orientationSeen: true })])
 }
 
@@ -169,19 +169,19 @@ test('audio speed buttons apply 80 and 50 percent to the media element', async (
     .toBe(0.5)
 })
 
-test('a word shows Persian, sound, Danish and its photo, and hides the photo until a quiz answer', async ({ page }) => {
+test('a word shows Japanese, sound, Danish and its photo, and hides the photo until a quiz answer', async ({ page }) => {
   await open(page, '#/lesson/ord/1/ab')
   const image = page.getByRole('img', { name: 'Et glas vand' })
   await expect(image).toBeVisible()
   expect(await page.evaluate(() => window.scrollY)).toBe(0)
   const orderIsRight = await page.locator('.split-card').evaluate((card) => {
-    const persian = card.querySelector('.fa-specimen')!
+    const japanese = card.querySelector('.ja-specimen')!
     const sound = card.querySelector('.pron-line')!
     const photo = card.querySelector('img')!
     const danish = card.querySelector('.da-word')!
     const follows = (first: Element, second: Element) =>
       Boolean(first.compareDocumentPosition(second) & Node.DOCUMENT_POSITION_FOLLOWING)
-    return follows(persian, sound) && follows(sound, danish) && follows(danish, photo)
+    return follows(japanese, sound) && follows(sound, danish) && follows(danish, photo)
   })
   expect(orderIsRight).toBe(true)
 

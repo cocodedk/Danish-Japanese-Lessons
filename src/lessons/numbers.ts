@@ -10,13 +10,13 @@ export interface BeginnerNumber {
 type NumberRow = [string, string, string, string, string, string]
 
 function number(value: number, row: NumberRow): BeginnerNumber {
-  const [digit, fa, faMarked, da, pronDa, ipa] = row
+  const [digit, ja, jaMarked, da, pronDa, ipa] = row
   return {
     value,
     digit: defineEntry({
       id: `number-${value}-digit`,
       kind: 'symbol',
-      fa: digit,
+      ja: digit,
       da: `Tallet ${da}`,
       pron: { da: '∅', ipa: '∅' },
       audioNotApplicable: 'Talordet ved siden af bærer udtalen.',
@@ -24,8 +24,8 @@ function number(value: number, row: NumberRow): BeginnerNumber {
     word: defineEntry({
       id: `number-${value}-word`,
       kind: 'word',
-      fa,
-      faMarked,
+      ja,
+      jaMarked,
       da,
       pron: { da: pronDa, ipa },
     }),

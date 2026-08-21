@@ -15,10 +15,10 @@ describe('audio recording handoff', () => {
     expect(audioRecordingQueue.rows.filter((row) => row.scope === 'talk')).toHaveLength(0)
     for (const row of audioRecordingQueue.rows) {
       const source = missing.find((candidate) => candidate.id === row.entryId)!
-      expect(row.transcript).toBe(source.faMarked ?? source.fa)
+      expect(row.transcript).toBe(source.jaMarked ?? source.ja)
       expect(row.synthesisText).toBe(row.transcript)
       expect(row.expectedDraft).toBe(`.audio/work/${row.clipId}.mp3`)
-      expect(row.requiredTakeReview).toEqual(['native-persian'])
+      expect(row.requiredTakeReview).toEqual(['native-japanese'])
     }
   })
 

@@ -7,7 +7,7 @@ export interface DaWordProps {
 
 /**
  * The Danish half of a pair: Andika (the SIL literacy face), calm and smaller
- * than the Persian specimen. See docs/design/ART-DIRECTION.md "The specimen".
+ * than the Japanese specimen. See docs/design/ART-DIRECTION.md "The specimen".
  */
 export function DaWord({ children }: DaWordProps) {
   return (

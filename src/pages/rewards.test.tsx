@@ -22,7 +22,7 @@ function answer(index: number) {
 }
 
 function praiseOnScreen(): boolean {
-  return PRAISE.some((line) => screen.queryAllByText(line.fa).length > 0)
+  return PRAISE.some((line) => screen.queryAllByText(line.ja).length > 0)
 }
 
 beforeEach(() => {
@@ -136,11 +136,11 @@ describe('the forside carries the streak', () => {
 describe('a null envelope value never crashes the app', () => {
   it('renders home, a letter route and the find exercise as fresh state', () => {
     window.localStorage.setItem(
-      'dpl.v1.rewards',
+      'djl.v1.rewards',
       JSON.stringify({ schemaVersion: 1, value: null }),
     )
     window.localStorage.setItem(
-      'dpl.v1.alphabet',
+      'djl.v1.alphabet',
       JSON.stringify({ schemaVersion: 1, value: null }),
     )
 

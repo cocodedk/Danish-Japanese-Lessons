@@ -56,13 +56,13 @@ The first slice contains exactly:
 | `nan` | `vocabulary-1-nan` | `vocabulary-1-nan` | `brød` |
 | `gol` | `vocabulary-3-gol` | `vocabulary-3-gol` | `blomst` |
 
-Mission declarations MUST reference canonical vocabulary objects rather than repeat Persian, IPA,
+Mission declarations MUST reference canonical vocabulary objects rather than repeat Japanese, IPA,
 Danish sound spelling, meaning, or image metadata.
 
 ## Front door
 
 - The primary child option MUST be visible in the first 320×640 viewport.
-- It MUST show a real lesson image and a Persian specimen as the product signal.
+- It MUST show a real lesson image and a Japanese specimen as the product signal.
 - Activating it sets `child` and opens `/opdag`.
 - The grown-up option sets `course` and opens `/kursus`.
 - The two choices MUST be semantically separate controls with predictable labels.
@@ -72,7 +72,7 @@ Danish sound spelling, meaning, or image metadata.
 
 - Show all three mission choices without locking.
 - Each choice MUST include image, Danish meaning, and a short command.
-- Persian MAY appear as a visual preview; the card MUST not imply it has already been learned.
+- Japanese MAY appear as a visual preview; the card MUST not imply it has already been learned.
 - A collected mission MUST say `I din samling` in addition to visual state.
 - The collection region MUST list completed words using complete canonical teaching data.
 - With no completed mission, the region MUST invite the learner to make the first item.
@@ -95,7 +95,7 @@ model -> guide -> ready -> recall -> complete
 
 ### Guide
 
-- Render one slot per Unicode code point in logical Persian order.
+- Render one slot per Unicode code point in logical Japanese order.
 - Label the board `1 af 2` so the learner knows this is the guided round.
 - Render one button per source letter, including separate IDs for repeated letters.
 - Visually and textually identify the next correct tile.
@@ -136,7 +136,7 @@ model -> guide -> ready -> recall -> complete
 - Tile tray order MUST be deterministic per mission and different from the target order when possible.
 - Duplicate letters MUST have stable unique tile IDs.
 - Tests MUST assert logical placement order, not visual CSS coordinates alone.
-- RTL visual layout MUST put the first logical Persian code point at the rightmost slot.
+- RTL visual layout MUST put the first logical Japanese code point at the rightmost slot.
 
 ## Feedback and focus
 
@@ -154,7 +154,7 @@ model -> guide -> ready -> recall -> complete
 - At 768 px and above, workshop choices MAY use three columns; the mission image and build MAY form
   a two-column workspace while DOM order remains model/image before action.
 - Images MUST use a stable 4:3 or catalog-defined ratio and MUST not resize after loading.
-- Persian tiles and slots MUST use stable min/max dimensions; feedback MUST not move the tray.
+- Japanese tiles and slots MUST use stable min/max dimensions; feedback MUST not move the tray.
 - At 200% zoom, the flow MUST reflow to one column and preserve every action.
 
 ## Browser acceptance journeys

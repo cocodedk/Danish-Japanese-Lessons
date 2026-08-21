@@ -29,7 +29,7 @@ describe('vocabulary progress', () => {
 
     markWordDone('1', 'ab')
     expect(getVocabProgress('1').words).toEqual(['ab'])
-    // Units keep their own key — `dpl.v1.vocab.<unit>`.
+    // Units keep their own key — `djl.v1.vocab.<unit>`.
     expect(getVocabProgress('2').words).toEqual([])
   })
 
@@ -95,7 +95,7 @@ describe('vocabulary progress', () => {
   })
 
   it('ignores corrupt storage rather than crashing on it', () => {
-    window.localStorage.setItem('dpl.v1.vocab.1', 'not json')
+    window.localStorage.setItem('djl.v1.vocab.1', 'not json')
     expect(getVocabProgress('1')).toEqual({ words: [], paid: false })
   })
 

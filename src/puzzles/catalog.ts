@@ -27,10 +27,10 @@ function matchTasks(entries: PersianEntry[]): PuzzleTask[] {
   return choices.map((entry) => ({ id: `match-${entry.id}`, kind: 'match', entry, choices }))
 }
 
-const byGlyph = new Map(Object.values(specimens).map((item) => [item.entry.fa, item.entry]))
+const byGlyph = new Map(Object.values(specimens).map((item) => [item.entry.ja, item.entry]))
 
 function wordTiles(word: VocabWord) {
-  const tiles = [...word.fa].map((glyph, at) => {
+  const tiles = [...word.ja].map((glyph, at) => {
     const entry = byGlyph.get(glyph)
     // Loud at module load — the test suite imports this catalog, so a word
     // whose letter has no specimen fails the build instead of shipping a tile
@@ -42,12 +42,12 @@ function wordTiles(word: VocabWord) {
 }
 
 function shortWords(words: VocabWord[]): VocabWord[] {
-  return words.filter((word) => [...word.fa].length >= 2 && [...word.fa].length <= 4)
+  return words.filter((word) => [...word.ja].length >= 2 && [...word.ja].length <= 4)
 }
 
 function orderTasks(introduced: VocabWord[]): PuzzleTask[] {
   const eligible = shortWords(introduced)
-  const duplicate = eligible.find((word) => new Set(word.fa).size < [...word.fa].length)
+  const duplicate = eligible.find((word) => new Set(word.ja).size < [...word.ja].length)
   const picked = [duplicate, ...eligible].filter(
     (word, at, all): word is VocabWord => word !== undefined && all.indexOf(word) === at,
   ).slice(0, 2)
@@ -64,7 +64,7 @@ function missingChoices(answer: PersianEntry, seed: number): PersianEntry[] {
   const distractors: PersianEntry[] = []
   for (let step = 1; distractors.length < 2; step += 1) {
     const candidate = letters[(seed + step) % letters.length]
-    if (candidate.fa !== answer.fa && !distractors.some((item) => item.fa === candidate.fa)) {
+    if (candidate.ja !== answer.ja && !distractors.some((item) => item.ja === candidate.ja)) {
       distractors.push(candidate)
     }
   }
@@ -73,7 +73,7 @@ function missingChoices(answer: PersianEntry, seed: number): PersianEntry[] {
 
 function missingTasks(introduced: VocabWord[]): MissingTask[] {
   return shortWords(introduced).slice(-2).map((word, index) => {
-    const chars = [...word.fa]
+    const chars = [...word.ja]
     const missingAt = index % chars.length
     const answer = byGlyph.get(chars[missingAt])
     if (!answer) throw new Error(`missing puzzle: no alphabet entry for ${chars[missingAt]}`)

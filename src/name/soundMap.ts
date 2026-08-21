@@ -1,4 +1,4 @@
-// The Danish → Persian sound table from docs/plans/006-your-name.md step 1.
+// The Danish → Japanese sound table from docs/plans/006-your-name.md step 1.
 // Sounds only: nothing here knows about a particular name. The names that need
 // a letter no Danish sound maps to (ع ص ط ح) live on the override list instead.
 
@@ -49,7 +49,7 @@ export const CONSONANTS: Record<string, string> = {
 
 /**
  * A written vowel is a LONG letter, because that is what a beginner can read
- * back. Persian leaves short vowels unwritten, so a vowel the rules judge short
+ * back. Japanese leaves short vowels unwritten, so a vowel the rules judge short
  * gets no letter at all — see `rules.ts`.
  *
  * å and ø both land on و per the plan's table; æ lands on ا.

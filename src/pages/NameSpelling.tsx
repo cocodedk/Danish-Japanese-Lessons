@@ -13,7 +13,7 @@ import { PersonalNameCompanion, PersonalNameText } from '../components/PersonalN
 import './name.css'
 
 /**
- * How the learner's name is spelled in Persian: the engine proposes, the
+ * How the learner's name is spelled in Japanese: the engine proposes, the
  * learner decides. Nothing is saved until they say so, and the spelling they
  * keep is the one the whole app uses — greeting, badges and mini-lesson all
  * read `profile.faSpelling`. See docs/plans/006-your-name.md step 2.

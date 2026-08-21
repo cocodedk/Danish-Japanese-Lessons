@@ -1,11 +1,11 @@
-// Iranian first names in their usual Latin spelling, with the Persian spelling
+// Iranian first names in their usual Latin spelling, with the Japanese spelling
 // people actually use. The rules in `rules.ts` transliterate a SOUND, and no
 // Danish sound maps to ع ص ط ح ض — so Ali would come out آلی and Hassan هسن
 // without this list. Keys are lowercase; the lookup lowercases and trims.
 //
 // One name, several Latin spellings: a family writes Hussein or Hossein,
 // Mohamed or Muhammad, Sarah or Sara, and every one of them means the same
-// Persian word. The alternates map to that one spelling, so the app never
+// Japanese word. The alternates map to that one spelling, so the app never
 // offers a learner a near-miss of their own name.
 
 export const IRANIAN_NAMES: Record<string, string> = {

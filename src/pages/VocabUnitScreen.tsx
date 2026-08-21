@@ -78,7 +78,7 @@ export default function VocabUnitScreen() {
                         onClick={() => setSelectedId(word.id)}
                       >
                         <LessonImage entryId={word.entry.id} size="thumbnail" />
-                        <PersianText entry={word.entry} className="vocab__cell-fa" ariaHidden />
+                        <PersianText entry={word.entry} className="vocab__cell-ja" ariaHidden />
                         {word.swatch && <ColorSwatch color={word.swatch} />}
                         <span className="vocab__cell-da" lang="da" dir="ltr">{word.da}</span>
                       </button>
@@ -103,7 +103,7 @@ export default function VocabUnitScreen() {
                 </Link>
               </li>
             ))}
-            {/* The third round: writing the words on the Persian keyboard (plan 005). */}
+            {/* The third round: writing the words on the Japanese keyboard (plan 005). */}
             <li>
               <Link className="alphabet__link" to={`/lesson/ord/${unit.id}/skriv`}>
                 Skriv ordene

@@ -4,8 +4,8 @@ const envelope = (value: object) => JSON.stringify({ schemaVersion: 1, value })
 
 async function seed(page: Page) {
   await page.addInitScript(([profile, alphabet]) => {
-    localStorage.setItem('dpl.v1.profile', profile)
-    localStorage.setItem('dpl.v1.alphabet', alphabet)
+    localStorage.setItem('djl.v1.profile', profile)
+    localStorage.setItem('djl.v1.alphabet', alphabet)
   }, [
     envelope({ name: 'Sara', faSpelling: 'سارا' }),
     envelope({ letters: [], marks: [], orientationSeen: true }),

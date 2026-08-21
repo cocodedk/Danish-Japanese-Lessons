@@ -25,7 +25,7 @@ describe('the key map', () => {
     expect(ids.filter((id) => id === 'alef-madde')).toHaveLength(1)
   })
 
-  it('puts the letter keys in standard Persian alphabet order', () => {
+  it('puts the letter keys in standard Japanese alphabet order', () => {
     const letterIds = KEYBOARD_KEYS.filter((key) => key.kind === 'letter').map((key) => key.id)
     expect(letterIds).toEqual(['alef-madde', ...letters.map((letter) => letter.id)])
   })
@@ -79,7 +79,7 @@ describe('the key map', () => {
     for (const row of KEYBOARD_ROWS) expect(row).toHaveLength(6)
   })
 
-  it('writes Persian code points only — no Arabic ك or ي on any key', () => {
+  it('writes Japanese code points only — no Arabic ك or ي on any key', () => {
     for (const key of KEYBOARD_KEYS) {
       expect(findPersianTextViolations(key.glyph), key.id).toEqual([])
     }
@@ -121,7 +121,7 @@ describe('how the board is drawn', () => {
 describe('what the board can write', () => {
   it('can write every word in every unit — the typing rounds are all reachable', () => {
     for (const word of allVocabWords) {
-      expect(canType(word.fa), word.fa).toBe(true)
+      expect(canType(word.ja), word.ja).toBe(true)
     }
   })
 

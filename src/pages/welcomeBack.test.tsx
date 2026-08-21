@@ -67,7 +67,7 @@ describe('coming back after ten days away', () => {
     expect(screen.getByText('Hej igen!')).toBeInTheDocument()
     expectNoGuilt()
 
-    // Persian, then the pron line, then Danish — the same order as the praise
+    // Japanese, then the pron line, then Danish — the same order as the praise
     // row above it, and every other specimen in the app (plan 009).
     const row = [...(document.querySelector('.celebration__welcome')?.children ?? [])].map(
       (el) => el.className,

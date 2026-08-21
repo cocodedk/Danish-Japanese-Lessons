@@ -3,13 +3,13 @@ import { catalogDomains, persianCatalog } from './registry'
 import { withoutMarks } from '../lessons/marks'
 import { findPersianTextViolations } from '../lessons/textRules'
 
-describe('the typed Persian catalog', () => {
+describe('the typed Japanese catalog', () => {
   it('has globally unique stable ids and complete companions', () => {
     const ids = persianCatalog.map((entry) => entry.id)
     expect(new Set(ids).size).toBe(ids.length)
     for (const entry of persianCatalog) {
       expect(entry.id).toMatch(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
-      expect(entry.fa.trim(), entry.id).not.toBe('')
+      expect(entry.ja.trim(), entry.id).not.toBe('')
       expect(entry.da.trim(), entry.id).not.toBe('')
       expect(entry.pron.da.trim(), entry.id).not.toBe('')
       expect(entry.pron.ipa.trim(), entry.id).not.toBe('')
@@ -29,7 +29,7 @@ describe('the typed Persian catalog', () => {
       if (entry.kind === 'word' || entry.kind === 'phrase') {
         expect(entry.readingCues?.length, entry.id).toBeGreaterThan(0)
       }
-      const length = [...entry.fa].length
+      const length = [...entry.ja].length
       for (const cue of entry.readingCues ?? []) {
         expect(cue.start, entry.id).toBeGreaterThanOrEqual(0)
         expect(cue.end, entry.id).toBeGreaterThanOrEqual(cue.start)
@@ -41,21 +41,21 @@ describe('the typed Persian catalog', () => {
     }
   })
 
-  it('keeps code points, Persian numerals, ZWNJ, and faMarked honest', () => {
+  it('keeps code points, Japanese numerals, ZWNJ, and jaMarked honest', () => {
     for (const entry of persianCatalog) {
-      expect(findPersianTextViolations(entry.fa), entry.id).toEqual([])
-      if (entry.faMarked) {
-        expect(findPersianTextViolations(entry.faMarked), entry.id).toEqual([])
-        expect(withoutMarks(entry.faMarked), entry.id).toBe(entry.fa)
+      expect(findPersianTextViolations(entry.ja), entry.id).toEqual([])
+      if (entry.jaMarked) {
+        expect(findPersianTextViolations(entry.jaMarked), entry.id).toEqual([])
+        expect(withoutMarks(entry.jaMarked), entry.id).toBe(entry.ja)
       }
-      if (/[۰-۹]/u.test(entry.fa)) expect(entry.kind, entry.id).toBe('symbol')
-      expect(entry.fa, entry.id).not.toMatch(/\s\u200c|\u200c\s/u)
+      if (/[۰-۹]/u.test(entry.ja)) expect(entry.kind, entry.id).toBe('symbol')
+      expect(entry.ja, entry.id).not.toMatch(/\s\u200c|\u200c\s/u)
     }
   })
 
   it('keeps UI and name phrases undiacriticized', () => {
     for (const entry of [...catalogDomains.interface, ...catalogDomains.names]) {
-      expect(entry.faMarked, entry.id).toBeUndefined()
+      expect(entry.jaMarked, entry.id).toBeUndefined()
     }
   })
 })

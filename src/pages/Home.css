@@ -79,7 +79,7 @@
 }
 
 .home__hero {
-  --pane-fa-height: clamp(17rem, 42dvh, 24rem);
+  --pane-ja-height: clamp(17rem, 42dvh, 24rem);
 }
 
 @media (min-width: 48rem) {
@@ -123,6 +123,6 @@
   .home__hero {
     position: sticky;
     inset-block-start: var(--rule-step);
-    --pane-fa-height: clamp(18rem, 36dvh, 24rem);
+    --pane-ja-height: clamp(18rem, 36dvh, 24rem);
   }
 }

@@ -49,15 +49,15 @@ describe('stickers are the marks a teacher actually owns', () => {
     }
   })
 
-  it('writes the Persian on the stamps from the single-sourced STICKER_LABELS, with Persian digits', () => {
+  it('writes the Japanese on the stamps from the single-sourced STICKER_LABELS, with Japanese digits', () => {
     render(<StickerStamp kind="bist" />)
-    expect(screen.getByText(STICKER_LABELS.bist.fa)).toBeInTheDocument()
-    expect(STICKER_LABELS.bist.fa).toBe('۲۰')
+    expect(screen.getByText(STICKER_LABELS.bist.ja)).toBeInTheDocument()
+    expect(STICKER_LABELS.bist.ja).toBe('۲۰')
   })
 
   it('stamps the آفرین mark from STICKER_LABELS too — no JSX literal of its own', () => {
     render(<StickerStamp kind="afarin" />)
-    expect(screen.getByText(STICKER_LABELS.afarin.fa)).toBeInTheDocument()
+    expect(screen.getByText(STICKER_LABELS.afarin.ja)).toBeInTheDocument()
   })
 })
 
@@ -69,7 +69,7 @@ describe('the celebration surface never celebrates a null reward', () => {
 })
 
 describe('the praise row carries its own pronunciation (plan 009)', () => {
-  it('renders fa, then the pron line, then da — the same order as any other specimen', () => {
+  it('renders ja, then the pron line, then da — the same order as any other specimen', () => {
     const { container } = render(<Celebration reward={null} />)
     const row = [...(container.querySelector('.celebration__praise')?.children ?? [])].map(
       (el) => el.className,
@@ -82,7 +82,7 @@ describe('the praise row carries its own pronunciation (plan 009)', () => {
     ])
 
     // The default praise (no reward yet) is PRAISE[0] — آفرین — from data, not improvised.
-    expect(screen.getByText(PRAISE[0].fa)).toBeInTheDocument()
+    expect(screen.getByText(PRAISE[0].ja)).toBeInTheDocument()
     expect(screen.getByText(`${PRAISE[0].pron?.da} · [${PRAISE[0].pron?.ipa}]`)).toBeInTheDocument()
     expect(screen.getByText(PRAISE[0].da)).toBeInTheDocument()
   })

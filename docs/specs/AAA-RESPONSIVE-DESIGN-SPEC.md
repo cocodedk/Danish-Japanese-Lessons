@@ -48,11 +48,11 @@ At 200–400% desktop zoom, effective container width—not physical monitor wid
   requires an explicit spec exception and visual approval.
 - Inline outer padding is fluid from `1rem` to `4rem`, except the authentic notebook margin gutter.
   At 320px, controls MAY cross into the decorative gutter when necessary, but the red line stays
-  singular and Persian/Danish content never clips.
+  singular and Japanese/Danish content never clips.
 - Narrow/compact sheets are full-bleed. Medium and wider use a centered notebook workspace with a
   one-pixel paper edge; the rules and single red margin line end at the sheet, not the monitor edge.
   Outer gutters use existing paper/card tokens—no gradient, new ornament, or heavy shadow.
-- Danish reading text stays between roughly 35 and 70 characters per line. Persian connected text
+- Danish reading text stays between roughly 35 and 70 characters per line. Japanese connected text
   uses a reviewer-approved readable measure and never letter-spacing. Full-width backgrounds MAY
   extend; text and controls do not inherit that width.
 - Spacing and type use `clamp()` within documented minima/maxima. Viewport units MUST NOT make a card
@@ -69,15 +69,15 @@ At 200–400% desktop zoom, effective container width—not physical monitor wid
 - Medium: bound the specimen and lessons; two lesson cards MAY share a row only when each retains a
   comfortable text measure and 44px targets.
 - Wide/ultrawide: a 5/7 or similarly balanced two-column workspace. The specimen stays a bounded
-  Persian-over-Danish card in one column; Continue, review due state, and lesson/review lists occupy
+  Japanese-over-Danish card in one column; Continue, review due state, and lesson/review lists occupy
   the other. Lesson cards form one or two columns and MUST NOT exceed 36rem each.
-- `--pane-fa-height: 55dvh` is a phone behavior. Wide mode replaces it with a content-based
+- `--pane-ja-height: 55dvh` is a phone behavior. Wide mode replaces it with a content-based
   `clamp()` so the hero does not consume most of a desktop viewport or create empty vertical space.
 
 ### Orientation and name flows
 
 - Narrow/compact orientation remains stepped and stacked. Wide steps pair explanation and live
-  demonstration in two aligned columns while preserving Persian-before-Danish reading order.
+  demonstration in two aligned columns while preserving Japanese-before-Danish reading order.
 - Name capture, spelling choices, editor, settings, and confirmations use a reading column or a
   two-panel form/preview composition; inputs never span the desktop sheet.
 - A virtual keyboard or browser autocomplete panel may reduce height without hiding input, help, or
@@ -90,11 +90,11 @@ At 200–400% desktop zoom, effective container width—not physical monitor wid
   is visible without a monitor-width eye movement or scroll back to the page top.
 - Alphabet cells are 3.25–6rem wide; vocabulary cards are 8–18rem wide. `1fr` MUST NOT stretch the
   final row across the remaining desktop width. Groups remain visually distinct notebook sections.
-- Internal Persian grids fill RTL; headings, progress, and global navigation retain Danish LTR order.
+- Internal Japanese grids fill RTL; headings, progress, and global navigation retain Danish LTR order.
 
 ### Letter, vowel, word, and connected-reading details
 
-- Narrow/compact: one teaching object per flow, Persian first, with bottom navigation reachable.
+- Narrow/compact: one teaching object per flow, Japanese first, with bottom navigation reachable.
 - Wide: a bounded two-column lesson. The primary specimen/stroke teaching occupies one column;
   contextual explanation, forms, audio, reading cues, and completion occupy the other. The primary
   specimen/card never exceeds 34rem or becomes a banner across the sheet.
@@ -112,7 +112,7 @@ At 200–400% desktop zoom, effective container width—not physical monitor wid
 
 ### Typing
 
-- Narrow: prompt above a docked writing line and Persian keyboard; the 360×640 occlusion contract
+- Narrow: prompt above a docked writing line and Japanese keyboard; the 360×640 occlusion contract
   remains mandatory.
 - Medium: keyboard may stay below but is centered and bounded.
 - Wide/ultrawide: task/prompt/writing line and the ≤34rem keyboard form two aligned columns. The
@@ -137,7 +137,7 @@ At 200–400% desktop zoom, effective container width—not physical monitor wid
   `env(safe-area-inset-*)`, browser chrome, standalone/fullscreen display, and landscape notches.
 - The virtual keyboard MUST NOT permanently resize, jump, or cover the writing line. Where supported,
   visual-viewport changes keep the active control and its context visible without page-scale hacks.
-- No fixed height may clip translated copy, IPA, Persian marks, 200% text, or a two-line button.
+- No fixed height may clip translated copy, IPA, Japanese marks, 200% text, or a two-line button.
   Minimum heights expand with content.
 - Resize/rotation MAY change visual placement but MUST NOT remount a task or move keyboard focus to
   the document start. Animating layout between modes is unnecessary and SHOULD be disabled.

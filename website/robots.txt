@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cocodedk.github.io/Danish-Persian-Lessons/sitemap.xml
+Sitemap: https://cocodedk.github.io/Danish-Japanese-Lessons/sitemap.xml

@@ -46,11 +46,11 @@
 
   /* Type — self-hosted, see src/styles/fonts.css */
   --font-latin: 'Andika', 'Segoe UI', system-ui, sans-serif;
-  --font-fa: 'Vazirmatn', 'Noto Naskh Arabic', system-ui, sans-serif;
+  --font-ja: 'Vazirmatn', 'Noto Naskh Arabic', system-ui, sans-serif;
   --font-naskh: 'Noto Naskh Arabic', 'Vazirmatn', serif;
 
   /* App-specific spacing (docs/design/ART-DIRECTION.md "App-specific tokens") */
-  --pane-fa-height: 55dvh;
+  --pane-ja-height: 55dvh;
   --tap-min: 44px;
 
   /* Responsive content measures. Wide screens reveal relationships; they do

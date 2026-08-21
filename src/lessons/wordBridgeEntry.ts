@@ -59,8 +59,8 @@ export const finalE = (start: number) => writtenVowel(
 
 interface BridgeEntrySeed {
   id: string
-  fa: string
-  faMarked?: string
+  ja: string
+  jaMarked?: string
   da: string
   pronDa: string
   ipa: string
@@ -71,8 +71,8 @@ export function bridgeEntry(seed: BridgeEntrySeed): PersianEntry {
   return defineEntry({
     id: `word-bridge-${seed.id}`,
     kind: 'word',
-    fa: seed.fa,
-    faMarked: seed.faMarked,
+    ja: seed.ja,
+    jaMarked: seed.jaMarked,
     da: seed.da,
     pron: { da: seed.pronDa, ipa: seed.ipa },
     readingCues: seed.readingCues,

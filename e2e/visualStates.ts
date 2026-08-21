@@ -35,8 +35,8 @@ async function reset(page: Page, profile: object = {}) {
   await page.goto(`./?visual-reset=${resetId += 1}#/`)
   await page.evaluate(([profileRow, alphabetRow]) => {
     localStorage.clear()
-    localStorage.setItem('dpl.v1.profile', profileRow)
-    localStorage.setItem('dpl.v1.alphabet', alphabetRow)
+    localStorage.setItem('djl.v1.profile', profileRow)
+    localStorage.setItem('djl.v1.alphabet', alphabetRow)
   }, [envelope(profile), envelope({ letters: [], marks: [], orientationSeen: true })])
   await page.reload()
 }
@@ -146,7 +146,7 @@ export async function prepareVisualState(page: Page, state: VisualState) {
     return expect(page.getByRole('heading', { name: 'Ord, der ligner' })).toBeVisible()
   }
   if (state === 'celebration') {
-    await page.evaluate((row) => localStorage.setItem('dpl.v1.rewards', row), envelope({
+    await page.evaluate((row) => localStorage.setItem('djl.v1.rewards', row), envelope({
       stickers: [], level: 1, points: 9, practiceDates: [], giftsOpened: [], cheers: 0,
       streak: { value: 0, resting: false },
     }))

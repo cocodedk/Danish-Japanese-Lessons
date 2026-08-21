@@ -53,7 +53,7 @@ export const OTHER_SIGN_DA = 'særligt tegn'
 export const HAMZE_YE_ENTRY = defineEntry({
   id: 'names-contextual-hamze-ye',
   kind: 'symbol',
-  fa: 'ئ',
+  ja: 'ئ',
   da: 'hamze over ye; ingen egen lyd',
   pron: NO_OWN_SOUND,
   audioNotApplicable: 'Tegnet fungerer som bærer i et navn og har ingen egen lyd.',
@@ -98,11 +98,11 @@ const SHAPES = new Map<string, Shape>([
     MADDE.glyph,
     { ...derive(MADDE.glyph, false, MADDE.name.da, MADDE.entry), sound: MADDE.sound, nameEntry: MADDE.nameEntry },
   ],
-  [HAMZE_YE_ENTRY.fa, { ...derive(HAMZE_YE_ENTRY.fa, true, 'hamze over ye', HAMZE_YE_ENTRY), sound: HAMZE_YE_ENTRY.pron }],
+  [HAMZE_YE_ENTRY.ja, { ...derive(HAMZE_YE_ENTRY.ja, true, 'hamze over ye', HAMZE_YE_ENTRY), sound: HAMZE_YE_ENTRY.pron }],
 ])
 
 /**
- * A Persian letter that is not one of the 32 — ئ in لوئیزه, say. It joins on
+ * A Japanese letter that is not one of the 32 — ئ in لوئیزه, say. It joins on
  * both sides, which is true of every such form, and it is called what it is
  * rather than named after itself.
  */

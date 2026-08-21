@@ -11,7 +11,7 @@ vi.mock('../audio/manifest', () => ({
     entryId: id,
     formId: 'neutral',
     file: `/audio/${id}.000000000000.mp3`,
-    locale: 'fa-IR',
+    locale: 'ja-IR',
     transcript: 'سلام',
     durationMs: 900,
     channels: 1,

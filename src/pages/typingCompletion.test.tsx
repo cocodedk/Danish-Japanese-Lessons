@@ -30,7 +30,7 @@ describe('finishing a typing round', () => {
 describe('the forside', () => {
   it('lists a writing round per unit, with how much of it is written', () => {
     open('#/lesson/ord/1/skriv')
-    write(first.fa)
+    write(first.ja)
     tap('Se efter')
 
     open('#/')
@@ -45,7 +45,7 @@ describe('the forside', () => {
 describe('a wrong attempt', () => {
   it('keeps the writing on the line when the learner asks to try again', () => {
     const { container } = open('#/lesson/ord/1/skriv')
-    const firstLetter = [...first.fa][0]
+    const firstLetter = [...first.ja][0]
     write(firstLetter)
     tap('Se efter')
     tap('Prøv én gang til')

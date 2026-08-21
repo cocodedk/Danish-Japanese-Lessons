@@ -9,7 +9,7 @@ function entry(id: string) {
   return found
 }
 
-describe('contextual Persian reading', () => {
+describe('contextual Japanese reading', () => {
   it('does not claim plain alef has one universal sound', () => {
     const alef = letters.find((letter) => letter.id === 'alef')
     expect(alef?.sound).toEqual({
@@ -36,9 +36,9 @@ describe('contextual Persian reading', () => {
       expect(cues.some((cue) => cue.role === 'whole'), word.id).toBe(false)
       expect(written.flatMap((cue) =>
         Array.from({ length: cue.end - cue.start }, (_, offset) => cue.start + offset),
-      ), word.id).toEqual([...word.entry.fa].map((_, index) => index))
+      ), word.id).toEqual([...word.entry.ja].map((_, index) => index))
       for (const cue of written) {
-        expect(cue.display, word.id).toBe([...word.entry.fa].slice(cue.start, cue.end).join(''))
+        expect(cue.display, word.id).toBe([...word.entry.ja].slice(cue.start, cue.end).join(''))
       }
       expect(cues.flatMap((cue) => cue.pron?.ipa ?? []).join(''), word.id).toBe(word.entry.pron.ipa.replaceAll('ˈ', ''))
     }

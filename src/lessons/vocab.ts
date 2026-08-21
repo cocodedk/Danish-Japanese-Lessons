@@ -5,7 +5,7 @@
 // exception are written up in docs/plans/004-grade1-vocab.md under
 // "Word list proposal" — argue with a word there; it lands here.
 //
-// `faMarked` is the fully vocalized specimen. Where it reads the same as `fa`
+// `jaMarked` is the fully vocalized specimen. Where it reads the same as `ja`
 // the word genuinely has no short vowel to write: آب، بابا، نان are long
 // vowels all the way through, which is exactly why the primer opens on them.
 // Marks are the short vowels only — مَدرِسه, never مَدْرِسه; the schoolbook
@@ -19,7 +19,7 @@ export interface VocabWord extends WordCard {
   /** Stable ascii id — used in routes (#/lesson/ord/:unit/:word) and progress. */
   id: string
   /** Required here, unlike the optional field on WordCard: every card is vocalized. */
-  faMarked: string
+  jaMarked: string
   /** Educational color field shown instead of a stock illustration. */
   swatch?: ColorSwatchId
 }
@@ -27,36 +27,36 @@ export interface VocabWord extends WordCard {
 export type ColorSwatchId = 'red' | 'blue' | 'green' | 'yellow' | 'black' | 'white' | 'orange' | 'pink'
 
 export interface VocabUnit {
-  /** Route segment and the `dpl.v1.vocab.<unit>` suffix. */
+  /** Route segment and the `djl.v1.vocab.<unit>` suffix. */
   id: string
   /** Danish heading. */
   title: string
-  /** Persian heading. UI chrome, so no اِعراب — CLAUDE.md's Persian text rules. */
+  /** Japanese heading. UI chrome, so no اِعراب — CLAUDE.md's Japanese text rules. */
   titleEntry: PersianEntry
   /** One Danish line for the forside card. */
   summary: string
   words: VocabWord[]
 }
 
-/** id · fa · faMarked · dansk · dansk lydskrift · IPA · swatch · stable entry id. */
+/** id · ja · jaMarked · dansk · dansk lydskrift · IPA · swatch · stable entry id. */
 type Row = [string, string, string, string, string, string, ColorSwatchId?, string?]
 
 function words(unitId: string, rows: Row[]): VocabWord[] {
-  return rows.map(([id, fa, faMarked, da, lyd, ipa, swatch, entryId]) => {
+  return rows.map(([id, ja, jaMarked, da, lyd, ipa, swatch, entryId]) => {
     const pron = { da: lyd, ipa }
     return {
       id,
       entry: defineEntry({
         id: entryId ?? `vocabulary-${unitId}-${id}`,
         kind: 'word',
-        fa,
-        faMarked,
+        ja,
+        jaMarked,
         da,
         pron,
         readingCues: vocabReadingCues(id),
       }),
-      fa,
-      faMarked,
+      ja,
+      jaMarked,
       da,
       pron,
       ...(swatch ? { swatch } : {}),
@@ -68,7 +68,7 @@ export const vocabUnits: VocabUnit[] = [
   {
     id: '1',
     title: 'De første ord',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-1-title', kind: 'phrase', fa: 'آب و بابا', da: 'Vand og far', pron: { da: 'åb o båbå', ipa: 'ɒːb o bɒːbɒː' } }),
+    titleEntry: defineEntry({ id: 'vocabulary-unit-1-title', kind: 'phrase', ja: 'آب و بابا', da: 'Vand og far', pron: { da: 'åb o båbå', ipa: 'ɒːb o bɒːbɒː' } }),
     summary: 'De ord bogen åbner med — og de ord du peger med',
     words: words('1', [
       ['ab', 'آب', 'آب', 'vand', 'åb', 'ɒːb'],
@@ -87,7 +87,7 @@ export const vocabUnits: VocabUnit[] = [
   {
     id: '2',
     title: 'I skolen',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-2-title', kind: 'word', fa: 'مدرسه', faMarked: 'مَدرِسه', da: 'Skole', pron: { da: 'madrese', ipa: 'mædɾese' } }),
+    titleEntry: defineEntry({ id: 'vocabulary-unit-2-title', kind: 'word', ja: 'مدرسه', jaMarked: 'مَدرِسه', da: 'Skole', pron: { da: 'madrese', ipa: 'mædɾese' } }),
     summary: 'Blyant, bog, bord — og det du siger, når du kommer ind',
     words: words('2', [
       ['medad', 'مداد', 'مِداد', 'blyant', 'medåd', 'meˈdɒːd'],
@@ -103,7 +103,7 @@ export const vocabUnits: VocabUnit[] = [
   {
     id: '3',
     title: 'Hjem og himmel',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-3-title', kind: 'phrase', fa: 'خانه و آسمان', da: 'Hjem og himmel', pron: { da: 'khåne o åsemån', ipa: 'xɒːne o ɒːsemɒːn' } }),
+    titleEntry: defineEntry({ id: 'vocabulary-unit-3-title', kind: 'phrase', ja: 'خانه و آسمان', da: 'Hjem og himmel', pron: { da: 'khåne o åsemån', ipa: 'xɒːne o ɒːsemɒːn' } }),
     summary: 'Hus, regn, himmel, måne, nat og blomst',
     words: words('3', [
       ['khane', 'خانه', 'خانه', 'hus, hjem', 'khåne', 'xɒːˈne'],
@@ -117,7 +117,7 @@ export const vocabUnits: VocabUnit[] = [
   {
     id: '4',
     title: 'Farver',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-4-title', kind: 'phrase', fa: 'رنگ‌ها', da: 'Farver', pron: { da: 'ranghå', ipa: 'ɾæŋˈhɒː' } }),
+    titleEntry: defineEntry({ id: 'vocabulary-unit-4-title', kind: 'phrase', ja: 'رنگ‌ها', da: 'Farver', pron: { da: 'ranghå', ipa: 'ɾæŋˈhɒː' } }),
     summary: 'Otte farver du kan pege på og bruge med det samme',
     words: words('4', [
       ['qermez', 'قرمز', 'قِرمِز', 'rød', 'ghermez', 'ɢ~ɣeɾˈmez', 'red'],
@@ -133,7 +133,7 @@ export const vocabUnits: VocabUnit[] = [
   {
     id: '5',
     title: 'Dyr',
-    titleEntry: defineEntry({ id: 'vocabulary-unit-5-title', kind: 'phrase', fa: 'حیوان‌ها', da: 'Dyr', pron: { da: 'heyvånhå', ipa: 'hejvɒːnˈhɒː' } }),
+    titleEntry: defineEntry({ id: 'vocabulary-unit-5-title', kind: 'phrase', ja: 'حیوان‌ها', da: 'Dyr', pron: { da: 'heyvånhå', ipa: 'hejvɒːnˈhɒː' } }),
     summary: 'Kat, hund, fugl, fisk og fire dyr mere',
     words: words('5', [
       ['gorbe', 'گربه', 'گُربه', 'kat', 'gorbe', 'ɡoɾˈbe'],

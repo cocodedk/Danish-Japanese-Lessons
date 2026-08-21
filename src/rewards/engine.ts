@@ -1,4 +1,4 @@
-// The reward engine: `dpl.v1.rewards`. One event in, one celebration out.
+// The reward engine: `djl.v1.rewards`. One event in, one celebration out.
 //
 // Generosity is structural here, not a promise kept by careful callers:
 //   * the only exported mutator is `celebrate`, and it takes an event kind —

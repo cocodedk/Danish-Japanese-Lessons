@@ -73,7 +73,7 @@ describe('spaced review scheduler', () => {
   })
 
   it('normalizes corrupt fields without losing the item or creating an invalid stage', () => {
-    localStorage.setItem('dpl.v1.review', JSON.stringify({
+    localStorage.setItem('djl.v1.review', JSON.stringify({
       schemaVersion: 1,
       value: {
         version: 99,

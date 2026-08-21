@@ -1,4 +1,4 @@
-// App settings: `dpl.v1.settings`. Sound is on by default and independent of
+// App settings: `djl.v1.settings`. Sound is on by default and independent of
 // the motion preference — a learner who wants no animation may still want the
 // jingle (docs/design/ART-DIRECTION.md, "Celebration & sound").
 import { readJSON, writeJSON } from './storage'

@@ -1,4 +1,4 @@
-# Art Direction — Danish-Persian Lessons
+# Art Direction — Danish-Japanese Lessons
 
 Authority: Fable (art director). Executors implement this verbatim; propose changes as questions in the
 relevant plan file, never by silently diverging. Applies to the landing site, the React app, favicons,
@@ -9,11 +9,11 @@ OG images, and every future visual artifact.
 Every Iranian learned to read from the same object: the first-grade primer (آب، بابا) and a ruled
 exercise notebook (دفتر مشق) — matte paper, black Naskh, **vowel marks in the teacher's red pen**,
 light-blue ruling with a single red margin line. Danish design contributes the restraint: air, function,
-nothing decorative. The interface is a notebook page, not a "web app with Persian content".
+nothing decorative. The interface is a notebook page, not a "web app with Japanese content".
 
 **Signature element:** authentic notebook ruling — light-blue horizontal rules + one red margin line —
 as the structural system. The margin line sits LEFT on LTR pages and **RIGHT on RTL pages** (real
-Persian notebooks mirror it). Red is never decoration: it marks exactly what a teacher's pen would mark
+Japanese notebooks mirror it). Red is never decoration: it marks exactly what a teacher's pen would mark
 (vowel signs, corrections, the active item).
 
 ## Palette
@@ -35,50 +35,50 @@ dark, or the phone/PC setting. No gradients. No drop shadows except a 1px paper-
 
 | Role | Face | Weights | Why |
 |---|---|---|---|
-| Persian display (word specimens) | **Noto Naskh Arabic** | 700 | schoolbook Naskh; best-in-class diacritic placement |
-| Persian UI/body | **Vazirmatn** | 400 / 700 | the modern Persian web face |
+| Japanese display (word specimens) | **Noto Naskh Arabic** | 700 | schoolbook Naskh; best-in-class diacritic placement |
+| Japanese UI/body | **Vazirmatn** | 400 / 700 | the modern Japanese web face |
 | Latin (Danish + English) | **Andika** | 400 / 700 | SIL literacy face — designed for people learning to read; that IS this product |
 
 - Landing: Google Fonts (preconnect + `display=swap`). App (plan 001+): self-hosted woff2 in the repo.
-- Persian specimens: huge — `clamp(4.5rem, 20vw, 9rem)`, `line-height: 2` minimum (diacritics need air).
-- Persian body minimum 1.125rem; Latin body minimum 1rem (16px). Never letter-space Persian script.
-- Type IS the hero. The product's split-screen contract doubles as the brand: Persian word above,
+- Japanese specimens: huge — `clamp(4.5rem, 20vw, 9rem)`, `line-height: 2` minimum (diacritics need air).
+- Japanese body minimum 1.125rem; Latin body minimum 1rem (16px). Never letter-space Japanese script.
+- Type IS the hero. The product's split-screen contract doubles as the brand: Japanese word above,
   Danish word below, separated by one notebook rule.
 
 ## The specimen (hero + app card contract)
 
 ```
 ┌──────────────────────────────┐
-│            آب                │  ← Persian, Naskh, ink; diacritics/madde in --red
+│            آب                │  ← Japanese, Naskh, ink; diacritics/madde in --red
 │  ・aَ ・eِ ・oُ  (vowel chips)  │  ← red marks; the "these unlock reading" teaser
 ├──── notebook rule ───────────┤
 │           vand               │  ← Danish, Andika, --ink, calm and smaller
 └──────────────────────────────┘
 ```
 
-Persian pane gets ~55% of the vertical split (diacritic headroom), Danish ~45%.
+Japanese pane gets ~55% of the vertical split (diacritic headroom), Danish ~45%.
 
-**Pronunciation line:** directly under the Persian word, inside the Persian pane — small Andika,
+**Pronunciation line:** directly under the Japanese word, inside the Japanese pane — small Andika,
 `--ink` at ~75%: dansk lydskrift first, IPA in brackets — `åb · [ɒːb]`. Never in the Danish pane
 (meaning stays clean there). Both values come from lesson data, never improvised.
 
 ## Beginner teaching surfaces
 
-Plan 010 extends the specimen into four shared surfaces. The full teaching card always reads Persian
+Plan 010 extends the specimen into four shared surfaces. The full teaching card always reads Japanese
 → dansk lydskrift and IPA → Danish meaning or explanation. A compact phrase row keeps the same order
 for complete UI phrases. A challenge reveal uses the full card after every attempt. A learner name uses
-a separate companion: Persian spelling, original Latin name, then letter-by-letter help; it never shows
+a separate companion: Japanese spelling, original Latin name, then letter-by-letter help; it never shows
 a made-up whole-name IPA.
 
 Dense alphabets, vocabulary grids, letter banks, and keyboards stay compact. Selecting or tapping an
-item also updates one persistent master-detail strip close to the controls. The strip contains Persian,
+item also updates one persistent master-detail strip close to the controls. The strip contains Japanese,
 both pronunciation forms, Danish help, and—for lesson grids—the action that opens the full teaching
 screen. Positional forms reuse the parent letter companion. The strip may stick within the viewport,
 but it must not obscure the keyboard or bottom thumb bar.
 
 The generated boards in `docs/design/previews/010-beginner-content-board.png` and
 `docs/design/previews/011-simple-puzzles-board.png` are layout references only. Catalog data is the
-authority for exact Persian, Danish, and IPA.
+authority for exact Japanese, Danish, and IPA.
 
 ## Motion
 
@@ -102,19 +102,19 @@ star (ستارهٔ طلایی), red margin ticks, and levels as filled notebook 
 til” is optional beside “Næste”. Points only go up, and a reward may itself be a gift exercise.
 Jingles are WebAudio-synthesized (no audio files, no dependencies) — a light santur-ish pluck for
 ticks, a warmer chime for stickers, a short fanfare for level-ups. Sound plays only after a user
-gesture, has its own mute toggle persisted in `dpl.v1.settings`, and is independent of the motion
+gesture, has its own mute toggle persisted in `djl.v1.settings`, and is independent of the motion
 preference. Praise lines carry lydskrift + IPA like any teaching item (plan 009) — the pronunciation
-line sits between the Persian praise and its Danish line, same as everywhere else in the app.
+line sits between the Japanese praise and its Danish line, same as everywhere else in the app.
 
 ## Copy voice
 
 - Danish: du-form, warm, plain verbs, no sales tone. "Alt gemmes kun på din telefon." not
   "Revolutionerende privatlivsvenlig teknologi."
-- Persian: natural modern register, native — never translated-sounding. Persian code points only
-  (ک ی), Persian digits ۰–۹, ZWNJ (نیم‌فاصله) where grammar requires.
+- Japanese: natural modern register, native — never translated-sounding. Japanese code points only
+  (ک ی), Japanese digits ۰–۹, ZWNJ (نیم‌فاصله) where grammar requires.
 - English: plain, specific, no "seamless/robust/delve".
 - Buttons say what happens: "Åbn appen", "Se koden på GitHub" — never "Learn more".
-- Full diacritics (اِعراب) appear on TEACHING specimens only, never on UI chrome or body Persian.
+- Full diacritics (اِعراب) appear on TEACHING specimens only, never on UI chrome or body Japanese.
 
 ## Accessibility floor (non-negotiable)
 
@@ -127,12 +127,12 @@ WCAG AA contrast in both schemes · `lang`/`dir` correct per element · no horiz
 - Favicon: `آ` (alef-madde) in ink Naskh on `--paper` rounded square (rx=6), madde stroke in `--red`.
   One glyph — must read at 16px.
 - OG (1200×630): the specimen itself. Paper field, blue rules, red margin line at left, giant «آب»
-  ink Naskh with red madde, rule, "vand" in Andika, small caption "Learn to read Persian, in Danish",
+  ink Naskh with red madde, rule, "vand" in Andika, small caption "Learn to read Japanese, in Danish",
   attribution strip bottom: "Babak Bandpey · cocode.dk". Type-driven; no illustration, no screenshot.
 
 ## App-specific tokens (for plan 001+)
 
-- Split screen: Persian pane top `55dvh`-ish, Danish bottom; the divider is the notebook rule.
+- Split screen: Japanese pane top `55dvh`-ish, Danish bottom; the divider is the notebook rule.
 - Navigation lives in the bottom thumb zone. Cards advance by tap/swipe; progress = small red
   checkmarks in the margin (like a teacher marking مشق).
 - SVG only for letterform/stroke illustrations (ink on paper, red for the taught mark);

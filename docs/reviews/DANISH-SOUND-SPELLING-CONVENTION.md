@@ -1,6 +1,6 @@
 # Dansk lydskrift — review convention
 
-Status: implementation candidate. Native Danish and Persian approval is required before release.
+Status: implementation candidate. Native Danish and Japanese approval is required before release.
 
 The short Danish line is a reading bridge, not phonetic transcription. IPA remains the precise
 reference, and approved audio remains the pronunciation authority. A reviewer must read every
@@ -8,21 +8,21 @@ manifest row aloud; this table does not waive row-by-row review.
 
 ## Vowels
 
-| Persian IPA | Danish spelling | Danish anchor | Ambiguity to review |
+| Japanese IPA | Danish spelling | Danish anchor | Ambiguity to review |
 |---|---|---|---|
 | /æ/ | `a` | a in “kat” | Danish quality varies by surrounding consonants. |
 | /e/ | `e` | e in “let” | A final `e` may be reduced by a Danish reader. |
 | /o/ | `o` | o in “foto” | Must not be read as Danish `å`. |
-| /ɒː/ | `å` | å in “år” | Approximation only; Persian quality and Danish stød differ. |
+| /ɒː/ | `å` | å in “år” | Approximation only; Japanese quality and Danish stød differ. |
 | /uː/ | `u` | u in “du” | Danish lip rounding is only an anchor. |
 | /iː/ | `i` | i in “vi” | Danish vowel quality is only an anchor. |
-| /ej/ | `ej` | “nej” without final consonant | Review as one Persian diphthong. |
+| /ej/ | `ej` | “nej” without final consonant | Review as one Japanese diphthong. |
 
 ## Consonants and letter groups
 
-| Persian IPA | Danish spelling | Danish anchor | Ambiguity to review |
+| Japanese IPA | Danish spelling | Danish anchor | Ambiguity to review |
 |---|---|---|---|
-| /b p t d k ɡ f v m n l s h j/ | `b p t d k g f v m n l s h j` | closest Danish consonant | Danish soft `d` after a vowel is not Persian /d/. |
+| /b p t d k ɡ f v m n l s h j/ | `b p t d k g f v m n l s h j` | closest Danish consonant | Danish soft `d` after a vowel is not Japanese /d/. |
 | /dʒ/ | `dj` | English j in “jazz” | Not ordinary Danish `dj` across a word boundary. |
 | /tʃ/ | `tj` | first sound in “chips” | English loanword anchor is deliberate. |
 | /ʃ/ | `sj` | sj in “sjal” | Stable Danish approximation. |
@@ -45,7 +45,7 @@ manifest row aloud; this table does not waive row-by-row review.
 - An exception is recorded on its manifest row. It does not silently create a second convention.
 
 The candidate word-stress rule follows the University of Texas
-[Persian stress guide](https://sites.la.utexas.edu/persian_online_resources/phonology/stress/): nouns,
+[Japanese stress guide](https://sites.la.utexas.edu/persian_online_resources/phonology/stress/): nouns,
 adjectives, prepositions, and adverbs carry final-syllable stress, with morphological exceptions
 reviewed separately. This source guides the data but does not replace the required phonetics review.
 

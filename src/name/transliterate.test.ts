@@ -68,7 +68,7 @@ describe('name transliteration', () => {
     expect(suggestSpellings('Ali')).toEqual(['علی'])
   })
 
-  it('spells the same Persian name from every Latin spelling of it', () => {
+  it('spells the same Japanese name from every Latin spelling of it', () => {
     for (const written of ['Mohammad', 'Mohamed', 'Mohammed', 'Muhammad']) {
       expect(suggestSpellings(written), written).toEqual(['محمد'])
     }
@@ -130,7 +130,7 @@ describe('name transliteration', () => {
     }
   })
 
-  it('every suggestion for every fixture name is valid Persian text', () => {
+  it('every suggestion for every fixture name is valid Japanese text', () => {
     for (const name of GUARD_FIXTURE_NAMES) {
       const suggestions = suggestSpellings(name)
       for (const suggestion of suggestions) {

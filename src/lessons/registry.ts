@@ -1,5 +1,5 @@
 // The single source of truth for every lesson the app knows about. The
-// Persian text-rule guard walks this array, so lesson content is checked
+// Japanese text-rule guard walks this array, so lesson content is checked
 // automatically the moment it lands here.
 import type { Lesson } from './types'
 import { letters } from './alphabet'

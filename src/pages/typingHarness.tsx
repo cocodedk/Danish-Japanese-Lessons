@@ -56,14 +56,14 @@ export function written(container: HTMLElement): string {
 }
 
 export function praiseOnScreen(): boolean {
-  return PRAISE.some((line) => screen.queryAllByText(line.fa).length > 0)
+  return PRAISE.some((line) => screen.queryAllByText(line.ja).length > 0)
 }
 
 /** Writes every word of a unit's round correctly, and closes the round. */
 export function finishTypeRound(unitId: string): void {
   const unit = findVocabUnit(unitId)!
   unit.words.forEach((word, index) => {
-    write(word.fa)
+    write(word.ja)
     tap('Se efter')
     tap(index === unit.words.length - 1 ? 'Afslut runden' : 'Næste')
   })

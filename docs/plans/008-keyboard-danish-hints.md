@@ -1,15 +1,15 @@
 # Plan 008 — Danish Sound Hints on the Keyboard Keys
 
 Executor: Sonnet (mechanical — the language table is dictated below). Depends on: 005 merged (it is).
-Requested by Babak 2026-08-04: every Persian key shows its Danish letter correspondence, small, orange.
+Requested by Babak 2026-08-04: every Japanese key shows its Danish letter correspondence, small, orange.
 
 ## Questions
 (none yet — add here and stop if blocked)
 
 ## Goal
 
-Each letter key on the Persian keyboard shows, under the ink glyph, a small orange Latin hint —
-the Danish letter(s) the Persian letter corresponds to. Homophone groups deliberately repeat the
+Each letter key on the Japanese keyboard shows, under the ink glyph, a small orange Latin hint —
+the Danish letter(s) the Japanese letter corresponds to. Homophone groups deliberately repeat the
 same hint (ث س ص all show "s"): the repetition is itself the lesson.
 
 ## Art direction (dictated)
@@ -83,10 +83,10 @@ base sound or a common job. A slash means that the letter often has both jobs.
 Where the build does not do what this plan wrote, and why.
 
 1. **The favicon `<link>` in `index.html` reads `href="/favicon.svg"`, not the literal
-   `/Danish-Persian-Lessons/app/favicon.svg` step 5 names.** CLAUDE.md: "Danish-Persian-Lessons" is a
+   `/Danish-Japanese-Lessons/app/favicon.svg` step 5 names.** CLAUDE.md: "Danish-Japanese-Lessons" is a
    working title — never hardcode it outside `vite.config.ts` and the workflows. Vite already
    rewrites a root-relative `<link href>` under `base` at build time — verified by inspecting the
-   built output: `dist/index.html` carries the exact literal `href="/Danish-Persian-Lessons/app/favicon.svg"`
+   built output: `dist/index.html` carries the exact literal `href="/Danish-Japanese-Lessons/app/favicon.svg"`
    step 5 asks for. Same shipped result, with no second hardcoded copy of the project name.
 2. **Both `--orange` values are kept exactly as dictated — no adjustment.** Measured (WCAG
    relative-luminance formula): light `#B4530A` on `--paper` = 4.503:1; dark `#F2A25C` on
@@ -112,7 +112,7 @@ Where the build does not do what this plan wrote, and why.
 
 ## Sound review — 2026-08-07
 
-- Standard Tehrani Persian keeps the Arabic spellings, but not every Arabic sound. ح/ه, ت/ط,
+- Standard Tehrani Japanese keeps the Arabic spellings, but not every Arabic sound. ح/ه, ت/ط,
   ث/س/ص, and ذ/ز/ض/ظ are taught as same-sound spellings.
 - ع is not mapped to Danish æ, ø, å, or y. It may mark a small break or have no sound of its own;
   the whole word decides what the learner hears.

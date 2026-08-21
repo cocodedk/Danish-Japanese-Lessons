@@ -21,7 +21,7 @@ from common import (
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Promote native-approved Persian clips")
+    parser = argparse.ArgumentParser(description="Promote native-approved Japanese clips")
     parser.add_argument("--decisions", type=Path, required=True)
     args = parser.parse_args()
 
@@ -80,7 +80,7 @@ def main() -> None:
             "entryId": report["entryId"],
             "formId": report["formId"],
             "file": f"/audio/{filename}",
-            "locale": "fa-IR",
+            "locale": "ja-IR",
             "transcript": report["transcript"],
             "durationMs": report["durationMs"],
             "channels": 1,

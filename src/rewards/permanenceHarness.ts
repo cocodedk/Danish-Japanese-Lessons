@@ -6,7 +6,7 @@
 import { expect } from 'vitest'
 import { getRewards } from './engine'
 
-const KEY = 'dpl.v1.rewards'
+const KEY = 'djl.v1.rewards'
 
 /** The clock both suites reckon from, so a snapshot means the same thing twice. */
 export const DAY = new Date(2026, 2, 3, 10, 0, 0)

@@ -7,7 +7,7 @@ Branch: `agent/real-lesson-images`. Base: `b6e2c23`.
 
 | Surface | State | Photo rule |
 |---|---|---|
-| Word page | first model | Show after Persian and sound, before Danish |
+| Word page | first model | Show after Japanese and sound, before Danish |
 | Vocabulary choice | before answer | Hide |
 | Vocabulary choice | after any answer | Show in the full explanation |
 | New review item | model | Show for a pilot word |
@@ -55,7 +55,7 @@ Candidate result:
   total 25,079 bytes. The home route requested no lesson photo.
 - Candidate main JavaScript: 364,836 bytes. Main CSS: 48,411 bytes. Both remain inside the existing
   limits. The credits and image renderer are separate small chunks.
-- DOM check passed: Persian → sound → photo → Danish. Quiz and due-review checks found no photo
+- DOM check passed: Japanese → sound → photo → Danish. Quiz and due-review checks found no photo
   before an answer and one photo after an answer.
 - Image-off, keyboard, dark mode, 320/390/768/1280/2560 widths, 200% text, and 400% text checks
   completed without lost lesson text or horizontal page scroll.
@@ -69,7 +69,7 @@ is still open. CI is not used as release evidence.
 
 | Check | State | Needed before photo release |
 |---|---|---|
-| Iranian Persian meaning and culture | Pending | Named reviewer; check all eight and sangak closely |
+| Iranian Japanese meaning and culture | Pending | Named reviewer; check all eight and sangak closely |
 | Danish plain words and alt text | Pending | Named reviewer |
 | Keyboard, screen reader, zoom, image off | Pending | Named accessibility reviewer |
 | Five Danish-speaking beginners | Pending | Date, device, confusion, later recall, fixes, rerun |

@@ -1,6 +1,6 @@
 import type { ElementType, ReactNode } from 'react'
 
-/** Approved dynamic path: learner-owned Persian, never catalog copy. */
+/** Approved dynamic path: learner-owned Japanese, never catalog copy. */
 export function LearnerPersianInput({
   as = 'span',
   className,
@@ -14,7 +14,7 @@ export function LearnerPersianInput({
 }) {
   const Tag = as as ElementType
   return (
-    <Tag className={className} lang="fa" dir="rtl" aria-hidden={ariaHidden}>
+    <Tag className={className} lang="ja" dir="rtl" aria-hidden={ariaHidden}>
       {children}
     </Tag>
   )

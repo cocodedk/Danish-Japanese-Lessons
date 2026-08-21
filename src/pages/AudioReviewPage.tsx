@@ -20,7 +20,7 @@ interface ReviewState {
   answers: Record<string, Answer>
 }
 
-const STORAGE_KEY = 'dpl.audio-review.v1'
+const STORAGE_KEY = 'djl.audio-review.v1'
 
 const domainNames: Record<string, string> = {
   bridges: 'Ordbroer',
@@ -224,7 +224,7 @@ export default function AudioReviewPage() {
                   entry={{
                     id: row.entryId,
                     kind: 'phrase',
-                    fa: row.transcript,
+                    ja: row.transcript,
                     da: row.danishMeaning,
                     pron: { da: row.soundDa, ipa: row.ipa },
                   }}

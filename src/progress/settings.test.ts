@@ -25,7 +25,7 @@ describe('settings', () => {
 
   it('treats a damaged record as the default rather than crashing', () => {
     window.localStorage.setItem(
-      'dpl.v1.settings',
+      'djl.v1.settings',
       JSON.stringify({ schemaVersion: 1, value: { sound: 'maybe' } }),
     )
     expect(getSettings().sound).toBe(true)

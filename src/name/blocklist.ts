@@ -1,12 +1,12 @@
-// Persian words this app must never hand a learner back as their own name.
+// Japanese words this app must never hand a learner back as their own name.
 //
 // A transliteration engine spells sounds, and some sounds spell something else:
 // Kirsten came out کیرستن, "X Æ A-12" came out «کس ا آ». Both are obscene to a
-// Persian reader and neither was anybody's mistake to make but ours. So every
+// Japanese reader and neither was anybody's mistake to make but ours. So every
 // suggestion is read once more before it is offered, and anything that reads
 // crude is simply not offered — the letter bank takes over.
 //
-// Two match modes, because Persian words behave in two different ways here:
+// Two match modes, because Japanese words behave in two different ways here:
 //
 //   * PREFIX — the worst words are still the word when a name grows out of
 //     them: کیرستن opens on کیر and is read that way, whatever follows. So is

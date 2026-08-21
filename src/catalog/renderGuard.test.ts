@@ -11,7 +11,7 @@ const APPROVED = new Set([
   'components/ReadingCues.tsx',
   'components/LearnerPersianInput.tsx',
 ])
-const PERSIAN = /[\u0600-\u06FF]/u
+const JAPANESE = /[\u0600-\u06FF]/u
 
 function tsxFiles(directory: string, prefix = ''): string[] {
   return readdirSync(directory, { withFileTypes: true }).flatMap((item) => {
@@ -27,7 +27,7 @@ function persianLiterals(source: string, file: string): string[] {
   function visit(node: ts.Node) {
     if (
       (ts.isStringLiteralLike(node) || ts.isJsxText(node)) &&
-      PERSIAN.test(node.getText(tree))
+      JAPANESE.test(node.getText(tree))
     ) found.push(node.getText(tree))
     ts.forEachChild(node, visit)
   }
@@ -35,15 +35,15 @@ function persianLiterals(source: string, file: string): string[] {
   return found
 }
 
-describe('Persian production rendering guard', () => {
-  it('allows lang=fa only inside approved catalog or learner-owned renderers', () => {
+describe('Japanese production rendering guard', () => {
+  it('allows lang=ja only inside approved catalog or learner-owned renderers', () => {
     for (const file of tsxFiles(SRC)) {
       const source = readFileSync(join(SRC, file), 'utf8')
-      if (source.includes('lang="fa"')) expect(APPROVED.has(file), file).toBe(true)
+      if (source.includes('lang="ja"')) expect(APPROVED.has(file), file).toBe(true)
     }
   })
 
-  it('rejects uncatalogued Persian literals in production TSX', () => {
+  it('rejects uncatalogued Japanese literals in production TSX', () => {
     for (const file of tsxFiles(SRC)) {
       const source = readFileSync(join(SRC, file), 'utf8')
       expect(persianLiterals(source, file), file).toEqual([])

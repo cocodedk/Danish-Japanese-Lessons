@@ -1,11 +1,11 @@
 // What the on-screen keyboard writes into. Pure string in, pure string out.
 //
-// The one idea worth knowing: **the string IS the buffer**. Persian letters
+// The one idea worth knowing: **the string IS the buffer**. Japanese letters
 // change shape according to their neighbours, and the browser's own text
 // shaping already does that — بابا typed as four separate letters renders
 // joined without a line of help from here. Any joining logic in this file
 // would be a second, worse implementation of something the platform does
-// correctly. So there is none. See docs/plans/005-persian-keyboard.md step 2.
+// correctly. So there is none. See docs/plans/005-japanese-keyboard.md step 2.
 
 /** نیم‌فاصله (U+200C): the half-space that separates without breaking the word. */
 export const ZWNJ = '‌'

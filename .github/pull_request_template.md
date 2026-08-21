@@ -12,7 +12,7 @@
 
 - [ ] `bash scripts/verify.sh` passes
 - [ ] Manual check on a 360px viewport
-- [ ] RTL (fa) page checked, if site content changed
+- [ ] RTL (ja) page checked, if site content changed
 
 ## Related issues
 

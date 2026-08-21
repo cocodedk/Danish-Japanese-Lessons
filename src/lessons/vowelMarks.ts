@@ -12,15 +12,15 @@ function mark([id, glyph, nameFa, nameDa, soundDa, soundIpa, nameIpa]: MarkRow):
   const entry = defineEntry({
     id: `alphabet-mark-${id}`,
     kind: 'mark' as const,
-    fa: plain,
-    ...(glyph !== plain ? { faMarked: glyph } : {}),
+    ja: plain,
+    ...(glyph !== plain ? { jaMarked: glyph } : {}),
     da: nameDa,
     pron: { da: soundDa, ipa: soundIpa },
   })
   const nameEntry = defineEntry({
     id: `alphabet-mark-name-${id}`,
     kind: 'word' as const,
-    fa: nameFa,
+    ja: nameFa,
     da: `tegnnavnet ${nameDa}`,
     pron: { da: nameDa, ipa: nameIpa },
   })
@@ -29,7 +29,7 @@ function mark([id, glyph, nameFa, nameDa, soundDa, soundIpa, nameIpa]: MarkRow):
     entry,
     nameEntry,
     glyph,
-    name: { fa: nameFa, da: nameDa },
+    name: { ja: nameFa, da: nameDa },
     sound: entry.pron,
   }
 }
@@ -56,14 +56,14 @@ export interface LaterMark {
 export const laterMarks: LaterMark[] = [
   {
     id: 'tashdid',
-    entry: defineEntry({ id: 'alphabet-mark-tashdid', kind: 'mark', fa: 'ـّ', da: 'bogstavet siges dobbelt', pron: NO_OWN_SOUND, audioNotApplicable: 'Tegnet har ingen egen lyd; det fordobler bogstavet under sig.' }),
-    nameEntry: defineEntry({ id: 'alphabet-mark-name-tashdid', kind: 'word', fa: 'تشدید', da: 'tegnnavnet tashdid', pron: { da: 'tasjdid', ipa: 'tæʃdiːd' } }),
+    entry: defineEntry({ id: 'alphabet-mark-tashdid', kind: 'mark', ja: 'ـّ', da: 'bogstavet siges dobbelt', pron: NO_OWN_SOUND, audioNotApplicable: 'Tegnet har ingen egen lyd; det fordobler bogstavet under sig.' }),
+    nameEntry: defineEntry({ id: 'alphabet-mark-name-tashdid', kind: 'word', ja: 'تشدید', da: 'tegnnavnet tashdid', pron: { da: 'tasjdid', ipa: 'tæʃdiːd' } }),
     hint: 'Bogstavet under tegnet siges dobbelt.',
   },
   {
     id: 'sokun',
-    entry: defineEntry({ id: 'alphabet-mark-sokun', kind: 'mark', fa: 'ـْ', da: 'bogstavet får ingen vokal', pron: NO_OWN_SOUND, audioNotApplicable: 'Tegnet har ingen egen lyd; det markerer fravær af en vokal.' }),
-    nameEntry: defineEntry({ id: 'alphabet-mark-name-sokun', kind: 'word', fa: 'سکون', da: 'tegnnavnet sokun', pron: { da: 'sokun', ipa: 'sokuːn' } }),
+    entry: defineEntry({ id: 'alphabet-mark-sokun', kind: 'mark', ja: 'ـْ', da: 'bogstavet får ingen vokal', pron: NO_OWN_SOUND, audioNotApplicable: 'Tegnet har ingen egen lyd; det markerer fravær af en vokal.' }),
+    nameEntry: defineEntry({ id: 'alphabet-mark-name-sokun', kind: 'word', ja: 'سکون', da: 'tegnnavnet sokun', pron: { da: 'sokun', ipa: 'sokuːn' } }),
     hint: 'Bogstavet får ingen vokal — det står tørt.',
   },
 ]

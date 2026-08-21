@@ -7,14 +7,14 @@ import { PRAISE, WELCOME_BACK } from './copy'
 
 describe('praise pronunciation', () => {
   // The dictated table, verbatim, row order = PRAISE order, welcome-back last.
-  const TABLE: Array<{ fa: string; da: string; ipa: string }> = [
-    { fa: 'آفرین', da: 'åfarin', ipa: 'ɒːfæɾin' },
-    { fa: 'عالی', da: 'åli', ipa: 'ɒːli' },
-    { fa: 'چه خوب', da: 'tje khub', ipa: 'tʃe xub' },
-    { fa: 'خیلی خوب', da: 'khejli khub', ipa: 'xejli xub' },
-    { fa: 'خوب بود', da: 'khub bud', ipa: 'xub buːd' },
-    { fa: 'درست بود', da: 'dorost bud', ipa: 'doɾost buːd' },
-    { fa: 'دوباره سلام', da: 'dobåre salåm', ipa: 'dobɒːɾe sælɒːm' },
+  const TABLE: Array<{ ja: string; da: string; ipa: string }> = [
+    { ja: 'آفرین', da: 'åfarin', ipa: 'ɒːfæɾin' },
+    { ja: 'عالی', da: 'åli', ipa: 'ɒːli' },
+    { ja: 'چه خوب', da: 'tje khub', ipa: 'tʃe xub' },
+    { ja: 'خیلی خوب', da: 'khejli khub', ipa: 'xejli xub' },
+    { ja: 'خوب بود', da: 'khub bud', ipa: 'xub buːd' },
+    { ja: 'درست بود', da: 'dorost bud', ipa: 'doɾost buːd' },
+    { ja: 'دوباره سلام', da: 'dobåre salåm', ipa: 'dobɒːɾe sælɒːm' },
   ]
 
   it('has exactly seven rows — six praise pairs and the welcome-back line', () => {
@@ -24,22 +24,22 @@ describe('praise pronunciation', () => {
 
   it('every praise pair carries its dictated pron, matching the table in order', () => {
     PRAISE.forEach((praise, index) => {
-      expect(praise.fa, `row ${index + 1}`).toBe(TABLE[index].fa)
-      expect(praise.pron, praise.fa).toEqual({ da: TABLE[index].da, ipa: TABLE[index].ipa })
+      expect(praise.ja, `row ${index + 1}`).toBe(TABLE[index].ja)
+      expect(praise.pron, praise.ja).toEqual({ da: TABLE[index].da, ipa: TABLE[index].ipa })
     })
   })
 
   it('the welcome-back line carries the table’s seventh row', () => {
     const row = TABLE[6]
-    // fa carries a trailing "!" the table itself does not — punctuation, not pronunciation.
-    expect(WELCOME_BACK.fa).toBe(`${row.fa}!`)
+    // ja carries a trailing "!" the table itself does not — punctuation, not pronunciation.
+    expect(WELCOME_BACK.ja).toBe(`${row.ja}!`)
     expect(WELCOME_BACK.pron).toEqual({ da: row.da, ipa: row.ipa })
   })
 
   it('no praise entry, or the welcome-back line, is ever missing its pron', () => {
     for (const praise of [...PRAISE, WELCOME_BACK]) {
-      expect(praise.pron?.da, praise.fa).toBeTruthy()
-      expect(praise.pron?.ipa, praise.fa).toBeTruthy()
+      expect(praise.pron?.da, praise.ja).toBeTruthy()
+      expect(praise.pron?.ipa, praise.ja).toBeTruthy()
     }
   })
 })
