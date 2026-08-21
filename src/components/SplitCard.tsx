@@ -1,11 +1,11 @@
 import type { WordCard } from '../lessons/types'
-import { FaSpecimen } from './FaSpecimen'
+import { JaSpecimen } from './JaSpecimen'
 import { PronLine } from './PronLine'
 import { DaWord } from './DaWord'
 import { RuleDivider } from './RuleDivider'
 import './SplitCard.css'
-import type { PersianEntry } from '../catalog/types'
-import { PersianText } from './PersianText'
+import type { JapaneseEntry } from '../catalog/types'
+import { JapaneseText } from './JapaneseText'
 import { PersonalNameText } from './PersonalName'
 import { OptionalAudioControl } from './OptionalAudioControl'
 import { LessonImage } from './LessonImage'
@@ -13,7 +13,7 @@ import { LessonImage } from './LessonImage'
 export interface SplitCardProps {
   word: WordCard
   /** Always «سلام!» in plan 001 — the Japanese pane never renders Latin text. */
-  greetingEntry?: PersianEntry
+  greetingEntry?: JapaneseEntry
   personalSpelling?: string
   /** "Hej {name}!" once a name exists, else "Hej!". */
   daGreeting?: string
@@ -43,7 +43,7 @@ export function SplitCard({
       <div className="split-card__pane split-card__pane--ja" dir="rtl">
         {greetingEntry && (
           <div className="split-card__greeting">
-            <PersianText entry={greetingEntry} />
+            <JapaneseText entry={greetingEntry} />
             {personalSpelling && (
               <>
                 {' '}
@@ -54,7 +54,7 @@ export function SplitCard({
             <OptionalAudioControl audioId={greetingEntry.audioId} />
           </div>
         )}
-        <FaSpecimen entry={word.entry} />
+        <JaSpecimen entry={word.entry} />
         <PronLine {...word.pron} />
         <OptionalAudioControl audioId={word.entry.audioId} />
       </div>

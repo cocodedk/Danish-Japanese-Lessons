@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { CAPTURE_PROMPT_ENTRY } from '../content/faStrings'
+import { CAPTURE_PROMPT_ENTRY } from '../content/jaStrings'
 import { RuledSection } from './RuledSection'
 import { CompactPhraseRow } from './EntryRenderers'
 import './NameCapture.css'

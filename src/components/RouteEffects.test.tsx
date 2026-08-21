@@ -57,8 +57,8 @@ beforeEach(() => {
 
 describe('RouteEffects', () => {
   it('gives the child journey stable product titles', () => {
-    expect(routeDocumentTitle('/', 'Persisk på din måde')).toBe('Vælg din vej · Lær persisk skrift')
-    expect(routeDocumentTitle('/opdag', 'Vælg et persisk ord')).toBe('Ordværksted · Lær persisk skrift')
+    expect(routeDocumentTitle('/', 'Japansk på din måde')).toBe('Vælg din vej · Lær japansk skrift')
+    expect(routeDocumentTitle('/opdag', 'Vælg et japansk ord')).toBe('Ordværksted · Lær japansk skrift')
     expect(routeDocumentTitle('/opdag/ord/ab', 'vand')).toBe('vand · Ordværksted')
   })
 
@@ -68,7 +68,7 @@ describe('RouteEffects', () => {
 
     await vi.waitFor(() => expect(screen.getByRole('heading', { name: 'Anden side' })).toHaveFocus())
     expect(window.scrollTo).toHaveBeenLastCalledWith({ top: 0, left: 0, behavior: 'auto' })
-    expect(document.title).toBe('Anden side · Lær persisk')
+    expect(document.title).toBe('Anden side · Lær japansk')
   })
 
   it('restores the prior scroll position on browser history navigation', async () => {
@@ -93,6 +93,6 @@ describe('RouteEffects', () => {
     fireEvent.click(screen.getByRole('link', { name: 'Åbn sen side' }))
 
     await vi.waitFor(() => expect(screen.getByRole('heading', { name: 'Sen side' })).toHaveFocus())
-    expect(document.title).toBe('Sen side · Lær persisk')
+    expect(document.title).toBe('Sen side · Lær japansk')
   })
 })

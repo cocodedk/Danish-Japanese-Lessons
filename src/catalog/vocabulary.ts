@@ -1,8 +1,8 @@
 import { vocabUnits } from '../lessons/vocab'
-import type { PersianEntry } from './types'
+import type { JapaneseEntry } from './types'
 import { connectedReadings, readingFunctionEntries } from '../lessons/connectedReading'
 
-export const vocabularyCatalog: PersianEntry[] = vocabUnits.flatMap((unit) => [
+export const vocabularyCatalog: JapaneseEntry[] = vocabUnits.flatMap((unit) => [
   unit.titleEntry,
   ...unit.words.map((word) => word.entry),
 ])

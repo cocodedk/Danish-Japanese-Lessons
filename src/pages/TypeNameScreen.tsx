@@ -7,7 +7,7 @@ import { getProfile } from '../progress/profile'
 import { typeWordDone, payRound } from '../progress/typing'
 import { canType } from '../keyboard/layout'
 import { useCelebration } from '../rewards/useCelebration'
-import { TYPE_NAME_ENTRY } from '../content/faStrings'
+import { TYPE_NAME_ENTRY } from '../content/jaStrings'
 import { PersonalNameText } from '../components/PersonalName'
 import './type.css'
 
@@ -38,7 +38,7 @@ export default function TypeNameScreen() {
       tasks={[
         {
           id: NAME_TASK,
-          promptDa: 'Skriv dit navn med persiske bogstaver',
+          promptDa: 'Skriv dit navn med japanske bogstaver',
           answer: faSpelling,
           personalName: { spelling: faSpelling, original: name },
         },
@@ -53,7 +53,7 @@ export default function TypeNameScreen() {
           <PersonalNameText spelling={faSpelling} as="p" className="type__help-ja" />
         </details>
       }
-      doneLine="Du skrev dit eget navn med persiske bogstaver."
+      doneLine="Du skrev dit eget navn med japanske bogstaver."
       overlays={<RewardOverlays celebration={celebration} />}
     />
   )

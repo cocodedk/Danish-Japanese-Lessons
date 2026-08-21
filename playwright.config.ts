@@ -1,6 +1,6 @@
 import { defineConfig } from '@playwright/test'
 
-const externalBaseURL = process.env.DPL_E2E_BASE_URL
+const externalBaseURL = process.env.DJL_E2E_BASE_URL
 const baseURL = externalBaseURL ?? 'http://127.0.0.1:4173/Danish-Japanese-Lessons/app/'
 
 export default defineConfig({

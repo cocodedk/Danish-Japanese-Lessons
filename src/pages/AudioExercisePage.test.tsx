@@ -22,7 +22,7 @@ describe('sound exercise', () => {
       </MemoryRouter>,
     )
 
-    expect(screen.getByRole('heading', { name: 'Øv persisk lyd' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Øv japansk lyd' })).toBeInTheDocument()
     expect(screen.getAllByRole('button', { name: /^Hør / })).toHaveLength(97)
 
     fireEvent.click(screen.getAllByRole('button', { name: /^Hør / })[0])

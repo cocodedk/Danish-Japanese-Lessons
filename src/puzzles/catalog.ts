@@ -1,7 +1,7 @@
 import { specimens, teachingOrder } from '../lessons/alphabet'
 import { arrange } from '../lessons/exercises'
 import { vocabUnits, type VocabWord } from '../lessons/vocab'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import type { MissingTask, PuzzleDefinition, PuzzleGroup, PuzzleTask } from './types'
 
 function chunks<T>(items: T[], size: number): T[][] {
@@ -22,7 +22,7 @@ function alphabetChunks(items: string[]): string[][] {
   return groups
 }
 
-function matchTasks(entries: PersianEntry[]): PuzzleTask[] {
+function matchTasks(entries: JapaneseEntry[]): PuzzleTask[] {
   const choices = entries.slice(0, 4)
   return choices.map((entry) => ({ id: `match-${entry.id}`, kind: 'match', entry, choices }))
 }
@@ -59,9 +59,9 @@ function orderTasks(introduced: VocabWord[]): PuzzleTask[] {
   }))
 }
 
-function missingChoices(answer: PersianEntry, seed: number): PersianEntry[] {
+function missingChoices(answer: JapaneseEntry, seed: number): JapaneseEntry[] {
   const letters = Object.values(specimens).map((item) => item.entry)
-  const distractors: PersianEntry[] = []
+  const distractors: JapaneseEntry[] = []
   for (let step = 1; distractors.length < 2; step += 1) {
     const candidate = letters[(seed + step) % letters.length]
     if (candidate.ja !== answer.ja && !distractors.some((item) => item.ja === candidate.ja)) {

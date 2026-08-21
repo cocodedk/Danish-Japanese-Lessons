@@ -30,7 +30,7 @@ describe('Home', () => {
     window.location.hash = ''
     rtlRender(<App />)
 
-    expect(await screen.findByRole('heading', { name: 'Lær at tale persisk' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Øv alle lyde/ })).toBeInTheDocument()
     expect(screen.queryByLabelText('Hvad hedder du?')).not.toBeInTheDocument()
   })

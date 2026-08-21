@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { vocabUnits, allVocabWords, findVocabUnit } from './vocab'
 import { withoutMarks } from './marks'
 import { lessons, vocabLessonId } from './registry'
-import { findPersianTextViolations } from './textRules'
+import { findJapaneseTextViolations } from './textRules'
 
 /** The pre-approved starter set — plan 004 step 2. All ten sit in unit ۱. */
 const STARTER_SET: Array<[string, string]> = [
@@ -153,11 +153,11 @@ describe('grade-1 vocabulary data', () => {
 
   it('writes Japanese code points only — in ja and in the vocalized specimen alike', () => {
     for (const word of allVocabWords) {
-      expect(findPersianTextViolations(word.ja), word.id).toEqual([])
-      expect(findPersianTextViolations(word.jaMarked), word.id).toEqual([])
+      expect(findJapaneseTextViolations(word.ja), word.id).toEqual([])
+      expect(findJapaneseTextViolations(word.jaMarked), word.id).toEqual([])
     }
     for (const unit of vocabUnits) {
-      expect(findPersianTextViolations(unit.titleEntry.ja), unit.id).toEqual([])
+      expect(findJapaneseTextViolations(unit.titleEntry.ja), unit.id).toEqual([])
       // Unit headings are UI chrome: no اِعراب there, only on specimens.
       expect(withoutMarks(unit.titleEntry.ja), unit.id).toBe(unit.titleEntry.ja)
     }

@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { LESSON_PLACEHOLDER_ENTRY } from '../content/faStrings'
+import { LESSON_PLACEHOLDER_ENTRY } from '../content/jaStrings'
 import { CompactPhraseRow } from '../components/EntryRenderers'
 
 /** Placeholder for #/lesson/:id — real lesson content arrives with plans 003/004. */

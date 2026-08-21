@@ -57,7 +57,7 @@ describe('with a name', () => {
     const { container } = open('#/lesson/navn/skriv')
 
     expect(
-      screen.getByRole('heading', { name: 'Skriv dit navn med persiske bogstaver' }),
+      screen.getByRole('heading', { name: 'Skriv dit navn med japanske bogstaver' }),
     ).toBeInTheDocument()
     const help = container.querySelector('details')!
     expect(help.open).toBe(false)

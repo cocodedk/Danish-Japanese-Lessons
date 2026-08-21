@@ -14,9 +14,9 @@ import type { Reward } from '../rewards/types'
 import { Button } from './Button'
 import { Celebration } from './Celebration'
 import { ChallengeReveal } from './EntryRenderers'
-import { FaSpecimen } from './FaSpecimen'
+import { JaSpecimen } from './JaSpecimen'
 import { GuidedReviewModel } from './GuidedReviewModel'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import { useRevealInView } from './useRevealInView'
 import './ReviewSession.css'
@@ -117,7 +117,7 @@ export function ReviewSession({ initialTasks }: { initialTasks: ReviewTask[] }) 
     <section className="review-session">
       <p className="review-session__count">Opgave {index + 1} af {queue.length}</p>
       <h2 ref={promptRef} className="review-session__prompt" tabIndex={-1}>{question.promptDa}</h2>
-      {question.showsFa && <FaSpecimen entry={question.entry} />}
+      {question.showsFa && <JaSpecimen entry={question.entry} />}
       {question.showsPron !== false && <PronLine {...question.entry.pron} />}
       <ul className="review-session__choices">
         {question.choices.map((choice) => {
@@ -133,7 +133,7 @@ export function ReviewSession({ initialTasks }: { initialTasks: ReviewTask[] }) 
                 aria-pressed={selected}
                 onClick={() => choose(choice.id)}
               >
-                {choiceLang === 'ja' ? <PersianText entry={choice.entry} display={choice.glyph} /> : choice.glyph}
+                {choiceLang === 'ja' ? <JapaneseText entry={choice.entry} display={choice.glyph} /> : choice.glyph}
                 {selected && <strong>{right ? '✓ Husket' : 'Valgt'}</strong>}
               </button>
             </li>

@@ -25,7 +25,7 @@ critic confirmed is still missing: the ruled notebook sheet. Reviewable at a `#/
    granted.
 5. **`RuleDivider`** — extract the specimen divider from SplitCard; SplitCard refactors to consume
    it with ZERO visual change.
-6. **Typography components** — `FaSpecimen` (Naskh, clamp scale, line-height ≥2, renders
+6. **Typography components** — `JaSpecimen` (Naskh, clamp scale, line-height ≥2, renders
    `jaMarked ?? ja`, madde/mark accents in `--red`), `PronLine` (`lang="da" dir="ltr"`,
    `{da} · [{ipa}]`), `DaWord` (Andika). SplitCard becomes a thin composition of these.
 7. **Kit gallery** at `#/kit`: every component in light + dark, LTR + RTL samples side by side —
@@ -59,7 +59,7 @@ Durable decisions worth keeping:
   one page; nothing else changed for consumers, who still read `var(--paper)` and friends.
 - **The red pen is a gradient, not an element.** A vowel mark cannot be wrapped in its own span
   without breaking Arabic shaping, so `src/styles/pen.css` clips a hard-edged gradient to the text
-  (`.pen-mark--above` / `--below`, cut at `--pen-cut`, default `--madde-cut`). `FaSpecimen` and
+  (`.pen-mark--above` / `--below`, cut at `--pen-cut`, default `--madde-cut`). `JaSpecimen` and
   `VowelChip` share it; `markSide.ts` reads the side off the glyph, so lesson data carries only
   the letter.
 - **The ruling rhythm.** `--rule-step` (2.25rem) is both the rule pitch and the line-height on the

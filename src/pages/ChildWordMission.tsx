@@ -7,7 +7,7 @@ import { WordBuilder } from '../components/WordBuilder'
 import { Button } from '../components/Button'
 import { Celebration } from '../components/Celebration'
 import { RewardOverlays } from '../components/RewardOverlays'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { useRevealInView } from '../components/useRevealInView'
 import { addCollectedMission } from '../progress/childCollection'
 import { useCelebration } from '../rewards/useCelebration'
@@ -97,7 +97,7 @@ export default function ChildWordMission() {
                   <>
                     <Celebration reward={celebration.reward} tickLabel="Bygget" />
                     <p className="child-word__saved" aria-live="polite">
-                      Nu er <PersianText entry={mission.word.entry} /> i din samling.
+                      Nu er <JapaneseText entry={mission.word.entry} /> i din samling.
                     </p>
                   </>
                 ) : (

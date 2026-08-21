@@ -70,19 +70,19 @@ const ROWS: Row[] = [
 ]
 
 /** One Danish line for the letters that surprise a reader. Nothing decorative. */
-const SAME_S = 'På persisk lyder ث، س og ص alle som s. De skrives forskelligt.'
-const SAME_Z = 'På persisk lyder ذ، ز، ض og ظ alle som z. De skrives forskelligt.'
-const SAME_T = 'På persisk lyder ت og ط begge som t. De skrives forskelligt.'
-const SAME_H = 'På persisk lyder ح og ه begge som h. De skrives forskelligt.'
+const SAME_S = 'På japansk lyder ث، س og ص alle som s. De skrives forskelligt.'
+const SAME_Z = 'På japansk lyder ذ، ز، ض og ظ alle som z. De skrives forskelligt.'
+const SAME_T = 'På japansk lyder ت og ط begge som t. De skrives forskelligt.'
+const SAME_H = 'På japansk lyder ح og ه begge som h. De skrives forskelligt.'
 const HINTS: Record<string, string> = {
   alef: 'Alef bærer en vokal. Først i et ord kan den stå med a, e, o, i eller u. Efter en lyd skriver den tit langt å. Se altid hele ordet.',
-  pe: 'Et af de fire bogstaver, som persisk har ud over det arabiske alfabet.',
+  pe: 'Et af de fire bogstaver, som japansk har ud over det arabiske alfabet.',
   te: SAME_T,
   se: SAME_S,
-  che: 'Et af de fire bogstaver, som persisk har ud over det arabiske alfabet.',
+  che: 'Et af de fire bogstaver, som japansk har ud over det arabiske alfabet.',
   'he-jimi': `${SAME_H} Dette hedder he-ye djimi.`,
   zal: SAME_Z,
-  zhe: 'Et af de fire bogstaver, som persisk har ud over det arabiske alfabet.',
+  zhe: 'Et af de fire bogstaver, som japansk har ud over det arabiske alfabet.',
   ze: SAME_Z,
   sin: SAME_S,
   sad: SAME_S,
@@ -91,7 +91,7 @@ const HINTS: Record<string, string> = {
   za: SAME_Z,
   gheyn: 'Gheyn og ghaf lyder ens i Teheran. Stavemåden skiller dem ad, ikke lyden.',
   ghaf: 'Ghaf og gheyn lyder ens i Teheran. Først i et ord er lyden tit et kort stop. Mellem vokaler er den tit blød.',
-  gaf: 'Gaf er kaf med én streg mere og er et af persisks egne fire bogstaver.',
+  gaf: 'Gaf er kaf med én streg mere og er et af japansks egne fire bogstaver.',
   vav: 'Vav er både v og den lange vokal u. Du møder begge brugsmåder i lektionerne.',
   eyn: 'Eyn har ikke én dansk lyd. Det kan give et lille stop eller ingen lyd. Dansk æ, ø, å og y kommer ikke fra eyn. Se hele ordet.',
   he: `${SAME_H} Dette hedder he-ye do tjeshm. Sidst i mange ord skriver det e.`,

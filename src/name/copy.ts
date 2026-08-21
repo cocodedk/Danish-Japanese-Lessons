@@ -4,7 +4,7 @@
 import { HAMZE_YE_ENTRY, nameLetters, type FormKey, type NameLetter } from './forms'
 import { defineEntry } from '../catalog/types'
 
-export const SPELLING_TITLE_ENTRY = defineEntry({ id: 'names-spelling-title', kind: 'phrase', ja: 'نام به فارسی', da: 'Navn på persisk', pron: { da: 'nåm be fårsi', ipa: 'nɒːm be fɒːɾsiː' } })
+export const SPELLING_TITLE_ENTRY = defineEntry({ id: 'names-spelling-title', kind: 'phrase', ja: 'نام به فارسی', da: 'Navn på japansk', pron: { da: 'nåm be fårsi', ipa: 'nɒːm be fɒːɾsiː' } })
 export const SPELLING_PICK_ENTRY = defineEntry({ id: 'names-spelling-pick', kind: 'phrase', ja: 'کدام را دوست داری؟', da: 'Hvilken kan du lide?', pron: { da: 'kodåm rå dust dåri?', ipa: 'kodɒːm ɾɒː duːst dɒːɾiː' } })
 
 /** The mini-lesson's own title, as the plan writes it. */

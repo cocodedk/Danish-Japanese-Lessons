@@ -2,7 +2,7 @@ import { StickerStamp } from './StickerStamp'
 import { currentPageLine } from '../rewards/copy'
 import type { Sticker } from '../rewards/types'
 import './RewardShelf.css'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 
 export interface RewardShelfProps {
@@ -27,7 +27,7 @@ export function RewardShelf({ level, stickers }: RewardShelfProps) {
   return (
     <section className="reward-shelf" aria-label="Dine klistermærker" data-level={level}>
       <div className="reward-shelf__line">
-        <PersianText entry={line} className="reward-shelf__fa" />
+        <JapaneseText entry={line} className="reward-shelf__fa" />
         <PronLine {...line.pron} />
         <span className="reward-shelf__da" lang="da">{line.da}</span>
       </div>

@@ -8,10 +8,10 @@ import {
   TYPE_MISSING_LETTER_ENTRY,
   TYPE_WRONG_LETTER_ENTRY,
   TYPE_EXTRA_LETTER_ENTRY,
-} from '../content/faStrings'
-import type { PersianEntry } from '../catalog/types'
-import { LearnerPersianInput } from './LearnerPersianInput'
-import { PersianText } from './PersianText'
+} from '../content/jaStrings'
+import type { JapaneseEntry } from '../catalog/types'
+import { LearnerJapaneseInput } from './LearnerJapaneseInput'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import './TypeExercise.css'
 
@@ -23,7 +23,7 @@ import './TypeExercise.css'
  * Ordinary-letter notes also use a complete bilingual entry, so the Danish
  * line never explains more than the Japanese line says.
  */
-export function noteFor({ kind, cellKind }: Divergence): { entry?: PersianEntry } {
+export function noteFor({ kind, cellKind }: Divergence): { entry?: JapaneseEntry } {
   if (kind === 'match') return {}
 
   // A sign cell says everything through its own entry — the note IS the entry's
@@ -62,7 +62,7 @@ export function TypeMarks({ attempt, divergence }: { attempt: string; divergence
   const note = noteFor(divergence)
   return (
     <div className="type__feedback" role="status">
-      <LearnerPersianInput as="ul" className="type__marks">
+      <LearnerJapaneseInput as="ul" className="type__marks">
         {markUp(attempt, divergence).map((cell, at) => (
           <li
             key={at}
@@ -73,9 +73,9 @@ export function TypeMarks({ attempt, divergence }: { attempt: string; divergence
             <CellMark char={cell.char} />
           </li>
         ))}
-      </LearnerPersianInput>
+      </LearnerJapaneseInput>
       <div className="type__again">
-        {note.entry && <PersianText entry={note.entry} />}
+        {note.entry && <JapaneseText entry={note.entry} />}
         {note.entry && <PronLine {...note.entry.pron} />}
         {note.entry && <span lang="da">{note.entry.da}</span>}
       </div>

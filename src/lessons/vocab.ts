@@ -12,7 +12,7 @@
 // does not write ساکن.
 import type { WordCard } from './types'
 import { defineEntry } from '../catalog/types'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { vocabReadingCues } from './vocabReadingCues'
 
 export interface VocabWord extends WordCard {
@@ -32,7 +32,7 @@ export interface VocabUnit {
   /** Danish heading. */
   title: string
   /** Japanese heading. UI chrome, so no اِعراب — CLAUDE.md's Japanese text rules. */
-  titleEntry: PersianEntry
+  titleEntry: JapaneseEntry
   /** One Danish line for the forside card. */
   summary: string
   words: VocabWord[]

@@ -73,7 +73,7 @@ export function buildVocabQuestions(unitId: string, kind: VocabExerciseKind): Qu
     itemId: word.id,
     entry: word.entry,
     promptDa: kind === 'ord' ? 'Hvad betyder ordet?' : `Hvilket ord betyder »${word.da}«?`,
-    // The specimen carries its اِعراب (drawn by FaSpecimen from the entry); the
+    // The specimen carries its اِعراب (drawn by JaSpecimen from the entry); the
     // choices in `par` do not — marks belong on teaching specimens only
     // (docs/design/ART-DIRECTION.md).
     ...(kind === 'ord' ? { showsFa: true } : {}),

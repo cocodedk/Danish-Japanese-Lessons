@@ -3,7 +3,7 @@ import {
   TYPE_EXTRA_LETTER_ENTRY,
   TYPE_MISSING_LETTER_ENTRY,
   TYPE_WRONG_LETTER_ENTRY,
-} from '../content/faStrings'
+} from '../content/jaStrings'
 import {
   ASSEMBLE_ENTRY,
   LATER_IN_NAME_ENTRY,

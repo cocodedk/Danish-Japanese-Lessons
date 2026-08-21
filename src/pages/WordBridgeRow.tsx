@@ -1,5 +1,5 @@
 import { OptionalAudioControl } from '../components/OptionalAudioControl'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import type { WordBridge } from '../lessons/wordBridges'
 
 export function WordBridgeRow({ bridge, featured = false }: { bridge: WordBridge; featured?: boolean }) {
@@ -7,8 +7,8 @@ export function WordBridgeRow({ bridge, featured = false }: { bridge: WordBridge
     <details className="word-bridge" data-entry-id={bridge.entry.id} open={featured}>
       <summary className="word-bridge__summary">
         <span className="word-bridge__word word-bridge__word--ja">
-          <span className="word-bridge__language">Persisk</span>
-          <PersianText entry={bridge.entry} className="word-bridge__fa" />
+          <span className="word-bridge__language">Japansk</span>
+          <JapaneseText entry={bridge.entry} className="word-bridge__fa" />
           <span className="word-bridge__pron">{bridge.entry.pron.da}</span>
           <span className="word-bridge__gloss">{bridge.entry.da}</span>
         </span>
@@ -23,7 +23,7 @@ export function WordBridgeRow({ bridge, featured = false }: { bridge: WordBridge
         <p>
           <strong>Udtale</strong>
           <span>
-            Persisk [{bridge.entry.pron.ipa}]
+            Japansk [{bridge.entry.pron.ipa}]
             {bridge.danishIpa && <> · dansk [{bridge.danishIpa}]</>}
           </span>
         </p>

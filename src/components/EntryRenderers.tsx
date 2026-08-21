@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { specimenIdForEntryId } from '../lessons/alphabet'
 import { DaWord } from './DaWord'
-import { FaSpecimen } from './FaSpecimen'
-import { PersianText } from './PersianText'
+import { JaSpecimen } from './JaSpecimen'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import { ReadingCues } from './ReadingCues'
 import { OptionalAudioControl } from './OptionalAudioControl'
@@ -22,13 +22,13 @@ export function FullTeachingCard({
   showReadingCues = true,
   imageEntryId,
 }: {
-  entry: PersianEntry
+  entry: JapaneseEntry
   showReadingCues?: boolean
   imageEntryId?: string
 }) {
   return (
     <section className="entry-card" data-entry-id={entry.id}>
-      <FaSpecimen entry={entry} />
+      <JaSpecimen entry={entry} />
       <PronLine {...entry.pron} />
       <OptionalAudioControl audioId={entry.audioId} />
       {imageEntryId && <LessonImage entryId={imageEntryId} />}
@@ -42,12 +42,12 @@ export function CompactPhraseRow({
   entry,
   marked = false,
 }: {
-  entry: PersianEntry
+  entry: JapaneseEntry
   marked?: boolean
 }) {
   return (
     <div className="entry-phrase" data-entry-id={entry.id}>
-      <PersianText entry={entry} className="entry-phrase__fa" marked={marked} />
+      <JapaneseText entry={entry} className="entry-phrase__fa" marked={marked} />
       <PronLine {...entry.pron} />
       <OptionalAudioControl audioId={entry.audioId} />
       {/* Danish keeps its own direction even inside an RTL frame (the Kit's
@@ -60,7 +60,7 @@ export function CompactPhraseRow({
 }
 
 export interface DetailStripProps {
-  entry: PersianEntry
+  entry: JapaneseEntry
   to?: string
   className?: string
   /** Announce updates to assistive tech. For deliberate browse selections
@@ -76,7 +76,7 @@ export function DetailStrip({ entry, to, className = '', live }: DetailStripProp
       aria-live={live ? 'polite' : undefined}
       data-entry-id={entry.id}
     >
-      <PersianText entry={entry} className="entry-detail__fa" />
+      <JapaneseText entry={entry} className="entry-detail__fa" />
       <div className="entry-detail__help">
         <PronLine {...entry.pron} />
         <OptionalAudioControl audioId={entry.audioId} />
@@ -97,7 +97,7 @@ export function ChallengeReveal({
   entry,
   imageEntryId,
 }: {
-  entry: PersianEntry
+  entry: JapaneseEntry
   imageEntryId?: string
 }) {
   return (

@@ -1,7 +1,7 @@
 // Shapes for the reward engine (plan 007). Every number here only ever grows:
 // there is no "spend", no "lose", no negative. See engine.ts for why that is
 // structural rather than a promise.
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 /**
  * What the learner just did. The three seams plan 003 already exposes:
@@ -26,7 +26,7 @@ export interface Sticker {
 }
 
 /** One matched praise pair. Japanese first, the way the app reads. */
-export type Praise = PersianEntry
+export type Praise = JapaneseEntry
 
 export interface StreakState {
   /** Total practice days. Only ever grows. */
@@ -42,7 +42,7 @@ export interface Gift {
   id: string
   /** Which gift this is, counting from one — it picks the bonus round. */
   ordinal: number
-  entry: PersianEntry
+  entry: JapaneseEntry
 }
 
 export type SoundCue = 'tick' | 'chime' | 'fanfare'

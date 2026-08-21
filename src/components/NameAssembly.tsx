@@ -6,7 +6,7 @@ import { ASSEMBLE_ENTRY, NOT_IN_NAME_ENTRY, LATER_IN_NAME_ENTRY } from '../name/
 import { CompactPhraseRow, ChallengeReveal } from './EntryRenderers'
 import { RetryActions } from './RetryActions'
 import { PersonalNameText } from './PersonalName'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { nameLetters } from '../name/forms'
 import { PronLine } from './PronLine'
 import { useChallengeFocus } from './useChallengeFocus'
@@ -67,7 +67,7 @@ export function NameAssembly({ spelling, onDone }: NameAssemblyProps) {
       <h2 ref={promptRef} tabIndex={-1} className="alphabet__section-title">Sæt navnet sammen igen</h2>
       <CompactPhraseRow entry={ASSEMBLE_ENTRY} />
       <p className="alphabet__note">
-        Persisk skrives fra højre. Tryk derfor det første bogstav i navnet først. Det lander yderst
+        Japansk skrives fra højre. Tryk derfor det første bogstav i navnet først. Det lander yderst
         til højre, og de næste stiller sig til venstre for det.
       </p>
 
@@ -84,7 +84,7 @@ export function NameAssembly({ spelling, onDone }: NameAssemblyProps) {
       <div className="name-assembly__feedback" role="status">
         {missed !== null && !done && (
           <div className="name-assembly__again">
-            <PersianText entry={missEntry} />
+            <JapaneseText entry={missEntry} />
             <PronLine {...missEntry.pron} />
             <span lang="da">{missEntry.da}</span>
           </div>

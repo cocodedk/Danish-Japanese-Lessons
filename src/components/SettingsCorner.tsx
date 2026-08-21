@@ -153,7 +153,7 @@ export function SettingsCorner({ name, faSpelling, onSave, onDelete }: SettingsC
                     />
                   )}
                   <Link className="settings-corner__link" to="/dit-navn">
-                    {faSpelling ? 'Ret navnet på persisk' : 'Skriv navnet på persisk'}
+                    {faSpelling ? 'Ret navnet på japansk' : 'Skriv navnet på japansk'}
                   </Link>
                 </p>
               )}
@@ -186,7 +186,7 @@ export function SettingsCorner({ name, faSpelling, onSave, onDelete }: SettingsC
               <p style={dedicationStyle}>Tilegnet Japan Bandpey.</p>
               <p style={versionStyle}>
                 <span>Version</span>
-                <code>{__DPL_APP_VERSION__}</code>
+                <code>{__DJL_APP_VERSION__}</code>
               </p>
             </div>
           )}

@@ -41,7 +41,7 @@ screen adopts the notebook signature.
    learner feels the flip, an arrow/finger sweep (reduced-motion: static arrows), then the three
    other surprises: letters join, letters change shape by position, no capital letters, dots are
    part of the letter. Danish du-form copy; Japanese examples as specimens.
-7. **Letter screen**: on the ruled sheet — big glyph (FaSpecimen), the four forms row, the sound
+7. **Letter screen**: on the ruled sheet — big glyph (JaSpecimen), the four forms row, the sound
    line (dansk lydskrift + IPA from data), LetterDraw, and a name-letter badge slot: red margin
    tick «این حرف در نامِ توست» / "Dette bogstav er i dit navn" rendered ONLY when
    `profile.faSpelling` contains the letter (dormant until plan 006).

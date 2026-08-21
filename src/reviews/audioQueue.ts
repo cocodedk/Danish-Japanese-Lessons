@@ -1,6 +1,6 @@
 import { findPronunciationAudio } from '../audio/manifest'
 import { catalogDomains, persianCatalog } from '../catalog/registry'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { spokenFormsFor } from '../catalog/types'
 import { launchTalkClipIds } from '../speaking/launchCorpus'
 
@@ -21,7 +21,7 @@ export const audioRecordingQueue = {
   status: 'draft-awaiting-native-review',
   source: 'src/catalog/registry.ts',
   instructions: 'Generate locally. Publish only after one named native Japanese reviewer approves the clip.',
-  rows: persianCatalog.flatMap((entry: PersianEntry) => {
+  rows: persianCatalog.flatMap((entry: JapaneseEntry) => {
     const domain = domainFor(entry.id)
     return spokenFormsFor(entry)
       .filter((form) => !findPronunciationAudio(form.audioId))
@@ -34,7 +34,7 @@ export const audioRecordingQueue = {
         domain,
         transcript: form.jaMarked ?? form.ja,
         synthesisText: form.jaMarked ?? form.ja,
-        plainPersian: form.ja,
+        plainJapanese: form.ja,
         danishMeaning: form.da,
         soundDa: form.pron.da,
         ipa: form.pron.ipa,

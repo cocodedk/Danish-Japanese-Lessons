@@ -4,10 +4,10 @@ import { useLocation, useNavigationType } from 'react-router-dom'
 const scrollPositions = new Map<string, number>()
 
 export function routeDocumentTitle(pathname: string, heading: string): string {
-  if (pathname === '/') return 'Vælg din vej · Lær persisk skrift'
-  if (pathname === '/opdag') return 'Ordværksted · Lær persisk skrift'
+  if (pathname === '/') return 'Vælg din vej · Lær japansk skrift'
+  if (pathname === '/opdag') return 'Ordværksted · Lær japansk skrift'
   if (pathname.startsWith('/opdag/ord/')) return `${heading} · Ordværksted`
-  return `${heading} · Lær persisk`
+  return `${heading} · Lær japansk`
 }
 
 /**
@@ -30,7 +30,7 @@ export function RouteEffects() {
       const heading = document.querySelector<HTMLElement>('main h1')
       const main = document.querySelector<HTMLElement>('main')
       const target = heading ?? main
-      const title = heading?.textContent?.trim() || 'Lær persisk skrift'
+      const title = heading?.textContent?.trim() || 'Lær japansk skrift'
       document.title = routeDocumentTitle(location.pathname, title)
       if (target) {
         if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1')

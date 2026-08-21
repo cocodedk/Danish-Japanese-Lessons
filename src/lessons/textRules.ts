@@ -7,7 +7,7 @@ const ARABIC_YEH = 'ي' // ي — forbidden; use ی (U+06cc)
 const ASCII_DIGIT = /[0-9]/
 
 /** Returns a human-readable violation for every text-rule break found in `text`. */
-export function findPersianTextViolations(text: string): string[] {
+export function findJapaneseTextViolations(text: string): string[] {
   const violations: string[] = []
 
   if (text.includes(ARABIC_KAF)) {
@@ -23,6 +23,6 @@ export function findPersianTextViolations(text: string): string[] {
   return violations
 }
 
-export function isValidPersianText(text: string): boolean {
-  return findPersianTextViolations(text).length === 0
+export function isValidJapaneseText(text: string): boolean {
+  return findJapaneseTextViolations(text).length === 0
 }

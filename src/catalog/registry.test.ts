@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { catalogDomains, persianCatalog } from './registry'
 import { withoutMarks } from '../lessons/marks'
-import { findPersianTextViolations } from '../lessons/textRules'
+import { findJapaneseTextViolations } from '../lessons/textRules'
 
 describe('the typed Japanese catalog', () => {
   it('has globally unique stable ids and complete companions', () => {
@@ -43,9 +43,9 @@ describe('the typed Japanese catalog', () => {
 
   it('keeps code points, Japanese numerals, ZWNJ, and jaMarked honest', () => {
     for (const entry of persianCatalog) {
-      expect(findPersianTextViolations(entry.ja), entry.id).toEqual([])
+      expect(findJapaneseTextViolations(entry.ja), entry.id).toEqual([])
       if (entry.jaMarked) {
-        expect(findPersianTextViolations(entry.jaMarked), entry.id).toEqual([])
+        expect(findJapaneseTextViolations(entry.jaMarked), entry.id).toEqual([])
         expect(withoutMarks(entry.jaMarked), entry.id).toBe(entry.ja)
       }
       if (/[۰-۹]/u.test(entry.ja)) expect(entry.kind, entry.id).toBe('symbol')

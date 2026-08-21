@@ -1,6 +1,6 @@
 import type { Letter } from '../lessons/types'
-import type { PersianEntry } from '../catalog/types'
-import { PersianText } from './PersianText'
+import type { JapaneseEntry } from '../catalog/types'
+import { JapaneseText } from './JapaneseText'
 import { PersonalNameText } from './PersonalName'
 import './LetterForms.css'
 
@@ -14,7 +14,7 @@ const CELLS: Array<[keyof Letter['forms'], string]> = [
 export interface LetterFormsProps {
   forms: Letter['forms']
   joinsLeft: boolean
-  entry?: PersianEntry
+  entry?: JapaneseEntry
 }
 
 /**
@@ -29,7 +29,7 @@ export function LetterForms({ forms, joinsLeft, entry }: LetterFormsProps) {
         {CELLS.map(([key, label]) => (
           <li key={key} className="letter-forms__cell">
             {entry ? (
-              <PersianText entry={entry} display={forms[key]} className="letter-forms__glyph" />
+              <JapaneseText entry={entry} display={forms[key]} className="letter-forms__glyph" />
             ) : (
               <PersonalNameText spelling={forms[key]} className="letter-forms__glyph" />
             )}

@@ -2,7 +2,7 @@
 // plan 007 lives next door, in permanence.test.ts.
 import { describe, it, expect, beforeEach } from 'vitest'
 import { celebrate, getRewards, POINTS_PER_PAGE, STICKER_STEP } from './engine'
-import { findPersianTextViolations } from '../lessons/textRules'
+import { findJapaneseTextViolations } from '../lessons/textRules'
 
 const DAY = new Date(2026, 2, 3, 10, 0, 0)
 
@@ -44,7 +44,7 @@ describe('reward engine — every completion celebrates', () => {
     }
     expect(ja.size).toBeGreaterThanOrEqual(4)
     expect(da.size).toBeGreaterThanOrEqual(4)
-    for (const line of ja) expect(findPersianTextViolations(line)).toEqual([])
+    for (const line of ja) expect(findJapaneseTextViolations(line)).toEqual([])
   })
 
   it('fills the notebook page on a page event: exactly one level up, with a fanfare', () => {

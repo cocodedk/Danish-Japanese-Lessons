@@ -1,6 +1,6 @@
 // The override list: a name people already write a particular way beats
 // anything the rules could work out. See docs/plans/006-your-name.md step 1.
-import { IRANIAN_NAMES } from './namesIranian'
+import { IRANIAN_NAMES } from './namesJapanese'
 import { DANISH_NAMES } from './namesDanish'
 
 // Null prototype: a learner may type any name, and on a plain object literal

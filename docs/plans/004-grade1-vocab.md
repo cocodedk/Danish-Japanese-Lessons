@@ -104,7 +104,7 @@ pixel-identically and only the marks show through — both sides of the line, on
 anti-aliasing softens its glyph edges over the red layer sitting beneath it, leaving a sub-pixel
 warm fringe around every letterform. Invisible at 1×, costs nothing, not a bug to chase — just not
 literally "only the marks," under a loupe. The ink layer keeps the old gradient, so آ still gets
-its red مد. `FaSpecimen` falls back to the single-layer path whenever `jaMarked` is not `ja` plus
+its red مد. `JaSpecimen` falls back to the single-layer path whenever `jaMarked` is not `ja` plus
 marks (`withoutMarks(jaMarked) === ja` is the test).
 
 ## Steps
@@ -161,7 +161,7 @@ Where the build (PR #15) does not do what this plan wrote, and why. All accepted
    type the very same step's parenthetical rules out.
 4. **The name-overlap note is new copy, not the reused badge string.** Step 3 says "reuse the
    badge copy pattern"; `WordScreen` instead adds `NAME_LETTER_IN_WORD_FA` /
-   `NAME_LETTERS_IN_WORD_FA` (`src/content/faStrings.ts`), because a whole word sharing one letter
+   `NAME_LETTERS_IN_WORD_FA` (`src/content/jaStrings.ts`), because a whole word sharing one letter
    or several needs its own grammar that the single-letter badge («این حرف در نامِ توست») does
    not carry. Same pattern, new copy.
 5. **A correct answer inside the exercise round paid the `item` rate (2 points) every time**, not
@@ -185,11 +185,11 @@ section, a critic round, and a couple of its own factual claims corrected. Nine 
 deviation 5's correction above, adjudicated and built by the round-2 fix builder (PR #15), one
 line each:
 
-- **D1 the exercise round rendered a vocalized prompt through `FaSpecimen`'s single `ja` prop,
+- **D1 the exercise round rendered a vocalized prompt through `JaSpecimen`'s single `ja` prop,
   never wiring `jaMarked`.** A word marked above and below (مَدرِسه) lost one mark inside the
   exercise even though the word screen showed both, because the single-gradient path can only
   ever colour one side of the line. `Question` gains `promptFaMarked`; `vocabExercises` now passes
-  the plain/marked pair; `ChoiceExercise` passes both on to `FaSpecimen`, engaging the two-layer
+  the plain/marked pair; `ChoiceExercise` passes both on to `JaSpecimen`, engaging the two-layer
   path it already has.
 - **D2 no test ever rendered a vocab exercise specimen, so D1 shipped green.**
   `ChoiceExercise.test.tsx` now renders the exercise prompt for مَدرِسه (marked above and below —

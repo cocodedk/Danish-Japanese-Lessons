@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { LessonSheet, BarLink } from '../components/LessonSheet'
 import { RuleDivider } from '../components/RuleDivider'
 import { FullTeachingCard } from '../components/EntryRenderers'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PronLine } from '../components/PronLine'
 import { getAlphabetProgress, markOrientationSeen } from '../progress/alphabet'
 import { MIRROR_DEMO, ORIENTATION_POINTS } from '../content/orientation'
@@ -44,7 +44,7 @@ function Point({ point }: { point: OrientationPoint }) {
       <ul className="orient__row" dir="rtl">
         {point.ja.map((token, index) => (
           <li key={`${token.entry.id}-${index}`} className="orient__chip">
-            <PersianText entry={token.entry} display={token.form} />
+            <JapaneseText entry={token.entry} display={token.form} />
             <PronLine {...(token.contextualPron ?? token.entry.pron)} />
             <span className="orient__chip-help" lang="da" dir="ltr">
               {token.contextualHelpDa ?? token.entry.da}
@@ -80,7 +80,7 @@ export default function Orientation() {
 
   return (
     <LessonSheet
-      title="Sådan virker persisk skrift"
+      title="Sådan virker japansk skrift"
       bar={
         firstVisit ? (
           <>
@@ -105,7 +105,7 @@ export default function Orientation() {
           {(!firstVisit || step === 0) && (
             <>
               <p className="orient__intro">
-                Du behøver ikke kunne tale, skrive eller læse persisk endnu. Du kan gå videre når som helst
+                Du behøver ikke kunne tale, skrive eller læse japansk endnu. Du kan gå videre når som helst
                 og vende tilbage senere. Vi anbefaler, at du starter eller fortsætter med alfabetet herfra.
               </p>
               <section className="orient__point">
@@ -122,14 +122,14 @@ export default function Orientation() {
 
           {(!firstVisit || step === 1) && (
             <section className="orient__point">
-              <h2 className="orient__heading">Persisk læses fra højre mod venstre</h2>
+              <h2 className="orient__heading">Japansk læses fra højre mod venstre</h2>
               <Flip />
               <RuleDivider />
               <div className="orient__specimen">
                 <FullTeachingCard entry={MIRROR_DEMO.entry} />
               </div>
               <p className="orient__body">
-                Persisk gør det hver eneste gang: første bogstav yderst til højre, sidste bogstav yderst
+                Japansk gør det hver eneste gang: første bogstav yderst til højre, sidste bogstav yderst
                 til venstre.
               </p>
             </section>

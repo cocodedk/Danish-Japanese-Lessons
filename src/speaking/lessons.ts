@@ -1,5 +1,5 @@
 import { findPronunciationAudio } from '../audio/manifest'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { lessonImageForEntry } from '../images/catalog'
 import { conversationBasics } from '../lessons/conversation'
 import { beginnerNumbers } from '../lessons/numbers'
@@ -8,7 +8,7 @@ import { launchTalkClipIds } from './launchCorpus'
 
 export interface SpeakingPage {
   id: string
-  entry: PersianEntry
+  entry: JapaneseEntry
   imageEntryId?: string
   swatch?: ColorSwatchId
   number?: number
@@ -40,7 +40,7 @@ function vocabLesson(unitId: string, summary: string): SpeakingLesson {
 export const speakingLessons: SpeakingLesson[] = [
   {
     id: 'hils',
-    title: 'Hils på persisk',
+    title: 'Hils på japansk',
     summary: 'Sig hej, fortæl hvem du er, og sig farvel.',
     pages: conversationBasics.map((entry) => ({
       id: entry.id,

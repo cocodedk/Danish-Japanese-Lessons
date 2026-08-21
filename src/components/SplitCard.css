@@ -1,5 +1,5 @@
 /* The split-screen shell — docs/design/ART-DIRECTION.md "The specimen".
-   The type itself comes from the kit: FaSpecimen, PronLine, DaWord, RuleDivider. */
+   The type itself comes from the kit: JaSpecimen, PronLine, DaWord, RuleDivider. */
 
 /* The card sits ON a ruled sheet (RuledSection), it is not a sheet itself:
    no margin line of its own, no inline padding of its own, and no forced

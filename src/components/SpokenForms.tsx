@@ -1,7 +1,7 @@
-import type { PersianEntry, SpokenRegister } from '../catalog/types'
+import type { JapaneseEntry, SpokenRegister } from '../catalog/types'
 import { spokenFormsFor } from '../catalog/types'
 import { AudioControl } from './AudioControl'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import './SpokenForms.css'
 
@@ -15,7 +15,7 @@ export function SpokenForms({
   entry,
   onHeard,
 }: {
-  entry: PersianEntry
+  entry: JapaneseEntry
   onHeard?: () => void
 }) {
   const forms = spokenFormsFor(entry)
@@ -24,7 +24,7 @@ export function SpokenForms({
       {forms.map((form) => (
         <section className="spoken-form" key={form.id} aria-labelledby={`${entry.id}-${form.id}-label`}>
           <h2 id={`${entry.id}-${form.id}-label`}>{labels[form.register]}</h2>
-          <PersianText
+          <JapaneseText
             entry={entry}
             display={form.jaMarked ?? form.ja}
             marked={Boolean(form.jaMarked)}

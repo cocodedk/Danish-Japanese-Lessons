@@ -1,6 +1,6 @@
 import { findPronunciationAudio } from '../audio/manifest'
 import { catalogDomains, persianCatalog } from '../catalog/registry'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 export type CueCoverage = 'none' | 'whole-word' | 'token' | 'contextual'
 export type AudioReviewStatus = 'missing' | 'not-applicable' | 'reviewed'
@@ -13,13 +13,13 @@ function domainFor(entryId: string): keyof typeof catalogDomains {
   return found[0] as keyof typeof catalogDomains
 }
 
-function cueCoverage(entry: PersianEntry): CueCoverage {
+function cueCoverage(entry: JapaneseEntry): CueCoverage {
   if (!entry.readingCues?.length) return 'none'
   if (entry.readingCues.some((cue) => cue.role !== 'whole')) return 'contextual'
   return entry.readingCues.length > 1 ? 'token' : 'whole-word'
 }
 
-function audioStatus(entry: PersianEntry): AudioReviewStatus {
+function audioStatus(entry: JapaneseEntry): AudioReviewStatus {
   if (entry.audioNotApplicable) return 'not-applicable'
   return findPronunciationAudio(entry.audioId) ? 'reviewed' : 'missing'
 }

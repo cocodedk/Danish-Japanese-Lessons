@@ -73,7 +73,7 @@ These are reproducible baseline failures, not optional polish:
    puzzle, typing, return visit, dark/light, reduced motion, and denied storage.
 2. Save the complete mobile, landscape, tablet, desktop, ultrawide, and zoom baseline matrix from the
    responsive spec for critical routes, including measured content and component widths.
-3. Export a review manifest of every `PersianEntry`, contextual reading cue, Danish sound cue, IPA,
+3. Export a review manifest of every `JapaneseEntry`, contextual reading cue, Danish sound cue, IPA,
    and future audio ID. Freeze new learner-facing Japanese until Milestone 1 is approved.
 
 ## Milestone 1 — Accurate Japanese and pronunciation model

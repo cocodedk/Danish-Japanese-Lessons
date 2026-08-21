@@ -4,7 +4,7 @@
 import { letters, specimens } from '../lessons/alphabet'
 import { NO_OWN_SOUND } from '../lessons/marks'
 import type { Letter, Pron } from '../lessons/types'
-import { defineEntry, type PersianEntry } from '../catalog/types'
+import { defineEntry, type JapaneseEntry } from '../catalog/types'
 
 export type FormKey = keyof Letter['forms']
 
@@ -15,9 +15,9 @@ export interface NameLetter {
   index: number
   glyph: string
   /** Catalog companion when the sign is known; personal output may be unknown. */
-  entry?: PersianEntry
+  entry?: JapaneseEntry
   /** The spoken letter name, kept separate from its contextual sound role. */
-  nameEntry?: PersianEntry
+  nameEntry?: JapaneseEntry
   form: FormKey
   /** The form as the pen writes it, joining strokes included: بـ ـتـ ـک ر */
   formGlyph: string
@@ -38,8 +38,8 @@ interface Shape {
   joinsLeft: boolean
   nameDa: string
   sound?: Pron
-  entry?: PersianEntry
-  nameEntry?: PersianEntry
+  entry?: JapaneseEntry
+  nameEntry?: JapaneseEntry
 }
 
 /**
@@ -63,7 +63,7 @@ function derive(
   glyph: string,
   joinsLeft: boolean,
   nameDa: string,
-  entry?: PersianEntry,
+  entry?: JapaneseEntry,
 ): Shape {
   return {
     forms: {
@@ -110,13 +110,13 @@ const SHAPES = new Map<string, Shape>([
 // Arabic block, and spelling them out would print the two forbidden glyphs
 // (U+0643, U+064A) in the source. U+0640, the tatweel, is left out: it is a
 // joining stroke, not a letter.
-const PERSIAN_LETTER = /[\u0620-\u063F\u0641-\u064A\u066E-\u06D3\u06D5\u06EE\u06EF\u06FA-\u06FF]/
+const JAPANESE_LETTER = /[\u0620-\u063F\u0641-\u064A\u066E-\u06D3\u06D5\u06EE\u06EF\u06FA-\u06FF]/
 
 function shapeOf(char: string | undefined): Shape | undefined {
   if (char === undefined) return undefined
   const known = SHAPES.get(char)
   if (known) return known
-  return PERSIAN_LETTER.test(char) ? derive(char, true, OTHER_SIGN_DA) : undefined
+  return JAPANESE_LETTER.test(char) ? derive(char, true, OTHER_SIGN_DA) : undefined
 }
 
 /**

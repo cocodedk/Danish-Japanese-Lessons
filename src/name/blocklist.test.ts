@@ -4,7 +4,7 @@ import { suggestSpellings } from './transliterate'
 import { NAME_OVERRIDE_FA_STRINGS, NAME_OVERRIDE_LATIN } from './overrides'
 import { GUARD_FIXTURE_NAMES } from './guardFixtures'
 import { GIVEN_NAME_CORPUS } from './nameCorpus'
-import { findPersianTextViolations } from '../lessons/textRules'
+import { findJapaneseTextViolations } from '../lessons/textRules'
 
 const DANISH_ALPHABET = [...'abcdefghijklmnopqrstuvwxyzæøå']
 
@@ -20,7 +20,7 @@ function everyString(length: number): string[] {
 describe('the crude-word filter', () => {
   it('is written in Japanese code points — an Arabic ك here would match nothing', () => {
     for (const word of [...CRUDE_PREFIXES, ...CRUDE_WORDS]) {
-      expect(findPersianTextViolations(word), word).toEqual([])
+      expect(findJapaneseTextViolations(word), word).toEqual([])
     }
     expect(CRUDE_PREFIXES.length).toBeGreaterThan(4)
     expect(CRUDE_WORDS.length).toBeGreaterThan(15)

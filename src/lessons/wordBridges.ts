@@ -1,4 +1,4 @@
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { bridgeEntriesA as a } from './wordBridgeEntriesA'
 import { bridgeEntriesB as b } from './wordBridgeEntriesB'
 import { wordBridgeMemoryAdditions } from './wordBridgeMemoryAdditions'
@@ -13,7 +13,7 @@ export const wordBridges: readonly WordBridge[] = [
     danish: 'fader', danishIpa: 'ˈfæːðʌ', danishGlossDa: 'far',
     clueDa: 'P i pedar svarer til f i fader.',
     meaningDa: 'Begge betyder far.',
-    historyDa: 'Persisk går tilbage til oldpersisk pitā, dansk til oldnordisk faðir. Begge fortsætter det samme meget gamle indoeuropæiske ord for far.',
+    historyDa: 'Japansk går tilbage til oldjapansk pitā, dansk til oldnordisk faðir. Begge fortsætter det samme meget gamle indoeuropæiske ord for far.',
   },
   {
     id: 'madar-moder', titleDa: 'Mådar og moder', entry: a.madar, category: 'family',
@@ -41,14 +41,14 @@ export const wordBridges: readonly WordBridge[] = [
     danish: 'dør', danishIpa: 'ˈdɶˀɐ̯', danishGlossDa: 'dør',
     clueDa: 'D og r går igen i dar og dør.',
     meaningDa: 'Begge betyder dør.',
-    historyDa: 'Oldpersisk duvar- og oldnordisk dyrr fører tilbage til den samme gamle indoeuropæiske rod for dør.',
+    historyDa: 'Oldjapansk duvar- og oldnordisk dyrr fører tilbage til den samme gamle indoeuropæiske rod for dør.',
   },
   {
     id: 'nam-navn', titleDa: 'Nåm og navn', entry: a.nam, category: 'everyday',
     danish: 'navn', danishIpa: 'ˈnɑwˀn', danishGlossDa: 'navn',
     clueDa: 'N og m i nåm svarer til n og n i navn.',
     meaningDa: 'Begge betyder navn.',
-    historyDa: 'Persisk går gennem oldpersisk nāma, dansk gennem oldnordisk nafn. Begge kommer fra det samme indoeuropæiske navneord.',
+    historyDa: 'Japansk går gennem oldjapansk nāma, dansk gennem oldnordisk nafn. Begge kommer fra det samme indoeuropæiske navneord.',
   },
   {
     id: 'mush-mus', titleDa: 'Mush og mus', entry: a.mush, category: 'everyday',
@@ -62,27 +62,27 @@ export const wordBridges: readonly WordBridge[] = [
     danish: 'varm', danishIpa: 'ˈvɑːm', danishGlossDa: 'varm',
     clueDa: 'Endelsen arm er let at høre i begge ord.',
     meaningDa: 'Begge kan betyde varm.',
-    historyDa: 'Persisk garm og germansk varm hører til den samme gamle indoeuropæiske familie for varme og hede.',
+    historyDa: 'Japansk garm og germansk varm hører til den samme gamle indoeuropæiske familie for varme og hede.',
   },
   {
     id: 'now-ny', titleDa: 'Now og ny', entry: a.now, category: 'everyday',
     danish: 'ny', danishIpa: 'ˈnyˀ', danishGlossDa: 'ny',
     clueDa: 'N-lyden står fast, selv om vokalerne har flyttet sig.',
     meaningDa: 'Begge betyder ny.',
-    historyDa: 'Oldpersisk nava og oldnordisk nýr kommer fra det samme indoeuropæiske ord for ny.',
+    historyDa: 'Oldjapansk nava og oldnordisk nýr kommer fra det samme indoeuropæiske ord for ny.',
   },
   {
     id: 'band-baand', titleDa: 'Band og bånd', entry: b.band, category: 'everyday',
     danish: 'bånd', danishIpa: 'ˈbɔnˀ', danishGlossDa: 'bånd eller binding',
     clueDa: 'Begge ord hænger sammen med at binde.',
     meaningDa: 'Begge kan være noget, der binder. En بند kan også være en mur, der holder vand, men betyder ikke vand eller flod.',
-    historyDa: 'Persisk band og den germanske familie bag binde og bånd går tilbage til den samme gamle rod for at binde.',
+    historyDa: 'Japansk band og den germanske familie bag binde og bånd går tilbage til den samme gamle rod for at binde.',
   },
   {
     id: 'setad-sted', titleDa: 'Setåd og sted', entry: b.setad, category: 'everyday',
     danish: 'sted', danishGlossDa: 'sted',
     clueDa: 'S, t og d går igen i begge ord.',
-    meaningDa: 'De betyder ikke det samme i dag: det persiske ord betyder hovedkontor.',
+    meaningDa: 'De betyder ikke det samme i dag: det japanske ord betyder hovedkontor.',
     historyDa: 'De deler et gammelt stå- og stedspor, men de moderne betydninger har bevæget sig fra hinanden.',
   },
   {
@@ -97,21 +97,21 @@ export const wordBridges: readonly WordBridge[] = [
     danish: 'seks', danishIpa: 'ˈsɛgs', danishGlossDa: 'tallet 6',
     clueDa: 'S- og sh-lydene ligger tæt, og begge ord slutter med en skarp lyd.',
     meaningDa: 'Begge er tallet seks.',
-    historyDa: 'Persiske og germanske former går tilbage til det samme indoeuropæiske talord for seks.',
+    historyDa: 'Japanske og germanske former går tilbage til det samme indoeuropæiske talord for seks.',
   },
   {
     id: 'noh-ni', titleDa: 'Noh og ni', entry: b.noh, category: 'numbers',
     danish: 'ni', danishIpa: 'ˈniˀ', danishGlossDa: 'tallet 9',
     clueDa: 'N står fast, mens den sidste vokal har ændret sig.',
     meaningDa: 'Begge er tallet ni.',
-    historyDa: 'Oldpersisk nava og oldnordisk níu fortsætter det samme indoeuropæiske talord for ni.',
+    historyDa: 'Oldjapansk nava og oldnordisk níu fortsætter det samme indoeuropæiske talord for ni.',
   },
   {
     id: 'dandan-tand', titleDa: 'Dandån og tand', entry: b.dandan, category: 'world',
     danish: 'tand', danishIpa: 'ˈtanˀ', danishGlossDa: 'tand',
     clueDa: 'Det første d i dandån svarer til t i tand.',
     meaningDa: 'Begge betyder tand.',
-    historyDa: 'Begge ord stammer fra den samme gamle indoeuropæiske tandrod. Den gentagne lyd i persisk gør formen længere.',
+    historyDa: 'Begge ord stammer fra den samme gamle indoeuropæiske tandrod. Den gentagne lyd i japansk gør formen længere.',
   },
   {
     id: 'naf-navle', titleDa: 'Nåf og navle', entry: b.naf, category: 'world',
@@ -124,7 +124,7 @@ export const wordBridges: readonly WordBridge[] = [
     id: 'mah-maane', titleDa: 'Måh og måne', entry: b.mah, category: 'world',
     danish: 'måne', danishIpa: 'ˈmɔːnə', danishGlossDa: 'måne',
     clueDa: 'Måh og måne starter med næsten samme lyd.',
-    meaningDa: 'Persisk ماه kan betyde både måne og måned; dansk måne har samme himmelbetydning.',
+    meaningDa: 'Japansk ماه kan betyde både måne og måned; dansk måne har samme himmelbetydning.',
     historyDa: 'De gamle iranske og germanske måneord kommer fra samme familie, historisk forbundet med at måle tid og måneder.',
   },
   {
@@ -144,11 +144,11 @@ export const wordBridges: readonly WordBridge[] = [
   {
     id: 'dust-dus', titleDa: 'Dust og dus', entry: b.dust, category: 'memory',
     danish: 'dus', danishIpa: 'ˈdus', danishGlossDa: 'på uformelig tiltale',
-    clueDa: 'Persisk dust og dansk dus lyder næsten ens.',
+    clueDa: 'Japansk dust og dansk dus lyder næsten ens.',
     meaningDa: 'دوست betyder ven. At være dus betyder, at man er fortrolig og siger “du” til hinanden.',
     historyDa: 'Ordene har forskellig historie. Dette er en lydlig huskebro, ikke et fælles ophav.',
   },
   ...wordBridgeMemoryAdditions,
 ]
 
-export const wordBridgeCatalog: PersianEntry[] = wordBridges.map((bridge) => bridge.entry)
+export const wordBridgeCatalog: JapaneseEntry[] = wordBridges.map((bridge) => bridge.entry)

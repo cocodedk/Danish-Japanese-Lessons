@@ -22,10 +22,10 @@ beforeEach(() => {
 describe('#/lesson/alphabet', () => {
   it('opens on orientation the first time, and teaches the right-to-left flip', () => {
     open('#/lesson/alphabet')
-    expect(screen.getByRole('heading', { name: 'Sådan virker persisk skrift' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Sådan virker japansk skrift' })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'Næste: læseretning' }))
     expect(
-      screen.getByRole('heading', { name: 'Persisk læses fra højre mod venstre' }),
+      screen.getByRole('heading', { name: 'Japansk læses fra højre mod venstre' }),
     ).toBeInTheDocument()
     // The turned Danish word, and the arrow that says which way to read it.
     expect(screen.getByText('DNAV')).toBeInTheDocument()
@@ -47,7 +47,7 @@ describe('#/lesson/alphabet', () => {
   it('lets a child return to the word workshop during first orientation', async () => {
     open('#/lesson/alphabet')
     fireEvent.click(screen.getByRole('link', { name: 'Til ordværkstedet' }))
-    expect(await screen.findByRole('heading', { name: 'Vælg et persisk ord' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Vælg et japansk ord' })).toBeInTheDocument()
     expect(getJourneyChoice()).toBe('words')
   })
 
@@ -75,7 +75,7 @@ describe('#/lesson/alphabet', () => {
     expect(screen.getByRole('heading', { name: 'Alfabetet' })).toBeInTheDocument()
 
     fireEvent.click(screen.getByRole('link', { name: 'Læs introduktionen igen' }))
-    expect(screen.getByRole('heading', { name: 'Sådan virker persisk skrift' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Sådan virker japansk skrift' })).toBeInTheDocument()
   })
 
   it('lists all 33 specimens and both exercises', () => {

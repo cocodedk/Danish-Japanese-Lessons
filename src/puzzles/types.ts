@@ -1,22 +1,22 @@
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 export type PuzzleKind = 'match' | 'order' | 'missing'
 
 export interface PuzzleTile {
   /** Unique even when two tiles carry the same letter. */
   id: string
-  entry: PersianEntry
+  entry: JapaneseEntry
   glyph: string
 }
 
 interface BaseTask {
   id: string
-  entry: PersianEntry
+  entry: JapaneseEntry
 }
 
 export interface MatchTask extends BaseTask {
   kind: 'match'
-  choices: PersianEntry[]
+  choices: JapaneseEntry[]
 }
 
 export interface OrderTask extends BaseTask {
@@ -27,7 +27,7 @@ export interface OrderTask extends BaseTask {
 export interface MissingTask extends BaseTask {
   kind: 'missing'
   missingAt: number
-  choices: PersianEntry[]
+  choices: JapaneseEntry[]
 }
 
 export type PuzzleTask = MatchTask | OrderTask | MissingTask

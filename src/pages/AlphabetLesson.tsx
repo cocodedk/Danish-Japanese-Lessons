@@ -8,7 +8,7 @@ import { getAlphabetProgress, doneCount, ALPHABET_TOTAL } from '../progress/alph
 import './alphabet.css'
 import './alphabetWide.css'
 import { DetailStrip } from '../components/EntryRenderers'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PuzzleBreakLink } from '../components/PuzzleBreakLink'
 import { alphabetGroups } from '../puzzles/catalog'
 import { completedPuzzles } from '../progress/puzzles'
@@ -41,7 +41,7 @@ export default function AlphabetLesson() {
       </p>
       <p className="alphabet__lead">
         32 bogstaver, tegnet{' '}
-        <PersianText entry={specimens['alef-madde'].entry} className="alphabet__lead-ja" /> og seks
+        <JapaneseText entry={specimens['alef-madde'].entry} className="alphabet__lead-ja" /> og seks
         vokaltegn. Rækkefølgen er anbefalet, men alt er åbent fra start.
       </p>
 
@@ -70,7 +70,7 @@ export default function AlphabetLesson() {
                         aria-pressed={selectedId === id}
                         onClick={() => setSelectedId(id)}
                       >
-                        <PersianText entry={specimen.entry} ariaHidden />
+                        <JapaneseText entry={specimen.entry} ariaHidden />
                       </button>
                     </li>
                   )

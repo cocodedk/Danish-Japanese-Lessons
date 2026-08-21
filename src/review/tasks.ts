@@ -1,7 +1,7 @@
 import { specimens, teachingOrder } from '../lessons/alphabet'
 import { arrange, buildQuestions, type Question } from '../lessons/exercises'
 import { connectedReadings, readingFunctionEntries } from '../lessons/connectedReading'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { buildVocabQuestions } from '../lessons/vocabExercises'
 import { vocabUnits } from '../lessons/vocab'
 import { vowelMarks } from '../lessons/vowelMarks'
@@ -18,7 +18,7 @@ export type ReviewTaskMode = 'due' | 'new' | 'transfer'
 export interface ReviewTask {
   mode: ReviewTaskMode
   question: Question
-  supportEntries?: PersianEntry[]
+  supportEntries?: JapaneseEntry[]
 }
 
 const alefRoleQuestion: Question = {

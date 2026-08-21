@@ -12,7 +12,7 @@ test('three-run mobile lab medians meet the production performance targets', asy
       localStorage.setItem('djl.v1.profile', profile)
       localStorage.setItem('djl.v1.alphabet', alphabet)
       const values = { cls: 0 }
-      Object.assign(window, { __dplVitals: values })
+      Object.assign(window, { __djlVitals: values })
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const shift = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number }
@@ -31,7 +31,7 @@ test('three-run mobile lab medians meet the production performance targets', asy
     const values = await page.evaluate(() => {
       const entries = performance.getEntriesByType('largest-contentful-paint')
       const lcp = entries.at(-1)?.startTime ?? performance.getEntriesByType('navigation')[0]?.duration ?? Infinity
-      const cls = (window as Window & { __dplVitals?: { cls: number } }).__dplVitals?.cls ?? Infinity
+      const cls = (window as Window & { __djlVitals?: { cls: number } }).__djlVitals?.cls ?? Infinity
       return { lcp, cls }
     })
     runs.push({ ...values, interaction })
@@ -85,7 +85,7 @@ test('the course home route loads no lesson photo bytes', async ({ page }) => {
 test('an old cached page opens the new release without a hard reload', async ({ page }) => {
   await page.route('**/version.js?check=*', (route) => route.fulfill({
     contentType: 'application/javascript',
-    body: 'window.__DPL_LATEST_VERSION__="new-release";',
+    body: 'window.__DJL_LATEST_VERSION__="new-release";',
   }))
 
   await page.goto('./#/ord-der-ligner')
@@ -98,7 +98,7 @@ test('a long-open tab refreshes the release when it regains focus', async ({ pag
   let latest = (process.env.GITHUB_SHA || '000000000000').slice(0, 12)
   await page.route('**/version.js?check=*', (route) => route.fulfill({
     contentType: 'application/javascript',
-    body: `window.__DPL_LATEST_VERSION__=${JSON.stringify(latest)};`,
+    body: `window.__DJL_LATEST_VERSION__=${JSON.stringify(latest)};`,
   }))
 
   await page.goto('./#/opdag/ord/ab')

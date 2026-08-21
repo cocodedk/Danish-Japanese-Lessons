@@ -3,9 +3,9 @@ import { Navigate, useParams } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { Celebration } from '../components/Celebration'
 import { ChallengeReveal } from '../components/EntryRenderers'
-import { LearnerPersianInput } from '../components/LearnerPersianInput'
+import { LearnerJapaneseInput } from '../components/LearnerJapaneseInput'
 import { LessonSheet, BarLink } from '../components/LessonSheet'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PronLine, formatPron } from '../components/PronLine'
 import { RetryActions } from '../components/RetryActions'
 import { RewardOverlays } from '../components/RewardOverlays'
@@ -21,12 +21,12 @@ import './puzzle.css'
 function MissingPrompt({ task }: { task: MissingTask }) {
   const shown = [...task.entry.ja]
   shown[task.missingAt] = '□'
-  return <PersianText entry={task.entry} display={shown.join('')} className="puzzle__word" />
+  return <JapaneseText entry={task.entry} display={shown.join('')} className="puzzle__word" />
 }
 
 function TaskPrompt({ task }: { task: PuzzleTask }) {
   if (task.kind === 'match') {
-    return <PersianText entry={task.entry} className="puzzle__word" />
+    return <JapaneseText entry={task.entry} className="puzzle__word" />
   }
   if (task.kind === 'missing') return <MissingPrompt task={task} />
   return (
@@ -145,7 +145,7 @@ export default function PuzzleScreen() {
               aria-pressed={selectedChoice === choice.id}
               onClick={() => answer(choice.ja === [...task.entry.ja][task.missingAt], choice.id)}
             >
-              <PersianText entry={choice} ariaHidden />
+              <JapaneseText entry={choice} ariaHidden />
               {selectedChoice === choice.id && (
                 <span className="puzzle__choice-state">{correct ? '✓ Rigtigt' : 'Valgt'}</span>
               )}
@@ -156,7 +156,7 @@ export default function PuzzleScreen() {
 
       {task.kind === 'order' && (
         <>
-          <LearnerPersianInput as="p" className="puzzle__assembled">{ordered}</LearnerPersianInput>
+          <LearnerJapaneseInput as="p" className="puzzle__assembled">{ordered}</LearnerJapaneseInput>
           <div className="puzzle__tiles" dir="rtl">
             {task.tiles.map((tile) => (
               <button
@@ -168,7 +168,7 @@ export default function PuzzleScreen() {
                   setSelected((items) => (items.includes(tile.id) ? items : [...items, tile.id]))
                 }
               >
-                <PersianText entry={tile.entry} display={tile.glyph} ariaHidden />
+                <JapaneseText entry={tile.entry} display={tile.glyph} ariaHidden />
               </button>
             ))}
           </div>

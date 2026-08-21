@@ -1,8 +1,8 @@
 import type { Tile } from '../name/bank'
 import { useState } from 'react'
 import { LETTERS_ENTRY } from '../name/copy'
-import type { PersianEntry } from '../catalog/types'
-import { PersianText } from './PersianText'
+import type { JapaneseEntry } from '../catalog/types'
+import { JapaneseText } from './JapaneseText'
 import { PersonalNameText } from './PersonalName'
 import { CompactPhraseRow, DetailStrip, letterLessonPath } from './EntryRenderers'
 import './LetterBank.css'
@@ -22,7 +22,7 @@ export interface LetterBankProps {
  * name — the same name the alphabet lesson taught it under.
  */
 export function LetterBank({ tiles, onPick, label, usedKeys = [] }: LetterBankProps) {
-  const [selected, setSelected] = useState<PersianEntry | null>(null)
+  const [selected, setSelected] = useState<JapaneseEntry | null>(null)
   return (
     <div className="letter-bank">
       <div className="letter-bank__label">
@@ -45,7 +45,7 @@ export function LetterBank({ tiles, onPick, label, usedKeys = [] }: LetterBankPr
                 aria-label={tile.nameDa}
               >
                 {tile.entry ? (
-                  <PersianText entry={tile.entry} display={tile.glyph} ariaHidden />
+                  <JapaneseText entry={tile.entry} display={tile.glyph} ariaHidden />
                 ) : (
                   <PersonalNameText spelling={tile.glyph} ariaHidden />
                 )}

@@ -6,7 +6,7 @@ import {
   nameGlyphs,
   DISTRACTOR_COUNT,
 } from './bank'
-import { findPersianTextViolations } from '../lessons/textRules'
+import { findJapaneseTextViolations } from '../lessons/textRules'
 
 describe('alphabetBank', () => {
   it('holds the whole alphabet, each tile named in Danish', () => {
@@ -19,7 +19,7 @@ describe('alphabetBank', () => {
 
   it('offers only Japanese code points to tap', () => {
     for (const tile of alphabetBank()) {
-      expect(findPersianTextViolations(tile.glyph), tile.nameDa).toEqual([])
+      expect(findJapaneseTextViolations(tile.glyph), tile.nameDa).toEqual([])
     }
   })
 })

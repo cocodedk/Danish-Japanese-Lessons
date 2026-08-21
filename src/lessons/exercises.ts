@@ -7,14 +7,14 @@
 import { letters, specimens, teachingOrder } from './alphabet'
 import { sameBodyAs } from './strokes'
 import type { Pron } from './types'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 export type ExerciseKind = 'find' | 'match'
 
 export interface Choice {
   /** The letter this choice belongs to. */
   id: string
-  entry: PersianEntry
+  entry: JapaneseEntry
   /** What is printed on the choice: a glyph, or one positional form of it. */
   glyph: string
 }
@@ -23,7 +23,7 @@ export interface Question {
   id: string
   /** The item a correct answer completes: a letter here, a word in plan 004. */
   itemId: string
-  entry: PersianEntry
+  entry: JapaneseEntry
   /** Danish prompt, du-form. */
   promptDa: string
   /** True when the question shows its Japanese specimen (rendered from `entry`);

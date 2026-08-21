@@ -5,7 +5,7 @@ import { InkConfetti } from './InkConfetti'
 import { PronLine } from './PronLine'
 import type { Reward } from '../rewards/types'
 import './Celebration.css'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { PersonalNameText, type PersonalName } from './PersonalName'
 
 export interface CelebrationProps {
@@ -34,7 +34,7 @@ export function Celebration({ reward, tickLabel = 'Rigtigt', personalName }: Cel
 
       <div className="celebration__praise">
         <ProgressTick granted label={tickLabel} />
-        <PersianText entry={shownPraise} className="celebration__fa" />
+        <JapaneseText entry={shownPraise} className="celebration__fa" />
         {personalName && (
           // RTL base so the «!» closes the name on its left, where a Japanese
           // sentence ends — same rule as SplitCard's greeting pane.
@@ -52,7 +52,7 @@ export function Celebration({ reward, tickLabel = 'Rigtigt', personalName }: Cel
 
       {reward?.wokeUp && (
         <div className="celebration__welcome">
-          <PersianText entry={WELCOME_BACK} className="celebration__fa" />
+          <JapaneseText entry={WELCOME_BACK} className="celebration__fa" />
           <PronLine {...WELCOME_BACK.pron} />
           <span lang="da">{WELCOME_BACK.da}</span>
         </div>

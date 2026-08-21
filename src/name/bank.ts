@@ -5,13 +5,13 @@
 // plays. See docs/plans/006-your-name.md steps 2 and 5.
 import { teachingOrder, specimens } from '../lessons/alphabet'
 import { nameLetters } from './forms'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 export interface Tile {
   /** Unique per tile, so the two ا of سارا are two tiles and not one. */
   key: string
   glyph: string
-  entry?: PersianEntry
+  entry?: JapaneseEntry
   /** The letter's Danish name — what the tap target says out loud. */
   nameDa: string
 }

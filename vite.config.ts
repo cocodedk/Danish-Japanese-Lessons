@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const appVersion = process.env.DPL_APP_VERSION
+const appVersion = process.env.DJL_APP_VERSION
   || (process.env.GITHUB_SHA || '000000000000').slice(0, 12)
 
 // The literal project path below is intentionally the one sanctioned place for
@@ -10,7 +10,7 @@ const appVersion = process.env.DPL_APP_VERSION
 export default defineConfig({
   base: '/Danish-Japanese-Lessons/app/',
   define: {
-    __DPL_APP_VERSION__: JSON.stringify(appVersion),
+    __DJL_APP_VERSION__: JSON.stringify(appVersion),
   },
   plugins: [
     react(),
@@ -20,7 +20,7 @@ export default defineConfig({
         this.emitFile({
           type: 'asset',
           fileName: 'version.js',
-          source: `window.__DPL_LATEST_VERSION__=${JSON.stringify(appVersion)};\n`,
+          source: `window.__DJL_LATEST_VERSION__=${JSON.stringify(appVersion)};\n`,
         })
       },
     },

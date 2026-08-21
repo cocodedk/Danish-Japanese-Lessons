@@ -5,7 +5,7 @@ import { interfaceCatalog } from './interface'
 import { namesCatalog } from './names'
 import { numberCatalog } from './numbers'
 import { rewardsCatalog } from './rewards'
-import type { PersianEntry } from './types'
+import type { JapaneseEntry } from './types'
 import { vocabularyCatalog } from './vocabulary'
 
 export const catalogDomains = {
@@ -17,6 +17,6 @@ export const catalogDomains = {
   interface: interfaceCatalog,
   names: namesCatalog,
   rewards: rewardsCatalog,
-} satisfies Record<string, PersianEntry[]>
+} satisfies Record<string, JapaneseEntry[]>
 
-export const persianCatalog: PersianEntry[] = Object.values(catalogDomains).flat()
+export const persianCatalog: JapaneseEntry[] = Object.values(catalogDomains).flat()

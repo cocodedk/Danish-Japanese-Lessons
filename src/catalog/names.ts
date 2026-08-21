@@ -1,4 +1,4 @@
 import { NAME_ENTRIES } from '../name/copy'
-import type { PersianEntry } from './types'
+import type { JapaneseEntry } from './types'
 
-export const namesCatalog: PersianEntry[] = NAME_ENTRIES
+export const namesCatalog: JapaneseEntry[] = NAME_ENTRIES

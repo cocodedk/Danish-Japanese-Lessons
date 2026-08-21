@@ -9,7 +9,7 @@ import './alphabet.css'
 import './alphabetWide.css'
 import './vocab.css'
 import { CompactPhraseRow, DetailStrip } from '../components/EntryRenderers'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PuzzleBreakLink } from '../components/PuzzleBreakLink'
 import { vocabularyGroups } from '../puzzles/catalog'
 import { completedPuzzles } from '../progress/puzzles'
@@ -78,7 +78,7 @@ export default function VocabUnitScreen() {
                         onClick={() => setSelectedId(word.id)}
                       >
                         <LessonImage entryId={word.entry.id} size="thumbnail" />
-                        <PersianText entry={word.entry} className="vocab__cell-ja" ariaHidden />
+                        <JapaneseText entry={word.entry} className="vocab__cell-ja" ariaHidden />
                         {word.swatch && <ColorSwatch color={word.swatch} />}
                         <span className="vocab__cell-da" lang="da" dir="ltr">{word.da}</span>
                       </button>

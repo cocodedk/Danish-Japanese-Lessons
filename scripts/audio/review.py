@@ -36,7 +36,7 @@ def build() -> None:
     cards = "".join(card(by_id[row["clipId"]], row) for row in reports if row["clipId"] in by_id)
     page = f"""<!doctype html>
 <html lang="da"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
-<title>Persisk lydreview</title>
+<title>Japansk lydreview</title>
 <style>
 body{{font:18px system-ui;max-width:58rem;margin:auto;padding:1rem;background:#f8f2e7;color:#17211d}}
 header{{position:sticky;top:0;background:#f8f2e7;padding:.5rem 0;border-bottom:2px solid #17211d}}
@@ -45,7 +45,7 @@ h2,p{{margin:0}} h2{{font-size:2.5rem}} audio{{width:100%}} label{{display:block
 input[type=text]{{font:inherit;width:min(30rem,100%)}} button{{font:inherit;padding:.65rem 1rem}}
 .meta,.metrics{{font-size:.85rem;color:#445}}
 </style>
-<header><h1>Persisk lydreview</h1>
+<header><h1>Japansk lydreview</h1>
 <label>Reviewer-id <input id="reviewer" required></label>
 <button id="download">Hent beslutninger</button></header>
 <main>{cards}</main>

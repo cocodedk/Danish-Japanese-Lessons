@@ -2,7 +2,7 @@ import { useState } from 'react'
 import type { ReviewTask } from '../review/tasks'
 import { Button } from './Button'
 import { FullTeachingCard } from './EntryRenderers'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import { useRevealInView } from './useRevealInView'
 
@@ -23,7 +23,7 @@ function MiniEntry({ task, answer }: { task: ReviewTask; answer: boolean }) {
   return (
     <article className="guided-model__comparison-card">
       <strong>{answer ? 'Det nye' : 'Sammenlign med'}</strong>
-      <PersianText entry={choice.entry} />
+      <JapaneseText entry={choice.entry} />
       <PronLine {...choice.entry.pron} />
       <span lang="da">{choice.entry.da}</span>
     </article>

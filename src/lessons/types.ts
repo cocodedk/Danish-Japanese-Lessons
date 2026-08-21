@@ -1,7 +1,7 @@
-// Shared lesson data shapes. PersianEntry is the canonical content contract;
+// Shared lesson data shapes. JapaneseEntry is the canonical content contract;
 // the scalar compatibility fields below are derived from it at declaration
 // time so existing route and exercise logic keeps its stable API.
-import type { PersianEntry, Pronunciation } from '../catalog/types'
+import type { JapaneseEntry, Pronunciation } from '../catalog/types'
 
 /**
  * How a teaching item is said, always twice: dansk lydskrift first, then IPA
@@ -22,9 +22,9 @@ export interface Stroke {
 export interface Specimen {
   /** Stable ascii id — used in routes (#/lesson/alphabet/bogstav/:id) and progress. */
   id: string
-  entry: PersianEntry
+  entry: JapaneseEntry
   /** A displayed Japanese letter name is a word with its own pronunciation. */
-  nameEntry: PersianEntry
+  nameEntry: JapaneseEntry
   glyph: string
   name: { ja: string; da: string }
   sound: Pron
@@ -63,8 +63,8 @@ export interface Letter extends Specimen {
 /** A vowel mark (زبر/زیر/پیش) or a long vowel (آ او ای). */
 export interface VowelMark {
   id: string
-  entry: PersianEntry
-  nameEntry: PersianEntry
+  entry: JapaneseEntry
+  nameEntry: JapaneseEntry
   glyph: string
   name: { ja: string; da: string }
   sound: Pron
@@ -72,7 +72,7 @@ export interface VowelMark {
 
 /** A Japanese/Danish word pair, as shown in the split-screen specimen. */
 export interface WordCard {
-  entry: PersianEntry
+  entry: JapaneseEntry
   ja: string
   /** The diacriticized variant to render instead of `ja`, if any. Whatever is
    *  rendered gets its vowel marks in --red — see src/lessons/marks.ts. */

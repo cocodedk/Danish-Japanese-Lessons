@@ -1,6 +1,6 @@
 import { nameLetters, OTHER_SIGN_DA } from '../name/forms'
 import { NO_OWN_SOUND } from '../lessons/marks'
-import { LearnerPersianInput } from './LearnerPersianInput'
+import { LearnerJapaneseInput } from './LearnerJapaneseInput'
 import { PronLine } from './PronLine'
 import { ReadingCueList } from './ReadingCues'
 import { personalReadingCues } from '../name/readingCues'
@@ -24,9 +24,9 @@ export interface PersonalNameTextProps {
  * through the learner-owned path. */
 export function PersonalNameText({ spelling, as, className, ariaHidden }: PersonalNameTextProps) {
   return (
-    <LearnerPersianInput as={as} className={className} ariaHidden={ariaHidden}>
+    <LearnerJapaneseInput as={as} className={className} ariaHidden={ariaHidden}>
       {spelling}
-    </LearnerPersianInput>
+    </LearnerJapaneseInput>
   )
 }
 
@@ -40,7 +40,7 @@ export function PersonalNameCompanion({
     <section
       className="personal-name"
       aria-label={
-        original ? `Dit navn ${original} med persiske bogstaver` : 'Dit navn med persiske bogstaver'
+        original ? `Dit navn ${original} med japanske bogstaver` : 'Dit navn med japanske bogstaver'
       }
     >
       <PersonalNameText

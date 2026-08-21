@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import type { Question } from '../lessons/exercises'
-import { FaSpecimen } from './FaSpecimen'
+import { JaSpecimen } from './JaSpecimen'
 import { PronLine } from './PronLine'
 import { RetryActions } from './RetryActions'
 import { Celebration } from './Celebration'
-import { TRY_AGAIN_ENTRY } from '../content/faStrings'
+import { TRY_AGAIN_ENTRY } from '../content/jaStrings'
 import type { Reward } from '../rewards/types'
 import { ChallengeReveal, CompactPhraseRow } from './EntryRenderers'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { useRoundOutcome } from './useRoundOutcome'
 import { useRevealInView } from './useRevealInView'
 import { useChallengeFocus } from './useChallengeFocus'
@@ -94,7 +94,7 @@ export function ChoiceExercise({
       </p>
 
       <h2 ref={promptRef} tabIndex={-1} className="choice-exercise__prompt">{question.promptDa}</h2>
-      {question.showsFa && <FaSpecimen entry={question.entry} />}
+      {question.showsFa && <JaSpecimen entry={question.entry} />}
       <PronLine {...question.entry.pron} />
 
       <ul className="choice-exercise__choices">
@@ -120,7 +120,7 @@ export function ChoiceExercise({
                 onClick={() => choose(choice.id)}
               >
                 {choiceLang === 'ja' ? (
-                  <PersianText entry={choice.entry} display={choice.glyph} />
+                  <JapaneseText entry={choice.entry} display={choice.glyph} />
                 ) : (
                   choice.glyph
                 )}

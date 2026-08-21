@@ -5,7 +5,7 @@ import { RewardOverlays } from '../components/RewardOverlays'
 import { findVocabUnit } from '../lessons/vocab'
 import { typeWordDone, payRound } from '../progress/typing'
 import { useCelebration } from '../rewards/useCelebration'
-import { TYPE_WORDS_ENTRY } from '../content/faStrings'
+import { TYPE_WORDS_ENTRY } from '../content/jaStrings'
 
 /**
  * «کلمه‌ها را بنویس» — one unit's words, written rather than recognized. The

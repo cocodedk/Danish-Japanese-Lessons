@@ -1,6 +1,6 @@
 // Orientation — "lektion 0". Four surprises, after the one that matters most:
 // Japanese runs right to left. Shown, not told (docs/plans/003 step 6).
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { defineEntry } from '../catalog/types'
 import { letters, specimens } from '../lessons/alphabet'
 import { allVocabWords } from '../lessons/vocab'
@@ -8,7 +8,7 @@ import { allVocabWords } from '../lessons/vocab'
 // Loud at module load: the orientation is the first screen a new learner
 // sees, so a renamed vocab id must fail the build (the test suite imports
 // this module), never white-screen the entry point.
-function word(id: string): PersianEntry {
+function word(id: string): JapaneseEntry {
   const found = allVocabWords.find((item) => item.id === id)?.entry
   if (!found) throw new Error(`orientation: vocab word '${id}' is missing`)
   return found
@@ -36,11 +36,11 @@ export const MIRROR_DEMO = {
 }
 
 export interface OrientationToken {
-  entry: PersianEntry
+  entry: JapaneseEntry
   /** A positional form derived from the parent letter. */
   form?: string
   /** Context inside this word; overrides the isolated letter companion. */
-  contextualPron?: PersianEntry['pron']
+  contextualPron?: JapaneseEntry['pron']
   contextualHelpDa?: string
 }
 
@@ -53,14 +53,14 @@ export interface OrientationPoint {
   /** The row of specimens, read right to left. */
   ja: OrientationToken[]
   /** What the row adds up to, when it adds up to something. */
-  result?: PersianEntry
+  result?: JapaneseEntry
 }
 
 export const ORIENTATION_POINTS: OrientationPoint[] = [
   {
     id: 'join',
     heading: 'Bogstaverne holder i hånd',
-    body: 'Fire bogstaver, ét ord. Persisk bindes sammen — næsten som når du selv skriver i hånden.',
+    body: 'Fire bogstaver, ét ord. Japansk bindes sammen — næsten som når du selv skriver i hånden.',
     ja: [
       { entry: letter('be') },
       { entry: letter('alef'), contextualPron: { da: 'å i “år”', ipa: 'ɒː' }, contextualHelpDa: 'lang vokal her' },
@@ -81,7 +81,7 @@ export const ORIENTATION_POINTS: OrientationPoint[] = [
   {
     id: 'no-capitals',
     heading: 'Ingen store bogstaver',
-    body: 'Persisk har hverken store eller små bogstaver. Et bynavn ser ud som ethvert andet ord.',
+    body: 'Japansk har hverken store eller små bogstaver. Et bynavn ser ud som ethvert andet ord.',
     ja: [{ entry: TEHRAN_ENTRY }],
   },
   {
@@ -92,4 +92,4 @@ export const ORIENTATION_POINTS: OrientationPoint[] = [
   },
 ]
 
-export const ORIENTATION_ENTRIES: PersianEntry[] = [TEHRAN_ENTRY]
+export const ORIENTATION_ENTRIES: JapaneseEntry[] = [TEHRAN_ENTRY]

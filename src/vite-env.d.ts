@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
-declare const __DPL_APP_VERSION__: string
+declare const __DJL_APP_VERSION__: string
 
 interface Window {
-  __DPL_LATEST_VERSION__?: string
+  __DJL_LATEST_VERSION__?: string
 }

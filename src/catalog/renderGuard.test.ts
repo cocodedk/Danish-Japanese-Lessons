@@ -5,11 +5,11 @@ import { describe, expect, it } from 'vitest'
 
 const SRC = join(process.cwd(), 'src')
 const APPROVED = new Set([
-  'components/FaSpecimen.tsx',
-  'components/PersianText.tsx',
+  'components/JaSpecimen.tsx',
+  'components/JapaneseText.tsx',
   'components/PersonalName.tsx',
   'components/ReadingCues.tsx',
-  'components/LearnerPersianInput.tsx',
+  'components/LearnerJapaneseInput.tsx',
 ])
 const JAPANESE = /[\u0600-\u06FF]/u
 

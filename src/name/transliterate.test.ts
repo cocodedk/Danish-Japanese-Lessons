@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { suggestSpellings } from './transliterate'
 import { ruleSpellings } from './rules'
 import { GUARD_FIXTURE_NAMES } from './guardFixtures'
-import { findPersianTextViolations } from '../lessons/textRules'
+import { findJapaneseTextViolations } from '../lessons/textRules'
 
 /** The golden table from docs/plans/006-your-name.md, Acceptance line 1. */
 const GOLDEN: Array<[string, string]> = [
@@ -134,7 +134,7 @@ describe('name transliteration', () => {
     for (const name of GUARD_FIXTURE_NAMES) {
       const suggestions = suggestSpellings(name)
       for (const suggestion of suggestions) {
-        expect(findPersianTextViolations(suggestion), `${name} → ${suggestion}`).toEqual([])
+        expect(findJapaneseTextViolations(suggestion), `${name} → ${suggestion}`).toEqual([])
         expect(suggestion, name).not.toMatch(LATIN)
         expect(suggestion.trim(), name).toBe(suggestion)
       }

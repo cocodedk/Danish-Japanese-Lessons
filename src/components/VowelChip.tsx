@@ -1,10 +1,10 @@
-import type { PersianEntry } from '../catalog/types'
-import { PersianText } from './PersianText'
+import type { JapaneseEntry } from '../catalog/types'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import './VowelChip.css'
 
 export interface VowelChipProps {
-  entry: PersianEntry
+  entry: JapaneseEntry
 }
 
 /**
@@ -15,7 +15,7 @@ export interface VowelChipProps {
 export function VowelChip({ entry }: VowelChipProps) {
   return (
     <div className="vowel-chip">
-      <PersianText entry={entry} marked as="p" className="vowel-chip__glyph" />
+      <JapaneseText entry={entry} marked as="p" className="vowel-chip__glyph" />
       <PronLine {...entry.pron} />
     </div>
   )

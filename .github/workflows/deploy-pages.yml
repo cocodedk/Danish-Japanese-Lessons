@@ -46,7 +46,7 @@ jobs:
       - name: Build the app
         run: npm run build
         env:
-          DPL_APP_VERSION: ${{ github.event_name == 'push' && steps.release.outputs.version || '' }}
+          DJL_APP_VERSION: ${{ github.event_name == 'push' && steps.release.outputs.version || '' }}
 
       - name: Compose the published site
         run: |

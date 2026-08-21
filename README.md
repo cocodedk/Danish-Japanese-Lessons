@@ -8,7 +8,7 @@ app runs in the browser, with nothing to install and no account to create.
 
 «آموزش گفتاری و نوشتاری فارسی برای دانمارکی‌زبان‌ها»
 
-Lær at tale persisk. Læs og skriv, når du vil.
+Lær at tale japansk. Læs og skriv, når du vil.
 
 ## Website
 

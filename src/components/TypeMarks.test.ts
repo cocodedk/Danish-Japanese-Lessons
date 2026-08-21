@@ -13,7 +13,7 @@ import {
   TYPE_MISSING_LETTER_ENTRY,
   TYPE_WRONG_LETTER_ENTRY,
   TYPE_EXTRA_LETTER_ENTRY,
-} from '../content/faStrings'
+} from '../content/jaStrings'
 
 describe('an ordinary letter', () => {
   it('uses one exact bilingual entry for each kind of difference', () => {

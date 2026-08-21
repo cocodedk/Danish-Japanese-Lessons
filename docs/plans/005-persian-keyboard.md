@@ -14,7 +14,7 @@ exercises for the vocab units, ending with the capstone: typing their own name.
 
 ## Steps
 
-1. **Keyboard component** `src/components/PersianKeyboard.tsx` (+ css): letters-only v1 — the 32
+1. **Keyboard component** `src/components/JapaneseKeyboard.tsx` (+ css): letters-only v1 — the 32
    letters + ZWNJ (نیم‌فاصله, labeled) + backspace. Alphabetical letter order, arranged in 3-4 rows
    that fit 360px with every key ≥44×44px
    in the bottom thumb zone. Key caps show the isolated glyph; `aria-label` = the letter's Danish
@@ -127,7 +127,7 @@ Three smaller items, adjudicated alongside:
    has a letterform. `Divergence` now carries a `cellKind` (`src/keyboard/diff.ts`), and the
    marking picks the honest line for each, in both languages (`src/components/TypeMarks.tsx`).
 6. The space and نیم‌فاصله keys named themselves to a screen reader only. Both now also carry a
-   small visible caption under the pen-stroke glyph (`src/components/PersianKeyboard.tsx`).
+   small visible caption under the pen-stroke glyph (`src/components/JapaneseKeyboard.tsx`).
 7. The writing line's `aria-live` and the marking's `role="status"` competed on every check. The
    line's `aria-live` is dropped; the marking is the one moment on this screen worth announcing.
 

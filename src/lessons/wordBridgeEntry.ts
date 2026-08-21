@@ -1,4 +1,4 @@
-import { defineEntry, type PersianEntry, type ReadingCue } from '../catalog/types'
+import { defineEntry, type JapaneseEntry, type ReadingCue } from '../catalog/types'
 import { specimens } from './alphabet'
 
 const byGlyph = new Map(Object.values(specimens).map((item) => [item.glyph, item]))
@@ -67,7 +67,7 @@ interface BridgeEntrySeed {
   readingCues: ReadingCue[]
 }
 
-export function bridgeEntry(seed: BridgeEntrySeed): PersianEntry {
+export function bridgeEntry(seed: BridgeEntrySeed): JapaneseEntry {
   return defineEntry({
     id: `word-bridge-${seed.id}`,
     kind: 'word',

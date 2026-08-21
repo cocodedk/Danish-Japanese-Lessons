@@ -43,7 +43,7 @@ base sound or a common job. A slash means that the letter often has both jobs.
    per the reviewed table (آ's hint lives with the alef-madde specimen the keyboard already sources).
    Test: all 33 keyboard letters have a non-empty hint; homophone groups share identical hints
    (derive the groups from `sound.ipa` equality and assert hint equality across each group).
-2. Keyboard: `PersianKeyboard.tsx` renders the hint span (aria-hidden, class `keyboard__hint`)
+2. Keyboard: `JapaneseKeyboard.tsx` renders the hint span (aria-hidden, class `keyboard__hint`)
    inside each letter key; CSS per the art direction. Layout re-verified headless at 360px both
    schemes: keys ≥44×44px, glyph + hint both fully visible, no overflow, no key height change
    that breaks the dock visibility numbers from plan 005 round 2.

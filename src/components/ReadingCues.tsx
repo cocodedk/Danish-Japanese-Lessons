@@ -1,4 +1,4 @@
-import type { PersianEntry, ReadingCue } from '../catalog/types'
+import type { JapaneseEntry, ReadingCue } from '../catalog/types'
 import { PronLine } from './PronLine'
 import './ReadingCues.css'
 
@@ -12,7 +12,7 @@ function CueHeading({ level }: { level: HeadingLevel }) {
   return <h4>Læs trin for trin</h4>
 }
 
-export function ReadingCues({ entry, headingLevel = 3 }: { entry: PersianEntry; headingLevel?: HeadingLevel }) {
+export function ReadingCues({ entry, headingLevel = 3 }: { entry: JapaneseEntry; headingLevel?: HeadingLevel }) {
   if (!entry.readingCues?.length) return null
   return <ReadingCueList cues={entry.readingCues} label={`Sådan læses ${entry.da}`} headingLevel={headingLevel} />
 }

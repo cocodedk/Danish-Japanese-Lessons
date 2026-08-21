@@ -1,4 +1,4 @@
 import { REWARD_ENTRIES } from '../rewards/copy'
-import type { PersianEntry } from './types'
+import type { JapaneseEntry } from './types'
 
-export const rewardsCatalog: PersianEntry[] = REWARD_ENTRIES
+export const rewardsCatalog: JapaneseEntry[] = REWARD_ENTRIES

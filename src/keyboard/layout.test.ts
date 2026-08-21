@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { KEYBOARD_ROWS, KEYBOARD_KEYS, canType } from './layout'
 import { ZWNJ, SPACE } from './buffer'
 import { letters, specimens } from '../lessons/alphabet'
-import { findPersianTextViolations } from '../lessons/textRules'
+import { findJapaneseTextViolations } from '../lessons/textRules'
 import { allVocabWords } from '../lessons/vocab'
 
 const ids = KEYBOARD_KEYS.map((key) => key.id)
@@ -81,13 +81,13 @@ describe('the key map', () => {
 
   it('writes Japanese code points only — no Arabic ك or ي on any key', () => {
     for (const key of KEYBOARD_KEYS) {
-      expect(findPersianTextViolations(key.glyph), key.id).toEqual([])
+      expect(findJapaneseTextViolations(key.glyph), key.id).toEqual([])
     }
   })
 })
 
 describe('how the board is drawn', () => {
-  const keyboardCss = stylesheets['../components/PersianKeyboard.css']
+  const keyboardCss = stylesheets['../components/JapaneseKeyboard.css']
   const typeCss = stylesheets['../components/TypeExercise.css']
 
   it('gives every key the 44px floor in both directions, in a six-column grid', () => {

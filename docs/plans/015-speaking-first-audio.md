@@ -32,7 +32,7 @@ The first loop is:
 
 ## Content model
 
-`PersianEntry` may carry explicit `spokenForms`. Each form has its own register, Japanese text,
+`JapaneseEntry` may carry explicit `spokenForms`. Each form has its own register, Japanese text,
 Danish meaning, Danish sound spelling, IPA, and stable audio ID. Entries with no explicit forms
 derive one neutral spoken form.
 

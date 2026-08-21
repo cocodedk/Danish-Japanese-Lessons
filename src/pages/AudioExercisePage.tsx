@@ -4,7 +4,7 @@ import { findPronunciationAudio } from '../audio/manifest'
 import { audioReviewRows } from '../audio/review'
 import { AudioControl } from '../components/AudioControl'
 import { BarLink, LessonSheet } from '../components/LessonSheet'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PronLine } from '../components/PronLine'
 import { talkAudioReady } from '../speaking/lessons'
 import './AudioReviewPage.css'
@@ -97,7 +97,7 @@ export default function AudioExercisePage() {
   return (
     <LessonSheet
       className="lesson--audio-review lesson--audio-exercise"
-      title="Øv persisk lyd"
+      title="Øv japansk lyd"
       bar={<BarLink to="/tal">Til talelektioner</BarLink>}
     >
       <section className="audio-review__guide" aria-labelledby="audio-exercise-guide">
@@ -137,7 +137,7 @@ export default function AudioExercisePage() {
             <article className="audio-review__card" key={row.clipId}>
               <p className="audio-review__number">{domainNames[row.domain] ?? row.domain}</p>
               <h2>
-                <PersianText
+                <JapaneseText
                   entry={{
                     id: row.entryId,
                     kind: 'phrase',

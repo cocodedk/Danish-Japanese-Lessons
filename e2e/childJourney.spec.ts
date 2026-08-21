@@ -3,12 +3,12 @@ import AxeBuilder from '@axe-core/playwright'
 
 async function openFresh(page: Page) {
   await page.goto('./#/')
-  await expect(page.getByRole('heading', { name: 'Lær at tale persisk' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Lær at tale japansk' })).toBeVisible()
 }
 
 async function openWater(page: Page) {
   await page.getByRole('link', { name: 'Ord', exact: true }).click()
-  await expect(page).toHaveTitle('Ordværksted · Lær persisk skrift')
+  await expect(page).toHaveTitle('Ordværksted · Lær japansk skrift')
   await page.getByRole('link', { name: 'Vælg vand' }).click()
   await expect(page).toHaveTitle('vand · Ordværksted')
 }
@@ -27,7 +27,7 @@ async function completeWater(page: Page) {
 test('fresh child journey collects a word, returns, and switches both ways', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await openFresh(page)
-  await expect(page).toHaveTitle('Lær at tale persisk · Lær persisk')
+  await expect(page).toHaveTitle('Lær at tale japansk · Lær japansk')
   await openWater(page)
   await completeWater(page)
   await page.getByRole('link', { name: 'Færdig for nu' }).click()
@@ -37,21 +37,21 @@ test('fresh child journey collects a word, returns, and switches both ways', asy
   await expect(page.getByRole('heading', { name: 'Ord, der ligner' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Ordbroer' })).toHaveAttribute('aria-current', 'page')
   await page.getByRole('link', { name: 'Til ordværkstedet' }).click()
-  await expect(page.getByRole('heading', { name: 'Vælg et persisk ord' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
 
   await page.goto('./#/')
-  await expect(page.getByRole('heading', { name: 'Vælg et persisk ord' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
   await page.getByRole('link', { name: 'Skrift' }).click()
-  await expect(page.getByRole('heading', { name: 'Sådan virker persisk skrift' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Sådan virker japansk skrift' })).toBeVisible()
   await page.getByRole('link', { name: 'Til ordværkstedet' }).click()
-  await expect(page.getByRole('heading', { name: 'Vælg et persisk ord' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
 })
 
 test('fresh gate and workshop have no automatic axe violations', async ({ page }) => {
   await openFresh(page)
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([])
   await page.getByRole('link', { name: 'Ord', exact: true }).click()
-  await expect(page.getByRole('heading', { name: 'Vælg et persisk ord' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([])
   await page.getByRole('link', { name: 'Vælg vand' }).click()
   await expect(page.getByRole('heading', { name: 'vand' })).toBeVisible()
@@ -66,7 +66,7 @@ test('word building is keyboard operable, recoverable, and bounded at 320px', as
   expect((primaryBox?.y ?? 640) + (primaryBox?.height ?? 0)).toBeLessThanOrEqual(640)
   await primary.focus()
   await page.keyboard.press('Enter')
-  await expect(page.getByRole('heading', { name: 'Øv persisk lyd' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Øv japansk lyd' })).toBeVisible()
   await page.getByRole('link', { name: 'Ord', exact: true }).click()
   await page.getByRole('link', { name: 'Vælg vand' }).click()
   await page.getByRole('button', { name: 'Byg ordet' }).click()

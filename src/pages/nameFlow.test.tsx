@@ -5,7 +5,7 @@ import { getProfile } from '../progress/profile'
 import { teachingOrder, specimens } from '../lessons/alphabet'
 import { markOrientationSeen } from '../progress/alphabet'
 import { completeAlphabet } from './typingHarness'
-import { NAME_LETTER_ENTRY } from '../content/faStrings'
+import { NAME_LETTER_ENTRY } from '../content/jaStrings'
 
 let open: (hash: string) => void
 let unmountLast: (() => void) | null = null
@@ -51,7 +51,7 @@ describe('the learner’s name, capture to lesson', () => {
     fireEvent.click(screen.getByText('Gem'))
 
     // Straight on to the spelling, with the engine's best already picked.
-    expect(screen.getByRole('heading', { name: 'Dit navn på persisk' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Dit navn på japansk' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: spelling })).toHaveAttribute('aria-pressed', 'true')
     fireEvent.click(screen.getByText('Gem stavemåden'))
     expect(getProfile()).toEqual({ name, faSpelling: spelling })

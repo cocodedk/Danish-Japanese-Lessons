@@ -1,7 +1,7 @@
 import { Navigate, useNavigate } from 'react-router-dom'
 import { RuledSection } from '../components/RuledSection'
 import { LessonImage } from '../components/LessonImage'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { Button } from '../components/Button'
 import { childMissions } from '../child/missions'
 import { getJourneyChoice, hasCourseHistory, setJourneyChoice } from '../progress/journey'
@@ -32,18 +32,18 @@ export default function JourneyGate() {
       <RuledSection>
         <div className="journey-gate__layout">
           <header className="journey-gate__intro">
-            <p className="journey-gate__eyebrow">Dansk og persisk i samme notesbog</p>
-            <h1>Persisk på din måde</h1>
+            <p className="journey-gate__eyebrow">Dansk og japansk i samme notesbog</p>
+            <h1>Japansk på din måde</h1>
             <p>Begynd med noget, du kan lave med det samme.</p>
           </header>
 
-          <section className="journey-gate__invitation" aria-label="Første persiske ord">
+          <section className="journey-gate__invitation" aria-label="Første japanske ord">
             {firstMission.imageEntryId && <LessonImage entryId={firstMission.imageEntryId} eager />}
             <div className="journey-gate__word">
-              <PersianText entry={firstMission.word.entry} marked />
+              <JapaneseText entry={firstMission.word.entry} marked />
               <span>{firstMission.word.da}</span>
             </div>
-            <Button onClick={() => choose('words')}>Lav et persisk ord</Button>
+            <Button onClick={() => choose('words')}>Lav et japansk ord</Button>
           </section>
 
           <section className="journey-gate__course" aria-label="Hele kurset">

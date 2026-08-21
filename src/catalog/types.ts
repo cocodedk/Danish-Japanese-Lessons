@@ -39,7 +39,7 @@ export interface ReadingCue {
   pron?: Pronunciation
 }
 
-export interface PersianEntry {
+export interface JapaneseEntry {
   /** Stable, globally unique id. Route ids may stay shorter and live beside it. */
   id: string
   kind: 'letter' | 'mark' | 'word' | 'phrase' | 'symbol'
@@ -61,7 +61,7 @@ export interface PersianEntry {
   spokenForms?: readonly SpokenForm[]
 }
 
-export function spokenFormsFor(entry: PersianEntry): readonly SpokenForm[] {
+export function spokenFormsFor(entry: JapaneseEntry): readonly SpokenForm[] {
   if (entry.audioNotApplicable) return []
   if (entry.spokenForms?.length) return entry.spokenForms
   return [{
@@ -76,7 +76,7 @@ export function spokenFormsFor(entry: PersianEntry): readonly SpokenForm[] {
 }
 
 /** Keeps catalog declarations narrow without adding a runtime dependency. */
-export function defineEntry<T extends PersianEntry>(entry: T): Readonly<T & { audioId?: string; readingCues?: ReadingCue[] }> {
+export function defineEntry<T extends JapaneseEntry>(entry: T): Readonly<T & { audioId?: string; readingCues?: ReadingCue[] }> {
   const readingCues = entry.readingCues ?? (
     entry.kind === 'word' || entry.kind === 'phrase'
       ? [{

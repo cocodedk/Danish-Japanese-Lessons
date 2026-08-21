@@ -7,10 +7,10 @@ Status: normative interaction and state contract for
 
 | Route | H1 | Document title | Primary action |
 |---|---|---|---|
-| `/` without choice | `Persisk på din måde` | `Vælg din vej · Lær persisk skrift` | `Lav et persisk ord` |
-| `/opdag` | `Vælg et persisk ord` | `Ordværksted · Lær persisk skrift` | Open one word mission |
+| `/` without choice | `Japansk på din måde` | `Vælg din vej · Lær japansk skrift` | `Lav et japansk ord` |
+| `/opdag` | `Vælg et japansk ord` | `Ordværksted · Lær japansk skrift` | Open one word mission |
 | `/opdag/ord/:id` | Current Danish word | `<word> · Ordværksted` | Current model/build/retry action |
-| `/kursus` | Existing `Lær persisk skrift` | Existing course title contract | Existing Continue action |
+| `/kursus` | Existing `Lær japansk skrift` | Existing course title contract | Existing Continue action |
 
 `/` with a saved choice MUST replace-navigate to that journey. An unknown mission ID MUST
 replace-navigate to `/opdag`. Direct lesson URLs MUST remain open.

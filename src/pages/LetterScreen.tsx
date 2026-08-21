@@ -12,7 +12,7 @@ import { teachingOrder, specimens, isLetter } from '../lessons/alphabet'
 import { getAlphabetProgress, markLetterDone } from '../progress/alphabet'
 import { getProfile } from '../progress/profile'
 import { useCelebration } from '../rewards/useCelebration'
-import { NAME_LETTER_ENTRY } from '../content/faStrings'
+import { NAME_LETTER_ENTRY } from '../content/jaStrings'
 import './alphabet.css'
 import './alphabetWide.css'
 

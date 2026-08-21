@@ -92,7 +92,7 @@ export default function Home() {
       <RuledSection>
         <header className="home__masthead">
           <div className="home__identity">
-            <h1 className="home__title">Lær persisk skrift</h1>
+            <h1 className="home__title">Lær japansk skrift</h1>
           </div>
           <Link className="home__continue" to={nextStep.to}>
             <span className="home__continue-label">Fortsæt</span>
@@ -101,7 +101,7 @@ export default function Home() {
           </Link>
         </header>
         <div className="home__workspace">
-          <section className="home__hero" aria-label="Dagens persiske eksempel">
+          <section className="home__hero" aria-label="Dagens japanske eksempel">
             <SplitCard
               word={DEMO_WORD}
               greetingEntry={profile.faSpelling ? GREETING_WITH_NAME_ENTRY : GREETING_ENTRY}
@@ -143,7 +143,7 @@ export default function Home() {
                 <LessonCard
                   number={2}
                   title="Dit navn"
-                  summary="Læs og skriv dit eget navn med persiske bogstaver"
+                  summary="Læs og skriv dit eget navn med japanske bogstaver"
                   progress={isNameLessonDone() ? 'Klaret' : 'Klar, når du er'}
                   to="/lesson/navn"
                 />

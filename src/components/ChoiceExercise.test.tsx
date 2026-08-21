@@ -117,7 +117,7 @@ describe('ChoiceExercise', () => {
   })
 
   it('stacks a below-only mark too, never falling back to the single-layer pen class', () => {
-    // کِتاب carries only a زیر under the ک. FaSpecimen stacks any word whose
+    // کِتاب carries only a زیر under the ک. JaSpecimen stacks any word whose
     // jaMarked is ja plus اِعراب, regardless of which side the marks sit on —
     // so this specimen must never carry a `pen-mark--*` class anywhere.
     const { container } = render(

@@ -1,11 +1,11 @@
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 export type WordBridgeCategory = 'family' | 'everyday' | 'numbers' | 'world' | 'memory'
 
 export interface WordBridge {
   id: string
   titleDa: string
-  entry: PersianEntry
+  entry: JapaneseEntry
   danish: string
   danishIpa?: string
   danishGlossDa: string

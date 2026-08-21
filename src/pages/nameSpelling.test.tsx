@@ -125,12 +125,12 @@ describe('#/dit-navn — choosing how the name is spelled', () => {
     setProfile({ name: 'Sara' })
     open('#/')
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
-    expect(screen.getByRole('link', { name: 'Skriv navnet på persisk' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Skriv navnet på japansk' })).toBeInTheDocument()
 
     setProfile({ name: 'Sara', faSpelling: 'سارا' })
     open('#/')
     fireEvent.click(screen.getByRole('button', { name: 'Indstillinger for Sara' }))
-    const link = screen.getByRole('link', { name: 'Ret navnet på persisk' })
+    const link = screen.getByRole('link', { name: 'Ret navnet på japansk' })
     expect(link).toHaveAttribute('href', '#/dit-navn')
   })
 

@@ -20,7 +20,7 @@ interface Pronunciation {
   ipa: string
 }
 
-interface PersianEntry {
+interface JapaneseEntry {
   id: string
   kind: 'letter' | 'mark' | 'word' | 'phrase' | 'symbol'
   ja: string

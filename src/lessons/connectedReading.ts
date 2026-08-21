@@ -1,4 +1,4 @@
-import { defineEntry, type PersianEntry, type ReadingCue } from '../catalog/types'
+import { defineEntry, type JapaneseEntry, type ReadingCue } from '../catalog/types'
 import { allVocabWords } from './vocab'
 
 export interface ReadingQuestion {
@@ -12,7 +12,7 @@ export interface ConnectedReading {
   unitId: string
   kind: 'phrase' | 'microtext'
   groupIndex?: number
-  entry: PersianEntry
+  entry: JapaneseEntry
   introducedEntryIds: string[]
   taughtEntryIds: string[]
   question: ReadingQuestion
@@ -51,9 +51,9 @@ export const EZAFE = defineEntry({
   readingCues: [{ start: 0, end: 2, display: 'ـِ', role: 'written-vowel', helpDa: 'Ezafe binder det første ord til det næste', pron: { da: 'e i “let”', ipa: 'e' } }],
 })
 
-const entryById = new Map<string, PersianEntry>([
-  ...allVocabWords.map((word): [string, PersianEntry] => [word.entry.id, word.entry]),
-  ...[CONNECTOR_O, COPULA_AST, EZAFE].map((entry): [string, PersianEntry] => [entry.id, entry]),
+const entryById = new Map<string, JapaneseEntry>([
+  ...allVocabWords.map((word): [string, JapaneseEntry] => [word.entry.id, word.entry]),
+  ...[CONNECTOR_O, COPULA_AST, EZAFE].map((entry): [string, JapaneseEntry] => [entry.id, entry]),
 ])
 
 function readingCuesFor(
@@ -61,7 +61,7 @@ function readingCuesFor(
   sourceIds: string[],
   ezafeAfter: string[] = [],
 ): ReadingCue[] {
-  const sources = sourceIds.map((id) => entryById.get(id)).filter((entry): entry is PersianEntry => Boolean(entry))
+  const sources = sourceIds.map((id) => entryById.get(id)).filter((entry): entry is JapaneseEntry => Boolean(entry))
   const chars = [...ja]
   const cues: ReadingCue[] = []
   for (let start = 0; start < chars.length;) {

@@ -2,7 +2,7 @@
 // Short vowels are written above or below the line; long vowels are whole
 // letters. Danish anchors per CLAUDE.md "Curriculum" — never improvised in JSX.
 import type { VowelMark } from './types'
-import { defineEntry, type PersianEntry } from '../catalog/types'
+import { defineEntry, type JapaneseEntry } from '../catalog/types'
 import { NO_OWN_SOUND, withoutMarks } from './marks'
 
 type MarkRow = [string, string, string, string, string, string, string]
@@ -46,8 +46,8 @@ export const vowelMarks: VowelMark[] = [
 /** A mark that changes how a word is read but carries no vowel of its own. */
 export interface LaterMark {
   id: string
-  entry: PersianEntry
-  nameEntry: PersianEntry
+  entry: JapaneseEntry
+  nameEntry: JapaneseEntry
   /** What it does, in one Danish line. */
   hint: string
 }

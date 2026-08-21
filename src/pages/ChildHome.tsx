@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { childMissions } from '../child/missions'
 import { RuledSection } from '../components/RuledSection'
 import { lessonImageForEntry, lessonImageUrl } from '../images/catalog'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { CompactPhraseRow } from '../components/EntryRenderers'
 import { LessonImage } from '../components/LessonImage'
 import { PronLine } from '../components/PronLine'
@@ -61,7 +61,7 @@ function MissionGrid({
               <CardImage entryId={mission.imageEntryId} />
             )}
             <div className="child-mission-card__label">
-              <PersianText entry={mission.word.entry} marked />
+              <JapaneseText entry={mission.word.entry} marked />
               <strong>{mission.word.da}</strong>
               <PronLine id={`mission-pron-${mission.id}`} {...mission.word.pron} />
               <span>{collectedWord ? 'I din samling' : 'Byg ordet'}</span>
@@ -85,7 +85,7 @@ export default function ChildHome() {
         <header className="child-header">
           <div>
             <p className="child-eyebrow">Ordværksted</p>
-            <h1>Vælg et persisk ord</h1>
+            <h1>Vælg et japansk ord</h1>
           </div>
         </header>
         <section aria-label="Startord du kan vælge">
@@ -125,7 +125,7 @@ export default function ChildHome() {
               ))}
             </span>
             <span>
-              <PersianText entry={colorUnit.titleEntry} />
+              <JapaneseText entry={colorUnit.titleEntry} />
               <strong>Lær otte farver</strong>
             </span>
           </Link>
@@ -135,7 +135,7 @@ export default function ChildHome() {
           <h2 id="child-animals-title">Dyr</h2>
           <Link className="child-animals__lesson" to="/lesson/ord/5">
             <div className="child-animals__title">
-              <PersianText entry={animalUnit.titleEntry} />
+              <JapaneseText entry={animalUnit.titleEntry} />
               <PronLine {...animalUnit.titleEntry.pron} />
             </div>
             <div className="child-animals__photos">
@@ -152,7 +152,7 @@ export default function ChildHome() {
           <ol>
             {beginnerNumbers.map(({ value, digit, word }) => (
               <li key={value}>
-                <PersianText entry={digit} className="child-number__digit" />
+                <JapaneseText entry={digit} className="child-number__digit" />
                 <CompactPhraseRow entry={word} marked />
               </li>
             ))}
@@ -160,7 +160,7 @@ export default function ChildHome() {
         </section>
 
         <section className="child-collection" aria-labelledby="child-collection-title">
-          <h2 id="child-collection-title">Mine persiske ord</h2>
+          <h2 id="child-collection-title">Mine japanske ord</h2>
           {collected.length === 0 ? (
             <p>Dit første ord venter ovenfor.</p>
           ) : (

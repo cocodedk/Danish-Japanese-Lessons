@@ -1,10 +1,10 @@
 import { defineEntry } from '../catalog/types'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 
 export interface BeginnerNumber {
   value: number
-  digit: PersianEntry
-  word: PersianEntry
+  digit: JapaneseEntry
+  word: JapaneseEntry
 }
 
 type NumberRow = [string, string, string, string, string, string]

@@ -38,8 +38,8 @@ export function startVersionCheck(options: VersionCheckOptions = {}): HTMLScript
   const doc = options.document ?? document
   const pageUrl = options.pageUrl ?? window.location.href
   const baseUrl = options.baseUrl ?? import.meta.env.BASE_URL
-  const currentVersion = options.currentVersion ?? __DPL_APP_VERSION__
-  const readLatestVersion = options.readLatestVersion ?? (() => window.__DPL_LATEST_VERSION__)
+  const currentVersion = options.currentVersion ?? __DJL_APP_VERSION__
+  const readLatestVersion = options.readLatestVersion ?? (() => window.__DJL_LATEST_VERSION__)
   const replace = options.replace ?? ((url: string) => window.location.replace(url))
   const now = options.now ?? Date.now
 

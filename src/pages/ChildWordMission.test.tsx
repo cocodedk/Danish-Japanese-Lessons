@@ -10,7 +10,7 @@ function renderMission(path = '/opdag/ord/ab') {
     <MemoryRouter initialEntries={[path]}>
       <Routes>
         <Route path="/opdag/ord/:id" element={<ChildWordMission />} />
-        <Route path="/opdag" element={<h1>Vælg et persisk ord</h1>} />
+        <Route path="/opdag" element={<h1>Vælg et japansk ord</h1>} />
       </Routes>
     </MemoryRouter>,
   )
@@ -89,6 +89,6 @@ describe('ChildWordMission', () => {
 
   it('returns an unknown mission to the workshop', () => {
     renderMission('/opdag/ord/unknown')
-    expect(screen.getByRole('heading', { name: 'Vælg et persisk ord' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeInTheDocument()
   })
 })

@@ -26,7 +26,7 @@ export default function WordBridgesScreen() {
       <header className="word-bridges__intro">
         <p className="word-bridges__eyebrow">{wordBridges.length} ordbroer</p>
         <p className="word-bridges__lead">
-          Persisk og dansk gemmer på ord fra samme gamle familie.
+          Japansk og dansk gemmer på ord fra samme gamle familie.
           Kan du finde lydene, der stadig ligner hinanden?
         </p>
         <p className="word-bridges__note">

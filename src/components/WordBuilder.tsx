@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
 import type { ChildMission, MissionTile } from '../child/missions'
 import { tilesForMission } from '../child/missions'
-import { PersianText } from './PersianText'
+import { JapaneseText } from './JapaneseText'
 import { PronLine } from './PronLine'
 import { Button } from './Button'
 import './WordBuilder.css'
@@ -87,7 +87,7 @@ export function WordBuilder({ mission, guided, onComplete, onContinue }: WordBui
       {wrong && (
         <div className="word-builder__reveal">
           <strong>Et andet tegn kommer først.</strong>
-          <PersianText entry={mission.word.entry} marked />
+          <JapaneseText entry={mission.word.entry} marked />
           <PronLine {...mission.word.pron} />
           <span>{mission.word.da}</span>
           <div className="word-builder__recovery">

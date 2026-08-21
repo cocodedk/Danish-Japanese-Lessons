@@ -36,7 +36,7 @@ describe('speaking-first pages', () => {
         <Routes><Route path="/tal" element={<SpeakingHome />} /></Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByRole('heading', { name: 'Lær at tale persisk' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
     expect(screen.getAllByText(/korte sider/)).toHaveLength(7)
     expect(screen.getByText('Hør. Sig det. Hør dig selv.')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Øv alle lyde/ })).toHaveAttribute('href', '/lydovelse')
@@ -48,7 +48,7 @@ describe('speaking-first pages', () => {
         <Routes><Route path="/tal/:lesson/:page" element={<SpeakingPage />} /></Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByRole('heading', { name: 'Hils på persisk' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Hils på japansk' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Hør سلام' })).toHaveTextContent('Hør')
     expect(screen.getByRole('button', { name: 'Optag mig' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Jeg har sagt det' })).toBeInTheDocument()

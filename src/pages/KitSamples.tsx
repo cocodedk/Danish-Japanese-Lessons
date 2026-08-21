@@ -4,7 +4,7 @@ import { RuleDivider } from '../components/RuleDivider'
 import { Button } from '../components/Button'
 import { VowelChip } from '../components/VowelChip'
 import { ProgressTick } from '../components/ProgressTick'
-import { FaSpecimen } from '../components/FaSpecimen'
+import { JaSpecimen } from '../components/JaSpecimen'
 import { PronLine } from '../components/PronLine'
 import { DaWord } from '../components/DaWord'
 import { DEMO_WORD } from '../content/demoWord'
@@ -34,8 +34,8 @@ export function KitSamples({ dir }: { dir: 'ltr' | 'rtl' }) {
         </RuledSection>
       </Sample>
 
-      <Sample label="FaSpecimen · PronLine · RuleDivider · DaWord">
-        <FaSpecimen entry={DEMO_WORD.entry} />
+      <Sample label="JaSpecimen · PronLine · RuleDivider · DaWord">
+        <JaSpecimen entry={DEMO_WORD.entry} />
         <PronLine {...DEMO_WORD.pron} />
         <RuleDivider />
         <DaWord>{DEMO_WORD.da}</DaWord>

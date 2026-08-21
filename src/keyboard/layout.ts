@@ -8,8 +8,8 @@
 // come from the alphabet data, which is the single source (CLAUDE.md).
 import { specimens } from '../lessons/alphabet'
 import { ZWNJ, SPACE, type KeyKind } from './buffer'
-import type { PersianEntry } from '../catalog/types'
-import { ZWNJ_NAME_ENTRY } from '../content/faStrings'
+import type { JapaneseEntry } from '../catalog/types'
+import { ZWNJ_NAME_ENTRY } from '../content/jaStrings'
 
 export interface KeyDef {
   /** A letter id from the alphabet data, or one of the three sign keys. */
@@ -22,7 +22,7 @@ export interface KeyDef {
   /** The Danish sound hint shown under a letter key's glyph. Absent for the
    *  three sign keys, which keep their own caption instead. */
   hint?: string
-  entry?: PersianEntry
+  entry?: JapaneseEntry
 }
 
 /**

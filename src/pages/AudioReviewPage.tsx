@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { AudioControl } from '../components/AudioControl'
 import { BarLink, LessonSheet } from '../components/LessonSheet'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PronLine } from '../components/PronLine'
 import { audioReviewRows } from '../audio/review'
 import { findPronunciationAudio } from '../audio/manifest'
@@ -129,7 +129,7 @@ export default function AudioReviewPage() {
 
     try {
       if (navigator.share && navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ title: 'Svar om persisk lyd', files: [file] })
+        await navigator.share({ title: 'Svar om japansk lyd', files: [file] })
         setMessage('Svarene er sendt.')
         return
       }
@@ -148,7 +148,7 @@ export default function AudioReviewPage() {
   return (
     <LessonSheet
       className="lesson--audio-review"
-      title="Tjek persisk lyd"
+      title="Tjek japansk lyd"
       bar={(
         <>
           <BarLink to="/">Til forsiden</BarLink>
@@ -164,7 +164,7 @@ export default function AudioReviewPage() {
       ) : (
         <section className="audio-review__warning" aria-label="Vigtig besked">
           <strong>Ikke klar til elever</strong>
-          <p>Disse lyde er lavet af en maskine. De skal tjekkes af en persisk taler.</p>
+          <p>Disse lyde er lavet af en maskine. De skal tjekkes af en japansk taler.</p>
         </section>
       )}
 
@@ -220,7 +220,7 @@ export default function AudioReviewPage() {
             <article className="audio-review__card" key={row.clipId} id={row.clipId}>
               <p className="audio-review__number">{index + 1} · {domainNames[row.domain] ?? row.domain}</p>
               <h2>
-                <PersianText
+                <JapaneseText
                   entry={{
                     id: row.entryId,
                     kind: 'phrase',

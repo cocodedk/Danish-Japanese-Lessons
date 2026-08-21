@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
-import { isValidPersianText, findPersianTextViolations } from './textRules'
+import { isValidJapaneseText, findJapaneseTextViolations } from './textRules'
 import { lessons } from './registry'
-import { PERSIAN_UI_STRINGS } from '../content/faStrings'
+import { JAPANESE_UI_STRINGS } from '../content/jaStrings'
 import { ORIENTATION_POINTS } from '../content/orientation'
 import { NAME_OVERRIDE_FA_STRINGS } from '../name/overrides'
 import { GUARD_FIXTURE_NAMES } from '../name/guardFixtures'
@@ -24,7 +24,7 @@ const JAPANESE = /[\u0600-\u06FF]/
  * står uden prikker»), a sound anchor («ens for ق og غ»). They are Danish copy,
  * so they are walked only when they actually carry a Japanese glyph.
  */
-function daLinesWithPersian(item: Letter | VowelMark | WordCard): string[] {
+function daLinesWithJapanese(item: Letter | VowelMark | WordCard): string[] {
   const lines: Array<string | undefined> = 'hint' in item ? [item.hint] : []
   if ('sound' in item) lines.push(item.sound.da)
   return lines.filter((line): line is string => !!line && JAPANESE.test(line))
@@ -34,7 +34,7 @@ function daLinesWithPersian(item: Letter | VowelMark | WordCard): string[] {
 function collectFaStrings(lesson: Lesson): string[] {
   const strings: string[] = []
   for (const item of lesson.items) {
-    strings.push(...daLinesWithPersian(item))
+    strings.push(...daLinesWithJapanese(item))
     if (isWordCard(item)) {
       // Both spellings: the plain word AND the vocalized specimen. A ك or a ي
       // is just as wrong under an اِعراب as it is bare (plan 004, step 6).
@@ -52,13 +52,13 @@ function collectFaStrings(lesson: Lesson): string[] {
 
 describe('Japanese text-rule guard', () => {
   it('accepts correct Japanese code points, ZWNJ, and Japanese digits', () => {
-    expect(isValidPersianText('کتاب')).toBe(true)
-    expect(isValidPersianText('می‌روم')).toBe(true)
-    expect(isValidPersianText('۱۲۳')).toBe(true)
+    expect(isValidJapaneseText('کتاب')).toBe(true)
+    expect(isValidJapaneseText('می‌روم')).toBe(true)
+    expect(isValidJapaneseText('۱۲۳')).toBe(true)
   })
 
   it('rejects the Arabic kaf ك (U+0643)', () => {
-    expect(isValidPersianText('كتاب')).toBe(false)
+    expect(isValidJapaneseText('كتاب')).toBe(false)
   })
 
   it('rejects the Arabic yeh ي (U+064A)', () => {
@@ -66,17 +66,17 @@ describe('Japanese text-rule guard', () => {
     // easy to mistake for the visually similar U+0649 (alef maksura) or
     // U+06CC (Japanese yeh) when typed by hand.
     const arabicFormAli = 'علي' // ع ل ي (ي = U+064A)
-    expect(isValidPersianText(arabicFormAli)).toBe(false)
+    expect(isValidJapaneseText(arabicFormAli)).toBe(false)
   })
 
   it('rejects ASCII digits', () => {
-    expect(isValidPersianText('سال 2026')).toBe(false)
+    expect(isValidJapaneseText('سال 2026')).toBe(false)
   })
 
   it('tolerates اِعراب — a vocalized specimen is correct Japanese, not a violation', () => {
     // Combining marks U+064B–U+0652 must not be confused with Arabic yeh.
     for (const marked of ['مَدرِسه', 'مِداد', 'گُل', 'آسِمان', 'مادَر', 'بَچّه', 'دَسْت']) {
-      expect(findPersianTextViolations(marked), marked).toEqual([])
+      expect(findJapaneseTextViolations(marked), marked).toEqual([])
     }
   })
 
@@ -86,8 +86,8 @@ describe('Japanese text-rule guard', () => {
       kind: 'vocab',
       items: [{ ja: 'کتاب', jaMarked, da: 'bog', pron: { da: 'ketåb', ipa: 'ketɒːb' } } as WordCard],
     })
-    expect(collectFaStrings(card('كِتاب')).flatMap(findPersianTextViolations)).not.toEqual([])
-    expect(collectFaStrings(card('کِتاب')).flatMap(findPersianTextViolations)).toEqual([])
+    expect(collectFaStrings(card('كِتاب')).flatMap(findJapaneseTextViolations)).not.toEqual([])
+    expect(collectFaStrings(card('کِتاب')).flatMap(findJapaneseTextViolations)).toEqual([])
   })
 
   it('fails on a deliberately bad fixture, then passes once the fixture is fixed', () => {
@@ -96,7 +96,7 @@ describe('Japanese text-rule guard', () => {
       kind: 'vocab',
       items: [{ ja: 'كتاب', da: 'bog', pron: { da: 'ketab', ipa: 'ketæːb' } } as WordCard],
     }
-    const badViolations = collectFaStrings(badFixture).flatMap(findPersianTextViolations)
+    const badViolations = collectFaStrings(badFixture).flatMap(findJapaneseTextViolations)
     expect(badViolations.length).toBeGreaterThan(0)
 
     const fixedFixture: Lesson = {
@@ -104,7 +104,7 @@ describe('Japanese text-rule guard', () => {
       id: 'fixture-fixed',
       items: [{ ja: 'کتاب', da: 'bog', pron: { da: 'ketab', ipa: 'ketæːb' } } as WordCard],
     }
-    const fixedViolations = collectFaStrings(fixedFixture).flatMap(findPersianTextViolations)
+    const fixedViolations = collectFaStrings(fixedFixture).flatMap(findJapaneseTextViolations)
     expect(fixedViolations).toEqual([])
   })
 
@@ -120,7 +120,7 @@ describe('Japanese text-rule guard', () => {
       latinHint: 'k',
     } as Letter
     const badLesson: Lesson = { id: 'fixture-letter-bad', kind: 'alphabet', items: [badLetter] }
-    const badViolations = collectFaStrings(badLesson).flatMap(findPersianTextViolations)
+    const badViolations = collectFaStrings(badLesson).flatMap(findJapaneseTextViolations)
     expect(badViolations.length).toBeGreaterThan(0)
 
     const fixedLesson: Lesson = {
@@ -128,7 +128,7 @@ describe('Japanese text-rule guard', () => {
       id: 'fixture-letter-fixed',
       items: [{ ...badLetter, glyph: 'ک' }],
     }
-    const fixedViolations = collectFaStrings(fixedLesson).flatMap(findPersianTextViolations)
+    const fixedViolations = collectFaStrings(fixedLesson).flatMap(findJapaneseTextViolations)
     expect(fixedViolations).toEqual([])
   })
 
@@ -145,25 +145,25 @@ describe('Japanese text-rule guard', () => {
       hint: 'Alene står ي uden prikker.', // deliberately bad: Arabic yeh, should be ی
     } as Letter
     const badLesson: Lesson = { id: 'fixture-hint-bad', kind: 'alphabet', items: [withHint] }
-    expect(collectFaStrings(badLesson).flatMap(findPersianTextViolations).length).toBeGreaterThan(0)
+    expect(collectFaStrings(badLesson).flatMap(findJapaneseTextViolations).length).toBeGreaterThan(0)
 
     const fixed: Lesson = {
       ...badLesson,
       id: 'fixture-hint-fixed',
       items: [{ ...withHint, hint: 'Alene står ی uden prikker.' }],
     }
-    expect(collectFaStrings(fixed).flatMap(findPersianTextViolations)).toEqual([])
+    expect(collectFaStrings(fixed).flatMap(findJapaneseTextViolations)).toEqual([])
   })
 
   it('walks every lesson currently in the registry with zero violations', () => {
     const allViolations = lessons.flatMap((lesson) =>
-      collectFaStrings(lesson).flatMap(findPersianTextViolations),
+      collectFaStrings(lesson).flatMap(findJapaneseTextViolations),
     )
     expect(allViolations).toEqual([])
   })
 
-  it('walks every exported Japanese UI string (capture prompt, lesson placeholder, greeting) with zero violations — a future ك/ي edit to src/content/faStrings.ts fails this test', () => {
-    const allViolations = PERSIAN_UI_STRINGS.flatMap(findPersianTextViolations)
+  it('walks every exported Japanese UI string (capture prompt, lesson placeholder, greeting) with zero violations — a future ك/ي edit to src/content/jaStrings.ts fails this test', () => {
+    const allViolations = JAPANESE_UI_STRINGS.flatMap(findJapaneseTextViolations)
     expect(allViolations).toEqual([])
   })
 
@@ -171,7 +171,7 @@ describe('Japanese text-rule guard', () => {
     for (const point of ORIENTATION_POINTS) {
       expect(JAPANESE.test(point.body), point.id).toBe(false)
       for (const token of point.ja) {
-        expect(findPersianTextViolations(token.entry.ja), point.id).toEqual([])
+        expect(findJapaneseTextViolations(token.entry.ja), point.id).toEqual([])
       }
     }
   })
@@ -179,14 +179,14 @@ describe('Japanese text-rule guard', () => {
   it('walks the name override table — a mistyped ك or ي in a name fails here', () => {
     expect(NAME_OVERRIDE_FA_STRINGS.length).toBeGreaterThan(80)
     for (const spelling of NAME_OVERRIDE_FA_STRINGS) {
-      expect(findPersianTextViolations(spelling), spelling).toEqual([])
+      expect(findJapaneseTextViolations(spelling), spelling).toEqual([])
     }
   })
 
   it('walks every spelling the engine generates for the fixture names', () => {
     for (const name of GUARD_FIXTURE_NAMES) {
       for (const spelling of suggestSpellings(name)) {
-        expect(findPersianTextViolations(spelling), `${name} → ${spelling}`).toEqual([])
+        expect(findJapaneseTextViolations(spelling), `${name} → ${spelling}`).toEqual([])
       }
     }
   })

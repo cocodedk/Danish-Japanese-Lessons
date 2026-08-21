@@ -4,16 +4,16 @@ import { PronLine } from './PronLine'
 import { Button } from './Button'
 import { RetryActions } from './RetryActions'
 import { Celebration } from './Celebration'
-import { PersianKeyboard } from './PersianKeyboard'
+import { JapaneseKeyboard } from './JapaneseKeyboard'
 import { TypeMarks } from './TypeMarks'
 import { press } from '../keyboard/buffer'
 import { compare, type Divergence } from '../keyboard/diff'
 import type { KeyDef } from '../keyboard/layout'
 import type { Pron } from '../lessons/types'
 import type { Reward } from '../rewards/types'
-import type { PersianEntry } from '../catalog/types'
+import type { JapaneseEntry } from '../catalog/types'
 import { ChallengeReveal, CompactPhraseRow } from './EntryRenderers'
-import { LearnerPersianInput } from './LearnerPersianInput'
+import { LearnerJapaneseInput } from './LearnerJapaneseInput'
 import { PersonalNameCompanion, type PersonalName } from './PersonalName'
 import { useRoundOutcome } from './useRoundOutcome'
 import { useRevealInView } from './useRevealInView'
@@ -24,7 +24,7 @@ import './TypeExerciseWide.css'
 export interface TypeTask {
   id: string
   /** Catalog answer, except a learner's dynamic personal spelling. */
-  entry?: PersianEntry
+  entry?: JapaneseEntry
   personalName?: PersonalName
   /** What to write, asked in Danish. Never the Japanese answer — that is the exercise. */
   promptDa: string
@@ -37,7 +37,7 @@ export interface TypeTask {
 export interface TypeExerciseProps {
   title: string
   /** The round's Japanese name, under the title. */
-  eyebrowEntry: PersianEntry
+  eyebrowEntry: JapaneseEntry
   bar: ReactNode
   tasks: TypeTask[]
   /** Fires every time a task is written correctly, with its id. */
@@ -141,14 +141,14 @@ export function TypeExercise(props: TypeExerciseProps) {
                 <Button onClick={check}>Se efter</Button>
               )}
             </div>
-            <LearnerPersianInput as="p" className="type__line">
+            <LearnerJapaneseInput as="p" className="type__line">
               <span className="type__written">{buffer}</span>
               <span className="type__caret" aria-hidden="true" />
-            </LearnerPersianInput>
+            </LearnerJapaneseInput>
           </div>
           {divergence && <TypeMarks attempt={buffer} divergence={divergence} />}
           {!solved && !divergence && (
-            <PersianKeyboard onPress={handlePress} label="Persisk tastatur" />
+            <JapaneseKeyboard onPress={handlePress} label="Japansk tastatur" />
           )}
         </>
       }

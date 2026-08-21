@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import { LessonSheet, BarLink } from '../components/LessonSheet'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { PronLine } from '../components/PronLine'
 import { OptionalAudioControl } from '../components/OptionalAudioControl'
 import { ChallengeReveal, FullTeachingCard } from '../components/EntryRenderers'
@@ -52,7 +52,7 @@ export default function ConnectedReadingScreen() {
 
   return (
     <LessonSheet className="lesson--task" title={reading.kind === 'microtext' ? 'Læs en lille tekst' : 'Læs et lille udtryk'} bar={<BarLink to={`/lesson/ord/${unit}`}>Til lektionen</BarLink>}>
-      <p className="alphabet__lead">Læs først med vokaltegn. Prøv derefter den almindelige persiske skrift.</p>
+      <p className="alphabet__lead">Læs først med vokaltegn. Prøv derefter den almindelige japanske skrift.</p>
       <section className="reading-transfer">
         <section className="reading-transfer__support" aria-labelledby="reading-support-title">
           <h2 id="reading-support-title">Før du læser</h2>
@@ -61,7 +61,7 @@ export default function ConnectedReadingScreen() {
             {supportEntries.map((entry) => <FullTeachingCard entry={entry} key={entry.id} />)}
           </div>
         </section>
-        <PersianText entry={reading.entry} marked={marked} as="p" className="puzzle__word" />
+        <JapaneseText entry={reading.entry} marked={marked} as="p" className="puzzle__word" />
         <PronLine {...reading.entry.pron} />
         <OptionalAudioControl audioId={reading.entry.audioId} />
         <div className="puzzle__actions">

@@ -1,7 +1,7 @@
 import { Link, Navigate } from 'react-router-dom'
 import { ColorSwatch } from '../components/ColorSwatch'
 import { LessonImage } from '../components/LessonImage'
-import { PersianText } from '../components/PersianText'
+import { JapaneseText } from '../components/JapaneseText'
 import { RuledSection } from '../components/RuledSection'
 import { allSpeakingPractice } from '../progress/speaking'
 import { requiredTalkClipIds, speakingLessons, talkAudioReady } from '../speaking/lessons'
@@ -18,7 +18,7 @@ export default function SpeakingHome() {
       <RuledSection>
         <header className="speaking-home__header">
           <p>Hør. Sig det. Hør dig selv.</p>
-          <h1>Lær at tale persisk</h1>
+          <h1>Lær at tale japansk</h1>
           <p>Start med korte ord og sætninger. Skriften er med, men du skal ikke kunne læse den.</p>
           {(heard > 0 || spoken > 0) && <p>{heard} hørt · {spoken} øvet højt</p>}
         </header>
@@ -49,7 +49,7 @@ export default function SpeakingHome() {
                     <LessonImage entryId={first.imageEntryId ?? first.entry.id} size="thumbnail" />
                   )}
                   <div>
-                    <PersianText entry={first.entry} marked />
+                    <JapaneseText entry={first.entry} marked />
                     <h3>{lesson.title}</h3>
                     <p>{lesson.summary}</p>
                     <strong>{lesson.pages.length} korte sider</strong>

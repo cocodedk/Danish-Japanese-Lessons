@@ -19,7 +19,7 @@ describe('online audio review', () => {
       </MemoryRouter>,
     )
 
-    expect(screen.getByRole('heading', { name: 'Tjek persisk lyd' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Tjek japansk lyd' })).toBeInTheDocument()
     expect(screen.getByText('Lydtjek er færdigt')).toBeInTheDocument()
     expect(screen.getAllByRole('button', { name: /^Hør / })).toHaveLength(97)
 

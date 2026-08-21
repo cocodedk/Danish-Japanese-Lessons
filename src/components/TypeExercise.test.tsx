@@ -12,7 +12,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { TypeExercise, type TypeTask } from './TypeExercise'
-import { TYPE_WORDS_ENTRY } from '../content/faStrings'
+import { TYPE_WORDS_ENTRY } from '../content/jaStrings'
 import { DEMO_WORD } from '../content/demoWord'
 
 const task: TypeTask = { id: 'ab', entry: DEMO_WORD.entry, promptDa: 'Skriv ordet »vand«', answer: 'آب' }
@@ -71,11 +71,11 @@ describe('beginner reveal', () => {
     expect(screen.getByText(DEMO_WORD.da)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Prøv én gang til' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Afslut runden' })).toBeInTheDocument()
-    expect(screen.queryByRole('group', { name: 'Persisk tastatur' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('group', { name: 'Japansk tastatur' })).not.toBeInTheDocument()
 
     fireEvent.click(screen.getByRole('button', { name: 'Prøv én gang til' }))
     await waitFor(() => expect(screen.getByRole('heading', { name: task.promptDa })).toHaveFocus())
-    expect(screen.getByRole('group', { name: 'Persisk tastatur' })).toBeInTheDocument()
+    expect(screen.getByRole('group', { name: 'Japansk tastatur' })).toBeInTheDocument()
   })
 })
 

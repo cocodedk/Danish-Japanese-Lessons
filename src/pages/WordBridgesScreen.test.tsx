@@ -45,8 +45,8 @@ describe('the word-bridge lesson', () => {
       expect(screen.getByText(japanese)).toBeInTheDocument()
       expect(screen.getAllByText(persianPron).length).toBeGreaterThan(0)
     }
-    expect(screen.getByText(/Persisk \[peˈdæɾ\].*dansk \[ˈfæːðʌ\]/)).toBeInTheDocument()
-    expect(screen.getByText(/Persisk \[bænd\].*dansk \[ˈbɔnˀ\]/)).toBeInTheDocument()
+    expect(screen.getByText(/Japansk \[peˈdæɾ\].*dansk \[ˈfæːðʌ\]/)).toBeInTheDocument()
+    expect(screen.getByText(/Japansk \[bænd\].*dansk \[ˈbɔnˀ\]/)).toBeInTheDocument()
   })
 
   it('does not turn a resemblance into a general sound rule', () => {
@@ -54,9 +54,9 @@ describe('the word-bridge lesson', () => {
 
     expect(screen.getByText(/ikke en regel for alle ord/)).toBeInTheDocument()
     expect(screen.getByText(
-      'De betyder ikke det samme i dag: det persiske ord betyder hovedkontor.',
+      'De betyder ikke det samme i dag: det japanske ord betyder hovedkontor.',
     )).toBeInTheDocument()
-    expect(screen.getByText(/persiske ord betyder hovedkontor/)).toBeInTheDocument()
+    expect(screen.getByText(/japanske ord betyder hovedkontor/)).toBeInTheDocument()
     expect(screen.getByText(/بند kan også være en mur, der holder vand/)).toBeInTheDocument()
     expect(screen.getByText(/De er ikke i samme gamle familie/)).toBeInTheDocument()
     expect(screen.getByText(/kun en lydlig huskebro/)).toBeInTheDocument()
