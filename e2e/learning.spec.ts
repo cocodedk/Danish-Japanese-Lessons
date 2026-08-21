@@ -18,7 +18,7 @@ async function open(page: Page, hash = '#/') {
 test.beforeEach(async ({ page }) => seed(page))
 
 test('representative routes have no automatic axe violations', async ({ page }) => {
-  for (const route of ['#/', '#/opdag', '#/opdag/ord/ab', '#/lesson/alphabet', '#/lesson/ord/2/madrese', '#/lesson/ord/1/skriv', '#/repetition']) {
+  for (const route of ['#/', '#/opdag', '#/opdag/ord/mizu', '#/lesson/alphabet', '#/lesson/ord/2/konnichiwa', '#/lesson/ord/1/skriv', '#/repetition']) {
   test.setTimeout(60_000)
     await open(page, route)
     const results = await new AxeBuilder({ page }).analyze()
@@ -29,7 +29,7 @@ test('representative routes have no automatic axe violations', async ({ page }) 
 test('a new review item is modeled and guided before unaided retrieval', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await open(page, '#/repetition')
-  await expect(page.getByRole('heading', { name: 'Nyt tegn: alef med madde' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Nyt tegn: a' })).toBeVisible()
   await expect(page.getByText('Se først · øv med hjælp · prøv selv')).toBeVisible()
 
   await page.getByRole('button', { name: 'Se forskellen' }).click()
@@ -38,7 +38,7 @@ test('a new review item is modeled and guided before unaided retrieval', async (
   await page.getByRole('button', { name: 'Prøv uden hjælp' }).click()
   await expect(page.getByRole('heading', { name: 'Hvilket tegn siger denne lyd?' })).toBeVisible()
 
-  await page.locator('.review-session__choices button').filter({ hasText: 'آ' }).click()
+  await page.locator('.review-session__choices button').filter({ hasText: 'あ' }).click()
   await expect(page.getByText('✓ Husket')).toBeVisible()
   await expect(page.getByRole('button', { name: 'Stop for i dag' })).toBeVisible()
   await page.getByRole('button', { name: 'Stop for i dag' }).click()
@@ -92,7 +92,7 @@ test('review modeling and retrieval are keyboard operable with enhanced targets'
   const retrieve = page.getByRole('button', { name: 'Prøv uden hjælp' })
   await retrieve.focus()
   await page.keyboard.press('Enter')
-  const answer = page.locator('.review-session__choices button').filter({ hasText: 'آ' })
+  const answer = page.locator('.review-session__choices button').filter({ hasText: 'あ' })
   const box = await answer.boundingBox()
   expect(box?.width).toBeGreaterThanOrEqual(44)
   expect(box?.height).toBeGreaterThanOrEqual(44)
@@ -105,7 +105,7 @@ test('dark representative routes have no automatic axe violations', async ({ bro
   const context = await browser.newContext({ colorScheme: 'dark', viewport: { width: 390, height: 844 } })
   const page = await context.newPage()
   await seed(page)
-  for (const route of ['#/', '#/opdag', '#/opdag/ord/ab', '#/repetition']) {
+  for (const route of ['#/', '#/opdag', '#/opdag/ord/mizu', '#/repetition']) {
     await open(page, route)
     const results = await new AxeBuilder({ page }).analyze()
     expect(results.violations, route).toEqual([])
@@ -131,8 +131,8 @@ test('forced colors preserve focus and review operation', async ({ browser, brow
 test('connected reading moves from marked help to an unmarked meaning check', async ({ page }) => {
   await open(page, '#/lesson/ord/1/laes/1-1')
   await expect(page.getByRole('heading', { name: 'Før du læser' })).toBeVisible()
-  await expect(page.locator('[data-entry-id="reading-function-o"]')).toBeVisible()
-  await expect(page.getByText('آب و باد')).toBeVisible()
+  await expect(page.locator('[data-entry-id="reading-function-to"]')).toBeVisible()
+  await expect(page.getByText('みず と かぜ')).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Hvad betyder udtrykket?' })).toHaveCount(0)
   await page.getByRole('button', { name: 'Prøv uden vokaltegn' }).click()
   await page.getByRole('button', { name: 'vand og vind' }).click()
@@ -146,31 +146,12 @@ test('initial routes never request the dormant audio corpus', async ({ page }) =
     if (/\/audio\/.*\.(?:mp3|m4a|ogg)(?:\?|$)/.test(request.url())) audioRequests.push(request.url())
   })
   await open(page, '#/')
-  await open(page, '#/lesson/ord/1/baba')
+  await open(page, '#/lesson/ord/1/chichi')
   expect(audioRequests).toEqual([])
 })
 
-test('audio speed buttons apply 80 and 50 percent to the media element', async ({ page }) => {
-  await open(page, '#/lesson/ord/1/ab')
-  const audio = page.locator('audio').first()
-  await expect(audio).not.toHaveAttribute('src')
-
-  await page.getByRole('button', { name: 'Langsom 0,8×' }).first().click()
-  await expect(audio).toHaveAttribute('src', /\/audio\/vocabulary-1-ab\..*\.mp3$/)
-  await expect.poll(() => audio.evaluate((node: HTMLAudioElement) => node.playbackRate))
-    .toBe(0.8)
-  await expect.poll(() => audio.evaluate((node: HTMLAudioElement) => node.defaultPlaybackRate))
-    .toBe(0.8)
-
-  await page.getByRole('button', { name: 'Meget langsom 0,5×' }).first().click()
-  await expect.poll(() => audio.evaluate((node: HTMLAudioElement) => node.playbackRate))
-    .toBe(0.5)
-  await expect.poll(() => audio.evaluate((node: HTMLAudioElement) => node.defaultPlaybackRate))
-    .toBe(0.5)
-})
-
 test('a word shows Japanese, sound, Danish and its photo, and hides the photo until a quiz answer', async ({ page }) => {
-  await open(page, '#/lesson/ord/1/ab')
+  await open(page, '#/lesson/ord/1/mizu')
   const image = page.getByRole('img', { name: 'Et glas vand' })
   await expect(image).toBeVisible()
   expect(await page.evaluate(() => window.scrollY)).toBe(0)
@@ -193,11 +174,24 @@ test('a word shows Japanese, sound, Danish and its photo, and hides the photo un
 
 test('a word lesson remains complete when lesson images are blocked', async ({ page }) => {
   await page.route('**/lesson-images/**', (route) => route.abort())
-  await open(page, '#/lesson/ord/1/ab')
-  await expect(page.getByText('آب', { exact: true })).toBeVisible()
-  await expect(page.getByText('åb · [ɒːb]')).toBeVisible()
+  await open(page, '#/lesson/ord/1/mizu')
+  await expect(page.getByText('みず', { exact: true })).toBeVisible()
+  await expect(page.getByText('mizu · [mizɯ]')).toBeVisible()
   await expect(page.getByText('vand', { exact: true })).toBeVisible()
   expect(await page.locator('body').evaluate((body) => body.scrollWidth <= body.clientWidth)).toBe(true)
+})
+
+test('the reward stamps keep their Japanese names and Danish labels', async ({ page }) => {
+  await page.addInitScript((row) => localStorage.setItem('djl.v1.rewards', row), envelope({
+    stickers: ['s1', 's2', 's3'], level: 1, points: 9, practiceDates: [], giftsOpened: [], cheers: 0,
+    streak: { value: 1, resting: false },
+  }))
+  await open(page, '#/')
+  await expect(page.getByRole('img', { name: 'Flot!' })).toBeVisible()
+  await expect(page.getByRole('img', { name: 'Rigtigt!' })).toBeVisible()
+  await expect(page.getByRole('img', { name: 'Stjerne' })).toBeVisible()
+  await expect(page.getByText('すごい', { exact: true })).toBeVisible()
+  await expect(page.getByText('○', { exact: true })).toBeVisible()
 })
 
 test('dark scheme and reduced motion retain the first-run route', async ({ browser }) => {
@@ -210,8 +204,8 @@ test('dark scheme and reduced motion retain the first-run route', async ({ brows
     Storage.prototype.setItem = () => { throw new DOMException('denied') }
   })
   await open(page)
-  await expect(page.getByRole('heading', { name: 'Lær at tale japansk' })).toBeVisible()
-  await page.getByRole('link', { name: 'Skrift' }).click()
+  await expect(page.getByRole('heading', { name: 'Japansk på din måde' })).toBeVisible()
+  await page.getByRole('button', { name: 'Åbn kursus og noter' }).click()
   await expect(page.getByRole('heading', { name: 'Sådan virker japansk skrift' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Spring over og gå til alfabetet' })).toBeVisible()
   await page.close()

@@ -246,7 +246,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-letter-o",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -281,7 +281,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-name-o",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -1464,7 +1464,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-letter-ha",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -1499,7 +1499,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-name-ha",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2566,7 +2566,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-letter-wo",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2601,7 +2601,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-name-wo",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2742,7 +2742,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-mark-handakuten",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2777,7 +2777,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-mark-name-handakuten",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2800,7 +2800,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-mark-choon",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2835,7 +2835,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-mark-name-choon",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2858,7 +2858,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-mark-sokuon",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -2893,7 +2893,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "alphabet-mark-name-sokuon",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -3077,7 +3077,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "word-bridge-kohii",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -3248,7 +3248,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "word-bridge-takushii",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -3316,7 +3316,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "word-bridge-menyuu",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -4031,7 +4031,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "vocabulary-1-haha",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -4381,7 +4381,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "vocabulary-unit-2-title",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -4772,7 +4772,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "vocabulary-2-gakkou",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -4852,7 +4852,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "vocabulary-2-konnichiwa",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -5169,7 +5169,7 @@
         }
       ],
       "cueCoverage": "contextual",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "vocabulary-3-hana",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -5345,7 +5345,7 @@
         }
       ],
       "cueCoverage": "token",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "vocabulary-4-ao",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -6367,7 +6367,7 @@
         }
       ],
       "cueCoverage": "token",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "reading-1-2",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -6709,7 +6709,7 @@
         }
       ],
       "cueCoverage": "token",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "reading-4-1",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -6993,7 +6993,7 @@
         }
       ],
       "cueCoverage": "token",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "reading-1-text",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -7128,7 +7128,7 @@
         }
       ],
       "cueCoverage": "token",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "reading-2-text",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -7354,7 +7354,7 @@
         }
       ],
       "cueCoverage": "token",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "reading-4-text",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -7481,7 +7481,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "conversation-introduction",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -7989,7 +7989,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "number-8-word",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8142,7 +8142,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-greeting",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8177,7 +8177,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-greeting-with-name",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8247,7 +8247,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-capture-prompt",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8282,7 +8282,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-lesson-placeholder",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8340,7 +8340,7 @@
       "stressMarked": false,
       "readingCues": [],
       "cueCoverage": "none",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-choon-name",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8375,7 +8375,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-missing-space",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8410,7 +8410,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-extra-space",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8515,7 +8515,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-extra-letter",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8550,7 +8550,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-type-words",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8585,7 +8585,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-type-name",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8620,7 +8620,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-name-letter",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8760,7 +8760,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "interface-orientation-osaka",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8865,7 +8865,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "names-spelling-title",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8935,7 +8935,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "names-write-name",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -8970,7 +8970,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "names-assemble",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9040,7 +9040,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "names-not-in-name",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9075,7 +9075,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "names-letter-later",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9110,7 +9110,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "names-privacy",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9215,7 +9215,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-praise-sonotoori",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9448,7 +9448,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-sticker-star",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9483,7 +9483,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-gift",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9518,7 +9518,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-welcome-back",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9553,7 +9553,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-page-filled",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9588,7 +9588,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-current-page",
       "audioNotApplicable": null,
       "audioStatus": "missing",
@@ -9623,7 +9623,7 @@
         }
       ],
       "cueCoverage": "whole-word",
-      "roleSensitive": false,
+      "roleSensitive": true,
       "audioId": "rewards-streak-resting",
       "audioNotApplicable": null,
       "audioStatus": "missing",

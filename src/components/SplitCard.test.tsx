@@ -25,11 +25,11 @@ describe('SplitCard after the kit refactor', () => {
     expect(faPane?.querySelector('.da-word')).toBeNull()
   })
 
-  it('still renders exactly what plan 001 shipped', () => {
+  it('still shows the split card exactly as the kit defines it', () => {
     renderCard()
-    expect(screen.getByText('سلام!')).toBeInTheDocument()
-    expect(screen.getByText('آب')).toBeInTheDocument()
-    expect(screen.getByText('åb · [ɒːb]')).toBeInTheDocument()
+    expect(screen.getByText('こんにちは！')).toBeInTheDocument()
+    expect(screen.getByText('みず')).toBeInTheDocument()
+    expect(screen.getByText('mizu · [mizɯ]')).toBeInTheDocument()
     expect(screen.getByText('Hej Sara!')).toBeInTheDocument()
     expect(screen.getByText('vand')).toBeInTheDocument()
   })

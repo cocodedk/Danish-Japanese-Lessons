@@ -50,7 +50,7 @@ test('production journeys make no external, fetch, or XHR request', async ({ pag
   await page.goto('./#/lesson/alphabet')
   await page.waitForLoadState('networkidle')
   await page.goto('./#/repetition')
-  await page.goto('./#/lesson/ord/1/ab')
+  await page.goto('./#/lesson/ord/1/mizu')
   await expect(page.getByRole('img', { name: 'Et glas vand' })).toBeVisible()
   await page.goto('./#/billedkilder')
   await expect(page.getByRole('heading', { name: 'Billedkilder' })).toBeVisible()
@@ -101,13 +101,13 @@ test('a long-open tab refreshes the release when it regains focus', async ({ pag
     body: `window.__DJL_LATEST_VERSION__=${JSON.stringify(latest)};`,
   }))
 
-  await page.goto('./#/opdag/ord/ab')
+  await page.goto('./#/opdag/ord/mizu')
   await expect(page.getByRole('heading', { name: 'vand' })).toBeVisible()
   latest = 'focused-release'
   await page.evaluate(() => window.dispatchEvent(new Event('focus')))
 
   await expect.poll(() => new URL(page.url()).searchParams.get('app-version'))
     .toBe('focused-release')
-  expect(new URL(page.url()).hash).toBe('#/opdag/ord/ab')
+  expect(new URL(page.url()).hash).toBe('#/opdag/ord/mizu')
   await expect(page.getByRole('heading', { name: 'vand' })).toBeVisible()
 })

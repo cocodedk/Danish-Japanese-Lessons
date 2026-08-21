@@ -22,7 +22,7 @@ test('critical routes stay bounded from phone to ultrawide', async ({ page, brow
     320, 360, 390, 430, 479, 480, 481, 600, 767, 768, 769, 820,
     1023, 1024, 1025, 1280, 1440, 1599, 1600, 1601, 1920, 2560,
   ]
-  const routes = ['#/', '#/opdag', '#/opdag/ord/ab', '#/lesson/alphabet', '#/lesson/alphabet/bogstav/be', '#/lesson/ord/2/madrese', '#/lesson/ord/1/skriv', '#/repetition']
+  const routes = ['#/', '#/opdag', '#/opdag/ord/mizu', '#/lesson/alphabet', '#/lesson/alphabet/bogstav/a', '#/lesson/ord/2/konnichiwa', '#/lesson/ord/1/skriv', '#/repetition']
   for (const width of widths) {
     await page.setViewportSize({ width, height: width < 700 ? 844 : 900 })
     for (const route of routes) {
@@ -95,10 +95,10 @@ test('first-run orientation records six viewed steps or an explicit skip, never 
   expect(await page.evaluate(() => localStorage.getItem('djl.v1.alphabet'))).toBeNull()
   for (const name of [
     'Næste: læseretning',
-    'Næste: bogstaver der binder',
-    'Næste: bogstavformer',
-    'Næste: store og små bogstaver',
-    'Næste: prikker',
+    'Næste: Fra venstre mod højre',
+    'Næste: Ét tegn, én stavelse',
+    'Næste: Ingen store bogstaver',
+    'Næste: Tre skrifter',
   ]) await page.getByRole('button', { name }).click()
   await expect(page.getByText(/trin 6 af 6/)).toBeVisible()
   expect(await page.evaluate(() => localStorage.getItem('djl.v1.alphabet'))).not.toBeNull()
@@ -136,8 +136,8 @@ test('typing remains keyboard-completable with enhanced targets', async ({ page 
     expect(caption.left).toBeGreaterThanOrEqual(key.left)
     expect(caption.right).toBeLessThanOrEqual(key.right)
   }
-  await page.getByRole('button', { name: 'alef med madde' }).click()
-  await page.getByRole('button', { name: 'be' }).click()
+  await page.getByRole('button', { name: 'chi' }).click()
+  await page.getByRole('button', { name: 'chi' }).click()
   await page.getByRole('button', { name: 'Se efter' }).click()
   await expect(page.getByText('Rigtigt')).toBeVisible()
 })
@@ -146,10 +146,10 @@ test('typing accepts a physical Japanese keyboard without disabling the on-scree
   await open(page, '#/lesson/ord/1/skriv')
   const keyboard = page.locator('.keyboard')
   await keyboard.focus()
-  await keyboard.dispatchEvent('keydown', { key: 'آ' })
-  await keyboard.dispatchEvent('keydown', { key: 'ب' })
-  await expect(page.locator('.type__written')).toHaveText('آب')
-  await expect(page.getByRole('button', { name: 'alef med madde' })).toBeVisible()
+  await keyboard.dispatchEvent('keydown', { key: 'ち' })
+  await keyboard.dispatchEvent('keydown', { key: 'ち' })
+  await expect(page.locator('.type__written')).toHaveText('ちち')
+  await expect(page.getByRole('button', { name: 'chi' })).toBeVisible()
   await page.getByRole('button', { name: 'Se efter' }).click()
   await expect(page.getByText('Rigtigt')).toBeVisible()
 })
@@ -157,7 +157,7 @@ test('typing accepts a physical Japanese keyboard without disabling the on-scree
 test('a wrong typed attempt reveals teaching above the keyboard dock', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 640 })
   await open(page, '#/lesson/ord/1/skriv')
-  await page.getByRole('button', { name: 'be' }).click()
+  await page.getByRole('button', { name: 'ka' }).click()
   await page.getByRole('button', { name: 'Se efter' }).click()
   const reveal = page.locator('.type__reveal')
   await expect(reveal.getByRole('heading', { name: /Se hele/ })).toBeVisible()
@@ -170,6 +170,17 @@ test('a wrong typed attempt reveals teaching above the keyboard dock', async ({ 
   expect(footBox!.y).toBeGreaterThanOrEqual(0)
   expect(revealBox!.y).toBeLessThan(footBox!.y)
   await reveal.getByRole('button', { name: 'Prøv én gang til' }).click()
-  await expect(page.locator('.type__written')).toHaveText('ب')
+  await expect(page.locator('.type__written')).toHaveText('か')
   await expect(page.locator('.keyboard')).toBeVisible()
+})
+
+test('the closed talk path keeps the three open hubs and never names a speaking area', async ({ page }) => {
+  await open(page, '#/')
+  await expect(page.locator('.area-nav a')).toHaveText(['Ord', 'Ordbroer', 'Lektioner'])
+  await expect(page.getByRole('link', { name: 'Tal' })).toHaveCount(0)
+})
+
+test('the closed talk home redirects to the word workshop', async ({ page }) => {
+  await open(page, '#/tal')
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
 })

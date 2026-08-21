@@ -14,7 +14,6 @@ import {
   write,
   written,
   praiseOnScreen,
-  firstTypeableWord,
 } from './typingHarness'
 
 // Unit 3, where every word (うち あめ そら つき ほし はな よる) is on the

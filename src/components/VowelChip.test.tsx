@@ -3,34 +3,37 @@ import { render, screen } from '@testing-library/react'
 import { VowelChip } from './VowelChip'
 import { vowelMarks } from '../lessons/vowelMarks'
 
-const [zebar, zir] = vowelMarks
+const [dakuten, handakuten] = vowelMarks
 
 describe('VowelChip', () => {
-  it('renders the letter as Japanese, right to left', () => {
-    const { container } = render(<VowelChip entry={zebar.entry} />)
+  it('renders the mark as Japanese, with the kana it sits on', () => {
+    const { container } = render(<VowelChip entry={dakuten.entry} />)
     const glyph = container.querySelector('.vowel-chip__glyph')
     expect(glyph).toHaveAttribute('lang', 'ja')
     expect(glyph).toHaveAttribute('dir', 'rtl')
-    expect(glyph?.textContent).toBe('اَ')
+    expect(glyph?.textContent).toBe('か゛')
   })
 
-  it('paints زبر above the letter and زیر below it', () => {
-    const { container: above } = render(<VowelChip entry={zebar.entry} />)
-    expect(above.querySelector('.vowel-chip__glyph')?.className).toContain('pen-mark--above')
+  it('paints dakuten and handakuten above the kana, never below', () => {
+    const { container: dakutenMark } = render(<VowelChip entry={dakuten.entry} />)
+    expect(dakutenMark.querySelector('.vowel-chip__glyph')?.className).toContain('pen-mark--above')
 
-    const { container: below } = render(<VowelChip entry={zir.entry} />)
-    expect(below.querySelector('.vowel-chip__glyph')?.className).toContain('pen-mark--below')
+    const { container: handakutenMark } = render(<VowelChip entry={handakuten.entry} />)
+    expect(handakutenMark.querySelector('.vowel-chip__glyph')?.className).toContain('pen-mark--above')
+    // All Japanese lydtegn sit above the kana or have no side of their own —
+    // there is no below case to paint.
+    expect(handakutenMark.querySelector('[class*="pen-mark--below"]')).toBeNull()
   })
 
   it('shows the pronunciation caption from lesson data, in Danish and left to right', () => {
-    render(<VowelChip entry={zebar.entry} />)
-    const caption = screen.getByText('a i "kat" · [æ]')
+    render(<VowelChip entry={dakuten.entry} />)
+    const caption = screen.getByText('k bliver g — が ga · [ɡ]')
     expect(caption).toHaveAttribute('lang', 'da')
     expect(caption).toHaveAttribute('dir', 'ltr')
   })
 
   it('never leaves a teaching mark without pronunciation help', () => {
-    const { container } = render(<VowelChip entry={zebar.entry} />)
+    const { container } = render(<VowelChip entry={dakuten.entry} />)
     expect(container.querySelectorAll('.pron-line')).toHaveLength(1)
   })
 })

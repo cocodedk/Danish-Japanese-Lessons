@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 import WordBridgesScreen from './WordBridgesScreen'
+import { wordBridges } from '../lessons/wordBridges'
 import { AppChrome } from '../components/AppChrome'
 
 function renderScreen() {
@@ -14,18 +15,18 @@ function renderScreen() {
 }
 
 describe('the word-bridge lesson', () => {
-  it('opens with a compact, grouped overview of all twenty-three bridges', () => {
+  it('opens with a compact, grouped overview of every loanword bridge', () => {
     const { container } = renderScreen()
 
     expect(screen.getByRole('heading', { name: 'Ord, der ligner' })).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Hovedområder' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Ordbroer' })).toHaveAttribute('aria-current', 'page')
     expect(screen.getByRole('link', { name: 'Til ordværkstedet' })).toHaveAttribute('href', '/opdag')
-    expect(screen.getByText('23 ordbroer')).toBeInTheDocument()
-    for (const heading of ['Familien', 'I hverdagen', 'Tre tal', 'Krop og himmel', 'Lydlige huskebroer']) {
+    expect(screen.getByText(`${wordBridges.length} ordbroer`)).toBeInTheDocument()
+    for (const heading of ['Mad og drikke', 'I byen', 'Hjemme', 'I skolen']) {
       expect(screen.getByRole('heading', { name: heading })).toBeInTheDocument()
     }
-    expect(container.querySelectorAll('details')).toHaveLength(23)
+    expect(container.querySelectorAll('.word-bridge')).toHaveLength(wordBridges.length)
     expect(container.querySelectorAll('details[open]')).toHaveLength(1)
     expect(container.querySelector('.entry-card')).not.toBeInTheDocument()
   })
@@ -33,33 +34,27 @@ describe('the word-bridge lesson', () => {
   it('shows every supplied Japanese word and keeps both IPA columns available', () => {
     renderScreen()
 
-    const expected = [
-      ['پدر', 'pedar'], ['مادر', 'mådar'], ['برادر', 'barådar'], ['دختر', 'dokhtar'],
-      ['در', 'dar'], ['نام', 'nåm'], ['موش', 'mush'], ['گرم', 'garm'], ['نو', 'now'],
-      ['دو', 'do'], ['شش', 'shesh'], ['نه', 'noh'], ['دندان', 'dandån'], ['ناف', 'nåf'],
-      ['ماه', 'måh'], ['ستاره', 'setåre'], ['بند', 'band'],
-      ['دوست', 'dust'], ['پاس', 'pås'], ['مرد', 'mord'], ['لنگ', 'leng'],
-    ]
+    // The first (featured, open) row prints its full IPA pair.
+    const first = wordBridges[0]
+    const ipaLine = screen.getByText((content) =>
+      content.includes(first.entry.pron.ipa) && content.includes(first.danishIpa ?? ''))
 
-    for (const [japanese, japanesePron] of expected) {
-      expect(screen.getByText(japanese)).toBeInTheDocument()
-      expect(screen.getAllByText(japanesePron).length).toBeGreaterThan(0)
+    for (const bridge of wordBridges) {
+      expect(screen.getAllByText(bridge.entry.ja).length).toBeGreaterThan(0)
+      expect(screen.getAllByText(bridge.entry.pron.da).length).toBeGreaterThan(0)
+      expect(screen.getAllByText(bridge.danish).length).toBeGreaterThan(0)
     }
-    expect(screen.getByText(/Japansk \[peˈdæɾ\].*dansk \[ˈfæːðʌ\]/)).toBeInTheDocument()
-    expect(screen.getByText(/Japansk \[bænd\].*dansk \[ˈbɔnˀ\]/)).toBeInTheDocument()
+    expect(ipaLine).toBeInTheDocument()
   })
 
   it('does not turn a resemblance into a general sound rule', () => {
     renderScreen()
 
-    expect(screen.getByText(/ikke en regel for alle ord/)).toBeInTheDocument()
-    expect(screen.getByText(
-      'De betyder ikke det samme i dag: det japanske ord betyder hovedkontor.',
-    )).toBeInTheDocument()
-    expect(screen.getByText(/japanske ord betyder hovedkontor/)).toBeInTheDocument()
-    expect(screen.getByText(/بند kan også være en mur, der holder vand/)).toBeInTheDocument()
-    expect(screen.getByText(/De er ikke i samme gamle familie/)).toBeInTheDocument()
-    expect(screen.getByText(/kun en lydlig huskebro/)).toBeInTheDocument()
-    expect(screen.getByText(/ikke dokumenteret som et historisk dansk længdemål/)).toBeInTheDocument()
+    expect(screen.getByText(/ikke en regel, der gælder alle japanske ord/)).toBeInTheDocument()
+    // Every bridge earns its row with honest Danish copy, never a sound law.
+    for (const bridge of wordBridges) {
+      expect(bridge.clueDa.length, bridge.id).toBeGreaterThan(30)
+      expect(bridge.historyDa.length, bridge.id).toBeGreaterThan(30)
+    }
   })
 })

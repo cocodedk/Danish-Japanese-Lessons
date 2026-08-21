@@ -11,8 +11,8 @@ vi.mock('../audio/manifest', () => ({
     entryId: id,
     formId: 'neutral',
     file: `/audio/${id}.000000000000.mp3`,
-    locale: 'ja-IR',
-    transcript: 'سلام',
+    locale: 'ja-JP',
+    transcript: 'こんにちは',
     durationMs: 900,
     channels: 1,
     integratedLufs: -20,
@@ -23,7 +23,7 @@ vi.mock('../audio/manifest', () => ({
     engineVersion: 'test',
     voiceModel: 'test',
     modelSha256: '0'.repeat(64),
-    synthesisText: 'سلام',
+    synthesisText: 'こんにちは',
     sourceTextHash: '0'.repeat(64),
   } : undefined,
   pronunciationAudioUrl: (file: string) => file,
@@ -44,12 +44,12 @@ describe('speaking-first pages', () => {
 
   it('opens one speak-and-replay page without asking the learner to read first', () => {
     render(
-      <MemoryRouter initialEntries={['/tal/hils/vocabulary-2-salam']}>
+      <MemoryRouter initialEntries={['/tal/hils/vocabulary-2-konnichiwa']}>
         <Routes><Route path="/tal/:lesson/:page" element={<SpeakingPage />} /></Routes>
       </MemoryRouter>,
     )
     expect(screen.getByRole('heading', { name: 'Hils på japansk' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Hør سلام' })).toHaveTextContent('Hør')
+    expect(screen.getByRole('button', { name: 'Hør こんにちは' })).toHaveTextContent('Hør')
     expect(screen.getByRole('button', { name: 'Optag mig' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Jeg har sagt det' })).toBeInTheDocument()
   })

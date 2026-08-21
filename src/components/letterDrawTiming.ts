@@ -6,20 +6,36 @@ import type { Stroke } from '../lessons/types'
 const BODY_MS = 560
 const DOT_MS = 170
 const GAP_MS = 60
+/** The whole teaching animation budget — ART-DIRECTION "Motion": under 1.5s. */
+const TOTAL_MS = 1450
 
 export interface Timing {
   start: number
   duration: number
 }
 
+/**
+ * When each pen path starts and how long it takes. Paths run one after the
+ * other at their own pace; when a letter has many strokes (kana can have four
+ * or five pen moves), the whole sequence is scaled down so the lesson stays
+ * inside the 1.5-second animation budget — the rule is about the letter, not
+ * about one pen stroke.
+ */
 export function drawTimings(strokes: Stroke[]): Timing[] {
   let at = 0
-  return strokes.map((stroke) => {
+  const raw = strokes.map((stroke) => {
     const duration = stroke.kind === 'dot' ? DOT_MS : BODY_MS
     const timing = { start: at, duration }
     at += duration + GAP_MS
     return timing
   })
+  const total = at - GAP_MS
+  if (total <= TOTAL_MS) return raw
+  const scale = TOTAL_MS / total
+  return raw.map((timing) => ({
+    start: Math.round(timing.start * scale),
+    duration: Math.round(timing.duration * scale),
+  }))
 }
 
 /** How long the whole letter takes to draw, in ms. */

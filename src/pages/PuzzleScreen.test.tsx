@@ -161,7 +161,13 @@ describe('a missing-letter puzzle', () => {
 
 describe('an ordering puzzle', () => {
   it('retry clears the tiles, and the original order completes the task', () => {
-    const puzzle = puzzles.find((item) => item.tasks[0]?.kind === 'order')!
+    // A word whose letters are all identical (ちち) is its own rotation, so a
+    // tray-order tap would not be wrong; the retry scenario needs a word with
+    // distinct glyphs (unit 2's order puzzle: ほん, つくえ).
+    const puzzle = puzzles.find(
+      (item) => item.tasks[0]?.kind === 'order'
+        && new Set([...item.tasks[0].entry.ja]).size === [...item.tasks[0].entry.ja].length,
+    )!
     const { container } = open(puzzle.id)
     const tileButtons = () =>
       Array.from(container.querySelectorAll<HTMLButtonElement>('.puzzle__tiles button'))

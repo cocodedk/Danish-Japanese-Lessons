@@ -21,9 +21,14 @@ function renderGate() {
 beforeEach(() => window.localStorage.clear())
 
 describe('JourneyGate', () => {
-  it('starts with the checked speaking lessons', () => {
+  it('starts with the three-way choice — speaking stays closed until its corpus is approved', () => {
     renderGate()
-    expect(screen.getByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
+    // No talk corpus is approved yet, so the gate never redirects to /tal;
+    // instead it offers the first Japanese word and the course.
+    expect(screen.getByRole('heading', { name: 'Japansk på din måde' })).toBeInTheDocument()
+    expect(screen.getByText('Dansk og japansk i samme notesbog')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Lav et japansk ord' })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Lær at tale japansk' })).not.toBeInTheDocument()
     expect(getJourneyChoice()).toBeUndefined()
   })
 

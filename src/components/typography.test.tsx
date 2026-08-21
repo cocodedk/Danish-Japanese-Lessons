@@ -4,7 +4,7 @@ import { JaSpecimen } from './JaSpecimen'
 import { PronLine } from './PronLine'
 import { DaWord } from './DaWord'
 import { RuleDivider } from './RuleDivider'
-import faCss from './JaSpecimen.css?raw'
+import jaCss from './JaSpecimen.css?raw'
 import { defineEntry } from '../catalog/types'
 
 function entry(ja: string, jaMarked?: string) {
@@ -19,57 +19,58 @@ function entry(ja: string, jaMarked?: string) {
 }
 
 describe('JaSpecimen', () => {
-  it('renders the diacriticized spelling when the lesson supplies one', () => {
-    render(<JaSpecimen entry={entry('اب', 'آب')} />)
-    expect(screen.getByText('آب')).toBeInTheDocument()
-    expect(screen.queryByText('اب')).toBeNull()
+  it('renders the marked spelling when the lesson supplies one', () => {
+    render(<JaSpecimen entry={entry('か', 'か゛')} />)
+    expect(screen.getByText('か゛')).toBeInTheDocument()
   })
 
   it('falls back to the plain spelling', () => {
-    render(<JaSpecimen entry={entry('کتاب')} />)
-    expect(screen.getByText('کتاب')).toBeInTheDocument()
+    render(<JaSpecimen entry={entry('みず')} />)
+    expect(screen.getByText('みず')).toBeInTheDocument()
   })
 
   it('is Japanese, right to left', () => {
-    const { container } = render(<JaSpecimen entry={entry('آب')} />)
+    const { container } = render(<JaSpecimen entry={entry('みず')} />)
     const specimen = container.querySelector('.ja-specimen')
     expect(specimen).toHaveAttribute('lang', 'ja')
     expect(specimen).toHaveAttribute('dir', 'rtl')
   })
 
-  it('puts the madde in the teacher red, and nothing on an unmarked word', () => {
-    const { container: marked } = render(<JaSpecimen entry={entry('آب')} />)
+  it('paints the dakuten in the teacher red, and nothing on an unmarked word', () => {
+    const { container: marked } = render(<JaSpecimen entry={entry('か゛')} />)
     expect(marked.querySelector('.ja-specimen')?.className).toContain('pen-mark--above')
 
-    const { container: plain } = render(<JaSpecimen entry={entry('کتاب')} />)
+    const { container: plain } = render(<JaSpecimen entry={entry('みず')} />)
     expect(plain.querySelector('.ja-specimen')?.className).toBe('ja-specimen')
   })
 
-  it('draws a vocalized word as red اِعراب under an ink copy of the same letters', () => {
-    const { container } = render(<JaSpecimen entry={entry('مدرسه', 'مَدرِسه')} />)
+  it('stacks the classroom mark as red dakuten under an ink copy of the same kana', () => {
+    const { container } = render(<JaSpecimen entry={entry('か', 'か゛')} />)
     expect(container.querySelector('.ja-specimen--vocalized')).not.toBeNull()
-    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('مَدرِسه')
+    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('か゛')
     expect(container.querySelector('.ja-specimen__marks')).toHaveAttribute('aria-hidden', 'true')
-    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('مدرسه')
-    // Both marks are red — the gradient cut could only ever catch one side.
-    expect(faCss).toContain('.ja-specimen__marks')
-    expect(faCss).toContain('color: var(--red)')
+    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('か')
+    // The red lives on the marks layer — the CSS the specimen actually loads.
+    expect(jaCss).toContain('.ja-specimen__marks')
+    expect(jaCss).toContain('color: var(--red)')
   })
 
-  it('keeps the single layer when jaMarked changes a letter rather than marking one', () => {
-    const { container } = render(<JaSpecimen entry={entry('اب', 'آب')} />)
+  it('keeps the single layer when the marked spelling is not a pure mark addition', () => {
+    // カー marks a long vowel; stripping the hand-marks does not recover か,
+    // so the specimen stays one plain ink layer with no pen class.
+    const { container } = render(<JaSpecimen entry={entry('か', 'カー')} />)
     expect(container.querySelector('.ja-specimen--vocalized')).toBeNull()
-    expect(container.querySelector('.ja-specimen')?.className).toContain('pen-mark--above')
+    expect(container.querySelector('.ja-specimen')?.className).toBe('ja-specimen')
   })
 
-  it('still gives آ its red madde inside a vocalized word', () => {
-    const { container } = render(<JaSpecimen entry={entry('آسمان', 'آسِمان')} />)
-    expect(container.querySelector('.ja-specimen__ink')?.className).toContain('pen-mark--above')
+  it('keeps the red on the marks layer only inside a vocalized word', () => {
+    const { container } = render(<JaSpecimen entry={entry('か', 'か゛')} />)
+    expect(container.querySelector('.ja-specimen__ink')?.className).toBe('ja-specimen__ink')
   })
 
   it('gives the diacritics air: line-height 2 at the clamp scale', () => {
-    expect(faCss).toContain('line-height: 2')
-    expect(faCss).toContain('clamp(4.5rem, 20vw, 9rem)')
+    expect(jaCss).toContain('line-height: 2')
+    expect(jaCss).toContain('clamp(4.5rem, 20vw, 9rem)')
   })
 })
 

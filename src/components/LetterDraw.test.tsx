@@ -16,7 +16,7 @@ function setReducedMotion(reduce: boolean) {
   }))
 }
 
-const pe = specimens.pe // one body plus three dots — the busiest letter
+const ki = specimens.ki // a kana with a four-stroke sequence — the busiest letter
 
 afterEach(() => {
   vi.unstubAllGlobals()
@@ -25,12 +25,12 @@ afterEach(() => {
 describe('LetterDraw', () => {
   it('animates the sequence when motion is welcome, and can be replayed', () => {
     setReducedMotion(false)
-    const { container } = render(<LetterDraw strokes={pe.strokes} name={pe.name.da} />)
+    const { container } = render(<LetterDraw strokes={ki.strokes} name={ki.name.da} />)
 
     const sheet = container.querySelector('.letter-draw__sheet--live')
     expect(sheet).not.toBeNull()
-    expect(sheet?.querySelectorAll('path')).toHaveLength(pe.strokes.length)
-    expect(screen.getByRole('img', { name: 'Stregrækkefølge for pe' })).toBeInTheDocument()
+    expect(sheet?.querySelectorAll('path')).toHaveLength(ki.strokes.length)
+    expect(screen.getByRole('img', { name: 'Stregrækkefølge for ki' })).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('Tegn igen'))
     expect(container.querySelectorAll('.letter-draw__sheet--live')).toHaveLength(1)
@@ -38,13 +38,13 @@ describe('LetterDraw', () => {
 
   it('shows the numbered step diagram instead when the device asks for less motion', () => {
     setReducedMotion(true)
-    const { container } = render(<LetterDraw strokes={pe.strokes} name={pe.name.da} />)
+    const { container } = render(<LetterDraw strokes={ki.strokes} name={ki.name.da} />)
 
     expect(container.querySelector('.letter-draw__sheet--live')).toBeNull()
     expect(screen.queryByText('Tegn igen')).not.toBeInTheDocument()
 
-    const steps = screen.getByRole('list', { name: 'Stregrækkefølge for pe, trin for trin' })
-    expect(steps.children).toHaveLength(pe.strokes.length)
+    const steps = screen.getByRole('list', { name: 'Stregrækkefølge for ki, trin for trin' })
+    expect(steps.children).toHaveLength(ki.strokes.length)
     // Dynamic counters stay Latin until Japanese numerals are deliberately taught.
     expect(screen.getByText('1')).toBeInTheDocument()
     expect(screen.getByText('4')).toBeInTheDocument()
@@ -54,7 +54,7 @@ describe('LetterDraw', () => {
 
   it('marks exactly the newest stroke of each step in the teachers red', () => {
     setReducedMotion(true)
-    const { container } = render(<LetterDraw strokes={pe.strokes} name={pe.name.da} />)
+    const { container } = render(<LetterDraw strokes={ki.strokes} name={ki.name.da} />)
     for (const step of container.querySelectorAll('.letter-draw__step')) {
       expect(step.querySelectorAll('.letter-draw__path--live')).toHaveLength(1)
     }

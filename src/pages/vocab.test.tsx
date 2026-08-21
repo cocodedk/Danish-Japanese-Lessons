@@ -7,6 +7,7 @@ import { screen, fireEvent, waitFor, within } from '@testing-library/react'
 import { setProfile } from '../progress/profile'
 import { getRewards } from '../rewards/engine'
 import { vocabUnits, findVocabUnit } from '../lessons/vocab'
+import { NAME_LETTER_IN_WORD_ENTRY } from '../content/jaStrings'
 import { freshVocabState, open, praiseOnScreen } from './vocabHarness'
 
 const unit = findVocabUnit('1')!
@@ -49,7 +50,7 @@ describe('the forside lists the word units', () => {
 })
 
 describe('any unit, any word, any time', () => {
-  it('opens unit ۳ with nothing cleared anywhere — no lesson is ever locked', () => {
+  it('opens unit 3 with nothing cleared anywhere — no lesson is ever locked', () => {
     open('#/lesson/ord/3')
     const third = findVocabUnit('3')!
     expect(screen.getByRole('heading', { name: third.title })).toBeInTheDocument()
@@ -76,11 +77,12 @@ describe('any unit, any word, any time', () => {
 })
 
 describe('a word screen', () => {
-  it('is the split card: the vocalized specimen, the sound twice, the Danish meaning', () => {
-    const { container } = open('#/lesson/ord/2/madrese')
-    const word = findVocabUnit('2')!.words.find((candidate) => candidate.id === 'madrese')!
+  it('is the split card: the plain kana, the sound twice, the Danish meaning', () => {
+    const { container } = open('#/lesson/ord/2/hon')
+    const word = findVocabUnit('2')!.words.find((candidate) => candidate.id === 'hon')!
 
     const faPane = container.querySelector('.split-card__pane--ja')
+    // Kana carry no vowel marks, so jaMarked always equals ja on vocabulary.
     expect(faPane?.textContent).toContain(word.jaMarked)
     expect(screen.getAllByText(`${word.pron.da} · [${word.pron.ipa}]`).length).toBeGreaterThan(0)
     expect(screen.getByText(word.da)).toBeInTheDocument()
@@ -89,11 +91,13 @@ describe('a word screen', () => {
     expect(faPane?.querySelector('.ja-specimen')).toHaveAttribute('lang', 'ja')
   })
 
-  it('marks the vowel signs with the teacher\'s red pen, on the specimen only', () => {
-    const { container } = open('#/lesson/ord/2/madrese')
-    // مَدرِسه is marked above AND below: the red layer carries both.
-    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('مَدرِسه')
-    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('مدرسه')
+  it('never red-pens kana on the word screen — lydtegn belong to their own lesson', () => {
+    const { container } = open('#/lesson/ord/2/gakkou')
+    // Kana carry no vowel marks to red-pen, and dakuten/sokuon are taught in
+    // the lydtegn lesson, so the vocabulary specimen stays one plain ink layer.
+    expect(container.querySelector('.ja-specimen--vocalized')).toBeNull()
+    expect(container.querySelector('.ja-specimen')?.className).toBe('ja-specimen')
+    expect(container.querySelectorAll('[class*="pen-mark--"]')).toHaveLength(0)
     expect(container.querySelectorAll('.pron-line .ja-specimen__marks')).toHaveLength(0)
     expect(container.querySelector('.da-word')?.className).not.toContain('pen-mark')
   })
@@ -115,10 +119,12 @@ describe('a word screen', () => {
     expect(screen.queryByText(/i dit navn/i)).not.toBeInTheDocument()
   })
 
-  it('notes the letters a word shares with the learner\'s own name, warmly', () => {
-    setProfile({ name: 'Sara', jaSpelling: 'سارا' })
-    open('#/lesson/ord/1/baba')
-    expect(screen.getByText('حرفی از نام تو در این کلمه هست')).toBeInTheDocument()
+  it('notes the katakana a loanword shares with the learner\'s own name, warmly', () => {
+    // パン shares ン with Anne's spelling アンネ — a real overlap in Japanese
+    // (hiragana words never overlap a katakana spelling, loanwords can).
+    setProfile({ name: 'Anne', jaSpelling: 'アンネ' })
+    open('#/lesson/ord/1/pan')
+    expect(screen.getByText(NAME_LETTER_IN_WORD_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText(/Ét af bogstaverne her/)).toBeInTheDocument()
   })
 })

@@ -1,36 +1,27 @@
-import { fireEvent, render, screen } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import { beforeEach, describe, expect, it } from 'vitest'
 import AudioExercisePage from './AudioExercisePage'
 
-vi.mock('../components/AudioControl', () => ({
-  AudioControl: ({ source, onPlay }: {
-    source: { transcript: string }
-    onPlay?: () => void
-  }) => (
-    <button type="button" aria-label={`Hør ${source.transcript}`} onClick={onPlay}>Hør</button>
-  ),
-}))
-
+// The approved audio corpus is empty by design: speaking stays closed until a
+// named native-Japanese review clears every launch clip. While it is closed
+// the exercise page has nothing to review and points the learner back to the
+// word hub instead of showing a card list.
 describe('sound exercise', () => {
   beforeEach(() => localStorage.clear())
 
-  it('lets a learner hear, say, save, and filter all 97 checked sounds', () => {
+  it('sends learners to the word hub while the approved corpus is closed', () => {
     render(
-      <MemoryRouter>
-        <AudioExercisePage />
+      <MemoryRouter initialEntries={['/lydovelse']}>
+        <Routes>
+          <Route path="/lydovelse" element={<AudioExercisePage />} />
+          <Route path="/opdag" element={<h1>Ordværksted</h1>} />
+        </Routes>
       </MemoryRouter>,
     )
 
-    expect(screen.getByRole('heading', { name: 'Øv japansk lyd' })).toBeInTheDocument()
-    expect(screen.getAllByRole('button', { name: /^Hør / })).toHaveLength(97)
-
-    fireEvent.click(screen.getAllByRole('button', { name: /^Hør / })[0])
-    fireEvent.click(screen.getAllByRole('button', { name: 'Jeg har sagt det' })[0])
-    expect(localStorage.getItem('djl.audio-exercise.v1')).toContain('"done"')
-
-    fireEvent.change(screen.getByLabelText('Vis'), { target: { value: 'done' } })
-    expect(screen.getAllByRole('article')).toHaveLength(1)
-    expect(screen.getByRole('button', { name: 'Sagt højt ✓' })).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByRole('heading', { name: 'Ordværksted' })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Øv japansk lyd' })).not.toBeInTheDocument()
+    expect(screen.queryAllByRole('button', { name: /^Hør / })).toHaveLength(0)
   })
 })

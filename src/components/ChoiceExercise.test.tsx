@@ -3,6 +3,8 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { ChoiceExercise } from './ChoiceExercise'
 import { buildQuestions } from '../lessons/exercises'
 import { buildVocabQuestions } from '../lessons/vocabExercises'
+import { TRY_AGAIN_ENTRY } from '../content/jaStrings'
+import { PRAISE } from '../rewards/copy'
 
 const questions = buildQuestions('find').slice(0, 2)
 const vocabOrdQuestions = buildVocabQuestions('2', 'ord')
@@ -41,7 +43,7 @@ describe('ChoiceExercise', () => {
     const { onCorrect } = renderExercise()
     fireEvent.click(screen.getByText(wrongChoice(0)))
 
-    expect(screen.getByText('دوباره')).toBeInTheDocument()
+    expect(screen.getByText(TRY_AGAIN_ENTRY.ja)).toBeInTheDocument()
     expect(screen.getByText('Prøv igen')).toBeInTheDocument()
     expect(screen.getByText('Se hele tegnet eller ordet')).toBeInTheDocument()
     expect(screen.getByText('Prøv én gang til')).toBeInTheDocument()
@@ -61,7 +63,7 @@ describe('ChoiceExercise', () => {
     expect(screen.queryByText('Næste')).not.toBeInTheDocument()
 
     fireEvent.click(screen.getByText(rightChoice(0)))
-    expect(screen.getByText('آفرین')).toBeInTheDocument()
+    expect(screen.getByText(PRAISE[0].ja)).toBeInTheDocument()
     expect(screen.getByLabelText('Rigtigt')).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('Næste'))
@@ -100,36 +102,33 @@ describe('ChoiceExercise', () => {
     expect(screen.getByText(/Kun de svar, du fandt/)).toBeInTheDocument()
   })
 
-  it('draws a vocab prompt marked above and below as a two-layer specimen, both marks red', () => {
-    // مَدرِسه: a زبر over the م and a زیر under the ر — the single gradient
-    // cut can only ever colour one of the two (plan 004's "Note on the red
-    // pen"). The exercise prompt must stack them exactly like the word screen.
+  it('draws a vocab prompt as one plain ink layer — kana carry no marks to red-pen', () => {
+    // No Japanese vocabulary word has a jaMarked spelling: kana carry no vowel
+    // marks, and dakuten belong to the lydtegn lesson, so the prompt renders
+    // the plain word the same way the word screen does — single layer, no red.
     const { container } = render(
       <ChoiceExercise
-        questions={[vocabQuestion('madrese')]}
+        questions={[vocabQuestion('konnichiwa')]}
         onCorrect={vi.fn()}
         onComplete={vi.fn()}
       />,
     )
-    expect(container.querySelector('.ja-specimen--vocalized')).not.toBeNull()
-    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('مَدرِسه')
-    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('مدرسه')
+    expect(container.querySelector('.ja-specimen')).not.toBeNull()
+    expect(container.querySelector('.ja-specimen--vocalized')).toBeNull()
+    expect(container.querySelector('.ja-specimen')?.className).toBe('ja-specimen')
   })
 
-  it('stacks a below-only mark too, never falling back to the single-layer pen class', () => {
-    // کِتاب carries only a زیر under the ک. JaSpecimen stacks any word whose
-    // jaMarked is ja plus اِعراب, regardless of which side the marks sit on —
-    // so this specimen must never carry a `pen-mark--*` class anywhere.
+  it('never red-pens a plain kana word, on the specimen or anywhere else', () => {
     const { container } = render(
       <ChoiceExercise
-        questions={[vocabQuestion('ketab')]}
+        questions={[vocabQuestion('hon')]}
         onCorrect={vi.fn()}
         onComplete={vi.fn()}
       />,
     )
-    expect(container.querySelector('.ja-specimen--vocalized')).not.toBeNull()
-    expect(container.querySelector('.ja-specimen__marks')?.textContent).toBe('کِتاب')
-    expect(container.querySelector('.ja-specimen__ink')?.textContent).toBe('کتاب')
-    expect(container.querySelector('[class*="pen-mark--"]')).toBeNull()
+    expect(container.querySelector('.ja-specimen')).not.toBeNull()
+    // All six lydtegn sit above or not at all; a vocabulary kana word has no
+    // mark, so the single-layer pen class must not appear anywhere in it.
+    expect(container.querySelectorAll('[class*="pen-mark--"]')).toHaveLength(0)
   })
 })

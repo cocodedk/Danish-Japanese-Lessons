@@ -5,7 +5,7 @@ import LessonImageRenderer from './LessonImageRenderer'
 describe('LessonImageRenderer', () => {
   it('renders one informative, local and responsive picture', () => {
     const { container } = render(
-      <LessonImageRenderer entryId="vocabulary-1-ab" eager />,
+      <LessonImageRenderer entryId="vocabulary-1-mizu" eager />,
     )
     const image = screen.getByRole('img', { name: 'Et glas vand' })
     const source = container.querySelector('source')
@@ -22,7 +22,7 @@ describe('LessonImageRenderer', () => {
 
   it('uses the small local file on narrow thumbnail cards', () => {
     const { container } = render(
-      <LessonImageRenderer entryId="vocabulary-1-ab" eager={false} size="thumbnail" />,
+      <LessonImageRenderer entryId="vocabulary-1-mizu" eager={false} size="thumbnail" />,
     )
     const image = screen.getByRole('img', { name: 'Et glas vand' })
     const source = container.querySelector('source')
@@ -31,9 +31,9 @@ describe('LessonImageRenderer', () => {
     expect(source).toHaveAttribute('media', '(min-width: 22.01rem)')
   })
 
-  it('renders a new starter illustration and nothing outside the catalog', () => {
+  it('renders a starter illustration and nothing outside the catalog', () => {
     const newImage = render(
-      <LessonImageRenderer entryId="vocabulary-1-baba" eager={false} />,
+      <LessonImageRenderer entryId="vocabulary-1-chichi" eager={false} />,
     )
     expect(screen.getByRole('img', { name: 'En far med sit barn' })).toHaveAttribute(
       'src', '/lesson-images/baba-480.jpg',
@@ -41,7 +41,7 @@ describe('LessonImageRenderer', () => {
     newImage.unmount()
 
     const { container } = render(
-      <LessonImageRenderer entryId="vocabulary-1-pesar" eager={false} />,
+      <LessonImageRenderer entryId="vocabulary-9-ukendt" eager={false} />,
     )
     expect(container).toBeEmptyDOMElement()
   })

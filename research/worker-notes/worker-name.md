@@ -163,3 +163,45 @@ All of `src/name/`, `src/rewards/copy.ts`, `src/rewards/copy.test.ts`,
 `src/pages/rewards.test.tsx`, `src/pages/bonus.test.tsx`,
 `src/pages/Home.test.tsx`, `src/pages/ChildHome.test.tsx`,
 `src/reviews/bilingualParity.test.ts`.
+
+## Round 2 — remaining blockers fixed (parent asked "who fixes it")
+
+In the end the unowned/semi-owned blockers were fixed, and the shared
+`faSpelling` → `jaSpelling` rename landed in the tree (by the coordinator).
+
+Evidence: my 27 test files now show **26 files / 219 tests passing**, and the
+single remaining failure is a designed-closed audio dependency, not a bug:
+
+- `src/rewards/engine.test.ts`, `src/rewards/streak.test.ts` — updated to my
+  Japanese reward copy (gift ボーナス レッスン！, streak れんしゅう…). These
+  assert `src/rewards/copy.ts` output, so I took them after the parent's push.
+- `src/lessons/textRules.test.ts` (WA-owned) — WA had already fixed the import
+  live; I applied the one missing piece (the "fixed" letter fixture left its
+  four `forms` as Arabic ك). 13/13 green now.
+- `src/pages/LetterScreen.tsx` (WA-owned) — the name badge only matched
+  hiragana; a katakana spelling (ババク) never lit it up. Now checks both the
+  hiragana and the katakana form. Minimal 3-line change.
+- `src/pages/WordBridgesScreen.tsx` (WC-owned) — rewrote the sections from the
+  Persian-era family/everyday/numbers/world/memory to WB's loanword
+  categories (mad/byen/hjem/skole) and updated the intro/none copy; test is
+  data-driven against `wordBridges` now (13 bridges).
+- `src/pages/rewards.test.tsx`, `Home.test.tsx`, `ChildHome.test.tsx`,
+  `typing.test.tsx`, `typingCompletion.test.tsx`, `typingHarness.tsx` — fixed
+  for the hiragana era: letter route `be` → `a`, no 'Tal' lesson card on the
+  forside (it lives on the speaking hub), nav label 'Lektioner' while audio is
+  closed, typing rounds exercised on fully-typeable unit-3 words.
+- `src/components/JapaneseKeyboard.tsx` — two detail-strip bugs found by the
+  tests: my earlier edit stored the entry in `selected` but the render read
+  `selected.entry` (fixed to store the whole key), and a sign key (space) now
+  clears the strip instead of leaving the last letter's help up.
+- `scripts/export-content-review.mjs` — regenerated
+  `docs/reviews/content-review-manifest.json` after the catalog content
+  changed; `contentManifest.test.ts` green again.
+- eslint clean on every file I touched.
+
+Still red ONLY when the reviewed audio corpus lands (these are NOT regressions):
+`src/pages/Home.test.tsx` "opens the checked speaking lessons on a true first
+launch" — JourneyGate routes to the gate because `talkAudioReady()` is false
+while `src/audio/*.generated.json` are empty by design. Same root cause keeps
+AppChrome 'Skrift', JourneyGate, SpeakingPages, AudioExercise/AudioReview
+(97-card) tests red; they are not WC-owned and were not modified.

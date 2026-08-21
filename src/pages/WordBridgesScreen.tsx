@@ -9,11 +9,10 @@ const sections: readonly {
   title: string
   lead: string
 }[] = [
-  { category: 'family', title: 'Familien', lead: 'Fire ord for mennesker tæt på dig.' },
-  { category: 'everyday', title: 'I hverdagen', lead: 'Ord fra hjemmet, naturen og sproget omkring dig.' },
-  { category: 'numbers', title: 'Tre tal', lead: 'Talord, der stadig kan genkendes på tværs af sprogene.' },
-  { category: 'world', title: 'Krop og himmel', lead: 'Fra tænder og navle til månen og stjernerne.' },
-  { category: 'memory', title: 'Lydlige huskebroer', lead: 'Gode at huske med, også når betydning eller ordhistorie kræver en forklaring.' },
+  { category: 'mad', title: 'Mad og drikke', lead: 'Kaffe, salat, hotdog og en menu at bestille fra.' },
+  { category: 'byen', title: 'I byen', lead: 'Hotel, bus, taxi og restaurant — byen ligner.' },
+  { category: 'hjem', title: 'Hjemme', lead: 'Tv, radio og kamera står derhjemme og lyder ens.' },
+  { category: 'skole', title: 'I skolen', lead: 'Pen og piano — ord du kan tage med i tasken.' },
 ]
 
 export default function WordBridgesScreen() {
@@ -26,11 +25,11 @@ export default function WordBridgesScreen() {
       <header className="word-bridges__intro">
         <p className="word-bridges__eyebrow">{wordBridges.length} ordbroer</p>
         <p className="word-bridges__lead">
-          Japansk og dansk gemmer på ord fra samme gamle familie.
-          Kan du finde lydene, der stadig ligner hinanden?
+          Japansk og dansk lånte nogle af de samme ord fra samme gamle kilde:
+          kaffe, hotel, bus, tv og radio. Lydene genkender du allerede.
         </p>
         <p className="word-bridges__note">
-          Et lydspor hjælper hukommelsen. Det er ikke en regel for alle ord.
+          Disse ord er lydlige broer — ikke en regel, der gælder alle japanske ord.
         </p>
       </header>
 

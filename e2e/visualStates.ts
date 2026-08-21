@@ -64,7 +64,7 @@ async function sessionSummary(page: Page) {
   await page.getByRole('button', { name: 'Øv med hjælp' }).click()
   await page.getByRole('button', { name: /Peg på svaret med hjælp/ }).click()
   await page.getByRole('button', { name: 'Prøv uden hjælp' }).click()
-  await page.locator('.review-session__choices button').filter({ hasText: 'آ' }).click()
+  await page.locator('.review-session__choices button').filter({ hasText: 'あ' }).click()
   await page.getByRole('button', { name: 'Stop for i dag' }).click()
   await expect(page.getByRole('heading', { name: 'Dagens repetition er færdig' })).toBeVisible()
 }
@@ -74,7 +74,7 @@ export async function prepareVisualState(page: Page, state: VisualState) {
     await page.goto(`./?visual-reset=${resetId += 1}#/`)
     await page.evaluate(() => localStorage.clear())
     await page.reload()
-    return expect(page.getByRole('heading', { name: 'Lær at tale japansk' })).toBeVisible()
+    return expect(page.getByRole('heading', { name: 'Japansk på din måde' })).toBeVisible()
   }
   if (state === 'orientation') {
     await page.goto(`./?visual-reset=${resetId += 1}#/`)
@@ -82,35 +82,35 @@ export async function prepareVisualState(page: Page, state: VisualState) {
     await page.reload()
     return open(page, '#/lesson/alphabet')
   }
-  await reset(page, state === 'name-settings' ? { name: 'Sara', faSpelling: 'سارا' } : {})
+  await reset(page, state === 'name-settings' ? { name: 'Sara', jaSpelling: 'サラ' } : {})
   if (state === 'child-workshop') return open(page, '#/opdag')
   if (state === 'child-build') {
-    await open(page, '#/opdag/ord/ab')
+    await open(page, '#/opdag/ord/mizu')
     await page.getByRole('button', { name: 'Byg ordet' }).click()
     return expect(page.getByText('1 af 2 · Følg markeringen fra højre.')).toBeVisible()
   }
   if (state === 'child-round-ready') {
-    await open(page, '#/opdag/ord/ab')
+    await open(page, '#/opdag/ord/mizu')
     await page.getByRole('button', { name: 'Byg ordet' }).click()
-    await page.getByRole('button', { name: 'Vælg آ, næste tegn' }).click()
-    await page.getByRole('button', { name: 'Vælg ب, næste tegn' }).click()
+    await page.getByRole('button', { name: 'Vælg み, næste tegn' }).click()
+    await page.getByRole('button', { name: 'Vælg ず, næste tegn' }).click()
     return expect(page.getByRole('button', { name: 'Prøv selv' })).toBeVisible()
   }
   if (state === 'child-reveal') {
-    await open(page, '#/opdag/ord/ab')
+    await open(page, '#/opdag/ord/mizu')
     await page.getByRole('button', { name: 'Byg ordet' }).click()
-    await page.getByRole('button', { name: 'Vælg ب' }).click()
+    await page.getByRole('button', { name: 'Vælg ず' }).click()
     return expect(page.getByRole('button', { name: 'Prøv igen' })).toBeVisible()
   }
   if (state === 'child-complete') {
-    await open(page, '#/opdag/ord/ab')
+    await open(page, '#/opdag/ord/mizu')
     await page.getByRole('button', { name: 'Byg ordet' }).click()
-    for (const name of ['Vælg آ, næste tegn', 'Vælg ب, næste tegn']) {
+    for (const name of ['Vælg み, næste tegn', 'Vælg ず, næste tegn']) {
       await page.getByRole('button', { name }).click()
     }
     await page.getByRole('button', { name: 'Prøv selv' }).click()
-    for (const name of ['Vælg آ', 'Vælg ب']) await page.getByRole('button', { name }).click()
-    await expect(page.getByText('Nu er آب i din samling.')).toBeVisible()
+    for (const name of ['Vælg み', 'Vælg ず']) await page.getByRole('button', { name }).click()
+    await expect(page.getByText('Nu er みず i din samling.')).toBeVisible()
     return expect(page.locator('.page-flip')).toHaveCount(0)
   }
   if (state === 'home') {
@@ -123,7 +123,7 @@ export async function prepareVisualState(page: Page, state: VisualState) {
     await page.evaluate(() => scrollTo(0, Math.min(800, document.documentElement.scrollHeight)))
     return expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(0)
   }
-  if (state === 'detail') return open(page, '#/lesson/alphabet/bogstav/be')
+  if (state === 'detail') return open(page, '#/lesson/alphabet/bogstav/a')
   if (state === 'exercise-active') return open(page, '#/lesson/alphabet/ovelse/find')
   if (state === 'exercise-wrong') return wrongExercise(page)
   if (state === 'exercise-correct') return correctExercise(page)
@@ -131,7 +131,7 @@ export async function prepareVisualState(page: Page, state: VisualState) {
   if (state === 'typing-active') return open(page, '#/lesson/ord/1/skriv')
   if (state === 'typing-feedback') {
     await open(page, '#/lesson/ord/1/skriv')
-    await page.getByRole('button', { name: 'be' }).click()
+    await page.getByRole('button', { name: 'ka' }).click()
     await page.getByRole('button', { name: 'Se efter' }).click()
     return expect(page.getByRole('button', { name: 'Prøv én gang til' })).toBeVisible()
   }

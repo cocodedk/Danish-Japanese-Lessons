@@ -29,13 +29,15 @@ beforeEach(() => {
 })
 
 describe('Home', () => {
-  it('opens the checked speaking lessons on a true first launch', async () => {
+  it('starts a true first launch on the journey gate while speaking is closed', async () => {
     window.localStorage.clear()
     window.location.hash = ''
     rtlRender(<App />)
 
-    expect(await screen.findByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Øv alle lyde/ })).toBeInTheDocument()
+    // No talk corpus is approved yet, so a first launch never lands on /tal;
+    // it opens the gate's three-way choice instead, and asks for no name.
+    expect(await screen.findByRole('heading', { name: 'Japansk på din måde' })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Lær at tale japansk' })).not.toBeInTheDocument()
     expect(screen.queryByLabelText('Hvad hedder du?')).not.toBeInTheDocument()
   })
 
@@ -135,8 +137,10 @@ describe('Home', () => {
     expect(lesson).toHaveAttribute('href', '/lesson/alphabet')
     expect(screen.getByText(`0 af ${ALPHABET_TOTAL} set eller øvet`)).toBeInTheDocument()
     // The first word unit card — the 'Tal' card lives on the speaking hub now.
-    const firstUnit = screen.getByRole('link', { name: /^De første ord$/ })
-    expect(firstUnit).toHaveAttribute('href', '/lesson/ord/1')
+    const firstUnit = screen
+      .getAllByRole('link')
+      .find((link) => link.getAttribute('href') === '/lesson/ord/1')!
+    expect(firstUnit).toBeInTheDocument()
   })
 
   it('deleting the name from the settings corner reverts the greeting to plain Hej!', () => {

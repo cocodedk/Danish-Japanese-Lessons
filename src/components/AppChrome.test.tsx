@@ -26,11 +26,11 @@ describe('AppChrome', () => {
     expect(screen.getByRole('heading', { name: 'Indstillinger' })).toBeVisible()
   })
 
-  it('marks lesson screens as part of Skrift', () => {
+  it('marks lesson screens inside the Lektioner hub while speaking is closed', () => {
     renderChrome('/lesson/alphabet')
 
     expect(screen.getByRole('button', { name: 'Indstillinger' })).toBeVisible()
-    expect(screen.getByRole('link', { name: 'Skrift' })).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByRole('link', { name: 'Lektioner' })).toHaveAttribute('aria-current', 'page')
   })
 
   it('shows the release version and dedication on the About tab', () => {

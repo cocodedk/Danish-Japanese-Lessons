@@ -7,7 +7,7 @@ async function seed(page: Page) {
     localStorage.setItem('djl.v1.profile', profile)
     localStorage.setItem('djl.v1.alphabet', alphabet)
   }, [
-    envelope({ name: 'Sara', faSpelling: 'سارا' }),
+    envelope({ name: 'Sara', jaSpelling: 'サラ' }),
     envelope({ letters: [], marks: [], orientationSeen: true }),
   ])
 }
@@ -22,11 +22,11 @@ test.beforeEach(async ({ page }) => seed(page))
 test('representative routes retain enhanced target sizes at narrow width', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 844 })
   const routes = [
-    '#/', '#/opdag', '#/opdag/ord/ab', '#/lesson/alphabet', '#/lesson/alphabet/intro',
-    '#/lesson/alphabet/bogstav/be', '#/lesson/alphabet/ovelse/find',
+    '#/', '#/opdag', '#/opdag/ord/mizu', '#/lesson/alphabet', '#/lesson/alphabet/intro',
+    '#/lesson/alphabet/bogstav/a', '#/lesson/alphabet/ovelse/find',
     '#/lesson/ord/1', '#/lesson/ord/1/skriv', '#/puslespil/alphabet-1-match',
     '#/repetition', '#/dit-navn', '#/lesson/navn',
-    '#/ord-der-ligner', '#/billedkilder', '#/lesson/ord/1/ab',
+    '#/ord-der-ligner', '#/billedkilder', '#/lesson/ord/1/mizu',
   ]
   for (const route of routes) {
     await open(page, route)
@@ -62,7 +62,7 @@ test('the learner can choose and keep light or dark colours', async ({ page }) =
 test('400 percent reflow equivalent and text-spacing overrides do not lose content', async ({ page }) => {
   // A 1280px desktop viewport at 400% browser zoom exposes about 320 CSS px.
   await page.setViewportSize({ width: 320, height: 844 })
-  for (const route of ['#/', '#/opdag', '#/opdag/ord/ab', '#/lesson/alphabet/intro', '#/lesson/ord/1/ab', '#/repetition']) {
+  for (const route of ['#/', '#/opdag', '#/opdag/ord/mizu', '#/lesson/alphabet/intro', '#/lesson/ord/1/mizu', '#/repetition']) {
     await open(page, route)
     await page.addStyleTag({ content: `
       * { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; }
@@ -73,18 +73,25 @@ test('400 percent reflow equivalent and text-spacing overrides do not lose conte
   }
 })
 
+test('a katakana name keeps the typing capstone dormant', async ({ page }) => {
+  await open(page, '#/lesson/navn/skriv')
+  await expect(page.getByRole('heading', { name: 'Lær japansk skrift' })).toBeVisible()
+  await open(page, '#/')
+  await expect(page.getByRole('link', { name: 'Tast dit navn' })).toHaveCount(0)
+})
+
 test('typing buffer and focus survive live resize and rotation', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await open(page, '#/lesson/ord/1/skriv')
-  await page.getByRole('button', { name: 'alef med madde' }).click()
-  const be = page.getByRole('button', { name: 'be' })
-  await be.focus()
+  await page.getByRole('button', { name: 'a' }).click()
+  const ka = page.getByRole('button', { name: 'ka' })
+  await ka.focus()
   await page.setViewportSize({ width: 1024, height: 768 })
-  await expect(page.locator('.type__written')).toHaveText('آ')
-  await expect(be).toBeFocused()
+  await expect(page.locator('.type__written')).toHaveText('あ')
+  await expect(ka).toBeFocused()
   await page.setViewportSize({ width: 640, height: 360 })
-  await expect(page.locator('.type__written')).toHaveText('آ')
-  await expect(be).toBeFocused()
+  await expect(page.locator('.type__written')).toHaveText('あ')
+  await expect(ka).toBeFocused()
   expect(await page.locator('body').evaluate((body) => body.scrollWidth <= body.clientWidth)).toBe(true)
 })
 
@@ -92,7 +99,7 @@ test('lesson photos reflow from phone to wide screen and with large text', async
   test.skip(browserName !== 'chromium', 'One browser records the full photo size matrix')
   for (const width of [320, 390, 768, 1280, 2560]) {
     await page.setViewportSize({ width, height: 900 })
-    await open(page, '#/lesson/ord/1/ab')
+    await open(page, '#/lesson/ord/1/mizu')
     const image = page.getByRole('img', { name: 'Et glas vand' })
     await expect(image).toBeVisible()
     const box = await image.boundingBox()
@@ -103,7 +110,7 @@ test('lesson photos reflow from phone to wide screen and with large text', async
 
   for (const rootSize of ['32px', '64px']) {
     await page.setViewportSize({ width: 1280, height: 900 })
-    await open(page, '#/lesson/ord/1/ab')
+    await open(page, '#/lesson/ord/1/mizu')
     await page.evaluate((size) => { document.documentElement.style.fontSize = size }, rootSize)
     await expect(page.getByText('vand', { exact: true })).toBeVisible()
     expect(await page.locator('body').evaluate((body) => body.scrollWidth <= body.clientWidth)).toBe(true)

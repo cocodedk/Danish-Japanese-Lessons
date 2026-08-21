@@ -84,7 +84,7 @@ describe('the two rounds', () => {
     const wrong = questions[0].choices.find((choice) => choice.id !== questions[0].answerId)!
     fireEvent.click(screen.getAllByRole('button').find((each) => each.textContent === wrong.glyph)!)
 
-    expect(screen.getByText('دوباره')).toBeInTheDocument()
+    expect(screen.getByText('もう いちど')).toBeInTheDocument()
     expect(getRewards().points).toBe(0)
   })
 
