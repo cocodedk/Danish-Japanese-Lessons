@@ -53,4 +53,29 @@ export const beginnerNumbers: BeginnerNumber[] = [
   number(10, ['十', 'じゅう', 'じゅう', 'ti', 'juu', 'dʑɯː']),
 ]
 
+/**
+ * Eleven through twenty for the "Tæl til tyve" lesson. The digit cell shows
+ * the plain ASCII number, not the kanji compound: plan 004 teaches the kanji
+ * only through 十, so 十一–二十 would push kanji the reader has not met. The
+ * everyday kana form carries the sound, and the Danish name carries the
+ * meaning — the same split the 1–10 rows use.
+ */
+export const teenNumbers: BeginnerNumber[] = [
+  number(11, ['11', 'じゅういち', 'じゅういち', 'elleve', 'juuichi', 'dʑɯːitɕi']),
+  number(12, ['12', 'じゅうに', 'じゅうに', 'tolv', 'juuni', 'dʑɯːni']),
+  number(13, ['13', 'じゅうさん', 'じゅうさん', 'tretten', 'juusan', 'dʑɯːsan']),
+  number(14, ['14', 'じゅうよん', 'じゅうよん', 'fjorten', 'juuyon', 'dʑɯːjoɴ']),
+  number(15, ['15', 'じゅうご', 'じゅうご', 'femten', 'juugo', 'dʑɯːgo']),
+  number(16, ['16', 'じゅうろく', 'じゅうろく', 'seksten', 'juuroku', 'dʑɯːɾokɯ']),
+  number(17, ['17', 'じゅうなな', 'じゅうなな', 'sytten', 'juunana', 'dʑɯːnana']),
+  number(18, ['18', 'じゅうはち', 'じゅうはち', 'atten', 'juuhachi', 'dʑɯːhatɕi']),
+  number(19, ['19', 'じゅうきゅう', 'じゅうきゅう', 'nitten', 'juukyuu', 'dʑɯːkʲɯː']),
+  number(20, ['20', 'にじゅう', 'にじゅう', 'tyve', 'nijuu', 'nidʑɯː']),
+]
+
+/** Every number the counting lesson teaches, one through twenty. */
+export const countingNumbers: BeginnerNumber[] = [...beginnerNumbers, ...teenNumbers]
+
 export const numberCatalog = beginnerNumbers.flatMap(({ digit, word }) => [digit, word])
+
+export const countingCatalog = countingNumbers.flatMap(({ digit, word }) => [digit, word])

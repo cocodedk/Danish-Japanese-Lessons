@@ -6,8 +6,11 @@ import { AppChrome } from '../components/AppChrome'
 import { childMissions } from '../child/missions'
 import { addCollectedMission } from '../progress/childCollection'
 import { getJourneyChoice } from '../progress/journey'
+import { formatCountingNumber, formatCountingRange } from '../lessons/countingDisplay'
+import { countingCurriculum, countingLesson } from '../lessons/countingLesson'
+import { countingCurriculumProgressLine } from '../progress/countingCurriculum'
+import { learnCountingItem } from '../progress/counting'
 import { conversationBasics } from '../lessons/conversation'
-import { beginnerNumbers } from '../lessons/numbers'
 
 function renderHome() {
   return render(
@@ -59,13 +62,57 @@ describe('ChildHome', () => {
     expect(within(section).getByText('Jeg hedder …')).toBeVisible()
   })
 
-  it('keeps Japanese numbers in their own beginner section', () => {
+  it('opens exactly the counting curriculum, in curriculum order', () => {
     renderHome()
-    const section = screen.getByRole('heading', { name: 'Tal fra 1 til 10' }).closest('section')!
-    expect(within(section).getAllByRole('listitem')).toHaveLength(beginnerNumbers.length)
-    for (const row of beginnerNumbers) {
-      expect(within(section).getByText(row.word.ja)).toBeVisible()
-    }
+    const section = screen.getByRole('heading', { name: 'Tal på japansk' }).closest('section')!
+    const links = within(section).getAllByRole('link')
+    expect(links.map((link) => link.getAttribute('href'))).toEqual(
+      countingCurriculum.map((entry) => entry.path),
+    )
+    links.forEach((link) => {
+      expect(link).not.toHaveAttribute('aria-disabled')
+      expect(link.getAttribute('href')).toBeTruthy()
+    })
+  })
+
+  it('reads every line on every counting card off the descriptor and the adapter', () => {
+    renderHome()
+    const section = screen.getByRole('heading', { name: 'Tal på japansk' }).closest('section')!
+    const links = within(section).getAllByRole('link')
+    countingCurriculum.forEach((entry, index) => {
+      const link = links[index]
+      expect(link).toHaveTextContent(entry.title)
+      expect(link).toHaveTextContent(entry.summary)
+      expect(link).toHaveTextContent(countingCurriculumProgressLine(entry))
+      expect(link).toHaveTextContent(
+        entry === countingLesson
+          ? `${countingLesson.numbers.length} tal ${formatCountingRange(entry.range)}`
+          : `Tal ${formatCountingRange(entry.range)}`,
+      )
+    })
+  })
+
+  it('sends counting to the lessons instead of teaching numbers inline', () => {
+    renderHome()
+    const section = screen.getByRole('heading', { name: 'Tal på japansk' }).closest('section')!
+    expect(section.querySelectorAll('li')).toHaveLength(0)
+    expect(section.querySelectorAll('.entry-phrase')).toHaveLength(0)
+    expect(screen.queryByText(formatCountingNumber(1))).toBeNull()
+  })
+
+  it('reads a live progress line on each counting card', () => {
+    const first = renderHome()
+    const section = screen.getByRole('heading', { name: 'Tal på japansk' }).closest('section')!
+    const firstLink = within(section).getAllByRole('link')[0]
+    expect(firstLink).toHaveTextContent('0 af 20 tal gennemgået eller øvet')
+    first.unmount()
+
+    // Mark the first number: a fresh render of the workshop shows the store.
+    learnCountingItem(countingLesson.numbers[0].word.id)
+    renderHome()
+    const fresh = screen.getByRole('heading', { name: 'Tal på japansk' }).closest('section')!
+    expect(within(fresh).getAllByRole('link')[0])
+      .toHaveTextContent('1 af 20 tal gennemgået eller øvet')
   })
 
   it('opens a separate animal lesson with clear photo choices', () => {

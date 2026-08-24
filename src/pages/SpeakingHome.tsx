@@ -4,6 +4,10 @@ import { LessonImage } from '../components/LessonImage'
 import { JapaneseText } from '../components/JapaneseText'
 import { RuledSection } from '../components/RuledSection'
 import { allSpeakingPractice } from '../progress/speaking'
+import { formatCountingNumber, formatCountingRange } from '../lessons/countingDisplay'
+import { countingCurriculum, countingLesson } from '../lessons/countingLesson'
+import type { CountingCurriculumEntry } from '../lessons/countingLesson'
+import { countingCurriculumProgressLine } from '../progress/countingCurriculum'
 import { requiredTalkClipIds, speakingLessons, talkAudioReady } from '../speaking/lessons'
 import './speaking.css'
 
@@ -57,9 +61,45 @@ export default function SpeakingHome() {
                 </Link>
               )
             })}
+            {countingCurriculum.map((entry) => (
+              <CountingCard entry={entry} key={entry.path} />
+            ))}
           </div>
         </section>
       </RuledSection>
     </main>
+  )
+}
+
+/**
+ * One counting lesson on the talk shelf, as a door to the course route that
+ * owns it. Everything on the card — where it goes, what it is called, what it
+ * says and which numbers it covers — is read off the curriculum descriptor, so
+ * the shelf can never disagree with the lesson it points at.
+ *
+ * Only the foundation shows a Japanese preview, and only of its own first row.
+ * A lesson still being written shows no preview: the badge carries the plain
+ * number its range starts at, and the text meta says the full range without
+ * claiming how any of it is said.
+ */
+function CountingCard({ entry }: { entry: CountingCurriculumEntry }) {
+  const foundation = entry === countingLesson ? countingLesson : null
+  return (
+    <Link className="speaking-lesson-card" to={entry.path}>
+      <div className="speaking-number speaking-number--small" aria-hidden="true">
+        {formatCountingNumber(foundation ? foundation.numbers[0].value : entry.range[0])}
+      </div>
+      <div>
+        {foundation && <JapaneseText entry={foundation.numbers[0].word} marked />}
+        <h3>{entry.title}</h3>
+        <p>{entry.summary}</p>
+        <strong>
+          {foundation
+            ? `${foundation.numbers.length} tal ${formatCountingRange(entry.range)}`
+            : `Tal ${formatCountingRange(entry.range)}`}
+        </strong>
+        <p>{countingCurriculumProgressLine(entry)}</p>
+      </div>
+    </Link>
   )
 }

@@ -1,3 +1,34 @@
+## 2026-08-24 (agent) — ported DPL's player redesign, layout measurement, and counting 1–20
+
+**State** — Done + pushed. DPL main (8dd05bf) was pulled and its three moves ported into DJL:
+sound player redesign, layout changes, counting 1–20 ("Tæl til tyve"). Full `npm run verify`
+green: 678 unit (+66), 119 e2e / 40 visual-perf skipped by design, 81 verify.sh PASS. Committed
+as `feat: port DPL sound player, nav measurement, and counting 1–20`.
+
+**Tried** — Copied DPL's new 200-line `AudioControl` (1×/0.8×/0.5× speeds, stop, mute, Lydvalg
+bank, monotonic `playRequest` protocol) + the four player test files; adapted fixtures to ja and
+added the manifest mock `OptionalAudioControl.test.tsx` needed because DPL's relied on real
+approved clips. Ported EntryRenderers placement (`audio row` order + reserved row), AreaNav
+ResizeObserver (`--area-nav-block-size`), vocab.css tile vars, and the counting lesson
+(numbers 11–20 with everyday kana — ASCII digits as the 11–20 symbols since plan 004 only teaches
+kanji 一–十), screens, store `djl.v1.counting`, cards on Home / workshop / talk shelf, routes.
+Fixed one real port gap: DJL ChoiceExercise always rendered PronLine — it now honors
+`showsPron: false` from plan 010, exactly like DPL. Re-recorded visual baselines (120 PNG) after
+the deliberate pixel changes.
+
+**Lesson** — A DPL test that passes against real repo data may fail in DJL because DJL has no
+approved audio yet: tests must mock the manifest, not the screen. Playwright role-name matching is
+substring by default — the counting card's Danish word "tal" trips "no link named Tal" checks;
+use `exact: true` when asserting hub names. e2e geometry bounds are font-sensitive: DJL's
+Andika/kana metrics pushed the reserved audio row to ~167 px vs DPL's 160-bound; re-measure, then
+state the real geometry in the bound.
+
+**Next** — Human (Babak/Fable) sign-off on the re-recorded visual baselines. Counting 11–20 rows
+have no audio queue rows yet (queue numbers scope is still 1–10 only) — decide whether the teens
+join the talk corpus before generating. Then the standing items: native Japanese review of the 90
+talk clips → `#/tal` opens; the llm-verifier pilot via OpenRouter+DeepSeek once `OPENROUTER_API_KEY`
+is in env.
+
 ## 2026-08-21 (agent) — took the tree home: LTR fix landed, audio pipeline actually runs
 
 **State** — Done for this session. 016 merged + live (LTR fix e8b683a pushed by the parallel

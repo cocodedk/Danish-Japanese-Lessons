@@ -20,6 +20,8 @@ import PuzzleScreen from './pages/PuzzleScreen'
 import { RouteEffects } from './components/RouteEffects'
 import ReviewScreen from './pages/ReviewScreen'
 import ConnectedReadingScreen from './pages/ConnectedReadingScreen'
+import CountingScreen from './pages/CountingScreen'
+import CountingExerciseScreen from './pages/CountingExerciseScreen'
 import { PersistenceNotice } from './components/PersistenceNotice'
 import JourneyGate from './pages/JourneyGate'
 import { AppChrome } from './components/AppChrome'
@@ -62,6 +64,8 @@ export default function App() {
           {/* The grade-1 word units. Any unit, any word, any time — no gating. */}
           <Route path="/lesson/ord/:unit" element={<VocabUnitScreen />} />
           <Route path="/lesson/ord/:unit/ovelse/:kind" element={<VocabExerciseScreen />} />
+          <Route path="/lesson/taelle" element={<LoadingRoute><CountingScreen /></LoadingRoute>} />
+          <Route path="/lesson/taelle/ovelse/:kind" element={<LoadingRoute><CountingExerciseScreen /></LoadingRoute>} />
           {/* Static before dynamic: «skriv» is the typing round, never a word id. */}
           <Route path="/lesson/ord/:unit/skriv" element={<TypeWordScreen />} />
           <Route path="/lesson/ord/:unit/laes/:reading" element={<ConnectedReadingScreen />} />

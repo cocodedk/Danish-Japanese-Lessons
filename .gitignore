@@ -22,3 +22,6 @@ Thumbs.db
 
 # Claude Code
 .claude/settings.local.json
+
+# LLM-verifier pilot environment (never shipped)
+.verify-venv/
