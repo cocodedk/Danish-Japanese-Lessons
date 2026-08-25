@@ -71,6 +71,11 @@ plans P1–P15 below stay as history of the Persian-era project.
       bridges, Danish names in katakana, and the trilingual landing site. It supersedes the
       Persian-era content decisions of P1–P15 without rewriting those historical plans.
 
+- [ ] **P17 — [017-meeting-a-new-person.md](017-meeting-a-new-person.md)** (proposed 2026-08-24):
+      one new speaking lesson "Mød et nyt menneske" — 12 pages, 10 new phrases + queue rows
+      (greeting the day, names, where are you from, the politeness pair, see you again), talk
+      path remains audio-gated until the new clips get named native-Japanese review.
+
 ## Later (not planned yet — do not build ahead)
 
 Full writing practice (tracing letters with a finger, beyond the stroke-order drawings of P3) · PWA
