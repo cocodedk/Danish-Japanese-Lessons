@@ -8,7 +8,7 @@ describe('speaking lessons', () => {
     // The corpus carries exactly the clips the talk screens use — conversation,
     // numbers, connected reading with its function words, vocabulary, unit
     // titles and loanword bridges — all of them real, speakable catalog entries.
-    expect(requiredTalkClipIds.length).toBe(90)
+    expect(requiredTalkClipIds.length).toBe(100)
     expect(new Set(requiredTalkClipIds).size).toBe(requiredTalkClipIds.length)
     const catalogIds = new Set(japaneseCatalog.filter((e) => !e.audioNotApplicable).map((e) => e.id))
     for (const id of requiredTalkClipIds) expect(catalogIds.has(id), id).toBe(true)

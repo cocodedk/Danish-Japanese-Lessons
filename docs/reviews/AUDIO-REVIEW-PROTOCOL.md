@@ -1,9 +1,9 @@
 # Reviewed Japanese audio protocol
 
-Status: 90 talk drafts exist locally (unpublished, unreviewed); zero clips are online or approved. The learner talk path stays closed until every launch clip has one named native-Japanese approval.
+Status: 90 talk drafts exist locally (unpublished, unreviewed) and 10 new meeting phrases wait for their first draft; zero clips are online or approved. The learner talk path stays closed until every launch clip has one named native-Japanese approval.
 
-`npm run audio:queue` writes the checked-in review queue. It currently has 240 rows: 90 for
-the first talk corpus and 150 for the writing path. Each row carries the Japanese text,
+`npm run audio:queue` writes the checked-in review queue. It currently has 250 rows: 100 for
+the talk corpus (90 shipped + 10 meeting phrases) and 150 for the writing path. Each row carries the Japanese text,
 Danish meaning, Danish sound spelling, IPA, register, source hash input, and draft path, and
 every row lists native-Japanese review before it may be generated or published.
 
@@ -29,7 +29,7 @@ npm run audio:publish-review
 npm run audio:verify-review
 ```
 
-This copies only the latest complete set of 90 talk drafts to `public/audio-review/` and writes a
+This copies only the latest complete set of talk drafts to `public/audio-review/` and writes a
 separate list whose status is always `unreviewed`. It never writes the approved lesson list.
 The direct page `#/lydreview` lets a reviewer listen, mark God or Fejl, add notes, and share or
 download an `audio-decisions.json` file.

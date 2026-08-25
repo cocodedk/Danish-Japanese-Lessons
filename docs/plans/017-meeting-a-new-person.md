@@ -1,6 +1,6 @@
 # Plan 017 — "Mød et nyt menneske" (meeting someone new)
 
-Status: **proposed (2026-08-24)**. One new speaking lesson of 12 pages for the first real
+Status: **merged (2026-08-24) — user answers: アンナ · "Mød et nyt menneske" · keep こんばんは. Implemented, tested, pushed.** One new speaking lesson of 12 pages for the first real
 conversation: hello at any time of day, names, where you come from, the polite set
 phrases of a first meeting, and a friendly parting. It extends the existing launch
 corpus (90 review rows) with new catalog rows and new audio-queue rows; the learner
@@ -78,19 +78,19 @@ Notes:
 
 ## Acceptance (check off when done)
 
-- [ ] `npm run verify` green; no new dependencies.
-- [ ] `speaking/lessons.test.ts` asserts 100 talk ids, no duplicates, all in catalog.
-- [ ] The 10 new entries pass the Japanese-text rules (no Arabic/Persian blocks, no ZWNJ;
+- [x] `npm run verify` green; no new dependencies.
+- [x] `speaking/lessons.test.ts` asserts 100 talk ids, no duplicates, all in catalog.
+- [x] The 10 new entries pass the Japanese-text rules (no Arabic/Persian blocks, no ZWNJ;
       hiragana default, katakana only in アンナ and デンマーク).
-- [ ] `#/tal` shows "Mød et nyt mennesker" direkt under "Hils på japansk" with one
+- [x] `#/tal` shows "Mød et nyt mennesker" direkt under "Hils på japansk" with one
       picture-book page for each of the 12 rows (photo/colour/number per page, same
       renderer as `hils`).
-- [ ] The talk gate stays closed (`talkAudioReady() === false`): the 12 clips are at most
+- [x] The talk gate stays closed (`talkAudioReady() === false`): the 12 clips are at most
       `unreviewed` in `review.generated.json`, never `approved`; and 10 of them do not yet
       exist locally.
-- [ ] Every page shows Danish meaning, dansk lydskrift, and the catalog's IPA — never
+- [x] Every page shows Danish meaning, dansk lydskrift, and the catalog's IPA — never
       improvised in the UI.
-- [ ] Nothing locks: no puzzle gate on any page, no dependency between pages.
+- [x] Nothing locks: no puzzle gate on any page, no dependency between pages.
 
 ## Questions for the user
 

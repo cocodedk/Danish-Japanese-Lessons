@@ -31,5 +31,8 @@ export const launchTalkClipIds: readonly string[] = [
   'word-bridge-takushii', 'word-bridge-menyuu', 'word-bridge-terebi', 'word-bridge-rajio',
   'word-bridge-kamera', 'word-bridge-resutoran', 'word-bridge-sarada', 'word-bridge-hottodoggu',
   'word-bridge-pen', 'word-bridge-piano',
+  'meeting-konbanwa', 'meeting-hajimemashite', 'meeting-name', 'meeting-o-namae',
+  'meeting-doko-kara', 'meeting-denmark', 'meeting-yoroshiku', 'meeting-kochira',
+  'meeting-mata-aimasho', 'meeting-arigatou',
 ] as const
 

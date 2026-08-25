@@ -37,7 +37,8 @@ describe('speaking-first pages', () => {
       </MemoryRouter>,
     )
     expect(screen.getByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
-    expect(screen.getAllByText(/korte sider/)).toHaveLength(7)
+    // The talk shelf: hils, moede, five vocab lessons, and numbers = 8 lessons.
+    expect(screen.getAllByText(/korte sider/)).toHaveLength(8)
     expect(screen.getByText('Hør. Sig det. Hør dig selv.')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Øv alle lyde/ })).toHaveAttribute('href', '/lydovelse')
   })

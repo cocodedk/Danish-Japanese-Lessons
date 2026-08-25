@@ -1,3 +1,33 @@
+## 2026-08-24 (agent) — Plan 017 "Mød et nyt menneske" implemented & merged; SEO pass
+
+**State** — Done + pushed. Plan 017 (approved by Babak: アンナ, title "Mød et nyt
+menneske", keep こんばんは) implemented: 10 new `meeting-*` catalog phrases (kind
+phrase, own `meeting` catalog domain), `moede` speaking lesson with 12 pages (reuses
+こんにちは + さようなら), launch corpus 90 → 100 ids, audio queue regenerated to 250
+rows (100 talk + 150 writing), content-review manifest refreshed, protocol doc
+updated. Full `npm run verify` green: 682 unit, 119 e2e, 81 PASS lines.
+
+**Tried** — Registered the meeting domain the way the catalog/registry pattern wants
+(a `src/catalog/meeting.ts` re-export, not importing `../lessons/meeting` into
+registry). Regenerated `audio-recording-queue.json` and `content-review-manifest.json`
+via `npm run audio:queue` / `npm run review:content` instead of hand-editing — the
+tests proved why: contentManifest.test pins the artifact to the catalog, and the
+queue is generated from the catalog + launchCorpus. ESM test note: `require()` does
+not work in Vitest; use a top-level `import`.
+
+**Lesson** — SpeakingPages.test expected 7 shelf lessons ("korte sider"); new lesson
+makes 8 — update the test count when the shelf grows. SEO: landing pages already
+carried title/description/canonical/hreflang x-default/OG+alt/Twitter/JSON-LD with
+per-locale inLanguage; this session added `og:image:type` + `isAccessibleForFree`,
+and bumped sitemap `lastmod` to the release date. verify.sh keeps the "3 <loc>"
+sitemap constraint, so no app URL is added there.
+
+**Next** — 10 meeting clips have no local drafts yet: run `npm run audio:generate
+-- --clip meeting-*` scope when convenient (still unreviewed, so the gate stays
+closed). Then the standing items: native Japanese review (user has no speaker on
+site — gate stays closed by design), visual baseline sign-off, llm-verifier pilot
+once OPENROUTER_API_KEY is exported.
+
 ## 2026-08-24 (agent) — ported DPL's player redesign, layout measurement, and counting 1–20
 
 **State** — Done + pushed. DPL main (8dd05bf) was pulled and its three moves ported into DJL:

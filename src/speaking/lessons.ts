@@ -2,6 +2,8 @@ import { findPronunciationAudio } from '../audio/manifest'
 import type { JapaneseEntry } from '../catalog/types'
 import { lessonImageForEntry } from '../images/catalog'
 import { conversationBasics } from '../lessons/conversation'
+import { GOODBYE_ENTRY } from '../lessons/conversation'
+import { MEETING_PHRASES } from '../lessons/meeting'
 import { beginnerNumbers } from '../lessons/numbers'
 import { findVocabUnit, type ColorSwatchId } from '../lessons/vocab'
 import { launchTalkClipIds } from './launchCorpus'
@@ -37,6 +39,13 @@ function vocabLesson(unitId: string, summary: string): SpeakingLesson {
   }
 }
 
+function greetingEntry() {
+  const unit = findVocabUnit('2')
+  const word = unit?.words.find((item) => item.id === 'konnichiwa')
+  if (!word) throw new Error('Missing meeting greeting: vocabulary-2-konnichiwa')
+  return word.entry
+}
+
 export const speakingLessons: SpeakingLesson[] = [
   {
     id: 'hils',
@@ -48,6 +57,25 @@ export const speakingLessons: SpeakingLesson[] = [
       imageEntryId: entry.id === 'conversation-introduction'
         ? 'vocabulary-1-watashi' : 'vocabulary-2-konnichiwa',
     })),
+  },
+  {
+    id: 'moede',
+    title: 'Mød et nyt menneske',
+    summary: 'Hils, spørg om navnet og landet, og sig på gensyn.',
+    pages: [
+      { id: 'konnichiwa', entry: greetingEntry(), imageEntryId: 'vocabulary-2-konnichiwa' },
+      { id: 'meeting-konbanwa', entry: MEETING_PHRASES.konbanwa, imageEntryId: 'vocabulary-2-konnichiwa' },
+      { id: 'meeting-hajimemashite', entry: MEETING_PHRASES.hajimemashite, imageEntryId: 'vocabulary-2-tomodachi' },
+      { id: 'meeting-name', entry: MEETING_PHRASES.name, imageEntryId: 'vocabulary-1-watashi' },
+      { id: 'meeting-o-namae', entry: MEETING_PHRASES.oNamae, imageEntryId: 'vocabulary-1-anata' },
+      { id: 'meeting-doko-kara', entry: MEETING_PHRASES.dokoKara, imageEntryId: 'vocabulary-3-uchi' },
+      { id: 'meeting-denmark', entry: MEETING_PHRASES.denmark, imageEntryId: 'vocabulary-1-minna' },
+      { id: 'meeting-yoroshiku', entry: MEETING_PHRASES.yoroshiku, imageEntryId: 'vocabulary-2-tomodachi' },
+      { id: 'meeting-kochira', entry: MEETING_PHRASES.kochira, imageEntryId: 'vocabulary-1-minna' },
+      { id: 'meeting-mata-aimasho', entry: MEETING_PHRASES.mataAimasho, imageEntryId: 'vocabulary-2-tomodachi' },
+      { id: 'meeting-arigatou', entry: MEETING_PHRASES.arigatou, imageEntryId: 'vocabulary-1-haha' },
+      { id: 'goodbye', entry: GOODBYE_ENTRY, imageEntryId: 'vocabulary-2-konnichiwa' },
+    ],
   },
   vocabLesson('5', 'Hør og sig otte dyr.'),
   vocabLesson('1', 'Hør og sig de første små ord.'),

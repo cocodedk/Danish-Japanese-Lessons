@@ -7529,6 +7529,366 @@
       ]
     },
     {
+      "id": "meeting-konbanwa",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "こんばんは。",
+      "jaMarked": "こんばんは。",
+      "da": "godaftenhilsen",
+      "soundDa": "konbanwa",
+      "ipa": "koɴbaɴɰa",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 6,
+          "display": "こんばんは。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "konbanwa",
+            "ipa": "koɴbaɴɰa"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": true,
+      "audioId": "meeting-konbanwa",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-hajimemashite",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "はじめまして。",
+      "jaMarked": "はじめまして。",
+      "da": "rart at møde dig (første møde)",
+      "soundDa": "ha-ji-me-mash-te",
+      "ipa": "hadʑimemaɕte",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 7,
+          "display": "はじめまして。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "ha-ji-me-mash-te",
+            "ipa": "hadʑimemaɕte"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": true,
+      "audioId": "meeting-hajimemashite",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-name",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "わたしは アンナ です。",
+      "jaMarked": "わたしは アンナ です。",
+      "da": "jeg hedder Anna",
+      "soundDa": "wa-ta-shi-wa-an-na-de-su",
+      "ipa": "wataɕi ɰa aɴna desɯ",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 12,
+          "display": "わたしは アンナ です。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "wa-ta-shi-wa-an-na-de-su",
+            "ipa": "wataɕi ɰa aɴna desɯ"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": true,
+      "audioId": "meeting-name",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-o-namae",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "おなまえは。",
+      "jaMarked": "おなまえは。",
+      "da": "hvad hedder du?",
+      "soundDa": "o-na-ma-e-wa",
+      "ipa": "onamae ɰa",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 6,
+          "display": "おなまえは。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "o-na-ma-e-wa",
+            "ipa": "onamae ɰa"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": true,
+      "audioId": "meeting-o-namae",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-doko-kara",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "どこから きましたか。",
+      "jaMarked": "どこから きましたか。",
+      "da": "hvor kommer du fra?",
+      "soundDa": "do-ko-ka-ra-ki-mash-ta-ka",
+      "ipa": "doko kaɾa kimaɕta ka",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 11,
+          "display": "どこから きましたか。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "do-ko-ka-ra-ki-mash-ta-ka",
+            "ipa": "doko kaɾa kimaɕta ka"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": false,
+      "audioId": "meeting-doko-kara",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-denmark",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "デンマークから きました。",
+      "jaMarked": "デンマークから きました。",
+      "da": "jeg kommer fra Danmark",
+      "soundDa": "den-maa-ku-kara-ki-mash-ta",
+      "ipa": "deɴmaːkɯ kaɾa kimaɕta",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 13,
+          "display": "デンマークから きました。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "den-maa-ku-kara-ki-mash-ta",
+            "ipa": "deɴmaːkɯ kaɾa kimaɕta"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": true,
+      "audioId": "meeting-denmark",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-yoroshiku",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "よろしく おねがいします。",
+      "jaMarked": "よろしく おねがいします。",
+      "da": "pæn hilsen til et nyt menneske (fast sætning)",
+      "soundDa": "yo-ro-shi-ku-o-ne-ga-i-shi-ma-su",
+      "ipa": "joɾoɕikɯ oneɡaiɕimɐɕɯ",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 13,
+          "display": "よろしく おねがいします。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "yo-ro-shi-ku-o-ne-ga-i-shi-ma-su",
+            "ipa": "joɾoɕikɯ oneɡaiɕimɐɕɯ"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": true,
+      "audioId": "meeting-yoroshiku",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-kochira",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "こちらこそ。",
+      "jaMarked": "こちらこそ。",
+      "da": "i lige måde (pænt svar)",
+      "soundDa": "ko-chi-ra-ko-so",
+      "ipa": "kotɕiɾa koso",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 6,
+          "display": "こちらこそ。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "ko-chi-ra-ko-so",
+            "ipa": "kotɕiɾa koso"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": false,
+      "audioId": "meeting-kochira",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-mata-aimasho",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "また あいましょう。",
+      "jaMarked": "また あいましょう。",
+      "da": "vi ses igen",
+      "soundDa": "ma-ta-a-i-ma-sho",
+      "ipa": "mata aimaɕoː",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 10,
+          "display": "また あいましょう。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "ma-ta-a-i-ma-sho",
+            "ipa": "mata aimaɕoː"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": false,
+      "audioId": "meeting-mata-aimasho",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
+      "id": "meeting-arigatou",
+      "domain": "meeting",
+      "kind": "phrase",
+      "ja": "ありがとう ございました。",
+      "jaMarked": "ありがとう ございました。",
+      "da": "tak for i dag (pænt)",
+      "soundDa": "a-ri-ga-too-go-zai-ma-shita",
+      "ipa": "aɾiɡa toː ɡozaimɐɕta",
+      "stressReviewRequired": true,
+      "stressMarked": false,
+      "readingCues": [
+        {
+          "start": 0,
+          "end": 13,
+          "display": "ありがとう ございました。",
+          "role": "whole",
+          "helpDa": "Læs hele udtrykket samlet",
+          "pron": {
+            "da": "a-ri-ga-too-go-zai-ma-shita",
+            "ipa": "aɾiɡa toː ɡozaimɐɕta"
+          }
+        }
+      ],
+      "cueCoverage": "whole-word",
+      "roleSensitive": false,
+      "audioId": "meeting-arigatou",
+      "audioNotApplicable": null,
+      "audioStatus": "missing",
+      "requiredReviews": [
+        "native-japanese-1",
+        "native-japanese-2",
+        "phonetics",
+        "danish"
+      ]
+    },
+    {
       "id": "number-1-digit",
       "domain": "numbers",
       "kind": "symbol",

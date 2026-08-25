@@ -4053,6 +4053,226 @@
       ]
     },
     {
+      "clipId": "meeting-konbanwa",
+      "entryId": "meeting-konbanwa",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "こんばんは。",
+      "synthesisText": "こんばんは。",
+      "plainJapanese": "こんばんは。",
+      "danishMeaning": "godaftenhilsen",
+      "soundDa": "konbanwa",
+      "ipa": "koɴbaɴɰa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-konbanwa.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-hajimemashite",
+      "entryId": "meeting-hajimemashite",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "はじめまして。",
+      "synthesisText": "はじめまして。",
+      "plainJapanese": "はじめまして。",
+      "danishMeaning": "rart at møde dig (første møde)",
+      "soundDa": "ha-ji-me-mash-te",
+      "ipa": "hadʑimemaɕte",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-hajimemashite.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-name",
+      "entryId": "meeting-name",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "わたしは アンナ です。",
+      "synthesisText": "わたしは アンナ です。",
+      "plainJapanese": "わたしは アンナ です。",
+      "danishMeaning": "jeg hedder Anna",
+      "soundDa": "wa-ta-shi-wa-an-na-de-su",
+      "ipa": "wataɕi ɰa aɴna desɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-name.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-o-namae",
+      "entryId": "meeting-o-namae",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "おなまえは。",
+      "synthesisText": "おなまえは。",
+      "plainJapanese": "おなまえは。",
+      "danishMeaning": "hvad hedder du?",
+      "soundDa": "o-na-ma-e-wa",
+      "ipa": "onamae ɰa",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-o-namae.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-doko-kara",
+      "entryId": "meeting-doko-kara",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "どこから きましたか。",
+      "synthesisText": "どこから きましたか。",
+      "plainJapanese": "どこから きましたか。",
+      "danishMeaning": "hvor kommer du fra?",
+      "soundDa": "do-ko-ka-ra-ki-mash-ta-ka",
+      "ipa": "doko kaɾa kimaɕta ka",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-doko-kara.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-denmark",
+      "entryId": "meeting-denmark",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "デンマークから きました。",
+      "synthesisText": "デンマークから きました。",
+      "plainJapanese": "デンマークから きました。",
+      "danishMeaning": "jeg kommer fra Danmark",
+      "soundDa": "den-maa-ku-kara-ki-mash-ta",
+      "ipa": "deɴmaːkɯ kaɾa kimaɕta",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-denmark.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-yoroshiku",
+      "entryId": "meeting-yoroshiku",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "よろしく おねがいします。",
+      "synthesisText": "よろしく おねがいします。",
+      "plainJapanese": "よろしく おねがいします。",
+      "danishMeaning": "pæn hilsen til et nyt menneske (fast sætning)",
+      "soundDa": "yo-ro-shi-ku-o-ne-ga-i-shi-ma-su",
+      "ipa": "joɾoɕikɯ oneɡaiɕimɐɕɯ",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-yoroshiku.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-kochira",
+      "entryId": "meeting-kochira",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "こちらこそ。",
+      "synthesisText": "こちらこそ。",
+      "plainJapanese": "こちらこそ。",
+      "danishMeaning": "i lige måde (pænt svar)",
+      "soundDa": "ko-chi-ra-ko-so",
+      "ipa": "kotɕiɾa koso",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-kochira.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-mata-aimasho",
+      "entryId": "meeting-mata-aimasho",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "また あいましょう。",
+      "synthesisText": "また あいましょう。",
+      "plainJapanese": "また あいましょう。",
+      "danishMeaning": "vi ses igen",
+      "soundDa": "ma-ta-a-i-ma-sho",
+      "ipa": "mata aimaɕoː",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-mata-aimasho.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
+      "clipId": "meeting-arigatou",
+      "entryId": "meeting-arigatou",
+      "formId": "neutral",
+      "register": "neutral",
+      "scope": "talk",
+      "domain": "meeting",
+      "transcript": "ありがとう ございました。",
+      "synthesisText": "ありがとう ございました。",
+      "plainJapanese": "ありがとう ございました。",
+      "danishMeaning": "tak for i dag (pænt)",
+      "soundDa": "a-ri-ga-too-go-zai-ma-shita",
+      "ipa": "aɾiɡa toː ɡozaimɐɕta",
+      "stressMarked": false,
+      "expectedDraft": ".audio/work/meeting-arigatou.mp3",
+      "requiredBeforeGeneration": [
+        "native-content"
+      ],
+      "requiredTakeReview": [
+        "native-japanese"
+      ]
+    },
+    {
       "clipId": "number-1-word",
       "entryId": "number-1-word",
       "formId": "neutral",

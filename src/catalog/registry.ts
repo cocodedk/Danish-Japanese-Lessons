@@ -1,6 +1,7 @@
 import { alphabetCatalog } from './alphabet'
 import { bridgesCatalog } from './bridges'
 import { conversationCatalog } from './conversation'
+import { meetingCatalog } from './meeting'
 import { interfaceCatalog } from './interface'
 import { namesCatalog } from './names'
 import { numberCatalog } from './numbers'
@@ -13,6 +14,7 @@ export const catalogDomains = {
   bridges: bridgesCatalog,
   vocabulary: vocabularyCatalog,
   conversation: conversationCatalog,
+  meeting: meetingCatalog,
   numbers: numberCatalog,
   interface: interfaceCatalog,
   names: namesCatalog,
