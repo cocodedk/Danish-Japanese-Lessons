@@ -25,6 +25,11 @@ test.describe('visual regression candidates awaiting human sign-off', () => {
             animations: 'disabled',
             caret: 'hide',
             scale: 'css',
+            // Permit hairline sub-pixel jitter (a 1px rule or edge between two
+            // rows) that Chromium rasterizes differently between runs. This is
+            // a human-sign-off candidate registry, not a hard pixel gate: real
+            // content changes shift far more than 0.2% of the frame.
+            maxDiffPixelRatio: 0.002,
           })
         }
       })
