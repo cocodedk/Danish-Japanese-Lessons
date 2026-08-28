@@ -1,3 +1,27 @@
+## 2026-08-24 (agent, resume) — generated the 10 meeting audio drafts; gates still green
+
+**State** — Done + tree clean (nothing pushed; `.audio/` is ignored by design). Ran the concrete
+"Next" step from the 017 session: generated local Piper drafts for all 10 `meeting-*` talk clips
+(こんばんは / はじめまして / わたしは アンナ です / おなまえは / どこから きましたか /
+デンマークから きました / よろしく おねがいします / こちらこそ / また あいましょう /
+ありがとう ございました). Drafts ≈ −20 LUFS, ≤ −1 dBTP, 7.7–11.8 KB. `audio:verify` and
+`audio:verify-review` pass (0 approved clips — talk path stays closed). `verify.sh` green:
+78 PASS, 0 FAIL. Work dir now holds 101 draft mp3s (90 talk + 10 meeting + 1 other).
+
+**Tried** — `generate.py --clip <id>` is an exact clipId match, not a glob (`meeting-*` would
+exit). Ran the 10 ids one per call; each gets its own report JSON under `.audio/reports/<stem>.json`,
+while `latest.json` only holds the final run's clip. Verified drafts by loudness/size, not by trust.
+
+**Lesson** — The llm-verifier pilot stays blocked: no `OPENROUTER_API_KEY` in env this session.
+Native Japanese review of all 110 talk clips (90 + 10 meeting) and the visual-baseline sign-off
+remain human gates. P12 is next in ROADMAP, but its four normative specs in `docs/specs/` still
+carry Persian-era wording (Tehrani, Iranian reviewers, RTL, بابا) that needs a Japanese pass before
+faithful execution — flag to Fable. DPL has no new commits to port (still at the ported `8dd05bf`).
+
+**Next** — Human gates only: native Japanese review of the 110 talk clips → `audio:publish-review`
+→ `audio:approve` → `#/tal` opens; Fable/Babak visual-baseline sign-off; export
+`OPENROUTER_API_KEY` for the llm-verifier pilot. Port P12's specs to Japanese, then continue P12.
+
 ## 2026-08-24 (agent) — Plan 017 "Mød et nyt menneske" implemented & merged; SEO pass
 
 **State** — Done + pushed. Plan 017 (approved by Babak: アンナ, title "Mød et nyt
