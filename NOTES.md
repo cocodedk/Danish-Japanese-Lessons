@@ -1,3 +1,28 @@
+## 2026-08-28 (agent) — P12 specs ported from Persian-era wording to the Japanese model
+
+**State** — Done (commit f7e4232, not pushed). Ported the four normative P12 specs in
+`docs/specs/` (LEARNING, UX, RESPONSIVE, QUALITY, LESSON-IMAGE), the active plans 012/013/015,
+`DANISH-SOUND-SPELLING-CONVENTION.md`, `VISUAL-REVIEW-PROTOCOL.md`, and `src/audio/types.ts`
+(`ja-IR` → `ja-JP` — the last `ja-IR` in code, matching the approved manifest and the locale test).
+Tehrani/Iranian/RTL/بابا-ع examples now use the app's real Japanese model (`は`→wa, `を`→o,
+`っ` sokuon, `ー` long bar, `じ/ぢ` and `づ/ず`). Historical frozen plans (001–015, GAUNTLET) and
+`ART-DIRECTION.md` were left untouched per the port convention.
+
+**Tried** — Grounded every new example in the actual catalog data (extracted lydskrift/IPA
+patterns: doubled vowels for ー, doubled consonants for っ, moraic ん→n/m). `types.ts` locale was
+the only leftover `ja-IR` in `src/` after the release commit.
+
+**Lesson** — The LEARNING spec's Persian letter-role section (ا/و/ی/ه/ع) has a real Japanese
+analogue already encoded in the app: `ROLE_SENSITIVE` in `src/reviews/contentManifest.ts` names
+`っーはをお゛゜`. Port examples to that set so the doc and the code guard agree.
+
+**Next** — Push the three commits (2cf2a0c, 2690431, f7e4232). Then the honest residual gate:
+a human native listening pass on the 100 released clips (the Qwen review is metadata-only).
+`ART-DIRECTION.md` still carries Persian-era narrative — a design owner should port it.
+
+**Superseded by:** none (this updates the earlier 2026-08-28 entry whose "Next" assumed the spec
+port was not yet done).
+
 ## 2026-08-28 (agent) — talk corpus reviewed & released; speaking path is open
 
 **State** — Commit 2cf2a0c not yet pushed. The 100-clip launch talk corpus is now reviewed,
