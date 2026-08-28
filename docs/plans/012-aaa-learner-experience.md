@@ -40,9 +40,9 @@ No weighted score can compensate for a failed pillar. All three pass independent
 
 These are reproducible baseline failures, not optional polish:
 
-1. Orientation decomposes `بابا` with each `ا` labelled `[æ]`, then correctly pronounces the word
-   `[bɒːbɒː]`. The same context-free help appears in `بابک`. Alef and the other vowel-carrier roles
-   need contextual teaching and native review.
+1. The kana `は` is taught as /ha/, but `わたしは` reads /wa/, and `を` reads /o/ like `お`. Standalone
+   letter help is context-free for these particle and homophone roles; they need contextual teaching
+   and native review.
 2. Opening a detail lesson from a scrolled alphabet or vocabulary index can retain the old scroll
    offset and land below the new lesson's title and primary specimen.
 3. Choice and puzzle feedback is appended below the phone viewport. A wrong tap can appear inert
@@ -78,14 +78,14 @@ These are reproducible baseline failures, not optional polish:
 
 ## Milestone 1 — Accurate Japanese and pronunciation model
 
-1. Replace universal letter “sound” assumptions with contextual roles. Alef, vav, ye, he, eyn,
-   hamze, and all homophonous letter groups receive explicit audit coverage.
-2. Represent written graphemes and unwritten short vowels honestly in word/name reading cues. Do not
+1. Replace universal kana “sound” assumptions with contextual roles. `は`, `を`, `じ/ぢ`, `づ/ず`,
+   `っ`, `ー`, and all homophonous kana groups receive explicit audit coverage.
+2. Represent written kana and silent marks (`っ`, `ー`) honestly in word/name reading cues. Do not
    derive a word's pronunciation by concatenating standalone letter help.
-3. Correct the orientation, alphabet challenges, `بابا`, `باد`, `بابک`, and every affected name or
-   vocabulary companion as one consistent teaching model.
+3. Correct the orientation, alphabet challenges, the `は`/`を` particle and homophone cases, and
+   every affected name or vocabulary companion as one consistent teaching model.
 4. Add stress and syllable review to polysyllabic IPA. Publish the Danish sound-spelling convention.
-5. Require signed review from two native Iranian Japanese reviewers, including one literacy educator,
+5. Require signed review from two native Japanese reviewers, including one literacy educator,
    plus one phonetics reviewer. One person may fill two roles; two independent people are minimum.
 
 ## Milestone 2 — Interaction and journey repair
@@ -113,7 +113,7 @@ These are reproducible baseline failures, not optional polish:
 
 ## Milestone 4 — Native-reviewed audio
 
-1. Generate local drafts or record a native standard-Tehrani speaker for every static spoken form.
+1. Generate local drafts or record a native standard-Tokyo speaker for every static spoken form.
    Letter sound/function and letter name remain separate. Dynamic learner names never invent audio.
 2. Require a named native Japanese review for generated clips. Human recordings also keep speaker
    consent. Validate files, IDs, transcripts, provenance, licence, loudness, duration, and asset
@@ -158,8 +158,8 @@ These are reproducible baseline failures, not optional polish:
 
 - [ ] All seven baseline defects above have regression evidence.
 - [ ] Native reviewers approve every catalog entry, contextual cue, connected text, and audio clip.
-- [ ] Alef and vowel carriers are taught contextually; `بابا`, `باد`, and `بابک` contain no
-      letter-to-word pronunciation contradiction.
+- [ ] Kana particles and homophones are taught contextually; `わたしは` (`は` → /wa/) and `を` → /o/
+      contain no letter-to-word pronunciation contradiction.
 - [ ] Every forward route opens at its heading; Back restores prior position; unique titles ship.
 - [ ] Wrong, correct, skipped, and typed attempts reveal visible help without dock occlusion.
 - [ ] Reviewed audio covers 100% of static spoken forms and remains optional, lazy, and offline-safe.
@@ -174,7 +174,7 @@ These are reproducible baseline failures, not optional polish:
 - [ ] Novice usability thresholds pass with no unresolved critical/high finding.
 - [ ] Owner-run `npm run verify`, Playwright, and the production build pass locally from a clean
       checkout, with recorded evidence; CI is not required.
-- [ ] A fresh-context Iranian teacher, Danish learner, responsive art director, accessibility
+- [ ] A fresh-context Japanese teacher, Danish learner, responsive art director, accessibility
       specialist, and maintainer can name no concrete release-blocking defect.
 
 ## Out of scope

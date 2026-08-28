@@ -25,11 +25,11 @@ waivable.
 ## Gate A — Accurate
 
 - Every app-owned Japanese item MUST exist in the catalog with stable ID, natural Danish help,
-  documented Danish sound spelling, reviewed standard-Tehrani IPA, and contextual role where a glyph
+  documented Danish sound spelling, reviewed standard-Tokyo IPA, and contextual role where a glyph
   has more than one pronunciation or function.
 - Every pronounceable static spoken form MUST have approved, provenance-tracked audio. `∅`, learner-generated names, and
   explicitly non-pronounceable controls MUST document why audio does not apply.
-- Two independent native Iranian Japanese reviewers MUST approve the content manifest. At least one
+- Two independent native Japanese reviewers MUST approve the content manifest. At least one
   reviewer MUST have primary-literacy teaching or curriculum experience.
 - One phonetics reviewer MUST approve sound, stress, syllabification, IPA, and recording alignment.
   One native reviewer may also fill this role if qualified.
@@ -117,7 +117,7 @@ local commit, commands, environment, date, and result.
 
 - At least five Danish-speaking adults with no Japanese knowledge complete the first-run protocol; at
   least three are phone-primary learners aged 18–25.
-- At least four of five MUST, without facilitator help: identify RTL direction, complete a taught
+- At least four of five MUST, without facilitator help: identify Japanese LTR direction, complete a taught
   letter, recover from a wrong answer, find the next recommended action, leave, and resume.
 - No participant may report or exhibit an apparent dead tap on a core action. No more than one may
   mistake `set` for `husket` or interpret an earned reward as current mastery.

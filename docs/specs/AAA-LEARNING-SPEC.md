@@ -5,10 +5,10 @@ learning is earned, and what content may enter a challenge.
 
 ## Learner and promise
 
-The primary learner is a Danish-speaking adult who knows no spoken Japanese and has never read an
-Arabic-derived script. The first release teaches foundational Iranian Japanese decoding; it MUST not
-imply conversational fluency or general text comprehension. Heritage speakers remain supported, but
-their prior phonology may not be assumed.
+The primary learner is a Danish-speaking adult who knows no spoken, written, or reading
+Japanese and has never read hiragana, katakana, or kanji. The first release teaches foundational
+Japanese decoding; it MUST not imply conversational fluency or general text comprehension. Heritage
+speakers remain supported, but their prior knowledge may not be assumed.
 
 The core outcome is: the learner can connect reviewed Japanese forms to sound and meaning, recognize
 positional changes, and read short controlled text without depending permanently on transliteration.
@@ -19,22 +19,23 @@ positional changes, and read short controlled text without depending permanently
 
 - A letter name, isolated glyph, contextual form, phonological value, and orthographic role are
   separate concepts. Data and UI MUST NOT collapse them into one universal “sound”.
-- Alef MUST be retaught contextually:
-  - initial `آ` carries long /ɒː/;
-  - non-initial `ا` commonly writes long /ɒː/;
-  - initial `ا` can carry a marked short vowel and precedes `و` or `ی` for initial long /uː/ or /iː/;
-  - the standalone letter-name entry is not evidence that every `ا` in a word is /æ/.
-- Vav and ye MUST distinguish consonantal and vowel roles. He, eyn, hamze, and contextual signs MUST
-  receive the same role-based treatment. Exceptions and Arabic loans MUST be explained at the point
-  they become relevant, not hidden under a false beginner rule.
-- Homophonous Japanese letters MUST be taught as different spellings of the same modern Tehrani sound
-  where applicable. A sound-to-letter challenge MUST not offer multiple valid answers.
+- Kana MUST be retaught contextually where the reading changes with role or script:
+  - `は` reads /ha/ in words but /wa/ as the topic particle (for example in `わたしは`);
+  - `を` reads /o/ (identical to `お`) and appears only as the object particle;
+  - `じ/ぢ` and `づ/ず` are homophone pairs and the variants surface mostly in compounds and
+    rendaku — teach them honestly, never as a wrong-answer trap;
+  - `っ` (sokuon) is silent and doubles the following consonant; `ー` lengthens the preceding vowel;
+  - `゛` and `゜` (hand marks) alter voicing and must be taught as marks, not standalone letters;
+  - the standalone letter-name entry is not evidence that every `は` in a word is /ha/.
+- Exception forms, loandword use (katakana), and particles MUST be explained at the point they become
+  relevant, not hidden under a false beginner rule.
+- Homophonous kana MUST be taught as different spellings of the same modern Tokyo sound where
+  applicable. A sound-to-letter challenge MUST not offer multiple valid answers.
 - Positional-form help inherits a letter identity, but word reading uses contextual cues rather than
   concatenated letter-name or isolated-sound entries.
 
-The model follows the [University of Texas Japanese writing-system overview](https://sites.la.utexas.edu/persian_online_resources/the-writing-system/),
-its [madd explanation](https://sites.la.utexas.edu/persian_online_resources/the-writing-system/madd/),
-and native Iranian literacy review. These references guide but do not replace human approval.
+The model follows the curriculum decisions in Plan 016 (the Japanese port) and the Japanese
+writing-system material it cites. These references guide but do not replace human approval.
 
 ### Contextual reading cues
 
@@ -48,13 +49,13 @@ describing:
 - joining behavior that changes form but not identity;
 - a whole-item pronunciation that remains the authority.
 
-For `بابا`, the two `ا` cues are long /ɒː/. For `بابک`, the first `ا` is /ɒː/ and the short /æ/ after
-the second `ب` is explicitly shown as unwritten. A learner MUST never be expected to infer `[bɒːbæk]`
-from a helper sequence that states `[b] [æ] [b] [k]`.
+For `は` in `わたしは`, the particle cue is /wa/, not the isolated letter /ha/. For `を` in
+`はなを みる`, the cue is /o/, identical to `お`. A learner MUST never be expected to infer `[watasi ha]`
+from a helper sequence that states `[ha]` for the particle, or to treat `を` as distinct from `/o/`.
 
 ### Pronunciation and Danish sound spelling
 
-- Standard modern Tehrani Japanese is the target. Whole-word IPA MUST include phonemic length and
+- Standard modern Tokyo Japanese is the target. Whole-word IPA MUST include phonemic length and
   lexical stress on polysyllabic entries unless the reviewer records why stress is not contrastively
   useful there.
 - `lydskrift` MUST use one published Danish convention table. Each mapping includes Danish examples,
@@ -77,7 +78,7 @@ interface AudioBase {
   entryId: string
   formId: string
   file: string
-  locale: 'ja-IR'
+  locale: 'ja-JP'
   transcript: string
   durationMs: number
   channels: 1
@@ -101,7 +102,7 @@ type PronunciationAudio = AudioBase & (
 )
 ```
 
-Everyday Tehrani and formal standard Japanese are separate `SpokenForm` rows when they differ.
+Everyday and formal standard Japanese are separate `SpokenForm` rows when they differ.
 Displayed letter sound/function and letter name remain separate. Non-pronounceable symbols use an
 explicit `audioNotApplicable` reason. Dynamic learner names have letter/context cues but no
 fabricated full-name audio or IPA.

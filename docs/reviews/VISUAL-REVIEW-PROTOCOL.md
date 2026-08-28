@@ -30,7 +30,7 @@ medium finding without the five-person written exception required by the respons
 - Compare adjacent widths for unexplained jumps and 1024/1440/1920 for deliberate desktop use.
 - For phone states, confirm primary content and the next action are discoverable without a hidden
   control beneath the sticky footer; then reproduce high-risk states on a real 360–390px device.
-- Check Japanese marks, RTL order, Danish wrapping, target separation, settings bounds, and feedback.
+- Check Japanese marks, LTR order, Danish wrapping, target separation, settings bounds, and feedback.
 - Record changes as findings; regenerate only after a deliberate fix, then re-review affected states.
 
 The signed matrix belongs in the release packet. Pixel equality protects an approved decision from

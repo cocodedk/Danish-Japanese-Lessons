@@ -27,7 +27,7 @@ answer wrong/correct, retry/next, complete a puzzle, type a word, edit/delete/sk
 
 ## First run and orientation
 
-- The first concept is RTL, demonstrated through the existing `DNAV → VAND` analogy.
+- The first concept is direction: Japanese reads left to right, kana by kana, with no capitals and no word spaces, demonstrated through the hiragana row `あいうえお`.
 - Orientation is divided into short steps: direction, joining, changing forms, no capitals, dots, and
   help systems. Each step has a visible position (`1 af 6`), Back, Continue, and “Gå til alfabetet”.
 - At 360×640, the current concept, its demonstration, and Continue MUST be visible or reachable with a
@@ -96,7 +96,7 @@ while also serving sighted learners whose point of regard must see the update.
 ## Audio interaction
 
 - Each pronunciation control is a native `<button>` of at least 44×44 CSS pixels with an accessible
-  name such as “Afspil udtale af آب”. It indicates playing state in text/accessible state, not animation
+  name such as “Afspil udtale af みず”. It indicates playing state in text/accessible state, not animation
   alone.
 - No pronunciation audio autoplays. One clip plays at a time. Replay, stop, normal/slow speed, and mute
   work with touch and keyboard.
@@ -126,9 +126,9 @@ plus this named set—not an imprecise “WCAG AAA” badge. Normative source:
 
 ## Semantics and language
 
-- Japanese text uses `lang="ja" dir="rtl"`; Danish uses `lang="da"`. Mixed pronunciation and IPA use
+- Japanese text uses `lang="ja" dir="ltr"`; Danish uses `lang="da"`. Mixed pronunciation and IPA use
   LTR isolation so screen readers and bidi layout do not reorder them.
-- Visual order, DOM order, reading order, and keyboard order MUST preserve meaning. RTL grids MAY lay
+- Visual order, DOM order, reading order, and keyboard order MUST preserve meaning. LTR kana grids MAY lay
   out right-to-left while global navigation remains predictable.
 - Buttons perform actions; links navigate. Toggle buttons expose pressed state. Selected grids expose
   selection without turning every tile into an ambiguous two-step control.

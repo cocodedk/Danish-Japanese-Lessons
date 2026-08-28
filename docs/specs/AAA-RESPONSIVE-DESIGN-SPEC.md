@@ -90,7 +90,7 @@ At 200–400% desktop zoom, effective container width—not physical monitor wid
   is visible without a monitor-width eye movement or scroll back to the page top.
 - Alphabet cells are 3.25–6rem wide; vocabulary cards are 8–18rem wide. `1fr` MUST NOT stretch the
   final row across the remaining desktop width. Groups remain visually distinct notebook sections.
-- Internal Japanese grids fill RTL; headings, progress, and global navigation retain Danish LTR order.
+- Internal Japanese grids fill LTR left to right; headings, progress, and global navigation retain Danish LTR order.
 
 ### Letter, vowel, word, and connected-reading details
 

@@ -23,7 +23,7 @@ The first loop is:
 ## Fixed decisions
 
 - The primary first path is speaking. Words and script are separate open paths.
-- Everyday Tehrani and formal standard Japanese appear side by side only when they differ.
+- Everyday and formal standard Japanese appear side by side only when they differ.
 - Generated Piper sound is an authoring draft, never a runtime service.
 - One named native Japanese reviewer must approve every generated clip before publication.
 - The first corpus is the 97 spoken forms in bridges, conversation, numbers, and vocabulary.

@@ -32,12 +32,12 @@ Start with these eight low-risk, concrete items. Add no other image until the pi
 
 | Japanese | Danish | Photo brief |
 |---|---|---|
-| آب | vand | Plain water in a clear glass; no brand or writing |
-| نان | brød | Iranian flatbread; native cultural review required |
-| مِداد | blyant | One ordinary pencil |
-| کِتاب | bog | One closed book; no readable title or logo |
-| میز | bord | One ordinary table |
-| دَر | dør | One clear door |
+| みず | vand | Plain water in a clear glass; no brand or writing |
+| ごはん | ris | One bowl of cooked rice; culturally specific — native review required |
+| えんぴつ | blyant | One ordinary pencil |
+| ほん | bog | One closed book; no readable title or logo |
+| つくえ | bord | One ordinary table |
+| と | dør | One clear door |
 | خانه | hus | An ordinary home exterior; no address or people |
 | گُل | blomst | One clear flower |
 
@@ -84,7 +84,7 @@ Good later candidates are `باران`, `آسمان`, `ماه`, `شب`, and `د�
 
 ### Milestone 5 — Human review and release
 
-- An Iranian Japanese literacy reviewer checks meaning, culture, and the exact word-to-photo match.
+- A Japanese literacy reviewer checks meaning, culture, and the exact word-to-photo match.
 - A Danish plain-language reviewer checks every label, alternative text, and credit.
 - An accessibility reviewer checks keyboard, screen reader, zoom, contrast, reflow, and image-off use.
 - At least five Danish-speaking beginners use the pilot; record confusion, guesses, and delayed recall.

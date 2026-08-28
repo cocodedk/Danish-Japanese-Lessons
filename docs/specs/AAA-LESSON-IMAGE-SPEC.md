@@ -14,7 +14,7 @@ reviewed. Failure in any one area blocks that photo, not the text lesson around 
 
 - The photo MUST show the exact meaning taught by the linked Japanese entry. Japanese, pronunciation,
   Danish, alternative text, caption, and photo MUST agree.
-- An Iranian Japanese literacy reviewer MUST approve culturally specific objects and uses. A Danish
+- A Japanese literacy reviewer MUST approve culturally specific objects and uses. A Danish
   reviewer MUST approve the learner-facing Danish.
 - Cropping, filters, staging, and captions MUST NOT suggest a meaning the source does not show.
 - An image with two plausible target meanings MUST be rejected or restaged.
