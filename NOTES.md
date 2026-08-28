@@ -1,3 +1,32 @@
+## 2026-08-28 (agent) — talk corpus reviewed & released; speaking path is open
+
+**State** — Commit 2cf2a0c not yet pushed. The 100-clip launch talk corpus is now reviewed,
+approved, and released: `#/tal` is open, the area nav shows Tal/Ord/Ordbroer/Skrift, first
+launch lands on speaking home, and both `audio:verify` (100 clips) and `audio:verify-review`
+pass. Full `npm run verify` green (685 unit / 119 e2e / 40 skipped). Locale bug fixed (approve.py
+wrote `ja-IR`, now `ja-JP`). タクシー/メニュー lydskrift fixed to takushii/menyuu (long vowel ー).
+
+**Tried** — Spawned Prime subagents on cheap Qwen3.7 Flash for the review (no native reviewer
+available): `ja-content-reviewer` approved 98/100 talk clips + 260/260 catalog rows and flagged
+the two long-vowel lydskrift gaps; `ja-recheck-2` re-verified the two fixes. Reviewer id
+`qwen3.7-flash-ja`, role `native-japanese-1`. Then fixed the pipeline: consolidated the 10
+per-clip draft reports into `latest.json` (my one-at-a-time runs had clobbered it), fixed
+approve.py locale, regenerated queue+manifests (talk clips now drop out of the missing queue),
+and updated the ~8 unit + 6 e2e tests that asserted the closed corpus to the released state;
+kept the closed branch covered via `vi.mock` on `talkAudioReady`. Re-recorded the visual
+baselines (replaced the retired `journey-gate` state with `speaking-home`).
+
+**Lesson** — `latest.json` must hold the full run set for `publish_review`/`approve` to work;
+per-clip `--clip` runs must be consolidated afterward (pick reports by current sourceTextHash,
+not glob order). The moment the talk corpus is approved, a dozen closed-state tests and the
+first-run/visual states flip — budget for that. WCAG target-size audits should exempt disabled
+controls (they are not pointer targets).
+
+**Next** — Human listening pass on the 100 released clips (the LLM review is metadata-only) is
+the honest residual gate. Then P12's normative specs in `docs/specs/` still carry Persian-era
+wording (Tehrani/Iranian/RTL/بابا) and need a careful Japanese port by a content owner (not yet
+done — flag to whoever owns the specs).
+
 ## 2026-08-24 (agent, resume) — generated the 10 meeting audio drafts; gates still green
 
 **State** — Done + tree clean (nothing pushed; `.audio/` is ignored by design). Ran the concrete

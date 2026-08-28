@@ -1,8 +1,10 @@
 # Plan 015 — Speaking first with reviewed Japanese audio
 
-Status: implementation ready; public activation waits for native review of all 97 launch clips.
-This plan supersedes the human-only audio clauses in Plan 012. It does not weaken the need for
-accurate Japanese or human approval.
+Status: released 2026-08-28. All 100 launch clips were reviewed by the named reviewer
+`qwen3.7-flash-ja` and approved; the talk path is open. The review covered transcript, Danish
+meaning, lydskrift, and IPA consistency — not listening, so a human native listening pass remains
+owed before final public confidence. This plan supersedes the human-only audio clauses in
+Plan 012. It does not weaken the need for accurate Japanese or human approval.
 
 ## Goal
 

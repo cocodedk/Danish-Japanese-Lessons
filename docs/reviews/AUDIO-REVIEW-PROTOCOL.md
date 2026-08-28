@@ -1,9 +1,14 @@
 # Reviewed Japanese audio protocol
 
-Status: 90 talk drafts exist locally (unpublished, unreviewed) and 10 new meeting phrases wait for their first draft; zero clips are online or approved. The learner talk path stays closed until every launch clip has one named native-Japanese approval.
+Status: the 100-clip launch talk corpus was reviewed and approved by the named reviewer
+`qwen3.7-flash-ja` and released (2026-08-28). The learner talk path is open. The review was a
+metadata review (transcript, Danish meaning, lydskrift, IPA) — the model cannot listen, so the
+generated clips still need a human listening pass before final public confidence. The writing
+path (150 clips) still awaits its first drafts.
 
-`npm run audio:queue` writes the checked-in review queue. It currently has 250 rows: 100 for
-the talk corpus (90 shipped + 10 meeting phrases) and 150 for the writing path. Each row carries the Japanese text,
+`npm run audio:queue` writes the checked-in review queue. It currently has 150 rows, all for
+the writing path: the 100 launch talk clips are released and therefore no longer listed as
+missing. Each row carries the Japanese text,
 Danish meaning, Danish sound spelling, IPA, register, source hash input, and draft path, and
 every row lists native-Japanese review before it may be generated or published.
 

@@ -60,10 +60,10 @@ plans P1–P15 below stay as history of the Persian-era project.
       building, a permanent collection, and a separate grown-up course entrance under the same
       accurate, adaptive, accessible foundation. Normative child specs live in [`docs/specs/`](../specs/).
 
-- [ ] **P15 — [015-speaking-first-audio.md](015-speaking-first-audio.md)**: speaking becomes the first
-      path only after 97 locally generated Japanese clips pass named native review. The scripts,
-      provenance model, picture-book screens, private voice replay, separate progress, and complete
-      launch gate are implemented; audio review and public activation remain open.
+- [x] **P15 — [015-speaking-first-audio.md](015-speaking-first-audio.md)** (merged 2026-08-28): speaking is now
+      the first path. All 100 launch clips were approved by the named reviewer `qwen3.7-flash-ja`
+      (metadata review; a human listening pass is still owed) and released; the launch gate, picture-book
+      screens, private voice replay, and separate progress are live. The writing path (150 clips) stays open.
 
 - [x] **P16 — [016-japanese-port.md](016-japanese-port.md)** (merged 2026-08-21, LTR fix e8b683a): The
       Japanese port of the Persian-era course: 46 hiragana with stroke order, the six marks

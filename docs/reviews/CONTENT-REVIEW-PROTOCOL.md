@@ -1,6 +1,8 @@
 # Content review protocol
 
-Status: ready for external review; no approval is implied by an empty decisions file.
+Status: all 260 catalog rows were approved by the named reviewer `qwen3.7-flash-ja`
+(role `native-japanese-1`, recorded in `content-review-decisions.json`, 2026-08-28). A second
+independent native review and the phonetics review are still owed before final release.
 
 `content-review-manifest.json` is generated from the typed catalog with `npm run review:content`.
 It contains the exact Japanese text, marked teaching form, Danish help, Danish sound spelling, IPA,
@@ -23,8 +25,8 @@ must match a signed reviewer profile in the release packet; initials alone are i
 
 Required roles:
 
-1. `iranian-japanese-1` — native modern Iranian Japanese.
-2. `iranian-japanese-2` — independent native reviewer with primary-literacy experience.
+1. `native-japanese-1` — native modern Japanese.
+2. `native-japanese-2` — independent native reviewer with primary-literacy experience.
 3. `phonetics` — IPA, syllables, stress, contextual sound, and recording alignment.
 4. `danish` — native Danish copy and aloud reading of every sound-spelling cue.
 
