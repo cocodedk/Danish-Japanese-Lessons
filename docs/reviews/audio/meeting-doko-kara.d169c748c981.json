@@ -1,0 +1,23 @@
+{
+  "clipId": "meeting-doko-kara",
+  "entryId": "meeting-doko-kara",
+  "formId": "neutral",
+  "transcript": "どこから きましたか。",
+  "synthesisText": "どこから きましたか。",
+  "sourceTextHash": "b95f8cc8f29be05e4356c573e1393b1d537faae6c596ee2e90b6b6553807c949",
+  "draftFile": "work/meeting-doko-kara.b95f8cc8f29b.mp3",
+  "durationMs": 1850,
+  "channels": 1,
+  "integratedLufs": -20.41,
+  "truePeakDbtp": -7.08,
+  "bytes": 11354,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/meeting-doko-kara.d169c748c981.mp3"
+}

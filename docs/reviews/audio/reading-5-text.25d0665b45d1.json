@@ -1,0 +1,23 @@
+{
+  "clipId": "reading-5-text",
+  "entryId": "reading-5-text",
+  "formId": "neutral",
+  "transcript": "ねこ です。いぬ です。うさぎ です。",
+  "synthesisText": "ねこ です。いぬ です。うさぎ です。",
+  "sourceTextHash": "d2483eb3add3c9f7ed88e71d735cb9c0a85501136d39fdb967054fd12687e4f6",
+  "draftFile": "work/reading-5-text.d2483eb3add3.mp3",
+  "durationMs": 3600,
+  "channels": 1,
+  "integratedLufs": -20.86,
+  "truePeakDbtp": -8.8,
+  "bytes": 21855,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/reading-5-text.25d0665b45d1.mp3"
+}

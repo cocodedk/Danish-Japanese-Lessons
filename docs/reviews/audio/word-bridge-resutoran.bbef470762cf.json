@@ -1,0 +1,23 @@
+{
+  "clipId": "word-bridge-resutoran",
+  "entryId": "word-bridge-resutoran",
+  "formId": "neutral",
+  "transcript": "レストラン",
+  "synthesisText": "レストラン",
+  "sourceTextHash": "16fe46af53dfb0b66e41995205024858034a927933c799ae282eb131652a1406",
+  "draftFile": "work/word-bridge-resutoran.16fe46af53df.mp3",
+  "durationMs": 1200,
+  "channels": 1,
+  "integratedLufs": -20.38,
+  "truePeakDbtp": -6.21,
+  "bytes": 7436,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/word-bridge-resutoran.bbef470762cf.mp3"
+}

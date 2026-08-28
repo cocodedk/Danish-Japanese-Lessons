@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-3-tsuki",
+  "entryId": "vocabulary-3-tsuki",
+  "formId": "neutral",
+  "transcript": "つき",
+  "synthesisText": "つき",
+  "sourceTextHash": "6c4d8899b39275ede0df5d761ac16927b55f2de611ce6461616ec06e41a5edcc",
+  "draftFile": "work/vocabulary-3-tsuki.6c4d8899b392.mp3",
+  "durationMs": 810,
+  "channels": 1,
+  "integratedLufs": -20.48,
+  "truePeakDbtp": -7.85,
+  "bytes": 5085,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-3-tsuki.797c97a983b9.mp3"
+}

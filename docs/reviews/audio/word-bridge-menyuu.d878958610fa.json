@@ -1,0 +1,23 @@
+{
+  "clipId": "word-bridge-menyuu",
+  "entryId": "word-bridge-menyuu",
+  "formId": "neutral",
+  "transcript": "メニュー",
+  "synthesisText": "メニュー",
+  "sourceTextHash": "603e61ba9a5801026faffa006ff62061f86339d8e1304f8802d7eab88d869fef",
+  "draftFile": "work/word-bridge-menyuu.603e61ba9a58.mp3",
+  "durationMs": 1040,
+  "channels": 1,
+  "integratedLufs": -20.42,
+  "truePeakDbtp": -9.55,
+  "bytes": 6495,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "long vowel ー added to lydskrift; re-reviewed and approved",
+  "releasedFile": "/audio/word-bridge-menyuu.d878958610fa.mp3"
+}

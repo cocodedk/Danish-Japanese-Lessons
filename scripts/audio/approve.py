@@ -80,7 +80,7 @@ def main() -> None:
             "entryId": report["entryId"],
             "formId": report["formId"],
             "file": f"/audio/{filename}",
-            "locale": "ja-IR",
+            "locale": "ja-JP",
             "transcript": report["transcript"],
             "durationMs": report["durationMs"],
             "channels": 1,

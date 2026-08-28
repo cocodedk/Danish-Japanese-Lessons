@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-5-ushi",
+  "entryId": "vocabulary-5-ushi",
+  "formId": "neutral",
+  "transcript": "うし",
+  "synthesisText": "うし",
+  "sourceTextHash": "6d819ddc0eb36d95e7225874a2eb7e4db5936c2a574e7da0fd347598c1aed8e8",
+  "draftFile": "work/vocabulary-5-ushi.6d819ddc0eb3.mp3",
+  "durationMs": 1100,
+  "channels": 1,
+  "integratedLufs": -20.49,
+  "truePeakDbtp": -8.15,
+  "bytes": 6809,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-5-ushi.0313be6cd4e3.mp3"
+}

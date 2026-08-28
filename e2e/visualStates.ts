@@ -2,7 +2,7 @@ import { expect, type Page } from '@playwright/test'
 
 export const visualWidths = [320, 390, 768, 1024, 1440, 1920, 2560] as const
 export const visualStates = [
-  'journey-gate',
+  'speaking-home',
   'child-workshop',
   'child-build',
   'child-round-ready',
@@ -70,11 +70,13 @@ async function sessionSummary(page: Page) {
 }
 
 export async function prepareVisualState(page: Page, state: VisualState) {
-  if (state === 'journey-gate') {
+  if (state === 'speaking-home') {
+    // The launch talk corpus is approved, so a true first launch lands on the
+    // speaking front door (JourneyGate redirects to /tal).
     await page.goto(`./?visual-reset=${resetId += 1}#/`)
     await page.evaluate(() => localStorage.clear())
     await page.reload()
-    return expect(page.getByRole('heading', { name: 'Japansk på din måde' })).toBeVisible()
+    return expect(page.getByRole('heading', { name: 'Lær at tale japansk' })).toBeVisible()
   }
   if (state === 'orientation') {
     await page.goto(`./?visual-reset=${resetId += 1}#/`)

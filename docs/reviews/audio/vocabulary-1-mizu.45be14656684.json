@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-1-mizu",
+  "entryId": "vocabulary-1-mizu",
+  "formId": "neutral",
+  "transcript": "みず",
+  "synthesisText": "みず",
+  "sourceTextHash": "cbd009973bbc19e407eb77fe4877eee075a382d1a11164e8eda7f22e7b9cac38",
+  "draftFile": "work/vocabulary-1-mizu.cbd009973bbc.mp3",
+  "durationMs": 1070,
+  "channels": 1,
+  "integratedLufs": -20.4,
+  "truePeakDbtp": -7.92,
+  "bytes": 6652,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-1-mizu.45be14656684.mp3"
+}

@@ -1,8 +1,11 @@
-import { beforeEach, describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import JourneyGate from './JourneyGate'
 import { getJourneyChoice, setJourneyChoice } from '../progress/journey'
+import { talkAudioReady } from '../speaking/lessons'
+
+vi.mock('../speaking/lessons', () => ({ talkAudioReady: vi.fn() }))
 import { writeJSON } from '../progress/storage'
 
 function renderGate() {
@@ -21,10 +24,20 @@ function renderGate() {
 beforeEach(() => window.localStorage.clear())
 
 describe('JourneyGate', () => {
-  it('starts with the three-way choice — speaking stays closed until its corpus is approved', () => {
+  it('sends a fresh learner straight to the speaking path once its corpus is reviewed', () => {
+    vi.mocked(talkAudioReady).mockReturnValue(true)
     renderGate()
-    // No talk corpus is approved yet, so the gate never redirects to /tal;
-    // instead it offers the first Japanese word and the course.
+    // Every launch clip now carries a named native-Japanese review, so a true
+    // first launch lands on /tal instead of the upon-the-gate three-way choice.
+    expect(screen.getByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
+    expect(getJourneyChoice()).toBeUndefined()
+  })
+
+  it('keeps the three-way choice when speaking is still closed', () => {
+    vi.mocked(talkAudioReady).mockReturnValue(false)
+    renderGate()
+    // With no approved talk corpus the gate never redirects to /tal; it offers
+    // the first Japanese word and the course instead.
     expect(screen.getByRole('heading', { name: 'Japansk på din måde' })).toBeInTheDocument()
     expect(screen.getByText('Dansk og japansk i samme notesbog')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Lav et japansk ord' })).toBeInTheDocument()
@@ -33,6 +46,7 @@ describe('JourneyGate', () => {
   })
 
   it('routes a saved course choice to the course', () => {
+    vi.mocked(talkAudioReady).mockReturnValue(true)
     setJourneyChoice('script')
     renderGate()
     expect(screen.getByRole('heading', { name: 'Hele kurset' })).toBeInTheDocument()
@@ -40,6 +54,7 @@ describe('JourneyGate', () => {
   })
 
   it('routes a returning learner through the saved front door', () => {
+    vi.mocked(talkAudioReady).mockReturnValue(true)
     setJourneyChoice('words')
     renderGate()
     expect(screen.getByRole('heading', { name: 'Ordværksted' })).toBeInTheDocument()
@@ -47,6 +62,7 @@ describe('JourneyGate', () => {
   })
 
   it('keeps pre-choice course learners with their existing work', () => {
+    vi.mocked(talkAudioReady).mockReturnValue(true)
     writeJSON('profile', { name: 'Sara' })
     renderGate()
     expect(screen.getByRole('heading', { name: 'Hele kurset' })).toBeInTheDocument()

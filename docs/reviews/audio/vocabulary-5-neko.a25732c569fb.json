@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-5-neko",
+  "entryId": "vocabulary-5-neko",
+  "formId": "neutral",
+  "transcript": "ねこ",
+  "synthesisText": "ねこ",
+  "sourceTextHash": "9cdd5d0bbb3c849c9636ebae246685ac42dad7175ecfa7230d769a8b79f0d251",
+  "draftFile": "work/vocabulary-5-neko.9cdd5d0bbb3c.mp3",
+  "durationMs": 1070,
+  "channels": 1,
+  "integratedLufs": -20.47,
+  "truePeakDbtp": -7.42,
+  "bytes": 6652,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-5-neko.a25732c569fb.mp3"
+}

@@ -1,0 +1,23 @@
+{
+  "clipId": "meeting-hajimemashite",
+  "entryId": "meeting-hajimemashite",
+  "formId": "neutral",
+  "transcript": "はじめまして。",
+  "synthesisText": "はじめまして。",
+  "sourceTextHash": "b66869670413fa9b8162670094aa8e5c5901ec77e4e6412b96f6d8d08ff2deaa",
+  "draftFile": "work/meeting-hajimemashite.b66869670413.mp3",
+  "durationMs": 1380,
+  "channels": 1,
+  "integratedLufs": -20.43,
+  "truePeakDbtp": -8.47,
+  "bytes": 8533,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/meeting-hajimemashite.e67a41aa4d7e.mp3"
+}

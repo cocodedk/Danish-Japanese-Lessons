@@ -1,0 +1,23 @@
+{
+  "clipId": "word-bridge-takushii",
+  "entryId": "word-bridge-takushii",
+  "formId": "neutral",
+  "transcript": "タクシー",
+  "synthesisText": "タクシー",
+  "sourceTextHash": "cdc5e11f81342c3a29760e4d4f2b7b9edf994f85bf89f3b00054a6cb291ff27d",
+  "draftFile": "work/word-bridge-takushii.cdc5e11f8134.mp3",
+  "durationMs": 1120,
+  "channels": 1,
+  "integratedLufs": -20.42,
+  "truePeakDbtp": -6.43,
+  "bytes": 6965,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "long vowel ー added to lydskrift; re-reviewed and approved",
+  "releasedFile": "/audio/word-bridge-takushii.a2f48ea63950.mp3"
+}

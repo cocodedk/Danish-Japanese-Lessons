@@ -204,8 +204,8 @@ test('dark scheme and reduced motion retain the first-run route', async ({ brows
     Storage.prototype.setItem = () => { throw new DOMException('denied') }
   })
   await open(page)
-  await expect(page.getByRole('heading', { name: 'Japansk på din måde' })).toBeVisible()
-  await page.getByRole('button', { name: 'Åbn kursus og noter' }).click()
+  await expect(page.getByRole('heading', { name: 'Lær at tale japansk' })).toBeVisible()
+  await page.getByRole('link', { name: 'Skrift', exact: true }).click()
   await expect(page.getByRole('heading', { name: 'Sådan virker japansk skrift' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Spring over og gå til alfabetet' })).toBeVisible()
   await page.close()

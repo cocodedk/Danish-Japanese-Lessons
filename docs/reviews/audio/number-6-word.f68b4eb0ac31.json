@@ -1,0 +1,23 @@
+{
+  "clipId": "number-6-word",
+  "entryId": "number-6-word",
+  "formId": "neutral",
+  "transcript": "ろく",
+  "synthesisText": "ろく",
+  "sourceTextHash": "f8a8b9aadb5ec75eb58be45dfb2d1692b8000c19e12d43f6dcb2cf51de1fc27b",
+  "draftFile": "work/number-6-word.f8a8b9aadb5e.mp3",
+  "durationMs": 840,
+  "channels": 1,
+  "integratedLufs": -20.47,
+  "truePeakDbtp": -9.5,
+  "bytes": 5241,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/number-6-word.f68b4eb0ac31.mp3"
+}

@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-5-uma",
+  "entryId": "vocabulary-5-uma",
+  "formId": "neutral",
+  "transcript": "うま",
+  "synthesisText": "うま",
+  "sourceTextHash": "733d1a5fb64d6430355ca10b2921f6fbe64d95197ce11566978878fb576a3ed7",
+  "draftFile": "work/vocabulary-5-uma.733d1a5fb64d.mp3",
+  "durationMs": 1100,
+  "channels": 1,
+  "integratedLufs": -20.47,
+  "truePeakDbtp": -9.85,
+  "bytes": 6809,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-5-uma.55d3b6a15b0c.mp3"
+}

@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-1-minna",
+  "entryId": "vocabulary-1-minna",
+  "formId": "neutral",
+  "transcript": "みんな",
+  "synthesisText": "みんな",
+  "sourceTextHash": "045f25dcc68d6837d96f32d5359524e659ffac7a737a912eb5d8ef445ba73790",
+  "draftFile": "work/vocabulary-1-minna.045f25dcc68d.mp3",
+  "durationMs": 1150,
+  "channels": 1,
+  "integratedLufs": -20.45,
+  "truePeakDbtp": -9.91,
+  "bytes": 7122,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-1-minna.96921e7ab326.mp3"
+}

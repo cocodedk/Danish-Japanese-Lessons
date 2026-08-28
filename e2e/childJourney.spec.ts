@@ -1,14 +1,16 @@
 import { expect, test, type Page } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
+// The speaking-first front door is the released front page once the launch
+// talk corpus is approved, so the child journey starts directly at the word
+// workshop instead of the closed gate's three-way choice.
 async function openFresh(page: Page) {
-  await page.goto('./#/')
-  await expect(page.getByRole('heading', { name: 'Japansk på din måde' })).toBeVisible()
+  await page.goto('./#/opdag')
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
+  await expect(page).toHaveTitle('Ordværksted · Lær japansk skrift')
 }
 
 async function openWater(page: Page) {
-  await page.getByRole('link', { name: 'Ord', exact: true }).click()
-  await expect(page).toHaveTitle('Ordværksted · Lær japansk skrift')
   await page.getByRole('link', { name: 'Vælg vand' }).click()
   await expect(page).toHaveTitle('vand · Ordværksted')
 }
@@ -27,7 +29,6 @@ async function completeWater(page: Page) {
 test('fresh child journey collects a word, returns, and switches both ways', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await openFresh(page)
-  await expect(page).toHaveTitle('Vælg din vej · Lær japansk skrift')
   await openWater(page)
   await completeWater(page)
   await page.getByRole('link', { name: 'Færdig for nu' }).click()
@@ -39,19 +40,20 @@ test('fresh child journey collects a word, returns, and switches both ways', asy
   await page.getByRole('link', { name: 'Til ordværkstedet' }).click()
   await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
 
+  // Choosing the word hub again remembers the journey, so a full reload of
+  // the root returns the child to the workshop instead of the course.
+  await page.getByRole('link', { name: 'Ord', exact: true }).click()
+  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
   await page.goto('./#/')
   await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
-  await page.getByRole('link', { name: 'Lektioner' }).click()
+  await page.getByRole('link', { name: 'Skrift', exact: true }).click()
   await expect(page.getByRole('heading', { name: 'Sådan virker japansk skrift' })).toBeVisible()
   await page.getByRole('link', { name: 'Til ordværkstedet' }).click()
   await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
 })
 
-test('fresh gate and workshop have no automatic axe violations', async ({ page }) => {
+test('fresh workshop and word pages have no automatic axe violations', async ({ page }) => {
   await openFresh(page)
-  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([])
-  await page.getByRole('link', { name: 'Ord', exact: true }).click()
-  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([])
   await page.getByRole('link', { name: 'Vælg vand' }).click()
   await expect(page.getByRole('heading', { name: 'vand' })).toBeVisible()
@@ -61,12 +63,6 @@ test('fresh gate and workshop have no automatic axe violations', async ({ page }
 test('word building is keyboard operable, recoverable, and bounded at 320px', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 640 })
   await openFresh(page)
-  const primary = page.getByRole('button', { name: 'Lav et japansk ord' })
-  const primaryBox = await primary.boundingBox()
-  expect((primaryBox?.y ?? 640) + (primaryBox?.height ?? 0)).toBeLessThanOrEqual(640)
-  await primary.focus()
-  await page.keyboard.press('Enter')
-  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
   await page.getByRole('link', { name: 'Vælg vand' }).click()
   await page.getByRole('button', { name: 'Byg ordet' }).click()
 

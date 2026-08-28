@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-4-midori",
+  "entryId": "vocabulary-4-midori",
+  "formId": "neutral",
+  "transcript": "みどり",
+  "synthesisText": "みどり",
+  "sourceTextHash": "d5088fbe1f8a1dfb1416a1885217ad1c12ced536805871c733fe1424ce524328",
+  "draftFile": "work/vocabulary-4-midori.d5088fbe1f8a.mp3",
+  "durationMs": 1100,
+  "channels": 1,
+  "integratedLufs": -20.45,
+  "truePeakDbtp": -8.26,
+  "bytes": 6809,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-4-midori.d05415ac6fa8.mp3"
+}

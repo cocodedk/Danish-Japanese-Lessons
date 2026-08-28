@@ -76,11 +76,11 @@ export const bridgeEntriesA = {
     readingCues: [bridgeMora(0, 'バ'), bridgeMora(1, 'ス')],
   }),
   takushii: bridgeEntry({
-    id: 'takushii', ja: 'タクシー', da: 'taxi', pronDa: 'takushi', ipa: 'takɯɕiː',
+    id: 'takushii', ja: 'タクシー', da: 'taxi', pronDa: 'takushii', ipa: 'takɯɕiː',
     readingCues: [bridgeMora(0, 'タ'), bridgeMora(1, 'ク'), bridgeMora(2, 'シ'), bridgeMora(3, 'ー')],
   }),
   menyuu: bridgeEntry({
-    id: 'menyuu', ja: 'メニュー', da: 'menu', pronDa: 'menyu', ipa: 'meɲɯː',
+    id: 'menyuu', ja: 'メニュー', da: 'menu', pronDa: 'menyuu', ipa: 'meɲɯː',
     readingCues: [bridgeMora(0, 'メ'), bridgeMora(1, 'ニ'), bridgeMora(2, 'ュ'), bridgeMora(3, 'ー')],
   }),
   terebi: bridgeEntry({

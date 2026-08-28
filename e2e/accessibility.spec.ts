@@ -35,7 +35,11 @@ test('representative routes retain enhanced target sizes at narrow width', async
     ).evaluateAll((items) => items.filter((item) => {
       const box = item.getBoundingClientRect()
       const inlineException = getComputedStyle(item).display === 'inline' && !!item.closest('p, li')
-      return box.width > 0 && box.height > 0 && !inlineException
+      // A disabled control accepts no pointer action, so it is not a WCAG 2.5.8
+      // "target" with a minimum size (similar for aria-disabled rows).
+      const inert = (item as HTMLButtonElement).disabled
+        || item.getAttribute('aria-disabled') === 'true'
+      return box.width > 0 && box.height > 0 && !inert && !inlineException
         && (box.width < 43.5 || box.height < 43.5)
     }).map((item) => item.outerHTML.slice(0, 120)))
     expect(undersized, route).toEqual([])

@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-5-nezumi",
+  "entryId": "vocabulary-5-nezumi",
+  "formId": "neutral",
+  "transcript": "ねずみ",
+  "synthesisText": "ねずみ",
+  "sourceTextHash": "40d92478c3b508c7fcae3054d9867778ce2774ad3f17dd3a5c9ca50cd85f7af0",
+  "draftFile": "work/vocabulary-5-nezumi.40d92478c3b5.mp3",
+  "durationMs": 1200,
+  "channels": 1,
+  "integratedLufs": -20.47,
+  "truePeakDbtp": -10.51,
+  "bytes": 7436,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-5-nezumi.b4ef8835aaf1.mp3"
+}

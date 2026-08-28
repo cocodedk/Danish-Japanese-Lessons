@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-2-hon",
+  "entryId": "vocabulary-2-hon",
+  "formId": "neutral",
+  "transcript": "ほん",
+  "synthesisText": "ほん",
+  "sourceTextHash": "fca68b52563ad7629405deefa84803ffd0143bc72ccf258634cb2709bd7039cb",
+  "draftFile": "work/vocabulary-2-hon.fca68b52563a.mp3",
+  "durationMs": 760,
+  "channels": 1,
+  "integratedLufs": -20.45,
+  "truePeakDbtp": -5.05,
+  "bytes": 4771,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-2-hon.f7b3f2ad860c.mp3"
+}

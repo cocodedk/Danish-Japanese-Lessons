@@ -1,0 +1,23 @@
+{
+  "clipId": "reading-4-text",
+  "entryId": "reading-4-text",
+  "formId": "neutral",
+  "transcript": "あか です。あお です。くろ と しろ です。",
+  "synthesisText": "あか です。あお です。くろ と しろ です。",
+  "sourceTextHash": "cf6a1de40d1a3ee8e430983f01d0dc9c948a7a02727a4ab1ad8e6da9145e16dd",
+  "draftFile": "work/reading-4-text.cf6a1de40d1a.mp3",
+  "durationMs": 3580,
+  "channels": 1,
+  "integratedLufs": -20.67,
+  "truePeakDbtp": -7.19,
+  "bytes": 21698,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/reading-4-text.77f23700f5a4.mp3"
+}

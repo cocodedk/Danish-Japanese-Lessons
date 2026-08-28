@@ -1,0 +1,23 @@
+{
+  "clipId": "word-bridge-hoteru",
+  "entryId": "word-bridge-hoteru",
+  "formId": "neutral",
+  "transcript": "ホテル",
+  "synthesisText": "ホテル",
+  "sourceTextHash": "3362d8f749fce42fc93eb734de2480aef37f25d183d2bba50d91072f5cc9ca94",
+  "draftFile": "work/word-bridge-hoteru.3362d8f749fc.mp3",
+  "durationMs": 1040,
+  "channels": 1,
+  "integratedLufs": -20.41,
+  "truePeakDbtp": -5.23,
+  "bytes": 6495,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/word-bridge-hoteru.9fd84c164f78.mp3"
+}

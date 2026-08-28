@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-3-uchi",
+  "entryId": "vocabulary-3-uchi",
+  "formId": "neutral",
+  "transcript": "うち",
+  "synthesisText": "うち",
+  "sourceTextHash": "238b7f0e3ea37b44f3d5e0d9f0e8405032c6fcec622038ef9ef8a640eb15bb3e",
+  "draftFile": "work/vocabulary-3-uchi.238b7f0e3ea3.mp3",
+  "durationMs": 1100,
+  "channels": 1,
+  "integratedLufs": -20.43,
+  "truePeakDbtp": -7.3,
+  "bytes": 6809,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-3-uchi.aa9b5fd3b4fb.mp3"
+}

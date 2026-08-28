@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-1-anata",
+  "entryId": "vocabulary-1-anata",
+  "formId": "neutral",
+  "transcript": "あなた",
+  "synthesisText": "あなた",
+  "sourceTextHash": "9a4410d9cdabcf827fd075df61d892cf34d267542ec038166a779f8b9199b0dd",
+  "draftFile": "work/vocabulary-1-anata.9a4410d9cdab.mp3",
+  "durationMs": 990,
+  "channels": 1,
+  "integratedLufs": -20.44,
+  "truePeakDbtp": -9.36,
+  "bytes": 6182,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-1-anata.710d620f0339.mp3"
+}

@@ -12,7 +12,11 @@ describe('audio recording handoff', () => {
         expect(audioRecordingQueue.rows.length).toBeGreaterThan(0)
     expect(new Set(audioRecordingQueue.rows.map((row) => row.clipId)).size).toBe(missing.length)
     expect(new Set(audioRecordingQueue.rows.map((row) => row.expectedDraft)).size).toBe(missing.length)
-    expect(audioRecordingQueue.rows.filter((row) => row.scope === 'talk').length).toBeGreaterThan(0)
+    // The launch talk corpus is natively reviewed and released, so the
+    // handoff queue carries no talk rows; only the writing path still
+    // needs local drafts and a native-Japanese review.
+    expect(audioRecordingQueue.rows.filter((row) => row.scope === 'talk')).toHaveLength(0)
+    expect(audioRecordingQueue.rows.filter((row) => row.scope === 'writing').length).toBeGreaterThan(0)
     for (const row of audioRecordingQueue.rows) {
       const source = missing.find((candidate) => candidate.id === row.entryId)!
       expect(row.transcript).toBe(source.jaMarked ?? source.ja)

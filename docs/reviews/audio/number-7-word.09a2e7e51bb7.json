@@ -1,0 +1,23 @@
+{
+  "clipId": "number-7-word",
+  "entryId": "number-7-word",
+  "formId": "neutral",
+  "transcript": "なな",
+  "synthesisText": "なな",
+  "sourceTextHash": "206bbda5f9669bf743de26842d963eb734c2ac011974ea24a70c4a96f374ad0d",
+  "draftFile": "work/number-7-word.206bbda5f966.mp3",
+  "durationMs": 760,
+  "channels": 1,
+  "integratedLufs": -20.44,
+  "truePeakDbtp": -9.08,
+  "bytes": 4771,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/number-7-word.09a2e7e51bb7.mp3"
+}

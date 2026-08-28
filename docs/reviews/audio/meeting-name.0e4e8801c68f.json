@@ -1,0 +1,23 @@
+{
+  "clipId": "meeting-name",
+  "entryId": "meeting-name",
+  "formId": "neutral",
+  "transcript": "わたしは アンナ です。",
+  "synthesisText": "わたしは アンナ です。",
+  "sourceTextHash": "c9e1edb1946c6ae0d19589cd9bc39785d0ca4715f3c03c59506be652cf26b0a0",
+  "draftFile": "work/meeting-name.c9e1edb1946c.mp3",
+  "durationMs": 1750,
+  "channels": 1,
+  "integratedLufs": -20.43,
+  "truePeakDbtp": -6.4,
+  "bytes": 10727,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/meeting-name.0e4e8801c68f.mp3"
+}

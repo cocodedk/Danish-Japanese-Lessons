@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-4-kuro",
+  "entryId": "vocabulary-4-kuro",
+  "formId": "neutral",
+  "transcript": "くろ",
+  "synthesisText": "くろ",
+  "sourceTextHash": "4c7891be74851dfdd63a0a1136964beee3d660b3ad1df540ed71d7c85fef51ea",
+  "draftFile": "work/vocabulary-4-kuro.4c7891be7485.mp3",
+  "durationMs": 890,
+  "channels": 1,
+  "integratedLufs": -20.52,
+  "truePeakDbtp": -7.19,
+  "bytes": 5555,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-4-kuro.63b197e721c6.mp3"
+}

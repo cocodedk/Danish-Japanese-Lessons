@@ -1,0 +1,23 @@
+{
+  "clipId": "conversation-introduction",
+  "entryId": "conversation-introduction",
+  "formId": "neutral",
+  "transcript": "わたしの なまえは … です。",
+  "synthesisText": "わたしの なまえは … です。",
+  "sourceTextHash": "b6daf9adef326559e70cad5599bfe70665f6f4d49fa86d1455e2ddc551098b62",
+  "draftFile": "work/conversation-introduction.b6daf9adef32.mp3",
+  "durationMs": 2090,
+  "channels": 1,
+  "integratedLufs": -20.46,
+  "truePeakDbtp": -8.33,
+  "bytes": 12765,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/conversation-introduction.51de3b23d04b.mp3"
+}

@@ -183,15 +183,15 @@ test('a wrong typed attempt reveals teaching above the keyboard dock', async ({ 
   await expect(page.locator('.keyboard')).toBeVisible()
 })
 
-test('the closed talk path keeps the three open hubs and never names a speaking area', async ({ page }) => {
+test('the released talk path shows the speaking-first hubs and names a speaking area', async ({ page }) => {
   await open(page, '#/')
-  await expect(page.locator('.area-nav a')).toHaveText(['Ord', 'Ordbroer', 'Lektioner'])
+  await expect(page.locator('.area-nav a')).toHaveText(['Tal', 'Ord', 'Ordbroer', 'Skrift'])
   // Exact hub name only: a counting card legitimately carries the Danish
   // word "tal" on the same page, and Playwright matches names by substring.
-  await expect(page.getByRole('link', { name: 'Tal', exact: true })).toHaveCount(0)
+  await expect(page.getByRole('link', { name: 'Tal', exact: true })).toHaveCount(1)
 })
 
-test('the closed talk home redirects to the word workshop', async ({ page }) => {
+test('the talk home opens the speaking lessons once the corpus is approved', async ({ page }) => {
   await open(page, '#/tal')
-  await expect(page.getByRole('heading', { name: 'Vælg et japansk ord' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Lær at tale japansk' })).toBeVisible()
 })

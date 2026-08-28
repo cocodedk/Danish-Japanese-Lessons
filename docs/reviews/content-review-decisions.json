@@ -1,4 +1,2345 @@
 {
   "schemaVersion": 1,
-  "decisions": []
+  "decisions": [
+    {
+      "entryId": "alphabet-letter-a",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-a",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-i",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-i",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-u",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-u",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-e",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-e",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-o",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-o",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ka",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ka",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ki",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ki",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ku",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ku",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ke",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ke",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ko",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ko",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-sa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-sa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-shi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-shi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-su",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-su",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-se",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-se",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-so",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-so",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ta",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ta",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-chi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-chi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-tsu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-tsu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-te",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-te",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-to",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-to",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-na",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-na",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ni",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ni",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-nu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-nu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ne",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ne",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-no",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-no",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ha",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ha",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-hi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-hi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-fu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-fu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-he",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-he",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ho",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ho",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ma",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ma",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-mi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-mi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-mu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-mu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-me",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-me",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-mo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-mo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ya",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ya",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-yu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-yu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-yo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-yo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ra",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ra",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ri",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ri",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ru",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ru",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-re",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-re",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-ro",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-ro",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-wa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-wa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-wo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-wo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-letter-n",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-name-n",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-dakuten",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-name-dakuten",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-handakuten",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-name-handakuten",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-choon",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-name-choon",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-sokuon",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-name-sokuon",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-chiisai-ya",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-name-chiisai-ya",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-chiisai-yo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "alphabet-mark-name-chiisai-yo",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-kohii",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-hoteru",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-basu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-takushii",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "Re-reviewed after soundDa fix from 'takushi' → 'takushii' (long vowel ー reflected); confirmed correct.",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:12:04Z"
+    },
+    {
+      "entryId": "word-bridge-menyuu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "Re-reviewed after soundDa fix from 'menyui' → 'menyuu' (long vowel ー reflected); confirmed correct.",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:12:04Z"
+    },
+    {
+      "entryId": "word-bridge-terebi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-rajio",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-kamera",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-resutoran",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-sarada",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-hottodoggu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-pen",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "word-bridge-piano",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-unit-1-title",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-mizu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-pan",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-chichi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-haha",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-kaze",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-watashi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-anata",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-minna",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-kore",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-1-are",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-unit-2-title",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-enpitsu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-hon",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-tsukue",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-doa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-te",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-tomodachi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-gakkou",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-2-konnichiwa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-unit-3-title",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-uchi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-ame",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-sora",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-tsuki",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-hoshi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-hana",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-3-yoru",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-unit-4-title",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-aka",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-ao",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-midori",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-kiiro",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-shiro",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-kuro",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-orenji",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-4-momoiro",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-unit-5-title",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-neko",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-inu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-tori",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-sakana",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-uma",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-ushi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-usagi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "vocabulary-5-nezumi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-function-to",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-function-desu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-function-no",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-1-1",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-1-2",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-1-3",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-2-1",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-2-2",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-3-1",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-3-2",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-4-1",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-4-2",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-5-1",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-5-2",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-1-text",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-2-text",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-3-text",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-4-text",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "reading-5-text",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "conversation-introduction",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "conversation-goodbye",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-konbanwa",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-hajimemashite",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-name",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-o-namae",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-doko-kara",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-denmark",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-yoroshiku",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-kochira",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-mata-aimasho",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "meeting-arigatou",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-1-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-1-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-2-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-2-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-3-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-3-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-4-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-4-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-5-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-5-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-6-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-6-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-7-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-7-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-8-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-8-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-9-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-9-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-10-digit",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "number-10-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-greeting",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-greeting-with-name",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-kit-write-line",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-capture-prompt",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-lesson-placeholder",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-try-again",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-choon-name",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-missing-space",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-extra-space",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-missing-letter",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-wrong-letter",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-extra-letter",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-type-words",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-type-name",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-name-letter",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-name-letter-in-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-name-letters-in-word",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-orientation-zu",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-orientation-osaka",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-orientation-mizu-katakana",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "interface-orientation-mizu-kanji",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-spelling-title",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-spelling-pick",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-write-name",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-assemble",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-letters-label",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-not-in-name",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-letter-later",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "names-privacy",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-praise-sugoi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-praise-iine",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-praise-sonotoori",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-praise-subarashii",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-praise-yoku",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-praise-atari",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-name-praise",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-sticker-sugoi",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-sticker-maru",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-sticker-star",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-gift",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-welcome-back",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-page-filled",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-current-page",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-streak-resting",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-streak-today",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    },
+    {
+      "entryId": "rewards-streak-awake",
+      "reviewerId": "qwen3.7-flash-ja",
+      "role": "native-japanese-1",
+      "decision": "approve",
+      "note": "",
+      "sourceCommit": "b98f3ae",
+      "reviewedAt": "2026-08-28T08:06:13Z"
+    }
+  ]
 }

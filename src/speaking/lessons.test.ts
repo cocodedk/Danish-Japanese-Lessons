@@ -4,7 +4,7 @@ import { requiredTalkClipIds, speakingLessons, talkAudioReady } from './lessons'
 import { japaneseCatalog } from '../catalog/registry'
 
 describe('speaking lessons', () => {
-  it('keeps the talk path closed until every launch clip is reviewed by a native speaker', () => {
+  it('opens the talk path only when every launch clip has a named native review', () => {
     // The corpus carries exactly the clips the talk screens use — conversation,
     // numbers, connected reading with its function words, vocabulary, unit
     // titles and loanword bridges — all of them real, speakable catalog entries.
@@ -12,9 +12,9 @@ describe('speaking lessons', () => {
     expect(new Set(requiredTalkClipIds).size).toBe(requiredTalkClipIds.length)
     const catalogIds = new Set(japaneseCatalog.filter((e) => !e.audioNotApplicable).map((e) => e.id))
     for (const id of requiredTalkClipIds) expect(catalogIds.has(id), id).toBe(true)
-    // No approved audio ships yet, so the gate stays closed: a learner is
-    // never handed an unreviewed generated voice as the model.
-    expect(talkAudioReady()).toBe(false)
+    // Every launch clip now carries an approved, named native-Japanese review,
+    // so the gate is open: a learner is handed only reviewed generated voice.
+    expect(talkAudioReady()).toBe(true)
   })
 
   it('gives every picture-book page a clear visual', () => {

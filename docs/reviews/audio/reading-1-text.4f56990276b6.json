@@ -1,0 +1,23 @@
+{
+  "clipId": "reading-1-text",
+  "entryId": "reading-1-text",
+  "formId": "neutral",
+  "transcript": "みず です。パン です。ちち です。はは です。",
+  "synthesisText": "みず です。パン です。ちち です。はは です。",
+  "sourceTextHash": "64f45565838f6eb4042455454e5675fabe30d4d4bf72e85bf143fdb50e93aa24",
+  "draftFile": "work/reading-1-text.64f45565838f.mp3",
+  "durationMs": 4390,
+  "channels": 1,
+  "integratedLufs": -20.5,
+  "truePeakDbtp": -7.29,
+  "bytes": 26557,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/reading-1-text.4f56990276b6.mp3"
+}

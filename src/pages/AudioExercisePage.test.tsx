@@ -3,14 +3,13 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { beforeEach, describe, expect, it } from 'vitest'
 import AudioExercisePage from './AudioExercisePage'
 
-// The approved audio corpus is empty by design: speaking stays closed until a
-// named native-Japanese review clears every launch clip. While it is closed
-// the exercise page has nothing to review and points the learner back to the
-// word hub instead of showing a card list.
+// The launch talk corpus is now natively reviewed and approved, so the sound
+// exercise is open: it lists every released clip with a Hør control instead
+// of redirecting to the word hub.
 describe('sound exercise', () => {
   beforeEach(() => localStorage.clear())
 
-  it('sends learners to the word hub while the approved corpus is closed', () => {
+  it('lists the reviewed clips with a listen control once the corpus is approved', () => {
     render(
       <MemoryRouter initialEntries={['/lydovelse']}>
         <Routes>
@@ -20,8 +19,8 @@ describe('sound exercise', () => {
       </MemoryRouter>,
     )
 
-    expect(screen.getByRole('heading', { name: 'Ordværksted' })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: 'Øv japansk lyd' })).not.toBeInTheDocument()
-    expect(screen.queryAllByRole('button', { name: /^Hør / })).toHaveLength(0)
+    expect(screen.getByRole('heading', { name: 'Øv japansk lyd' })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Ordværksted' })).not.toBeInTheDocument()
+    expect(screen.queryAllByRole('button', { name: /^Hør / }).length).toBeGreaterThan(0)
   })
 })

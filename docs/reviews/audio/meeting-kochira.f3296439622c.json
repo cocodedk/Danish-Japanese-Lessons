@@ -1,0 +1,23 @@
+{
+  "clipId": "meeting-kochira",
+  "entryId": "meeting-kochira",
+  "formId": "neutral",
+  "transcript": "こちらこそ。",
+  "synthesisText": "こちらこそ。",
+  "sourceTextHash": "955524922e422a67bc84253efaabc8fbb3a8cc7c6409b01a667c2fca59481cdc",
+  "draftFile": "work/meeting-kochira.955524922e42.mp3",
+  "durationMs": 1360,
+  "channels": 1,
+  "integratedLufs": -20.5,
+  "truePeakDbtp": -4.96,
+  "bytes": 8376,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/meeting-kochira.f3296439622c.mp3"
+}

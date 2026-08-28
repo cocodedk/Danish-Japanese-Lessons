@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-1-pan",
+  "entryId": "vocabulary-1-pan",
+  "formId": "neutral",
+  "transcript": "パン",
+  "synthesisText": "パン",
+  "sourceTextHash": "6fc6e5cab2868fae35bc8f8034dc4d17497c4c9f6970743b56d8ee2b3bf97c7c",
+  "draftFile": "work/vocabulary-1-pan.6fc6e5cab286.mp3",
+  "durationMs": 760,
+  "channels": 1,
+  "integratedLufs": -21.81,
+  "truePeakDbtp": -1.43,
+  "bytes": 4771,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-1-pan.591faac4f4a0.mp3"
+}

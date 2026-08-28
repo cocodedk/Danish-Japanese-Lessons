@@ -29,15 +29,15 @@ beforeEach(() => {
 })
 
 describe('Home', () => {
-  it('starts a true first launch on the journey gate while speaking is closed', async () => {
+  it('starts a true first launch on the speaking hub once its corpus is reviewed', async () => {
     window.localStorage.clear()
     window.location.hash = ''
     rtlRender(<App />)
 
-    // No talk corpus is approved yet, so a first launch never lands on /tal;
-    // it opens the gate's three-way choice instead, and asks for no name.
-    expect(await screen.findByRole('heading', { name: 'Japansk på din måde' })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: 'Lær at tale japansk' })).not.toBeInTheDocument()
+    // The launch talk corpus now carries a named native-Japanese review for
+    // every clip, so a fresh learner lands on /tal without being asked a name.
+    expect(await screen.findByRole('heading', { name: 'Lær at tale japansk' })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Japansk på din måde' })).not.toBeInTheDocument()
     expect(screen.queryByLabelText('Hvad hedder du?')).not.toBeInTheDocument()
   })
 

@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-1-kore",
+  "entryId": "vocabulary-1-kore",
+  "formId": "neutral",
+  "transcript": "これ",
+  "synthesisText": "これ",
+  "sourceTextHash": "6dac4c5af89bd4cf4304516349a3a5a5efaf53eddb3b725475ae06b1c0b0ba43",
+  "draftFile": "work/vocabulary-1-kore.6dac4c5af89b.mp3",
+  "durationMs": 890,
+  "channels": 1,
+  "integratedLufs": -20.47,
+  "truePeakDbtp": -7.01,
+  "bytes": 5555,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-1-kore.2087ada4592c.mp3"
+}

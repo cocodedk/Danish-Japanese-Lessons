@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-2-te",
+  "entryId": "vocabulary-2-te",
+  "formId": "neutral",
+  "transcript": "て",
+  "synthesisText": "て",
+  "sourceTextHash": "0c4b981adc7da3249a71947033963e2b6574dc80938bf05d60cf62a3d77a7918",
+  "draftFile": "work/vocabulary-2-te.0c4b981adc7d.mp3",
+  "durationMs": 760,
+  "channels": 1,
+  "integratedLufs": -20.45,
+  "truePeakDbtp": -3.93,
+  "bytes": 4771,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-2-te.b27f00847be4.mp3"
+}

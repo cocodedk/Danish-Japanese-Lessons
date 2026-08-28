@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-3-hana",
+  "entryId": "vocabulary-3-hana",
+  "formId": "neutral",
+  "transcript": "はな",
+  "synthesisText": "はな",
+  "sourceTextHash": "e71c5d9c2ee9c86d9ddee83a08186fc2870b0fc9aef1403a2543467553a7ffce",
+  "draftFile": "work/vocabulary-3-hana.e71c5d9c2ee9.mp3",
+  "durationMs": 910,
+  "channels": 1,
+  "integratedLufs": -20.39,
+  "truePeakDbtp": -7.92,
+  "bytes": 5711,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-3-hana.a9ea9fa72ca4.mp3"
+}

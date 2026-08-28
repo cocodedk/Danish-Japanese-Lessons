@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-3-yoru",
+  "entryId": "vocabulary-3-yoru",
+  "formId": "neutral",
+  "transcript": "よる",
+  "synthesisText": "よる",
+  "sourceTextHash": "382d9bfc8542f5f1a6dc5c87220dac90b327d63b0e13493217a66df2eb58d443",
+  "draftFile": "work/vocabulary-3-yoru.382d9bfc8542.mp3",
+  "durationMs": 910,
+  "channels": 1,
+  "integratedLufs": -20.46,
+  "truePeakDbtp": -9.16,
+  "bytes": 5711,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-3-yoru.e90c0fe97981.mp3"
+}

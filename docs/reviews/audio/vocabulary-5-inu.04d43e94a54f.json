@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-5-inu",
+  "entryId": "vocabulary-5-inu",
+  "formId": "neutral",
+  "transcript": "いぬ",
+  "synthesisText": "いぬ",
+  "sourceTextHash": "d3aed7c7a365c128e17922d0760d3efdaf9041cb87aab2d0bd59ed221eafd932",
+  "draftFile": "work/vocabulary-5-inu.d3aed7c7a365.mp3",
+  "durationMs": 990,
+  "channels": 1,
+  "integratedLufs": -20.44,
+  "truePeakDbtp": -10.41,
+  "bytes": 6182,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-5-inu.04d43e94a54f.mp3"
+}

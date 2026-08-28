@@ -1,0 +1,23 @@
+{
+  "clipId": "word-bridge-sarada",
+  "entryId": "word-bridge-sarada",
+  "formId": "neutral",
+  "transcript": "サラダ",
+  "synthesisText": "サラダ",
+  "sourceTextHash": "97aaeb9a4f83f7dec109c880f89717eb6bb4db2f1cee317cd75c1c6e89c79c19",
+  "draftFile": "work/word-bridge-sarada.97aaeb9a4f83.mp3",
+  "durationMs": 1070,
+  "channels": 1,
+  "integratedLufs": -20.39,
+  "truePeakDbtp": -8.06,
+  "bytes": 6652,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/word-bridge-sarada.aacf4b9cf569.mp3"
+}

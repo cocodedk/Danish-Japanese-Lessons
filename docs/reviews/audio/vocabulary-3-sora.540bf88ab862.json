@@ -1,0 +1,23 @@
+{
+  "clipId": "vocabulary-3-sora",
+  "entryId": "vocabulary-3-sora",
+  "formId": "neutral",
+  "transcript": "そら",
+  "synthesisText": "そら",
+  "sourceTextHash": "36329b04a6a51764825748e09652c4db8b1f0bc91e5231fdc0a1ae2657576dee",
+  "draftFile": "work/vocabulary-3-sora.36329b04a6a5.mp3",
+  "durationMs": 990,
+  "channels": 1,
+  "integratedLufs": -20.51,
+  "truePeakDbtp": -7.26,
+  "bytes": 6182,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/vocabulary-3-sora.540bf88ab862.mp3"
+}

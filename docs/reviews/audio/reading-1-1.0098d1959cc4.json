@@ -1,0 +1,23 @@
+{
+  "clipId": "reading-1-1",
+  "entryId": "reading-1-1",
+  "formId": "neutral",
+  "transcript": "みず と かぜ",
+  "synthesisText": "みず と かぜ",
+  "sourceTextHash": "df87efe4c4290befa2bfc8e4777118be77693201867de0f260593114166f4bc9",
+  "draftFile": "work/reading-1-1.df87efe4c429.mp3",
+  "durationMs": 1460,
+  "channels": 1,
+  "integratedLufs": -20.46,
+  "truePeakDbtp": -6.65,
+  "bytes": 9003,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/reading-1-1.0098d1959cc4.mp3"
+}

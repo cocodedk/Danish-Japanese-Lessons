@@ -3080,7 +3080,7 @@
       "roleSensitive": true,
       "audioId": "word-bridge-kohii",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3137,7 +3137,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-hoteru",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3183,7 +3183,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-basu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3197,7 +3197,7 @@
       "kind": "word",
       "ja": "タクシー",
       "da": "taxi",
-      "soundDa": "takushi",
+      "soundDa": "takushii",
       "ipa": "takɯɕiː",
       "stressReviewRequired": true,
       "stressMarked": false,
@@ -3251,7 +3251,7 @@
       "roleSensitive": true,
       "audioId": "word-bridge-takushii",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3265,7 +3265,7 @@
       "kind": "word",
       "ja": "メニュー",
       "da": "menu",
-      "soundDa": "menyu",
+      "soundDa": "menyuu",
       "ipa": "meɲɯː",
       "stressReviewRequired": false,
       "stressMarked": false,
@@ -3319,7 +3319,7 @@
       "roleSensitive": true,
       "audioId": "word-bridge-menyuu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3376,7 +3376,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-terebi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3433,7 +3433,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-rajio",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3490,7 +3490,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-kamera",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3569,7 +3569,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-resutoran",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3626,7 +3626,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-sarada",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3708,7 +3708,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-hottodoggu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3754,7 +3754,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-pen",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3811,7 +3811,7 @@
       "roleSensitive": false,
       "audioId": "word-bridge-piano",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3846,7 +3846,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-unit-1-title",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3893,7 +3893,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-mizu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3940,7 +3940,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-pan",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -3987,7 +3987,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-chichi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4034,7 +4034,7 @@
       "roleSensitive": true,
       "audioId": "vocabulary-1-haha",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4081,7 +4081,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-kaze",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4139,7 +4139,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-watashi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4197,7 +4197,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-anata",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4255,7 +4255,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-minna",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4302,7 +4302,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-kore",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4349,7 +4349,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-1-are",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4384,7 +4384,7 @@
       "roleSensitive": true,
       "audioId": "vocabulary-unit-2-title",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4453,7 +4453,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-2-enpitsu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4500,7 +4500,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-2-hon",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4558,7 +4558,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-2-tsukue",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4605,7 +4605,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-2-doa",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4641,7 +4641,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-2-te",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4710,7 +4710,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-2-tomodachi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4775,7 +4775,7 @@
       "roleSensitive": true,
       "audioId": "vocabulary-2-gakkou",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4855,7 +4855,7 @@
       "roleSensitive": true,
       "audioId": "vocabulary-2-konnichiwa",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4890,7 +4890,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-unit-3-title",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4937,7 +4937,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-3-uchi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -4984,7 +4984,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-3-ame",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5031,7 +5031,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-3-sora",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5078,7 +5078,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-3-tsuki",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5125,7 +5125,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-3-hoshi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5172,7 +5172,7 @@
       "roleSensitive": true,
       "audioId": "vocabulary-3-hana",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5219,7 +5219,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-3-yoru",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5254,7 +5254,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-unit-4-title",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5301,7 +5301,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-aka",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5348,7 +5348,7 @@
       "roleSensitive": true,
       "audioId": "vocabulary-4-ao",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5406,7 +5406,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-midori",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5464,7 +5464,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-kiiro",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5511,7 +5511,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-shiro",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5558,7 +5558,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-kuro",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5627,7 +5627,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-orenji",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5696,7 +5696,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-4-momoiro",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5731,7 +5731,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-unit-5-title",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5778,7 +5778,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-neko",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5825,7 +5825,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-inu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5872,7 +5872,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-tori",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5930,7 +5930,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-sakana",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -5977,7 +5977,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-uma",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6024,7 +6024,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-ushi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6082,7 +6082,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-usagi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6140,7 +6140,7 @@
       "roleSensitive": false,
       "audioId": "vocabulary-5-nezumi",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6175,7 +6175,7 @@
       "roleSensitive": false,
       "audioId": "reading-function-to",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6221,7 +6221,7 @@
       "roleSensitive": false,
       "audioId": "reading-function-desu",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6256,7 +6256,7 @@
       "roleSensitive": false,
       "audioId": "reading-function-no",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6313,7 +6313,7 @@
       "roleSensitive": false,
       "audioId": "reading-1-1",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6370,7 +6370,7 @@
       "roleSensitive": true,
       "audioId": "reading-1-2",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6427,7 +6427,7 @@
       "roleSensitive": false,
       "audioId": "reading-1-3",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6484,7 +6484,7 @@
       "roleSensitive": false,
       "audioId": "reading-2-1",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6541,7 +6541,7 @@
       "roleSensitive": false,
       "audioId": "reading-2-2",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6598,7 +6598,7 @@
       "roleSensitive": false,
       "audioId": "reading-3-1",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6655,7 +6655,7 @@
       "roleSensitive": false,
       "audioId": "reading-3-2",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6712,7 +6712,7 @@
       "roleSensitive": true,
       "audioId": "reading-4-1",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6769,7 +6769,7 @@
       "roleSensitive": false,
       "audioId": "reading-4-2",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6826,7 +6826,7 @@
       "roleSensitive": false,
       "audioId": "reading-5-1",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6883,7 +6883,7 @@
       "roleSensitive": false,
       "audioId": "reading-5-2",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -6996,7 +6996,7 @@
       "roleSensitive": true,
       "audioId": "reading-1-text",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7131,7 +7131,7 @@
       "roleSensitive": true,
       "audioId": "reading-2-text",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7244,7 +7244,7 @@
       "roleSensitive": false,
       "audioId": "reading-3-text",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7357,7 +7357,7 @@
       "roleSensitive": true,
       "audioId": "reading-4-text",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7448,7 +7448,7 @@
       "roleSensitive": false,
       "audioId": "reading-5-text",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7484,7 +7484,7 @@
       "roleSensitive": true,
       "audioId": "conversation-introduction",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7520,7 +7520,7 @@
       "roleSensitive": false,
       "audioId": "conversation-goodbye",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7556,7 +7556,7 @@
       "roleSensitive": true,
       "audioId": "meeting-konbanwa",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7592,7 +7592,7 @@
       "roleSensitive": true,
       "audioId": "meeting-hajimemashite",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7628,7 +7628,7 @@
       "roleSensitive": true,
       "audioId": "meeting-name",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7664,7 +7664,7 @@
       "roleSensitive": true,
       "audioId": "meeting-o-namae",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7700,7 +7700,7 @@
       "roleSensitive": false,
       "audioId": "meeting-doko-kara",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7736,7 +7736,7 @@
       "roleSensitive": true,
       "audioId": "meeting-denmark",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7772,7 +7772,7 @@
       "roleSensitive": true,
       "audioId": "meeting-yoroshiku",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7808,7 +7808,7 @@
       "roleSensitive": false,
       "audioId": "meeting-kochira",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7844,7 +7844,7 @@
       "roleSensitive": false,
       "audioId": "meeting-mata-aimasho",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7880,7 +7880,7 @@
       "roleSensitive": false,
       "audioId": "meeting-arigatou",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7939,7 +7939,7 @@
       "roleSensitive": false,
       "audioId": "number-1-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -7998,7 +7998,7 @@
       "roleSensitive": false,
       "audioId": "number-2-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8057,7 +8057,7 @@
       "roleSensitive": false,
       "audioId": "number-3-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8116,7 +8116,7 @@
       "roleSensitive": false,
       "audioId": "number-4-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8175,7 +8175,7 @@
       "roleSensitive": false,
       "audioId": "number-5-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8234,7 +8234,7 @@
       "roleSensitive": false,
       "audioId": "number-6-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8293,7 +8293,7 @@
       "roleSensitive": false,
       "audioId": "number-7-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8352,7 +8352,7 @@
       "roleSensitive": true,
       "audioId": "number-8-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8411,7 +8411,7 @@
       "roleSensitive": false,
       "audioId": "number-9-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",
@@ -8470,7 +8470,7 @@
       "roleSensitive": false,
       "audioId": "number-10-word",
       "audioNotApplicable": null,
-      "audioStatus": "missing",
+      "audioStatus": "reviewed",
       "requiredReviews": [
         "native-japanese-1",
         "native-japanese-2",

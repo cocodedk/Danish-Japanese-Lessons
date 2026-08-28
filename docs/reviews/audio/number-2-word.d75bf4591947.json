@@ -1,0 +1,23 @@
+{
+  "clipId": "number-2-word",
+  "entryId": "number-2-word",
+  "formId": "neutral",
+  "transcript": "に",
+  "synthesisText": "に",
+  "sourceTextHash": "683de92364618cb0bad88463896f755b91b7bcc7004868da633034876e7c890a",
+  "draftFile": "work/number-2-word.683de9236461.mp3",
+  "durationMs": 840,
+  "channels": 1,
+  "integratedLufs": -20.41,
+  "truePeakDbtp": -10.48,
+  "bytes": 5241,
+  "engineVersion": "1.7.0",
+  "voiceModel": "ja_JA-hi_fi_captain-medium",
+  "modelSha256": "5eafa1610fc7a0ff2e7fde9cbe0972d876266e23d8db331727eb2466f19460eb",
+  "voiceLicense": "CC BY-NC-SA 4.0 (Hi-Fi-CAPTAIN dataset)",
+  "reviewedBy": [
+    "qwen3.7-flash-ja"
+  ],
+  "reviewNote": "",
+  "releasedFile": "/audio/number-2-word.d75bf4591947.mp3"
+}
