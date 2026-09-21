@@ -164,7 +164,7 @@ talk clips, then `audio:publish-review` → `audio:approve` → talk path opens.
 
 ## 2026-08-21 (agent) — ported Danish-Persian-Lessons to Danish-Japanese-Lessons and published
 
-**State** — Done. Public repo + Pages live: https://cocodedk.github.io/Danish-Japanese-Lessons/
+**State** — Done. Public repo + Pages live: https://japansk.cocode.dk/
 (landing en/da/ja + React app at /app/). Unit 611/611, e2e 119 pass (+40 visual/performance
 skipped by design), lint + build + verify.sh green, hooks installed, main protected.
 

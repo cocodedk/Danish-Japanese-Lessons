@@ -8,9 +8,9 @@ The project is purely static: no backend, no database, no accounts. Progress is 
 
 ## Site
 
-- [English](https://cocodedk.github.io/Danish-Japanese-Lessons/): what the app teaches and who it is for
-- [Dansk](https://cocodedk.github.io/Danish-Japanese-Lessons/da/): the Danish page, written for the primary audience
-- [日本語](https://cocodedk.github.io/Danish-Japanese-Lessons/ja/): the Japanese page
+- [English](https://japansk.cocode.dk/): what the app teaches and who it is for
+- [Dansk](https://japansk.cocode.dk/da/): the Danish page, written for the primary audience
+- [日本語](https://japansk.cocode.dk/ja/): the Japanese page
 
 ## Repository
 

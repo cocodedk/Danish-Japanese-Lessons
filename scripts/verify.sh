@@ -131,7 +131,7 @@ check_contains website/robots.txt 'Sitemap:'
 # --- (e) README.md attribution/links ------------------------------------------
 
 check_contains README.md 'cocode.dk'
-check_contains README.md 'cocodedk.github.io/Danish-Japanese-Lessons'
+check_contains README.md 'japansk.cocode.dk'
 
 # --- (f) every shipped webfont stays inside the 60 KB budget (plan 002) -------
 # Andika is subsetted to fit; regenerate with: python3 scripts/subset-fonts.py

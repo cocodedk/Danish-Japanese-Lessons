@@ -15,9 +15,9 @@ Lær at tale japansk. Læs og skriv, når du vil.
 
 ## Website
 
-- [English](https://cocodedk.github.io/Danish-Japanese-Lessons/)
-- [Dansk](https://cocodedk.github.io/Danish-Japanese-Lessons/da/)
-- [日本語](https://cocodedk.github.io/Danish-Japanese-Lessons/ja/)
+- [English](https://japansk.cocode.dk/)
+- [Dansk](https://japansk.cocode.dk/da/)
+- [日本語](https://japansk.cocode.dk/ja/)
 
 ## Features
 
@@ -49,7 +49,7 @@ Lær at tale japansk. Læs og skriv, når du vil.
 
 The landing site is live in all three languages, and so is the app.
 
-What ships at [`/app/`](https://cocodedk.github.io/Danish-Japanese-Lessons/app/) includes
+What ships at [`/app/`](https://japansk.cocode.dk/app/) includes
 orientation (kana read left to right), the 46 hiragana with stroke order, the six marks, your
 name in katakana, first vocabulary, numbers, a Japanese keyboard, generous feedback, and short
 puzzle breaks. There is no signup and no waiting list.
