@@ -9,7 +9,7 @@ vi.mock('../audio/manifest', () => ({
     locale: 'ja-JP',
     transcript: id === 'number-2-word' ? 'みどり' : 'みず',
   } : undefined,
-  pronunciationAudioUrl: (file: string) => `/Danish-Japanese-Lessons/app/${file.replace(/^\//, '')}`,
+  pronunciationAudioUrl: (file: string) => `/app/${file.replace(/^\//, '')}`,
 }))
 
 describe('optional pronunciation audio identity', () => {

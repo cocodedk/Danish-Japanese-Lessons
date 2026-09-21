@@ -8,7 +8,7 @@ const appVersion = process.env.DJL_APP_VERSION
 // The literal project path below is intentionally the one sanctioned place for
 // it outside the GitHub Actions workflows (see CLAUDE.md).
 export default defineConfig({
-  base: '/Danish-Japanese-Lessons/app/',
+  base: '/app/',
   define: {
     __DJL_APP_VERSION__: JSON.stringify(appVersion),
   },

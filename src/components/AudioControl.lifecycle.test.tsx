@@ -10,7 +10,7 @@ vi.mock('../audio/manifest', () => ({
     locale: 'ja-JP',
     transcript: 'みず',
   } : undefined,
-  pronunciationAudioUrl: (file: string) => `/Danish-Japanese-Lessons/app/${file.replace(/^\//, '')}`,
+  pronunciationAudioUrl: (file: string) => `/app/${file.replace(/^\//, '')}`,
 }))
 
 /** A first request the browser accepted but has not settled: native events can
@@ -56,7 +56,7 @@ describe('pronunciation player lifecycle', () => {
     view.rerender(<AudioControl key="two" audioId="two" playRequest={2} />)
 
     await vi.waitFor(() => expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(2))
-    expect(view.container.querySelector('audio')!.getAttribute('src')).toBe('/Danish-Japanese-Lessons/app/audio/two.mp3')
+    expect(view.container.querySelector('audio')!.getAttribute('src')).toBe('/app/audio/two.mp3')
   })
 
   /** Spec 7.1: a play promise that settles after unmount belongs to nobody. */
@@ -103,7 +103,7 @@ describe('pronunciation player lifecycle', () => {
     expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(1)
 
     const audio = view.container.querySelector('audio')!
-    expect(audio.getAttribute('src')).toBe('/Danish-Japanese-Lessons/app/audio/word-ab.mp3')
+    expect(audio.getAttribute('src')).toBe('/app/audio/word-ab.mp3')
 
     // Nothing was paused mid-start, so there is no AbortError to mistake for failure.
     await act(async () => settle())

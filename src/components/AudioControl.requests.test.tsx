@@ -9,7 +9,7 @@ vi.mock('../audio/manifest', () => ({
     locale: 'ja-JP',
     transcript: 'みず',
   } : undefined,
-  pronunciationAudioUrl: (file: string) => `/Danish-Japanese-Lessons/app/${file.replace(/^\//, '')}`,
+  pronunciationAudioUrl: (file: string) => `/app/${file.replace(/^\//, '')}`,
 }))
 
 /** A first request the browser accepted but has not settled: native events can
@@ -51,7 +51,7 @@ describe('pronunciation playback requests', () => {
     view.rerender(<AudioControl audioId="word-ab" playRequest={1} />)
 
     await vi.waitFor(() => expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(1))
-    expect(audio.getAttribute('src')).toBe('/Danish-Japanese-Lessons/app/audio/word-ab.mp3')
+    expect(audio.getAttribute('src')).toBe('/app/audio/word-ab.mp3')
     expect(audio.currentTime).toBe(0)
 
     audio.currentTime = 7
