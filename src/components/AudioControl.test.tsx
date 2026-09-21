@@ -9,7 +9,7 @@ vi.mock('../audio/manifest', () => ({
     locale: 'ja-JP',
     transcript: 'みず',
   } : undefined,
-  pronunciationAudioUrl: (file: string) => `/Danish-Japanese-Lessons/app/${file.replace(/^\//, '')}`,
+  pronunciationAudioUrl: (file: string) => `/app/${file.replace(/^\//, '')}`,
 }))
 
 describe('pronunciation audio controls', () => {
@@ -98,7 +98,7 @@ describe('pronunciation audio controls', () => {
 
     expand()
     fireEvent.click(screen.getByRole('button', { name: 'Langsom 0,8×' }))
-    expect(audio).toHaveAttribute('src', '/Danish-Japanese-Lessons/app/audio/word-ab.mp3')
+    expect(audio).toHaveAttribute('src', '/app/audio/word-ab.mp3')
     expect(screen.getByRole('button', { name: 'Meget langsom 0,5×' })).toBeVisible()
     expect(await screen.findByRole('button', { name: 'Stop lyden for みず' })).toBeEnabled()
     expect(audio.playbackRate).toBe(0.8)
