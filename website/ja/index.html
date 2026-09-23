@@ -42,6 +42,8 @@
 <meta name="twitter:image:alt" content="ノートの罫線の上にひらがなの「みず」、その下にデンマーク語の「vand」。">
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="https://brand.cocode.dk/v1.css">
+<script type="module" src="https://brand.cocode.dk/v1.js"></script>
 
 <script type="application/ld+json">
 {
@@ -74,18 +76,15 @@
 </head>
 
 <body>
+<!-- The cocode.dk family frame. Without JavaScript its children show instead: a way home
+     and the language links. -->
+<cocode-head project="日本語レッスン" accent="#941520" on-accent="#F7F2E9">
+  <a href="https://cocode.dk">cocode.dk</a>
+  <a href="../" hreflang="en">EN</a>
+  <a href="../da/" hreflang="da">DA</a>
+  <span class="on">JA</span>
+</cocode-head>
 <div class="sheet">
-
-  <header class="masthead">
-    <p class="wordmark">日本語レッスン</p>
-    <nav aria-label="言語">
-      <ul class="langs">
-        <li><a href="../" lang="en" hreflang="en" dir="ltr">English</a></li>
-        <li><a href="../da/" lang="da" hreflang="da" dir="ltr">Dansk</a></li>
-        <li><span class="is-current" aria-current="page" lang="ja">日本語</span></li>
-      </ul>
-    </nav>
-  </header>
 
   <main>
 
@@ -195,7 +194,7 @@
       <p>アカウントも、登録もありません。進み具合は、このブラウザーの中だけにあります。</p>
       <ul class="facts">
         <li>アカウントなし。メールも、パスワードもありません。</li>
-        <li>アクセス解析なし。追跡なし。外部からの読み込みもありません。</li>
+        <li>アクセス解析なし。追跡なし。cocode.dk以外からの読み込みもありません。</li>
         <li>進み具合は、ブラウザーの localStorage にだけ保存されます。</li>
         <li>ブラウザーのデータを消せば、それで終わりです。サーバーにコピーはありません。</li>
       </ul>
@@ -215,8 +214,11 @@
 
   </main>
 
-  <footer><p>Apache-2.0 &nbsp;|&nbsp; © 2026 <a href="https://cocode.dk" target="_blank" rel="noreferrer">Cocode</a> &nbsp;|&nbsp; Babak Bandpey</p></footer>
+  <footer><p>Apache-2.0 &nbsp;|&nbsp; Babak Bandpey</p></footer>
 
 </div>
+<cocode-foot repo="cocodedk/Danish-Japanese-Lessons">
+  <a href="https://cocode.dk">cocode.dk</a>
+</cocode-foot>
 </body>
 </html>
