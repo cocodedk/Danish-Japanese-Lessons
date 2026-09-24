@@ -43,6 +43,8 @@
 <meta name="twitter:image:alt" content="The Japanese word みず in black kana on a ruled notebook line, with the Danish word vand below it.">
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://brand.cocode.dk/v1.css">
+<script type="module" src="https://brand.cocode.dk/v1.js"></script>
 
 <script type="application/ld+json">
 {
@@ -75,18 +77,15 @@
 </head>
 
 <body>
+<!-- The cocode.dk family frame. Without JavaScript its children show instead: a way home
+     and the language links. -->
+<cocode-head project="Danish-Japanese Lessons" accent="var(--red)" on-accent="#F7F2E9" dark="auto">
+  <a href="https://cocode.dk">cocode.dk</a>
+  <span class="on">EN</span>
+  <a href="da/" hreflang="da">DA</a>
+  <a href="ja/" hreflang="ja">JA</a>
+</cocode-head>
 <div class="sheet">
-
-  <header class="masthead">
-    <p class="wordmark">Danish-Japanese Lessons</p>
-    <nav aria-label="Language">
-      <ul class="langs">
-        <li><span class="is-current" aria-current="page">English</span></li>
-        <li><a href="da/" lang="da" hreflang="da">Dansk</a></li>
-        <li><a href="ja/" lang="ja" hreflang="ja">日本語</a></li>
-      </ul>
-    </nav>
-  </header>
 
   <main>
 
@@ -194,7 +193,7 @@
         browser, and it stays there.</p>
       <ul class="facts">
         <li>No account, no email, no password.</li>
-        <li>No analytics. No tracking. Nothing is fetched from outside servers.</li>
+        <li>No analytics. No tracking. Nothing is fetched from servers outside cocode.dk.</li>
         <li>Progress is kept in the browser's own storage (localStorage).</li>
         <li>Clear your browser data and it's gone. There is no copy on a server to lose.</li>
       </ul>
@@ -216,8 +215,11 @@
 
   </main>
 
-  <footer><p>Apache-2.0 &nbsp;|&nbsp; © 2026 <a href="https://cocode.dk" target="_blank" rel="noreferrer">Cocode</a> &nbsp;|&nbsp; Created by <a href="https://linkedin.com/in/babakbandpey" target="_blank" rel="noreferrer">Babak Bandpey</a></p></footer>
+  <footer><p>Apache-2.0 &nbsp;|&nbsp; Created by <a href="https://linkedin.com/in/babakbandpey" target="_blank" rel="noreferrer">Babak Bandpey</a></p></footer>
 
 </div>
+<cocode-foot repo="cocodedk/Danish-Japanese-Lessons" dark="auto">
+  <a href="https://cocode.dk">cocode.dk</a>
+</cocode-foot>
 </body>
 </html>
